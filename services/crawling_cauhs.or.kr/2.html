@@ -1,0 +1,3442 @@
+<!doctype html>
+<html lang="ko" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimun-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi, viewport-fit=cover">
+    <meta name="description" content="병원 소개, 진료과, 의료진 소개, 진료 예약, 건강검진 등 안내." />
+    <meta name="keywords" content="중앙대학교병원, 중앙대학교의료원, 중앙대학교광명병원, 온라인진료예약, 건강검진예약, 암센터, 특성화, 전문센터, 진료과, 온라인예약, 건강정보">
+    <meta name="title" content="중앙대학교병원 | 의료진">
+    <meta property="og:site_name" content="중앙대학교병원" />
+    <meta property="og:title" content="중앙대학교병원" />
+    <meta property="og:description" content="병원 소개, 진료과, 의료진 소개, 진료 예약, 건강검진 등 안내." />
+    <title>중앙대학교병원 | 의료진</title>
+    <link rel="shortcut icon" href="/common/front/home/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/common/front/home/favicon.ico" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="/common/front/home/css/default.css?ver=20230410" />
+    <link type="text/css" rel="stylesheet" href="/common/front/home/css/swiper-bundle.min.css" />
+    <link type="text/css" rel="stylesheet" href="/common/front/home/css/reservation.css" />
+    <link type="text/css" rel="stylesheet" href="/common/front/home/css/floor.css" />
+    <script type="text/javascript" src="/common/front/home/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="/common/front/home/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/common/front/home/js/design.js"></script>
+    <script type="text/javascript" src="/common/front/home/js/swiper.min.js"></script>
+    <script type="text/javascript" src="/common/front/home/js/rolling.js"></script>
+    <script type="text/javascript" src="/common/front/home/js/scrolla.jquery.js"></script>
+    <script type="text/javascript" src="/common/front/home/js/scrolloverflow.js"></script>
+    <script type="text/javascript" src="/common/front/home/js/fullpage.js"></script>
+    <script type="text/javascript" src="/common/front/home/js/scrolla.jquery.js"></script>
+    <script type="text/javascript" src="/common/front/home/js/common.js"></script>
+
+
+    <script type="text/javascript" src="/plug-in/jasonday-printThis-f73ca19/printThis.js"></script>
+    <script type="text/javascript" src="/plug-in/tableExport/libs/js-xlsx/xlsx.core.min.js"></script>
+    <script type="text/javascript" src="/plug-in/tableExport/libs/FileSaver/FileSaver.min.js"></script>
+    <script type="text/javascript" src="/plug-in/tableExport/tableExport.js"></script>
+    <script type="text/javascript" src="/plug-in/tableExport/libs/pdfmake/pdfmake.min.js"></script>
+    <script type="text/javascript" src="/plug-in/tableExport/libs/pdfmake/vfs_fonts.js"></script>
+    <script type="text/javascript" src="/plug-in/tableExport/libs/html2canvas/html2canvas.min.js"></script>
+    <script type="text/javascript" src="/plug-in/tableExport/libs/browser.js"></script>
+
+
+    <script type="text/javascript">
+        if( window.location.href.indexOf('ch.caumc.or.kr') > -1){
+		location.href='https://ch.cauhs.or.kr'+window.location.pathname;
+	}
+	if( window.location.href.indexOf('www.cauhs.or.kr') > -1){
+		location.href='https://ch.cauhs.or.kr/group/';
+	}
+
+	// ie로 접속할 경우
+	if(/MSIE \d|Trident.*rv:/.test(navigator.userAgent)) {
+		window.location = 'microsoft-edge:' + window.location;
+
+		setTimeout(function() {
+		window.location = 'https://go.microsoft.com/fwlink/?linkid=2135547';
+		}, 1);
+
+	}
+    </script>
+    <script type="text/javascript">
+        /***************************************************
+     * 파일명 : CommonUtil.c3r-custom.js
+     * DESC : 공통 유틸 정리
+     * 생성자 : MOOK
+     * 생성일 : 2021.08.20.
+     * 작업설명
+     **************************************************/
+    var G_Util = {
+    	//글자수 Byte 제한 (textAreaId,textLenId,글자수제한수)
+    	getTextCnt : function(oTextArea,oTextLen,textLimit){
+    		var str     = $(oTextArea).val();
+    		var str_len = str.length;
+    		var iByte = 0;
+    		var rlen  = 0;
+    		var one_char = "";
+    		var str2 = "";
+    		for( var i=0; i<str_len; i++ ){
+    			one_char = str.charAt(i);
+    			if(escape(one_char).length > 4) {
+    				iByte += 2;//한글2Byte
+    			}else{
+    				iByte++;//영문 등 나머지 1Byte
+    			}
+    			if(iByte <= textLimit){
+    				rlen = i+1;//return할 문자열 갯수
+    			}
+    		}
+    		if( iByte > textLimit ){
+    			alert("최대 " + textLimit + "byte를 초과할 수 없습니다.");
+    			str2 = str.substr(0,rlen);
+    			$(oTextArea).val(str2);
+    			G_Util.getTextCnt(oTextArea,oTextLen,textLimit);
+    		}else{
+    			$(oTextLen).text(iByte);
+    		}
+    	},
+    	//이메일 유효성 체크
+        isEmail(email){
+            var regEmail = /([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+            if( !regEmail.test(email) ){
+                return false;
+            }
+            return true;
+        },
+    	//생년월일 유효성
+        isBirth(birthday){
+        	var result = true;
+        	var regExp = /[\{\}\[\]\/?.,;:|\)*~`!^\-_+<>@#$%&\\\=\(\'\"]/gi;
+        	birthday = birthday.replace(regExp,"");
+        	if( birthday.length <=8 ){
+        		var year   = Number(birthday.substr(0,4)); // 입력한 값의 0~4자리까지 (연)
+        	    var month  = Number(birthday.substr(4,2)); // 입력한 값의 4번째 자리부터 2자리 숫자 (월)
+        	    var day    = Number(birthday.substr(6,2)); // 입력한 값 6번째 자리부터 2자리 숫자 (일)
+        	    var today  = new Date(); // 날짜 변수 선언
+        	    var yearNow = today.getFullYear(); // 올해 연도 가져옴
+
+        		// 연도의 경우 1900 보다 작거나 yearNow 보다 크다면 false를 반환합니다.
+        	    if( 1900 > year || year > yearNow){
+        	    	result = false;
+        	    }else if( month < 1 || month > 12 ){
+        	    	result = false;
+        	    }else if( day < 1 || day > 31 ){
+        	    	result = false;
+        	    }else if( (month==4 || month==6 || month==9 || month==11) && day==31 ){
+        	    	 result = false;
+        	    }else if(month == 2 ){
+        	       	var isleap = (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0));
+        	     	if( day>29 || (day==29 && !isleap) ){
+        	     		result = false;
+        			}
+        	    }
+        	}else{
+        		result = false;
+        	}
+        	return result;
+        },
+    	//Context Path
+    	getContextPath : function(){
+    		var hostIndex = location.href.indexOf( location.host ) + location.host.length;
+    		return location.href.substring( hostIndex, location.href.indexOf('/', hostIndex + 1) );
+    	},
+    	//금액[단독사용금지] : 천단위 콤마 생성
+    	setComma : function(arg){
+    		var result = String(arg);
+    		if( result != "" ){
+    			result = result.replace(/(\d)(?=(?:\d{3})+(?!\d))/g,"$1,");
+    		}
+    		return result;
+    	},
+    	//금액[단독사용금지] : 천단위 콤마 제거
+    	setUnComma : function(arg){
+    		var result = String(arg);
+    		if( result != "" ){
+    			result = result.replace(/[^\d]+/g,"");
+    		}
+    		return result;
+    	},
+    	//금액 : 입력시 콤마 생성
+    	inputComma : function(obj){
+    		var inputValue = $(obj).val();
+    		$(obj).val(G_Util.setComma(G_Util.setUnComma(inputValue)));
+    	},
+    	//숫자만 허용
+    	inputNumber : function(obj){
+    		var result = $(obj).val().replace(/[^0-9-]/g,"");
+    		$(obj).val(result);
+    	},
+    	//비율 : 소수점을 포함한 표현
+    	inputRate : function(obj){
+    		var tmps = $(obj).val().replace(/[^\.|^0(0)+|^0-9\.]/g,"");
+    		var arr = tmps.split(".");
+    		if( arr.length > 2 ){
+    			tmps = arr[0] + '.' + arr[1];
+    		}
+            $(obj).val(tmps);
+    	},
+    	/** []Null체크 **/
+    	isEmpty : function( pObject, pPostObject ){
+    		var rValue;
+    		if( typeof pObject != "undefined" ){
+    			if( typeof pPostObject != "undefined" ){
+    				rValue = pObject;
+    			}else{
+    				if( pObject != "" && pObject != "null" && pObject != null )	rValue = false;
+    				else														rValue = true;
+    			}
+    		}else{
+    			if( typeof pPostObject != "undefined" ){
+    				rValue = pPostObject;
+    			}else{
+    				rValue = true;
+    			}
+    		}
+    		return rValue;
+    	},
+    	//Post Popup
+    	postPopup : function(popupName, url, width, height, valueObjects) {
+    	    if (popupName == "") {
+    	        popupName = 'NewWindow';
+    	    }
+    	    var m_left =  (window.screen.width - width) / 2;
+    	    var m_top = (window.screen.height - height) / 2;
+    	    var stat = "menubar=0 location=0 directories=0 resizable=1 scrollbars=1 status=0 titlebar=1 toolbar=0 left="+m_left+" top="+m_top;
+    	    var form = document.createElement("form");
+    	    form.method = "POST";
+    	    form.target = popupName;
+    	    form.action = url;
+    	    for (keyName in valueObjects) {
+    	    	var param = CreateHiddenElement(keyName, valueObjects[keyName]);
+    	    	form.appendChild(param);
+    	    }
+    	    document.body.appendChild(form);
+    	    var openWindow = window.open("",popupName,"width="+width+"px height="+height+"px "+stat)
+    	    form.submit();
+    	    openWindow.focus();
+    	    document.body.removeChild(form);
+    	},
+    	//[공통]파일다운로드
+    	fileDownload : function(fileNo,fileSeq,actionUrl){
+    		if( fileNo != undefined && fileNo != "" && fileSeq != undefined && fileSeq != "" && actionUrl != undefined && actionUrl != "" ){
+    			var oForm    = $("<form/>");
+    			var oHidden1 = $("<input/>");
+    			var oHidden2 = $("<input/>");
+    			oForm.attr({"id":"fileFrm","name":"fileFrm","method":"post"});
+    			oHidden1.attr({"id":"fileNo","name":"fileNo","value":fileNo});
+    			oHidden2.attr({"id":"fileSeq","name":"fileSeq","value":fileSeq});
+    			oForm.append(oHidden1);
+    			oForm.append(oHidden2);
+    			$("body").append(oForm);
+    			oForm.attr({"action":actionUrl,"target":"_self"}).submit();
+    		}
+    	},
+    	//한글 초성변환
+    	getKoreanFirst : function(str){
+    		var cho    = ["ㄱ","ㄲ","ㄴ","ㄷ","ㄸ","ㄹ","ㅁ","ㅂ","ㅃ","ㅅ","ㅆ","ㅇ","ㅈ","ㅉ","ㅊ","ㅋ","ㅌ","ㅍ","ㅎ"];
+    		var result = "";
+    		for( var i=0; i<str.length; i++ ){
+    			code = str.charCodeAt(i)-44032;
+    			if(code>-1 && code<11172) result += cho[Math.floor(code/588)];
+    		}
+    		return result;
+    	},
+    	//별도의 Form을 만들어 전송
+    	newFormSubmit : function(json){
+    		if( json != undefined ){
+    			$("form#tmpForm").remove();
+    			var oForm = $("<form/>",{
+    				id     : "tmpForm",
+    				name   : "tmpForm",
+    				method : "POST",
+    				action : json.action
+    			});
+    			$.each(json.param,function(key,value){
+    				var oHidden = $("<input/>",{
+    					type  : "hidden",
+    					id    : key,
+    					name  : key,
+    					value : value
+    				});
+    				oForm.append(oHidden);
+    			});
+    			$("body").append(oForm);
+    			oForm.submit();
+    		}
+    	},
+    	//만나이 계산 ( KDW생성 2022.03.09, LSH 수정 2022.03.29 )
+    	ageCheck : function(str1,str2){
+    		var divisionCode = str2.substring(0, 1);
+    		var dateOfBirth="";
+    		var age = "";
+    		if(str1 != null && str1 !="" && str1 != undefined && str1.length < 7){
+    			if(divisionCode == 1 || divisionCode == 2 || divisionCode == 5 || divisionCode == 6){
+    				// 한국인 1900~, 외국인 1900~
+    				dateOfBirth = "19"+str1;
+    			}else if(divisionCode == 3 || divisionCode == 4 || divisionCode == 7 || divisionCode == 8){
+    				// 한국인 2000~, 외국인 2000~
+    				dateOfBirth = "20"+str1;
+    			}else if(divisionCode == 9 || divisionCode == 0){
+    				// 한국인 1800~
+    				dateOfBirth = "18"+str1;
+    			}
+    		}else if( str1.length < 9){
+    			dateOfBirth = str1;
+    		}else{
+    			dateOfBirth = "";
+    		}
+    		if(dateOfBirth != ""){
+    			dateOfBirth = dateOfBirth.substr(0,4)+","+dateOfBirth.substr(4,2)+","+dateOfBirth.substr(6,2);
+    			var date = new Date();
+    			var birthDate = new Date(dateOfBirth);
+    			if( str1 != null && str1 != '' ){
+    				age = date.getFullYear() - birthDate.getFullYear() ;
+    				birthDate.setFullYear(date.getFullYear()); // 생년월일 객체의 연도를 오늘 날짜 객체의 연도로 변경
+    				if( date > birthDate) { // 같은 연도가 된 객체를 비교하여 월일이 지났는지 여부 판단
+    					age; // 생일이 안지났으면 나이
+    				} else {
+    					age--; //
+    				}
+    			}
+    		}else{
+    			age =0;
+    		}
+    		return age;
+    	},
+    	//성별 출력( KDW생성 2022.03.09 )
+    	genderCheck : function(str2){
+    		var genderCode = str2.substring(0, 1);
+    		var gender = "";
+    		if(genderCode % 2 > 0){
+    			gender = "M";
+    		}else if(genderCode % 2 == 0){
+    			gender = "F";
+    		}
+    		return gender;
+    	},
+    	//날짜의 요일조회
+    	getWeekInfo : function(strDate,div){
+    		var week      = ["일","월","화","수","목","금","토"];
+    		var dayOfWeek = week[new Date(strDate).getDay()];
+    		return dayOfWeek;
+    	},
+    	//쿠키등록
+    	setCookie : function(cookieName,value,exdays){
+    	    var exdate = new Date();
+    	    exdate.setDate(exdate.getDate() + exdays);
+    	    var cookieValue = escape(value) + ((exdays==null) ? "" : "; expires=" + exdate.toGMTString());
+    	    document.cookie = cookieName + "=" + cookieValue;
+    	},
+    	//쿠키삭제
+    	deleteCookie : function(cookieName){
+    	    var expireDate = new Date();
+    	    expireDate.setDate(expireDate.getDate() - 1);
+    	    document.cookie = cookieName + "= " + "; expires=" + expireDate.toGMTString();
+    	},
+    	//쿠키조회
+    	getCookie : function(cookieName){
+    	    cookieName = cookieName + '=';
+    	    var cookieData = document.cookie;
+    	    var start = cookieData.indexOf(cookieName);
+    	    var cookieValue = '';
+    	    if(start != -1){
+    	        start += cookieName.length;
+    	        var end = cookieData.indexOf(';', start);
+    	        if(end == -1)end = cookieData.length;
+    	        cookieValue = cookieData.substring(start, end);
+    	    }
+    	    return unescape(cookieValue);
+    	}
+    }
+
+	function fn_ValidateSearchDate(startId, endId) {
+		var sStart = $("#" + startId).val();
+		var sEnd = $("#" + endId).val();
+		if (sStart != "" && sStart != undefined && sEnd != "" && sEnd != undefined) {
+			//시작날짜가 종료날짜보다 이후인 경우
+			if (Number(sStart.replaceAll("-", "")) > Number(sEnd.replaceAll("-", ""))) {
+				alert("시작일자가 종료일자보다 미래일 수 없습니다.");
+				return false;
+			} else {
+				return true;
+			}
+		}
+		return true;
+	}
+	//통합검색
+	
+	function fn_goMenu(menuUrl){
+		var refererUrl = menuUrl;
+		if(menuUrl == "/home/medicine/kimsPop.do"){
+			G_PostPopupOpen("kimsPop","/home/medicine/kimsPop.do", 850, 700, {});
+			//return false;
+		}else if(menuUrl == "/home/introduce/floor0Pop.do"){
+			G_PostPopupOpen("floorPop","/home/introduce/floor0Pop.do", window.screen.width, window.screen.height, {});
+			//return false;
+		}else{
+			var hspCd = "H";
+			$("body").append("<form id='hspForm' name='hspForm' method='post'><input type='hidden' id='headHspCd' name='headHspCd' value='"+hspCd+"' /><input type='hidden' id='refererUrl' name='refererUrl' value='"+menuUrl+"'></form>");
+			$("#hspForm").attr("action", menuUrl);
+			$("#hspForm").submit();
+		}
+	}
+	function fn_HealthBoard(sitePath, boardMngNo, boardNo){
+		var formTag = "";
+		formTag += "<form id='hspForm' name='hspForm' method='post'>";
+		formTag += "<input name='siteCd' value='001000000'/>";
+		formTag += "<input name='boardMngNo' value='"+boardMngNo+"'/>";
+		formTag += "<input name='boardNo' value='"+boardNo+"'/>";
+		formTag += "</form>";
+		$("body").append(formTag);
+		$("#hspForm").attr("target", "_blank");
+		$("#hspForm").attr("action", "/"+sitePath+"/board/all/"+boardMngNo+"_View.do");
+		$("#hspForm").submit();
+	}
+	function fn_ThanksDetail(boardNo,boardTp,boardSeqNo){
+		var formTag = "";
+		formTag += "<form id='hspForm' name='hspForm' method='post'>";
+		formTag += "<input name='boardNo' value='"+boardNo+"'/>";
+		formTag += "<input name='boardTp' value='"+boardTp+"'/>";
+		formTag += "<input name='boardSeqNo' value='"+boardSeqNo+"'/>";
+		formTag += "</form>";
+		$("body").append(formTag);
+		$("#hspForm").attr("action","/home/board/boardClientThanksView.do").submit();
+	}
+	function fn_ProfViewMoveReserve(deptNo, profNo){
+		var formTag = "";
+		formTag += "<form id='hspForm' name='hspForm' method='post'>";
+		formTag += "<input name='deptNo' value='"+deptNo+"'/>";
+		formTag += "<input name='profNo' value='"+profNo+"'/>";
+		formTag += "</form>";
+		$("body").append(formTag);
+		$("#hspForm").attr({"action":"/home/reserveNew/resvOnline.do","target":"_self"}).submit();
+	}
+	//자세히보기
+	function fn_DeatilPop(sitePath,deptNo,profNo, empNo){
+		var array = {"sitePath":sitePath,"deptNo":deptNo,"profNo":profNo, "empNo":empNo};
+		var popWidth  = 0;
+		var popHeight = 0;
+		var screenWidth  = window.screen.width;
+		var screenHeight = window.screen.height;
+		if( screenWidth > 1980 ){
+			popWidth  = 1980;
+			popHeight = 1080; //1080
+		}else{
+			popWidth  = screenWidth;
+			popHeight = screenHeight;
+		}
+		G_PostPopupOpen("ProfDetailPop","/"+sitePath+"/medical/profView.do?deptNo="+deptNo+"&profNo="+profNo+"&empNo="+empNo+"",popWidth,popHeight,array);
+		//G_PostPopupOpen("ProfDetailPop","/"+sitePath+"/medical/profView.do",window.screen.width,window.screen.height,array);
+	}
+
+	//엔터 기능 제한
+	$(document).ready(function() {
+		$("form").append("<input type='hidden' id='headHspCd' name='headHspCd' value='H' />");
+		
+		$("#mainKeyWord").keydown(function(key){
+			if( key.keyCode == 13 ){
+				fn_TotalSearch('mainKeyWord');
+				return false;
+			}
+		});
+		$("#subKeyWord").keydown(function(key){
+			if( key.keyCode == 13 ){
+				fn_TotalSearch('subKeyWord');
+				return false;
+			}
+		});
+		$(document).on("click", ".plus", function(){
+			if(!$(this).parent("li").parent("ul").parent("li").parent("ul").hasClass("sitemap")){
+				return false;
+			}
+		});
+
+		$("#idSaveCheck").change(function(){ // 체크박스에 변화가 있다면,
+	        if($("#idSaveCheck").is(":checked")){ // ID 저장하기 체크했을 때,
+	        	G_Util.setCookie("key", $("#userId").val(), 7); // 7일 동안 쿠키 보관
+	        }else{ // ID 저장하기 체크 해제 시,
+	        	G_Util.deleteCookie("key");
+	        }
+	    });
+	});
+
+	// 통합검색 레이어 열기
+	function searchOpen() {
+		$('.layer_search_wrapper').show();
+	}
+
+	// 통합검색 레이어 닫기
+	function searchClose() {
+		$('.layer_search_wrapper').hide();
+	}
+	function fn_TotalSearch(obj){
+		if($.type(obj) != 'string'){
+			if( obj != undefined && $(obj).html().indexOf('#') != -1 ){
+				var searchWord = $(obj).html().replaceAll("#","");
+				$("#totalWord").val(searchWord);
+			}
+		}
+		if( obj == 'mainKeyWord'){
+			if($("#mainKeyWord").val() == "" ){
+				alert("검색어를 입력해 주세요.");
+				$("#mainKeyWord").focus();
+				return false;
+			}else if( $("#mainKeyWord").val().length < 2 ){
+				alert("검색어를 두글자 이상 입력해 주세요.");
+				$("#mainKeyWord").focus();
+				return false;
+			}else{
+				$("#totalWord").val($("#mainKeyWord").val());
+			}
+		}else if(obj == 'subKeyWord'){
+			if($("#subKeyWord").val() == "" ){
+				alert("검색어를 입력해 주세요.");
+				$("#subKeyWord").focus();
+				return false;
+			}else if( $("#subKeyWord").val().length < 2 ){
+				alert("검색어를 두글자 이상 입력해 주세요.");
+				$("#subKeyWord").focus();
+				return false;
+			}else{
+				$("#totalWord").val($("#subKeyWord").val());
+			}
+		}
+		$("#searchfrm").attr("action","/home/search/totalList.do").submit();
+	}
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+			$("#searchDeptGb").on("change", function(){
+				if($("#searchDeptGb").val() == ""){
+					$("#searchDept").val("");
+					$("#searchDept option").hide();
+				}else{
+					$("#searchDept").val("");
+					$("#searchDept option").hide();
+					$("#searchDept option").each(function(idx, val){
+						if($("#searchDeptGb").val() == $(this).data("depttp") || $(this).val() == ""){
+							$(this).show();
+						}else{
+							$(this).hide();
+						}
+					});
+				}
+			});
+
+			if("" != ""){
+				$("#searchDeptGb").trigger("change");
+			}else{
+				$("#searchDept option").hide();
+			}
+			$("#searchDept").val("");
+		});
+		//기본/가나다순
+		function fn_ClickSort(){
+			$("input[name=rSortOrder]").each(function(idx){
+				if( $(this).is(":checked") ){
+					$("#sortOrder").val($(this).val());
+				}
+			});
+			fn_Search();
+		}
+		/* function fn_Search(obj){
+			var obj = $(obj);
+			console.log(obj.text());
+			if( obj != undefined ){
+				if( obj.text() == "ALL" )	$("#profInitKorNm").val("");
+				else						$("#profInitKorNm").val(obj.text());
+			}
+			$("#frm").attr("action","/home/medical/profList.do");
+			$("#frm").attr("target","_self");
+			$("#frm").submit();
+		} */
+		function fn_Search(obj){
+			var text = $(obj).text();
+			$("ul.search_list > li").removeClass("on");
+			$(obj).parent().addClass("on");
+			if(null != obj) $("#profInitKorNm").val(text.trim() == "ALL" ? "" : text.trim());
+			$("#frm").attr("action","/home/medical/profList.do");
+			$("#frm").attr("target","_self");
+			$("#frm").submit();
+		}
+		function fn_MoveReserve(deptNo, deptCd, profNo){
+			$("#deptNo").val(deptNo);
+			$("#dpCd").val(deptCd);
+			$("#profNo").val(profNo);
+			$("#frm").attr({"action":"/home/reserveNew/resvOnline.do","target":"_self"});
+			$("#frm").submit();
+		}
+		function fn_GetHangulFst(str){
+			var cho    = ["ㄱ","ㄲ","ㄴ","ㄷ","ㄸ","ㄹ","ㅁ","ㅂ","ㅃ","ㅅ","ㅆ","ㅇ","ㅈ","ㅉ","ㅊ","ㅋ","ㅌ","ㅍ","ㅎ"];
+			var result = "";
+			for( var i=0; i<str.length; i++ ){
+				code = str.charCodeAt(i)-44032;
+				if(code>-1 && code<11172) result += cho[Math.floor(code/588)];
+			}
+			return result;
+		}
+    </script>
+
+</head>
+
+<body>
+    <!-- wrap -->
+    <div class="contents_wrapper">
+        <!-- 바로가기 -->
+        <div class="skip_navi">
+            <a href="#gnb">주메뉴로 가기</a>
+            <a href="#contents">본문으로 가기</a>
+            <a href="#footer">하단으로 가기</a>
+        </div>
+        <!-- /바로가기 -->
+
+        <!-- header -->
+        <header>
+            <div class="inner fix">
+
+                <!-- 상단 메뉴-->
+                <div class="top_menu_wrap">
+                    <div class="inner">
+                        <div class="site_menu_wrap">
+                            <a href="/"><span>중앙대학교병원</span></a>
+                            <a href="/g-home/"><span>중앙대학교광명병원</span></a>
+                        </div>
+                        <div class="top_link_menu">
+
+
+
+                            <a href="/home/member/login.do"><span>로그인</span></a>
+                            <a href="/home/member/join1.do"><span>회원가입</span></a>
+
+
+                        </div>
+                        <div class="top_lang_menu">
+                            <a href="javascript:void(0);" onclick="javascript:$('ul.lang_list').toggle();">Language</a>
+                            <ul class="lang_list">
+                                <!-- <li><a href="/home/">KOR</a></li> -->
+                                <li><a href="/eng/">ENG</a></li>
+                                <li><a href="/rus/">RUS</a></li>
+                                <li><a href="/mon/">MON</a></li>
+                                <li><a href="/chi/">CHI</a></li>
+                                <!-- <li><a href="/eng/">ENG</a></li> -->
+                                <!-- <li><a href="http://www.caumc.or.kr/rus/index.asp">RUS</a></li>
+								<li><a href="http://www.caumc.or.kr/mon/index.asp">MON</a></li>
+								<li><a href="http://www.caumc.or.kr/chi/index.asp">CHI</a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- // 상단 메뉴-->
+
+                <div class="header_lft">
+                    <h1 class="logo">
+                        <a href="/">
+                            <img src="/common/front/health/images/common/logo.png" alt="중앙대학교병원">
+                        </a>
+                    </h1>
+                </div>
+                <div id="gnb" class="gnb_wrap">
+                    <ul class="gnb fix">
+                        <li>
+                            <a href="javascript:fn_goMenu('/home/conts/101001000000000.do');">이용안내</a>
+                            <div class='depth2'>
+                                <div class='inner'>
+                                    <ul>
+                                        <li><a href="javascript:fn_goMenu('/home/conts/101001000000000.do');">오시는 길</a>
+                                        </li>
+                                        <li><a href="javascript:fn_goMenu('/home/conts/101002001000000.do');">주차안내</a>
+                                            <ul class='depth3' style='display:none;'>
+                                                <li><a
+                                                        href="javascript:fn_goMenu('/home/conts/101002001000000.do');">주차안내</a>
+                                                </li>
+                                                <li><a href="javascript:fn_goMenu('/home/conts/101002002000000.do');">주차요금
+                                                        무인정산기</a></li>
+                                            </ul </li>
+                                        <li><a href="javascript:fn_goMenu('/home/conts/101003000000000.do');">면회안내</a>
+                                        </li>
+                                        <li><a href="javascript:fn_goMenu('/home/conts/101004000000000.do');">전화번호안내</a>
+                                        </li>
+                                        <li><a href="javascript:fn_goMenu('/home/introduce/floor0Pop.do');">층별배치도</a>
+                                        </li>
+                                        <li><a href="javascript:fn_goMenu('/home/conts/101006005000000.do');">진료비안내</a>
+                                            <ul class='depth3' style='display:none;'>
+                                                <li><a href="javascript:fn_goMenu('/home/conts/101006005000000.do');">진료비
+                                                        수납기</a></li>
+                                                <li><a href="javascript:fn_goMenu('/home/conts/101006006000000.do');">진료비
+                                                        환불 안내</a></li>
+                                                <li><a href="javascript:fn_goMenu('/home/conts/101006007000000.do');">진료비
+                                                        후불결제 서비스</a></li>
+                                            </ul </li>
+                                        <li><a href="javascript:fn_goMenu('/home/conts/101010000000000.do');">편의시설안내</a>
+                                        </li>
+                                    </ul>
+                                    <ul class='fix'>
+                                        <li><a href="javascript:fn_goMenu('/home/conts/101011001000000.do');">강의실 대관
+                                                안내</a>
+                                            <ul class='depth3' style='display:none;'>
+                                                <li><a
+                                                        href="javascript:fn_goMenu('/home/conts/101011001000000.do');">시설안내</a>
+                                                </li>
+                                                <li><a
+                                                        href="javascript:fn_goMenu('/home/conts/101011002000000.do');">대관내규</a>
+                                                </li>
+                                            </ul </li>
+                                        <li><a href="javascript:fn_goMenu('/home/conts/101013000000000.do');">모바일 앱</a>
+                                        </li>
+                                    </ul>
+                                    <div class='gnb_contact'>
+                                        <dl class='contact'>
+                                            <dt>문의 · 안내 · 예약</dt>
+                                            <dd>대표전화<span>1800-1114</span></dd>
+                                        </dl>
+                                        <ul class='quick_list fix'>
+                                            <li><a href='/home/medical/profList.do'>의료진 소개</a></li>
+                                            <li><a href='/home/board/boardClientThanksList.do'>칭찬합시다</a></li>
+                                            <li><a href='/home/conts/102007001000000.do'>증명서발급안내</a></li>
+                                            <li><a href='/home/conts/101001000000000.do'>오시는 길</a></li>
+                                            <li><a href='/home/conts/101002001000000.do'>주차안내</a></li>
+                                            <li><a href="javascript:void(0);"
+                                                    onclick="javascript:fn_goMenu('/home/introduce/floor0Pop.do');">층별배치도</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                        </li>
+                        <li>
+                            <a href="javascript:fn_goMenu('/home/medical/deptAllIntro.do');">진료과/센터</a>
+                            <div class='depth2'>
+                                <div class='inner'>
+                                    <ul>
+                                        <li><a href="javascript:fn_goMenu('/home/medical/deptAllIntro.do');">진료과</a>
+                                        </li>
+                                        <li><a
+                                                href="javascript:fn_goMenu('/home/medical/cancerCenterAllIntro.do');">암센터</a>
+                                            <ul class='depth3' style='display:none;'>
+                                                <li><a
+                                                        href="javascript:fn_goMenu('/home/medical/cancerCenterAllIntro.do');">암센터</a>
+                                                </li>
+                                                <li><a href="javascript:fn_goMenu('/home/conts/105002006001000.do');">올바른
+                                                        암투병 수칙</a></li>
+                                            </ul </li>
+                                        <li><a href="javascript:fn_goMenu('/home/conts/105003000000000.do');">클리닉</a>
+                                        </li>
+                                        <li><a href="javascript:fn_goMenu('/home/medical/centerAllIntro.do');">전문센터</a>
+                                        </li>
+                                        <li><a
+                                                href="javascript:fn_goMenu('/home/medical/center2AllIntro.do');">특성화센터</a>
+                                        </li>
+                                        <li><a href="javascript:fn_goMenu('/home/medical/profList.do');">의료진</a>
+                                        </li>
+                                        <li><a href="javascript:fn_goMenu('/home/conts/105009001000000.do');">IRB</a>
+                                            <ul class='depth3' style='display:none;'>
+                                                <li><a href="javascript:fn_goMenu('/home/conts/105009001000000.do');">IRB
+                                                        소개</a></li>
+                                                <li><a href="javascript:fn_goMenu('/home/conts/105009002000000.do');">IRB
+                                                        심의안내</a></li>
+                                                <li><a href="javascript:fn_goMenu('/home/board/11_List.do');">IRB 관련
+                                                        공지</a></li>
+                                            </ul </li>
+                                    </ul>
+                                    <ul class='fix'>
+                                        <li><a href="javascript:fn_goMenu('/home/medical/deptIntro258.do');">지원부서</a>
+                                            <ul class='depth3' style='display:none;'>
+                                                <li><a href="javascript:fn_goMenu('/nsg/');">간호본부</a></li>
+                                                <li><a
+                                                        href="javascript:fn_goMenu('/home/medical/deptIntro258.do');">국제진료센터</a>
+                                                </li>
+                                                <li><a
+                                                        href="javascript:fn_goMenu('/home/medical/deptIntro259.do');">사회사업팀</a>
+                                                </li>
+                                                <li><a
+                                                        href="javascript:fn_goMenu('/home/medical/deptIntro260.do');">의학정보실</a>
+                                                </li>
+                                                <li><a
+                                                        href="javascript:fn_goMenu('/home/medical/deptIntro261.do');">인재개발실</a>
+                                                </li>
+                                            </ul </li>
+                                    </ul>
+                                    <div class='gnb_contact'>
+                                        <dl class='contact'>
+                                            <dt>문의 · 안내 · 예약</dt>
+                                            <dd>대표전화<span>1800-1114</span></dd>
+                                        </dl>
+                                        <ul class='quick_list fix'>
+                                            <li><a href='/home/medical/profList.do'>의료진 소개</a></li>
+                                            <li><a href='/home/board/boardClientThanksList.do'>칭찬합시다</a></li>
+                                            <li><a href='/home/conts/102007001000000.do'>증명서발급안내</a></li>
+                                            <li><a href='/home/conts/101001000000000.do'>오시는 길</a></li>
+                                            <li><a href='/home/conts/101002001000000.do'>주차안내</a></li>
+                                            <li><a href="javascript:void(0);"
+                                                    onclick="javascript:fn_goMenu('/home/introduce/floor0Pop.do');">층별배치도</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                        </li>
+                        <li>
+                            <a href="javascript:fn_goMenu('/home/reserveNew/resvOnline.do');">예약/조회</a>
+                            <div class='depth2'>
+                                <div class='inner'>
+                                    <ul>
+                                        <li><a href="javascript:fn_goMenu('/home/reserveNew/resvOnline.do');">온라인
+                                                진료예약</a>
+                                        </li>
+                                        <li><a href="javascript:fn_goMenu('/home/conts/106001002000000.do');">처음진료
+                                                간편예약</a>
+                                            <ul class='depth3' style='display:none;'>
+                                                <li><a
+                                                        href="javascript:fn_goMenu('/home/conts/106001002000000.do');">전화예약</a>
+                                                </li>
+                                                <li><a
+                                                        href="javascript:fn_goMenu('/home/reserve/resvOfflineList.do');">간편예약</a>
+                                                </li>
+                                            </ul </li>
+                                        <li><a href='/health/' target='_blank'>종합검진예약</a>
+                                        </li>
+                                        <li><a href="javascript:fn_goMenu('/home/member/userMypageCheck.do');">진료예약
+                                                조회</a>
+                                        </li>
+                                    </ul>
+                                    <div class='gnb_contact'>
+                                        <dl class='contact'>
+                                            <dt>문의 · 안내 · 예약</dt>
+                                            <dd>대표전화<span>1800-1114</span></dd>
+                                        </dl>
+                                        <ul class='quick_list fix'>
+                                            <li><a href='/home/medical/profList.do'>의료진 소개</a></li>
+                                            <li><a href='/home/board/boardClientThanksList.do'>칭찬합시다</a></li>
+                                            <li><a href='/home/conts/102007001000000.do'>증명서발급안내</a></li>
+                                            <li><a href='/home/conts/101001000000000.do'>오시는 길</a></li>
+                                            <li><a href='/home/conts/101002001000000.do'>주차안내</a></li>
+                                            <li><a href="javascript:void(0);"
+                                                    onclick="javascript:fn_goMenu('/home/introduce/floor0Pop.do');">층별배치도</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                        </li>
+                        <li>
+                            <a href="javascript:fn_goMenu('/home/conts/102001000000000.do');">진료안내</a>
+                            <div class='depth2'>
+                                <div class='inner'>
+                                    <ul>
+                                        <li><a href="javascript:fn_goMenu('/home/conts/102001000000000.do');">외래진료</a>
+                                        </li>
+                                        <li><a href="javascript:fn_goMenu('/home/conts/102002000000000.do');">입·퇴원</a>
+                                        </li>
+                                        <li><a href="javascript:fn_goMenu('/home/conts/102003000000000.do');">응급진료</a>
+                                        </li>
+                                        <li><a href="javascript:fn_goMenu('/home/conts/102004000000000.do');">진료의뢰서</a>
+                                        </li>
+                                        <li><a href="javascript:fn_goMenu('/home/conts/102005000000000.do');">가정간호</a>
+                                        </li>
+                                        <li><a href="javascript:fn_goMenu('/home/conts/102006000000000.do');">신체검사</a>
+                                        </li>
+                                        <li><a
+                                                href="javascript:fn_goMenu('/home/conts/102007001000000.do');">증명서발급안내</a>
+                                            <ul class='depth3' style='display:none;'>
+                                                <li><a href="javascript:fn_goMenu('/home/conts/102007001000000.do');">진료기록사본
+                                                        발급</a></li>
+                                                <li><a href="javascript:fn_goMenu('/home/conts/102007002000000.do');">제증명
+                                                        발급</a></li>
+                                                <li><a href="javascript:fn_goMenu('/home/conts/102007003000000.do');">영상자료
+                                                        발급 및 기록</a></li>
+                                            </ul </li>
+                                    </ul>
+                                    <ul class='fix'>
+                                        <li><a
+                                                href="javascript:fn_goMenu('/home/conts/102008000000000.do');">병리자료대출안내</a>
+                                        </li>
+                                        <li><a
+                                                href="javascript:fn_goMenu('/home/conts/102009000000000.do');">황열예방접종안내</a>
+                                        </li>
+                                        <li><a
+                                                href="javascript:fn_goMenu('/home/conts/102010000000000.do');">콜레라예방접종안내</a>
+                                        </li>
+                                        <li><a href="javascript:fn_goMenu('/home/guide/prescribe.do');">비급여항목안내</a>
+                                        </li>
+                                        <li><a href="javascript:fn_goMenu('/home/conts/102012000000000.do');">호스피스
+                                                완화의료</a>
+                                        </li>
+                                        <li><a href="javascript:fn_goMenu('/home/conts/102013000000000.do');">국민안심병원 및
+                                                코로나19 검사</a>
+                                        </li>
+                                        <li><a href="javascript:fn_goMenu('/home/conts/102014001000000.do');">수술실 CCTV
+                                                안내</a>
+                                            <ul class='depth3' style='display:none;'>
+                                                <li><a href="javascript:fn_goMenu('/home/conts/102014001000000.do');">촬영
+                                                        신청</a></li>
+                                                <li><a href="javascript:fn_goMenu('/home/conts/102014002000000.do');">열람·제공·보관연장
+                                                        신청</a></li>
+                                            </ul </li>
+                                    </ul>
+                                    <div class='gnb_contact'>
+                                        <dl class='contact'>
+                                            <dt>문의 · 안내 · 예약</dt>
+                                            <dd>대표전화<span>1800-1114</span></dd>
+                                        </dl>
+                                        <ul class='quick_list fix'>
+                                            <li><a href='/home/medical/profList.do'>의료진 소개</a></li>
+                                            <li><a href='/home/board/boardClientThanksList.do'>칭찬합시다</a></li>
+                                            <li><a href='/home/conts/102007001000000.do'>증명서발급안내</a></li>
+                                            <li><a href='/home/conts/101001000000000.do'>오시는 길</a></li>
+                                            <li><a href='/home/conts/101002001000000.do'>주차안내</a></li>
+                                            <li><a href="javascript:void(0);"
+                                                    onclick="javascript:fn_goMenu('/home/introduce/floor0Pop.do');">층별배치도</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                        </li>
+                        <li>
+                            <a href="javascript:fn_goMenu('/home/conts/103001000000000.do');">병원소개</a>
+                            <div class='depth2'>
+                                <div class='inner'>
+                                    <ul>
+                                        <li><a href="javascript:fn_goMenu('/home/conts/103001000000000.do');">병원장
+                                                인사말</a>
+                                        </li>
+                                        <li><a href="javascript:fn_goMenu('/home/conts/103002000000000.do');">미션 ·
+                                                비젼</a>
+                                        </li>
+                                        <li><a href="javascript:fn_goMenu('/home/conts/103004000000000.do');">역대 병원장</a>
+                                        </li>
+                                        <li><a href="javascript:fn_goMenu('/home/conts/103011000000000.do');">병원연혁</a>
+                                        </li>
+                                        <li><a href="javascript:fn_goMenu('/home/conts/103005001000000.do');">병원현황</a>
+                                            <ul class='depth3' style='display:none;'>
+                                                <li><a
+                                                        href="javascript:fn_goMenu('/home/conts/103005001000000.do');">시설현황</a>
+                                                </li>
+                                                <li><a
+                                                        href="javascript:fn_goMenu('/home/conts/103005002000000.do');">주요장비</a>
+                                                </li>
+                                                <li><a href="javascript:fn_goMenu('/home/conts/103005003000000.do');">병원
+                                                        둘러보기</a></li>
+                                            </ul </li>
+                                        <li><a href="javascript:fn_goMenu('/home/conts/103006001000000.do');">병원홍보</a>
+                                            <ul class='depth3' style='display:none;'>
+                                                <li><a
+                                                        href="javascript:fn_goMenu('/home/conts/103006001000000.do');">홍보동영상</a>
+                                                </li>
+                                                <li><a
+                                                        href="javascript:fn_goMenu('/home/conts/103006002001000.do');">홍보책자</a>
+                                                </li>
+                                                <li><a href="javascript:fn_goMenu('/home/board/20_List.do');">참좋은 중앙
+                                                        E-BOOK</a></li>
+                                                <li><a href="javascript:fn_goMenu('/home/conts/103006004000000.do');">병원
+                                                        HI</a></li>
+                                            </ul </li>
+                                        <li><a href="javascript:fn_goMenu('/home/board/2_List.do');">병원소식</a>
+                                            <ul class='depth3' style='display:none;'>
+                                                <li><a href="javascript:fn_goMenu('/home/board/2_List.do');">병원뉴스</a>
+                                                </li>
+                                                <li><a href="javascript:fn_goMenu('/home/board/1_List.do');">공지사항</a>
+                                                </li>
+                                                <li><a
+                                                        href="javascript:fn_goMenu('/home/board/all/all/newsBoard4List.do');">언론보도</a>
+                                                </li>
+                                                <li><a href="javascript:fn_goMenu('/home/board/46_List.do');">입찰공고</a>
+                                                </li>
+                                            </ul </li>
+                                    </ul>
+                                    <ul class='fix'>
+                                        <li><a href="javascript:fn_goMenu('/home/board/22_List.do');">사회공헌</a>
+                                            <ul class='depth3' style='display:none;'>
+                                                <li><a href="javascript:fn_goMenu('/home/board/22_List.do');">국내의료봉사</a>
+                                                </li>
+                                                <li><a href="javascript:fn_goMenu('/home/board/23_List.do');">해외의료봉사</a>
+                                                </li>
+                                                <li><a href="javascript:fn_goMenu('/home/board/24_List.do');">지역사회공헌</a>
+                                                </li>
+                                                <li><a href="javascript:fn_goMenu('/home/board/25_List.do');">저소득가정 의료비
+                                                        지원</a></li>
+                                            </ul </li>
+                                    </ul>
+                                    <div class='gnb_contact'>
+                                        <dl class='contact'>
+                                            <dt>문의 · 안내 · 예약</dt>
+                                            <dd>대표전화<span>1800-1114</span></dd>
+                                        </dl>
+                                        <ul class='quick_list fix'>
+                                            <li><a href='/home/medical/profList.do'>의료진 소개</a></li>
+                                            <li><a href='/home/board/boardClientThanksList.do'>칭찬합시다</a></li>
+                                            <li><a href='/home/conts/102007001000000.do'>증명서발급안내</a></li>
+                                            <li><a href='/home/conts/101001000000000.do'>오시는 길</a></li>
+                                            <li><a href='/home/conts/101002001000000.do'>주차안내</a></li>
+                                            <li><a href="javascript:void(0);"
+                                                    onclick="javascript:fn_goMenu('/home/introduce/floor0Pop.do');">층별배치도</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                        </li>
+                        <li>
+                            <a href="javascript:fn_goMenu('/home/board/8_List.do');">건강정보</a>
+                            <div class='depth2'>
+                                <div class='inner'>
+                                    <ul>
+                                        <li><a href="javascript:fn_goMenu('/home/board/8_List.do');">건강강좌</a>
+                                        </li>
+                                        <li><a href="javascript:fn_goMenu('/home/board/5_List.do');">건강칼럼</a>
+                                        </li>
+                                        <li><a href="javascript:fn_goMenu('/home/medicine/kimsPop.do');">약품검색</a>
+                                        </li>
+                                    </ul>
+                                    <div class='gnb_contact'>
+                                        <dl class='contact'>
+                                            <dt>문의 · 안내 · 예약</dt>
+                                            <dd>대표전화<span>1800-1114</span></dd>
+                                        </dl>
+                                        <ul class='quick_list fix'>
+                                            <li><a href='/home/medical/profList.do'>의료진 소개</a></li>
+                                            <li><a href='/home/board/boardClientThanksList.do'>칭찬합시다</a></li>
+                                            <li><a href='/home/conts/102007001000000.do'>증명서발급안내</a></li>
+                                            <li><a href='/home/conts/101001000000000.do'>오시는 길</a></li>
+                                            <li><a href='/home/conts/101002001000000.do'>주차안내</a></li>
+                                            <li><a href="javascript:void(0);"
+                                                    onclick="javascript:fn_goMenu('/home/introduce/floor0Pop.do');">층별배치도</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                        </li>
+                        <li>
+                            <a href="javascript:fn_goMenu('/home/board/boardClientThanksList.do');">고객서비스</a>
+                            <div class='depth2'>
+                                <div class='inner'>
+                                    <ul>
+                                        <li><a
+                                                href="javascript:fn_goMenu('/home/board/boardClientThanksList.do');">칭찬합시다</a>
+                                        </li>
+                                        <li><a href="javascript:fn_goMenu('/home/board/boardClientComplainRegist.do');">고객의
+                                                소리</a>
+                                        </li>
+                                    </ul>
+                                    <div class='gnb_contact'>
+                                        <dl class='contact'>
+                                            <dt>문의 · 안내 · 예약</dt>
+                                            <dd>대표전화<span>1800-1114</span></dd>
+                                        </dl>
+                                        <ul class='quick_list fix'>
+                                            <li><a href='/home/medical/profList.do'>의료진 소개</a></li>
+                                            <li><a href='/home/board/boardClientThanksList.do'>칭찬합시다</a></li>
+                                            <li><a href='/home/conts/102007001000000.do'>증명서발급안내</a></li>
+                                            <li><a href='/home/conts/101001000000000.do'>오시는 길</a></li>
+                                            <li><a href='/home/conts/101002001000000.do'>주차안내</a></li>
+                                            <li><a href="javascript:void(0);"
+                                                    onclick="javascript:fn_goMenu('/home/introduce/floor0Pop.do');">층별배치도</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="header_rit">
+
+                    <a href="javascript:void(0);" class="btn_search"
+                        onclick="searchOpen(); fn_MoveSearch()"><em class="skip">검색버튼</em></a>
+                    <a href="javascript:void(0);" class="btn_sitemap"
+                        onclick="sitemapOpen();"><i><em class="skip">전체메뉴</em></i></a>
+                </div>
+            </div>
+        </header>
+        <!-- /header -->
+
+        <!--location_section-->
+        <div class="location_wrap">
+            <div class="inner fix">
+                <ul class="location fix">
+                    <li class="home">
+                        <a href="/"><span class="skip">홈으로 가기</span></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">진료과/센터<span class="location_icon"></span></a>
+                        <ul class="location_down">
+                            <li><a href="javascript:fn_goMenu('/home/conts/101001000000000.do');">이용안내</a></li>
+                            <li><a href="javascript:fn_goMenu('/home/medical/deptAllIntro.do');">진료과/센터</a></li>
+                            <li><a href="javascript:fn_goMenu('/home/reserveNew/resvOnline.do');">예약/조회</a></li>
+                            <li><a href="javascript:fn_goMenu('/home/conts/102001000000000.do');">진료안내</a></li>
+                            <li><a href="javascript:fn_goMenu('/home/conts/103001000000000.do');">병원소개</a></li>
+                            <li><a href="javascript:fn_goMenu('/home/board/8_List.do');">건강정보</a></li>
+                            <li><a href="javascript:fn_goMenu('/home/board/boardClientThanksList.do');">고객서비스</a></li>
+                            <li><a href="javascript:fn_goMenu('/home/member/login.do');">회원서비스</a></li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">의료진<span class="location_icon"></span></a>
+                        <ul class="location_down">
+                            <li><a href="javascript:fn_goMenu('/home/medical/deptAllIntro.do');">진료과</a></li>
+                            <li><a href="javascript:fn_goMenu('/home/medical/cancerCenterAllIntro.do');">암센터</a></li>
+                            <li><a href="javascript:fn_goMenu('/home/conts/105003000000000.do');">클리닉</a></li>
+                            <li><a href="javascript:fn_goMenu('/home/medical/centerAllIntro.do');">전문센터</a></li>
+                            <li><a href="javascript:fn_goMenu('/home/medical/center2AllIntro.do');">특성화센터</a></li>
+                            <li><a href="javascript:fn_goMenu('/home/medical/profList.do');">의료진</a></li>
+                            <li><a href="javascript:fn_goMenu('/home/conts/105009001000000.do');">IRB</a></li>
+                            <li><a href="javascript:fn_goMenu('/home/medical/deptIntro258.do');">지원부서</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--/location_section-->
+
+        <!--sub_container_wrapper-->
+        <section class="title fix">
+            <div class="inner fix">
+                <a href="javascript:fn_goMenu('/home/medical/center2AllIntro.do');" class="title_prev">이전</a>
+                <h2>의료진</h2>
+                <a href="javascript:fn_goMenu('/home/conts/105009001000000.do');" class="title_next">다음</a>
+
+            </div>
+        </section>
+
+
+
+
+
+        <!-- contents -->
+
+        <form id="frm" name="frm" method="POST">
+            <input type="hidden" id="sitePath" name="sitePath" value="home"/>
+            <input type="hidden" id="deptNo" name="deptNo"/>
+            <input type="hidden" id="dpCd" name="dpCd"/>
+            <input type="hidden" id="profNo" name="profNo"/>
+            <input type="hidden" id="sortOrder" name="sortOrder" value="HAN"/>
+            <input type="hidden" id="searchYn" name="searchYn" value="Y"/>
+            <input type="hidden" id="callbackUrl" name="callbackUrl" value="/home/reserve/step1_auth.do"/>
+            <input type="hidden" id="profInitKorNm" name="profInitKorNm" value=""/>
+            <section id="contents" class="contents_wrap">
+                <div class="inner">
+
+                    <div class="medical_search">
+                        <!--초성검색-->
+                        <div class="alpha_ul_choice">
+                            <div class="medical_search">
+                                <strong>초성검색</strong>
+                                <ul class="search_list fix">
+                                    <li class="on"><a href="javascript:void(0);"
+                                            onclick="javascript:fn_Search(this);">ALL</a></li>
+                                    <li class=""><a href="javascript:void(0);"
+                                            onclick="javascript:fn_Search(this);">ㄱ</a></li>
+                                    <li class=""><a href="javascript:void(0);"
+                                            onclick="javascript:fn_Search(this);">ㄴ</a></li>
+                                    <li class=""><a href="javascript:void(0);"
+                                            onclick="javascript:fn_Search(this);">ㄷ</a></li>
+                                    <li class=""><a href="javascript:void(0);"
+                                            onclick="javascript:fn_Search(this);">ㄹ</a></li>
+                                    <li class=""><a href="javascript:void(0);"
+                                            onclick="javascript:fn_Search(this);">ㅁ</a></li>
+                                    <li class=""><a href="javascript:void(0);"
+                                            onclick="javascript:fn_Search(this);">ㅂ</a></li>
+                                    <li class=""><a href="javascript:void(0);"
+                                            onclick="javascript:fn_Search(this);">ㅅ</a></li>
+                                    <li class=""><a href="javascript:void(0);"
+                                            onclick="javascript:fn_Search(this);">ㅇ</a></li>
+                                    <li class=""><a href="javascript:void(0);"
+                                            onclick="javascript:fn_Search(this);">ㅈ</a></li>
+                                    <li class=""><a href="javascript:void(0);"
+                                            onclick="javascript:fn_Search(this);">ㅊ</a></li>
+                                    <li class=""><a href="javascript:void(0);"
+                                            onclick="javascript:fn_Search(this);">ㅋ</a></li>
+                                    <li class=""><a href="javascript:void(0);"
+                                            onclick="javascript:fn_Search(this);">ㅌ</a></li>
+                                    <li class=""><a href="javascript:void(0);"
+                                            onclick="javascript:fn_Search(this);">ㅍ</a></li>
+                                    <li class=""><a href="javascript:void(0);"
+                                            onclick="javascript:fn_Search(this);">ㅎ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--/초성검색-->
+                    </div>
+
+
+                    <div class="search_form">
+                        <select title="진료과 구분" id="searchDeptGb" name="searchDeptGb" class="select_sty01">
+						<option value="">전체</option>
+						
+							
+								<option value="002011001" >진료과</option>
+							
+						
+							
+						
+							
+								<option value="002011007" >특성화센터</option>
+							
+						
+							
+								<option value="002011004" >암센터</option>
+							
+						
+							
+						
+							
+						
+							
+						
+					</select>
+                        <select title="진료과 항목" id="searchDept" name="searchDept" class="select_sty01" style="width: 270px;">
+						<option value="">전체</option>
+						
+							
+								
+									<option value="190" data-depttp="002011001" >가정의학과</option>
+								
+							
+						
+							
+								
+							
+						
+							
+								
+									<option value="191" data-depttp="002011001" >감염내과</option>
+								
+							
+						
+							
+								
+							
+						
+							
+								
+									<option value="192" data-depttp="002011001" >구강악안면외과</option>
+								
+							
+						
+							
+								
+									<option value="193" data-depttp="002011001" >내분비내과</option>
+								
+							
+						
+							
+								
+							
+						
+							
+								
+									<option value="195" data-depttp="002011001" >류마티스내과</option>
+								
+							
+						
+							
+								
+									<option value="196" data-depttp="002011001" >마취통증의학과</option>
+								
+							
+						
+							
+								
+									<option value="200" data-depttp="002011001" >방사선종양학과</option>
+								
+							
+						
+							
+								
+									<option value="207" data-depttp="002011001" >병리과</option>
+								
+							
+						
+							
+								
+									<option value="210" data-depttp="002011001" >비뇨의학과</option>
+								
+							
+						
+							
+								
+									<option value="213" data-depttp="002011001" >산부인과</option>
+								
+							
+						
+							
+								
+									<option value="216" data-depttp="002011001" >성형외과</option>
+								
+							
+						
+							
+								
+							
+						
+							
+								
+									<option value="217" data-depttp="002011001" >소아청소년과</option>
+								
+							
+						
+							
+								
+									<option value="219" data-depttp="002011001" >소화기내과</option>
+								
+							
+						
+							
+								
+									<option value="220" data-depttp="002011001" >순환기내과</option>
+								
+							
+						
+							
+								
+									<option value="221" data-depttp="002011001" >신경과</option>
+								
+							
+						
+							
+								
+									<option value="222" data-depttp="002011001" >신경외과</option>
+								
+							
+						
+							
+								
+									<option value="223" data-depttp="002011001" >신장내과</option>
+								
+							
+						
+							
+								
+									<option value="218" data-depttp="002011001" >심장혈관흉부외과</option>
+								
+							
+						
+							
+								
+									<option value="224" data-depttp="002011001" >안과</option>
+								
+							
+						
+							
+								
+									<option value="225" data-depttp="002011001" >영상의학과</option>
+								
+							
+						
+							
+								
+									<option value="226" data-depttp="002011001" >외과</option>
+								
+							
+						
+							
+								
+							
+						
+							
+								
+							
+						
+							
+								
+									<option value="197" data-depttp="002011001" >응급의학과</option>
+								
+							
+						
+							
+								
+									<option value="198" data-depttp="002011001" >이비인후과</option>
+								
+							
+						
+							
+								
+							
+						
+							
+								
+									<option value="201" data-depttp="002011001" >재활의학과</option>
+								
+							
+						
+							
+								
+									<option value="202" data-depttp="002011001" >정신건강의학과</option>
+								
+							
+						
+							
+								
+									<option value="203" data-depttp="002011001" >정형외과</option>
+								
+							
+						
+							
+								
+									<option value="204" data-depttp="002011001" >중환자의학과</option>
+								
+							
+						
+							
+								
+									<option value="205" data-depttp="002011001" >진단검사의학과</option>
+								
+							
+						
+							
+								
+									<option value="208" data-depttp="002011001" >치과교정과</option>
+								
+							
+						
+							
+								
+									<option value="209" data-depttp="002011001" >치과보존과</option>
+								
+							
+						
+							
+								
+									<option value="206" data-depttp="002011001" >치과보철과</option>
+								
+							
+						
+							
+								
+									<option value="425" data-depttp="002011001" >치주과</option>
+								
+							
+						
+							
+								
+									<option value="211" data-depttp="002011001" >피부과</option>
+								
+							
+						
+							
+								
+									<option value="212" data-depttp="002011001" >핵의학과</option>
+								
+							
+						
+							
+								
+							
+						
+							
+								
+									<option value="214" data-depttp="002011001" >혈액종양내과</option>
+								
+							
+						
+							
+								
+									<option value="215" data-depttp="002011001" >호흡기알레르기내과</option>
+								
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+								
+									<option value="247" data-depttp="002011004" >간·담도·췌장암 클리닉</option>
+								
+							
+						
+							
+								
+									<option value="239" data-depttp="002011004" >갑상선 센터</option>
+								
+							
+						
+							
+								
+									<option value="245" data-depttp="002011004" >대장암 클리닉</option>
+								
+							
+						
+							
+								
+									<option value="242" data-depttp="002011004" >두경부암 클리닉 (귀·코·목)</option>
+								
+							
+						
+							
+								
+									<option value="246" data-depttp="002011004" >부인암 클리닉</option>
+								
+							
+						
+							
+								
+									<option value="250" data-depttp="002011004" >신경심리 스트레스 클리닉</option>
+								
+							
+						
+							
+								
+							
+						
+							
+								
+							
+						
+							
+								
+									<option value="244" data-depttp="002011004" >위암 클리닉</option>
+								
+							
+						
+							
+								
+									<option value="240" data-depttp="002011004" >유방암 클리닉</option>
+								
+							
+						
+							
+								
+									<option value="248" data-depttp="002011004" >전립선·방광·신장암 클리닉</option>
+								
+							
+						
+							
+								
+									<option value="249" data-depttp="002011004" >중심정맥관리 클리닉</option>
+								
+							
+						
+							
+								
+									<option value="243" data-depttp="002011004" >폐·식도암 클리닉</option>
+								
+							
+						
+							
+								
+									<option value="241" data-depttp="002011004" >혈액·종양 내과</option>
+								
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+								
+									<option value="235" data-depttp="002011007" >게임과몰입센터</option>
+								
+							
+						
+							
+								
+									<option value="232" data-depttp="002011007" >당뇨센터</option>
+								
+							
+						
+							
+								
+									<option value="236" data-depttp="002011007" >생명사랑위기대응센터</option>
+								
+							
+						
+							
+								
+									<option value="234" data-depttp="002011007" >요로결석센터</option>
+								
+							
+						
+							
+								
+									<option value="237" data-depttp="002011007" >인공신장센터</option>
+								
+							
+						
+							
+								
+									<option value="238" data-depttp="002011007" >인터벤션센터</option>
+								
+							
+						
+							
+								
+									<option value="231" data-depttp="002011007" >장기이식센터</option>
+								
+							
+						
+					</select>
+                        <input type="text" id="searchWord" name="searchWord" class="input_text" placeholder="직접입력" title="검색어 직접 입력" value="">
+                        <input type="submit" value="검색" class="input_submit" title="검색제출버튼" onclick="javascript:fn_Search();">
+                    </div>
+
+
+                    <div class="doc_sche fix">
+                        <ul class="doc_sche_list_wrap">
+
+                            <li class="doc_sche_list list01">
+                                <div class="doc_info fix">
+                                    <div class="doc_img_wrap">
+
+
+                                        <img src="/_upload/profImg/392e8ccd-f3e8-4c99-babc-e7f3c01abc7d" alt="권소이 이미지" width="173" height="174"/>
+
+
+
+                                    </div>
+                                    <div class="doc_txt">
+                                        <p class="doc_name"> 권소이 <span class="doc_part">[신장내과]</span>
+                                            <span class="doc_field">전문분야</span>
+                                            <span class="doc_explain">신장이식, 만성 콩팥병, 급성 신손상, 단백뇨, 전해질/산염기 대사이상</span>
+                                        </p>
+                                        <ul class="doc_sche_btn_wrap">
+                                            <li><a href="javascript:fn_DeatilPop('home', '223', '993', '01557');"
+                                                    class="doc_intro">의료진 소개</a></li>
+
+                                            <li><a href="javascript:fn_MoveReserve('223', '2010700000', '993');"
+                                                    class="doc_reserv">진료예약</a></li>
+
+                                            <!-- <li><a href="#" class="doc_favorit">관심의료진</a></li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sche_table_wrap">
+                                    <table>
+                                        <caption>담당교수&스케줄에 대한 테이블입니다.</caption>
+                                        <colgroup>
+                                            <col style="width:10%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="row">구분</th>
+                                                <th scope="row">월</th>
+                                                <th scope="row">화</th>
+                                                <th scope="row">수</th>
+                                                <th scope="row">목</th>
+                                                <th scope="row">금</th>
+                                                <th scope="row">토</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            <tr>
+                                                <th scope="col">오전</th>
+                                                <td></td>
+                                                <td><img src='/common/front/home/images/icon/ico_cir_col05.png' alt='외래'/>
+                                                </td>
+                                                <td><img src='/common/front/home/images/icon/ico_cir_col05.png' alt='외래'/>
+                                                </td>
+                                                <td></td>
+                                                <td><img src='/common/front/home/images/icon/ico_cir_col05.png' alt='외래'/>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">오후</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td><img src='/common/front/home/images/icon/ico_cir_col05.png' alt='외래'/>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col" style="height: 70px;">안내</th>
+                                                <td colspan="6" style="text-align: left;">
+                                                    <p style="white-space: pre-line;">※ 토요일 진료 : 2째주</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="icon_wrap">
+                                        <span class="ico_outpatient">외래</span>
+                                        <!-- <span class="ico_cancer">암센터</span>
+									            <span class="ico_clinic">클리닉</span> -->
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="doc_sche_list list01">
+                                <div class="doc_info fix">
+                                    <div class="doc_img_wrap">
+
+
+                                        <img src="/_upload/profImg/69bc7ff6-d119-4a93-b692-56ed4782b19f" alt="권정택 이미지" width="173" height="174"/>
+
+
+
+                                    </div>
+                                    <div class="doc_txt">
+                                        <p class="doc_name"> 권정택 <span class="doc_part">[신경외과]</span>
+                                            <span class="doc_field">전문분야</span>
+                                            <span class="doc_explain">뇌종양, 뇌혈관질환(뇌졸중, 혈관기형), 두부외상</span>
+                                        </p>
+                                        <ul class="doc_sche_btn_wrap">
+                                            <li><a href="javascript:fn_DeatilPop('home', '222', '607', '00688');"
+                                                    class="doc_intro">의료진 소개</a></li>
+
+                                            <li><a href="javascript:fn_MoveReserve('222', '2060000000', '607');"
+                                                    class="doc_reserv">진료예약</a></li>
+
+                                            <!-- <li><a href="#" class="doc_favorit">관심의료진</a></li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sche_table_wrap">
+                                    <table>
+                                        <caption>담당교수&스케줄에 대한 테이블입니다.</caption>
+                                        <colgroup>
+                                            <col style="width:10%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="row">구분</th>
+                                                <th scope="row">월</th>
+                                                <th scope="row">화</th>
+                                                <th scope="row">수</th>
+                                                <th scope="row">목</th>
+                                                <th scope="row">금</th>
+                                                <th scope="row">토</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            <tr>
+                                                <th scope="col">오전</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td><img src='/common/front/home/images/icon/ico_cir_col05.png' alt='외래'/>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">오후</th>
+                                                <td><img src='/common/front/home/images/icon/ico_cir_col05.png' alt='외래'/>
+                                                </td>
+                                                <td></td>
+                                                <td><img src='/common/front/home/images/icon/ico_cir_col05.png' alt='외래'/>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col" style="height: 70px;">안내</th>
+                                                <td colspan="6" style="text-align: left;">
+                                                    <p style="white-space: pre-line;">'신환, 초진 (타병원) 약 복용시 외부 처방전 반드시 지참'
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="icon_wrap">
+                                        <span class="ico_outpatient">외래</span>
+                                        <!-- <span class="ico_cancer">암센터</span>
+									            <span class="ico_clinic">클리닉</span> -->
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="doc_sche_list list01">
+                                <div class="doc_info fix">
+                                    <div class="doc_img_wrap">
+
+
+                                        <img src="/_upload/profImg/5acf5d2e-aaae-4f70-84e7-1b6568255347" alt="기동훈 이미지" width="173" height="174"/>
+
+
+
+                                    </div>
+                                    <div class="doc_txt">
+                                        <p class="doc_name"> 기동훈 <span class="doc_part">[응급의학과]</span>
+                                            <span class="doc_field">전문분야</span>
+                                            <span class="doc_explain">응급의학</span>
+                                        </p>
+                                        <ul class="doc_sche_btn_wrap">
+                                            <li><a href="javascript:fn_DeatilPop('home', '197', '936', '01495');"
+                                                    class="doc_intro">의료진 소개</a></li>
+
+                                            <!-- <li><a href="#" class="doc_favorit">관심의료진</a></li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sche_table_wrap">
+                                    <table>
+                                        <caption>담당교수&스케줄에 대한 테이블입니다.</caption>
+                                        <colgroup>
+                                            <col style="width:10%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="row">구분</th>
+                                                <th scope="row">월</th>
+                                                <th scope="row">화</th>
+                                                <th scope="row">수</th>
+                                                <th scope="row">목</th>
+                                                <th scope="row">금</th>
+                                                <th scope="row">토</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+
+
+
+
+                                            <tr>
+                                                <th scope="col">오전</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">오후</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col" style="height: 70px;">안내</th>
+                                                <td colspan="6" style="text-align: left;">
+                                                    <p style="white-space: pre-line;"></p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="icon_wrap">
+                                        <span class="ico_outpatient">외래</span>
+                                        <!-- <span class="ico_cancer">암센터</span>
+									            <span class="ico_clinic">클리닉</span> -->
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="doc_sche_list list01">
+                                <div class="doc_info fix">
+                                    <div class="doc_img_wrap">
+
+
+                                        <img src="/_upload/profImg/034bf8ae-743b-47fb-86cd-b0f3beb18624" alt="김가영  이미지" width="173" height="174"/>
+
+
+
+                                    </div>
+                                    <div class="doc_txt">
+                                        <p class="doc_name"> 김가영 <span class="doc_part">[건진센터]</span>
+                                            <span class="doc_field">전문분야</span>
+                                            <span class="doc_explain">위내시경, 대장내시경</span>
+                                        </p>
+                                        <ul class="doc_sche_btn_wrap">
+                                            <li><a href="javascript:fn_DeatilPop('home', '229', '686', '01298');"
+                                                    class="doc_intro">의료진 소개</a></li>
+
+                                            <!-- <li><a href="#" class="doc_favorit">관심의료진</a></li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sche_table_wrap">
+                                    <table>
+                                        <caption>담당교수&스케줄에 대한 테이블입니다.</caption>
+                                        <colgroup>
+                                            <col style="width:10%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="row">구분</th>
+                                                <th scope="row">월</th>
+                                                <th scope="row">화</th>
+                                                <th scope="row">수</th>
+                                                <th scope="row">목</th>
+                                                <th scope="row">금</th>
+                                                <th scope="row">토</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+
+
+
+
+                                            <tr>
+                                                <th scope="col">오전</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">오후</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col" style="height: 70px;">안내</th>
+                                                <td colspan="6" style="text-align: left;">
+                                                    <p style="white-space: pre-line;"></p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="icon_wrap">
+                                        <span class="ico_outpatient">외래</span>
+                                        <!-- <span class="ico_cancer">암센터</span>
+									            <span class="ico_clinic">클리닉</span> -->
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="doc_sche_list list01">
+                                <div class="doc_info fix">
+                                    <div class="doc_img_wrap">
+
+
+                                        <img src="/_upload/profImg/4c41edd8-ac7f-489c-bed3-08217ec94288" alt="김경도 이미지" width="173" height="174"/>
+
+
+
+                                    </div>
+                                    <div class="doc_txt">
+                                        <p class="doc_name"> 김경도 <span class="doc_part">[건진센터]</span>
+                                            <span class="doc_field">전문분야</span>
+                                            <span class="doc_explain">종합검진판정 및 상담</span>
+                                        </p>
+                                        <ul class="doc_sche_btn_wrap">
+                                            <li><a href="javascript:fn_DeatilPop('home', '229', '675', '01339');"
+                                                    class="doc_intro">의료진 소개</a></li>
+
+                                            <!-- <li><a href="#" class="doc_favorit">관심의료진</a></li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sche_table_wrap">
+                                    <table>
+                                        <caption>담당교수&스케줄에 대한 테이블입니다.</caption>
+                                        <colgroup>
+                                            <col style="width:10%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="row">구분</th>
+                                                <th scope="row">월</th>
+                                                <th scope="row">화</th>
+                                                <th scope="row">수</th>
+                                                <th scope="row">목</th>
+                                                <th scope="row">금</th>
+                                                <th scope="row">토</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+
+
+
+
+                                            <tr>
+                                                <th scope="col">오전</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">오후</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col" style="height: 70px;">안내</th>
+                                                <td colspan="6" style="text-align: left;">
+                                                    <p style="white-space: pre-line;"></p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="icon_wrap">
+                                        <span class="ico_outpatient">외래</span>
+                                        <!-- <span class="ico_cancer">암센터</span>
+									            <span class="ico_clinic">클리닉</span> -->
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="doc_sche_list list01">
+                                <div class="doc_info fix">
+                                    <div class="doc_img_wrap">
+
+
+                                        <img src="/_upload/profImg/4c607648-2e12-4cd6-9a80-b816428a4d9a" alt="김경수 이미지" width="173" height="174"/>
+
+
+
+                                    </div>
+                                    <div class="doc_txt">
+                                        <p class="doc_name"> 김경수 <span class="doc_part">[이비인후과]</span>
+                                            <span class="doc_field">전문분야</span>
+                                            <span class="doc_explain">부비동질환, 코골이 및 수면무호흡, 알레르기비염, 코성형, 편도 및 아데노이드 절제 수술</span>
+                                        </p>
+                                        <ul class="doc_sche_btn_wrap">
+                                            <li><a href="javascript:fn_DeatilPop('home', '198', '658', '00928');"
+                                                    class="doc_intro">의료진 소개</a></li>
+
+                                            <li><a href="javascript:fn_MoveReserve('198', '2130000000', '658');"
+                                                    class="doc_reserv">진료예약</a></li>
+
+                                            <!-- <li><a href="#" class="doc_favorit">관심의료진</a></li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sche_table_wrap">
+                                    <table>
+                                        <caption>담당교수&스케줄에 대한 테이블입니다.</caption>
+                                        <colgroup>
+                                            <col style="width:10%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="row">구분</th>
+                                                <th scope="row">월</th>
+                                                <th scope="row">화</th>
+                                                <th scope="row">수</th>
+                                                <th scope="row">목</th>
+                                                <th scope="row">금</th>
+                                                <th scope="row">토</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            <tr>
+                                                <th scope="col">오전</th>
+                                                <td><img src='/common/front/home/images/icon/ico_cir_col05.png' alt='외래'/>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">오후</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td><img src='/common/front/home/images/icon/ico_cir_col05.png' alt='외래'/>
+                                                </td>
+                                                <td></td>
+                                                <td><img src='/common/front/home/images/icon/ico_cir_col05.png' alt='외래'/>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col" style="height: 70px;">안내</th>
+                                                <td colspan="6" style="text-align: left;">
+                                                    <p style="white-space: pre-line;">※ 토요일 진료 : 4째주</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="icon_wrap">
+                                        <span class="ico_outpatient">외래</span>
+                                        <!-- <span class="ico_cancer">암센터</span>
+									            <span class="ico_clinic">클리닉</span> -->
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="doc_sche_list list01">
+                                <div class="doc_info fix">
+                                    <div class="doc_img_wrap">
+
+
+                                        <img src="/_upload/profImg/3621f0c5-2bed-48b9-8526-31e16722bbd1" alt="김경우 이미지" width="173" height="174"/>
+
+
+
+                                    </div>
+                                    <div class="doc_txt">
+                                        <p class="doc_name"> 김경우 <span class="doc_part">[안과]</span>
+                                            <span class="doc_field">전문분야</span>
+                                            <span class="doc_explain">각막, 각막이식 (내피이식 포함), 양막이식, 익상편, 백내장 (노안 및 난시 교정 포함), 안구건조증, 콘택트렌즈</span>
+                                        </p>
+                                        <ul class="doc_sche_btn_wrap">
+                                            <li><a href="javascript:fn_DeatilPop('home', '224', '616', '01266');"
+                                                    class="doc_intro">의료진 소개</a></li>
+
+                                            <li><a href="javascript:fn_MoveReserve('224', '2120000000', '616');"
+                                                    class="doc_reserv">진료예약</a></li>
+
+                                            <!-- <li><a href="#" class="doc_favorit">관심의료진</a></li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sche_table_wrap">
+                                    <table>
+                                        <caption>담당교수&스케줄에 대한 테이블입니다.</caption>
+                                        <colgroup>
+                                            <col style="width:10%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="row">구분</th>
+                                                <th scope="row">월</th>
+                                                <th scope="row">화</th>
+                                                <th scope="row">수</th>
+                                                <th scope="row">목</th>
+                                                <th scope="row">금</th>
+                                                <th scope="row">토</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            <tr>
+                                                <th scope="col">오전</th>
+                                                <td><img src='/common/front/home/images/icon/ico_cir_col05.png' alt='외래'/>
+                                                </td>
+                                                <td><img src='/common/front/home/images/icon/ico_cir_col05.png' alt='외래'/>
+                                                </td>
+                                                <td></td>
+                                                <td><img src='/common/front/home/images/icon/ico_cir_col05.png' alt='외래'/>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">오후</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td><img src='/common/front/home/images/icon/ico_cir_col05.png' alt='외래'/>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col" style="height: 70px;">안내</th>
+                                                <td colspan="6" style="text-align: left;">
+                                                    <p style="white-space: pre-line;">※ 토요일 진료 : 3째주</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="icon_wrap">
+                                        <span class="ico_outpatient">외래</span>
+                                        <!-- <span class="ico_cancer">암센터</span>
+									            <span class="ico_clinic">클리닉</span> -->
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="doc_sche_list list01">
+                                <div class="doc_info fix">
+                                    <div class="doc_img_wrap">
+
+
+                                        <img src="/_upload/profImg/fa632869-0406-4e1d-8833-10e4c7bc7c21" alt="김광준 이미지" width="173" height="174"/>
+
+
+
+                                    </div>
+                                    <div class="doc_txt">
+                                        <p class="doc_name"> 김광준 <span class="doc_part">[산부인과]</span>
+                                            <span class="doc_field">전문분야</span>
+                                            <span class="doc_explain">태아이상 정밀진단, 자궁내 치료및 태아수술, 둔위교정술, 양성 난소종양, 자궁근종</span>
+                                        </p>
+                                        <ul class="doc_sche_btn_wrap">
+                                            <li><a href="javascript:fn_DeatilPop('home', '213', '573', '00787');"
+                                                    class="doc_intro">의료진 소개</a></li>
+
+                                            <li><a href="javascript:fn_MoveReserve('213', '2100000000', '573');"
+                                                    class="doc_reserv">진료예약</a></li>
+
+                                            <!-- <li><a href="#" class="doc_favorit">관심의료진</a></li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sche_table_wrap">
+                                    <table>
+                                        <caption>담당교수&스케줄에 대한 테이블입니다.</caption>
+                                        <colgroup>
+                                            <col style="width:10%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="row">구분</th>
+                                                <th scope="row">월</th>
+                                                <th scope="row">화</th>
+                                                <th scope="row">수</th>
+                                                <th scope="row">목</th>
+                                                <th scope="row">금</th>
+                                                <th scope="row">토</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            <tr>
+                                                <th scope="col">오전</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td><img src='/common/front/home/images/icon/ico_cir_col05.png' alt='외래'/>
+                                                </td>
+                                                <td><img src='/common/front/home/images/icon/ico_cir_col05.png' alt='외래'/>
+                                                </td>
+                                                <td><img src='/common/front/home/images/icon/ico_cir_col05.png' alt='외래'/>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">오후</th>
+                                                <td><img src='/common/front/home/images/icon/ico_cir_col05.png' alt='외래'/>
+                                                </td>
+                                                <td><img src='/common/front/home/images/icon/ico_cir_col05.png' alt='외래'/>
+                                                </td>
+                                                <td><img src='/common/front/home/images/icon/ico_cir_col05.png' alt='외래'/>
+                                                </td>
+                                                <td><img src='/common/front/home/images/icon/ico_cir_col05.png' alt='외래'/>
+                                                </td>
+                                                <td><img src='/common/front/home/images/icon/ico_cir_col05.png' alt='외래'/>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col" style="height: 70px;">안내</th>
+                                                <td colspan="6" style="text-align: left;">
+                                                    <p style="white-space: pre-line;">※ 화(오전), 수(오후), 목(종일), 금 (오후) -
+                                                        클리닉진료 : 정밀초음파 (기형아검사, 태아심장초음파, 융모막검사, 양수검사등) 시행 예약전 진료과 상담 필요
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="icon_wrap">
+                                        <span class="ico_outpatient">외래</span>
+                                        <!-- <span class="ico_cancer">암센터</span>
+									            <span class="ico_clinic">클리닉</span> -->
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="doc_sche_list list01">
+                                <div class="doc_info fix">
+                                    <div class="doc_img_wrap">
+
+
+                                        <img src="/_upload/profImg/c5e08a34-c7f9-495f-9325-f5498453d407" alt="김규원 이미지" width="173" height="174"/>
+
+
+
+                                    </div>
+                                    <div class="doc_txt">
+                                        <p class="doc_name"> 김규원 <span class="doc_part">[소화기내과]</span>
+                                            <span class="doc_field">전문분야</span>
+                                            <span class="doc_explain">대장질환(대장암, 대장용종, 크론병, 궤양성대장염, 과민성장증후군, 변비), 소장질환, 진단 및 치료내시경</span>
+                                        </p>
+                                        <ul class="doc_sche_btn_wrap">
+                                            <li><a href="javascript:fn_DeatilPop('home', '219', '1059', '01635');"
+                                                    class="doc_intro">의료진 소개</a></li>
+
+                                            <li><a href="javascript:fn_MoveReserve('219', '2010300000', '1059');"
+                                                    class="doc_reserv">진료예약</a></li>
+
+                                            <!-- <li><a href="#" class="doc_favorit">관심의료진</a></li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sche_table_wrap">
+                                    <table>
+                                        <caption>담당교수&스케줄에 대한 테이블입니다.</caption>
+                                        <colgroup>
+                                            <col style="width:10%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="row">구분</th>
+                                                <th scope="row">월</th>
+                                                <th scope="row">화</th>
+                                                <th scope="row">수</th>
+                                                <th scope="row">목</th>
+                                                <th scope="row">금</th>
+                                                <th scope="row">토</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            <tr>
+                                                <th scope="col">오전</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td><img src='/common/front/home/images/icon/ico_cir_col05.png' alt='외래'/>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">오후</th>
+                                                <td></td>
+                                                <td><img src='/common/front/home/images/icon/ico_cir_col05.png' alt='외래'/>
+                                                </td>
+                                                <td><img src='/common/front/home/images/icon/ico_cir_col05.png' alt='외래'/>
+                                                </td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col" style="height: 70px;">안내</th>
+                                                <td colspan="6" style="text-align: left;">
+                                                    <p style="white-space: pre-line;">※ 화요일 오후 진료 : 중앙관 1층 B구역
+                                                        ※ 금요일 오전 진료 : 중앙관 1층 B구역</p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="icon_wrap">
+                                        <span class="ico_outpatient">외래</span>
+                                        <!-- <span class="ico_cancer">암센터</span>
+									            <span class="ico_clinic">클리닉</span> -->
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="doc_sche_list list01">
+                                <div class="doc_info fix">
+                                    <div class="doc_img_wrap">
+
+
+                                        <img src="/_upload/profImg/a8bd6286-fc71-4f8a-b8f5-82b8ce8db703" alt="김나연 이미지" width="173" height="174"/>
+
+
+
+                                    </div>
+                                    <div class="doc_txt">
+                                        <p class="doc_name"> 김나연 <span class="doc_part">[정신건강의학과]</span>
+                                            <span class="doc_field">전문분야</span>
+                                            <span class="doc_explain">자문조정정신의학, 정신신체장애, 암환자정신건강, 여성정신의학, 기분장애, 불안장애, 외상후스트레스장애, 노년기정신장애, 신경성질환, 뇌손상후정신장애</span>
+                                        </p>
+                                        <ul class="doc_sche_btn_wrap">
+                                            <li><a href="javascript:fn_DeatilPop('home', '202', '1092', '01683');"
+                                                    class="doc_intro">의료진 소개</a></li>
+
+                                            <li><a href="javascript:fn_MoveReserve('202', '2030000000', '1092');"
+                                                    class="doc_reserv">진료예약</a></li>
+
+                                            <!-- <li><a href="#" class="doc_favorit">관심의료진</a></li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="sche_table_wrap">
+                                    <table>
+                                        <caption>담당교수&스케줄에 대한 테이블입니다.</caption>
+                                        <colgroup>
+                                            <col style="width:10%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                            <col style="width:15%;">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="row">구분</th>
+                                                <th scope="row">월</th>
+                                                <th scope="row">화</th>
+                                                <th scope="row">수</th>
+                                                <th scope="row">목</th>
+                                                <th scope="row">금</th>
+                                                <th scope="row">토</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+
+
+
+
+                                            <tr>
+                                                <th scope="col">오전</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col">오후</th>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col" style="height: 70px;">안내</th>
+                                                <td colspan="6" style="text-align: left;">
+                                                    <p style="white-space: pre-line;"></p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="icon_wrap">
+                                        <span class="ico_outpatient">외래</span>
+                                        <!-- <span class="ico_cancer">암센터</span>
+									            <span class="ico_clinic">클리닉</span> -->
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+
+
+
+                    <div class="pageList">
+                        <div class="pagelist fix">
+                            <ul class="lftnavi">
+                                <li><a
+                                        href='javascript:G_MovePage(1);'><img src="/common/front/home/images/icon/ico_btn_pprev.png" alt="처음페이지"></a>
+                                </li>
+                            </ul>
+                            <ol class="fix">
+                                <li><a href='javascript:G_MovePage(1);'>1</a></li>
+                                <li><strong>2</strong></li>
+                                <li><a href='javascript:G_MovePage(3);'>3</a></li>
+                                <li><a href='javascript:G_MovePage(4);'>4</a></li>
+                                <li><a href='javascript:G_MovePage(5);'>5</a></li>
+                            </ol>
+                            <ul class="ritnavi">
+                                <li><a
+                                        href='javascript:G_MovePage(6);'><img src="/common/front/home/images/icon/ico_btn_nxt.png" alt="다음 페이지" /></a>
+                                </li>
+                                <li><a
+                                        href='javascript:G_MovePage(23);'><img src="/common/front/home/images/icon/ico_btn_nnxt.png" alt="마지막 페이지" /></a>
+                                </li>
+                            </ul>
+                        </div>
+
+
+
+
+                    </div>
+            </section>
+        </form>
+
+        <!-- //contents -->
+
+        <!--/sub_container_wrapper-->
+
+        <!-- 통합검색 레이어팝업 -->
+        <div class="layer_search_wrapper">
+            <div class="layer_search">
+                <form id="searchfrm" name="searchfrm" method="POST">
+                    <input type="hidden" id="tabCd" name="tabCd" value=""/>
+                    <input type="hidden" id="workType" name="workType"/>
+                    <input type="hidden" id="totalWord" name="totalWord" value=""/>
+                    <fieldset>
+                        <legend>통합검색</legend>
+                        <div class="top">
+                            <strong>SEARCH</strong>
+                            <a href="javascript:void(0);" class="layer_search_close"
+                                onclick="searchClose();"><i><em class="skip">닫기버튼</em></i></a>
+                        </div>
+                        <div class="bott">
+
+                            <input type="text" id="subKeyWord" name="subKeyWord" class="layer_search_input" placeholder="무엇이 궁금하세요?">
+                            <ul class="fix">
+                                <li><a href="javascript:void(0);" onclick="javascript:fn_TotalSearch(this);">#온라인예약</a>
+                                </li>
+                                <li><a href="javascript:void(0);" onclick="javascript:fn_TotalSearch(this);">#증명서발급</a>
+                                </li>
+                                <li><a href="javascript:void(0);" onclick="javascript:fn_TotalSearch(this);">#진료과</a>
+                                </li>
+                                <li><a href="javascript:void(0);" onclick="javascript:fn_TotalSearch(this);">#의료진</a>
+                                </li>
+                                <li><a href="javascript:void(0);" onclick="javascript:fn_TotalSearch(this);">#장례식장</a>
+                                </li>
+                                <li><a href="javascript:void(0);" onclick="javascript:fn_TotalSearch(this);">#오시는길</a>
+                                </li>
+                                <!-- <li><a href="javascript:void(0);" onclick="javascript:fn_TotalSearch(this);">#비급여진료비</a></li> -->
+                                <li><a href="javascript:void(0);"
+                                        onclick="javascript:fn_TotalSearch(this);">#중앙대학교광명병원</a></li>
+                            </ul>
+                            <input type="image" class="btn_layer_search" src="/common/front/home/images/common/btn_s.png" title="검색버튼" onclick="javascript:fn_TotalSearch('subKeyWord'); return false;">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <!-- //통합검색 레이어팝업 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--footer-->
+
+
+
+
+
+
+
+
+        <!--footer_wrapper-->
+        <footer id="footer">
+            <div class="inner">
+                <div class="footer_bott">
+
+
+
+                    <h1 class="footer_logo">
+                        <a href="javascript:void(0);">
+                            <img src="/common/front/home/images/common/logo_footer.png" alt="중앙대학교병원"/>
+                        </a>
+                    </h1>
+                    <div class="footer_bott_con">
+                        <ul class="footer_bott_menu fix">
+                            <li><a href="/home/conts/109013000000000.do">환자권리장전</a></li>
+                            <li><a href="/home/member/PrivacyInfo.do"
+                                    style="font-weight: 600;color: #f57808;">개인정보처리방침</a></li>
+                            <li><a href="/home/guide/prescribe.do">비급여항목안내</a></li>
+                        </ul>
+                        <address>
+                            <strong>
+				                                06973 서울특별시 동작구 흑석로 102 (흑석동 224-1)
+				                                <span onclick="location.href='tel:1800-1114';">TEL : 1800-1114</span>
+				                            </strong>
+                            <em>COPYRIGHT (C) CHUNG-ANG UNIVERSITY HOSPITAL, ALL RIGHTS RESERVED.</em>
+                        </address>
+                    </div>
+
+
+                    <div class="family_site">
+                        <a href="javascript:void(0);">패밀리사이트</a>
+                        <ul class="family_site_list">
+                            <li><a href="http://ch.cauhs.or.kr/group/index.do?introDisplayYn=N">중앙대학교의료원</a></li>
+                            <li><a href="http://gh.cauhs.or.kr/fund/">발전후원회</a></li>
+                            <li><a href="http://gh.cauhs.or.kr/home/index.do?introDisplayYn=N">중앙대학교광명병원</a></li>
+                            <li><a href="http://ch.cauhs.or.kr/health/">건강증진센터</a></li>
+                            <li><a href="http://ch.cauhs.or.kr/ghealth/">일반검진센터</a></li>
+                            <li><a href="http://ch.cauhs.or.kr/refer/">진료협력센터</a></li>
+                            <li><a href="http://ch.cauhs.or.kr/funeral/">장례식장</a></li>
+                            <li><a href="http://ch.cauhs.or.kr/recruit/">인재채용</a></li>
+                            <li><a href="http://ch.cauhs.or.kr/eng/">English</a></li>
+                            <li><a href="http://ch.cauhs.or.kr/chi/">Chinese</a></li>
+                            <li><a href="http://ch.cauhs.or.kr/rus/">Russian</a></li>
+                            <li><a href="http://ch.cauhs.or.kr/mon/">Mongolian</a></li>
+                        </ul>
+                    </div>
+                    <ul class="sns_wrap fix">
+                        <li><a href="https://www.youtube.com/user/CAUHOSPITAL/featured" target="_blank" title="새창으로 열기"
+                                class=""><img src="/common/front/home/images/icon/ico_circle_youtube.png" alt="유튜브"></a>
+                        </li>
+                        <li><a href="https://www.facebook.com/CauHospital" target="_blank" title="새창으로 열기"
+                                class=""><img src="/common/front/home/images/icon/ico_circle_facebook.png" alt="페이스북"></a>
+                        </li>
+                        <li><a href="https://instagram.com/cauhospital?igshid=YmMyMTA2M2Y=" target="_blank"
+                                title="새창으로 열기"
+                                class=""><img src="/common/front/home/images/icon/ico_circle_insta.png" alt="인스타"></a>
+                        </li>
+                        <li><a href="https://blog.naver.com/cau_hs" target="_blank" title="새창으로 열기"
+                                class=""><img src="/common/front/home/images/icon/ico_circle_blog.png" alt="네이버 블로그"></a>
+                        </li>
+
+                    </ul>
+                    <!-- <p class="sns_wrap">
+								<a href="https://www.youtube.com/user/CAUHOSPITAL/featured" target="_blank" title="새창으로 열기" class=""><img src="/common/front/home/images/icon/ico_circle_youtube.png" alt="유튜브" /></a>
+								<a href="https://www.facebook.com/CauHospital" target="_blank" title="새창으로 열기" class=""><img src="/common/front/home/images/icon/ico_circle_facebook.png" alt="페이스북" /></a>
+								<a href="https://blog.naver.com/cau_hs" target="_blank" title="새창으로 열기" class=""><img src="/common/front/home/images/icon/ico_circle_blog.png" alt="네이버 블로그" /></a>
+							</p> -->
+
+                    <div class="isms_wrap">
+                        <ul>
+                            <li><span class="tit">[인증범위]</span><span class="txt">의료정보시스템(OCS, EMR)<br>및 홈페이지 서비스 운영</span>
+                            </li>
+                            <li><span class="tit">[유효기간]</span><span class="txt">2023.02.01 ~ 2026.01.31<span></span></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <a href="javascript:void(0);" onclick="moveTop();" class="btn_top"><span class="skip">상단으로 가기</span></a>
+        </footer>
+        <!--/footer_wrapper-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--//footer-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="sitemap_wrap">
+            <div class="sitemap_inner">
+                <div class="sitemap_top fix">
+                    <h3>전체메뉴</h3>
+                    <a href="javascript:void(0);" onclick="sitemapClose();"
+                        class="sitemap_close"><span class="skip">닫기버튼</span></a>
+                </div>
+                <ul class="sitemap fix">
+                    <li><a href='/home/conts/101001000000000.do' class='tit'>이용안내</a>
+                        <ul class='depth2'>
+                            <li>
+                            <li><a href='/home/conts/101001000000000.do'>오시는 길</a>
+                            </li>
+                            <li><a href='/home/conts/101002001000000.do'>주차안내</a>
+                                <ul class='depth3'>
+                                </ul </li>
+                            <li><a href='/home/conts/101003000000000.do'>면회안내</a>
+                            </li>
+                            <li><a href='/home/conts/101004000000000.do'>전화번호안내</a>
+                            </li>
+                            <li><a href='/home/introduce/floor0Pop.do'>층별배치도</a>
+                            </li>
+                            <li><a href='/home/conts/101006005000000.do'>진료비안내</a>
+                                <ul class='depth3'>
+                                </ul </li>
+                            <li><a href='/home/conts/101010000000000.do'>편의시설안내</a>
+                            </li>
+                            <li><a href='/home/conts/101011001000000.do'>강의실 대관 안내</a>
+                                <ul class='depth3'>
+                                </ul </li>
+                            <li><a href='/home/conts/101013000000000.do'>모바일 앱</a>
+                            </li>
+                    </li>
+                </ul>
+                </li>
+                <li><a href='/home/medical/deptAllIntro.do' class='tit'>진료과/센터</a>
+                    <ul class='depth2'>
+                        <li>
+                        <li><a href='/home/medical/deptAllIntro.do'>진료과</a>
+                            <ul class='depth3'>
+                            </ul </li>
+                        <li><a href='/home/medical/cancerCenterAllIntro.do'>암센터</a>
+                            <ul class='depth3'>
+                            </ul </li>
+                        <li><a href='/home/conts/105003000000000.do'>클리닉</a>
+                        </li>
+                        <li><a href='/home/medical/centerAllIntro.do'>전문센터</a>
+                            <ul class='depth3'>
+                            </ul </li>
+                        <li><a href='/home/medical/center2AllIntro.do'>특성화센터</a>
+                            <ul class='depth3'>
+                            </ul </li>
+                        <li><a href='/home/medical/profList.do'>의료진</a>
+                        </li>
+                        <li><a href='/home/conts/105009001000000.do'>IRB</a>
+                            <ul class='depth3'>
+                            </ul </li>
+                        <li><a href='/home/medical/deptIntro258.do'>지원부서</a>
+                            <ul class='depth3'>
+                            </ul </li>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href='/home/reserveNew/resvOnline.do' class='tit'>예약/조회</a>
+                    <ul class='depth2'>
+                        <li>
+                        <li><a href='/home/reserveNew/resvOnline.do'>온라인 진료예약</a>
+                        </li>
+                        <li><a href='/home/conts/106001002000000.do'>처음진료 간편예약</a>
+                            <ul class='depth3'>
+                            </ul </li>
+                        <li><a href='/health/' target='_blank'>종합검진예약</a>
+                        </li>
+                        <li><a href='/home/member/userMypageCheck.do'>진료예약 조회</a>
+                        </li>
+                </li>
+                </ul>
+                </li>
+                <li><a href='/home/conts/102001000000000.do' class='tit'>진료안내</a>
+                    <ul class='depth2'>
+                        <li>
+                        <li><a href='/home/conts/102001000000000.do'>외래진료</a>
+                        </li>
+                        <li><a href='/home/conts/102002000000000.do'>입·퇴원</a>
+                        </li>
+                        <li><a href='/home/conts/102003000000000.do'>응급진료</a>
+                        </li>
+                        <li><a href='/home/conts/102004000000000.do'>진료의뢰서</a>
+                        </li>
+                        <li><a href='/home/conts/102005000000000.do'>가정간호</a>
+                        </li>
+                        <li><a href='/home/conts/102006000000000.do'>신체검사</a>
+                        </li>
+                        <li><a href='/home/conts/102007001000000.do'>증명서발급안내</a>
+                            <ul class='depth3'>
+                            </ul </li>
+                        <li><a href='/home/conts/102008000000000.do'>병리자료대출안내</a>
+                        </li>
+                        <li><a href='/home/conts/102009000000000.do'>황열예방접종안내</a>
+                        </li>
+                        <li><a href='/home/conts/102010000000000.do'>콜레라예방접종안내</a>
+                        </li>
+                        <li><a href='/home/guide/prescribe.do'>비급여항목안내</a>
+                        </li>
+                        <li><a href='/home/conts/102012000000000.do'>호스피스 완화의료</a>
+                        </li>
+                        <li><a href='/home/conts/102013000000000.do'>국민안심병원 및 코로나19 검사</a>
+                        </li>
+                        <li><a href='/home/conts/102014001000000.do'>수술실 CCTV 안내</a>
+                            <ul class='depth3'>
+                            </ul </li>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href='/home/conts/103001000000000.do' class='tit'>병원소개</a>
+                    <ul class='depth2'>
+                        <li>
+                        <li><a href='/home/conts/103001000000000.do'>병원장 인사말</a>
+                        </li>
+                        <li><a href='/home/conts/103002000000000.do'>미션 · 비젼</a>
+                        </li>
+                        <li><a href='/home/conts/103004000000000.do'>역대 병원장</a>
+                        </li>
+                        <li><a href='/home/conts/103011000000000.do'>병원연혁</a>
+                        </li>
+                        <li><a href='/home/conts/103005001000000.do'>병원현황</a>
+                            <ul class='depth3'>
+                            </ul </li>
+                        <li><a href='/home/conts/103006001000000.do'>병원홍보</a>
+                            <ul class='depth3'>
+                            </ul </li>
+                        <li><a href='/home/board/2_List.do'>병원소식</a>
+                            <ul class='depth3'>
+                            </ul </li>
+                        <li><a href='/home/board/22_List.do'>사회공헌</a>
+                            <ul class='depth3'>
+                            </ul </li>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href='/home/board/8_List.do' class='tit'>건강정보</a>
+                    <ul class='depth2'>
+                        <li>
+                        <li><a href='/home/board/8_List.do'>건강강좌</a>
+                        </li>
+                        <li><a href='/home/board/5_List.do'>건강칼럼</a>
+                        </li>
+                        <li><a href='/home/medicine/kimsPop.do'>약품검색</a>
+                        </li>
+                </li>
+                </ul>
+                </li>
+                <li><a href='/home/board/boardClientThanksList.do' class='tit'>고객서비스</a>
+                    <ul class='depth2'>
+                        <li>
+                        <li><a href='/home/board/boardClientThanksList.do'>칭찬합시다</a>
+                        </li>
+                        <li><a href='/home/board/boardClientComplainRegist.do'>고객의 소리</a>
+                        </li>
+                </li>
+                </ul>
+                </li>
+                <li><a href='/home/member/login.do' class='tit'>회원서비스</a>
+                    <ul class='depth2'>
+                        <li>
+                        <li><a href='/home/member/login.do'>로그인</a>
+                        </li>
+                        <li><a href='/home/member/join1.do'>회원가입</a>
+                        </li>
+                        <li><a href='/home/member/findId.do'>아이디 찾기</a>
+                        </li>
+                        <li><a href='/home/member/findPw.do'>비밀번호 찾기</a>
+                        </li>
+                        <li><a href='/home/member/userMypageCheck.do'>회원정보</a>
+                            <ul class='depth3'>
+                            </ul </li>
+                        <li><a href='/home/member/familyRegist.do'>대리예약 대상자등록</a>
+                        </li>
+                        <li><a href='/home/conts/109013000000000.do'>환자권리장전</a>
+                        </li>
+                        <li><a href='/home/member/PrivacyInfo.do'>개인정보처리방침</a>
+                        </li>
+                        <li><a href='/home/member/TermsInfo.do'>이용약관</a>
+                        </li>
+                        <li><a href='/home/search/totalList.do'>통합검색</a>
+                        </li>
+                </li>
+                </ul>
+                </li>
+
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- /wrap -->
+
+
+    <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+    <script type="text/javascript">
+        if(!wcs_add) var wcs_add = {};
+	wcs_add["wa"] = "1f7b75c37a4943";
+	if(window.wcs) {
+	wcs_do();
+	}
+    </script>
+    <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+    <script type="text/javascript">
+        if(!wcs_add) var wcs_add = {};
+	wcs_add["wa"] = "13ad2a3c474aeb0";
+	if(window.wcs) {
+	wcs_do();
+	}
+    </script>
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HTND7RYLKG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-HTND7RYLKG');
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FV6XJSL4YD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'G-FV6XJSL4YD');
+    </script>
+
+
+
+</body>
+
+</html>

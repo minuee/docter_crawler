@@ -1,0 +1,42 @@
+const config = require('../config/configuration.js');
+const mysql = require('mysql2/promise');
+const moment = require('moment-timezone');
+const poolPromise = mysql.createPool(config.database.mysql);
+
+module.exports = {
+
+  spCall: async (spName, ...info) => {
+    let error=null, result, fields;
+    let DBconn
+    let DBError = null;
+    console.log(`spName : ${spName}`)
+    // console.log(`info : ${info}`) 
+    const pool = poolPromise;
+    try {
+        DBconn = await pool.getConnection();
+        console.log(`> Pool connection`);
+        console.log(`> LCL : ${moment.utc(new Date().toISOString()).tz("Asia/Seoul").format()}`);
+        console.time(`> Query ${spName} ${info} executetime : `); 
+        try {
+          [result,fields] = await DBconn.query(spName, info) || null
+          DBconn.release();
+        } catch (err) {
+          console.log(`> err on query ${spName}: ${err}`)
+          error = {code: (err.code || 100), name: err.name, message: (err.message || `Unexpacted SP CALL`)}
+          return {DBError: err, RS: result}
+        }
+    } catch (err) {
+        console.dir(err);
+        console.log(`> err on connection ${spName}: ${err}`)
+        error = {code: (err.code || 100), name: err.name, message: (err.message || `Unexpacted DB Connection`)}
+        DBconn.rollback(() => {
+        })
+    } finally {
+        console.timeEnd(`> Query ${spName} ${info} executetime : `);
+        console.log(`> Pool release`);
+        return {DBError: error, RS: result}
+    }
+  }
+
+
+}

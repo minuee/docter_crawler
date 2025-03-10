@@ -1,0 +1,238 @@
+
+const config = require(`${global.appRoot}/server/config/configuration`);
+const crawlingCtrl = require(`${global.appRoot}/services/crawling_severance.healthcare/controller`);
+const CS = require(`${global.appRoot}/server/util/util.casting`);
+const RM = require(`${global.appRoot}/server/util/response.message`);
+const TS = require(`${global.appRoot}/server/middleware/message.handler`);
+const AUTH = require(`${global.appRoot}/server/middleware/auth.handler`);
+const uploadProfileImage = require(`${global.appRoot}/server/middleware/s3.handler`);
+const express = require('express');
+const asyncify = require('express-asyncify');
+const moment = require('moment-timezone');
+const crypto = require('crypto');
+const axios = require('axios');
+const cheerio = require('cheerio');
+const _ = require('lodash');
+const router = asyncify(express.Router());
+module.exports = router;
+
+
+
+
+router.post('/step01', async (req, res, next) => {
+  const ip = req.clientIp;
+  const data = [];
+  const P1 = await crawlingCtrl.crwalingProcess01();
+  console.log(`links count : ${_.size(P1.data)}`)
+  console.log(`P1.data`)
+  console.log(P1.data)
+  for (let i = 0; i < _.size(P1.data); i++) {
+    await CS.wait(5000);
+    const SP1 = await crawlingCtrl.crwalingProcess02(P1.data[i]);
+    console.log(`Iteration ${i}: Result is ${SP1.data}`);
+    if (!CS.isEmpty(SP1.data)) {
+      await CS.wait(300);
+      const SP2 = await crawlingCtrl.get_rid_encrypt(SP1.data.doctorName, SP1.data.url);
+      if (SP2.error) {
+        console.log("SP2 DB fail.");
+        return res.json(TS.fail("SP2 DB fail."));
+      }
+      const tempRid = SP2.data[0].rid_encrypt
+      await CS.wait(300);
+      const SP3 = await crawlingCtrl.setCrawlingDoctorLink(tempRid, 'H01KR-11000008', SP1.data.deptName, SP1.data.doctorName, SP1.data.url);
+      if (SP3.error) console.log("SP3 DB upsert fail.");;
+    }
+  }
+  let result = P1.data
+  return res.json(TS.success(result));
+});
+
+
+
+router.post('/step02', async (req, res, next) => {
+  const ip = req.clientIp;
+  // validation parameter
+  // db transaction
+  const P1 = await crawlingCtrl.getCrawlingDoctorLink('H01KR-11000008');
+  console.log(_.size(P1.data))
+  if (CS.isEmpty(_.size(P1.data))) { return res.json(TS.fail({ code: 'DATA_NULL', message: 'response data is null' })) }
+  const doctorLinkTotal = _.size(P1.data)
+  const loopSize = _.size(P1.data);
+
+  for (let i = 0; i < loopSize; i++) {
+    await CS.wait(10000);
+    const SP1 = await crawlingCtrl.crwalingProcess03(P1.data[i].url);
+    const doctorname = SP1.data.doctorName ? SP1.data.doctorName : null
+    const refUrl = P1.data[i].url ? P1.data[i].url : null
+    if (!doctorname || !refUrl) {
+      break;
+    }
+    await CS.wait(300);
+    const SP2 = await crawlingCtrl.get_rid_encrypt(doctorname, refUrl);
+    if (SP2.error) {
+      console.log("SP2 DB fail.");
+      return res.json(TS.fail("SP2 DB fail."));
+    }
+    const tempRid = SP2.data[0].rid_encrypt
+    if (CS.isEmpty(tempRid)) break;
+
+    // DB upsert
+    await CS.wait(300);
+    const SP3 = await crawlingCtrl.setCrawlingdoctorBasic(tempRid, 'H01KR-11000008', SP1.data.deptName, SP1.data.doctorName, SP1.data.specialty, SP1.data.profileImgUrl);
+    if (SP3.error) {
+      console.log("SP3 DB fail.");
+      return res.json(TS.fail("SP3 DB fail."));
+    }
+    await CS.wait(300);
+    const SP4 = await crawlingCtrl.setCrawlingdoctorBiography(tempRid, 'H01KR-11000008', SP1.data.doctorName, JSON.stringify(SP1.data.biography));
+    if (SP4.error) {
+      console.log("SP4 DB fail.");
+      return res.json(TS.fail("SP4 DB fail."));
+    }
+  }
+  let result = P1.data
+  return res.json(TS.success(result));
+});
+
+
+
+router.post('/hospital/step03', async (req, res, next) => {
+  const ip = req.clientIp;
+  // validation parameter
+  // db transaction
+  const P1 = await crawlingCtrl.get_crawling_doctor_mssing_link('H01KR-11000008');
+  console.log(_.size(P1.data))
+  if (CS.isEmpty(_.size(P1.data))) { return res.json(TS.fail({ code: 'DATA_NULL', message: 'response data is null' })) }
+  const doctorLinkTotal = _.size(P1.data)
+
+  for (let i = 0; i < _.size(P1.data); i++) {
+    await CS.wait(10000);
+    const SP1 = await crawlingCtrl.crwalingProcess03(P1.data[i].url);
+    const doctorname = SP1.data.doctorName ? SP1.data.doctorName : null
+    const refUrl = P1.data[i].url ? P1.data[i].url : null
+    if (!doctorname || !refUrl) {
+      break;
+    }
+    await CS.wait(300);
+    const SP2 = await crawlingCtrl.get_rid_encrypt(doctorname, refUrl);
+    if (SP2.error) {
+      console.log("SP2 DB fail.");
+      return res.json(TS.fail("SP2 DB fail."));
+    }
+    const tempRid = SP2.data[0].rid_encrypt
+    if (CS.isEmpty(tempRid)) break;
+    await CS.wait(300);
+    const SP3 = await crawlingCtrl.setCrawlingdoctorBasic(tempRid, 'H01KR-11000008', SP1.data.deptName, SP1.data.doctorName, SP1.data.specialty, SP1.data.profileImgUrl);
+    if (SP3.error) {
+      console.log("SP3 DB fail.");
+      return res.json(TS.fail("SP3 DB fail."));
+    }
+    await CS.wait(300);
+    const SP4 = await crawlingCtrl.setCrawlingdoctorBiography(tempRid, 'H01KR-11000008', SP1.data.doctorName, JSON.stringify(SP1.data.biography));
+    if (SP4.error) {
+      console.log("SP4 DB fail.");
+      return res.json(TS.fail("SP4 DB fail."));
+    }
+  }
+
+  let result = P1.data
+  return res.json(TS.success(result));
+});
+
+
+
+
+router.post('/treatise', async (req, res, next) => {
+  const ip = req.clientIp;
+  // validation parameter
+  // db transaction
+  const P1 = await crawlingCtrl.getCrawlingDoctorLink('H01KR-11000008');
+  console.log(_.size(P1.data))
+  if (CS.isEmpty(_.size(P1.data))) { return res.json(TS.fail({ code: 'DATA_NULL', message: 'response data is null' })) }
+  const loopSize = _.size(P1.data);
+  let tempCount = 0
+
+  for (let i = 0; i < loopSize; i++) {
+    await CS.wait(1000);
+    const SP1 = await crawlingCtrl.crwalingGetTreatiseLink(P1.data[i].url);
+    if (SP1.data) {
+      const tempRid = P1.data[i].rid
+      if (!CS.isEmpty(tempRid)) {
+        await CS.wait(300);
+        // delete old traetise
+        // await crawlingCtrl.del_crawlingdoctor_treatise(tempRid)
+        console.log(`tempCount: ${tempCount} - tempRid: ${tempRid} - treatiseUrl: ${SP1.data}`)
+        const SP2 = await crawlingCtrl.getTreatiseLinkTotalCount(SP1.data);
+        console.log(`SP2.data (total cnt)======================================`)
+        console.log(SP2.data)
+        let treatiseTotalcount = 0
+        let treatiseTotalPage = 0
+        let pageSize = 50
+        let page = 1
+        let offset = 0
+        if (SP2.data) {
+          treatiseTotalcount = SP2.data
+          treatiseTotalPage = Math.ceil((treatiseTotalcount / pageSize))
+
+          for (let index = 0; index < treatiseTotalPage; index++) {
+            await CS.wait(1000);
+            const tUrl = `${SP1.data}&type=1&page=${index + 1}&offset=${pageSize * (index)}`;
+            const IP = await crawlingCtrl.getTreatiseDetail(tUrl);
+            const TSize = _.size(IP.data)
+            console.log(`TSize: ${TSize}`)
+            if (TSize) {
+              for (let index2 = 0; index2 < TSize; index2++) {
+                const element = IP.data[index2];
+                await CS.wait(2000);
+                if (element) {
+                  if (element.url) {
+                    tempCount = tempCount + 1
+                    const TS = await crawlingCtrl.setTreatiseDetail(element.url)
+                    if (TS.error) {
+                      console.log(`TS.error : ${TS.error}`)
+                    } else {
+                      const element = TS.data;
+                      const iD = {
+                        rid: tempRid,
+                        title: element.title,
+                        doi: element.doi,
+                        journalName: element.journalName,
+                        authorRule: element.authorRule,
+                        publicationDate: element.publicationDate,
+                        url: element.url,
+                        abstract: element.abstract,
+                        keywords: element.keywords,
+                        impactFactor: element.impactFactor,
+                        totalCitations: element.totalCitations,
+                        referencesThesis: element.referencesThesis,
+                        doctorName: P1.data[i].doctorname,
+                        authorName: element.authorName,
+                        subjectClassification: element.subjectClassification,
+                        publicationLocation: element.publicationLocation
+                      }
+                      await CS.wait(300);
+                      const SP6 = await crawlingCtrl.setCrawlingTreatise(iD.rid, iD.title, iD.doi, iD.journalName, iD.authorRule, iD.publicationDate, iD.url, iD.abstract, iD.keywords, iD.impactFactor, iD.totalCitations, iD.referencesThesis, iD.doctorName, iD.authorName, iD.subjectClassification, iD.publicationLocation);
+                      if (SP6.error) {
+                        console.log(`SP6 DB fail.`);
+                        console.log(`Error on ${SP1.data.doctorName}`)
+                        // return res.json(TS.fail("SP5 DB fail."));
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  let result = tempCount
+  return res.json(TS.success(result));
+});
+
+
+router.get('/info', AUTH.validation, async (req, res, next) => {
+  const ip = req.clientIp;
+  return res.json(TS.success(req.auth));
+});
