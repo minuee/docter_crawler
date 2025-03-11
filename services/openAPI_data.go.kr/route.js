@@ -1,4 +1,3 @@
-
 const config = require(`${global.appRoot}/server/config/configuration`);
 const crawlingCtrl = require(`${global.appRoot}/services/openAPI_data.go.kr/controller`);
 const CS = require(`${global.appRoot}/server/util/util.casting`);
@@ -12,14 +11,52 @@ const moment = require('moment-timezone');
 const crypto = require('crypto');
 const axios = require('axios');
 const cheerio = require('cheerio');
-const xlsx = require('xlsx');
+const xlsx = require('xlsx'); 
 const _ = require('lodash');
 const path = require('path');
 const router = asyncify(express.Router());
-module.exports = router;
 
+router.get('/healthcheck', async function(req, res) {    
+  const result = true;
+  if ( result ) { 
+    res.send({
+      'code': 200,
+      'message': '접속테스트',
+      'desc': 'success',
+      'data' : null 
+    });
+  }else{
+    res.send({
+      'code': 200,
+      'message': '접속테스트',
+      'desc': 'failed',
+      'data' : result
+    });
+  }
+});
 
-
+/**
+ * @swagger
+ *  /v1/c/open.go.kr/healthcheck:
+ *    get:
+ *      summary: "접속 테스트"
+ *      description: "서버에 접속이 됬는데 "
+ *      tags: [OpenAPI_data.go.kr-공공정보]
+ *      responses:
+ *        "200":
+ *          description: 접속 테스트
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    users:
+ *                      type: object
+ *                      example:    
+ *                            { "code": 1000, "message": "접속성공" }
+ */
 
 router.post('/type02', async (req, res, next) => {
   const ip = req.clientIp;
@@ -29,8 +66,7 @@ router.post('/type02', async (req, res, next) => {
   let result = null
   const P0 = await crawlingCtrl.get_yGiho_link()
   if (P0.data) {
-    console.log(`P0.data : ${P0.data}`)
-
+    console.log(`P0.data : ${P0.data}`);
   }
   for (let index = 0; index < _.size(P0.data); index++) {
     const element = P0.data[index];
@@ -62,6 +98,37 @@ router.post('/type02', async (req, res, next) => {
 });
 
 
+/**
+ * @swagger
+ *  /v1/c/open.go.kr/type02:
+ *    post:
+ *      summary: "2단계 타입 조회"
+ *      description: "공공정보를 가져와야 한다  "
+ *      tags: [OpenAPI_data.go.kr-공공정보]
+ *      produces:
+ *      parameters:
+ *        - name: "clientIp"
+ *          in: "query"
+ *          description: "input clientIp"
+ *          required: true
+ *          type: "string"
+ 
+ *      responses:
+ *        "200":
+ *          description: type01
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    users:
+ *                      type: object
+ *                      example:    
+ *                            { "code": 1000, "message": "접속성공" }
+ * 
+ */
 
 
 
@@ -197,10 +264,36 @@ router.post('/type01', async (req, res, next) => {
   return res.json(TS.success(result));
 });
 
+/**
+ * @swagger
+ *  /v1/c/open.go.kr/type01:
+ *    post:
+ *      summary: "1단계 타입 조회"
+ *      description: "공공정보를 가져와야 한다  "
+ *      tags: [OpenAPI_data.go.kr-공공정보]
+ *      produces:
+ *      parameters:
+ *        - name: "clientIp"
+ *          in: "query"
+ *          description: "input clientIp"
+ *          required: true
+ *          type: "string"
+ 
+ *      responses:
+ *        "200":
+ *          description: type01
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    users:
+ *                      type: object
+ *                      example:    
+ *                            { "code": 1000, "message": "접속성공" }
+ * 
+ */
 
-
-
-
-
-
-
+module.exports = router;

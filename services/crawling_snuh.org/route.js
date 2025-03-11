@@ -17,14 +17,52 @@ const router = asyncify(express.Router());
 module.exports = router;
 
 
+router.get('/healthcheck', async function(req, res) {    
+  const result = true;
+  if ( result ) { 
+    res.send({
+      'code': 200,
+      'message': '서울대학교병원 접속테스트',
+      'desc': 'success',
+      'data' : null 
+    });
+  }else{
+    res.send({
+      'code': 200,
+      'message': '서울대학교병원 접속테스트',
+      'desc': 'failed',
+      'data' : result
+    });
+  }
+});
 
+/**
+ * @swagger
+ *  /v1/c/snuh.org/healthcheck:
+ *    get:
+ *      summary: "접속 테스트"
+ *      description: "서버에 접속이 됬는데 "
+ *      tags: [snuh.org-서울대학교병원]
+ *      responses:
+ *        "200":
+ *          description: 접속 테스트
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    users:
+ *                      type: object
+ *                      example:    
+ *                            { "code": 1000, "message": "접속성공" }
+ */
 
 
 
 router.post('/step01', async (req, res, next) => {
   const ip = req.clientIp;
-
-
 
   const data = [];
   const P1 = await crawlingCtrl.crwalingProcess01();
@@ -65,6 +103,38 @@ router.post('/step01', async (req, res, next) => {
   return res.json(TS.success(result));
 });
 
+
+/**
+ * @swagger
+ *  /v1/c/snuh.org/step01:
+ *    post:
+ *      summary: "1단계  조회"
+ *      description: "서울대학교병원 정보를 가져와야 한다  "
+ *      tags: [snuh.org-서울대학교병원]
+ *      produces:
+ *      parameters:
+ *        - name: "clientIp"
+ *          in: "query"
+ *          description: "input clientIp"
+ *          required: true
+ *          type: "string"
+ 
+ *      responses:
+ *        "200":
+ *          description: step01
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    users:
+ *                      type: object
+ *                      example:    
+ *                            { "code": 1000, "message": "접속성공" }
+ * 
+ */
 
 
 router.post('/step02', async (req, res, next) => {
@@ -118,6 +188,38 @@ router.post('/step02', async (req, res, next) => {
 });
 
 
+/**
+ * @swagger
+ *  /v1/c/snuh.org/step02:
+ *    post:
+ *      summary: "2단계  조회"
+ *      description: "서울대학교병원 정보를 가져와야 한다  "
+ *      tags: [snuh.org-서울대학교병원]
+ *      produces:
+ *      parameters:
+ *        - name: "clientIp"
+ *          in: "query"
+ *          description: "input clientIp"
+ *          required: true
+ *          type: "string"
+ 
+ *      responses:
+ *        "200":
+ *          description: step02
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    users:
+ *                      type: object
+ *                      example:    
+ *                            { "code": 1000, "message": "접속성공" }
+ * 
+ */
+
 
 router.post('/hospital/step03', async (req, res, next) => {
   const ip = req.clientIp;
@@ -165,8 +267,65 @@ router.post('/hospital/step03', async (req, res, next) => {
 
 
 
+/**
+ * @swagger
+ *  /v1/c/snuh.org/hospital/step03:
+ *    post:
+ *      summary: "3단계 병원 조회"
+ *      description: "서울대학교병원 정보를 가져와야 한다  "
+ *      tags: [snuh.org-서울대학교병원]
+ *      produces:
+ *      parameters:
+ *        - name: "clientIp"
+ *          in: "query"
+ *          description: "input clientIp"
+ *          required: true
+ *          type: "string"
+ 
+ *      responses:
+ *        "200":
+ *          description: hospital step03
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    users:
+ *                      type: object
+ *                      example:    
+ *                            { "code": 1000, "message": "접속성공" }
+ * 
+ */
+
 
 router.get('/info', AUTH.validation, async (req, res, next) => {
   const ip = req.clientIp;
   return res.json(TS.success(req.auth));
 });
+
+
+/**
+ * @swagger
+ *  /v1/c/snuh.org/info:
+ *    get:
+ *      summary: "정보 조회(사용안하는 거 같음)"
+ *      description: "서울대학교병원 정보를 가져와야 한다  "
+ *      tags: [snuh.org-서울대학교병원]
+ *      responses:
+ *        "200":
+ *          description: info
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    users:
+ *                      type: object
+ *                      example:    
+ *                            { "code": 1000, "message": "접속성공" }
+ * 
+ */

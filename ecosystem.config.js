@@ -1,7 +1,7 @@
 module.exports = {
   apps: [{
     name: 'BE.Crawling',
-    script: './api.worker.js',
+    script: './server.js',
     instances: 1,
     exec_mode: 'cluster',
     max_memory_restart : "500M",
@@ -28,9 +28,9 @@ module.exports = {
       // MYSQL_PASSWORD: "1918",
       // MYSQL_DATABASE: "aiga",
       MYSQL_HOST: "localhost",
-      MYSQL_USER: "tony",
-      MYSQL_PASSWORD: "3339",
-      MYSQL_DATABASE: "doctoratlas",
+      MYSQL_USER: "root",
+      MYSQL_PASSWORD: "1234",
+      MYSQL_DATABASE: "aiga",
       MYSQL_PORT: 3306,
     },
   }]
