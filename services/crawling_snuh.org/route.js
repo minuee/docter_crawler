@@ -65,10 +65,10 @@ router.post('/step01', async (req, res, next) => {
   const ip = req.clientIp;
 
   const data = [];
-  const P1 = await crawlingCtrl.crwalingProcess01();
+  const P1 = await crawlingCtrl.crwalingProcess01(); /* P1은 진료과목 코드 집합 */
   console.log(`P1 links count : ${_.size(P1.data)}`)
 
-
+  
   for (let i = 0; i < _.size(P1.data); i++) {
     await CS.wait(10000);
     const SP1 = await crawlingCtrl.crwalingProcess02(P1.data[i]);
@@ -99,6 +99,7 @@ router.post('/step01', async (req, res, next) => {
       }
     }
   }
+   
   let result = P1.data
   return res.json(TS.success(result));
 });
@@ -176,12 +177,7 @@ router.post('/step02', async (req, res, next) => {
         console.log("SP4 DB fail.");
         return res.json(TS.fail("SP4 DB fail."));
       }
-
-
     }
-
-
-
   }
   let result = P1.data
   return res.json(TS.success(result));

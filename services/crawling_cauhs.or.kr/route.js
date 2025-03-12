@@ -21,14 +21,14 @@ router.get('/healthcheck', async function(req, res) {
   if ( result ) { 
     res.send({
       'code': 200,
-      'message': '중앙대병원 접속테스트',
+      'message': '중앙대학교병원 접속테스트',
       'desc': 'success',
       'data' : null 
     });
   }else{
     res.send({
       'code': 200,
-      'message': '중앙대병원 접속테스트',
+      'message': '중앙대학교병원 접속테스트',
       'desc': 'failed',
       'data' : result
     });
@@ -41,7 +41,7 @@ router.get('/healthcheck', async function(req, res) {
  *    get:
  *      summary: "접속 테스트"
  *      description: "서버에 접속이 됬는데 "
- *      tags: [cauhs.or.kr-중앙대병원]
+ *      tags: [cauhs.or.kr-중앙대학교병원]
  *      responses:
  *        "200":
  *          description: 접속 테스트
@@ -118,8 +118,8 @@ router.post('/step01', async (req, res, next) => {
  *  /v1/c/cauhs.or.kr/step01:
  *    post:
  *      summary: "1단계 조회"
- *      description: "중앙대병원 정보를 가져와야 한다  "
- *      tags: [cauhs.or.kr-중앙대병원]
+ *      description: "중앙대학교병원 정보를 가져와야 한다  "
+ *      tags: [cauhs.or.kr-중앙대학교병원]
  *      produces:
  *      parameters:
  *        - name: "clientIp"
@@ -235,8 +235,8 @@ router.post('/step02', async (req, res, next) => {
  *  /v1/c/cauhs.or.kr/step02:
  *    post:
  *      summary: "2단계 조회"
- *      description: "중앙대병원 정보를 가져와야 한다  "
- *      tags: [cauhs.or.kr-중앙대병원]
+ *      description: "중앙대학교병원 정보를 가져와야 한다  "
+ *      tags: [cauhs.or.kr-중앙대학교병원]
  *      produces:
  *      parameters:
  *        - name: "clientIp"
@@ -274,8 +274,8 @@ router.get('/info', AUTH.validation, async (req, res, next) => {
  *  /v1/c/cauhs.or.kr/info:
  *    get:
  *      summary: "정보 조회(사용안하는 거 같음)"
- *      description: "중앙대병원 정보를 가져와야 한다  "
- *      tags: [cauhs.or.kr-중앙대병원]
+ *      description: "중앙대학교병원 정보를 가져와야 한다  "
+ *      tags: [cauhs.or.kr-중앙대학교병원]
  *      responses:
  *        "200":
  *          description: step01

@@ -133,24 +133,26 @@ class App {
         });
 
         this.app.use('/v1/c/localtest', require(`${global.appRoot}/services/local_test/route`));
-        this.app.use('/v1/c/cauhs.or.kr', require(`${global.appRoot}/services/crawling_cauhs.or.kr/route`));// 중앙대병원
-        this.app.use('/v1/c/kuh.ac.kr', require(`${global.appRoot}/services/crawling_kuh.ac.kr/route`));// 건국대병원 - 일단보류
-        this.app.use('/v1/c/med.khmc.or.kr', require(`${global.appRoot}/services/crawling_med.khmc.or.kr/route`));// 경희대병원
+        this.app.use('/v1/c/cauhs.or.kr', require(`${global.appRoot}/services/crawling_cauhs.or.kr/route`));// 중앙대학교병원
+        this.app.use('/v1/c/kuh.ac.kr', require(`${global.appRoot}/services/crawling_kuh.ac.kr/route`));// 건국대학교병원 - 일단보류
+        this.app.use('/v1/c/med.khmc.or.kr', require(`${global.appRoot}/services/crawling_med.khmc.or.kr/route`));// 경희대학교병원
         this.app.use('/v1/c/open.go.kr', require(`${global.appRoot}/services/openAPI_data.go.kr/route`));
         this.app.use('/v1/c/amc.seoul.kr', require(`${global.appRoot}/services/crawling_amc.seoul.kr/route`)); //서울 아산병원 
         this.app.use('/v1/c/samsunghospital.com', require(`${global.appRoot}/services/crawling_samsunghospital.com/route`));//삼성서울병원
-        this.app.use('/v1/c/severance.healthcare', require(`${global.appRoot}/services/crawling_severance.healthcare/route`));//세브란스병원
+        this.app.use('/v1/c/severance.healthcare', require(`${global.appRoot}/services/crawling_severance.healthcare/route`));//연대 세브란스 병원
         this.app.use('/v1/c/snuh.org', require(`${global.appRoot}/services/crawling_snuh.org/route`));//서울대학교병원
-        this.app.use('/v1/c/cmcseoul.or.kr', require(`${global.appRoot}/services/crawling_cmcseoul.or.kr/route`));//서울시립대학교병원
-        this.app.use('/v1/c/kbsmc.co.kr', require(`${global.appRoot}/services/crawling_kbsmc.co.kr/route`));//경북대학교병원
-        this.app.use('/v1/c/anam.kumc.or.kr', require(`${global.appRoot}/services/crawling_anam.kumc.or.kr/route`));//안산대학교병원
-        this.app.use('/v1/c/guro.kumc.or.kr', require(`${global.appRoot}/services/crawling_guro.kumc.or.kr/route`));//구로대학교병원
-        this.app.use('/v1/c/seoul.eumc.ac.kr', require(`${global.appRoot}/services/crawling_seoul.eumc.ac.kr/route`));//서울대학교병원
-        this.app.use('/v1/c/mokdong.eumc.ac.kr', require(`${global.appRoot}/services/crawling_mokdong.eumc.ac.kr/route`));//목동대학교병원
-        this.app.use('/v1/c/seoul.hyumc.com', require(`${global.appRoot}/services/crawling_seoul.hyumc.com/route`));//서울혜우병원
-        this.app.use('/v1/c/gs.severance.healthcare', require(`${global.appRoot}/services/crawling_gs.severance.healthcare/route`));//서울세브란스병원
+        this.app.use('/v1/c/cmcseoul.or.kr', require(`${global.appRoot}/services/crawling_cmcseoul.or.kr/route`));//카톡릭대 서울성모병원
+        this.app.use('/v1/c/kbsmc.co.kr', require(`${global.appRoot}/services/crawling_kbsmc.co.kr/route`));//강북 삼성병원
+        this.app.use('/v1/c/anam.kumc.or.kr', require(`${global.appRoot}/services/crawling_anam.kumc.or.kr/route`));//고대 안암병원
+        this.app.use('/v1/c/guro.kumc.or.kr', require(`${global.appRoot}/services/crawling_guro.kumc.or.kr/route`));//고대 구로병원
+        this.app.use('/v1/c/seoul.eumc.ac.kr', require(`${global.appRoot}/services/crawling_seoul.eumc.ac.kr/route`));//이대서울병원
+        this.app.use('/v1/c/mokdong.eumc.ac.kr', require(`${global.appRoot}/services/crawling_mokdong.eumc.ac.kr/route`));//이대 목동병원
+        this.app.use('/v1/c/seoul.hyumc.com', require(`${global.appRoot}/services/crawling_seoul.hyumc.com/route`));//한양대학교뱡원
+        this.app.use('/v1/c/gs.severance.healthcare', require(`${global.appRoot}/services/crawling_gs.severance.healthcare/route`));//연대 강남세브란스병원
 
-    }
+        /* 경기서북부부권 */
+        this.app.use('/v1/c/cmcism.or.kr', require(`${global.appRoot}/services/crawling_cmcism.or.kr/route`)); //카톨릭대 인천 성모병원
+    }   
 
     errorHandler() {
         this.app.use((req, res, _) => {

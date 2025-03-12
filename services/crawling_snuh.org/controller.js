@@ -11,6 +11,7 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const puppeteer = require('puppeteer');
 const _ = require('lodash');
+const functions = require(`${global.appRoot}/server/util/function`);
 
 module.exports = {
 
@@ -119,17 +120,21 @@ module.exports = {
     const jsonData = [];
 
     $('ul.doctorSchedule li').each((index, element) => {
-      const doctorName = $(element).find('div.descWrap a').first().text().trim()
-      const deptName = $('div.descWrap span.colorPoint').first().text().trim().replace(/_/g, '').replace(/\[/g, '').replace(/\]/g, '');
-      const ProfileUrl = $(element).find('div.imgWrap a.btnType01').attr('href')
+      //const doctorName = $(element).find('div.descWrap a').first().text().trim()
+      const doctorName = $(element).find('a.doctorNameWrap strong').first().text().trim()
+      //const deptName = $('div.descWrap span.colorPoint').first().text().trim().replace(/_/g, '').replace(/\[/g, '').replace(/\]/g, '');
+      const deptName = $(element).find('div.doctorDept-badge p').first().text().trim()
+      //const ProfileUrl = $(element).find('div.imgWrap a.btnType01').attr('href')
+      const ProfileUrl = $(element).find('div.imgWrap a').attr('href')
       const fixedProfileUrl = _.replace(ProfileUrl, 'philosophy', 'career');
-      console.log(`crwalingProcess03 : pageIndex(${pageIndex}) >>>>>>>>>>> ${deptName} ${doctorName}`)
-      jsonData.push({
-        doctorName: doctorName,
-        deptName: deptName,
-        url: `https://www.snuh.org/${fixedProfileUrl}`
+      console.log(`crwalingProcess03 : pageIndex(${pageIndex}) >>>>>>>>>>> ${deptName} ${doctorName}`);
+      if ( !functions.isEmpty(doctorName)) {
+        jsonData.push({
+          doctorName: doctorName,
+          deptName: deptName,
+          url: `https://www.snuh.org/${fixedProfileUrl}`
+        })
       }
-      )
     })
     return { error: error, data: jsonData };
   },

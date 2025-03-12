@@ -15,6 +15,52 @@ const _ = require('lodash');
 const router = asyncify(express.Router());
 module.exports = router;
 
+
+
+router.get('/healthcheck', async function(req, res) {    
+  const result = true;
+  if ( result ) { 
+    res.send({
+      'code': 200,
+      'message': '구로대학교병원 접속테스트',
+      'desc': 'success',
+      'data' : null 
+    });
+  }else{
+    res.send({
+      'code': 200,
+      'message': '구로대학교병원 접속테스트',
+      'desc': 'failed',
+      'data' : result
+    });
+  }
+});
+
+/**
+ * @swagger
+ *  /v1/c/seoul.eumc.ac.kr/healthcheck:
+ *    get:
+ *      summary: "접속 테스트"
+ *      description: "서버에 접속이 됬는데 "
+ *      tags: [seoul.eumc.ac.kr-이대서울병원]
+ *      responses:
+ *        "200":
+ *          description: 접속 테스트
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    users:
+ *                      type: object
+ *                      example:    
+ *                            { "code": 1000, "message": "접속성공" }
+ */
+
+
+
 router.post('/step01', async (req, res, next) => {
   const ip = req.clientIp;
   // validation parameter
@@ -69,6 +115,41 @@ router.post('/step01', async (req, res, next) => {
   let result = procCount
   return res.json(TS.success({deptCount: result, doctorCount}));
 });
+
+
+/**
+ * @swagger
+ *  /v1/c/seoul.eumc.ac.kr/step01:
+ *    post:
+ *      summary: "1단계  조회"
+ *      description: "이대서울병원 정보를 가져와야 한다  "
+ *      tags: [seoul.eumc.ac.kr-이대서울병원]
+ *      produces:
+ *      parameters:
+ *        - name: "clientIp"
+ *          in: "query"
+ *          description: "input clientIp"
+ *          required: true
+ *          type: "string"
+ 
+ *      responses:
+ *        "200":
+ *          description: step01
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    users:
+ *                      type: object
+ *                      example:    
+ *                            { "code": 1000, "message": "접속성공" }
+ * 
+ */
+
+
 
 
 router.post('/step02', async (req, res, next) => {
@@ -155,4 +236,37 @@ router.post('/step02', async (req, res, next) => {
   let result = totalCount
   return res.json(TS.success(result));
 });
+
+
+/**
+ * @swagger
+ *  /v1/c/seoul.eumc.ac.kr/step02:
+ *    post:
+ *      summary: "2단계  조회"
+ *      description: "이대서울병원 정보를 가져와야 한다  "
+ *      tags: [seoul.eumc.ac.kr-이대서울병원]
+ *      produces:
+ *      parameters:
+ *        - name: "clientIp"
+ *          in: "query"
+ *          description: "input clientIp"
+ *          required: true
+ *          type: "string"
+ 
+ *      responses:
+ *        "200":
+ *          description: step02
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    users:
+ *                      type: object
+ *                      example:    
+ *                            { "code": 1000, "message": "접속성공" }
+ * 
+ */
 

@@ -435,3 +435,28 @@ router.get('/info', AUTH.validation, async (req, res, next) => {
   const ip = req.clientIp;
   return res.json(TS.success(req.auth));
 });
+
+
+/**
+ * @swagger
+ *  /v1/c/amc.seoul.kr/info:
+ *    get:
+ *      summary: "정보 조회(사용안하는 거 같음)"
+ *      description: "서울아산병원 정보를 가져와야 한다  "
+ *      tags: [amc.seoul.kr-서울아산병원]
+ *      responses:
+ *        "200":
+ *          description: info
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    users:
+ *                      type: object
+ *                      example:    
+ *                            { "code": 1000, "message": "접속성공" }
+ * 
+ */
