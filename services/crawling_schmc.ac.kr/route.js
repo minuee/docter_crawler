@@ -1,6 +1,6 @@
 
 const config = require(`${global.appRoot}/server/config/configuration`);
-const crawlingCtrl = require(`${global.appRoot}/services/crawling_cmcism.or.kr/controller`);
+const crawlingCtrl = require(`${global.appRoot}/services/crawling_schmc.ac.kr/controller`);
 const CS = require(`${global.appRoot}/server/util/util.casting`);
 const RM = require(`${global.appRoot}/server/util/response.message`);
 const TS = require(`${global.appRoot}/server/middleware/message.handler`);
@@ -27,7 +27,7 @@ router.post('/healthcheck', async function(req, res) {
   const HOSPITAL_ID = req.body.hid;
   console.log('req.HOSPITAL_ID', HOSPITAL_ID);
 
-    if ( HOSPITAL_ID !== "H01KR-41000001" ) { 
+    if ( HOSPITAL_ID !== "H01KR-41000002" ) { 
       res.send({
         code : 200,
         success: false,
@@ -36,7 +36,7 @@ router.post('/healthcheck', async function(req, res) {
     }else{
       res.send({
         'code': 200,
-        'message': '인천성모병원 접속테스트',
+        'message': '순천향대학교부속부천병원 접속테스트',
         'desc': 'success',
         'data' : HOSPITAL_ID 
       });
@@ -46,11 +46,11 @@ router.post('/healthcheck', async function(req, res) {
 
 /**
  * @swagger
- *  /v1/c/cmcism.or.kr/healthcheck:
+ *  /v1/c/schmc.ac.kr/healthcheck:
  *    post:
  *      summary: "접속 테스트"
  *      description: "서버에 접속이 됬는데 "
- *      tags: [cmcism.or.kr-인천성모병원]
+ *      tags: [schmc.ac.kr-순천향대학교부속부천병원]
  *      produces:
  *      parameters:
  *        - name: "hid"
@@ -93,7 +93,7 @@ router.post('/step01', async function(req, res) {
     });
   }
 
-  if ( HOSPITAL_ID !== "H01KR-41000001" ) { 
+  if ( HOSPITAL_ID !== "H01KR-41000002" ) { 
     res.send({
       code : 200,
       success: false,
@@ -102,19 +102,20 @@ router.post('/step01', async function(req, res) {
   }
 
   const data = [];
-  const r_url = `https://www.cmcism.or.kr/treatment/treatment_list`;
+  const r_url = `https://www.schmc.ac.kr/bucheon/dept/list.do?key=115`;
   const P1 = await crawlingCtrl.crwalingProcess01(r_url);
-  //console.log("ddddd__Ddddx",_.size(P1?.data));
+  ///console.log("ddddd__Ddddx",_.size(P1?.data));
   
   if (P1.error) return res.json(TS.fail(P1.error));
   if (CS.isEmpty(P1.data)) { return res.json(TS.fail({ code: 'DATA_NULL', message: 'response data is null' })) }
 
   // _.size(P1.data);
-  for (let i = 0; i < _.size(P1.data); i++) {
+  for (let i = 0; i < 1; i++) {
     await CS.wait(500);
-    //console.log("P1.data[i].link",P1.data[i].link);
-    const SP1 = await crawlingCtrl.crwalingProcess02(P1.data[i].link, P1.data[i].deptName);
-    //console.log("SP1 size",_.size(SP1?.data));
+    console.log("P1.data[i].link",P1.data[i].link);
+    const SP1 = await crawlingCtrl.crwalingProcess02(P1.data[i].link, P1.data[i].deptName, P1.data[i].linkDepthNo);
+    console.log("SP1 size",_.size(SP1?.data));
+
     if (!CS.isEmpty(SP1.data)) {
       for (let i = 0; i < _.size(SP1.data); i++) {
         data.push({
@@ -129,8 +130,7 @@ router.post('/step01', async function(req, res) {
           console.log("SP0 DB fail.");
           return res.json(TS.fail("SP0 DB fail."));
         }
-        const tempRid = SP0.data[0].rid_encrypt
-
+        const tempRid = SP0.data[0].rid_encrypt;
 
         const SP2 = await crawlingCtrl.setCrawlingDoctorLink(tempRid, HOSPITAL_ID, SP1.data[i].deptName, SP1.data[i].doctorName, SP1.data[i].url);
         if (SP2.error) console.log("DB upsert fail.");;
@@ -141,17 +141,18 @@ router.post('/step01', async function(req, res) {
   }
 
   let result = _.size(P1.data);//data
+  console.log(`result: ${_.size(P1.data)}`);
   return res.json(TS.success(result));
 });
 
 
 /**
  * @swagger
- *  /v1/c/cmcism.or.kr/step01:
+ *  /v1/c/schmc.ac.kr/step01:
  *    post:
  *      summary: "1단계  조회"
- *      description: "인천성모병원 정보를 가져와야 한다  "
- *      tags: [cmcism.or.kr-인천성모병원]
+ *      description: "순천향대학교부속부천병원 정보를 가져와야 한다  "
+ *      tags: [schmc.ac.kr-순천향대학교부속부천병원]
  *      produces:
  *      parameters:
  *        - name: "hid"
@@ -195,7 +196,7 @@ router.post('/step02', async (req, res, next) => {
     });
   }
 
-  if ( HOSPITAL_ID !== "H01KR-41000001" ) { 
+  if ( HOSPITAL_ID !== "H01KR-41000002" ) { 
     res.send({
       code : 200,
       success: false,
@@ -208,7 +209,7 @@ router.post('/step02', async (req, res, next) => {
   if (CS.isEmpty(_.size(P1.data))) { return res.json(TS.fail({ code: 'DATA_NULL', message: 'response data is null' })) }
   const doctorLinkTotal = _.size(P1.data)
 
-  for (let i = 0; i < _.size(P1.data); i++) {
+  for (let i = 0; i < 1; i++) {
     await CS.wait(10000); // 10초정도로 - 부사장님 지시임! 꼭 지킬것
 
     const doctorName = P1.data[i].doctorname;
@@ -217,7 +218,8 @@ router.post('/step02', async (req, res, next) => {
     
     if (doctorName && refUrl) {
       const SP1 = await crawlingCtrl.crwalingProcess03(refUrl);
-      await CS.wait(300);
+      console.log("SP1 size",_.size(SP1?.data));
+      /* await CS.wait(300);
       const SP2 = await crawlingCtrl.get_rid_encrypt(doctorName, refUrl);
       if (SP2.error) {
         console.log("SP2 DB fail.");
@@ -238,9 +240,10 @@ router.post('/step02', async (req, res, next) => {
       if (SP4.error) {
         console.log("SP4 DB fail.");
         return res.json(TS.fail("SP4 DB fail."));
-      }
+      } */
     }
   }
+  console.log(`result: ${_.size(P1.data)}`);
   let result = _.size(P1.data);
   return res.json(TS.success(result));
 });
@@ -248,11 +251,11 @@ router.post('/step02', async (req, res, next) => {
 
 /**
  * @swagger
- *  /v1/c/cmcism.or.kr/step02:
+ *  /v1/c/schmc.ac.kr/step02:
  *    post:
  *      summary: "2단계  조회"
- *      description: "인천성모병원 정보를 가져와야 한다  "
- *      tags: [cmcism.or.kr-인천성모병원]
+ *      description: "순천향대학교부속부천병원 정보를 가져와야 한다  "
+ *      tags: [schmc.ac.kr-순천향대학교부속부천병원]
  *      produces:
  *      parameters:
  *        - name: "hid"
@@ -293,7 +296,7 @@ router.post('/step03', async (req, res, next) => {
     });
   }
 
-  if ( HOSPITAL_ID !== "H01KR-41000001" ) { 
+  if ( HOSPITAL_ID !== "H01KR-41000002" ) { 
     res.send({
       code : 200,
       success: false,
@@ -347,11 +350,11 @@ router.post('/step03', async (req, res, next) => {
 
 /**
  * @swagger
- *  /v1/c/cmcism.or.kr/step03:
+ *  /v1/c/schmc.ac.kr/step03:
  *    post:
  *      summary: "3단계 조회 - 놓친 데이터 추가 작업"
- *      description: "인천성모병원 정보를 가져와야 한다  "
- *      tags: [cmcism.or.kr-인천성모병원]
+ *      description: "순천향대학교부속부천병원 정보를 가져와야 한다  "
+ *      tags: [schmc.ac.kr-순천향대학교부속부천병원]
  *      produces:
  *      parameters:
  *        - name: "hid"
@@ -394,7 +397,7 @@ router.post('/treatise', async (req, res, next) => {
     });
   }
 
-  if ( HOSPITAL_ID !== "H01KR-41000001" ) { 
+  if ( HOSPITAL_ID !== "H01KR-41000002" ) { 
     res.send({
       code : 200,
       success: false,
@@ -453,11 +456,11 @@ router.post('/treatise', async (req, res, next) => {
 
 /**
  * @swagger
- *  /v1/c/cmcism.or.kr/treatise:
+ *  /v1/c/schmc.ac.kr/treatise:
  *    post:
  *      summary: "논문 조회"
- *      description: "인천성모병원 정보를 가져와야 한다  "
- *      tags: [cmcism.or.kr-인천성모병원]
+ *      description: "순천향대학교부속부천병원 정보를 가져와야 한다  "
+ *      tags: [schmc.ac.kr-순천향대학교부속부천병원]
  *      produces:
  *      parameters:
  *        - name: "hid"
@@ -497,11 +500,11 @@ router.get('/info', AUTH.validation, async (req, res, next) => {
 
 /**
  * @swagger
- *  /v1/c/cmcism.or.kr/info:
+ *  /v1/c/schmc.ac.kr/info:
  *    get:
  *      summary: "정보 조회(사용안하는 거 같음)"
- *      description: "인천성모병원 정보를 가져와야 한다  "
- *      tags: [cmcism.or.kr-인천성모병원]
+ *      description: "순천향대학교부속부천병원 정보를 가져와야 한다  "
+ *      tags: [schmc.ac.kr-순천향대학교부속부천병원]
  *      responses:
  *        "200":
  *          description: info

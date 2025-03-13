@@ -21,5 +21,8 @@ functions.prototype.getTodayformatDate = function(){
     if (day.length < 2) day = '0' + day;
     return [year, month, day].join('-');
 };
+functions.prototype.strip_tags = function(){
+    return str.replace(/(<([^>]+)>)/ig,"");
+}
 
 module.exports = new functions();
