@@ -11,9 +11,10 @@ const cheerio = require('cheerio');
 const puppeteer = require('puppeteer');
 const _ = require('lodash');
 const functions = require(`${global.appRoot}/server/util/function`);
+
+const DATA_VERSION_ID = parseInt(process.env.DATA_VERSION_ID) ? parseInt(process.env.DATA_VERSION_ID) : 1;
+
 module.exports = {
-
-
   crwalingProcess01: async (r_url) => {
     
     try {
@@ -23,6 +24,7 @@ module.exports = {
       const browser = await puppeteer.launch();
       // Open a new page
       const page = await browser.newPage();
+      page.setDefaultNavigationTimeout(0);
       // Navigate to the website
       await page.goto(r_url);
       // Get the page content
@@ -32,12 +34,11 @@ module.exports = {
       ///console.log(`r_url: ${r_url} ${$('div.medi_index_wrap').attr('class')}`);
       $('div.medi_index_wrap').find('ul > li').each((index, element) => {
 
-        const deptName = $(element).find('div.hover_wrap > h5').text().trim();
-        const tmpLinkDepthNo = $(element).find('div.hover_wrap > span > a:nth-child(2)').attr('href').trim();
+        const deptName = $(element).find('div.hover_wrap > h5').text() ? $(element).find('div.hover_wrap > h5').text().trim() : '';
+        const tmpLinkDepthNo = $(element).find('div.hover_wrap > span > a:nth-child(2)').attr('href') ? $(element).find('div.hover_wrap > span > a:nth-child(2)').attr('href').trim() : '';
         const linkDepthArray = tmpLinkDepthNo.split('=');
         if ( linkDepthArray.length > 2 ) {
           const link = `https://www.schmc.ac.kr/bucheon/doctr/list/selectIemList.json?lang=kor&hsptlCode=bucheon&deptNo=${linkDepthArray[2]}&searchText=`
-          ///console.log(`deptName: ${deptName} ${linkDepthArray[2]} ${link}`);
           dept.push({ 
             deptName,
             link,
@@ -47,9 +48,11 @@ module.exports = {
       });
 
       //console.log(`size of dept: `,_.size(dept));
+      await browser.close();
       return { error: null, data: dept };
     } catch (error) {
       console.log(`error on ${r_url} API return: ${error}`);
+      await browser.close();
       return { error: error, data: [] };
     }
   },
@@ -114,17 +117,26 @@ module.exports = {
       return { error: true, data: null };
     }
     console.log(`linkUrl: ${url} `);
+   
     try {
-      Response = await axios.get(url, {
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0'
-        }
-      })
-    } catch (error) {
-      Error = error
-      console.log(`error on ${url} API return: ${error}`);
-    }
-    const $ = cheerio.load(Response.data);
+    const browser = await puppeteer.launch();
+      // Open a new page
+    const page = await browser.newPage();
+    page.setDefaultNavigationTimeout(0);
+    //await page.waitForSelector('.inner');
+    // Navigate to the website
+    await page.goto(url,{waitUntil: "domcontentloaded"});
+    await page.setViewport({
+        width: 1200,
+        height: 800
+    });
+
+    await page.keyboard.press('ArrowDown')
+    //await page.waitForSelector("._careerIemContainer");
+    await CS.wait(1000);
+    await page.keyboard.press('ArrowUp');
+    const htmlContent = await page.content();
+    const $ = cheerio.load(htmlContent);  
     // $(`#layer_pop_${doctor_id}`).attr('disabled', 'disabled').css('display', 'block');
     const profileImgUrl = $('.sub').find("img.doc_img").attr('src');
     console.log(`profileImgUrl: ${profileImgUrl} `);
@@ -142,11 +154,13 @@ module.exports = {
       profileImgUrl: `https://www.cmcism.or.kr/${profileImgUrl}`,
       biography: [],
     };
+    //const smaple = $('#_careerContainer').find('._careerIem:first-child > td').text().trim();
+    //console.log(`_press: ${smaple}`);
 
-    $('tbody._careerIemContainer').find("tr").each((index, dtElement) => {
-      console.log(`경력:`);
-      const dtText = $(dtElement).find('td').text().trim();
+    $('#_careerContainer').find("div._careerContainer:first-child").find('._careerIem').each((index, dtElement) => {
       
+      const dtText = $(dtElement).find('td').text() ? $(dtElement).find('td').text() : '';
+      console.log(`경력: ${dtText}`);
       if ( !functions.isEmpty(dtText) ) {
         const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '');
         item.biography.push({
@@ -159,12 +173,48 @@ module.exports = {
       }
     });
 
-    
+    $('#_careerContainer').find("div._careerContainer:nth-child(2)").find('._careerIem').each((index, dtElement) => {
+      
+      const dtText = $(dtElement).find('td').text() ? $(dtElement).find('td').text() : '';
+      console.log(`학회: ${dtText}`);
+      if ( !functions.isEmpty(dtText) ) {
+        const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '');
+        item.biography.push({
+          targetDate : null,
+          type: "학회",
+          text: tmpText,
+          url: null,
+          issuer:null
+        });
+      }
+    });
+
+    $('#_thesisContainer').find('li._thesisIem').each((index, dtElement) => {
+      
+      const dtText = $(dtElement).find('span').text() ? $(dtElement).find('span').text() : '';
+      console.log(`논문: ${dtText}`);
+      if ( !functions.isEmpty(dtText) ) {
+        const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '');
+        item.biography.push({
+          targetDate : null,
+          type: "논문",
+          text: tmpText,
+          url: null,
+          issuer:null
+        });
+      }
+    });
+
+    await browser.close();
     return { error: error, data: item };
+  } catch (error) {
+    Error = error;
+    console.log(`error on ${url} API return: ${error}`);
+    await browser.close();
+    return { error: error, data: [] };
+  }
   },
 
-
-  
   crwalingtreatise: async (url) => {
     let result = null, error = null, DBCode = null
     let DBData1 = null
@@ -210,13 +260,14 @@ module.exports = {
     return { error: error, data: item };
   },
 
-
   setCrawlingdoctorBasic: async (rid, hid, deptName, doctorName, specialty, profileimgurl) => {
+    
     let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL set_crawlingdoctor_basic(?)`
-    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, deptName, doctorName, specialty, profileimgurl]);
+    const query = `CALL UPDATE_DOCTOR_BASIC(?)`
+    // const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, specialty, profileimgurl]);
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, specialty, profileimgurl, '']);
     if (DBError) {
-      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)} ${rid} ${specialty} ${profileimgurl}`);
       return { error: DBError, data: null };
     }
     // console.log(RS)
@@ -227,13 +278,13 @@ module.exports = {
     console.log(error)
     result = DBData
     return { error: error, data: result };
-  },
 
+  },
 
   setCrawlingdoctorBiography: async (rid, hid, doctorName, jsondata) => {
     let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL set_crawlingdoctor_detail(?)`
-    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, doctorName, jsondata]);
+    const query = `CALL SET_DOCTOR_CAREER(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, DATA_VERSION_ID, jsondata]);
     if (DBError) {
       console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
       return { error: DBError, data: null };
@@ -248,11 +299,10 @@ module.exports = {
     return { error: error, data: result };
   },
 
-
   setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url) => {
     let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL SET_CRAWLING_DOCTOR_LINK(?)`
-    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, deptName, doctorName, url]);
+    const query = `CALL set_doctor_basic(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url]);
     if (DBError) {
       console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
       return { error: DBError, data: null };
@@ -271,10 +321,9 @@ module.exports = {
     abstract, keywords, impactFactor, totalCitations, referencesThesis,
     doctorName, authorName, subjectClassification, publicationLocation) => {
     let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL set_crawlingdoctor_treatise(?)`
-    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, title, doi, journalName, authorRule, publicationDate, url,
-      abstract, keywords, impactFactor, totalCitations, referencesThesis,
-      doctorName, authorName, subjectClassification, publicationLocation]);
+    const query = `CALL set_doctor_paper(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, DATA_VERSION_ID, doctorName, title, doi, journalName, authorRule, publicationDate, url,
+      abstract, keywords, impactFactor, totalCitations, authorName]);
     if (DBError) {
       console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
       return { error: DBError, data: null };
@@ -289,10 +338,11 @@ module.exports = {
     return { error: error, data: result };
   },
 
+
   getCrawlingDoctorLink: async (hid) => {
     let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL GET_CRAWLING_DOCTOR_LINK(?)`
-    const { DBError = null, RS = null } = await daoMysql.spCall(query, [hid]);
+    const query = `CALL get_doctor_basic(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [hid,DATA_VERSION_ID]);
     if (DBError) {
       console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
       return { error: DBError, data: null };
@@ -328,7 +378,7 @@ module.exports = {
 
   get_rid_encrypt: async (p_doctorName, p_refUrl) => {
     let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL get_rid_encrypt(?)`
+    const query = `CALL set_rid(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [p_doctorName, p_refUrl]);
     if (DBError) {
       console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);

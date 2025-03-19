@@ -16,7 +16,7 @@ const config = {
     mysql: {
       host: process.env.MYSQL_HOST || 'localhost'
       ,port: process.env.MYSQL_PORT || '3306'
-      ,database: process.env.MYSQL_DATABASE || 'aiga'
+      ,database: process.env.MYSQL_DATABASE || 'aiga2025'
       ,user: process.env.MYSQL_USER || 'root'
       ,password: process.env.MYSQL_PASSWORD || '1234'
       ,charset: 'utf8mb4'

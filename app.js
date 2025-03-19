@@ -12,12 +12,10 @@ const helmet = require('helmet');
 const moment = require('moment-timezone');
 const rateLimit = require('express-rate-limit');
 const config = require(`${global.appRoot}/server/config/configuration`);
-const daoMysql = require(`${global.appRoot}/server/database/dao.mysql`);
 const CS = require(`${global.appRoot}/server/util/util.casting`);
-const errorHandler = require(`${global.appRoot}/server/middleware/error.handler`);
 
 const requestIp = require('request-ip');
-
+const basicAuth = require('express-basic-auth');
 
 //swagger setuup
 const { swaggerUi, specs } = require('./lib/swagger');
@@ -85,6 +83,7 @@ class App {
     this.app.use(bodyParser.json());
     this.app.use(bodyParser.urlencoded({ extended: false }));
   
+    
 
     if (process.send) {
             process.send('ready')
@@ -110,7 +109,18 @@ class App {
     }
 
     setSwagger() {
-        this.app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
+
+      const options = {
+        //customCss: '.swagger-ui .topbar { display: none }',
+        customSiteTitle: "Korea Medicare Crawler API",
+      };
+
+        this.app.use('/api-docs', basicAuth({
+            challenge: true,
+            users: {
+                [process.env.SWAGGER_USER] : process.env.SWAGGER_PASSWORD
+            },
+          }),swaggerUi.serve, swaggerUi.setup(specs, options));
     }
 
     getRouting() {
@@ -119,6 +129,10 @@ class App {
         req.sendFile(path.join(__dirname, '/public/index.html'));
         }) */
         //this.app.use(require("./route/index"));
+
+        this.app.use('/logout', (req, res) => {
+            res.status(401).send('Logged out')
+          });
 
         this.app.use('/healthcheck', (req, res) => {
             return res.status(200).json({
@@ -153,6 +167,10 @@ class App {
         /* 경기서북부부권 */
         this.app.use('/v1/c/cmcism.or.kr', require(`${global.appRoot}/services/crawling_cmcism.or.kr/route`)); //카톨릭대 인천 성모병원
         this.app.use('/v1/c/schmc.ac.kr', require(`${global.appRoot}/services/crawling_schmc.ac.kr/route`)); //순천향대학교부속부천병원
+        this.app.use('/v1/c/gilhospital.com', require(`${global.appRoot}/services/crawling_gilhospital.com/route`)); //가천대길병원
+        this.app.use('/v1/c/inha.com', require(`${global.appRoot}/services/crawling_inha.com/route`)); //인하대부속병원
+        this.app.use('/v1/c/cmcvincent.or.kr', require(`${global.appRoot}/services/crawling_cmcvincent.or.kr/route`)); //카톨릭대 성빈센트병원
+
     }   
 
     errorHandler() {

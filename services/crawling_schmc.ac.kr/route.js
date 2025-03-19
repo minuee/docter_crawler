@@ -21,27 +21,19 @@ module.exports = router;
 
 router.post('/healthcheck', async function(req, res) {   
   
-  console.log('req.body', typeof req.body);
-  console.log('req.body22', req.body);
+  const HOSPITAL_ID = 'H01KR-41000002';
+  const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
+  if ( ret.success === false ) {
+    return res.send(ret);
+  }
 
-  const HOSPITAL_ID = req.body.hid;
-  console.log('req.HOSPITAL_ID', HOSPITAL_ID);
+  return res.send({
+    'code': 200,
+    'message': '순천향대학교부속부천병원 접속테스트',
+    'desc': 'success',
+    'data' : req.body?.hid ? req.body.hid : null   
+  });
 
-    if ( HOSPITAL_ID !== "H01KR-41000002" ) { 
-      res.send({
-        code : 200,
-        success: false,
-        message: "잘못된 병원코드입니다. 정확한 코드를 입력해주세요!"
-      });
-    }else{
-      res.send({
-        'code': 200,
-        'message': '순천향대학교부속부천병원 접속테스트',
-        'desc': 'success',
-        'data' : HOSPITAL_ID 
-      });
-    }
-    
 });
 
 /**
@@ -84,21 +76,10 @@ router.post('/healthcheck', async function(req, res) {
 
 router.post('/step01', async function(req, res) {  
 
-  const HOSPITAL_ID = req.body.hid;
-  if ( functions.isEmpty(HOSPITAL_ID) ) { 
-    res.send({
-      code : 200,
-      success: false,
-      message: "병원코드를 입력해주세요!"
-    });
-  }
-
-  if ( HOSPITAL_ID !== "H01KR-41000002" ) { 
-    res.send({
-      code : 200,
-      success: false,
-      message: "잘못된 병원코드입니다. 정확한 코드를 입력해주세요!"
-    });
+  const HOSPITAL_ID = 'H01KR-41000002';
+  const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
+  if ( ret.success === false ) {
+    return res.send(ret);
   }
 
   const data = [];
@@ -110,7 +91,7 @@ router.post('/step01', async function(req, res) {
   if (CS.isEmpty(P1.data)) { return res.json(TS.fail({ code: 'DATA_NULL', message: 'response data is null' })) }
 
   // _.size(P1.data);
-  for (let i = 0; i < 1; i++) {
+  for (let i = 0; i < _.size(P1.data) ; i++) {
     await CS.wait(500);
     console.log("P1.data[i].link",P1.data[i].link);
     const SP1 = await crawlingCtrl.crwalingProcess02(P1.data[i].link, P1.data[i].deptName, P1.data[i].linkDepthNo);
@@ -187,21 +168,10 @@ router.post('/step01', async function(req, res) {
 
 router.post('/step02', async (req, res, next) => {
   
-  const HOSPITAL_ID = req.body.hid;
-  if ( functions.isEmpty(HOSPITAL_ID) ) { 
-    res.send({
-      code : 200,
-      success: false,
-      message: "병원코드를 입력해주세요!"
-    });
-  }
-
-  if ( HOSPITAL_ID !== "H01KR-41000002" ) { 
-    res.send({
-      code : 200,
-      success: false,
-      message: "잘못된 병원코드입니다. 정확한 코드를 입력해주세요!"
-    });
+  const HOSPITAL_ID = 'H01KR-41000002';
+  const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
+  if ( ret.success === false ) {
+    return res.send(ret);
   }
 
   const P1 = await crawlingCtrl.getCrawlingDoctorLink(HOSPITAL_ID);
@@ -209,7 +179,7 @@ router.post('/step02', async (req, res, next) => {
   if (CS.isEmpty(_.size(P1.data))) { return res.json(TS.fail({ code: 'DATA_NULL', message: 'response data is null' })) }
   const doctorLinkTotal = _.size(P1.data)
 
-  for (let i = 0; i < 1; i++) {
+  for (let i = 0; i < _.size(P1.data); i++) {
     await CS.wait(10000); // 10초정도로 - 부사장님 지시임! 꼭 지킬것
 
     const doctorName = P1.data[i].doctorname;
@@ -219,7 +189,7 @@ router.post('/step02', async (req, res, next) => {
     if (doctorName && refUrl) {
       const SP1 = await crawlingCtrl.crwalingProcess03(refUrl);
       console.log("SP1 size",_.size(SP1?.data));
-      /* await CS.wait(300);
+      await CS.wait(300);
       const SP2 = await crawlingCtrl.get_rid_encrypt(doctorName, refUrl);
       if (SP2.error) {
         console.log("SP2 DB fail.");
@@ -240,7 +210,7 @@ router.post('/step02', async (req, res, next) => {
       if (SP4.error) {
         console.log("SP4 DB fail.");
         return res.json(TS.fail("SP4 DB fail."));
-      } */
+      }
     }
   }
   console.log(`result: ${_.size(P1.data)}`);
@@ -287,21 +257,11 @@ router.post('/step02', async (req, res, next) => {
  */
 
 router.post('/step03', async (req, res, next) => {
-  const HOSPITAL_ID = req.body.hid;
-  if ( functions.isEmpty(HOSPITAL_ID) ) { 
-    res.send({
-      code : 200,
-      success: false,
-      message: "병원코드를 입력해주세요!"
-    });
-  }
-
-  if ( HOSPITAL_ID !== "H01KR-41000002" ) { 
-    res.send({
-      code : 200,
-      success: false,
-      message: "잘못된 병원코드입니다. 정확한 코드를 입력해주세요!"
-    });
+  
+  const HOSPITAL_ID = 'H01KR-41000002';
+  const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
+  if ( ret.success === false ) {
+    return res.send(ret);
   }
 
   const P1 = await crawlingCtrl.get_crawling_doctor_mssing_link(HOSPITAL_ID);
@@ -386,23 +346,11 @@ router.post('/step03', async (req, res, next) => {
  */
 
 
-
 router.post('/treatise', async (req, res, next) => {
-  const HOSPITAL_ID = req.body.hid;
-  if ( functions.isEmpty(HOSPITAL_ID) ) { 
-    res.send({
-      code : 200,
-      success: false,
-      message: "병원코드를 입력해주세요!"
-    });
-  }
-
-  if ( HOSPITAL_ID !== "H01KR-41000002" ) { 
-    res.send({
-      code : 200,
-      success: false,
-      message: "잘못된 병원코드입니다. 정확한 코드를 입력해주세요!"
-    });
+  const HOSPITAL_ID = 'H01KR-41000002';
+  const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
+  if ( ret.success === false ) {
+    return res.send(ret);
   }
 
   const P1 = await crawlingCtrl.getCrawlingDoctorLink(HOSPITAL_ID);
