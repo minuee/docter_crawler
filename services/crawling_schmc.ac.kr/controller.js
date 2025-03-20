@@ -216,48 +216,67 @@ module.exports = {
   },
 
   crwalingtreatise: async (url) => {
+    
     let result = null, error = null, DBCode = null
-    let DBData1 = null
-    let DBData2 = null
-    let Response = { status: null, data: null }
+
+    console.log(`crwalingProcess03: ${url}`); 
+    
     if (!url) {
       return { error: true, data: null };
     }
     try {
-      Response = await axios.get(url, {
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0'
-        }
-      })
-    } catch (error) {
-      Error = error
-      console.log(`error on ${url} API return: ${error}`);
-    }
-    const $ = cheerio.load(Response.data);
-    const deptName = $('div.wsize p.part').first().text().trim();
-    const doctorName = $('div.wsize p.name').first().text().trim();
-    const profileImgUrl = $('div.bg_type p img').attr('src');
-    const specialty = $('div.clinic p.txtw span').first().text().trim();
+      const browser = await puppeteer.launch();
+        // Open a new page
+      const page = await browser.newPage();
+      page.setDefaultNavigationTimeout(0);
+      //await page.waitForSelector('.inner');
+      // Navigate to the website
+      await page.goto(url,{waitUntil: "domcontentloaded"});
+      await page.setViewport({
+          width: 1200,
+          height: 800
+      });
 
-    let item = {
-      doctorName: doctorName,
-      deptName: deptName,
-      specialty: specialty,
-      profileImgUrl: `https://main.kbsmc.co.kr/${profileImgUrl}`,
-      biography: [],
-    };
-
-    $('div.section2 div.wsize div:nth-of-type(3) dl:nth-of-type(1) ul li').each((index1, element1) => {
-      const liText = $(element1).text().trim().replace(/\t/g, '').replace(/\n\n/g, '');
-      const etc = {
-        type: '논문',
-        title: (liText) ? liText : null,
-        url: null,
+      await page.keyboard.press('ArrowDown')
+      //await page.waitForSelector("._careerIemContainer");
+      await CS.wait(1000);
+      await page.keyboard.press('ArrowUp');
+      const htmlContent = await page.content();
+      const $ = cheerio.load(htmlContent);  
+      
+      let item = {
+        biography: [],
       };
-      item.biography.push(etc);
-    });
-    // console.log(item);
-    return { error: error, data: item };
+
+      $('#_thesisContainer').find("li").each((index, dtElement) => {
+        
+        const dtText = $(dtElement).find('li > div > span').text() ? $(dtElement).find('li > div > span').text() : '';  
+        console.log(`논문: ${dtText}`);
+        if ( !functions.isEmpty(dtText) ) {
+          const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '');
+          const etc = {
+            type: '논문',
+            title: (tmpText) ? tmpText : '',
+            url: null,
+          };
+          item.biography.push(etc);
+        }
+      });
+
+    
+      await browser.close();
+      return { error: error, data: item };
+
+    } catch (error) {
+      Error = error;
+      console.log(`error on ${url} API return: ${error}`);
+      await browser.close();
+      return { error: error, data: [] };
+    }
+
+
+
+
   },
 
   setCrawlingdoctorBasic: async (rid, hid, deptName, doctorName, specialty, profileimgurl) => {

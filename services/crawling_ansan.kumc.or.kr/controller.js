@@ -34,21 +34,61 @@ module.exports = {
       const htmlContent = await page.content();
       const $ = cheerio.load(htmlContent);  
       let dept = [];
-      console.log(`r_url: ${r_url} `);
+      ///console.log(`r_url: ${r_url} ${$('div.medi_index_wrap').attr('class')}`);
+      $('div.list_type02').find('ul > li').each((index, element) => {
 
-      $('ul.medical_list').find('li').each((index, element) => {
-
-        const deptName = $(element).find('span.back > span.office').text() ?$(element).find('span.back > span.office').text() : '';
-        const tmpLink = $(element).find('span.back > span.btn-box > a').attr('href') ? $(element).find('span.back > span.btn-box > a').attr('href') : '';
-        
-        console.log(`deptName: ${deptName} ${tmpLink}`);
-
-        if ( !functions.isEmpty(tmpLink) && !functions.isEmpty(deptName) ) {
-          const link = `https://www.cmcvincent.or.kr${tmpLink}`;
+        const deptName = $(element).find('div.imglist_outer').find('p').text() ? $(element).find('div.imglist_outer').find('p').text().trim() : '';
+        let tmpLinkDepthNo = null;
+        switch( deptName ) {
+          case "가정의학과" :tmpLinkDepthNo = "ASFM"; break;
+          case "간담췌외과" :tmpLinkDepthNo = "ASHPS"; break;
+          case "감염내과" :tmpLinkDepthNo = "ASID"; break;
+          case "내분비내과" :tmpLinkDepthNo = "ASEC"; break;
+          case "대장항문외과" :tmpLinkDepthNo = "ASCRS"; break;
+          case "류마티스내과" :tmpLinkDepthNo = "ASRH"; break;
+          case "마취통증의학과" :tmpLinkDepthNo = "ASAN"; break;
+          case "방사선종양학과" :tmpLinkDepthNo = "ASRO"; break;
+          case "병리과" :tmpLinkDepthNo = "ASAP"; break;
+          case "비뇨의학과" :tmpLinkDepthNo = "ASGU"; break;
+          case "산부인과" :tmpLinkDepthNo = "ASOG"; break;
+          case "성형외과" :tmpLinkDepthNo = "ASPS"; break;
+          case "소아외과" :tmpLinkDepthNo = "ASPDS"; break;
+          case "소아청소년과" :tmpLinkDepthNo = "ASPD"; break;
+          case "소화기내과" :tmpLinkDepthNo = "ASGE"; break;
+          case "순환기내과" :tmpLinkDepthNo = "ASCA"; break;
+          case "신경과" :tmpLinkDepthNo = "ASNU"; break;
+          case "신경외과" :tmpLinkDepthNo = "ASNS"; break;
+          case "신장내과" :tmpLinkDepthNo = "ASNE"; break;
+          case "심장혈관흉부외과" :tmpLinkDepthNo = "ASCS"; break;
+          case "안과" :tmpLinkDepthNo = "ASOP"; break;
+          case "영상의학과" :tmpLinkDepthNo = "ASDR"; break;
+          case "위장관외과(상부)" :tmpLinkDepthNo = "ASGES"; break;
+          case "유방내분비외과" :tmpLinkDepthNo = "ASBES"; break;
+          case "응급의학과" :tmpLinkDepthNo = "ASED"; break;
+          case "이비인후·두경부외과" :tmpLinkDepthNo = "ASOL"; break;
+          case "재활의학과" :tmpLinkDepthNo = "ASRM"; break;
+          case "정신건강의학과" :tmpLinkDepthNo = "ASPY"; break;
+          case "정형외과" :tmpLinkDepthNo = "ASOS"; break;
+          case "중환자의학과" :tmpLinkDepthNo = "ASDCCM"; break;
+          case "직업환경의학과" :tmpLinkDepthNo = "ASOM"; break;
+          case "진단검사의학과" :tmpLinkDepthNo = "ASCP"; break;
+          case "치과구강악안면외과" :tmpLinkDepthNo = "ASDT"; break;
+          case "치과보존과" :tmpLinkDepthNo = "ASDTC"; break;
+          case "치과보철과" :tmpLinkDepthNo = "ASDTP"; break;
+          case "치과치주과" :tmpLinkDepthNo = "202857"; break;
+          case "피부과" :tmpLinkDepthNo = "ASDM"; break;
+          case "핵의학과" :tmpLinkDepthNo = "ASNM"; break;
+          case "혈액종양내과" :tmpLinkDepthNo = "ASHO"; break;
+          case "호흡기내과" :tmpLinkDepthNo = "ASPU"; break;
+          default: tmpLinkDepthNo = null; break;
+        } 
+       
+        if ( !functions.isEmpty(deptName) && !functions.isEmpty(tmpLinkDepthNo) ) {
+          const link = `https://ansan.kumc.or.kr/kr/doctor-department/department/view.do?deptCd=${tmpLinkDepthNo}`;
          
           dept.push({ 
             deptName,
-            link
+            link,
           });
         }
       });
@@ -65,16 +105,18 @@ module.exports = {
 
   crwalingProcess02: async (url,deptName) => {
     let result = null, error = null, DBCode = null;
+
     if (functions.isEmpty(url)) {
       return { error: true, data: [] };
     }
-    console.log(`link: ${url} ${deptName}`);
-
+    
+    console.log(`url: ${url}, deptName: ${deptName}`);
     try {
       const browser = await puppeteer.launch();
         // Open a new page
       const page = await browser.newPage();
       page.setDefaultNavigationTimeout(0);
+      
       //await page.waitForSelector('.inner');
       // Navigate to the website
       await page.goto(url,{waitUntil: "domcontentloaded"});
@@ -88,52 +130,51 @@ module.exports = {
       await CS.wait(1000);
       await page.keyboard.press('ArrowUp');
       const htmlContent = await page.content();
-      const $ = cheerio.load(htmlContent); 
+      const $ = cheerio.load(htmlContent);  
 
-      const tablist = $('#tabList').attr("class");
-      console.log(`tablist: ${tablist}`);
+      const checkelement = $("div.tab_col_3 > ul").attr("class");
+      console.log(`checkelement: ${checkelement}`);
 
       const doctors = [];
-      $('div.select_list_wrap').find('ul > li').each((index, element) => {
-        const doctorName = $(element).find('div.doc_info > div > a:first-child > strong').text() ? $(element).find('div.doc_info > div > a:first-child > strong').text() : '';
-        const detailLink = $(element).find('div.doc_info > div > a:first-child').attr('href') ? $(element).find('div.doc_info > div > a:first-child').attr('href') : '';
-       
-        const tmpLink =  "https://www.cmcvincent.or.kr" + detailLink;
+      $('div.doctorList > div').find('div.profile_box').each((index, element) => {
+        const doctorName = $(element).find('div.doctor_cont').find('div.doctor_name > span').text() ? $(element).find('div.doctor_cont').find('div.doctor_name > span').text() : '';
+        const doctorNo = $(element).find('div.doctor_cont').find('div.doctor_cont_inner > a').attr('data-no') ? $(element).find('div.doctor_cont').find('div.doctor_cont_inner > a').attr('data-no') : 0;
+        const tmpLink = `https://ansan.kumc.or.kr/kr/doctor-department/doctor/view.do?drNo=${doctorNo}`;
       
-        console.log(`Adding doctor list: ${index} ${doctorName} ${deptName} ${detailLink}`); // 디버
-        if ( !functions.isEmpty(doctorName) && !functions.isEmpty(detailLink) ) {
+        console.log(`Adding doctor list: ${index} ${doctorName} ${doctorNo} ${tmpLink}`); // 디버깅을 위한 로그
+        
+        if ( doctorNo > 0 ) {
           const doctor = {
             doctorName,
             deptName,
             url: tmpLink,
           };
           doctors.push(doctor); 
+
         }
       });
-   
+  
       console.log(`doctors:${doctors.length}`);
       return { error: error, data: doctors };
-
+      
     } catch (error) {
-      Error = error;
-      console.log(`error on ${url} API return: ${error}`);
-      await browser.close();
-      return { error: error, data: [] };
+      Error = error
+      console.log(`error on ${link} API return: ${error}`);
     }
 
-
-   
+    
   },
 
 
 
-  crwalingProcess03: async (url) => {
+  crwalingProcess03: async (tmpurl) => {
     let result = null, error = null, DBCode = null
     let DBData1 = null
     let DBData2 = null
     let Response = { status: null, data: null }
-    console.log(`crwalingProcess03: ${url}`); 
-   
+    console.log(`crwalingProcess03: ${tmpurl}`); 
+    let url = tmpurl.replace("p_p_id=null&", "p_p_id=searchDoctor_WAR_bookingHomepageportlet&");
+    url = tmpurl.replace("&_action=view_message", "&_searchDoctor_WAR_bookingHomepageportlet_action=view_message");
     if (!url) {
       return { error: true, data: null };
     }
@@ -158,9 +199,10 @@ module.exports = {
       await page.keyboard.press('ArrowUp');
       const htmlContent = await page.content();
       const $ = cheerio.load(htmlContent);  
-      // $(`#layer_pop_${doctor_id}`).attr('disabled', 'disabled').css('display', 'block');
-      const profileImgUrl = $('div.cont_main').find("div.cont_bg").attr('data-img-1') ? $('div.cont_main').find("div.cont_bg").attr('data-img-1') : '';
-      let tmpSpecialty = $('div.doc_intro_txt').find('dl > dd > a > p').text() ? $('div.doc_intro_txt').find('dl > dd > a > p').text() : '';
+
+
+      const profileImgUrl = $('div.container > div').find("img").attr('src') ? $('div.container > div').find("img").attr('src') : '';
+      let tmpSpecialty = $('div.doctorwrap').find('ul.clear').find('li.field_contents').text() ? $('div.doctorwrap').find('ul.clear').find('li.field_contents').text()  : '';
       // 진료분야를 json화 한다
       let specialtyJson = tmpSpecialty.split(",");
       //console.log(`specialtyJson: ${JSON.stringify(specialtyJson)}`);
@@ -168,22 +210,21 @@ module.exports = {
       let item = {
         specialty: tmpSpecialty,
         specialtyJson: specialtyJson,
-        profileImgUrl: `https://www.cmcvincent.or.kr/${profileImgUrl}`,
+        profileImgUrl: `https://ansan.kumc.or.kr/${profileImgUrl}`,
         biography: [],
       };
       //const smaple = $('#_careerContainer').find('._careerIem:first-child > td').text();
       //console.log(`_press: ${smaple}`);
 
-      $('div.cont_main_profile').find("div:nth-child(2)").find('ul > li').each((index, dtElement) => {
+      $('#line2').find("div.doc_info01_table > table").find('tbody > tr').each((index, dtElement) => {
         
-        const dtYearText = $(dtElement).find('dl > dt > em').text() ? $(dtElement).find('dl > dt > em').text()  : '';
-        const dtText = $(dtElement).find('dl > dd > em').text()  ? $(dtElement).find('dl > dd > em').text()  : '';
+        const dtYearText = $(dtElement).find('th').text() ? $(dtElement).find('th').text() : '';
+        const dtText = $(dtElement).find('td').text() ? $(dtElement).find('td').text() : '';
  
         if ( !functions.isEmpty(dtText) ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '');
-          const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '');
           item.biography.push({
-            targetDate : tmpDtYearText,
+            targetDate : dtYearText,
             type: "학력",
             text: tmpText,
             url: null,
@@ -192,17 +233,15 @@ module.exports = {
         }
       });
 
-      $('div.cont_main_profile').find("div:nth-child(3)").find('ul > li').each((index, dtElement) => {
+      $('#line2').find("div.tab_ui").find("div.tab_cont > ul > li:first-child").find('table').find("tbody > tr").each((index, dtElement) => {
         
-        const dtYearText = $(dtElement).find('dl > dt > em').text() ? $(dtElement).find('dl > dt > em').text()  : '';
-        const dtText = $(dtElement).find('dl > dd > em').text()  ? $(dtElement).find('dl > dd > em').text()  : '';
- 
+        const dtYearText = $(dtElement).find('th').text() ? $(dtElement).find('th').text() : '';
+        const dtText = $(dtElement).find('td').text() ? $(dtElement).find('td').text() : '';
+
         if ( !functions.isEmpty(dtText) ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '');
-          const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '');
-          
           item.biography.push({
-            targetDate : tmpDtYearText,
+            targetDate : dtYearText,
             type: "경력",
             text: tmpText,
             url: null,
@@ -211,52 +250,15 @@ module.exports = {
         }
       });
 
-      $('div.cont_main_profile').find("div:nth-child(4)").find('ul > li').each((index, dtElement) => {
+      $('#line2').find("div.tab_ui").find("div.tab_cont > ul > li:nth-child(2)").find('table').find("tbody > tr").each((index, dtElement) => {
         
-        const dtYearText = $(dtElement).find('dl > dt > em').text() ? $(dtElement).find('dl > dt > em').text()  : '';
-        const dtText = $(dtElement).find('dl > dd > em').text()  ? $(dtElement).find('dl > dd > em').text()  : '';
- 
-        if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '');
-          const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '');
-          item.biography.push({
-            targetDate : tmpDtYearText,
-            type: "연수",
-            text: tmpText,
-            url: null,
-            issuer:null
-          });
-        }
-      });
+        const dtYearText = $(dtElement).find('th').text() ? $(dtElement).find('th').text() : '';
+        const dtText = $(dtElement).find('td').text() ? $(dtElement).find('td').text() : '';
 
-      $('div.cont_main_profile').find("div:nth-child(5)").find('ul > li').each((index, dtElement) => {
-        
-        const dtYearText = $(dtElement).find('dl > dt > em').text() ? $(dtElement).find('dl > dt > em').text()  : '';
-        const dtText = $(dtElement).find('dl > dd > em').text()  ? $(dtElement).find('dl > dd > em').text()  : '';
- 
         if ( !functions.isEmpty(dtText) ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '');
-          const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '');
           item.biography.push({
-            targetDate : tmpDtYearText,
-            type: "수상",
-            text: tmpText,
-            url: null,
-            issuer:null
-          });
-        }
-      });
-
-      $('div.cont_main_profile').find("div:nth-child(6)").find('ul > li').each((index, dtElement) => {
-        
-        const dtYearText = $(dtElement).find('dl > dt >  em').text() ? $(dtElement).find('dl > dt > em').text()  : '';
-        const dtText = $(dtElement).find('dl > dd > em').text()  ? $(dtElement).find('dl > dd > em').text()  : '';
- 
-        if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '');
-          const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '');
-          item.biography.push({
-            targetDate : tmpDtYearText,
+            targetDate : dtYearText,
             type: "학회",
             text: tmpText,
             url: null,
@@ -264,18 +266,17 @@ module.exports = {
           });
         }
       });
-    
 
-      $('div.cont_main_profile').find("div.s_part").find('ul > li').each((index, dtElement) => {
+      $('#line3').find("div.tab_ui").find("div.tab_cont > ul > li:first-child").find('table').find("tbody > tr").each((index, dtElement) => {
         
-        const dtYearText =  '';
-        const dtText = $(dtElement).find('dl > dd > em').text()  ? $(dtElement).find('dl > dd > em').text()  : '';
- 
+        const dtYearText = $(dtElement).find('th').text() ? $(dtElement).find('th').text() : '';
+        const dtText = $(dtElement).find('td').find("a > span:nth-child(2)").text() ? $(dtElement).find('td').find("a > span:nth-child(2)").text() : '';
+
         if ( !functions.isEmpty(dtText) ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '');
           item.biography.push({
             targetDate : dtYearText,
-            type: "연구분야",
+            type: "눈문",
             text: tmpText,
             url: null,
             issuer:null
@@ -283,16 +284,15 @@ module.exports = {
         }
       });
 
-      $('div.book_list').find("div.list_wrap").find('ul > li').each((index, dtElement) => {
+      $('#line3').find("div.tab_ui").find("div.tab_cont > ul > li:nth-child(2)").find('table').find("tbody > tr").each((index, dtElement) => {
         
-        const dtYearText =  $(dtElement).find('div.date_wrap > span > em').text()  ? $(dtElement).find('div.date_wrap > span > em').text()  : '';
-        const dtText = $(dtElement).find('div.info_wrap').find("div.title > p").text()  ? $(dtElement).find('div.info_wrap').find("div.title > p").text() : '';
- 
+        const dtYearText = $(dtElement).find('th').text() ? $(dtElement).find('th').text() : '';
+        const dtText = $(dtElement).find('td > span').text() ? $(dtElement).find('td > span').text() : '';
+
         if ( !functions.isEmpty(dtText) ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '');
-          const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '');
           item.biography.push({
-            targetDate : tmpDtYearText,
+            targetDate : dtYearText,
             type: "저서",
             text: tmpText,
             url: null,
@@ -301,25 +301,41 @@ module.exports = {
         }
       });
 
-      $('div.news_list').find("div.item_wrap").find('div.grid-item').each((index, dtElement) => {
+      $('#line3').find("p.info_tit:contains('수상')").next('div.doc_info01_table').find('table').find("tbody > tr").each((index, dtElement) => {
         
-        const dtYearText =  $(dtElement).find('a > div.info_wrap').find('em.date').text()  ? $(dtElement).find('a > div.info_wrap').find('em.date').text()  : '';
-        const dtText = $(dtElement).find('a > div.cont_wrap > p').text() ? $(dtElement).find('a > div.cont_wrap > p').text() : '';
-        const dtUrl = $(dtElement).find('a').attr('href')  ? $(dtElement).find('a').attr('href')  : '';
-        
+        const dtYearText = $(dtElement).find('th').text() ? $(dtElement).find('th').text() : '';
+        const dtText = $(dtElement).find('td > span').text() ? $(dtElement).find('td > span').text() : '';
+
         if ( !functions.isEmpty(dtText) ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '');
-          const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '');
           item.biography.push({
-            targetDate : tmpDtYearText,
-            type: "언론",
+            targetDate : dtYearText,
+            type: "수상",
             text: tmpText,
-            url: dtUrl,
+            url: null,
             issuer:null
           });
         }
       });
 
+      $('#line4').find("div.tab_ui").find("div.tab_cont > ul > li:first-child").find('table').find("tbody > tr").each((index, dtElement) => {
+        
+        const dtYearText = $(dtElement).find('th').text() ? $(dtElement).find('th').text() : '';
+        const dtText = $(dtElement).find('td > a').text() ? $(dtElement).find('td > a').text() : '';
+        const dtTextHref = $(dtElement).find('td > a').attr('href') ? $(dtElement).find('td > a').attr('href') : '';
+
+        if ( !functions.isEmpty(dtText) ) {
+          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '');
+          item.biography.push({
+            targetDate : dtYearText,
+            type: "언론",
+            text: tmpText,
+            url: dtTextHref,
+            issuer:null
+          });
+        }
+      });
+      
       await browser.close();
       return { error: error, data: item };
 
@@ -331,13 +347,15 @@ module.exports = {
     }
   },
 
-  crwalingtreatise: async (url) => {
+  crwalingtreatise: async (tmpurl) => {
     let result = null, error = null, DBCode = null
     let DBData1 = null
     let DBData2 = null
     let Response = { status: null, data: null }
+    console.log(`crwalingProcess03: ${tmpurl}`); 
+    let url = tmpurl.replace("p_p_id=null&", "p_p_id=searchDoctor_WAR_bookingHomepageportlet&");
+    url = tmpurl.replace("&_action=view_message", "&_searchDoctor_WAR_bookingHomepageportlet_action=view_message");
     console.log(`crwalingProcess03: ${url}`); 
-    
     if (!url) {
       return { error: true, data: null };
     }
@@ -346,6 +364,7 @@ module.exports = {
         // Open a new page
       const page = await browser.newPage();
       page.setDefaultNavigationTimeout(0);
+      
       //await page.waitForSelector('.inner');
       // Navigate to the website
       await page.goto(url,{waitUntil: "domcontentloaded"});
@@ -365,23 +384,21 @@ module.exports = {
         biography: [],
       };
 
-      $('div.thesis_list').find("div.list_wrap").find('ul > li').each((index, dtElement) => {
+      $('#line3').find("div.tab_ui").find("div.tab_cont > ul > li:first-child").find('table').find("tbody > tr").each((index, dtElement) => {
         
-        const dtYearText = '';
-        const dtText = $(dtElement).find('div.info_wrap').find('div.title > p').text() ? $(dtElement).find('div.info_wrap').find('div.title > p').text() : '';  
-        console.log(`논문: ${dtYearText} ${dtText}`);
+        const dtText = $(dtElement).find('td').find("a > span:nth-child(2)").text() ? $(dtElement).find('td').find("a > span:nth-child(2)").text() : '';
+        console.log(`논문: ${dtText}`);
         if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '');
+          const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '');
           const etc = {
             type: '논문',
-            title: tmpText,
+            title: (tmpText) ? tmpText : '',
             url: null,
           };
           item.biography.push(etc);
         }
       });
 
-    
       await browser.close();
       return { error: error, data: item };
 

@@ -82,7 +82,7 @@ router.post('/step01', async function(req, res, next) {
   const data = [];
   const r_url = `https://www.inha.com/page/department/medicine/dept`;
   const P1 = await crawlingCtrl.crwalingProcess01(r_url);
-  ///console.log("ddddd__Ddddx",_.size(P1?.data));
+  console.log("ddddd__Ddddx",_.size(P1?.data));
   
   if (P1.error) return res.json(TS.fail(P1.error));
   if (functions.isEmpty(P1.data)) { return res.json(TS.fail({ code: 'DATA_NULL', message: 'response data is null' })) }
@@ -118,7 +118,7 @@ router.post('/step01', async function(req, res, next) {
     }
   }
 
-  console.log(`result: ${_.size(P1.data)}`);
+  console.log(`검색된 진료과목수 : ${_.size(P1.data)}, 검색된 의사수 : ${_.size(data)}`);
   return res.send({
     code : 200,
     success: true,
@@ -182,7 +182,7 @@ router.post('/step02', async (req, res, next) => {
   
   const data = [];
   for (let i = 0; i < _.size(P1.data); i++) {
-    await CS.wait(10000); // 10초정도로 - 부사장님 지시임! 꼭 지킬것
+    await CS.wait(5000); // 10초정도로 - 부사장님 지시임! 꼭 지킬것
 
     const doctorName = P1.data[i].doctorname;
     const deptName = P1.data[i].deptname;
@@ -198,7 +198,7 @@ router.post('/step02', async (req, res, next) => {
         return res.json(TS.fail("SP2 DB fail."));
       }
       const tempRid = SP2.data[0].rid_encrypt
-      //console.log(`check data: ${doctorName} ${refUrl} ${deptName} ${tempRid}`);
+      console.log(`check data: ${doctorName} ${refUrl} ${deptName} ${tempRid}`);
       if (CS.isEmpty(tempRid)) break;
       await CS.wait(300);
       const SP3 = await crawlingCtrl.setCrawlingdoctorBasic(tempRid, HOSPITAL_ID, deptName, doctorName, SP1.data.specialty, SP1.data.profileImgUrl);
@@ -369,7 +369,7 @@ router.post('/treatise', async (req, res, next) => {
   console.log(`total sie: ${_.size(P1.data)}`)
   if (CS.isEmpty(_.size(P1.data))) { return res.json(TS.fail({ code: 'DATA_NULL', message: 'response data is null' })) }
   const loopSize = _.size(P1.data);
-  // const loopSize = 1;
+  // const loopSize = 2;
   let article = 0;
   for (let i = 0; i < loopSize; i++) {
     await CS.wait(5000); // 10초정도로 - 부사장님 지시임! 꼭 지킬것
@@ -377,7 +377,6 @@ router.post('/treatise', async (req, res, next) => {
     const deptName = P1.data[i].deptname;
     const refUrl = P1.data[i].url 
     const SP1 = await crawlingCtrl.crwalingtreatise(refUrl)
-    console.log(`SP1.data.biography: ${JSON.stringify(SP1.data.biography)}`)
     if (_.size(SP1.data.biography) > 0) {
       await CS.wait(300);
       const tempRid = P1.data[i].rid

@@ -278,10 +278,11 @@ module.exports = {
     };
 
 
-    $(`#layer_pop_${doctor_id}`).find(`#tab${doctor_id}_3 > dl dd`).each((index, dtElement) => {
+    $(`#layer_pop_${doctor_id}`).find(`#tab${doctor_id}_3`).find('dd').each((index, dtElement) => {
       const dtText = $(dtElement).text() ? $(dtElement).text().trim() : '';
-      //console.log(`경력: ${dtText}`);
-      if ( !functions.isEmpty(dtText) && dtText.indexOf('First Author') != -1 && dtText.indexOf('Corresponding Author') != -1 && dtText.indexOf('Coauthor') != -1 ) {
+      
+      if ( !functions.isEmpty(dtText) && dtText.length > 15 ) {
+        console.log(`논문: ${dtText}`);
         const etc = {
           type: '논문',
           title: dtText,

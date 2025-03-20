@@ -33,13 +33,13 @@ module.exports = {
       const $ = cheerio.load(htmlContent);  
       let dept = [];
       ///console.log(`r_url: ${r_url} ${$('div.medi_index_wrap').attr('class')}`);
-      $('ul.dept-list').find('li').each((index, element) => {
+      $('div.bh_mgb40').find("h5.tit_h5:contains('진료과')").next('div').find('ul > li').each((index, element) => {
 
-        const deptName = $(element).find('div.text-ko > a').text() ? $(element).find('div.text-ko > a').text() : '';
-        const tmpLink = $(element).find('div.text-ko').find('ul.over-icon').find('li.doc > a').attr('href') ? $(element).find('div.text-ko').find('ul.over-icon').find('li.doc >a').attr('href') : '' ; 
+        const deptName = $(element).find('dl > dt > p > a').text() ? $(element).find('dl > dt > p > a').text() : '';
+        const tmpLink = $(element).find('ul').find('li.bh_dl_2 > a').attr('href') ? $(element).find('ul').find('li.bh_dl_2 > a').attr('href') : '' ; 
         
         if ( !functions.isEmpty(tmpLink) ) {
-          const link = `https://www.inha.com${tmpLink}`;
+          const link = `https://www.snubh.org${tmpLink}`;
           console.log(`tmpLinkDepthNo:${deptName} ${tmpLink}`);
           dept.push({ 
             deptName,
@@ -57,45 +57,65 @@ module.exports = {
     }
   },
 
-  crwalingProcess02: async (link,deptName) => {
+  crwalingProcess02: async (url,deptName) => {
+
     let result = null, error = null, DBCode = null;
-    if (functions.isEmpty(link)) {
+    if (functions.isEmpty(url)) {
       return { error: true, data: [] };
     }
     
-
     try {
-      Response = await axios.get(link, {
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0'
-        }
-      })
-    } catch (error) {
-      Error = error
-      console.log(`error on ${link} API return: ${error}`);
-    }
-    const $ = cheerio.load(Response.data);
+      const browser = await puppeteer.launch();
+        // Open a new page
+      const page = await browser.newPage();
+      page.setDefaultNavigationTimeout(0);
+      //await page.waitForSelector('.inner');
+      // Navigate to the website
+      await page.goto(url,{waitUntil: "domcontentloaded"});
+      await page.setViewport({
+          width: 1200,
+          height: 800
+      });
 
-    const doctors = [];
-    $('ul.doc-list li').each((index, element) => {
-      const doctorName = $(element).find('p.name').text() ? $(element).find('p.name').text() : null;
-      const detailLink = $(element).find('a').attr('href') ? $(element).find('a').attr('href') : null;
-      const link = `https://www.inha.com${detailLink}`;
-      const doctor = {
-        doctorName,
-        deptName,
-        url: link,
-      };
-      doctors.push(doctor); 
-    });
- 
-    console.log(`doctors:${doctors.length}`);
-    return { error: error, data: doctors };
+      await page.keyboard.press('ArrowDown')
+      //await page.waitForSelector("._careerIemContainer");
+      await CS.wait(1000);
+      await page.keyboard.press('ArrowUp');
+      const htmlContent = await page.content();
+      const $ = cheerio.load(htmlContent);  
+
+      const doctors = [];
+      $('ul.bh_bookmark_list_ul_n li').each((index, element) => {
+        const doctorName = $(element).find('div.bh_doctor_introduce3').find('div.bh_doctor_name_n > strong').text() ? $(element).find('div.bh_doctor_introduce3').find('div.bh_doctor_name_n > strong').text() : '';
+        const detailLink = $(element).find('div.bh_doctor_introduce3').find('div.bh_doctor_btn_wrap_n > input').attr('onclick') ? $(element).find('div.bh_doctor_introduce3').find('div.bh_doctor_btn_wrap_n > input').attr('onclick') : '';
+        const match = detailLink.match(/\{.*\}/);
+        const params = JSON.parse(match[0].replace(/'/g, '"'));
+        //console.log(`params:${JSON.stringify(params)}`);
+        const tmpDoctorName = doctorName.split(' ')[0];
+        const link = `https://www.snubh.org/medical/drIntroduce.do?DP_TP=O&DP_CD=${params?.sDpCdDtl}&sDpCdDtl=FM&sDrSid=${params?.sDrSid}&sDrStfNo=${params?.sDrStfNo}&sDpTp=O`;
+        console.log(`doctorName:${tmpDoctorName} detailLink:${link}`);
+
+        const doctor = {
+          doctorName : tmpDoctorName,
+          deptName,
+          url: link,
+        };
+        doctors.push(doctor); 
+      });
+   
+      console.log(`doctors:${doctors.length}`);
+      return { error: error, data: doctors };
+
+    } catch (error) {
+      Error = error;
+      console.log(`error on ${url} API return: ${error}`);
+      await browser.close();
+      return { error: error, data: [] };
+    }
   },
 
-
-
   crwalingProcess03: async (url) => {
+
     let result = null, error = null, DBCode = null
     let DBData1 = null
     let DBData2 = null
@@ -125,9 +145,9 @@ module.exports = {
       const htmlContent = await page.content();
       const $ = cheerio.load(htmlContent);  
       // $(`#layer_pop_${doctor_id}`).attr('disabled', 'disabled').css('display', 'block');
-      const profileImgUrl = $('div.docter-cont > img').attr('src') ? $('div.docter-cont > img').attr('src') : '';
+      const profileImgUrl = $('div.doc_pic_wrap').find('img.img_wrap_3').attr('src') ? $('div.doc_pic_wrap').find('img.img_wrap_3').attr('src') : '';
       console.log(`profileImgUrl: ${profileImgUrl} `);
-      let tmpSpecialty = $('#info').find('.prg-wrap:first-child').find('div.prg-right > div >').text() ? $('#info').find('.prg-wrap:first-child').find('div.prg-right > div >').text()  : '';
+      let tmpSpecialty = $('dl.part_box').find('.dd.part_dec').text() ? $('dl.part_box').find('.dd.part_dec').text()  : '';
       console.log(`tmpSpecialty: ${tmpSpecialty}`);
       // 진료분야를 json화 한다
       let specialtyJson = tmpSpecialty.split(",");
@@ -144,14 +164,14 @@ module.exports = {
       //const smaple = $('#profile').find("div.profile > p:contains('학력')").siblings('ul > li').lnegth;
       //console.log(`_press: ${smaple}`);
 
-      $('#profile').find("div.profile > p:contains('학력')").next('ul').find('li').each((index, dtElement) => {
+      $('#cont_wrap3').find("div.bh_mgb25:nth-child(2)").find('ul > li').each((index, dtElement) => {
         
-        const dtYearText = $(dtElement).find('p').text() ? $(dtElement).find('p').text() : '';
-        const dtText = $(dtElement).find('p')[0].nextSibling.data ? $(dtElement).find('p')[0].nextSibling.data : '';
+        const dtYearText = '';
+        const dtText = $(dtElement).text() ?$(dtElement).text() : '';
 
         console.log(`학력: ${dtYearText} ${dtText}`);
         if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '');
+          const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '');
           item.biography.push({
             targetDate : dtYearText,
             type: "학력",
@@ -162,16 +182,16 @@ module.exports = {
         }
       });
 
-      $('#profile').find("div.profile > p:contains('주요경력')").next('ul').find('li').each((index, dtElement) => {
+      $('#cont_wrap3').find("div.bh_mgb25:nth-child(3)").find('ul > li').each((index, dtElement) => {
         
-        const dtYearText = $(dtElement).find('p').text() ? $(dtElement).find('p').text().replace(/\s+/g, ' ').trim() : '';
-        const dtText = $(dtElement).clone().find('p').remove().end().text().trim() ? $(dtElement).clone().find('p').remove().end().text().trim(): '';
+        const dtYearText = '';
+        const dtText = $(dtElement).text() ?$(dtElement).text() : '';
+
+        console.log(`경력: ${dtYearText} ${dtText}`);
         if ( !functions.isEmpty(dtText) ) {
-          const tmpTextYear = dtYearText.trim().replace(/\t/g, '').replace(/\n/g, '');
           const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '');
-          console.log(`경력: ${tmpTextYear} ${tmpText}`);
           item.biography.push({
-            targetDate : tmpTextYear,
+            targetDate : dtYearText,
             type: "경력",
             text: tmpText,
             url: null,
@@ -180,71 +200,17 @@ module.exports = {
         }
       });
 
-      $('#profile').find("div.profile > p:contains('학회')").next('ul').find('li').each((index, dtElement) => {
+      $('#cont_wrap3').find("div.bh_mgb25:nth-child(4)").find('ul > li').each((index, dtElement) => {
         
         const dtYearText = '';
-        const dtText = $(dtElement).clone().find('p').remove().end().text().trim() ? $(dtElement).clone().find('p').remove().end().text().trim(): '';
-        if ( !functions.isEmpty(dtText) ) {
-          const tmpTextYear = dtYearText.trim().replace(/\t/g, '').replace(/\n/g, '');
-          const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '');
-          console.log(`학회: ${tmpTextYear} ${tmpText}`);
-          item.biography.push({
-            targetDate : tmpTextYear,
-            type: "학회",
-            text: tmpText,
-            url: null,
-            issuer:null
-          });
-        }
-      });
+        const dtText = $(dtElement).text() ?$(dtElement).text() : '';
 
-      $('#profile').find("div.profile > p:contains('수상경력')").next('ul').find('li').each((index, dtElement) => {
-        
-        const dtYearText = $(dtElement).find('p').text() ? $(dtElement).find('p').text().replace(/\s+/g, ' ').trim() : ''; '';
-        const dtText = $(dtElement).clone().find('p').remove().end().text().trim() ? $(dtElement).clone().find('p').remove().end().text().trim(): '';
+        console.log(`수상 : ${dtYearText} ${dtText}`);
         if ( !functions.isEmpty(dtText) ) {
-          const tmpTextYear = dtYearText.trim().replace(/\t/g, '').replace(/\n/g, '');
           const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '');
-          console.log(`수상: ${tmpTextYear} ${tmpText}`);
           item.biography.push({
-            targetDate : tmpTextYear,
+            targetDate : dtYearText,
             type: "수상",
-            text: tmpText,
-            url: null,
-            issuer:null
-          });
-        }
-      });
-
-      $('#profile').find("div.profile > p:contains('주요 논문 및 저서')").next('ul').find('li').each((index, dtElement) => {
-        
-        const dtYearText = $(dtElement).find('p').text() ? $(dtElement).find('p').text().replace(/\s+/g, ' ').trim() : ''; '';
-        const dtText = $(dtElement).clone().find('p').remove().end().text().trim() ? $(dtElement).clone().find('p').remove().end().text().trim(): '';
-        if ( !functions.isEmpty(dtText) ) {
-          const tmpTextYear = dtYearText.trim().replace(/\t/g, '').replace(/\n/g, '');
-          const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '');
-          console.log(`주요 논문 및 저서: ${tmpTextYear} ${tmpText}`);
-          item.biography.push({
-            targetDate : tmpTextYear,
-            type: "저서",
-            text: tmpText,
-            url: null,
-            issuer:null
-          });
-        }
-      });
-
-      $('#profile').find("div.profile > p:contains('언론보도')").next('ul').find('li').each((index, dtElement) => {
-        
-        const dtYearText = $(dtElement).find('p').text() ? $(dtElement).find('p').text().replace(/\s+/g, ' ').trim() : ''; '';
-        const dtText = $(dtElement).clone().find('p').remove().end().text().trim() ? $(dtElement).clone().find('p').remove().end().text().trim(): '';
-        if ( !functions.isEmpty(dtText) ) {
-          const tmpTextYear = dtYearText.trim().replace(/\t/g, '').replace(/\n/g, '');
-          const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '');
-          console.log(`언론보도: ${tmpTextYear} ${tmpText}`);
-          item.biography.push({
-            targetDate : tmpTextYear,
-            type: "언론보도",
             text: tmpText,
             url: null,
             issuer:null
@@ -272,6 +238,8 @@ module.exports = {
     if (!url) {
       return { error: true, data: null };
     }
+    console.log(`linkUrl: ${url} `);
+   
     try {
       const browser = await puppeteer.launch();
         // Open a new page
@@ -291,28 +259,25 @@ module.exports = {
       await page.keyboard.press('ArrowUp');
       const htmlContent = await page.content();
       const $ = cheerio.load(htmlContent);  
-      
+
       let item = {
         biography: [],
       };
-      
-      $('#profile').find("div.profile > p:contains('주요 논문 및 저서')").next('ul').find('li').each((index, dtElement) => {
-        
-        const dtYearText = $(dtElement).find('p').text() ? $(dtElement).find('p').text().replace(/\s+/g, ' ').trim() : ''; '';
-        const dtText = $(dtElement).clone().find('p').remove().end().text().trim() ? $(dtElement).clone().find('p').remove().end().text().trim(): '';
+      $('#cont_wrap4').find("div.bh_mgb25:nth-child(1)").find('ul > li').each((index, dtElement) => {
+        const dtYearText = '';
+        const dtText = $(dtElement).find('p.title_h5').text() ? $(dtElement).find('p.title_h5').text() : '';  
+        console.log(`논문: ${dtYearText} ${dtText}`);
         if ( !functions.isEmpty(dtText) ) {
-          const tmpTextYear = dtYearText.trim().replace(/\t/g, '').replace(/\n/g, '');
           const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '');
-          console.log(`주요 논문 및 저서: ${tmpTextYear} ${tmpText}`);
           const etc = {
             type: '논문',
-            title: (tmpText) ? tmpText : null,
+            title: tmpText,
             url: null,
           };
           item.biography.push(etc);
         }
       });
-
+      
       await browser.close();
       return { error: error, data: item };
 

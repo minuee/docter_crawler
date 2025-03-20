@@ -16,7 +16,20 @@ module.exports = {
     },
     env: {
       COMMON_VARIABLE: 'true',
-      NODE_ENV: "development",
+      NODE_ENV: "production",
+      THIS_SERVER_PORT: 1100,
+      THIS_SERVER_JWT_SECRET_KEY: "~@#a$vz^!%18",
+      MYSQL_HOST: "localhost",
+      MYSQL_USER: "root",
+      MYSQL_PASSWORD: "1234",
+      MYSQL_DATABASE: "aiga2025",
+      MYSQL_PORT: 3306,
+      DATA_VERSION_ID : 1,
+      SWAGGER_USER : "kormedi",
+      SWAGGER_PASSWORD : "1234",
+      REDIS_HOST : "localhost",
+      REDIS_PORT : 6379,
+      REDIS_PASSWORD : ''
     },
     env_local: {
       COMMON_VARIABLE: 'true',
@@ -30,8 +43,14 @@ module.exports = {
       MYSQL_HOST: "localhost",
       MYSQL_USER: "root",
       MYSQL_PASSWORD: "1234",
-      MYSQL_DATABASE: "aiga",
+      MYSQL_DATABASE: "aiga2025",
       MYSQL_PORT: 3306,
+      DATA_VERSION_ID : 1,
+      SWAGGER_USER : "kormedi",
+      SWAGGER_PASSWORD : "1234",
+      REDIS_HOST : "localhost",
+      REDIS_PORT : 6379,
+      REDIS_PASSWORD : ''
     },
   }]
 }
