@@ -102,10 +102,10 @@ class App {
     }
 
     setLocals() {
-        this.app.use((req, res, next) => {
-        this.app.locals.isLogin = true;
-        next();
-        });
+      this.app.use((req, res, next) => {
+      this.app.locals.isLogin = true;
+      next();
+      });
     }
 
     setSwagger() {
@@ -154,6 +154,8 @@ class App {
         this.app.use('/v1/c/cmcvincent.or.kr', require(`${global.appRoot}/services/crawling_cmcvincent.or.kr/route`)); //카톨릭대 성빈센트병원
         this.app.use('/v1/c/ansan.kumc.or.kr', require(`${global.appRoot}/services/crawling_ansan.kumc.or.kr/route`)); //고려대학교 안산병원
         this.app.use('/v1/c/snubh.org', require(`${global.appRoot}/services/crawling_snubh.org/route`)); // 분당서울대병원
+        this.app.use('/v1/c/hosp.ajoumc.or.kr', require(`${global.appRoot}/services/crawling_hosp.ajoumc.or.kr/route`)); // 아주대학교병원
+        this.app.use('/v1/c/hallym.or.kr', require(`${global.appRoot}/services/crawling_hallym.or.kr/route`)); // 한림대학교
 
     }   
 
@@ -204,6 +206,11 @@ class App {
       this.app.use('/v1/c/gilhospital.com', require(`${global.appRoot}/services/crawling_gilhospital.com/route`)); //가천대길병원
       this.app.use('/v1/c/inha.com', require(`${global.appRoot}/services/crawling_inha.com/route`)); //인하대부속병원
       this.app.use('/v1/c/cmcvincent.or.kr', require(`${global.appRoot}/services/crawling_cmcvincent.or.kr/route`)); //카톨릭대 성빈센트병원
+      this.app.use('/v1/c/ansan.kumc.or.kr', require(`${global.appRoot}/services/crawling_ansan.kumc.or.kr/route`)); //고려대학교 안산병원
+      this.app.use('/v1/c/snubh.org', require(`${global.appRoot}/services/crawling_snubh.org/route`)); // 분당서울대병원
+      this.app.use('/v1/c/hosp.ajoumc.or.kr', require(`${global.appRoot}/services/crawling_hosp.ajoumc.or.kr/route`)); // 아주대학교병원
+      this.app.use('/v1/c/hallym.or.kr', require(`${global.appRoot}/services/crawling_hallym.or.kr/route`)); // 한림대학교
+
 
   }   
 

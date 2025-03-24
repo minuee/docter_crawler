@@ -175,10 +175,9 @@ router.post('/step02', async (req, res, next) => {
   }
   
   const P1 = await crawlingCtrl.getCrawlingDoctorLink(HOSPITAL_ID);
-  //console.log(_.size(P1.data))
+  console.log(_.size(P1.data))
   if (CS.isEmpty(_.size(P1.data))) { return res.json(TS.fail({ code: 'DATA_NULL', message: 'response data is null' })) }
   const doctorLinkTotal = _.size(P1.data)
-  
   
   const data = [];
   for (let i = 0; i < _.size(P1.data); i++) {
@@ -187,7 +186,7 @@ router.post('/step02', async (req, res, next) => {
     const doctorName = P1.data[i].doctorname;
     const deptName = P1.data[i].deptname;
     const refUrl = P1.data[i].url 
-
+    //console.log(`doctorName : ${doctorName},deptName : ${deptName},refUrl : ${refUrl}, q : ${refUrl.indexOf("http")}`)
     if (doctorName && refUrl && refUrl.indexOf("http") !== -1) {
       const SP1 = await crawlingCtrl.crwalingProcess03(refUrl);
       //console.log("SP1 size",_.size(SP1?.data));

@@ -9,7 +9,7 @@ module.exports = {
     listen_timeout: 6000,
     kill_timeout: 4800,
     autorestart: true,
-    watch: true,
+    watch: process.env.NODE_ENV == 'development' ? true : false,
     ignore_watch: ['node_modules','temp_upload_files','public','logs', 'uploads/gpx', 'uploads/excel', 'uploads/factory', 'uploads/temp'],
     watch_options: {
       followSymlinks: false
@@ -24,14 +24,14 @@ module.exports = {
       MYSQL_PASSWORD: "1234",
       MYSQL_DATABASE: "aiga2025",
       MYSQL_PORT: 3306,
-      DATA_VERSION_ID : 1,
+      DATA_VERSION_ID : 2,
       SWAGGER_USER : "kormedi",
       SWAGGER_PASSWORD : "1234",
       REDIS_HOST : "localhost",
       REDIS_PORT : 6379,
       REDIS_PASSWORD : ''
     },
-    env_local: {
+    env_development: {
       COMMON_VARIABLE: 'true',
       NODE_ENV: "development",
       THIS_SERVER_PORT: 1100,
@@ -45,7 +45,7 @@ module.exports = {
       MYSQL_PASSWORD: "1234",
       MYSQL_DATABASE: "aiga2025",
       MYSQL_PORT: 3306,
-      DATA_VERSION_ID : 1,
+      DATA_VERSION_ID : 2,
       SWAGGER_USER : "kormedi",
       SWAGGER_PASSWORD : "1234",
       REDIS_HOST : "localhost",

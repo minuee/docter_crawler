@@ -176,7 +176,7 @@ module.exports = {
 
       $('div.cont_main_profile').find("div:nth-child(2)").find('ul > li').each((index, dtElement) => {
         
-        const dtYearText = $(dtElement).find('dl > dt > em').text() ? $(dtElement).find('dl > dt > em').text()  : '';
+        const dtYearText = $(dtElement).find('dl > dt > em').text() ? $(dtElement).find('dl > dt > em').text().trim()  : '';
         const dtText = $(dtElement).find('dl > dd > em').text()  ? $(dtElement).find('dl > dd > em').text()  : '';
  
         if ( !functions.isEmpty(dtText) ) {
@@ -194,7 +194,7 @@ module.exports = {
 
       $('div.cont_main_profile').find("div:nth-child(3)").find('ul > li').each((index, dtElement) => {
         
-        const dtYearText = $(dtElement).find('dl > dt > em').text() ? $(dtElement).find('dl > dt > em').text()  : '';
+        const dtYearText = $(dtElement).find('dl > dt > em').text() ? $(dtElement).find('dl > dt > em').text().trim()  : '';
         const dtText = $(dtElement).find('dl > dd > em').text()  ? $(dtElement).find('dl > dd > em').text()  : '';
  
         if ( !functions.isEmpty(dtText) ) {
@@ -213,7 +213,7 @@ module.exports = {
 
       $('div.cont_main_profile').find("div:nth-child(4)").find('ul > li').each((index, dtElement) => {
         
-        const dtYearText = $(dtElement).find('dl > dt > em').text() ? $(dtElement).find('dl > dt > em').text()  : '';
+        const dtYearText = $(dtElement).find('dl > dt > em').text() ? $(dtElement).find('dl > dt > em').text().trim()  : '';
         const dtText = $(dtElement).find('dl > dd > em').text()  ? $(dtElement).find('dl > dd > em').text()  : '';
  
         if ( !functions.isEmpty(dtText) ) {
@@ -231,7 +231,7 @@ module.exports = {
 
       $('div.cont_main_profile').find("div:nth-child(5)").find('ul > li').each((index, dtElement) => {
         
-        const dtYearText = $(dtElement).find('dl > dt > em').text() ? $(dtElement).find('dl > dt > em').text()  : '';
+        const dtYearText = $(dtElement).find('dl > dt > em').text() ? $(dtElement).find('dl > dt > em').text().trim()  : '';
         const dtText = $(dtElement).find('dl > dd > em').text()  ? $(dtElement).find('dl > dd > em').text()  : '';
  
         if ( !functions.isEmpty(dtText) ) {
@@ -249,7 +249,7 @@ module.exports = {
 
       $('div.cont_main_profile').find("div:nth-child(6)").find('ul > li').each((index, dtElement) => {
         
-        const dtYearText = $(dtElement).find('dl > dt >  em').text() ? $(dtElement).find('dl > dt > em').text()  : '';
+        const dtYearText = $(dtElement).find('dl > dt > em').text() ? $(dtElement).find('dl > dt > em').text().trim()  : '';
         const dtText = $(dtElement).find('dl > dd > em').text()  ? $(dtElement).find('dl > dd > em').text()  : '';
  
         if ( !functions.isEmpty(dtText) ) {
@@ -285,7 +285,7 @@ module.exports = {
 
       $('div.book_list').find("div.list_wrap").find('ul > li').each((index, dtElement) => {
         
-        const dtYearText =  $(dtElement).find('div.date_wrap > span > em').text()  ? $(dtElement).find('div.date_wrap > span > em').text()  : '';
+        const dtYearText =  $(dtElement).find('div.date_wrap > span > em').text()  ? $(dtElement).find('div.date_wrap > span > em').text().trim()  : '';
         const dtText = $(dtElement).find('div.info_wrap').find("div.title > p").text()  ? $(dtElement).find('div.info_wrap').find("div.title > p").text() : '';
  
         if ( !functions.isEmpty(dtText) ) {
@@ -303,7 +303,7 @@ module.exports = {
 
       $('div.news_list').find("div.item_wrap").find('div.grid-item').each((index, dtElement) => {
         
-        const dtYearText =  $(dtElement).find('a > div.info_wrap').find('em.date').text()  ? $(dtElement).find('a > div.info_wrap').find('em.date').text()  : '';
+        const dtYearText =  $(dtElement).find('a > div.info_wrap').find('em.date').text()  ? $(dtElement).find('a > div.info_wrap').find('em.date').text().trim()  : '';
         const dtText = $(dtElement).find('a > div.cont_wrap > p').text() ? $(dtElement).find('a > div.cont_wrap > p').text() : '';
         const dtUrl = $(dtElement).find('a').attr('href')  ? $(dtElement).find('a').attr('href')  : '';
         
