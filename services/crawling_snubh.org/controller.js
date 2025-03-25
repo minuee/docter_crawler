@@ -182,9 +182,10 @@ module.exports = {
         const dtYearText = '';
         const dtText = $(dtElement).text() ?$(dtElement).text().trim() : '';
 
-        console.log(`학력: ${dtYearText} ${dtText}`);
+       
         if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '');
+          const tmpText = dtText.trim().replaceAll(/\t/g, '').replaceAll(/\n/g, '').replaceAll(/\n|\r|\s*/g, '');
+          console.log(`학력: ${dtYearText} ${tmpText}`);
           item.biography.push({
             targetDate : dtYearText,
             type: "학력",
@@ -198,11 +199,10 @@ module.exports = {
       $('#cont_wrap3').find("div.bh_mgb25:nth-child(3)").find('ul > li').each((index, dtElement) => {
         
         const dtYearText = '';
-        const dtText = $(dtElement).text() ?$(dtElement).text() : '';
-
-        console.log(`경력: ${dtYearText} ${dtText}`);
+        const dtText = $(dtElement).text() ?$(dtElement).text().trim() : '';
         if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '');
+          const tmpText = dtText.trim().replaceAll(/\t/g, '').replaceAll(/\n/g, '').replaceAll(/\n|\r|\s*/g, '');
+          console.log(`경력: ${dtYearText} ${tmpText}`);
           item.biography.push({
             targetDate : dtYearText,
             type: "경력",
@@ -216,11 +216,11 @@ module.exports = {
       $('#cont_wrap3').find("div.bh_mgb25:nth-child(4)").find('ul > li').each((index, dtElement) => {
         
         const dtYearText = '';
-        const dtText = $(dtElement).text() ?$(dtElement).text() : '';
-
-        console.log(`수상 : ${dtYearText} ${dtText}`);
+        const dtText = $(dtElement).text() ?$(dtElement).text().trim() : '';
+        
         if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '');
+          const tmpText = dtText.trim().replaceAll(/\t/g, '').replaceAll(/\n/g, '').replaceAll(/\n|\r|\s*/g, '');
+          console.log(`수상 : ${dtYearText} ${tmpText}`);
           item.biography.push({
             targetDate : dtYearText,
             type: "수상",
@@ -290,10 +290,10 @@ module.exports = {
       };
       $('#cont_wrap4').find("div.bh_mgb25:nth-child(1)").find('ul > li').each((index, dtElement) => {
         const dtYearText = '';
-        const dtText = $(dtElement).find('p.title').text() ? $(dtElement).find('p.title').text() : '';  
+        const dtText = $(dtElement).find('p.title').text() ? $(dtElement).find('p.title').text().trim() : '';  
         console.log(`논문: ${dtYearText} ${dtText}`);
         if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '');
+          const tmpText = dtText.trim().replaceAll(/\t/g, '').replaceAll(/\n/g, '').replaceAll(/\n|\r|\s*/g, '');
           const etc = {
             type: '논문',
             title: tmpText,

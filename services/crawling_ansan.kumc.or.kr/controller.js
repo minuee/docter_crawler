@@ -6,7 +6,6 @@ const moment = require('moment-timezone');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
-const axios = require('axios');
 const cheerio = require('cheerio');
 const puppeteer = require('puppeteer');
 const _ = require('lodash');
@@ -21,7 +20,6 @@ module.exports = {
   crwalingProcess01: async (r_url) => {
     
     try {
-      //Response = await axios.get(r_url);
 
       // Launch a headless browser
       const browser = await puppeteer.launch();
@@ -201,13 +199,13 @@ module.exports = {
 
 
       const profileImgUrl = $('div.container > div').find("img").attr('src') ? $('div.container > div').find("img").attr('src') : '';
-      let tmpSpecialty = $('div.doctorwrap').find('ul.clear').find('li.field_contents').text() ? $('div.doctorwrap').find('ul.clear').find('li.field_contents').text()  : '';
+      let tmpSpecialty = $('div.doctorwrap').find('ul.clear').find('li.field_contents').text() ? $('div.doctorwrap').find('ul.clear').find('li.field_contents').text().trim()  : '';
       // 진료분야를 json화 한다
       let specialtyJson = tmpSpecialty.split(",");
       //console.log(`specialtyJson: ${JSON.stringify(specialtyJson)}`);
       // 학력 경력
       let item = {
-        specialty: tmpSpecialty.substring(0,500),
+        specialty: tmpSpecialty.replaceAll(/\n|\r|/g, '').substring(0,500),
         specialtyJson: specialtyJson,
         profileImgUrl: `https://ansan.kumc.or.kr/${profileImgUrl}`,
         biography: [],
@@ -221,7 +219,7 @@ module.exports = {
         const dtText = $(dtElement).find('td').text() ? $(dtElement).find('td').text() : '';
  
         if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '');
+          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
           item.biography.push({
             targetDate : dtYearText,
             type: "학력",
@@ -238,7 +236,7 @@ module.exports = {
         const dtText = $(dtElement).find('td').text() ? $(dtElement).find('td').text() : '';
 
         if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '');
+          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
           item.biography.push({
             targetDate : dtYearText,
             type: "경력",
@@ -255,7 +253,7 @@ module.exports = {
         const dtText = $(dtElement).find('td').text() ? $(dtElement).find('td').text() : '';
 
         if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '');
+          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
           item.biography.push({
             targetDate : dtYearText,
             type: "학회",
@@ -272,7 +270,7 @@ module.exports = {
         const dtText = $(dtElement).find('td').find("a > span:nth-child(2)").text() ? $(dtElement).find('td').find("a > span:nth-child(2)").text() : '';
 
         if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '');
+          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
           item.biography.push({
             targetDate : dtYearText,
             type: "눈문",
@@ -289,7 +287,7 @@ module.exports = {
         const dtText = $(dtElement).find('td > span').text() ? $(dtElement).find('td > span').text() : '';
 
         if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '');
+          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
           item.biography.push({
             targetDate : dtYearText,
             type: "저서",
@@ -306,7 +304,7 @@ module.exports = {
         const dtText = $(dtElement).find('td > span').text() ? $(dtElement).find('td > span').text() : '';
 
         if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '');
+          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
           item.biography.push({
             targetDate : dtYearText,
             type: "수상",
@@ -324,7 +322,7 @@ module.exports = {
         const dtTextHref = $(dtElement).find('td > a').attr('href') ? $(dtElement).find('td > a').attr('href') : '';
 
         if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '');
+          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
           item.biography.push({
             targetDate : dtYearText,
             type: "언론",
@@ -381,7 +379,7 @@ module.exports = {
         const dtText = $(dtElement).find('td').find("a > span:nth-child(2)").text() ? $(dtElement).find('td').find("a > span:nth-child(2)").text() : '';
         console.log(`논문: ${dtText}`);
         if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '');
+          const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
           const etc = {
             type: '논문',
             title: (tmpText) ? tmpText : '',

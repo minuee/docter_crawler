@@ -145,7 +145,7 @@ module.exports = {
       const dtText = $(dtElement).text() ? $(dtElement).text().trim() : '';
       //console.log(`경력: ${dtText}`);
       if ( !functions.isEmpty(dtText) ) {
-        const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '');
+        const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
         item.biography.push({
           targetDate : null,
           type: "경력",
@@ -160,7 +160,7 @@ module.exports = {
       const dtText = $(dtElement).text() ? $(dtElement).text().trim() : '';
       //console.log(`학력: ${dtText}`);
       if ( !functions.isEmpty(dtText) ) {
-        const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '');
+        const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
         item.biography.push({
           targetDate : null,
           type: "학력",
@@ -175,7 +175,7 @@ module.exports = {
       const dtText = $(dtElement).text() ? $(dtElement).text().trim() : '';
       //console.log(`학회활동 : ${dtText}`);
       if ( !functions.isEmpty(dtText) ) {
-        const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '');
+        const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
         item.biography.push({
           targetDate : null,
           type: "학회",
@@ -190,7 +190,7 @@ module.exports = {
       const dtText = $(dtElement).text() ? $(dtElement).text().trim() : '';
       //console.log(`수상: ${dtText}`);
       if ( !functions.isEmpty(dtText) ) {
-        const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '');
+        const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
         item.biography.push({
           targetDate : null,
           type: "수상",
@@ -209,7 +209,7 @@ module.exports = {
       console.log(`textTitle: ${textTitle} ${textIssuer} ${textDate} ${textUrl}`);
 
       if ( !functions.isEmpty(textTitle) ) {
-        const tmpText = textTitle.trim().replace(/\t/g, '').replace(/\n/g, '');
+        const tmpText = textTitle.trim().replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
         item.biography.push({
           targetDate : textDate,
           type: "언론",
@@ -229,7 +229,7 @@ module.exports = {
       console.log(`textTitle: ${textTitle} ${textIssuer} ${textDate} ${textUrl}`);
 
       if ( !functions.isEmpty(textTitle) ) {
-        const tmpText = textTitle.trim().replace(/\t/g, '').replace(/\n/g, '');
+        const tmpText = textTitle.trim().replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
         item.biography.push({
           targetDate : textDate,
           type: "언론",
@@ -285,7 +285,7 @@ module.exports = {
         console.log(`논문: ${dtText}`);
         const etc = {
           type: '논문',
-          title: dtText,
+          title: dtText.replaceAll(/\n|\r|/g, ''),
           url: null,
         };
         item.biography.push(etc);
