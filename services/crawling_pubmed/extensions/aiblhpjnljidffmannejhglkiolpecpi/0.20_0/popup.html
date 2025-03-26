@@ -1,0 +1,56 @@
+<html>
+    <head>
+    <style>
+    body {
+		margin: auto;
+		width: 380px;
+		padding: 10px;
+		border-radius: 5px;
+		color: #444}
+    a {text-decoration:none}
+	.mybtn {color: green;
+		background: lightyellow;
+		border: 1px solid #d9534f; 
+		padding: 2px 4px;
+		margin-left: 2px;
+		border-radius: 3px
+	}
+    .link {margin:0px 0 8px 10px; width:90px; display:inline-block}
+    </style>
+    </head>
+    <body style="line-height:28px;font-size:110%">
+		<h2 style="text-align:center">Usage</h2>
+		When you visit a PubMed article,
+		if the article has been cited by others (<i>according to SemanticScholar</i>),
+		you will see a button <button type=button class="btn btn-danger mybtn">CORA: Citation Contexts</button>.
+		Click the button to get the paper's citation contexts as well as
+		how the paper was cited by others.
+
+
+		<p style='display:none;font-size:90%; color:brown'>
+		When we failed to retrieve any citation contexts from SemanticScholar,
+		or our server experiences maintenance, the button won't show up.
+		</p>
+
+		<p style='font-size:95%;'>
+		In addition, we also provide two services for you play with:
+<button type=button class="btn btn-danger mybtn">Related News</button>
+and
+<button type=button class="btn btn-danger mybtn">Related Grants</button>.
+The former will retrieve revelant news from <i>EurekAlert! Science News Releases</i>,
+and the latter will retrieve relevant grants from <b>NIH</b> and <b>NSF</b>.
+		</p>
+
+
+<!--
+    <h3>Examples of some PubMed articles</h3>
+<div class=link><a target=_blank href=https://www.ncbi.nlm.nih.gov/pubmed/24411647>24411647</a></div>
+<div class=link><a target=_blank href=https://www.ncbi.nlm.nih.gov/pubmed/24941082>24941082</a></div>
+<div class=link><a target=_blank href=https://www.ncbi.nlm.nih.gov/pubmed/24766814>24766814</a></div>
+<div class=link><a target=_blank href=https://www.ncbi.nlm.nih.gov/pubmed/28076709>28076709</a></div>
+<div class=link><a target=_blank href=https://www.ncbi.nlm.nih.gov/pubmed/24725405>24725405</a></div>
+
+    <div style='margin:10px 10px'>Developed by <a title='https://junwang.langev.com' target=_blank href=https://junwang.langev.com/>Jun Wang</a> as a part of ILMS-funded CORA project (PI: <a href=https://faculty.ischool.syr.edu/byu/>Bei Yu</a>) </div>
+	-->
+    </body>
+    </html>

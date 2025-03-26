@@ -71,4 +71,47 @@ functions.prototype.checkHospitalId = function(pageCode, req, res,next) {
 }
 
 
+functions.prototype.checkLocalPassWord = function(pageCode, req, res,next) {
+
+    const PASSWORD_KEY = req.body.passwd;
+    if ( this.isEmpty(PASSWORD_KEY) ) {
+        return {
+            code : 200,
+            success: false,
+            message: "비밀번호를 입력해주세요!"
+        };
+    }
+
+    if ( PASSWORD_KEY !== pageCode ) { 
+        return {
+            code : 200,
+            success: false,
+            message: "잘못된 값입니다. 너 누구야?!!"
+        };
+    }
+    return {
+        code : 200,
+        success: true,
+    }
+    
+}
+
+functions.prototype.myBatisResult =  function( DBError, RS ) {
+    if (DBError) {
+        console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+        return {
+            code : 200,
+            success: true,
+            message: `error : ${DBError}`
+        }
+    }else{
+        return {
+            code : 200,
+            success: true,
+            totalCount :  RS.length ? RS.length : 0,
+            data: RS
+        }
+    }
+}
+
 module.exports = new functions();

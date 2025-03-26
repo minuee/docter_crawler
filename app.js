@@ -120,7 +120,7 @@ class App {
             users: {
                 [process.env.SWAGGER_USER] : process.env.SWAGGER_PASSWORD
             },
-          }),swaggerUi.serve, swaggerUi.setup(specs, options));
+          }),swaggerUi.serve, swaggerUi.setup(specs, options, { docExpansion: 'none' }));
     }
 
     getRouting() {
@@ -156,6 +156,10 @@ class App {
         this.app.use('/v1/c/snubh.org', require(`${global.appRoot}/services/crawling_snubh.org/route`)); // 분당서울대병원
         this.app.use('/v1/c/hosp.ajoumc.or.kr', require(`${global.appRoot}/services/crawling_hosp.ajoumc.or.kr/route`)); // 아주대학교병원
         this.app.use('/v1/c/hallym.or.kr', require(`${global.appRoot}/services/crawling_hallym.or.kr/route`)); // 한림대학교
+
+        this.app.use('/v1/c/crawling_check', require(`${global.appRoot}/services/crawling_check/route`)); // 검증
+
+        this.app.use('/v1/c/pubmed_crawling', require(`${global.appRoot}/services/crawling_pubmed/route`)); // 논문 수집 
 
     }   
 

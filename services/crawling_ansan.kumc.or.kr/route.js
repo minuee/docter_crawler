@@ -185,7 +185,7 @@ router.post('/step02', async (req, res, next) => {
 
     const doctorName = P1.data[i].doctorname;
     const deptName = P1.data[i].deptname;
-    const refUrl = P1.data[i].url 
+    const refUrl = P1.data[i].doctor_url
     //console.log(`doctorName : ${doctorName},deptName : ${deptName},refUrl : ${refUrl}, q : ${refUrl.indexOf("http")}`)
     if (doctorName && refUrl && refUrl.indexOf("http") !== -1) {
       const SP1 = await crawlingCtrl.crwalingProcess03(refUrl);
@@ -286,7 +286,7 @@ router.post('/treatise', async (req, res, next) => {
     await CS.wait(5000); // 10초정도로 - 부사장님 지시임! 꼭 지킬것
     const doctorName = P1.data[i].doctorname;
     const deptName = P1.data[i].deptname;
-    const refUrl = P1.data[i].url 
+    const refUrl = P1.data[i].doctor_url
     const SP1 = await crawlingCtrl.crwalingtreatise(refUrl)
     if (_.size(SP1.data.biography) > 0) {
       await CS.wait(300);

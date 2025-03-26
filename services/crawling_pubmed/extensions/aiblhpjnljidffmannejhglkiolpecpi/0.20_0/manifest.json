@@ -1,0 +1,24 @@
+{
+   "action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "css": [ "my.css" ],
+      "js": [ "jquery.min.js", "main_script.js" ],
+      "matches": [ "https://pubmed.ncbi.nlm.nih.gov/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "Understand citation contexts as you browse PubMed papers.",
+   "host_permissions": [ "https://static.doodlebook.org/*" ],
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtkWX2k1/EHzrNFbkMbtQEn02e2irixpuGUYS8UnPWCvszybq+wxyEeCIa96VgCRlXWOUZEwdWeQ0pZf63Zthqjh/vKvnX/eZAqGjvKX2a7gzHv4k4DOCvyCxvvZCAQ+Lu3V8d/xwdLmHNor2sFIAv6/pMsG6vrt4mmcb/TJ4d1bn77sEUj9of5LVm87LfNxVsj5+ziq2VKc++1LVZfubbEjSj1DWjLZuOIbdrv1+LMTYYmgEWHaT0YAdJVofMWq1GQZ0E4EGDZ5qmF2yxT2XYWInhTjeYisHWSAIwhJw/03M2WhcXkcWJPt/tKlHFMRuiRDfWIYxY+mWm6e1E8sqOwIDAQAB",
+   "manifest_version": 3,
+   "name": "CORA: Understand PubMed Citation Contexts",
+   "short_name": "CORA-PubMed",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.20",
+   "web_accessible_resources": [ {
+      "matches": [ "https://pubmed.ncbi.nlm.nih.gov/*" ],
+      "resources": [ "images/*.png", "loading.gif", "my.css", "bootstrap.min.css" ]
+   } ]
+}

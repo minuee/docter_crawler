@@ -15,10 +15,10 @@ module.exports = {
     try {
         DBconn = await pool.getConnection();
         console.log(`> Pool connection`);
-        console.log(`> LCL : ${moment.utc(new Date().toISOString()).tz("Asia/Seoul").format()}`);
-        console.time(`> Query ${spName} ${info} executetime : `); 
+        //console.log(`> LCL : ${moment.utc(new Date().toISOString()).tz("Asia/Seoul").format()}`);
+        //console.time(`> Query ${spName} ${info} executetime : `); 
         try {
-          [result,fields] = await DBconn.query(spName, info) || null
+          [result,fields] = await DBconn.query(spName, info) || null;
           DBconn.release();
         } catch (err) {
           console.log(`> err on query ${spName}: ${err}`)
@@ -32,8 +32,8 @@ module.exports = {
         DBconn.rollback(() => {
         })
     } finally {
-        console.timeEnd(`> Query ${spName} ${info} executetime : `);
-        console.log(`> Pool release`);
+        //console.timeEnd(`> Query ${spName} ${info} executetime : `);
+        //console.log(`> Pool release`);
         return {DBError: error, RS: result}
     }
   }

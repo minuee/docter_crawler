@@ -186,7 +186,7 @@ router.post('/step02', async (req, res, next) => {
 
     const doctorName = P1.data[i].doctorname;
     const deptName = P1.data[i].deptname;
-    const refUrl = P1.data[i].url 
+    const refUrl = P1.data[i].doctor_url
     
     if (doctorName && refUrl) {
       const SP1 = await crawlingCtrl.crwalingProcess03(refUrl);
@@ -284,7 +284,7 @@ router.post('/step03', async (req, res, next) => {
   for (let i = 0; i < _.size(P1.data); i++) {
     const doctorName = P1.data[i].doctorname;
     const deptName = P1.data[i].deptname;
-    const refUrl = P1.data[i].url 
+    const refUrl = P1.data[i].doctor_url
     
     if (doctorName && refUrl) {
       await CS.wait(10000); // 10초정도로 - 부사장님 지시임! 꼭 지킬것
@@ -375,7 +375,7 @@ router.post('/treatise', async (req, res, next) => {
     await CS.wait(5000); // 10초정도로 - 부사장님 지시임! 꼭 지킬것
     const doctorName = P1.data[i].doctorname;
     const deptName = P1.data[i].deptname;
-    const refUrl = P1.data[i].url 
+    const refUrl = P1.data[i].doctor_url
     const SP1 = await crawlingCtrl.crwalingtreatise(refUrl)
     if (_.size(SP1.data.biography) > 0) {
       await CS.wait(300);

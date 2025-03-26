@@ -161,7 +161,16 @@ module.exports = {
       
       const dtText = $(dtElement).find('td').text() ? $(dtElement).find('td').text() : '';
       console.log(`경력: ${dtText}`);
-      if ( !functions.isEmpty(dtText) ) {
+      if ( !functions.isEmpty(dtText) && dtText.indexOf("졸업") != -1) { //졸업이 있을때믄 학력으로 표시 
+        const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+        item.biography.push({
+          targetDate : null,
+          type: "학력",
+          text: tmpText,
+          url: null,
+          issuer:null
+        });
+      }else{
         const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
         item.biography.push({
           targetDate : null,

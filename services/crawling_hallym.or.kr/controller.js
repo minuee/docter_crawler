@@ -238,13 +238,13 @@ module.exports = {
         
         const dtYearText = $(dtElement).find('span:nth-child(1)').text() ? $(dtElement).find('span:nth-child(1)').text().trim()  : '';
         const dtText = $(dtElement).find('span:nth-child(2)').text() ? $(dtElement).find('span:nth-child(2)').text().trim()  : '';
-        console.log(`학력 : ${dtText}`)
+        console.log(`경력 : ${dtText}`)
         if ( !functions.isEmpty(dtText) ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
           const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
           item.biography.push({
             targetDate : tmpDtYearText,
-            type: "학력",
+            type: "경력",
             text: tmpText,
             url: null,
             issuer:null

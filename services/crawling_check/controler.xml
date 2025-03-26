@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="controler">  
+
+    <select id="select_check_doctor_name">
+        SELECT 
+            char_length(db.doctorname) as doctorname_len
+            ,db.doctorname, h.baseName
+        FROM
+            doctor_basic db INNER JOIN hospital h ON db.hid = h.hid
+        WHERE
+            char_length(db.doctorname) &gt; 3 and db.doctorname like '%교수'
+        ORDER BY db.createAt ASC
+    </select>
+
+    <select id="select_check_doctor_siteurl">
+        SELECT 
+            db.doctorname,
+            h.baseName,
+            db.doctor_url
+        FROM
+            doctor_basic db INNER JOIN hospital h ON db.hid = h.hid
+        WHERE
+            db.doctor_url is null or db.doctor_url = ''
+        ORDER BY db.createAt ASC
+    </select>
+
+    <select id="select_check_doctor_siteurl_http">
+        SELECT 
+            db.doctorname,
+            h.baseName,
+            SUBSTRING_INDEX(db.doctor_url,'/',1) as url_a,
+            SUBSTRING_INDEX(db.doctor_url,'/',2) as url_b,
+            SUBSTRING_INDEX(db.doctor_url,'/',3) as url_c,
+            SUBSTRING_INDEX(db.doctor_url,'/',4) as url_d,
+            db.doctor_url
+        FROM
+            doctor_basic db INNER JOIN hospital h ON db.hid = h.hid
+        WHERE
+            1=1 and ( SUBSTRING_INDEX(db.doctor_url,'/',1) != 'http:' and SUBSTRING_INDEX(db.doctor_url,'/',1) != 'https:' )
+        ORDER BY db.createAt ASC
+    </select>
+
+    <select id="select_check_doctor_siteurl_ishospital">
+        SELECT 
+            db.doctorname,
+            h.baseName,
+            SUBSTRING_INDEX(db.doctor_url,'/',1) as url_a,
+            SUBSTRING_INDEX(db.doctor_url,'/',2) as url_b,
+            SUBSTRING_INDEX(db.doctor_url,'/',3) as url_c,
+            SUBSTRING_INDEX(db.doctor_url,'/',4) as url_d,
+            SUBSTRING_INDEX(db.doctor_url,'/',5) as url_e,
+            db.doctor_url
+        FROM
+            doctor_basic db INNER JOIN hospital h ON db.hid = h.hid
+        WHERE
+            1=1 and SUBSTRING_INDEX(db.doctor_url,'/',3) = SUBSTRING_INDEX(db.doctor_url,'/',4)
+        ORDER BY db.createAt ASC
+    </select>
+
+    <select id="select_check_doctor_specialties_isnull">
+        SELECT
+            db2.hid,
+            MAX(h.baseName) as hospital_name,
+            COUNT(db2.rid) as regist_doctors,
+            IFNULL(max(db.db_doctor),0) as null_doctor,
+            ROUND(IFNULL(MAX(db.db_doctor),0)/COUNT(db2.rid),1)*100 as null_percentage
+        FROM
+            doctor_basic db2 left join 
+            (
+                SELECT 
+                    h.hid
+                    ,COUNT(DISTINCT(db.rid)) as db_doctor
+                FROM
+                    doctor_basic db LEFT JOIN hospital h ON db.hid = h.hid
+                WHERE
+                    1=1 and ( db.specialties = '' OR db.specialties is null )
+                GROUP BY db.hid
+            ) AS db ON db.hid = db2.hid	
+            LEFT JOIN hospital h on db2.hid = h.hid
+        GROUP BY db2.hid
+    </select>
+
+    <select id="select_check_doctor_profileurl_http">
+        SELECT 
+            db.doctorname,
+            h.baseName,
+            SUBSTRING_INDEX(db.profileimgurl ,'/',1) as url_a,
+            SUBSTRING_INDEX(db.profileimgurl,'/',2) as url_b,
+            SUBSTRING_INDEX(db.profileimgurl,'/',3) as url_c,
+            SUBSTRING_INDEX(db.profileimgurl,'/',4) as url_d,
+            db.profileimgurl
+        FROM
+            doctor_basic db INNER JOIN hospital h ON db.hid = h.hid
+        WHERE
+            1=1 and ( SUBSTRING_INDEX(db.profileimgurl,'/',1) != 'http:' and  SUBSTRING_INDEX(db.profileimgurl,'/',1) != 'https:' )
+        ORDER BY db.createAt ASC
+    </select>
+
+     <select id="select_check_doctor_profileurl_ishospital">
+        SELECT 
+            db.doctorname,
+            h.baseName,
+            SUBSTRING_INDEX(db.profileimgurl,'/',1) as url_a,
+            SUBSTRING_INDEX(db.profileimgurl,'/',2) as url_b,
+            SUBSTRING_INDEX(db.profileimgurl,'/',3) as url_c,
+            SUBSTRING_INDEX(db.profileimgurl,'/',4) as url_d,
+            SUBSTRING_INDEX(db.profileimgurl,'/',5) as url_e,
+            db.profileimgurl
+        FROM
+            doctor_basic db INNER JOIN hospital h ON db.hid = h.hid
+        WHERE
+            1=1 and SUBSTRING_INDEX(db.profileimgurl,'/',3) = SUBSTRING_INDEX(db.profileimgurl,'/',4)
+        ORDER BY db.createAt ASC
+    </select>
+
+    <select id="select_check_doctor_career_isnull_ratio">
+        SELECT
+            db2.hid,
+            MAX(h.baseName) as hospital_name,
+            COUNT(db2.rid) as regist_doctors,
+            IFNULL(MAX(db.db_doctor),0) as null_doctor,
+            ROUND(IFNULL(MAX(db.db_doctor),0)/COUNT(db2.rid),2)*100 as null_percentage
+        FROM
+            doctor_basic db2 LEFT JOIN 
+            (
+                SELECT 
+                    db.hid,count(*) as db_doctor
+                FROM
+                    doctor_career dc INNER JOIN doctor_basic db ON dc.rid = db.rid
+                WHERE
+                    1=1 and JSON_SEARCH(CONVERT(dc.jsondata,JSON), 'all', '경력', null, '$[*].type') IS NULL
+                    <if test="hid != null">
+                        AND db.hid = #{hid}
+                    </if>
+                GROUP BY db.hid
+            ) db on db2.hid = db.hid
+            LEFT JOIN hospital h ON db2.hid = h.hid
+        WHERE
+            1=1
+            <if test="hid != null">
+                AND db2.hid = #{hid}
+            </if>
+        GROUP BY db2.hid
+        ORDER BY db2.hid
+    </select>
+
+
+    <select id="select_check_doctor_career_isnull">
+        SELECT 
+            db.doctorname,
+            h.baseName,
+            db.doctor_url,
+            dc.jsondata
+        FROM
+            doctor_career dc INNER JOIN doctor_basic db ON dc.rid = db.rid
+            INNER JOIN hospital h ON db.hid = h.hid
+        WHERE
+            1=1 and JSON_SEARCH(CONVERT(dc.jsondata,JSON), 'one', '경력', null, '$[*].type') IS NULL
+            <if test="hid != null">
+                AND db.hid = #{hid}
+            </if>
+        ORDER BY db.hid 
+    </select>
+
+    <select id="select_check_doctor_school_isnull_ratio">
+        SELECT
+            db2.hid,
+            MAX(h.baseName) as hospital_name,
+            COUNT(db2.rid) as regist_doctors,
+            IFNULL(MAX(db.db_doctor),0) as null_doctor,
+            ROUND(IFNULL(MAX(db.db_doctor),0)/COUNT(db2.rid),2)*100 as null_percentage
+        FROM
+            doctor_basic db2 LEFT JOIN 
+            (
+                SELECT 
+                    db.hid,count(*) as db_doctor
+                FROM
+                    doctor_career dc INNER JOIN doctor_basic db ON dc.rid = db.rid
+                WHERE
+                    1=1 and JSON_SEARCH(CONVERT(dc.jsondata,JSON), 'all', '학력', null, '$[*].type') IS NULL
+                    <if test="hid != null">
+                        AND db.hid = #{hid}
+                    </if>
+                GROUP BY db.hid
+            ) db on db2.hid = db.hid
+            LEFT JOIN hospital h ON db2.hid = h.hid
+        WHERE
+            1=1
+            <if test="hid != null">
+                AND db2.hid = #{hid}
+            </if>
+        GROUP BY db2.hid
+        ORDER BY db2.hid
+    </select>
+
+    <select id="select_check_doctor_school_isnull">
+        SELECT 
+            db.doctorname,
+            h.baseName,
+            db.doctor_url,
+            dc.jsondata
+        FROM
+            doctor_career dc INNER JOIN doctor_basic db ON dc.rid = db.rid
+            INNER JOIN hospital h ON db.hid = h.hid
+        WHERE
+            1=1 and JSON_SEARCH(CONVERT(dc.jsondata,JSON), 'one', '학력', null, '$[*].type') IS NULL
+            <if test="hid != null">
+                AND db.hid = #{hid}
+            </if>
+        ORDER BY db.hid 
+    </select>
+
+    <select id="select_check_doctor_treatise_isnull">
+        SELECT
+            tot.hid,
+            MAX(h.baseName) as hospital_name,
+            COUNT(tot.rid) as regist_doctors,
+            SUM(CASE WHEN tot.paper_cnt = 0 THEN 1 ELSE 0 END) as null_doctor,
+            ROUND(SUM(CASE WHEN tot.paper_cnt = 0 THEN 1 ELSE 0 END) / COUNT(tot.rid),1)*100 as null_percentage
+        FROM (
+            SELECT
+                db2.hid,
+                db2.rid,
+                IFNULL(max(db.paper_cnt),0) as paper_cnt
+            FROM
+                doctor_basic db2 LEFT JOIN 
+                (
+                    SELECT 
+                        db.hid,db.rid,ifnull(count(dp.title),0) as paper_cnt
+                    FROM
+                        doctor_basic db LEFT JOIN doctor_paper dp ON db.rid = dp.rid
+                    WHERE
+                        1=1 
+                        <if test="hid != null">
+                            AND db.hid = #{hid}
+                        </if>
+                    GROUP BY db.hid,db.rid
+                ) db on db2.hid = db.hid and db2.rid = db.rid
+            WHERE   
+                1=1
+                <if test="hid != null">
+                    AND db.hid = #{hid}
+                </if>
+            GROUP BY db2.hid,db2.rid
+        ) as tot LEFT JOIN hospital h ON tot.hid = h.hid
+        WHERE 1=1
+        GROUP BY tot.hid
+        ORDER BY tot.hid asc 
+    </select>
+
+    <select id="select_check_doctor_treatise_ishangul">
+        SELECT
+            COUNT(*) as total_cnt
+            ,SUM(CASE WHEN REGEXP_LIKE(dp.title, '[가-힝]') = true THEN 1 ELSE 0 END ) as hangul_cnt
+            ,ROUND(SUM(CASE WHEN REGEXP_LIKE(dp.title, '[가-힝]') = true THEN 1 ELSE 0 END ) /COUNT(*),1)*100 as hangul_percentage
+        FROM
+            doctor_paper dp
+        WHERE
+            1=1
+    </select>
+
+    <select id="select_check_treatise_pubmed_ratio">
+        SELECT
+            tot.hid,
+            MAX(h.baseName) as hospital_name,
+            COUNT(tot.rid) as all_doctor_count,
+            SUM(CASE WHEN tot.all_paper_cnt &gt; 0 THEN 1 ELSE 0 END) as paper_reg_doctor_count,
+            ROUND(SUM(CASE WHEN tot.all_paper_cnt &gt; 0  THEN 1 ELSE 0 END) / COUNT(tot.rid),2)*100 as reg_per_all_percentage,
+            SUM(CASE WHEN tot.pubmed_paper_cnt &gt; 0  THEN 1 ELSE 0 END) as pubmed_reg_doctor_count,
+            ROUND(SUM(CASE WHEN tot.pubmed_paper_cnt &gt; 0  THEN 1 ELSE 0 END) / COUNT(tot.rid),2)*100 as pubmed_per_all_percentage
+        FROM (
+            SELECT
+                db2.hid,
+                db2.rid,
+                IFNULL(MAX(dp_all.paper_cnt),0) as all_paper_cnt,
+                IFNULL(MAX(dp_pubmed.paper_cnt),0) as pubmed_paper_cnt
+            FROM
+                doctor_basic db2 left join 
+                (
+                    SELECT 
+                        rid,count(*) as paper_cnt
+                    FROM
+                        doctor_paper
+                    WHERE
+                        1=1 
+                    GROUP BY rid
+                ) dp_all ON db2.rid = dp_all.rid
+                LEFT JOIN (
+                    SELECT 
+                        rid,ifnull(count(pmid),0) as paper_cnt
+                    FROM
+                        doctor_paper
+                    WHERE
+                        1=1 and pmid IS NOT NULL
+                    GROUP BY rid
+                ) dp_pubmed on db2.rid = dp_pubmed.rid
+            GROUP BY db2.hid,db2.rid
+        ) as tot LEFT JOIN hospital h ON tot.hid = h.hid
+        WHERE
+            1=1
+            <if test="hid != null">
+                AND tot.hid = #{hid}
+            </if>
+        GROUP BY tot.hid
+        ORDER BY tot.hid asc
+    </select>
+
+    <select id="select_check_treatise_pubmed_id_ratio">
+        SELECT
+            tot.hid,
+            MAX(h.baseName) as hospital_name,
+            COUNT(tot.rid) as all_doctor_count,
+            SUM(CASE WHEN tot.all_paper_cnt &gt; 0 THEN 1 ELSE 0 END) as paper_reg_doctor_count,
+            ROUND(SUM(CASE WHEN tot.all_paper_cnt &gt; 0  THEN 1 ELSE 0 END) / COUNT(tot.rid),2)*100 as reg_per_all_percentage,
+            SUM(CASE WHEN tot.pubmed_paper_cnt &gt; 0  THEN 1 ELSE 0 END) as pubmed_reg_doctor_count,
+            ROUND(SUM(CASE WHEN tot.pubmed_paper_cnt &gt; 0  THEN 1 ELSE 0 END) / COUNT(tot.rid),2)*100 as pubmed_per_all_percentage
+        FROM (
+            SELECT
+                db2.hid,
+                db2.rid,
+                IFNULL(MAX(dp_all.paper_cnt),0) as all_paper_cnt,
+                IFNULL(MAX(dp_pubmed.paper_cnt),0) as pubmed_paper_cnt
+            FROM
+                doctor_basic db2 left join 
+                (
+                    SELECT 
+                        rid,count(*) as paper_cnt
+                    FROM
+                        doctor_paper
+                    WHERE
+                        1=1 
+                    GROUP BY rid
+                ) dp_all ON db2.rid = dp_all.rid
+                LEFT JOIN (
+                    SELECT 
+                        rid,ifnull(count(pmid),0) as paper_cnt
+                    FROM
+                        doctor_paper
+                    WHERE
+                        1=1 and pmid IS NOT NULL
+                    GROUP BY rid
+                ) dp_pubmed on db2.rid = dp_pubmed.rid
+            GROUP BY db2.hid,db2.rid
+        ) as tot LEFT JOIN hospital h ON tot.hid = h.hid
+        WHERE
+            1=1
+            <if test="hid != null">
+                AND tot.hid = #{hid}
+            </if>
+        GROUP BY tot.hid
+        ORDER BY tot.hid asc
+    </select>
+
+    <select id="select_check_treatise_pubmed_paper_ratio">
+        SELECT
+            db2.hid,
+            IFNULL(dp_all.paper_cnt,0) as all_paper_cnt,
+            IFNULL(dp_pubmed.paper_cnt,0) as pubmed_paper_cnt,
+            ROUND(IFNULL(dp_pubmed.paper_cnt,0) / IFNULL(dp_all.paper_cnt,0),1)*100 as pubmed_per_all_percentage
+        FROM
+            doctor_basic db2 LEFT JOIN 
+            (
+                SELECT 
+                    db.hid,count(*) as paper_cnt
+                FROM
+                    doctor_basic db INNER JOIN doctor_paper as dp ON db.rid = dp.rid
+                WHERE
+                    1=1
+                    <if test="hid != null">
+                        AND db.hid = #{hid}
+                    </if>
+                GROUP BY db.hid
+            ) dp_all ON db2.hid = dp_all.hid
+            LEFT JOIN (
+                SELECT 
+                    db.hid,count(*) as paper_cnt
+                FROM
+                    doctor_basic db INNER JOIN doctor_paper as dp ON db.rid = dp.rid
+                WHERE
+                    1=1 
+                    <if test="hid != null">
+                        AND db.hid = #{hid}
+                    </if>
+                    and dp.pmid IS NOT NULL
+                GROUP BY db.hid
+            ) dp_pubmed ON db2.hid = dp_pubmed.hid
+        WHERE
+            1=1
+            <if test="hid != null">
+                AND db2.hid = #{hid}
+            </if>
+        GROUP BY db2.hid
+    </select>
+
+    <select id="select_check_treatise_pubmed_journal_ratio">
+        SELECT
+            tot.hid,
+            MAX(h.baseName) as hospital_name,
+            COUNT(tot.rid) as all_doctor_count,
+            SUM(CASE WHEN tot.all_paper_cnt &gt; 0 THEN 1 ELSE 0 END) as paper_reg_doctor_count,
+            ROUND(SUM(CASE WHEN tot.all_paper_cnt &gt; 0  THEN 1 ELSE 0 END) / COUNT(tot.rid),2)*100 as reg_per_all_percentage,
+            SUM(CASE WHEN tot.pubmed_paper_cnt &gt; 0  THEN 1 ELSE 0 END) as pubmed_reg_doctor_count,
+            ROUND(SUM(CASE WHEN tot.pubmed_paper_cnt &gt; 0  THEN 1 ELSE 0 END) / COUNT(tot.rid),2)*100 as pubmed_per_all_percentage
+        FROM (
+            SELECT
+                db2.hid,
+                db2.rid,
+                IFNULL(MAX(dp_all.paper_cnt),0) as all_paper_cnt,
+                IFNULL(MAX(dp_pubmed.paper_cnt),0) as pubmed_paper_cnt
+            FROM
+                doctor_basic db2 left join 
+                (
+                    SELECT 
+                        rid,count(*) as paper_cnt
+                    FROM
+                        doctor_paper
+                    WHERE
+                        1=1 
+                    GROUP BY rid
+                ) dp_all ON db2.rid = dp_all.rid
+                LEFT JOIN (
+                    SELECT 
+                        rid,ifnull(count(journalName),0) as paper_cnt
+                    FROM
+                        doctor_paper
+                    WHERE
+                        1=1 and journalName IS NOT NULL
+                    GROUP BY rid
+                ) dp_pubmed on db2.rid = dp_pubmed.rid
+            GROUP BY db2.hid,db2.rid
+        ) as tot LEFT JOIN hospital h ON tot.hid = h.hid
+        WHERE
+            1=1
+            <if test="hid != null">
+                AND tot.hid = #{hid}
+            </if>
+        GROUP BY tot.hid
+        ORDER BY tot.hid asc
+    </select>
+
+    <select id="select_check_treatise_pubmed_title_ratio">
+        SELECT
+            tot.hid,
+            MAX(h.baseName) as hospital_name,
+            COUNT(tot.rid) as all_doctor_count,
+            SUM(CASE WHEN tot.all_paper_cnt &gt; 0 THEN 1 ELSE 0 END) as paper_reg_doctor_count,
+            ROUND(SUM(CASE WHEN tot.all_paper_cnt &gt; 0  THEN 1 ELSE 0 END) / COUNT(tot.rid),2)*100 as reg_per_all_percentage,
+            SUM(CASE WHEN tot.pubmed_paper_cnt &gt; 0  THEN 1 ELSE 0 END) as pubmed_reg_doctor_count,
+            ROUND(SUM(CASE WHEN tot.pubmed_paper_cnt &gt; 0  THEN 1 ELSE 0 END) / COUNT(tot.rid),2)*100 as pubmed_per_all_percentage
+        FROM (
+            SELECT
+                db2.hid,
+                db2.rid,
+                IFNULL(MAX(dp_all.paper_cnt),0) as all_paper_cnt,
+                IFNULL(MAX(dp_pubmed.paper_cnt),0) as pubmed_paper_cnt
+            FROM
+                doctor_basic db2 left join 
+                (
+                    SELECT 
+                        rid,count(*) as paper_cnt
+                    FROM
+                        doctor_paper
+                    WHERE
+                        1=1 
+                    GROUP BY rid
+                ) dp_all ON db2.rid = dp_all.rid
+                LEFT JOIN (
+                    SELECT 
+                        rid,ifnull(count(title_pubmed),0) as paper_cnt
+                    FROM
+                        doctor_paper
+                    WHERE
+                        1=1 and title_pubmed IS NOT NULL
+                    GROUP BY rid
+                ) dp_pubmed on db2.rid = dp_pubmed.rid
+            GROUP BY db2.hid,db2.rid
+        ) as tot LEFT JOIN hospital h ON tot.hid = h.hid
+        WHERE
+            1=1
+            <if test="hid != null">
+                AND tot.hid = #{hid}
+            </if>
+        GROUP BY tot.hid
+        ORDER BY tot.hid asc
+    </select>
+
+    <select id="select_check_treatise_pubmed_dio_ratio">
+        SELECT
+            tot.hid,
+            MAX(h.baseName) as hospital_name,
+            COUNT(tot.rid) as all_doctor_count,
+            SUM(CASE WHEN tot.all_paper_cnt &gt; 0 THEN 1 ELSE 0 END) as paper_reg_doctor_count,
+            ROUND(SUM(CASE WHEN tot.all_paper_cnt &gt; 0  THEN 1 ELSE 0 END) / COUNT(tot.rid),2)*100 as reg_per_all_percentage,
+            SUM(CASE WHEN tot.pubmed_paper_cnt &gt; 0  THEN 1 ELSE 0 END) as pubmed_reg_doctor_count,
+            ROUND(SUM(CASE WHEN tot.pubmed_paper_cnt &gt; 0  THEN 1 ELSE 0 END) / COUNT(tot.rid),2)*100 as pubmed_per_all_percentage
+        FROM (
+            SELECT
+                db2.hid,
+                db2.rid,
+                IFNULL(MAX(dp_all.paper_cnt),0) as all_paper_cnt,
+                IFNULL(MAX(dp_pubmed.paper_cnt),0) as pubmed_paper_cnt
+            FROM
+                doctor_basic db2 left join 
+                (
+                    SELECT 
+                        rid,count(*) as paper_cnt
+                    FROM
+                        doctor_paper
+                    WHERE
+                        1=1 
+                    GROUP BY rid
+                ) dp_all ON db2.rid = dp_all.rid
+                LEFT JOIN (
+                    SELECT 
+                        rid,ifnull(count(doi),0) as paper_cnt
+                    FROM
+                        doctor_paper
+                    WHERE
+                        1=1 and doi IS NOT NULL
+                    GROUP BY rid
+                ) dp_pubmed on db2.rid = dp_pubmed.rid
+            GROUP BY db2.hid,db2.rid
+        ) as tot LEFT JOIN hospital h ON tot.hid = h.hid
+        WHERE
+            1=1
+            <if test="hid != null">
+                AND tot.hid = #{hid}
+            </if>
+        GROUP BY tot.hid
+        ORDER BY tot.hid asc
+    </select>
+
+</mapper>
