@@ -142,7 +142,22 @@ router.post('/pubmed', async (req, res, next) => {
       }
       console.log(`step 3 > ${url}`)
       if(functions.isEmpty(url) ) {
-        console.log('Treatise not found - paper_id:', paper_id)
+        console.log('Treatise not found - paper_id:', paper_id);
+        const param2 = {
+          version_id : DATA_VERSION_ID,
+          paper_id : paper_id
+        }; 
+        const format2 = { language: "sql", indent: "  " };
+        const update_query = mybatisMapper.getStatement(
+          "sql",
+          "update_doctor_paper_updatedate",
+          param2,
+          format2
+        );
+        //console.log(`query : ${query}`)
+        const { DBError = null, RS2 = null } = await daoMysql.spCall(update_query);
+        //console.log(`RS : ${RS}`)
+        
         continue;
       }
 
@@ -207,7 +222,22 @@ router.post('/pubmed', async (req, res, next) => {
         // DB insert 
         console.log(`item >>>>>>>> `, items)
         if(items){
-            const TX1 = await crawlingCtrl.set_pubmed(paper_id, items.publication_type, title, items.journalName, items.quartile, items.PMID, items.DOI, items.firstAuthors, items.authors, items.abstract, items.keywords, impactFactor, citedCount, doctorName)
+            const TX1 = await crawlingCtrl.set_pubmed(
+              paper_id, 
+              items.publication_type,
+              title,
+              items.journalName,
+              items.quartile,
+              items.PMID,
+              items.DOI,
+              items.firstAuthors,
+              items.authors?.substring(0,1000),
+              items.abstract?.substring(0,1000),
+              items.keywords,
+              impactFactor,
+              citedCount=parseInt(citedCount),
+              doctorName
+            )
             if(TX1.data){
               console.log(`TX1.data: ${TX1.data}`)
             }

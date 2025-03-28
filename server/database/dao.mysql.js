@@ -21,13 +21,13 @@ module.exports = {
           [result,fields] = await DBconn.query(spName, info) || null;
           DBconn.release();
         } catch (err) {
-          console.log(`> err on query ${spName}: ${err}`)
+          console.error(`> err on query ${spName}: ${err}`)
           error = {code: (err.code || 100), name: err.name, message: (err.message || `Unexpacted SP CALL`)}
           return {DBError: err, RS: result}
         }
     } catch (err) {
         console.dir(err);
-        console.log(`> err on connection ${spName}: ${err}`)
+        console.error(`> err on connection ${spName}: ${err}`)
         error = {code: (err.code || 100), name: err.name, message: (err.message || `Unexpacted DB Connection`)}
         DBconn.rollback(() => {
         })

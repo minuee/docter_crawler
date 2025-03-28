@@ -355,6 +355,7 @@
     <select id="select_check_treatise_pubmed_paper_ratio">
         SELECT
             db2.hid,
+            MAX(h.baseName) as hospital_name,
             IFNULL(dp_all.paper_cnt,0) as all_paper_cnt,
             IFNULL(dp_pubmed.paper_cnt,0) as pubmed_paper_cnt,
             ROUND(IFNULL(dp_pubmed.paper_cnt,0) / IFNULL(dp_all.paper_cnt,0),1)*100 as pubmed_per_all_percentage
@@ -385,6 +386,7 @@
                     and dp.pmid IS NOT NULL
                 GROUP BY db.hid
             ) dp_pubmed ON db2.hid = dp_pubmed.hid
+            LEFT JOIN hospital h ON db2.hid = h.hid
         WHERE
             1=1
             <if test="hid != null">

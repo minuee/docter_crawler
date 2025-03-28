@@ -8,7 +8,7 @@
         FROM 
             doctor_paper dp INNER JOIN doctor_basic db ON dp.rid = db.rid
         WHERE
-            1=1 and dp.title IS NOT NULL and dp.pmid IS NULL
+            1=1 and dp.title IS NOT NULL and dp.pmid IS NULL and dp.updateAt IS NULL
             <if test="version_id != null">
                 AND dp.data_version_id = #{version_id}
             </if>
@@ -17,5 +17,14 @@
             </if>
         ORDER BY dp.paper_id asc
     </select>
+
+    <update id="update_doctor_paper_updatedate">
+        UPDATE 
+            doctor_paper
+        SET 
+            updateAt = now()
+        WHERE 
+            data_version_id = #{version_id} AND paper_id = #{paper_id}
+    </update>
 
 </mapper>
