@@ -204,7 +204,7 @@ class App {
       this.app.use('/v1/c/seoul.hyumc.com', require(`${global.appRoot}/services/crawling_seoul.hyumc.com/route`));//한양대학교뱡원
       this.app.use('/v1/c/gs.severance.healthcare', require(`${global.appRoot}/services/crawling_gs.severance.healthcare/route`));//연대 강남세브란스병원
 
-      /* 경기서북부부권 */
+      /* 인천 경기권 */
       this.app.use('/v1/c/cmcism.or.kr', require(`${global.appRoot}/services/crawling_cmcism.or.kr/route`)); //카톨릭대 인천 성모병원
       this.app.use('/v1/c/schmc.ac.kr', require(`${global.appRoot}/services/crawling_schmc.ac.kr/route`)); //순천향대학교부속부천병원
       this.app.use('/v1/c/gilhospital.com', require(`${global.appRoot}/services/crawling_gilhospital.com/route`)); //가천대길병원
@@ -214,6 +214,9 @@ class App {
       this.app.use('/v1/c/snubh.org', require(`${global.appRoot}/services/crawling_snubh.org/route`)); // 분당서울대병원
       this.app.use('/v1/c/hosp.ajoumc.or.kr', require(`${global.appRoot}/services/crawling_hosp.ajoumc.or.kr/route`)); // 아주대학교병원
       this.app.use('/v1/c/hallym.or.kr', require(`${global.appRoot}/services/crawling_hallym.or.kr/route`)); // 한림대학교
+
+      /* 경상, 울산, 부산권 */
+      this.app.use('/v1/c/knuh.kr', require(`${global.appRoot}/services/crawling_knuh.kr/route`)); //경북대학교병원
 
 
   }   

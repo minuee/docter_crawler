@@ -129,7 +129,8 @@ router.post('/pubmed', async (req, res, next) => {
             console.log('Treatise contents or found in the list: ', SPX.data.types, SPX.data.pmid, url);
           } 
         }
-
+        
+        /* 타이틀만으로 pubmed에서 눈문정보를 찾는다 */
         if(functions.isEmpty(url) ) {
           console.log(`P1.data[i].title > ${P1.data[i].title}`)
           const queryUrl = `https://pubmed.ncbi.nlm.nih.gov/?term=${encodeURI(P1.data[i].title)}`
@@ -248,7 +249,7 @@ router.post('/pubmed', async (req, res, next) => {
 
     return res.json(TS.success(processCount));
   }catch(e){
-    console.error(`error : ${e}`)
+    console.error(`error 1111: ${e}`)
     return res.json(TS.fail("논문 수집 DB fail."));
   }
 });

@@ -96,8 +96,8 @@ module.exports = {
     const url = `${pUrl}`;
     console.log(`puppeteerLoad2 > ${pUrl}`)
     // Launch a headless browser
-    const pathToExtension1 = path.join(__dirname, './extensions/npblmhpjbopmmaadpmheopjelggjnogh/6.1_0');
-    const pathToExtension2 = path.join(__dirname, './extensions/aiblhpjnljidffmannejhglkiolpecpi/0.20_0');
+    //const pathToExtension1 = path.join(__dirname, './extensions/npblmhpjbopmmaadpmheopjelggjnogh/6.1_0');
+    //const pathToExtension2 = path.join(__dirname, './extensions/aiblhpjnljidffmannejhglkiolpecpi/0.20_0');
     console.log(`before 77777`);
     const ops = {
       headless: true,
