@@ -114,4 +114,24 @@ functions.prototype.myBatisResult =  function( DBError, RS ) {
     }
 }
 
+functions.prototype.formatPublishDate = function(input) {
+    if ( this.isEmpty(input) ) {
+        return null;
+    }
+
+    // 정규식으로 연도, 월, 일을 추출 (YYYY, YYYY.MM, YYYY.M, YYYY.MM.DD)
+    const match = input.match(/^(\d{4})(?:\.(\d{1,2}))?(?:\.(\d{1,2}))?$/);
+    
+    if (!match) {
+        return null;
+        console.error('올바른 형식이 아닙니다. 예: 2025.01, 2024.11 또는 2025.01.01')
+    }
+    
+    let year = match[1];
+    let month = match[2] ? match[2].padStart(2, '0') : '01'; // 월이 없으면 01 기본값
+    let day = match[3] ? match[3].padStart(2, '0') : '01'; // 일이 없으면 01 기본값
+    
+    return `${year}.${month}.${day}`;
+}
+
 module.exports = new functions();

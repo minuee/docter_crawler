@@ -125,41 +125,47 @@ class App {
 
     getRouting() {
 
-        /* this.app.get('/', (res, req) => {
-        req.sendFile(path.join(__dirname, '/public/index.html'));
-        }) */
-        //this.app.use(require("./route/index"));
+      /* this.app.get('/', (res, req) => {
+      req.sendFile(path.join(__dirname, '/public/index.html'));
+      }) */
+      //this.app.use(require("./route/index"));
 
-        this.app.use('/logout', (req, res) => {
-            res.status(401).send('Logged out')
-          });
-
-        this.app.use('/healthcheck', (req, res) => {
-            return res.status(200).json({
-            message: 'ok'
-            })
-        });
-        
-        this.app.use('/api/version', (req, res) => {
-            return res.json({
-            message: `${config.thisServer.apiVersion}`
-            })
+      this.app.use('/logout', (req, res) => {
+          res.status(401).send('Logged out')
         });
 
-        /* 경기서북부부권 */
-        this.app.use('/v1/c/cmcism.or.kr', require(`${global.appRoot}/services/crawling_cmcism.or.kr/route`)); //카톨릭대 인천 성모병원
-        this.app.use('/v1/c/schmc.ac.kr', require(`${global.appRoot}/services/crawling_schmc.ac.kr/route`)); //순천향대학교부속부천병원
-        this.app.use('/v1/c/gilhospital.com', require(`${global.appRoot}/services/crawling_gilhospital.com/route`)); //가천대길병원
-        this.app.use('/v1/c/inha.com', require(`${global.appRoot}/services/crawling_inha.com/route`)); //인하대부속병원
-        this.app.use('/v1/c/cmcvincent.or.kr', require(`${global.appRoot}/services/crawling_cmcvincent.or.kr/route`)); //카톨릭대 성빈센트병원
-        this.app.use('/v1/c/ansan.kumc.or.kr', require(`${global.appRoot}/services/crawling_ansan.kumc.or.kr/route`)); //고려대학교 안산병원
-        this.app.use('/v1/c/snubh.org', require(`${global.appRoot}/services/crawling_snubh.org/route`)); // 분당서울대병원
-        this.app.use('/v1/c/hosp.ajoumc.or.kr', require(`${global.appRoot}/services/crawling_hosp.ajoumc.or.kr/route`)); // 아주대학교병원
-        this.app.use('/v1/c/hallym.or.kr', require(`${global.appRoot}/services/crawling_hallym.or.kr/route`)); // 한림대학교
+      this.app.use('/healthcheck', (req, res) => {
+          return res.status(200).json({
+          message: 'ok'
+          })
+      });
+      
+      this.app.use('/api/version', (req, res) => {
+          return res.json({
+          message: `${config.thisServer.apiVersion}`
+          })
+      });
 
-        this.app.use('/v1/c/crawling_check', require(`${global.appRoot}/services/crawling_check/route`)); // 검증
+      /* 경기서북부부권 */
+      this.app.use('/v1/c/cmcism.or.kr', require(`${global.appRoot}/services/crawling_cmcism.or.kr/route`)); //카톨릭대 인천 성모병원
+      this.app.use('/v1/c/schmc.ac.kr', require(`${global.appRoot}/services/crawling_schmc.ac.kr/route`)); //순천향대학교부속부천병원
+      this.app.use('/v1/c/gilhospital.com', require(`${global.appRoot}/services/crawling_gilhospital.com/route`)); //가천대길병원
+      this.app.use('/v1/c/inha.com', require(`${global.appRoot}/services/crawling_inha.com/route`)); //인하대부속병원
+      this.app.use('/v1/c/cmcvincent.or.kr', require(`${global.appRoot}/services/crawling_cmcvincent.or.kr/route`)); //카톨릭대 성빈센트병원
+      this.app.use('/v1/c/ansan.kumc.or.kr', require(`${global.appRoot}/services/crawling_ansan.kumc.or.kr/route`)); //고려대학교 안산병원
+      this.app.use('/v1/c/snubh.org', require(`${global.appRoot}/services/crawling_snubh.org/route`)); // 분당서울대병원
+      this.app.use('/v1/c/hosp.ajoumc.or.kr', require(`${global.appRoot}/services/crawling_hosp.ajoumc.or.kr/route`)); // 아주대학교병원
+      this.app.use('/v1/c/hallym.or.kr', require(`${global.appRoot}/services/crawling_hallym.or.kr/route`)); // 한림대학교
 
-        this.app.use('/v1/c/pubmed_crawling', require(`${global.appRoot}/services/crawling_pubmed/route`)); // 논문 수집 
+      /* 경상, 울산, 부산권 */
+      this.app.use('/v1/c/knuh.kr', require(`${global.appRoot}/services/crawling_knuh.kr/route`)); //경북대학교병원 일단 홀딩 - 의사만 수집완료 
+      this.app.use('/v1/c/dongsan.dsmc.or.kr', require(`${global.appRoot}/services/crawling_dongsan.dsmc.or.kr/route`)); //경북대학교병원
+      this.app.use('/v1/c/dcmc.co.kr', require(`${global.appRoot}/services/crawling_dcmc.co.kr/route`)); //대구카톨릭대병원 
+      this.app.use('/v1/c/yumc.ac.kr', require(`${global.appRoot}/services/crawling_yumc.ac.kr/route`)); //영남대학교병원
+
+      /* 기타 작업 */
+      this.app.use('/v1/c/crawling_check', require(`${global.appRoot}/services/crawling_check/route`)); // 검증
+      this.app.use('/v1/c/pubmed_crawling', require(`${global.appRoot}/services/crawling_pubmed/route`)); // 논문 수집  
 
     }   
 

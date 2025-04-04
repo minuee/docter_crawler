@@ -108,117 +108,122 @@ module.exports = {
       ] 
     };
     const browser = await puppeteer.launch(ops);
+    try{
+      const page = await browser.newPage();
+    // User-Agent 설정 (실제 브라우저처럼 보이도록)
+      await page.setUserAgent(
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+      );
 
-    const page = await browser.newPage();
-   // User-Agent 설정 (실제 브라우저처럼 보이도록)
-    await page.setUserAgent(
-      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
-    );
-
-    // WebGL 등 브라우저 속성을 실제처럼 보이게 하기
-    await page.evaluateOnNewDocument(() => {
-      Object.defineProperty(navigator, "webdriver", { get: () => undefined });
-    });
-    await page.setViewport({ width: 1080, height: 1024 });
-    await page.goto(url);
-    await CS.wait(3000)
-
-
-    let content1 = null
-    let content2 = null
-    try {
-      content1 = await page.$eval('#div_lit_results', el => el.innerHTML);
-    } catch (error) {
-      content1 = null;
-      console.log(`try 1 : ${error}`);
-    }
-    try {
-      content2 = await page.$eval('.if', el => el.innerHTML);
-    } catch (error) {
-      content2 = null;
-      console.log(`try 2 : ${error}`);
-    }
-
-    const content0 = await page.content(); // 웹 페이지의 HTML 내용을 가져옴
-  
-    let $ = null
-    let item = {}
-    let authors = [];
-    try {
-      $ = cheerio.load(content0);
-      title = $('h1.heading-title').first().text().trim();
-      if (title) {
-        item.title = title
-      }
-      // 저널명 추출
-      const journalName = $('#full-view-journal-trigger').text().trim().split('(')[0].trim();
-      item.journalName = journalName;
-      // 쿼터(quartile) 추출
-      const quartile = $('.quartile b').first().text().trim();
-      item.quartile = quartile;
-
-      const publication_type = $('#heading div.article-citation div.publication-type').first().text().trim().replace(/\t/g, '').replace(/\n/g, '');
-      if(publication_type){
-        item.publication_type = publication_type
-      }else{
-        item.publication_type = null
-      }
-      const pmidElement = $('.identifier.pubmed .current-id');
-      const pmid = pmidElement.first().text().trim();
-      item.PMID = pmid;
-      const dois = $('a.id-link').text().trim();
-      const doiRegex = /\b10\.\d{4,}\/[-._;()\/:a-zA-Z0-9]+\b/g;
-      const extractedDois = dois.match(doiRegex);
-      const uniqueDois = [...new Set(extractedDois)]; // 중복 제거
-      const firstDoi = uniqueDois[0]; // 첫 번째 값 가져오기
-      item.DOI = firstDoi? firstDoi : null
-
-      const keywordsElement = $('#eng-abstract + p');
-      const keywords = keywordsElement.text().trim().replace(/\t/g, '').replace(/\n/g, '').replace('Keywords:                    ', '');
-      item.keywords = keywords
-      // 초록 추출
-      const abstract = $('#abstract .abstract-content.selected').text().trim().replace(/\t/g, '').replace(/\n/g, '').replace('                    ', '');
-      item.abstract = abstract ? abstract : null;
-    
-      $('.authors-list-item').each((index, element) => {
-        const authorName = $(element).find('.full-name').text().trim();
-        authors.push(authorName);
+      // WebGL 등 브라우저 속성을 실제처럼 보이게 하기
+      await page.evaluateOnNewDocument(() => {
+        Object.defineProperty(navigator, "webdriver", { get: () => undefined });
       });
-      const set = new Set(authors);
-      const uniqueAuthors = [...set];
-      item.authors = uniqueAuthors.join(', ');
-      item.firstAuthors = null
-      try {
-        const equalContribAuthors = new Set();
-        $('.authors-list-item').each((index, element) => {
-            const hasEqualContrib = $(element).find('a.equal-contrib[title="Contributed equally"]').length > 0;
-            if (hasEqualContrib) {
-                const authorName = $(element).find('a.full-name').text().trim();
-                if (authorName) {
-                    equalContribAuthors.add(authorName);
-                } else {
-                    console.warn(`Warning: Author name not found for element at index ${index}`);
-                }
-            }
-        });
-        console.log(Array.from(equalContribAuthors).join(', '));
-        item.firstAuthors = Array.from(equalContribAuthors).join(', ')
+      await page.setViewport({ width: 1080, height: 1024 });
+      await page.goto(url,{ timeout: 0, waitUntil: "domcontentloaded" });
+      await CS.wait(3000)
 
+
+      let content1 = null
+      let content2 = null
+      try {
+        content1 = await page.$eval('#div_lit_results', el => el.innerHTML);
       } catch (error) {
-          console.error(`Error processing HTML: ${error.message}`);
-          console.log(`try 3: ${error}`);
+        content1 = null;
+        console.log(`try 1 : ${error}`);
       }
-    } catch (error) {
-      $ = null;
-      console.log(`try 4: ${error}`);
+      try {
+        content2 = await page.$eval('.if', el => el.innerHTML);
+      } catch (error) {
+        content2 = null;
+        console.log(`try 2 : ${error}`);
+      }
+
+      const content0 = await page.content(); // 웹 페이지의 HTML 내용을 가져옴
+    
+      let $ = null
+      let item = {}
+      let authors = [];
+      try {
+        $ = cheerio.load(content0);
+        title = $('h1.heading-title').first().text().trim();
+        if (title) {
+          item.title = title
+        }
+        // 저널명 추출
+        const journalName = $('#full-view-journal-trigger').text().trim().split('(')[0].trim();
+        item.journalName = journalName;
+        // 쿼터(quartile) 추출
+        const quartile = $('.quartile b').first().text().trim();
+        item.quartile = quartile;
+
+        const publication_type = $('#heading div.article-citation div.publication-type').first().text().trim().replace(/\t/g, '').replace(/\n/g, '');
+        if(publication_type){
+          item.publication_type = publication_type
+        }else{
+          item.publication_type = null
+        }
+        const pmidElement = $('.identifier.pubmed .current-id');
+        const pmid = pmidElement.first().text().trim();
+        item.PMID = pmid;
+        const dois = $('a.id-link').text().trim();
+        const doiRegex = /\b10\.\d{4,}\/[-._;()\/:a-zA-Z0-9]+\b/g;
+        const extractedDois = dois.match(doiRegex);
+        const uniqueDois = [...new Set(extractedDois)]; // 중복 제거
+        const firstDoi = uniqueDois[0]; // 첫 번째 값 가져오기
+        item.DOI = firstDoi? firstDoi : null
+
+        const keywordsElement = $('#eng-abstract + p');
+        const keywords = keywordsElement.text().trim().replace(/\t/g, '').replace(/\n/g, '').replace('Keywords:                    ', '');
+        item.keywords = keywords
+        // 초록 추출
+        const abstract = $('#abstract .abstract-content.selected').text().trim().replace(/\t/g, '').replace(/\n/g, '').replace('                    ', '');
+        item.abstract = abstract ? abstract : null;
+      
+        $('.authors-list-item').each((index, element) => {
+          const authorName = $(element).find('.full-name').text().trim();
+          authors.push(authorName);
+        });
+        const set = new Set(authors);
+        const uniqueAuthors = [...set];
+        item.authors = uniqueAuthors.join(', ');
+        item.firstAuthors = null
+        try {
+          const equalContribAuthors = new Set();
+          $('.authors-list-item').each((index, element) => {
+              const hasEqualContrib = $(element).find('a.equal-contrib[title="Contributed equally"]').length > 0;
+              if (hasEqualContrib) {
+                  const authorName = $(element).find('a.full-name').text().trim();
+                  if (authorName) {
+                      equalContribAuthors.add(authorName);
+                  } else {
+                      console.warn(`Warning: Author name not found for element at index ${index}`);
+                  }
+              }
+          });
+          console.log(Array.from(equalContribAuthors).join(', '));
+          item.firstAuthors = Array.from(equalContribAuthors).join(', ')
+
+        } catch (error) {
+            console.error(`Error processing HTML: ${error.message}`);
+            console.log(`try 3: ${error}`);
+        }
+      } catch (error) {
+        $ = null;
+        console.log(`try 4: ${error}`);
+      }
+      result = {
+        content1: content1,
+        content2: content2,
+        items: item
+      }
+      await browser.close();
+      return { error: error, data: result };
+    }catch(e){
+      console.error('eeee',e)
+      await browser.close();
+      return { error: error, data: result };
     }
-    result = {
-      content1: content1,
-      content2: content2,
-      items: item
-    }
-    await browser.close();
-    return { error: error, data: result };
   },
 
 
