@@ -1,6 +1,6 @@
 
 const config = require(`${global.appRoot}/server/config/configuration`);
-const crawlingCtrl = require(`${global.appRoot}/services/crawling_knuh.kr/controller`);
+const crawlingCtrl = require(`${global.appRoot}/services/crawling_knuch.kr/controller`);
 const CS = require(`${global.appRoot}/server/util/util.casting`);
 const RM = require(`${global.appRoot}/server/util/response.message`);
 const TS = require(`${global.appRoot}/server/middleware/message.handler`);
@@ -13,7 +13,7 @@ const router = asyncify(express.Router());
 module.exports = router;
 
 router.post('/healthcheck', async function(req, res) {   
-  const HOSPITAL_ID = 'H01KR-47000001';
+  const HOSPITAL_ID = 'H01KR-47000005';
   const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
   if ( ret.success === false ) {
     return res.send(ret);
@@ -21,7 +21,7 @@ router.post('/healthcheck', async function(req, res) {
 
   return res.send({
     'code': 200,
-    'message': '경북대학교병원 접속테스트',
+    'message': '칠곡경북대학교병원 접속테스트',
     'desc': 'success',
     'data' : req.body?.hid ? req.body.hid : null   
   });
@@ -30,11 +30,11 @@ router.post('/healthcheck', async function(req, res) {
 
 /**
  * @swagger
- *  /v1/c/knuh.kr/healthcheck:
+ *  /v1/c/knuch.kr/healthcheck:
  *    post:
  *      summary: "접속 테스트"
  *      description: "서버에 접속이 됬는데 "
- *      tags: [knuh.kr-경북대학교병원]
+ *      tags: [knuch.kr-칠곡경북대학교병원]
  *      produces:
  *      parameters:
  *        - name: "hid"
@@ -68,14 +68,14 @@ router.post('/healthcheck', async function(req, res) {
 
 router.post('/step01', async function(req, res, next) {  
 
-  const HOSPITAL_ID = 'H01KR-47000001';
+  const HOSPITAL_ID = 'H01KR-47000005';
   const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
   if ( ret.success === false ) {
     return res.send(ret);
   }
 
   const data = [];
-  const r_url = `https://www.knuh.kr/content/01treatment/08_01.asp`;
+  const r_url = `https://www.knuch.kr:442/content/02depart/01_01.asp`;
   const P1 = await crawlingCtrl.crwalingProcess01(r_url);
   console.log("ddddd__Ddddx",_.size(P1?.data));
   
@@ -124,11 +124,11 @@ router.post('/step01', async function(req, res, next) {
 
 /**
  * @swagger
- *  /v1/c/knuh.kr/step01:
+ *  /v1/c/knuch.kr/step01:
  *    post:
  *      summary: "1단계  조회"
- *      description: "경북대학교병원 정보를 가져와야 한다  "
- *      tags: [knuh.kr-경북대학교병원]
+ *      description: "칠곡경북대학교병원 정보를 가져와야 한다  "
+ *      tags: [knuch.kr-칠곡경북대학교병원]
  *      produces:
  *      parameters:
  *        - name: "hid"
@@ -163,7 +163,7 @@ router.post('/step01', async function(req, res, next) {
 
 router.post('/step02', async (req, res, next) => {
   
-  const HOSPITAL_ID = 'H01KR-47000001';
+  const HOSPITAL_ID = 'H01KR-47000005';
   const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
   if ( ret.success === false ) {
     return res.send(ret);
@@ -188,13 +188,15 @@ router.post('/step02', async (req, res, next) => {
       console.log("SP1 size",_.size(SP1?.data));
       await CS.wait(300);
       //저서는 따로 진행
-      const refUrl_book = refUrl.replace('08_doctor01','08_doctor02')
+      const refUrl_book = refUrl.replace('detail_area01','detail_area02')
       const SP1_book = await crawlingCtrl.crwalingProcess03_book(refUrl_book, SP1.data);
       await CS.wait(300);
       //언론는 따로 진행
-      const refUrl_press = refUrl.replace('08_doctor01','08_doctor03')
+      const refUrl_press = refUrl.replace('detail_area01','detail_area03')
       const SP1_press = await crawlingCtrl.crwalingProcess03_press(refUrl_press, SP1_book.data);
       await CS.wait(300);
+
+
       const SP2 = await crawlingCtrl.get_rid_encrypt(doctorName, refUrl);
       if (SP2.error) {
         console.log("SP2 DB fail.");
@@ -204,14 +206,14 @@ router.post('/step02', async (req, res, next) => {
       console.log(`check data: ${doctorName} ${refUrl} ${deptName} ${tempRid}`);
       if (CS.isEmpty(tempRid)) break;
       await CS.wait(300);
-      const SP3 = await crawlingCtrl.setCrawlingdoctorBasic(tempRid, HOSPITAL_ID, deptName, doctorName, SP1.data.specialty, SP1.data.profileImgUrl);
+      const SP3 = await crawlingCtrl.setCrawlingdoctorBasic(tempRid, HOSPITAL_ID, deptName, doctorName, SP1_press.data.specialty, SP1.data.profileImgUrl);
       if (SP3.error) {
         console.log("SP3 DB fail.");
         return res.json(TS.fail("SP3 DB fail."));
       }
       await CS.wait(300);
  
-      const SP4 = await crawlingCtrl.setCrawlingdoctorBiography(tempRid, HOSPITAL_ID, doctorName, JSON.stringify(SP1.data.biography));
+      const SP4 = await crawlingCtrl.setCrawlingdoctorBiography(tempRid, HOSPITAL_ID, doctorName, JSON.stringify(SP1_press.data.biography));
       if (SP4.error) {
         console.log("SP4 DB fail.");
         return res.json(TS.fail("SP4 DB fail."));
@@ -238,11 +240,11 @@ router.post('/step02', async (req, res, next) => {
 
 /**
  * @swagger
- *  /v1/c/knuh.kr/step02:
+ *  /v1/c/knuch.kr/step02:
  *    post:
  *      summary: "2단계 조회"
- *      description: "경북대학교병원 정보를 가져와야 한다  "
- *      tags: [knuh.kr-경북대학교병원]
+ *      description: "칠곡경북대학교병원 정보를 가져와야 한다  "
+ *      tags: [knuch.kr-칠곡경북대학교병원]
  *      produces:
  *      parameters:
  *        - name: "hid"
@@ -275,7 +277,7 @@ router.post('/step02', async (req, res, next) => {
 
 
 router.post('/treatise', async (req, res, next) => {
-  const HOSPITAL_ID = 'H01KR-47000001';
+  const HOSPITAL_ID = 'H01KR-47000005';
   const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
   if ( ret.success === false ) {
     return res.send(ret);
@@ -292,7 +294,8 @@ router.post('/treatise', async (req, res, next) => {
     const doctorName = P1.data[i].doctorname;
     const deptName = P1.data[i].deptname;
     const refUrl = P1.data[i].doctor_url
-    const SP1 = await crawlingCtrl.crwalingtreatise(refUrl)
+    const refUrl_book = refUrl.replace('detail_area01','detail_area02')
+    const SP1 = await crawlingCtrl.crwalingtreatise(refUrl_book)
     if (_.size(SP1.data.biography) > 0) {
       await CS.wait(300);
       const tempRid = P1.data[i].rid
@@ -339,11 +342,11 @@ router.post('/treatise', async (req, res, next) => {
 
 /**
  * @swagger
- *  /v1/c/knuh.kr/treatise:
+ *  /v1/c/knuch.kr/treatise:
  *    post:
  *      summary: "논문 조회"
- *      description: "경북대학교병원 정보를 가져와야 한다  "
- *      tags: [knuh.kr-경북대학교병원]
+ *      description: "칠곡경북대학교병원 정보를 가져와야 한다  "
+ *      tags: [knuch.kr-칠곡경북대학교병원]
  *      produces:
  *      parameters:
  *        - name: "hid"

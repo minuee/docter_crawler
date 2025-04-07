@@ -33,13 +33,13 @@ module.exports = {
       const $ = cheerio.load(htmlContent);  
       let dept = [];
       ///console.log(`r_url: ${r_url} ${$('div.medi_index_wrap').attr('class')}`);
-      $('div.doctor_list').find('ul > li').each((index, element) => {
+      $('div.depart_list').find('ul > li').each((index, element) => {
 
         const deptName = $(element).find('a').text() ? $(element).find('a').text().trim() : '';
         const tmpLink = $(element).find('a').attr('href') ? $(element).find('a').attr('href'): '' ; 
         
         if ( !functions.isEmpty(tmpLink) ) {
-          const link = `https://www.knuh.kr${tmpLink}`;
+          const link = `https://www.knuch.kr:442${tmpLink}`;
           console.log(`tmpLinkDepthNo:${deptName} ${link}`);
           dept.push({ 
             deptName,
@@ -88,8 +88,10 @@ module.exports = {
       $('div.doctor_box > dl').each((index, element) => {
         const doctorName = $(element).find('dd').find('div.name_box > p.name').text() ? $(element).find('dd').find('div.name_box > p.name').text().trim() : '';
         const detailLink = $(element).find('dd').find('div.name_box > ul > li > a').attr('href') ? $(element).find('dd').find('div.name_box > ul > li > a').attr('href') : '';
-       
-        const link = `https://www.knuh.kr${detailLink}`;
+        let link = `https://www.knuch.kr:442${detailLink}`;
+        if ( detailLink.indexOf("http") == -1 ) {
+          link = tmpLink;
+        }
         console.log(`doctorName:${doctorName} detailLink:${link}`);
         if ( !functions.isEmpty(doctorName) && !functions.isEmpty(link) && doctorName != '일반의사') {
           const doctor = {
@@ -181,43 +183,59 @@ module.exports = {
         biography: [],
       };
       
-      const sectionNames = ['학력', '경력', '학회활동', '수상경력'];
+      const sections = ['학력', '경력', '학회활동', '수상경력'];
       const careerResult = {};
 
-      // 주석 제거
-      $('*')
-      .contents()
-      .each(function () {
-        if (this.type === 'comment') {
-          $(this).remove();
-        }
-      });
-      const normalize = (text) => text.replace(/\s/g, '').trim();
-      // 파싱 시작
-      let currentSection = null;
-
-      $('div.results')
-      .children()
-      .each((i, el) => {
-        const rawText = $(el).text().trim();
-        const normText = normalize(rawText);
-
-        const matched = sectionNames.find((name) =>
-          normText.includes(normalize(name))
-        );
-
-        if (matched) {
-          currentSection = matched;
-          if (!careerResult[currentSection]) careerResult[currentSection] = [];
-        } else if (currentSection) {
-          const cleanText = $(el).text().replace(/\s+/g, ' ').trim();
-          if (cleanText) {
-            careerResult[currentSection].push(cleanText);
+      $('p.stit').each((i, el) => {
+        const title = $(el).text().trim();
+        if (!sections.includes(title)) return;
+      
+        const list = [];
+        let sibling = $(el)[0].nextSibling;
+      
+        while (sibling) {
+          // 종료 조건: 다음 p.stit 등장
+          if (sibling.type === 'tag' && sibling.name === 'p' && $(sibling).hasClass('stit')) break;
+      
+          if (sibling.type === 'text') {
+            const text = sibling.nodeValue.trim();
+            if (text) list.push(text);
+          } else if (sibling.type === 'tag') {
+            const tag = $(sibling);
+      
+            // <p><span>...</span></p>
+            if (sibling.name === 'p') {
+              // <p> 안에 span이 있는 경우
+              if (tag.find('span').length > 0) {
+                tag.find('span').each((_, span) => {
+                  const txt = $(span).text().trim();
+                  if (txt) list.push(txt);
+                });
+              } else {
+                // <p> 안에 text + <br>로 구분된 경우
+                const htmlContent = tag.html(); // 내부 HTML
+                const lines = htmlContent.split(/<br\s*\/?>/i);
+                lines.forEach(line => {
+                  const txt = cheerio.load(`<div>${line}</div>`)('div').text().trim();
+                  if (txt) list.push(txt);
+                });
+              }
+            }
+      
+            // <span>...</span>
+            if (sibling.name === 'span') {
+              const txt = tag.text().trim();
+              if (txt) list.push(txt);
+            }
           }
+      
+          sibling = sibling.nextSibling;
         }
+      
+        careerResult[title] = list;
       });
 
-      console.log('careerResult',careerResult);
+ 
       if ( !functions.isEmpty(careerResult['학력']) )  {
         //console.log('careerResult 학력',careerResult['학력']);
         careerResult['학력'].forEach((dtElement, index) => {
@@ -337,7 +355,7 @@ module.exports = {
         // Open a new page
       const page = await browser.newPage();
       page.setDefaultNavigationTimeout(0);
-      await page.on("dialog", async (dialog) => { await dialog.accept(); });
+      //await page.on("dialog", async (dialog) => { await dialog.accept(); });
       //await page.waitForSelector('.inner');
       // Navigate to the website
       await page.goto(url,{waitUntil: "domcontentloaded"});
@@ -345,30 +363,67 @@ module.exports = {
           width: 1200,
           height: 800
       });
-
+      
+      /* const rawContent = await page.evaluate(() => {
+        const resultsDiv = document.querySelector("div.results");
+        return resultsDiv ? resultsDiv.innerHTML : "";
+      }); */
       await page.keyboard.press('ArrowDown')
       //await page.waitForSelector("._careerIemContainer");
       await CS.wait(1000);
       await page.keyboard.press('ArrowUp');
       const htmlContent = await page.content();
       const $ = cheerio.load(htmlContent);  
-
+      
       let item = preData;
-      $('div.table_blist').find('tbody > tr').each((index, dtElement) => {
-        const dtYearText = '';
-        const dtText = $(dtElement).find('td:eq(1) > a').text() ? $(dtElement).find('td:eq(1) > a').text().trim() : '';  
-        console.log(`저서: ${dtYearText} ${dtText}`);
-        if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.trim().replaceAll(/\t/g, '').replaceAll(/\n/g, '').replaceAll(/\n|\r|\s*/g, '');
-          item.biography.push({
-            targetDate : dtYearText,
-            type: "저서",
-            text: tmpText,
-            url: null,
-            issuer:null
-          });
+
+      const target = $('h3.tit').filter((_, el) => $(el).text().trim() === '논문/저서');
+      const arr = [];
+      target.each((_, h3) => {
+        let sibling = $(h3).next();
+
+        while (sibling.length) {
+          if (sibling.is('h3.tit')) break; // 다음 섹션 도달 시 종료
+
+          // <ol><li>...</li></ol> 케이스
+          if (sibling.find('ol > li').length > 0) {
+            sibling.find('ol > li').each((_, li) => {
+              const dtText = ($(li).text() || '').trim();
+              console.log(`저서 : ${dtText}`)
+              if ( !functions.isEmpty(dtText) && dtText?.length > 10) {
+                const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+                item.biography.push({
+                  targetDate : null,
+                  type: "저서",
+                  text: tmpText,
+                  url: null,
+                  issuer:null
+                });
+              }
+            });
+          }
+
+          // <span>...</span><span>...</span> 케이스
+          else if (sibling.find('span').length > 0) {
+            sibling.find('span').each((_, span) => {
+              const dtText = ($(span).text() || '').trim();
+              console.log(`저서 : ${dtText}`)
+              if ( !functions.isEmpty(dtText) && dtText?.length > 10) {
+                const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+                item.biography.push({
+                  targetDate : null,
+                  type: "저서",
+                  text: tmpText,
+                  url: null,
+                  issuer:null
+                });
+              }
+            });
+          }
+          sibling = sibling.next();
         }
       });
+    
       
       await browser.close();
       return { error: error, data: item };
@@ -377,10 +432,10 @@ module.exports = {
       Error = error;
       console.log(`error on ${url} API return: ${error}`);
       await browser.close();
-      return { error: error, data: preData };
+      return { error: error, data: [] };
     }
-
   },
+
 
   crwalingProcess03_press: async (url,preData) => {
 
@@ -409,7 +464,7 @@ module.exports = {
         // Open a new page
       const page = await browser.newPage();
       page.setDefaultNavigationTimeout(0);
-      await page.on("dialog", async (dialog) => { await dialog.accept(); });
+      //await page.on("dialog", async (dialog) => { await dialog.accept(); });
       //await page.waitForSelector('.inner');
       // Navigate to the website
       await page.goto(url,{waitUntil: "domcontentloaded"});
@@ -417,45 +472,42 @@ module.exports = {
           width: 1200,
           height: 800
       });
-
+      
+      /* const rawContent = await page.evaluate(() => {
+        const resultsDiv = document.querySelector("div.results");
+        return resultsDiv ? resultsDiv.innerHTML : "";
+      }); */
       await page.keyboard.press('ArrowDown')
       //await page.waitForSelector("._careerIemContainer");
       await CS.wait(1000);
       await page.keyboard.press('ArrowUp');
       const htmlContent = await page.content();
       const $ = cheerio.load(htmlContent);  
-
+      
       let item = preData;
+      
       $('div.table_blist').find('tbody > tr').each((index, dtElement) => {
-        const dtYearText = '';
-        const dtText = $(dtElement).find('td:eq(0) > a').text() ? $(dtElement).find('td:eq(0) > a').text().trim() : '';  
-        console.log(`언론: ${dtYearText} ${dtText}`);
-        if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.trim().replaceAll(/\t/g, '').replaceAll(/\n/g, '').replaceAll(/\n|\r|\s*/g, '');
+      
+        const dtYearText = $(dtElement).find('td:eq(0)').text() ? $(dtElement).find('td:eq(0)').text().trim()  : '';
+        const dtTextIssuer =  $(dtElement).find('td:eq(1)').text() ? $(dtElement).find('td:eq(1)').text().trim()  : '';
+        const dtText = $(dtElement).find('td:eq(2) > a').text() ?  $(dtElement).find('td:eq(2) > a').text().trim()  : '';
+        const dtLink = $(dtElement).find('td:eq(2) > a').attr('href') ? $(dtElement).find('td:eq(2) > a').attr('href')   : '';
+  
+        console.log(`언론 : ${dtText}`)
+        if ( !functions.isEmpty(dtText) && dtText?.length > 10 ) {
+          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+          const tmpDtYearText =  dtYearText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+          const tmpDtTextIssuer =  dtTextIssuer.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
           item.biography.push({
-            targetDate : dtYearText,
+            targetDate : tmpDtYearText,
             type: "언론",
             text: tmpText,
-            url: null,
-            issuer:null
+            url: dtLink,
+            issuer:tmpDtTextIssuer
           });
-        }else{
-          const dtYearText = '';
-        const dtText = $(dtElement).find('td:eq(1) > a').text() ? $(dtElement).find('td:eq(1) > a').text().trim() : '';  
-        console.log(`언론: ${dtYearText} ${dtText}`);
-          if ( !functions.isEmpty(dtText) ) {
-            const tmpText = dtText.trim().replaceAll(/\t/g, '').replaceAll(/\n/g, '').replaceAll(/\n|\r|\s*/g, '');
-            item.biography.push({
-              targetDate : dtYearText,
-              type: "언론",
-              text: tmpText,
-              url: null,
-              issuer:null
-            });
-          }
         }
       });
-      
+  
       await browser.close();
       return { error: error, data: item };
 
@@ -463,9 +515,8 @@ module.exports = {
       Error = error;
       console.log(`error on ${url} API return: ${error}`);
       await browser.close();
-      return { error: error, data: preData };
+      return { error: error, data: [] };
     }
-
   },
 
   crwalingtreatise: async (url) => {
@@ -514,20 +565,52 @@ module.exports = {
       let item = {
         biography: [],
       };
-      $('div.table_blist').find('tbody > tr').each((index, dtElement) => {
-        const dtYearText = '';
-        const dtText = $(dtElement).find('td:eq(1) > a').text() ? $(dtElement).find('td:eq(1) > a').text().trim() : '';  
-        console.log(`논문: ${dtYearText} ${dtText}`);
-        if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.trim().replaceAll(/\t/g, '').replaceAll(/\n/g, '').replaceAll(/\n|\r|\s*/g, '');
-          const etc = {
-            type: '논문',
-            title: tmpText,
-            url: null,
-          };
-          item.biography.push(etc);
+
+      const target = $('h3.tit').filter((_, el) => $(el).text().trim() === '논문/저서');
+      const arr = [];
+      target.each((_, h3) => {
+        let sibling = $(h3).next();
+
+        while (sibling.length) {
+          if (sibling.is('h3.tit')) break; // 다음 섹션 도달 시 종료
+
+          // <ol><li>...</li></ol> 케이스
+          if (sibling.find('ol > li').length > 0) {
+            sibling.find('ol > li').each((_, li) => {
+              const dtText = ($(li).text() || '').trim();
+              console.log(`저서 : ${dtText}`)
+              if ( !functions.isEmpty(dtText) && dtText?.length > 10) {
+                const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+                const etc = {
+                  type: '논문',
+                  title: tmpText,
+                  url: null,
+                };
+                item.biography.push(etc);
+              }
+            });
+          }
+
+          // <span>...</span><span>...</span> 케이스
+          else if (sibling.find('span').length > 0) {
+            sibling.find('span').each((_, span) => {
+              const dtText = ($(span).text() || '').trim();
+              console.log(`저서 : ${dtText}`)
+              if ( !functions.isEmpty(dtText) && dtText?.length > 10) {
+                const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+                const etc = {
+                  type: '논문',
+                  title: tmpText,
+                  url: null,
+                };
+                item.biography.push(etc);
+              }
+            });
+          }
+          sibling = sibling.next();
         }
       });
+
       
       await browser.close();
       return { error: error, data: item };

@@ -120,9 +120,9 @@ module.exports = {
         Object.defineProperty(navigator, "webdriver", { get: () => undefined });
       });
       await page.setViewport({ width: 1080, height: 1024 });
-      await page.goto(url,{ timeout: 0, waitUntil: "domcontentloaded" });
+      await page.goto(url,{ timeout: 3000, waitUntil: "domcontentloaded" });
       await CS.wait(3000)
-
+      console.log(`before start`);
 
       let content1 = null
       let content2 = null
@@ -140,7 +140,7 @@ module.exports = {
       }
 
       const content0 = await page.content(); // 웹 페이지의 HTML 내용을 가져옴
-    
+      
       let $ = null
       let item = {}
       let authors = [];
