@@ -163,6 +163,10 @@ class App {
       this.app.use('/v1/c/dcmc.co.kr', require(`${global.appRoot}/services/crawling_dcmc.co.kr/route`)); //대구카톨릭대병원 
       this.app.use('/v1/c/yumc.ac.kr', require(`${global.appRoot}/services/crawling_yumc.ac.kr/route`)); //영남대학교병원
       this.app.use('/v1/c/knuch.kr', require(`${global.appRoot}/services/crawling_knuch.kr/route`)); //칠곡경북대학교병원 일단 홀딩 - 의사만 수집완료 
+      this.app.use('/v1/c/kosinmed.or.kr', require(`${global.appRoot}/services/crawling_kosinmed.or.kr/route`)); //고신대학교복음병원 
+      this.app.use('/v1/c/gnuh.co.kr', require(`${global.appRoot}/services/crawling_gnuh.co.kr/route`)); //경상국립대학교병원 
+      this.app.use('/v1/c/smc.skku.edu', require(`${global.appRoot}/services/crawling_smc.skku.edu/route`)); //성균관대 삼성창원병원 
+
 
       /* 기타 작업 */
       this.app.use('/v1/c/crawling_check', require(`${global.appRoot}/services/crawling_check/route`)); // 검증
