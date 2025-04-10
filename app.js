@@ -158,14 +158,18 @@ class App {
       this.app.use('/v1/c/hallym.or.kr', require(`${global.appRoot}/services/crawling_hallym.or.kr/route`)); // 한림대학교
 
       /* 경상, 울산, 부산권 */
-      this.app.use('/v1/c/knuh.kr', require(`${global.appRoot}/services/crawling_knuh.kr/route`)); //경북대학교병원 일단 홀딩 - 의사만 수집완료 
+      this.app.use('/v1/c/knuh.kr', require(`${global.appRoot}/services/crawling_knuh.kr/route`)); //경북대학교병원 
       this.app.use('/v1/c/dongsan.dsmc.or.kr', require(`${global.appRoot}/services/crawling_dongsan.dsmc.or.kr/route`)); //경북대학교병원
       this.app.use('/v1/c/dcmc.co.kr', require(`${global.appRoot}/services/crawling_dcmc.co.kr/route`)); //대구카톨릭대병원 
       this.app.use('/v1/c/yumc.ac.kr', require(`${global.appRoot}/services/crawling_yumc.ac.kr/route`)); //영남대학교병원
-      this.app.use('/v1/c/knuch.kr', require(`${global.appRoot}/services/crawling_knuch.kr/route`)); //칠곡경북대학교병원 일단 홀딩 - 의사만 수집완료 
+      this.app.use('/v1/c/knuch.kr', require(`${global.appRoot}/services/crawling_knuch.kr/route`)); //칠곡경북대학교병원 
       this.app.use('/v1/c/kosinmed.or.kr', require(`${global.appRoot}/services/crawling_kosinmed.or.kr/route`)); //고신대학교복음병원 
       this.app.use('/v1/c/gnuh.co.kr', require(`${global.appRoot}/services/crawling_gnuh.co.kr/route`)); //경상국립대학교병원 
       this.app.use('/v1/c/smc.skku.edu', require(`${global.appRoot}/services/crawling_smc.skku.edu/route`)); //성균관대 삼성창원병원 
+      this.app.use('/v1/c/damc.or.kr', require(`${global.appRoot}/services/crawling_damc.or.kr/route`)); //동아대학교병원  - 논문정보 없음
+      this.app.use('/v1/c/pnuh.or.kr', require(`${global.appRoot}/services/crawling_pnuh.or.kr/route`)); //부산대학교병원 
+      this.app.use('/v1/c/paik.ac.kr', require(`${global.appRoot}/services/crawling_paik.ac.kr/route`)); //인제대부산백병원 
+      this.app.use('/v1/c/uuh.ulsan.kr', require(`${global.appRoot}/services/crawling_uuh.ulsan.kr/route`)); //울산대학교병원
 
 
       /* 기타 작업 */

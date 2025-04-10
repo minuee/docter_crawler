@@ -1,6 +1,6 @@
 
 const config = require(`${global.appRoot}/server/config/configuration`);
-const crawlingCtrl = require(`${global.appRoot}/services/crawling_smc.skku.edu/controller`);
+const crawlingCtrl = require(`${global.appRoot}/services/crawling_pnuh.or.kr/controller`);
 const CS = require(`${global.appRoot}/server/util/util.casting`);
 const RM = require(`${global.appRoot}/server/util/response.message`);
 const TS = require(`${global.appRoot}/server/middleware/message.handler`);
@@ -18,7 +18,7 @@ const router = asyncify(express.Router());
 module.exports = router;
 
 router.post('/healthcheck', async function(req, res) {   
-  const HOSPITAL_ID = 'H01KR-48000008';
+  const HOSPITAL_ID = 'H01KR-48000003';
   const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
   if ( ret.success === false ) {
     return res.send(ret);
@@ -26,7 +26,7 @@ router.post('/healthcheck', async function(req, res) {
 
   return res.send({
     'code': 200,
-    'message': '성균관대삼성창원병원 접속테스트',
+    'message': '부산대학교병원 접속테스트',
     'desc': 'success',
     'data' : req.body?.hid ? req.body.hid : null   
   });
@@ -35,11 +35,11 @@ router.post('/healthcheck', async function(req, res) {
 
 /**
  * @swagger
- *  /v1/c/smc.skku.edu/healthcheck:
+ *  /v1/c/pnuh.or.kr/healthcheck:
  *    post:
  *      summary: "접속 테스트"
  *      description: "서버에 접속이 됬는데 "
- *      tags: [smc.skku.edu-성균관대삼성창원병원]
+ *      tags: [pnuh.or.kr-부산대학교병원]
  *      produces:
  *      parameters:
  *        - name: "hid"
@@ -73,113 +73,68 @@ router.post('/healthcheck', async function(req, res) {
 
 router.post('/step01', async function(req, res, next) {  
 
-  const HOSPITAL_ID = 'H01KR-48000008';
+  const HOSPITAL_ID = 'H01KR-48000003';
   const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
   if ( ret.success === false ) {
     return res.send(ret);
   }
 
   const data = [];
-  const r_url = `https://smc.skku.edu/smc/medical/intro.do?mId=100`;
-  const P1 = await crawlingCtrl.crwalingProcess01_new(r_url);
-  console.log("ddddd__Ddddx",_.size(P1?.data));
+  const r_url = `https://www.pnuh.or.kr/pnuh/medical/department.do?mode=list&q=&key=`;
+  const P1 = await crawlingCtrl.crwalingProcess01(r_url);
+ 
   
   if (P1.error) return res.json(TS.fail(P1.error));
   if (functions.isEmpty(P1.data)) { return res.json(TS.fail({ code: 'DATA_NULL', message: 'response data is null' })) }
 
   // _.size(P1.data);
   for (let i = 0; i < _.size(P1.data); i++) {
-    //console.log("ddddd__Ddddx",i,P1.data[i]);
-    if (!functions.isEmpty(P1.data[i].doctorName)) {
-      
+    await CS.wait(500);
+    console.log("ddddd__Ddddx",P1.data[i].link);
+    const SP1 = await crawlingCtrl.crwalingProcess02(P1.data[i].link, P1.data[i].deptName);
+   
+    if (!functions.isEmpty(SP1.data)) {
+      for (let i = 0; i < _.size(SP1.data); i++) {
+        data.push({
+          hid: HOSPITAL_ID,
+          deptName: SP1.data[i].deptName,
+          doctorName: SP1.data[i].doctorName,
+          url: SP1.data[i].url,
+          profile_url :  SP1.data[i].profile_url
+        })
         await CS.wait(200);
-        const SP0 = await crawlingCtrl.get_rid_encrypt(P1.data[i].doctorName, P1.data[i].url);
+        const SP0 = await crawlingCtrl.get_rid_encrypt(SP1.data[i].doctorName, SP1.data[i].url);
         //console.log("SP0",SP0.data);
         if (SP0.error) {
           console.log("SP0 DB fail.");
           return res.json(TS.fail("SP0 DB fail."));
         }
         const tempRid = SP0.data[0].rid_encrypt;
-        //console.log("tempRid",tempRid);
-        const SP2 = await crawlingCtrl.setCrawlingDoctorLink(tempRid, HOSPITAL_ID, P1.data[i].deptName, P1.data[i].doctorName, P1.data[i].url);
+
+        const SP2 = await crawlingCtrl.setCrawlingDoctorLink(tempRid, HOSPITAL_ID, SP1.data[i].deptName, SP1.data[i].doctorName, SP1.data[i].url,SP1.data[i].profile_url);
         if (SP2.error) console.log("DB upsert fail.");;
-        // console.log("SP2",SP2);
-        if (functions.isEmpty(tempRid)) break;
-        await CS.wait(300);
-        const SP3 = await crawlingCtrl.setCrawlingdoctorBasic(tempRid, HOSPITAL_ID,  P1.data[i].deptName, P1.data[i].doctorName, P1.data[i].career.specialty, P1.data[i].career.profileImgUrl);
-        //console.log("SP3",SP3);
-        if (SP3.error) {
-          console.log("SP3 DB fail.");
-          return res.json(TS.fail("SP3 DB fail."));
-        }
-        await CS.wait(300);
-  
-        const SP4 = await crawlingCtrl.setCrawlingdoctorBiography(tempRid, HOSPITAL_ID, P1.data[i].doctorName, JSON.stringify(P1.data[i].career.biography));
-        //console.log("SP4",SP4);
-        if (SP4.error) {
-          console.log("SP4 DB fail.");
-          return res.json(TS.fail("SP4 DB fail."));
-        }
-        //console.log("paper",P1.data[i].career.paper);
-        for (let aindex = 0; aindex < _.size(P1.data[i].career.paper); aindex++) {
-          const pelement = P1.data[i].career.paper[aindex];
-          const iD = {
-            rid: tempRid,
-            title: pelement.text,
-            doi: null,
-            journalName: null,
-            authorRule: null,
-            publicationDate: null,
-            url: null,
-            abstract: null,
-            keywords: null,
-            impactFactor: null,
-            totalCitations: null,
-            referencesThesis: null,
-            doctorName: P1.data[i].doctorName,
-            authorName: null,
-            subjectClassification: null,
-            publicationLocation: null
-          }
-          console.log("pelement.title",pelement.text);
-          if ( !functions.isEmpty(pelement.text)) {
-            const SP6 = await crawlingCtrl.setCrawlingTreatise(iD.rid, iD.title, iD.doi, iD.journalName, iD.authorRule, iD.publicationDate, iD.url, iD.abstract, iD.keywords, iD.impactFactor, iD.totalCitations, iD.referencesThesis, iD.doctorName, iD.authorName, iD.subjectClassification, iD.publicationLocation);
-            //console.log("SP6",SP6);
-            if (SP6.error) {
-              console.log(`SP6 DB fail.`);
-              console.log(`Error on ${P1.data[i].doctorName}`)
-            }
-          }
-        }
-        
-       
-   
+      }
     } else {
       console.log(`loop ${i} result is null.`);
     }
-    data.push({
-      hid: HOSPITAL_ID,
-      deptName : P1.data[i].deptName,
-      doctorName : P1.data[i].doctorName
-    })
   }
 
-  console.log(`검색된 의사수 : ${_.size(data)}`);
+  console.log(`검색된 진료과목수 : ${_.size(P1.data)}, 검색된 의사수 : ${_.size(data)}`);
   return res.send({
     code : 200,
     success: true,
-    message: `검색된 의사수 : ${_.size(data)}`
+    message: `검색된 진료과목수 : ${_.size(P1.data)}, 검색된 의사수 : ${_.size(data)}`
   });
 });
 
 
 /**
  * @swagger
- *  /v1/c/smc.skku.edu/step01:
+ *  /v1/c/pnuh.or.kr/step01:
  *    post:
  *      summary: "1단계  조회"
- *      description: "성균관대삼성창원병원 정보를 가져와야 한다  "
- *      tags: [smc.skku.edu-성균관대삼성창원병원]
+ *      description: "부산대학교병원 정보를 가져와야 한다  "
+ *      tags: [pnuh.or.kr-부산대학교병원]
  *      produces:
  *      parameters:
  *        - name: "hid"
@@ -214,29 +169,30 @@ router.post('/step01', async function(req, res, next) {
 
 router.post('/step02', async (req, res, next) => {
   
-  const HOSPITAL_ID = 'H01KR-48000008';
+  const HOSPITAL_ID = 'H01KR-48000003';
   const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
   if ( ret.success === false ) {
     return res.send(ret);
   }
   
   const P1 = await crawlingCtrl.getCrawlingDoctorLink(HOSPITAL_ID);
-  console.log(_.size(P1.data))
+  //console.log(_.size(P1.data))
   if (CS.isEmpty(_.size(P1.data))) { return res.json(TS.fail({ code: 'DATA_NULL', message: 'response data is null' })) }
   const doctorLinkTotal = _.size(P1.data)
   
   
   const data = [];
-  for (let i = 0; i < _.size(P1.data); i++) {
-    await CS.wait(10000); // 10초정도로 - 부사장님 지시임! 꼭 지킬것
+  for (let i = 0; i < doctorLinkTotal; i++) {
+    await CS.wait(5000); // 10초정도로 - 부사장님 지시임! 꼭 지킬것
 
     const doctorName = P1.data[i].doctorname;
     const deptName = P1.data[i].deptname;
-    const refUrl = P1.data[i].doctor_url
+    const refUrl = P1.data[i].doctor_url;
+    const profileimgurl = P1.data[i].profileimgurl;
 
     if (doctorName && refUrl && refUrl.indexOf("http") !== -1) {
       const SP1 = await crawlingCtrl.crwalingProcess03(refUrl);
-      //console.log("SP1 size",_.size(SP1?.data));
+      console.log("SP1 size",_.size(SP1?.data));
       await CS.wait(300);
       const SP2 = await crawlingCtrl.get_rid_encrypt(doctorName, refUrl);
       if (SP2.error) {
@@ -247,7 +203,7 @@ router.post('/step02', async (req, res, next) => {
       ///console.log(`check data: ${doctorName} ${refUrl} ${deptName} ${tempRid}`);
       if (CS.isEmpty(tempRid)) break;
       await CS.wait(300);
-      const SP3 = await crawlingCtrl.setCrawlingdoctorBasic(tempRid, HOSPITAL_ID, deptName, doctorName, SP1.data.specialty, SP1.data.profileImgUrl);
+      const SP3 = await crawlingCtrl.setCrawlingdoctorBasic(tempRid, HOSPITAL_ID, deptName, doctorName, SP1.data.specialty, profileimgurl);
       if (SP3.error) {
         console.log("SP3 DB fail.");
         return res.json(TS.fail("SP3 DB fail."));
@@ -268,7 +224,7 @@ router.post('/step02', async (req, res, next) => {
       })
     }
   }
-  ///console.log(`result: ${_.size(P1.data)}`);
+  console.log(`대상 의사수 : ${_.size(P1.data)}, 작업된 의사수 : ${_.size(data)}`);
   let result = _.size(P1.data);
   return res.send({
     code : 200,
@@ -280,11 +236,11 @@ router.post('/step02', async (req, res, next) => {
 
 /**
  * @swagger
- *  /v1/c/smc.skku.edu/step02:
+ *  /v1/c/pnuh.or.kr/step02:
  *    post:
- *      summary: "2단계  조회(사용안함)"
- *      description: "성균관대삼성창원병원 정보를 가져와야 한다  "
- *      tags: [smc.skku.edu-성균관대삼성창원병원]
+ *      summary: "2단계  조회"
+ *      description: "부산대학교병원 정보를 가져와야 한다  "
+ *      tags: [pnuh.or.kr-부산대학교병원]
  *      produces:
  *      parameters:
  *        - name: "hid"
@@ -316,7 +272,7 @@ router.post('/step02', async (req, res, next) => {
  */
 
 router.post('/treatise', async (req, res, next) => {
-  const HOSPITAL_ID = 'H01KR-48000008';
+  const HOSPITAL_ID = 'H01KR-48000003';
   const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
   if ( ret.success === false ) {
     return res.send(ret);
@@ -344,9 +300,9 @@ router.post('/treatise', async (req, res, next) => {
           rid: tempRid,
           title: element.title,
           doi: null,
-          journalName: null,
+          journalName: functions.isEmpty(element.journalName) ? '' : element.journalName,
           authorRule: null,
-          publicationDate: null,
+          publicationDate: functions.isEmpty(element.publicationDate) ? '' : element.publicationDate,
           url: null,
           abstract: null,
           keywords: null,
@@ -378,11 +334,11 @@ router.post('/treatise', async (req, res, next) => {
 
 /**
  * @swagger
- *  /v1/c/smc.skku.edu/treatise:
+ *  /v1/c/pnuh.or.kr/treatise:
  *    post:
- *      summary: "논문 조회(사용안함)"
- *      description: "성균관대삼성창원병원 정보를 가져와야 한다  "
- *      tags: [smc.skku.edu-성균관대삼성창원병원]
+ *      summary: "논문 조회"
+ *      description: "부산대학교병원 정보를 가져와야 한다  "
+ *      tags: [pnuh.or.kr-부산대학교병원]
  *      produces:
  *      parameters:
  *        - name: "hid"

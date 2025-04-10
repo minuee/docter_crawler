@@ -72,22 +72,17 @@ module.exports = {
     }
   },
 
-
   crwalingProcess01_new : async (r_url) => {
-    
-    const puppeteer = require('puppeteer');
-    const _ = require('lodash');
-    const cheerio = require('cheerio');
-
+    let DoctorLists = [];
+    let DepthLists = [];
     try {
-      const browser = await puppeteer.launch({ headless: false }); // headless: false로 실제 동작 확인 가능
+      const browser = await puppeteer.launch({ headless: true }); // headless: false로 실제 동작 확인 가능
       const page = await browser.newPage();
       await page.goto(r_url);
-
-      // 모든 부서 a 태그 수집
+    
       const links = await page.$$('div.index-department-area');
 
-      for (let i = 0; i < links.length; i++) {
+      for (let i = 0; i < links.length ; i++) {
         try {
           const link = links[i];
 
@@ -99,446 +94,212 @@ module.exports = {
 
           if (deptName && onclickAttr) {
             const hrefCode = onclickAttr.match(/fn_goLink\('(.+?)'\)/)?.[1];
-
+            DepthLists.push({
+              deptName,
+              hrefCode
+            })
             if (hrefCode) {
               console.log(`▶️ ${deptName} 이동 시도 (code: ${hrefCode})`);
 
+              // 1차 이동 (서브페이지)
               await page.evaluate((code) => fn_goLink(code), hrefCode);
               await page.waitForNavigation({ waitUntil: 'networkidle0' });
 
               const title = await page.title();
-              console.log(`📄 페이지 제목: ${title}`);
-
-              let content = '';
+              //console.log(`📄 1차 페이지 제목: ${title}`);
+              await CS.wait(500);
               try {
-                content = await page.$eval('div.doctor-information-wrapper', el => el.innerHTML.trim());
+                // 2차 이동 가능 여부 확인 (서브-서브)
+                const doctorAnchors = await page.$$('div.doctor-information-wrapper');
+
+                for (const block of doctorAnchors) {
+                  try {
+                    //const subOnclick = await page.$eval("div.doctor-information dl > dt > a", el => el.getAttribute("onclick"));
+                    //const subOnclick = await anchor.evaluate(el => el.getAttribute("onclick"))
+                    const anchor = await block.$('dl > dt > a');
+                    if (!anchor) continue;
+
+                    const subOnclick = await anchor.evaluate(el => el.getAttribute('onclick'));
+                    const subHrefCode = subOnclick?.match(/fn_goDtl\('(.+?)'\)/)?.[1];
+                    //console.log(`✅ subHrefCode: ${subHrefCode}`);
+
+                    // 정보 추출
+                    const depth1DocName = await page.$eval("div.doctor-information dl > dd > strong > span", el => el.textContent.trim());
+                    const docLink = await page.$eval("div.doctor-information dl > dd a", el => el.getAttribute("href"));
+                    console.log(`✅ ${deptName} 의사명: ${depth1DocName}, 링크: ${docLink}`);
+
+                    if (subHrefCode) {
+                      const doctorAnchors = await page.$$('div.doctor-information dl > dd a');
+                      //console.log(`➡️ 서브페이지 내부 이동 감지, 재이동 (code: ${subHrefCode})`);
+                      // 새 페이지 열릴 준비 (targetcreated 감지)
+                      const existingTargets = await browser.targets(); // 기존 targets 미리 저장
+                      await page.evaluate((code) => fn_goDtl(code), subHrefCode);
+
+                      const newTarget = await browser.waitForTarget(
+                        target => (
+                          !existingTargets.includes(target) &&
+                          target.url().includes('smc.skku.edu/doctor/main/main.do') &&
+                          target.type() === 'page'
+                        ),
+                        { timeout: 10000 }
+                      );
+                      const newPage = await newTarget.page();
+
+                      // 새 창 활성화
+                      await newPage.bringToFront();
+                      await newPage.waitForSelector('#section1', { timeout: 10000 });
+
+                      const htmlContent = await newPage.$eval('div.contents', el => el.outerHTML);
+                      const $ = cheerio.load(htmlContent);
+
+                      const depth2DocName = $("div.doctor-information-box h2 strong").text();
+                      const depth2Speciality = $("div.doctor-information-box dl").find("dd").find("span:eq(0)").text();
+                      const depth2ProfileUrl = $("div.doctor-information-area").find("img").attr("src");
+                      const depth2DoctorUrl = `https://smc.skku.edu/doctor/main/main.do?mId=1&doctorNo=${subHrefCode}`
+                      
+                      console.log(`📄 [2차 서브페이지] 진료과 ${deptName} 의사명: ${depth2DocName} 프사: ${depth2ProfileUrl} 진료명: ${depth2Speciality} 세부링크 ${depth2DoctorUrl}`);
+            
+                      let specialtyJson = depth2Speciality.split(",");
+                      let tmpProfileImgUrlSe = "";
+                      if ( !functions.isEmpty(depth2ProfileUrl)) {
+                        tmpProfileImgUrlSe = `https://smc.skku.edu${depth2ProfileUrl}`;
+                      } 
+                      let item = {
+                        specialty: depth2Speciality.replaceAll(/\n|\r|/g, ''),
+                        specialtyJson: specialtyJson,
+                        profileImgUrl: tmpProfileImgUrlSe,
+                        biography: [],
+                        paper : []
+                      };
+
+                      $('#career-box1').find("div.scroll-wrapper").find("h3:contains('학력')").next('ul').find("li").each((index, dtElement) => {
+            
+                        const dtYearText =  '';
+                        const dtText = $(dtElement).text() ? $(dtElement).text().trim() : '';
+                        console.log(`학력 ${dtText}`);
+                        if ( !functions.isEmpty(dtText) ) {
+                          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+                          item.biography.push({
+                            targetDate : dtYearText,
+                            type: "학력",
+                            text: tmpText,
+                            url: null,
+                            issuer:null
+                          });
+                        }
+                      });
+
+                      $('#career-box1').find("div.scroll-wrapper").find("h3:contains('경력')").next('ul').find("li").each((index, dtElement) => {
+            
+                        const dtYearText =  '';
+                        const dtText = $(dtElement).text() ? $(dtElement).text().trim() : '';
+                        console.log(`경력 ${dtText}`);
+                        if ( !functions.isEmpty(dtText) ) {
+                          const tmpText = dtText.replace("- ","").replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+                          item.biography.push({
+                            targetDate : dtYearText,
+                            type: "경력",
+                            text: tmpText,
+                            url: null,
+                            issuer:null
+                          });
+                        }
+                      });
+
+                      $('#career-box1').find("div.scroll-wrapper").find("h3:contains('연수')").next('ul').find("li").each((index, dtElement) => {
+            
+                        const dtYearText =  '';
+                        const dtText = $(dtElement).text() ? $(dtElement).text().trim() : '';
+                        //console.log(`연수 ${dtText}`);
+                        if ( !functions.isEmpty(dtText) ) {
+                          const tmpText = dtText.replace("- ","").replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+                          item.biography.push({
+                            targetDate : dtYearText,
+                            type: "연수",
+                            text: tmpText,
+                            url: null,
+                            issuer:null
+                          });
+                        }
+                      });
+
+                      $('#career-box3').find("div.scroll-wrapper").find("h3:contains('학회 및 기타활동')").next('ul').find("li").each((index, dtElement) => {
+            
+                        const dtYearText =  '';
+                        const dtText = $(dtElement).text() ? $(dtElement).text().trim() : '';
+                        //console.log(`학회 ${dtText}`);
+                        if ( !functions.isEmpty(dtText) ) {
+                          const tmpText = dtText.replace("- ","").replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+                          item.biography.push({
+                            targetDate : dtYearText,
+                            type: "학회",
+                            text: tmpText,
+                            url: null,
+                            issuer:null
+                          });
+                        }
+                      });
+
+                      $('#career-box5').find("div.scroll-wrapper").find("h3:contains('논문')").next('ul').find("li").each((index, dtElement) => {
+            
+                        const dtYearText =  '';
+                        const dtText = $(dtElement).text() ? $(dtElement).text().trim() : '';
+                        console.log(`논문 ${dtText}`);
+                        if ( !functions.isEmpty(dtText) ) {
+                          const tmpText = dtText.replace("- ","").replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+                          item.paper.push({
+                            targetDate : dtYearText,
+                            type: "논문",
+                            text: tmpText,
+                            url: null,
+                            issuer:null
+                          });
+                        }
+                      });
+                      
+                      if ( !functions.isEmpty(deptName) && !functions.isEmpty(depth2DocName) && !functions.isEmpty(depth2DoctorUrl)) {
+                        const saveDoctorName = depth2DocName.replace("교수","").trim().replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+                        const saveDepthName = deptName.trim().replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+
+                        DoctorLists.push({
+                          doctorName: saveDoctorName,
+                          deptName: saveDepthName,
+                          url: depth2DoctorUrl,
+                          career : item
+                        });
+                      }
+                      await CS.wait(500);
+                      await newPage.close(); // 새 창 닫기
+                    }
+                  } catch (err) {
+                    console.log(`❗️ 2차 이동 실패 또는 누락: ${err.message}`);
+                  }
+                }
               } catch (e) {
-                console.log(`❗️div.doctor-information-wrapper 미존재`);
+                console.log(`❗️ 의사 정보 추출 실패 또는 서브-서브 페이지 없음: ${e.message}`);
               }
 
-              console.log(`📄 추출된 내용:\n${content}`);
-
+              // 뒤로 돌아가기 (메인페이지로)
               await page.goBack({ waitUntil: 'networkidle0' });
-
               await page.waitForSelector('div.index-department-area');
-              // 이동 후 다시 링크 갱신
+
+              // 링크 갱신 (DOM 재변경 대응)
               links.length = 0;
               links.push(...await page.$$('div.index-department-area'));
+              await CS.wait(1000);
             }
           }
         } catch (err) {
           console.error(`❗ 에러 발생 (index ${i}):`, err.message);
         }
       }
-
-
-      //console.log(`✅ 수집된 부서 수: ${dept.length}`);
-      await browser.close();
-      return { error: null, data: [] };
+    console.log(`✅ 수집된 진료과 수: ${DepthLists.length} 수집된 의사 수: ${DoctorLists.length}`);
+    await browser.close();
+    return { error: null, data: DoctorLists };
 
     } catch (error) {
-      console.log(`❌ Error on ${r_url}: ${error}`);
-      return { error, data: [] };
-    }
-
-  },
-
-
-  crwalingProcess02: async (url,deptName) => {
-
-    let result = null, error = null, DBCode = null;
-    if (functions.isEmpty(url)) {
-      return { error: true, data: [] };
-    }
-    console.log(`link: ${url} ${deptName}`);
-
-    try {
-      const browser = await puppeteer.launch();
-        // Open a new page
-      const page = await browser.newPage();
-      page.setDefaultNavigationTimeout(0);
-      //await page.waitForSelector('.inner');
-      // Navigate to the website
-      await page.goto(url,{waitUntil: "domcontentloaded"});
-      await page.setViewport({
-          width: 1200,
-          height: 800
-      });
-
-      await page.keyboard.press('ArrowDown')
-      //await page.waitForSelector("._careerIemContainer");
-      await CS.wait(1000);
-      await page.keyboard.press('ArrowUp');
-      const htmlContent = await page.content();
-      const $ = cheerio.load(htmlContent); 
-
-      const doctors = [];
-      $('table.dor_sch_list').find('tbody > tr > td').each((index, element) => {
-        const doctorName = $(element).find('a:first-child > div').text() ? $(element).find('a:first-child > div').text().trim() : '';
-        const detailLink = $(element).find('a:first-child').attr('href') ? $(element).find('a:first-child').attr('href') : '';
-        //console.log(`detailLink: ${detailLink},doctorName: ${doctorName}`);
-        let tmpLink = null;
-        if ( !functions.isEmpty(detailLink) ) {
-          tmpLink =  `https://hallym.hallym.or.kr/${detailLink}`;
-        }
-        console.log(`Adding doctor list: ${index} ${doctorName} ${deptName} ${tmpLink}`); // 디버
-        if ( !functions.isEmpty(doctorName) && !functions.isEmpty(detailLink) ) {
-          const doctor = {
-            doctorName,
-            deptName,
-            url: tmpLink,
-          };
-          doctors.push(doctor); 
-        }
-      });
-    
-      console.log(`doctors:${doctors.length}`);
-      return { error: error, data: doctors };
-
-    } catch (error) {
-      Error = error;
-      console.log(`error on ${url} API return: ${error}`);
-      await browser.close();
-      return { error: error, data: [] };
-    }
-  },
-
-
-
-  crwalingProcess03: async (url) => {
-    let result = null, error = null, DBCode = null
-    let DBData1 = null
-    let DBData2 = null
-    let Response = { status: null, data: null }
-    console.log(`crwalingProcess03: ${url}`); 
-   
-    if (!url) {
-      return { error: true, data: null };
-    }
-   
-  
-      const browser = await puppeteer.launch();
-        // Open a new page
-      const page = await browser.newPage();
-      page.setDefaultNavigationTimeout(0);
-      
-      //await page.waitForSelector('.inner');
-      // Navigate to the website
-      await page.goto(url,{waitUntil: "domcontentloaded"});
-      await page.setViewport({
-          width: 1200,
-          height: 800
-      });
-
-      let exists = false;
-      try {
-        exists = await page.$eval("section.content > div > ul > li:nth-child(4) > a", ele => ele ? true : false);
-        console.log("exists",exists)
-        if ( exists ) {
-          await page.click("section.content > div > ul > li:nth-child(4) > a");
-          await page.waitForSelector('div#boardContents', { visible: true, timeout: 10000 });
-        }
-      }catch(e){
-        console.log('errro ',e)
-      }
-      
-      await page.keyboard.press('ArrowDown')
-      //await page.waitForSelector("._careerIemContainer");
-      await CS.wait(1000);
-      await page.keyboard.press('ArrowUp');
-      const htmlContent = await page.content();
-      const $ = cheerio.load(htmlContent);  
-
-      
-
-      // $(`#layer_pop_${doctor_id}`).attr('disabled', 'disabled').css('display', 'block');
-      let profileImgUrl = $('article.pic > img').attr('src') ?  $('article.pic > img').attr('src')  : '';
-      let tmpSpecialty = $('article.profile').find('div.denti').find('p').text() ? $('article.profile').find('div.denti').find('p').text().trim() : '';
-      if ( functions.isEmpty(tmpSpecialty) ) {
-        tmpSpecialty = $('article.detail').find('div.part_txt').find('p').text() ? $('article.detail').find('div.part_txt').find('p').text().trim() : '';
-      }
-      if ( functions.isEmpty(profileImgUrl)) {
-        profileImgUrl = $('article.profile').find('div.pic > div.pic > img').attr('src') ? $('article.profile').find('div.pic > div.pic > img').attr('src') : '';
-      }
-      // 진료분야를 json화 한다
-
-      let specialtyJson = tmpSpecialty.split(",");
-      
-      const tmpProfileImgUrl = functions.isEmpty(profileImgUrl) ? '' : `https://hallym.hallym.or.kr${profileImgUrl}`;
-      console.log(`tmpProfileImgUrl, ${tmpProfileImgUrl}, specialtyJson: ${JSON.stringify(specialtyJson)}`);// 학력 경력
-      let item = {
-        specialty: tmpSpecialty.replaceAll(/\n|\r|/g, ''),
-        specialtyJson: specialtyJson,
-        profileImgUrl: tmpProfileImgUrl,
-        biography: [],
-      };
-
-  
-      //const smaple = $('#_careerContainer').find('._careerIem:first-child > td').text();
-      //console.log(`_press: ${smaple}`);
-      let check_career1 = 0;
-      $('#tab_con01').find('div.tab01_inner > div').find("h4:contains('학력')").next('table').find('tbody > tr > td > p').each((index, dtElement) => {
-        
-        const dtYearText = $(dtElement).find('span:nth-child(1)').text() ? $(dtElement).find('span:nth-child(1)').text().trim()  : '';
-        const dtText = $(dtElement).find('span:nth-child(2)').text() ? $(dtElement).find('span:nth-child(2)').text().trim()  : '';
-        console.log(`학력 : ${dtText}`)
-        if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-          const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-          item.biography.push({
-            targetDate : tmpDtYearText,
-            type: "학력",
-            text: tmpText,
-            url: null,
-            issuer:null
-          });
-          check_career1++;
-        }
-      });
-
-      if ( check_career1 == 0 ) {
-        $('#tab_con01').find("h3:contains('학력')").next('table').find('tbody > tr > td > p').each((index, dtElement) => {
-          const dtYearText = $(dtElement).find('span:nth-child(1)').text() ? $(dtElement).find('span:nth-child(1)').text().trim()  : '';
-          const dtText = $(dtElement).find('span:nth-child(2)').text() ? $(dtElement).find('span:nth-child(2)').text().trim()  : '';
-          console.log(`학력 2222222: ${dtText}`)
-          if ( !functions.isEmpty(dtText) ) {
-            const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-            const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-            item.biography.push({
-              targetDate : tmpDtYearText,
-              type: "학력",
-              text: tmpText,
-              url: null,
-              issuer:null
-            });
-          }
-        });
-      }
-
-      let check_career2 = 0;
-      $('#tab_con01').find('div.tab01_inner > div').find("h4:contains('경력')").next('table').find('tbody > tr > td > p').each((index, dtElement) => {
-        
-        const dtYearText = $(dtElement).find('span:nth-child(1)').text() ? $(dtElement).find('span:nth-child(1)').text().trim()  : '';
-        const dtText = $(dtElement).find('span:nth-child(2)').text() ? $(dtElement).find('span:nth-child(2)').text().trim()  : '';
-        console.log(`경력 : ${dtText}`)
-        if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-          const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-          item.biography.push({
-            targetDate : tmpDtYearText,
-            type: "경력",
-            text: tmpText,
-            url: null,
-            issuer:null
-          });
-          check_career2++;
-        }
-      });
-
-      if ( check_career2 == 0 ) {
-        $('#tab_con02').find("h3:contains('경력')").next('table').find('tbody > tr > td > p').each((index, dtElement) => {
-        
-          const dtYearText = $(dtElement).find('span:nth-child(1)').text() ? $(dtElement).find('span:nth-child(1)').text().trim()  : '';
-          const dtText = $(dtElement).find('span:nth-child(2)').text() ? $(dtElement).find('span:nth-child(2)').text().trim()  : '';
-          console.log(`경력 2222: ${dtText}`)
-          if ( !functions.isEmpty(dtText) ) {
-            const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-            const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-            item.biography.push({
-              targetDate : tmpDtYearText,
-              type: "경력",
-              text: tmpText,
-              url: null,
-              issuer:null
-            });
-          }
-        });
-      }
-
-      $('#tab_con01').find('div.tab01_inner > div').find("h4:contains('학회활동')").next('table').find('tbody > tr > td > p').each((index, dtElement) => {
-        
-        const dtYearText = $(dtElement).find('span:nth-child(1)').text() ? $(dtElement).find('span:nth-child(1)').text().trim()  : '';
-        const dtText = $(dtElement).find('span:nth-child(2)').text() ? $(dtElement).find('span:nth-child(2)').text().trim()  : '';
-        console.log(`학회 : ${dtText}`)
-        if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-          const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-          item.biography.push({
-            targetDate : tmpDtYearText,
-            type: "학회",
-            text: tmpText,
-            url: null,
-            issuer:null
-          });
-        }
-      });
-
-      $('#tab_con01').find('div.tab01_inner > div').find("h4:contains('수상이력')").next('table').find('tbody > tr > td > p').each((index, dtElement) => {
-        
-        const dtYearText = $(dtElement).find('span:nth-child(1)').text() ? $(dtElement).find('span:nth-child(1)').text().trim()  : '';
-        const dtText = $(dtElement).find('span:nth-child(2)').text() ? $(dtElement).find('span:nth-child(2)').text().trim()  : '';
-        console.log(`수상 : ${dtText}`)
-        if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-          const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-          item.biography.push({
-            targetDate : tmpDtYearText,
-            type: "수상",
-            text: tmpText,
-            url: null,
-            issuer:null
-          });
-        }
-      });
-
-      let check_career3 = 0;
-      $('#tab_con03').find('div.tab01_inner > ul > li').each((index, dtElement) => {
-        
-        const dtYearText = $(dtElement).find('p.date').text() ? $(dtElement).find('p.date').text().trim()  : '';
-        const dtText = $(dtElement).find('p.tit > a').text() ? $(dtElement).find('p.tit > a').text().trim()  : '';
-        const dtIssuer = $(dtElement).find('p.news').text() ? $(dtElement).find('p.news').text().trim()  : '';
-        const dtUrl = $(dtElement).find('p.tit > a').attr('href') ? $(dtElement).find('p.tit > a').attr('href')  : '';
-        console.log(`언론222222 : ${dtText}`)
-        if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-          const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-          const tmpDtIssuer = dtIssuer.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-          item.biography.push({
-            targetDate : tmpDtYearText,
-            type: "언론",
-            text: tmpText,
-            url: dtUrl,
-            issuer:tmpDtIssuer
-          });
-          check_career3++;
-        }
-      });
-      
-      if ( check_career3 == 0 ) {
-        /* await page.click("section.content > div > ul > li:nth-child(4) > a");
-        await CS.wait(1000);
-        await page.waitForSelector('div#boardContents', { visible: true, timeout: 10000 }); */
-        const ssss = $('section.content > div > ul > li:nth-child(4) > a').attr('href');
-        console.log("ssssss,", ssss)
-        const ssss2 = $('#tab_con06').find('table').attr('class');
-        console.log("ssss2,", ssss2)
-        $('#tab_con06').find('table').find('tbody > tr > td > p').each((index, dtElement) => {
-        
-          const dtYearText = $(dtElement).find('span').text() ? $(dtElement).find('span').text().trim()  : '';
-          const dtText = $(dtElement).find('a').text() ? $(dtElement).find('a').text().trim()  : '';
-          const dtIssuer = '';
-          const dtUrl = $(dtElement).find('a').text() ? $(dtElement).find('a').text().trim()  : '';
-          console.log(`언론보도 222222: ${dtText}`)
-          if ( !functions.isEmpty(dtText) ) {
-            const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-            const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-            const tmpDtIssuer = dtIssuer
-            item.biography.push({
-              targetDate : tmpDtYearText,
-              type: "언론",
-              text: tmpText,
-              url: dtUrl,
-              issuer:tmpDtIssuer
-            });
-          }
-        });
-      }
-      
-      await browser.close();
-      return { error: error, data: item };
-
-    
-  },
-
-  crwalingtreatise: async (url) => {
-    let result = null, error = null, DBCode = null;
-    let Response = { status: null, data: null }
-    console.log(`crwalingtreatise: ${url}`); 
-    
-    if (!url) {
-      return { error: true, data: null };
-    }
-    try {
-      const browser = await puppeteer.launch();
-        // Open a new page
-      const page = await browser.newPage();
-      page.setDefaultNavigationTimeout(0);
-      
-      //await page.waitForSelector('.inner');
-      // Navigate to the website
-      await page.goto(url,{waitUntil: "domcontentloaded"});
-      await page.setViewport({
-          width: 1200,
-          height: 800
-      });
-
-      await page.keyboard.press('ArrowDown')
-      //await page.waitForSelector("._careerIemContainer");
-      await CS.wait(1000);
-      await page.keyboard.press('ArrowUp');
-      const htmlContent = await page.content();
-      const $ = cheerio.load(htmlContent);  
-     
-      // 학력 경력
-      let item = {
-        biography: [],
-      };
-
-      const tmpArr = $('#tab_con02').find('div.tab01_inner').find('div.thesis_list').html();
-      if ( !functions.isEmpty(tmpArr) ) {
-        const tmpArr2 = tmpArr.trimStart().trimEnd();
-        console.log(`tmpArr2 : ${tmpArr2}`)
-        const arr = await tmpArr2.split("<br><br>");
-        console.log(`arr : ${arr},  ${typeof arr}`)
-        if ( arr?.length > 0 ) {
-          arr.forEach(dtElement => {
-            //const dtText = $(dtElement) ? $(dtElement).trim() : '';
-            if ( !functions.isEmpty(dtElement) ) {
-              console.log(`dtText : ${dtElement}`)
-              const etc = {
-                type: '논문',
-                title: dtElement.replaceAll(/\n|\r|/g, ''),
-                url: null,
-              };
-              item.biography.push(etc);
-            }
-          })
-        } 
-      }
-
-      if ( item.biography.length == 0 ) {
-        const tmpArr =  $('#tab_con05').find('table').find('tbody > tr > td > p').html();
-        if ( !functions.isEmpty(tmpArr) ) {
-          const tmpArr2 = tmpArr.trimStart().trimEnd();
-          console.log(`tmpArr2 333333 : ${tmpArr2}`)
-          const arr = await tmpArr2.split("<br><br>");
-          console.log(`arr 3333333: ${arr},  ${typeof arr}`)
-          if ( arr?.length > 0 ) {
-            arr.forEach(dtElement => {
-              //const dtText = $(dtElement) ? $(dtElement).trim() : '';
-              if ( !functions.isEmpty(dtElement) ) {
-                console.log(`dtText 33333: ${dtElement}`)
-                const etc = {
-                  type: '논문',
-                  title: dtElement.replaceAll(/\n|\r|/g, ''),
-                  url: null,
-                };
-                item.biography.push(etc);
-              }
-            })
-          } 
-        }
-
-      }
-
-      await browser.close();
-      return { error: error, data: item };
-
-    } catch (error) {
-      Error = error;
-      console.log(`error on ${url} API return: ${error}`);
-      await browser.close();
-      return { error: error, data: [] };
+    console.log(`❌ Error on ${r_url}: ${error}`);
+    return { error, data: [] };
     }
 
   },
@@ -564,23 +325,6 @@ module.exports = {
 
   },
 
-  setCrawlingdoctorBasic_old: async (rid, hid, deptName, doctorName, specialty, profileimgurl) => {
-    let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL set_crawlingdoctor_basic(?)`
-    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, deptName, doctorName, specialty, profileimgurl]);
-    if (DBError) {
-      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
-      return { error: DBError, data: null };
-    }
-    // console.log(RS)
-    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
-    DBData = _.get(RS, [1], [])
-
-    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
-    console.log(error)
-    result = DBData
-    return { error: error, data: result };
-  },
 
   setCrawlingdoctorBiography: async (rid, hid, doctorName, jsondata) => {
     
@@ -592,24 +336,6 @@ module.exports = {
       console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
       return { error: DBError, data: null };
     }
-    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
-    DBData = _.get(RS, [1], [])
-
-    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
-    console.log(error)
-    result = DBData
-    return { error: error, data: result };
-  },
-
-  setCrawlingdoctorBiography_old: async (rid, hid, doctorName, jsondata) => {
-    let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL set_crawlingdoctor_detail(?)`
-    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, doctorName, jsondata]);
-    if (DBError) {
-      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
-      return { error: DBError, data: null };
-    }
-    // console.log(RS)
     DBCode = _.get(RS[0][0], 'RETURNCODE', null)
     DBData = _.get(RS, [1], [])
 
@@ -639,26 +365,6 @@ module.exports = {
 
   },
 
-  setCrawlingDoctorLink_old: async (rid, hid, deptName, doctorName, url) => {
-    let result = null, error = null, DBCode = null, DBData = null
-
-    console.log(`setCrawlingDoctorLink: ${rid.length} ${hid} ${deptName} ${doctorName} ${url}`);
-    const query = `CALL SET_CRAWLING_DOCTOR_LINK(?)`
-    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, deptName, doctorName, url]);
-    if (DBError) {
-      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
-      return { error: DBError, data: null };
-    }
-    // console.log(RS)
-    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
-    DBData = _.get(RS, [1], [])
-
-    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
-    console.log(error)
-    result = DBData
-    return { error: error, data: result };
-  },
-
 
   setCrawlingTreatise: async (rid, title, doi, journalName, authorRule, publicationDate, url,
     abstract, keywords, impactFactor, totalCitations, referencesThesis,
@@ -667,28 +373,6 @@ module.exports = {
     const query = `CALL set_doctor_paper(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, DATA_VERSION_ID, doctorName, title, doi, journalName, authorRule, publicationDate, url,
       abstract, keywords, impactFactor, totalCitations, authorName]);
-    if (DBError) {
-      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
-      return { error: DBError, data: null };
-    }
-    // console.log(RS)
-    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
-    DBData = _.get(RS, [1], [])
-
-    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
-    console.log(error)
-    result = DBData
-    return { error: error, data: result };
-  },
-
-  setCrawlingTreatise_old: async (rid, title, doi, journalName, authorRule, publicationDate, url,
-    abstract, keywords, impactFactor, totalCitations, referencesThesis,
-    doctorName, authorName, subjectClassification, publicationLocation) => {
-    let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL set_crawlingdoctor_treatise(?)`
-    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, title, doi, journalName, authorRule, publicationDate, url,
-      abstract, keywords, impactFactor, totalCitations, referencesThesis,
-      doctorName, authorName, subjectClassification, publicationLocation]);
     if (DBError) {
       console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
       return { error: DBError, data: null };
@@ -724,25 +408,6 @@ module.exports = {
 
   },
 
-  getCrawlingDoctorLink_old: async (hid) => {
-    let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL GET_CRAWLING_DOCTOR_LINK(?)`
-    const { DBError = null, RS = null } = await daoMysql.spCall(query, [hid]);
-    if (DBError) {
-      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
-      return { error: DBError, data: null };
-    }
-    // console.log(RS)
-    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
-    DBData = _.get(RS, [1], [])
-
-    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
-    console.log(error)
-    result = DBData
-    return { error: error, data: result };
-  },
-
-
   get_crawling_doctor_mssing_link: async (hid) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL get_crawling_doctor_mssing_link(?)`
@@ -765,24 +430,6 @@ module.exports = {
   get_rid_encrypt: async (p_doctorName, p_refUrl) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL set_rid(?) `
-    const { DBError = null, RS = null } = await daoMysql.spCall(query, [p_doctorName, p_refUrl]);
-    if (DBError) {
-      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
-      return { error: DBError, data: null };
-    }
-    // console.log(RS)
-    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
-    DBData = _.get(RS, [1], [])
-
-    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
-    console.log(error)
-    result = DBData
-    return { error: error, data: result };
-  },
-
-  get_rid_encrypt_old: async (p_doctorName, p_refUrl) => {
-    let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL get_rid_encrypt(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [p_doctorName, p_refUrl]);
     if (DBError) {
       console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
