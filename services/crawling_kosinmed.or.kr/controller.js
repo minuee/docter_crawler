@@ -173,18 +173,23 @@ module.exports = {
         biography: [],
       };
      
-      const targetData1 = $('div.tab-container').find("div.tab-content:eq(0)").find('ul > p').html();
+      let targetData1 = $('div.tab-container').find("div.tab-content:eq(0)").find('ul > p').html();
       //console.log(`targetData2: ${targetData1}`);
       if ( targetData1 ) {
-        //const targetData2_re = targetData2.replaceAll("(","").replaceAll(")","");
+        targetData1 = targetData1.replace(/<!--[\s\S]*?-->/g, '');
         const lines = targetData1.includes("<br>") ? targetData1.split("<br>") : targetData1.split("\n");
         //console.log(`lines: ${lines}`);
         lines.forEach((dtElement, index) => {
           const dtYearText = '';
-          
+          let cleanText = dtElement.trim();
+          if (/^\s*<!--[\s\S]*?-->\s*$/.test(cleanText)) return;
           if ( !functions.isEmpty(dtElement) && dtElement?.length > 10 ) {
             
-            const tmpText = dtElement.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+            // 주석 안에 들어있는 부분만 제거 (라인 내부 주석 제거)
+            cleanText = cleanText.replace(/<!--[\s\S]*?-->/g, '');
+            // HTML 태그 & 공백 정리
+            cleanText = cleanText.replace(/\t/g, '').replace(/\r?\n/g, '').trim();
+            const tmpText = cleanText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
             const tmpDtYearText = dtYearText;
             console.log(`경력: ${tmpText?.length}, ${tmpText}`);
             item.biography.push({
@@ -198,18 +203,21 @@ module.exports = {
         });
       }
 
-      const targetData2 = $('div.tab-container').find("div.tab-content:eq(1)").find("p:contains('저서')").next('ul').html();
-      //console.log(`targetData2: ${targetData1}`);
+      let targetData2 = $('div.tab-container').find("div.tab-content:eq(1)").find("p:contains('저서')").next('ul').html();
       if ( targetData2 ) {
-        //const targetData2_re = targetData2.replaceAll("(","").replaceAll(")","");
+        targetData2 = targetData2.replace(/<!--[\s\S]*?-->/g, '');
         const lines = targetData2.includes("<br>") ? targetData2.split("<br>") : targetData2.split("\n");
-        //console.log(`lines: ${lines}`);
         lines.forEach((dtElement, index) => {
           const dtYearText = '';
-          
-          if ( !functions.isEmpty(dtElement) && dtElement?.length > 10 ) {
-            
-            const tmpText = dtElement.replace(/<!--[\s\S]*?-->/g, '').replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+          let cleanText = dtElement.trim();
+          if (/^\s*<!--[\s\S]*?-->\s*$/.test(cleanText)) return;
+
+          if ( !functions.isEmpty(cleanText) && cleanText?.length > 10 ) {
+            // 주석 안에 들어있는 부분만 제거 (라인 내부 주석 제거)
+            cleanText = cleanText.replace(/<!--[\s\S]*?-->/g, '');
+            // HTML 태그 & 공백 정리
+            cleanText = cleanText.replace(/\t/g, '').replace(/\r?\n/g, '').trim();
+            const tmpText = cleanText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
             const tmpDtYearText = dtYearText;
             console.log(`저서: ${tmpText?.length}, ${tmpText}`);
             item.biography.push({

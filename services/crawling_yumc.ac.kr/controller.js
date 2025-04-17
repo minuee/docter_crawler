@@ -175,7 +175,25 @@ module.exports = {
       await page.keyboard.press('ArrowUp');
       const htmlContent = await page.content();
       const $ = cheerio.load(htmlContent);  
-      let tmpSpecialty = $('#content_body').find('div.subbox').find('ul.arrow4').find('li:eq(3)').children('strong').remove().end().text() ? $('div.subbox').find('ul.arrow4').find('li:eq(3)').children('strong').remove().end().text().trim() : '';
+      let tmpSpecialty = $('#content_body')
+      .find('div.subbox')
+      .find('ul.arrow4 > li')
+      .filter(function() {
+        return $(this).children('strong').text().trim() === '[진료과목]';
+      })
+      .clone() // 원본 li를 복제해서
+      .children('strong').remove() // strong 태그 제거
+      .end()
+      .text() ? $('#content_body')
+      .find('div.subbox')
+      .find('ul.arrow4 > li')
+      .filter(function() {
+        return $(this).children('strong').text().trim() === '[진료과목]';
+      })
+      .clone() // 원본 li를 복제해서
+      .children('strong').remove() // strong 태그 제거
+      .end()
+      .text().trim() : '';
       console.log(`specialtyJson: ${tmpSpecialty}`);
       // 진료분야를 json화 한다
       let specialtyJson = tmpSpecialty.split(",");
@@ -351,7 +369,7 @@ module.exports = {
         biography: [],
       };
 
-
+      let isTreatiseCount = 0;
       $('#content_body').find("h3:contains('주요 저서 및 논문')").next('div.subbox').find("ul > li").each((index, dtElement) => {
       
         const dtYearText = '';
@@ -359,7 +377,7 @@ module.exports = {
         const dtTextIssuer =  '';
         
         if ( !functions.isEmpty(dtText) && dtText.length > 10 ) {
-          console.log(`논문: ${dtYearText}, ${dtText}, ${dtTextIssuer}`);
+          //console.log(`논문1 : ${dtYearText}, ${dtText}, ${dtTextIssuer}`);
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
           const tmpDtYearText = dtYearText;
           const tmpDtTextIssuer = dtTextIssuer;
@@ -370,10 +388,53 @@ module.exports = {
             publicationDate : tmpDtYearText,
             journalName : tmpDtTextIssuer
           });
+          isTreatiseCount++;
         }
       });
 
-     
+      if ( isTreatiseCount == 0 ) {
+        const targetData3 = $('#content_body').find("h3:contains('학회 및 대외활동')").next('div.subbox').html();
+        if ( targetData3 ) {
+          const lines = targetData3.includes("<br>") ? targetData3.split("<br>") : targetData3.split("\n");
+          let currentType = null; // '논문' 또는 '저서'
+
+          lines.forEach((dtElement, index) => {
+            let cleanText = dtElement.trim();
+
+            if (cleanText === '') return;
+
+            /// '[주요논문]'이 나오면 그 다음부터 수집 시작
+            if (cleanText.includes('논문')) {
+              collecting = true;
+              return;
+            }
+
+            // '[주요저서]' 또는 다른 카테고리 나오면 수집 중단
+            if (cleanText.includes('[')) {
+              collecting = false;
+              return;
+            }
+
+            if (collecting && !functions.isEmpty(cleanText) && cleanText.length > 10) {
+              const tmpText = cleanText
+                .replace(/\t/g, '')
+                .replace(/\n/g, '')
+                .replaceAll(/\n|\r|/g, '')
+                .trim();
+
+              console.log(`논문 2: ${tmpText.length}, ${tmpText}`);
+              item.biography.push({
+                type: '논문',
+                title: tmpText,
+                url: null,
+                publicationDate: '',
+                journalName: ''
+              });
+            }
+          })
+        }
+      }
+
       await browser.close();
       return { error: error, data: item };
 

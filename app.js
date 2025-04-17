@@ -171,6 +171,8 @@ class App {
       this.app.use('/v1/c/paik.ac.kr', require(`${global.appRoot}/services/crawling_paik.ac.kr/route`)); //인제대부산백병원 
       this.app.use('/v1/c/uuh.ulsan.kr', require(`${global.appRoot}/services/crawling_uuh.ulsan.kr/route`)); //울산대학교병원
 
+      
+
 
       /* 기타 작업 */
       this.app.use('/v1/c/crawling_check', require(`${global.appRoot}/services/crawling_check/route`)); // 검증

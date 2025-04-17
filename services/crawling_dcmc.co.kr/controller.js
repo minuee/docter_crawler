@@ -158,10 +158,10 @@ module.exports = {
       await page.keyboard.press('ArrowUp');
       const htmlContent = await page.content();
       const $ = cheerio.load(htmlContent);  
-      let tmpSpecialty = $('#section0').find('div.part').find('dd').text() ? $('#section0').find('div.part').find('dd').text().trim() : '';
+      let tmpSpecialty = $('#fullpage').find('dl.part').find('dd').text() ? $('#fullpage').find('dl.part').find('dd').text().trim() : '';
       // 진료분야를 json화 한다
       let specialtyJson = tmpSpecialty.split(",");
-      //console.log(`specialtyJson: ${JSON.stringify(specialtyJson)}`);
+      console.log(`specialtyJson: ${JSON.stringify(specialtyJson)}`);
       // 학력 경력
       let item = {
         specialty: tmpSpecialty.replaceAll(/\n|\r|/g, ''),
@@ -173,7 +173,7 @@ module.exports = {
         
         const dtYearText = $(dtElement).find('strong').text()  ? $(dtElement).find('strong').text().trim()  : '';
         const dtText = $(dtElement).clone().children('strong').remove().end().text() ? $(dtElement).clone().children('strong').remove().end().text().trim()  : '';
-        console.log(`학력: ${dtYearText}, ${dtText}`);
+        //console.log(`학력: ${dtYearText}, ${dtText}`);
         if ( !functions.isEmpty(dtText) ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
           const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
@@ -191,7 +191,7 @@ module.exports = {
         
         const dtYearText = $(dtElement).find('strong').text()  ? $(dtElement).find('strong').text().trim()  : '';
         const dtText = $(dtElement).clone().children('strong').remove().end().text() ? $(dtElement).clone().children('strong').remove().end().text().trim()  : '';
-        console.log(`경력: ${dtYearText}, ${dtText}`);
+        //console.log(`경력: ${dtYearText}, ${dtText}`);
         if ( !functions.isEmpty(dtText) ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
           const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
@@ -209,7 +209,7 @@ module.exports = {
         
         const dtYearText = $(dtElement).find('strong').text()  ? $(dtElement).find('strong').text().trim()  : '';
         const dtText = $(dtElement).clone().children('strong').remove().end().text() ? $(dtElement).clone().children('strong').remove().end().text().trim()  : '';
-        console.log(`학회: ${dtYearText}, ${dtText}`);
+        //console.log(`학회: ${dtYearText}, ${dtText}`);
         if ( !functions.isEmpty(dtText) ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
           const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
@@ -227,7 +227,7 @@ module.exports = {
         
         const dtYearText = $(dtElement).find('strong').text()  ? $(dtElement).find('strong').text().trim()  : '';
         const dtText = $(dtElement).clone().children('strong').remove().end().text() ? $(dtElement).clone().children('strong').remove().end().text().trim()  : '';
-        console.log(`연수: ${dtYearText}, ${dtText}`);
+        //console.log(`연수: ${dtYearText}, ${dtText}`);
         if ( !functions.isEmpty(dtText) ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
           const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
@@ -245,7 +245,7 @@ module.exports = {
         
         const dtYearText = $(dtElement).find('strong').text()  ? $(dtElement).find('strong').text().trim()  : '';
         const dtText = $(dtElement).clone().children('strong').remove().end().text() ? $(dtElement).clone().children('strong').remove().end().text().trim()  : '';
-        console.log(`수상: ${dtYearText}, ${dtText}`);
+        //console.log(`수상: ${dtYearText}, ${dtText}`);
         if ( !functions.isEmpty(dtText) ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
           const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');

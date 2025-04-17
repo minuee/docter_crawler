@@ -311,9 +311,9 @@ module.exports = {
         biography: [],
       };
 
-      $('#tab-2').find("div.thesisList").find("ul > li").each((index, dtElement) => {
+      $('#contBox2').find("div.thesisList").find("ul > li").each((index, dtElement) => {
         
-        const dtText = $(pEl).text().trim() ? $(pEl).text().trim().trim().substring(0,500): '';
+        const dtText = $(dtElement).text().trim() ? $(dtElement).text().trim().trim().substring(0,500): '';
         console.log(`논문 ${dtText}`);
         if ( !functions.isEmpty(dtText) && dtText?.length > 10 ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
