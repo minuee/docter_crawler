@@ -1,6 +1,6 @@
 
 const config = require(`${global.appRoot}/server/config/configuration`);
-const crawlingCtrl = require(`${global.appRoot}/services/crawling_uuh.ulsan.kr/controller`);
+const crawlingCtrl = require(`${global.appRoot}/services/crawling_cbnuh.or.kr/controller`);
 const CS = require(`${global.appRoot}/server/util/util.casting`);
 const RM = require(`${global.appRoot}/server/util/response.message`);
 const TS = require(`${global.appRoot}/server/middleware/message.handler`);
@@ -18,7 +18,7 @@ const router = asyncify(express.Router());
 module.exports = router;
 
 router.post('/healthcheck', async function(req, res) {   
-  const HOSPITAL_ID = 'H01KR-48000006';
+  const HOSPITAL_ID = 'H01KR-43000001';
   const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
   if ( ret.success === false ) {
     return res.send(ret);
@@ -26,7 +26,7 @@ router.post('/healthcheck', async function(req, res) {
 
   return res.send({
     'code': 200,
-    'message': '울산대학교병원 접속테스트',
+    'message': '충북대학교병원 접속테스트',
     'desc': 'success',
     'data' : req.body?.hid ? req.body.hid : null   
   });
@@ -35,11 +35,11 @@ router.post('/healthcheck', async function(req, res) {
 
 /**
  * @swagger
- *  /v1/c/uuh.ulsan.kr/healthcheck:
+ *  /v1/c/cbnuh.or.kr/healthcheck:
  *    post:
  *      summary: "접속 테스트"
  *      description: "서버에 접속이 됬는데 "
- *      tags: [uuh.ulsan.kr울산대학교병원]
+ *      tags: [cbnuh.or.kr-충북대학교병원]
  *      produces:
  *      parameters:
  *        - name: "hid"
@@ -73,14 +73,14 @@ router.post('/healthcheck', async function(req, res) {
 
 router.post('/step01', async function(req, res, next) {  
 
-  const HOSPITAL_ID = 'H01KR-48000006';
+  const HOSPITAL_ID = 'H01KR-43000001';
   const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
   if ( ret.success === false ) {
     return res.send(ret);
   }
 
   const data = [];
-  const r_url = `https://www.uuh.ulsan.kr/kr/index.php?pCode=treat`;
+  const r_url = `https://www.cbnuh.or.kr/prog/clnicDept/main/sub01_01_01/list.do`;
   const P1 = await crawlingCtrl.crwalingProcess01(r_url);
  
   
@@ -130,11 +130,11 @@ router.post('/step01', async function(req, res, next) {
 
 /**
  * @swagger
- *  /v1/c/uuh.ulsan.kr/step01:
+ *  /v1/c/cbnuh.or.kr/step01:
  *    post:
  *      summary: "1단계  조회"
- *      description: "울산대학교병원 정보를 가져와야 한다  "
- *      tags: [uuh.ulsan.kr울산대학교병원]
+ *      description: "충북대학교병원 정보를 가져와야 한다  "
+ *      tags: [cbnuh.or.kr-충북대학교병원]
  *      produces:
  *      parameters:
  *        - name: "hid"
@@ -169,7 +169,7 @@ router.post('/step01', async function(req, res, next) {
 
 router.post('/step02', async (req, res, next) => {
   
-  const HOSPITAL_ID = 'H01KR-48000006';
+  const HOSPITAL_ID = 'H01KR-43000001';
   const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
   if ( ret.success === false ) {
     return res.send(ret);
@@ -236,11 +236,11 @@ router.post('/step02', async (req, res, next) => {
 
 /**
  * @swagger
- *  /v1/c/uuh.ulsan.kr/step02:
+ *  /v1/c/cbnuh.or.kr/step02:
  *    post:
  *      summary: "2단계  조회"
- *      description: "울산대학교병원 정보를 가져와야 한다  "
- *      tags: [uuh.ulsan.kr울산대학교병원]
+ *      description: "충북대학교병원 정보를 가져와야 한다  "
+ *      tags: [cbnuh.or.kr-충북대학교병원]
  *      produces:
  *      parameters:
  *        - name: "hid"
@@ -272,7 +272,8 @@ router.post('/step02', async (req, res, next) => {
  */
 
 router.post('/treatise', async (req, res, next) => {
-  const HOSPITAL_ID = 'H01KR-48000006';
+
+  const HOSPITAL_ID = 'H01KR-43000001';
   const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
   if ( ret.success === false ) {
     return res.send(ret);
@@ -318,8 +319,10 @@ router.post('/treatise', async (req, res, next) => {
         if (SP6.error) {
           console.log(`SP6 DB fail.`);
           console.log(`Error on ${P1.data[i].doctorName}`)
+        }else{
+          article++;
         }
-        article++;
+       
       }
     }
   }
@@ -334,11 +337,11 @@ router.post('/treatise', async (req, res, next) => {
 
 /**
  * @swagger
- *  /v1/c/uuh.ulsan.kr/treatise:
+ *  /v1/c/cbnuh.or.kr/treatise:
  *    post:
  *      summary: "논문 조회"
- *      description: "울산대학교병원 정보를 가져와야 한다  "
- *      tags: [uuh.ulsan.kr울산대학교병원]
+ *      description: "충북대학교병원 정보를 가져와야 한다  "
+ *      tags: [cbnuh.or.kr-충북대학교병원]
  *      produces:
  *      parameters:
  *        - name: "hid"

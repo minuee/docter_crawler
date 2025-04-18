@@ -36,15 +36,14 @@ module.exports = {
       let dept = [];
       console.log(`r_url: ${r_url} `);
 
-      $('div.mteam-part-box').find("ul.mteam-part-list").find('li').each((index, element) => {
+      $('div.part-box').find("ul.part-list").find('li').each((index, element) => {
        
-        const deptName = $(element).find('div.item > div.mpart-hover').find('p').text()  ? $(element).find('div.item > div.mpart-hover').find('p').text().trim()  : '';
-        const tmpLink = $(element).find("div.item > div.mpart-hover").find("div.part-sub").find("a:eq(1)").attr('href') ? $(element).find("div.item > div.mpart-hover").find("div.part-sub").find("a:eq(1)").attr('href') : '';
+        const deptName = $(element).find('div.item > div.part-name').text() ? $(element).find('div.item > div.part-name').text().trim() : '';
+        const tmpLink = $(element).find("div.item > div.part-hover").find("div.part-sub").find("a:eq(1)").attr('href') ? $(element).find("div.item > div.part-hover").find("div.part-sub").find("a:eq(1)").attr('href') : '';
         
         console.log(`deptName: ${deptName} ${tmpLink}`);
         if ( !functions.isEmpty(tmpLink) && !functions.isEmpty(deptName) ) {
-          const reNameLink = tmpLink.replace("./","/");
-          const link = `https://www.uuh.ulsan.kr/kr/index.php${reNameLink}`;
+          const link = `https://www.kyuh.ac.kr/${tmpLink}`;
           dept.push({ 
             deptName,
             link
@@ -90,23 +89,23 @@ module.exports = {
       const $ = cheerio.load(htmlContent); 
 
       const doctors = [];
-      $('div.doctor-list-box').find('ul > li').each((index, element) => {
-        const doctorName = $(element).find('div.doctor-list-info').find('div.doc-info-wr').find('h5.docTxt > strong').text() ? $(element).find('div.doctor-list-info').find('div.doc-info-wr').find('h5.docTxt > strong').text().trim() : '';
-        const detailLink = $(element).find('a').attr('href') ?$(element).find('a').attr('href') : '';
-        const doctorProfileUrl = $(element).find('a > div.doctor-th').find('img').attr('src') ? $(element).find('a > div.doctor-th').find('img').attr('src') : '';
+      $('div.doc-intro').find('ul > li').each((index, element) => {
+        const doctorName = $(element).find('div.block').find('strong').find('span').remove().end().text() ? $(element).find('div.block').find('strong').find('span').remove().end().text().trim() : '';
+        const detailLink = $(element).find('div.block > div.photos > div').find('a').attr('href') ? $(element).find('div.block > div.photos > div').find('a').attr('href') : '';
+        const doctorProfileUrl = $(element).find('div.block > div.photos > div > a').find('img').attr('src') ? $(element).find('div.block > div.photos > div > a').find('img').attr('src') : '';
         let tmpLink = null;
         let tmpProfileUrl = null;
         if ( !functions.isEmpty(detailLink) ) {
-          tmpLink =  `https://www.uuh.ulsan.kr/kr/index.php${detailLink}`;
+          tmpLink =  `https://www.kyuh.ac.kr${detailLink}`;
         }
         if ( !functions.isEmpty(doctorProfileUrl) ) {
-          tmpProfileUrl =  `https://www.uuh.ulsan.kr${doctorProfileUrl}`;
+          tmpProfileUrl =  `https://www.kyuh.ac.kr${doctorProfileUrl}`;
         }
-      
-        console.log(`Adding doctor list: ${doctorName} ${deptName} ${tmpProfileUrl} ${tmpLink}`); // 디버
-        if ( !functions.isEmpty(doctorName) && !functions.isEmpty(tmpLink) ) {
+        const doctorName2 = doctorName.replace("교수","").trim();
+        console.log(`Adding doctor list: ${doctorName2} ${deptName} ${tmpProfileUrl} ${tmpLink}`); // 디버
+        if ( !functions.isEmpty(doctorName2) && !functions.isEmpty(tmpLink) ) {
           const doctor = {
-            doctorName,
+            doctorName : doctorName2,
             deptName,
             url: tmpLink,
             profile_url : tmpProfileUrl
