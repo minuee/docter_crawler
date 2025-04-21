@@ -79,6 +79,7 @@
             ) AS db ON db.hid = db2.hid	
             LEFT JOIN hospital h on db2.hid = h.hid
         GROUP BY db2.hid
+        ORDER BY db2.hid
     </select>
 
     <select id="select_check_doctor_profileurl_http">
@@ -393,6 +394,7 @@
                 AND db2.hid = #{hid}
             </if>
         GROUP BY db2.hid
+        ORDER BY db2.hid
     </select>
 
     <select id="select_check_treatise_pubmed_journal_ratio">

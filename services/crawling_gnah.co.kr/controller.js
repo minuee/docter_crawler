@@ -36,14 +36,14 @@ module.exports = {
       let dept = [];
       console.log(`r_url: ${r_url} `);
 
-      $('div.part-box').find("ul.part-list").find('li').each((index, element) => {
+      $('div.depart-wr').find("ul > li").each((index, element) => {
        
-        const deptName = $(element).find('div.item > div.part-name').text() ? $(element).find('div.item > div.part-name').text().trim() : '';
-        const tmpLink = $(element).find("div.item > div.part-hover").find("div.part-sub").find("a:eq(1)").attr('href') ? $(element).find("div.item > div.part-hover").find("div.part-sub").find("a:eq(1)").attr('href') : '';
+        const deptName = $(element).find('div.deptLink').find('p').find('span').text() ? $(element).find('div.deptLink').find('p').find('span').text().trim() : '';
+        const tmpLink = $(element).find('div.deptLink').find('a.staff').attr('href') ? $(element).find('div.deptLink').find('a.staff').attr('href') : '';
         
         console.log(`deptName: ${deptName} ${tmpLink}`);
         if ( !functions.isEmpty(tmpLink) && !functions.isEmpty(deptName) ) {
-          const link = `https://www.kyuh.ac.kr/${tmpLink}`;
+          const link = `https://www.gnah.co.kr${tmpLink}`;
           dept.push({ 
             deptName,
             link
@@ -89,17 +89,18 @@ module.exports = {
       const $ = cheerio.load(htmlContent); 
 
       const doctors = [];
-      $('div.doc-intro').find('ul > li').each((index, element) => {
-        const doctorName = $(element).find('div.block').find('strong').find('span').remove().end().text() ? $(element).find('div.block').find('strong').find('span').remove().end().text().trim() : '';
-        const detailLink = $(element).find('div.block > div.photos > div').find('a').attr('href') ? $(element).find('div.block > div.photos > div').find('a').attr('href') : '';
-        const doctorProfileUrl = $(element).find('div.block > div.photos > div > a').find('img').attr('src') ? $(element).find('div.block > div.photos > div > a').find('img').attr('src') : '';
+      $('div.wrap-timeDoctors').find('ul > li').each((index, element) => {
+        const doctorName = $(element).find('div.side-L > div.txtBox > p').find('span.name').text() ? $(element).find('div.side-L > div.txtBox > p').find('span.name').text().trim() : '';
+        const detailLink = $(element).find('div.side-R').find('div.btnBox').find('a:eq(1)').attr('href') ? $(element).find('div.side-R').find('div.btnBox').find('a:eq(1)').attr('href') : '';
+        const doctorProfileUrl = $(element).find('div.side-L > div.imgBox').find('img').attr('src') ? $(element).find('div.side-L > div.imgBox').find('img').attr('src') : '';
+        
         let tmpLink = null;
         let tmpProfileUrl = null;
         if ( !functions.isEmpty(detailLink) ) {
-          tmpLink =  `https://www.kyuh.ac.kr${detailLink}`;
+          tmpLink =  `https://www.gnah.co.kr${detailLink}`;
         }
         if ( !functions.isEmpty(doctorProfileUrl) ) {
-          tmpProfileUrl =  `https://www.kyuh.ac.kr${doctorProfileUrl}`;
+          tmpProfileUrl =  `https://www.gnah.co.kr${doctorProfileUrl}`;
         }
         const doctorName2 = doctorName.replace("교수","").trim();
         console.log(`Adding doctor list: ${doctorName2} ${deptName} ${tmpProfileUrl} ${tmpLink}`); // 디버
@@ -156,7 +157,7 @@ module.exports = {
       await page.keyboard.press('ArrowUp');
       const htmlContent = await page.content();
       const $ = cheerio.load(htmlContent);  
-      let tmpSpecialty = $('div.doctor-section').find('div.intro-content').find('p.con').find('span').remove().end().text() ? $('div.doctor-section').find('div.intro-content').find('p.con').find('span').remove().end().text().trim() : '';
+      let tmpSpecialty = $('div.doctBaseInfo').find('dl.doctSect').find('dd').text() ? $('div.doctBaseInfo').find('dl.doctSect').find('dd').text().trim() : '';
       console.log(`specialtyJson: ${tmpSpecialty}`);
       // 진료분야를 json화 한다
       let specialtyJson = tmpSpecialty.split(",");
@@ -168,31 +169,15 @@ module.exports = {
         biography: [],
       };
      
-      $('div.profile').find('div.item').each((index, dtElement) => {
+      $("#mCSB_3").find('div.mCSB_container').find('div.unit').each((index, dtElement) => {
 
-        const titleText = $(dtElement).find('h3.tit, h4.tit').first().text().trim();
+        const titleText = $(dtElement).find('h3.unitTit').first().text().trim();
         console.log(`titleText ${titleText}`);
         if (titleText.includes('학력')) {
-          $(dtElement).children('h3.tit, h4.tit').next('ul.car-list').find('li').each((j, pEl) => {
-            const dtText = $(pEl).find("em").text() ? $(pEl).find("em").text().trim().trim().substring(0,500): '';
-            const dtYearText = $(pEl).find("span").text() ? $(pEl).find("span").text().trim().trim().substring(0,500): '';
-            
-            if ( !functions.isEmpty(dtText)  && dtText?.length > 6) {
-              
-              const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-              console.log(`학력 ${dtYearText} ${tmpText}`);
-              item.biography.push({
-                targetDate : dtYearText,
-                type: "학력",
-                text: tmpText,
-                url: null,
-                issuer:null
-              });
-            }
-          });
-        }else if (titleText.includes('경력')) {
-          $(dtElement).children('h3.tit, h4.tit').next('ul').find('li').each((j, pEl) => {
-            const dtText = $(pEl).find("em").text() ? $(pEl).find("em").text().trim().trim().substring(0,500): '';
+          $(dtElement).find("h3.unitTit").filter((i, el) => {
+            return $(el).text().includes("학력 및 이력");
+          }).next('ul').find('li').each((j, pEl) => {
+            const dtText = $(pEl).find("span.tText").text() ? $(pEl).find("span.tText").text().trim().substring(0,500): '';
             
             if ( !functions.isEmpty(dtText)  && dtText?.length > 6) {
               
@@ -207,27 +192,11 @@ module.exports = {
               });
             }
           });
-        }else if (titleText.includes('연구')) {
-          $(dtElement).children('h3.tit, h4.tit').next('ul').find('li').each((j, pEl) => {
-            const dtText = $(pEl).find("em").text() ? $(pEl).find("em").text().trim().trim().substring(0,500): '';
-            
-            if ( !functions.isEmpty(dtText)  && dtText?.length > 6) {
-              
-              const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-              console.log(`저서 ${tmpText}`);
-              item.biography.push({
-                targetDate : null,
-                type: "저서",
-                text: tmpText,
-                url: null,
-                issuer:null
-              });
-            }
-          });
         }else if (titleText.includes('학회')) {
-          $(dtElement).children('h3.tit, h4.tit').next('ul').find('li').each((j, pEl) => {
-            const dtText = $(pEl).find("em").text() ? $(pEl).find("em").text().trim().trim().substring(0,500): '';
-            
+          $(dtElement).find("h3.unitTit").filter((i, el) => {
+            return $(el).text().includes("학회 활동");
+          }).next('ul').find('li').each((j, pEl) => {
+            const dtText =  $(pEl).text() ? $(pEl).text().trim().substring(0,500) : '';
             if ( !functions.isEmpty(dtText)  && dtText?.length > 6) {
               
               const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');

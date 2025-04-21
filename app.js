@@ -176,6 +176,9 @@ class App {
       this.app.use('/v1/c/dkuh.co.kr', require(`${global.appRoot}/services/crawling_dkuh.co.kr/route`)); //단국대학교병원
       this.app.use('/v1/c/cnuh.co.kr', require(`${global.appRoot}/services/crawling_cnuh.co.kr/route`)); //충남대학교병원
       this.app.use('/v1/c/kyuh.ac.kr', require(`${global.appRoot}/services/crawling_kyuh.ac.kr/route`)); //건양대학교병원
+      this.app.use('/v1/c/gnah.co.kr', require(`${global.appRoot}/services/crawling_gnah.co.kr/route`)); //강릉아산병원
+      this.app.use('/v1/c/ywmc.or.kr', require(`${global.appRoot}/services/crawling_ywmc.or.kr/route`)); //연대원주 세브란스병원
+      this.app.use('/v1/c/wkuh.org', require(`${global.appRoot}/services/crawling_wkuh.org/route`)); //원광대학교병원
 
       /* 기타 작업 */
       this.app.use('/v1/c/crawling_check', require(`${global.appRoot}/services/crawling_check/route`)); // 검증
