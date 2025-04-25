@@ -157,7 +157,7 @@ module.exports = {
       await page.keyboard.press('ArrowUp');
       const htmlContent = await page.content();
       const $ = cheerio.load(htmlContent);  
-      let tmpSpecialty = $('div.doctorIntro').find('dl.introHeader > div').find('dl').find('dd').find('span').remove().end().text() ? $('div.doctorIntro').find('dl.introHeader > div').find('dl').find('dd').find('span').remove().end().text().trim() : '';
+      let tmpSpecialty = $('div.doctorIntro').find('div.introHeader > div').find('dl').find('dd').find('span').remove().end().text() ? $('div.doctorIntro').find('div.introHeader > div').find('dl').find('dd').find('span').remove().end().text().trim() : '';
       console.log(`specialtyJson: ${tmpSpecialty}`);
       // 진료분야를 json화 한다
       let specialtyJson = tmpSpecialty.split(",");
@@ -181,10 +181,10 @@ module.exports = {
               
               const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
               const tmpYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-              console.log(`경력 ${tmpText}`);
+              console.log(`학력 ${tmpText}`);
               item.biography.push({
                 targetDate : tmpYearText,
-                type: "경력",
+                type: "학력",
                 text: tmpText,
                 url: null,
                 issuer:null

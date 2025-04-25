@@ -173,16 +173,28 @@ module.exports = {
         const dtYearText = '';
         
         if ( !functions.isEmpty(dtText)  && dtText?.length > 6) {
+          if (dtText.match(/(학사|석사|박사|졸업)/)) {
+            const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+            console.log(`학력 ${dtYearText} ${tmpText}`);
+            item.biography.push({
+              targetDate : dtYearText,
+              type: "학력",
+              text: tmpText,
+              url: null,
+              issuer:null
+            });
+          }else{
+            const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+            console.log(`경력 ${dtYearText} ${tmpText}`);
+            item.biography.push({
+              targetDate : dtYearText,
+              type: "경력",
+              text: tmpText,
+              url: null,
+              issuer:null
+            });
+          }
           
-          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-          console.log(`경력 ${dtYearText} ${tmpText}`);
-          item.biography.push({
-            targetDate : dtYearText,
-            type: "경력",
-            text: tmpText,
-            url: null,
-            issuer:null
-          });
         }
       });
 

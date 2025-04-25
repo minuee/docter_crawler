@@ -177,16 +177,27 @@ module.exports = {
           $(sectionElement).find('div.edu_con').find('ul > li').each((index, liElement) => {
             const dtText = $(liElement).text().trim();
             if ( !functions.isEmpty(dtText)  && dtText?.length > 6) {
-                  
-              const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-              console.log(`경력 ${tmpText}`);
-              item.biography.push({
-                targetDate : null,
-                type: "경력",
-                text: tmpText,
-                url: null,
-                issuer:null
-              });
+              if (dtText.match(/(학사|석사|박사)/)) {
+                const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+                console.log(`학력 ${tmpText}`);
+                item.biography.push({
+                  targetDate : null,
+                  type: "학력",
+                  text: tmpText,
+                  url: null,
+                  issuer:null
+                });
+              }else{
+                const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+                console.log(`경력 ${tmpText}`);
+                item.biography.push({
+                  targetDate : null,
+                  type: "경력",
+                  text: tmpText,
+                  url: null,
+                  issuer:null
+                });
+              }
             }
           });
         }else if (title.includes('학회')) {
@@ -217,16 +228,27 @@ module.exports = {
           $(sectionElement).find('div.edu_con').find('ul > li').each((index, liElement) => {
             const dtText = $(liElement).text().trim();
             if ( !functions.isEmpty(dtText)  && dtText?.length > 6 && !dtText.includes('없습니다')) {
-                  
-              const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-              console.log(`경력 ${tmpText}`);
-              item.biography.push({
-                targetDate : null,
-                type: "경력",
-                text: tmpText,
-                url: null,
-                issuer:null
-              });
+              if (dtText.match(/(학사|석사|박사)/)) {
+                const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+                console.log(`학력 ${tmpText}`);
+                item.biography.push({
+                  targetDate : null,
+                  type: "학력",
+                  text: tmpText,
+                  url: null,
+                  issuer:null
+                });
+              }else{
+                const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+                console.log(`경력 ${tmpText}`);
+                item.biography.push({
+                  targetDate : null,
+                  type: "경력",
+                  text: tmpText,
+                  url: null,
+                  issuer:null
+                });
+              }
             }
           });
         }else if (title.includes('학회')) {
