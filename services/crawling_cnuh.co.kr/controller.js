@@ -177,34 +177,76 @@ module.exports = {
               $(liElement).find("ul > li").each((index, insideLiElement) => {
                 const dtText = $(insideLiElement).text().trim();
                 if ( !functions.isEmpty(dtText)  && dtText?.length > 6) {
-                  
-                  const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-                  console.log(`학력 ${tmpText}`);
-                  item.biography.push({
-                    targetDate : null,
-                    type: "학력",
-                    text: tmpText,
-                    url: null,
-                    issuer:null
-                  });
+                  if (dtText.match(/(학사|석사|박사|졸업)/)) {
+                    const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+                    console.log(`학력 ${tmpText}`);
+                    item.biography.push({
+                      targetDate : null,
+                      type: "학력",
+                      text: tmpText,
+                      url: null,
+                      issuer:null
+                    });
+                  }
                 }
               })
             }else if (subTitle.includes('경력')) { 
               $(liElement).find("ul > li").each((index, insideLiElement) => {
                 const dtText = $(insideLiElement).text().trim();
                 if ( !functions.isEmpty(dtText)  && dtText?.length > 6) {
-                  
-                  const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-                  console.log(`경력 ${tmpText}`);
-                  item.biography.push({
-                    targetDate : null,
-                    type: "경력",
-                    text: tmpText,
-                    url: null,
-                    issuer:null
-                  });
+                  if (dtText.match(/(학사|석사|박사|졸업)/)) {
+                    const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+                    console.log(`학력 ${tmpText}`);
+                    item.biography.push({
+                      targetDate : null,
+                      type: "학력",
+                      text: tmpText,
+                      url: null,
+                      issuer:null
+                    });
+                  }else{
+                    const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+                    console.log(`경력 ${tmpText}`);
+                    item.biography.push({
+                      targetDate : null,
+                      type: "경력",
+                      text: tmpText,
+                      url: null,
+                      issuer:null
+                    });
+                  }
                 }
               })
+            }else{
+              $(liElement).find("ul > li").each((index, insideLiElement) => {
+                const dtText = $(insideLiElement).text().trim();
+                
+                if ( !functions.isEmpty(dtText)  && dtText?.length > 6) {
+                  if (dtText.match(/(학사|석사|박사|졸업)/)) {
+                    const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+                    console.log(`학력 ${tmpText}`);
+                    item.biography.push({
+                      targetDate : null,
+                      type: "학력",
+                      text: tmpText,
+                      url: null,
+                      issuer:null
+                    });
+                  }else{
+                    const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+                    console.log(`경력 ${tmpText}`);
+                    item.biography.push({
+                      targetDate : null,
+                      type: "경력",
+                      text: tmpText,
+                      url: null,
+                      issuer:null
+                    });
+                  }
+                  
+                }
+              })
+              
             }
           });
         }else if (title.includes('학회')) {

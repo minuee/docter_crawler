@@ -202,17 +202,29 @@ module.exports = {
         sections.경력.forEach(async (dtText) => {
     
           if ( !functions.isEmpty(dtText)  && dtText?.length > 6 && dtText != "등록된 자료가 없습니다.") {
-                
-            const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-    
-            console.log(`경력: ${tmpText}`);
-            item.biography.push({
-              targetDate : null,
-              type: "경력",
-              text: tmpText,
-              url: null,
-              issuer:null
-            });
+            if (dtText.match(/(학사|석사|박사|졸업)/)) {
+              const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+      
+              console.log(`학력: ${tmpText}`);
+              item.biography.push({
+                targetDate : null,
+                type: "학력",
+                text: tmpText,
+                url: null,
+                issuer:null
+              });
+            }else{
+              const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+      
+              console.log(`경력: ${tmpText}`);
+              item.biography.push({
+                targetDate : null,
+                type: "경력",
+                text: tmpText,
+                url: null,
+                issuer:null
+              });
+            }
           }
         })
         sections.학회.forEach(async (dtText) => {
@@ -220,7 +232,7 @@ module.exports = {
                 
             const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
     
-            console.log(`학회: ${tmpText}`);
+            //console.log(`학회: ${tmpText}`);
             item.biography.push({
               targetDate : null,
               type: "학회",
@@ -235,7 +247,7 @@ module.exports = {
                 
             const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
     
-            console.log(`수상: ${tmpText}`);
+            //console.log(`수상: ${tmpText}`);
             item.biography.push({
               targetDate : null,
               type: "수상",
@@ -250,7 +262,7 @@ module.exports = {
       const paperHtmlData = $('div.paper_ul > ul').html();
       if (!functions.isEmpty(paperHtmlData)) {
         const sections2 = await getParsePaper(paperHtmlData);
-        console.log(`저서 count: ${sections2.논문.length}`);
+        //console.log(`저서 count: ${sections2.논문.length}`);
         sections2.논문.forEach(async (dtText) => {
           if ( !functions.isEmpty(dtText)  && dtText?.length > 6 && dtText != "등록된 자료가 없습니다.") {
                 
@@ -308,7 +320,7 @@ module.exports = {
           currentSection = '수상';
         } else {
           if (currentSection === '학력' || currentSection === '경력') {
-            if (decodedText.match(/(학사|석사|박사)/)) {
+            if (decodedText.match(/(학사|석사|박사|졸업)/)) {
               const modifiedText = decodedText.replaceAll("(", "<").replaceAll(")", ">").replaceAll(",", " ").trim();
               if( !functions.isEmpty(modifiedText) ) {
                 sections.학력.push(modifiedText);
