@@ -6,7 +6,7 @@
     "not_use_staging:docker": "pm2-runtime start ecosystem.config.js --env staging",
     "not_use_live:docker": "pm2-runtime start ecosystem.config.js --env production",
     "deploy:staging": "pm2 deploy ecosystem.config.js staging",
-    "nodemon": "nodemon api.worker.js",
+    "nodemon": "nodemon server.js",
     "local": "pm2 start ecosystem.config.js --env local --no-daemon"
   },
   "author": "",
@@ -56,7 +56,8 @@
     "socket.io-redis": "^6.1.1",
     "uuid": "^8.3.2",
     "xlsx": "^0.18.5",
-    "xml-js": "^1.6.11"
+    "xml-js": "^1.6.11",
+    "xml2js": "^0.6.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.22",

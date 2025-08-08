@@ -15,26 +15,8 @@ const xlsx = require('xlsx');
 const _ = require('lodash');
 const path = require('path');
 const router = asyncify(express.Router());
-
-router.get('/healthcheck', async function(req, res) {    
-  const result = true;
-  if ( result ) { 
-    res.send({
-      'code': 200,
-      'message': '접속테스트',
-      'desc': 'success',
-      'data' : null 
-    });
-  }else{
-    res.send({
-      'code': 200,
-      'message': '접속테스트',
-      'desc': 'failed',
-      'data' : result
-    });
-  }
-});
-
+const xml2js = require('xml2js');
+const parser = new xml2js.Parser({ explicitArray: false });
 /**
  * @swagger
  *  /v1/c/open.go.kr/healthcheck:
@@ -57,6 +39,96 @@ router.get('/healthcheck', async function(req, res) {
  *                      example:    
  *                            { "code": 1000, "message": "접속성공" }
  */
+
+router.get('/healthcheck', async function(req, res) {    
+  const result = true;
+  if ( result ) { 
+    res.send({
+      'code': 200,
+      'message': '접속테스트',
+      'desc': 'success',
+      'data' : null 
+    });
+  }else{
+    res.send({
+      'code': 200,
+      'message': '접속테스트',
+      'desc': 'failed',
+      'data' : result
+    });
+  }
+});
+
+/**
+ * @swagger
+ *  /v1/c/open.go.kr/hospital:
+ *    get:
+ *      summary: "병원리스트 조회"
+ *      description: "병원정보 가져오기"
+ *      tags: [OpenAPI_data.go.kr-공공정보]
+ *      responses:
+ *        "200":
+ *          description: 접속 테스트
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    users:
+ *                      type: object
+ *                      example:    
+ *                            { "code": 1000, "message": "접속성공" }
+ */
+
+router.get('/hospital', async (req, res, next) => {
+
+  // 공공데이터포털 API 키
+  const serviceKey = 'e7haGJX%2BVphQb%2B3Q%2FSqH8QgJtWFeokI1NWHKlKIYGfS6OxJ1EeYZ6Pp5cjAFV2xA7OzOORLLdwg0tZ2kwClFDw%3D%3D';
+  //40551110  
+  const NUM_OF_ROWS = 100;
+  const MAX_PAGE = 600;//190;✅ 266 페이지 처리 완료
+  let list_cnt = 0;
+  let list_success_cnt = 0;
+  try {
+    for (let page = 500; page <= MAX_PAGE; page++) {
+      const url = `https://apis.data.go.kr/B551182/hospInfoServicev2/getHospBasisList?ServiceKey=${serviceKey}&pageNo=${page}&numOfRows=${NUM_OF_ROWS}&_type=json`;
+      const response = await axios.get(url);
+      const body = response.data?.response?.body;
+      let items = body?.items?.item;
+      if (!items) {
+        console.warn("⚠️ 병원 데이터가 없습니다.");
+      } else if (!Array.isArray(items)) {
+        // 단일 객체인 경우 배열로 감싸기
+        items = [items];
+      }
+
+      for (const hospital of items) {
+        const P1 = await crawlingCtrl.saveToDatabase(hospital); // 👉 여기에서 저장 실행
+        if ( P1.success ) {
+          list_success_cnt++;
+        }
+        list_cnt++;
+        await CS.wait(500); // 2초정도로
+      } 
+      
+      console.log(`✅ ${page} 페이지 처리 완료`);
+      await CS.wait(3000); // 5초정도로
+    }
+    console.error(`수집된 병원수 : ${list_cnt}, 정상저장 병원수 : ${list_success_cnt}`);
+    return res.send({
+      code : 200,
+      success: true,
+      message: `수집된 병원수 : ${list_cnt}, 정상저장 병원수 : ${list_success_cnt}`
+    });
+  } catch (error) {
+    console.error('에러 발생:', error.message);
+    res.status(500).send('데이터 수집 중 오류 발생');
+  }
+  
+});
+
 
 router.post('/type02', async (req, res, next) => {
   const ip = req.clientIp;

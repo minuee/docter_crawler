@@ -14,100 +14,61 @@ const _ = require('lodash');
 const xlsx = require('xlsx');
 const path = require('path');
 const { isJSON } = require('../../server/util/util.casting');
-const mybatisMapper = require("mybatis-mapper");
-const functions = require(`${global.appRoot}/server/util/function`);
+
+
 
 module.exports = {
 
-  xls2DBType01: async (p_types, p_hospitalName, p_evaluationItem, p_grade, p_location, p_phoneNumber) => {
-    let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL set_dataGoData1(?)`
-    const { DBError = null, RS = null } = await daoMysql.spCall(query, [p_types, p_hospitalName, p_evaluationItem, p_grade, p_location, p_phoneNumber]);
-    if (DBError) {
-      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
-      return { error: DBError, data: null };
-    }
-    // console.log(RS)
-    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
-    DBData = _.get(RS, [1], [])
 
-    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
-    console.log(error)
-    result = DBData
-    return { error: error, data: result };
-  },
+  updateTest: async () => {
 
-
-  xls2DBType02: async (p_types, p_hospitalName, p_evaluationItem, p_grade, p_location, p_phoneNumber) => {
-    let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL set_dataGoData2(?)`
-    const { DBError = null, RS = null } = await daoMysql.spCall(query, [p_types, p_hospitalName, p_evaluationItem, p_grade, p_location, p_phoneNumber]);
-    if (DBError) {
-      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
-      return { error: DBError, data: null };
-    }
-    // console.log(RS)
-    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
-    DBData = _.get(RS, [1], [])
-
-    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
-    console.log(error)
-    result = DBData
-    return { error: error, data: result };
-  },
-
-
-
-  xls2DBType03: async (p_hid, p_yKiho, p_baseName, p_asmGrd, p_asmGrdNm, p_asmNm, p_yadmNm, p_baseYear) => {
-    let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL set_dataGoData3(?)`
-    const { DBError = null, RS = null } = await daoMysql.spCall(query, [p_hid, p_yKiho, p_baseName, p_asmGrd, p_asmGrdNm, p_asmNm, p_yadmNm, p_baseYear]);
-    if (DBError) {
-      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
-      return { error: DBError, data: null };
-    }
-    // console.log(RS)
-    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
-    DBData = _.get(RS, [1], [])
-
-    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
-    console.log(error)
-    result = DBData
-    return { error: error, data: result };
-  },
-
-
-
-
-  openGoApiType01: async (url) => {
-    let result = null
-    let error = null
-    const contentType = 'application/json;charset=UTF-8'
-    const referer = url.replace('api', 'page')
-    const userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0'
-    try {
-      Response = await axios.get(url, {
-        params: {
-          // 정부 IT 관리자는 서비스 키를 인코딩 디코딩키를 두개를 겸용해서 알아서 쓰라고한다. 이게 KOREAN GOV IT STYLE
-          // ServiceKey: 'ABR6mxYh7TOdEEb2GKmcb%2Fd9TFmF3P6xXCghwXoYJSuzoIYj1QBas2ntPCVmbKQ6rU3nLXxMW1wU%2FwoDegVMFg%3D%3D',
-          ServiceKey: 'ABR6mxYh7TOdEEb2GKmcb/d9TFmF3P6xXCghwXoYJSuzoIYj1QBas2ntPCVmbKQ6rU3nLXxMW1wU/woDegVMFg==',
-          numOfRows: 999,
-          pageNo: 1,
-          ykiho: 'JDQ4MTg4MSM1MSMkMSMkMCMkOTkkMzgxMzUxIzMxIyQxIyQzIyQ5OSQyNjEwMDIjNDEjJDEjJDgjJDgz'
-        },
-        headers: {
-          'Content-Type': contentType,
-          'Referer': 'https://www.google.com',
-          'User-Agent': userAgent
+    // 국립국어원 API로 로마자 표기 조회
+    async function lookupRomanName(korName) {
+      const url = 'https://korean.go.kr/kornorms/exampleReqList.do';
+      const SERVICE_KEY = 'eVaHQrS9J7CJ9tVO0246zACNu6GWGI';
+      try {
+        const response = await axios.get(url, {
+          params: {
+            serviceKey: SERVICE_KEY,
+            langType: '0004',           // 0004 = 로마자 표기 용례
+            s_foreign_gubun: '0001',      // 0001 = 인명
+            searchKeyword: korName,
+            //s_foreign_gubun:'',
+            searchEquals: 'like',
+            resultType: 'json',
+            pageNo: 1,
+            numOfRows: 10
+          }
+        });
+        console.log('ret =', response.data?.exampleOpenApiVO?.roman_mark);
+        const items = response.data?.items;
+        if (items && items.length > 0) {
+          // 첫번째 결과의 roman_mark 사용
+          return items[0].roman_mark;
         }
-      })
-    } catch (error) {
-      console.log(`error on ${url} API return: ${error}`);
+
+        return null;
+      } catch (error) {
+        console.log('API 호출 에러:', error);
+        return null;
+      }
     }
-    console.log(`Response >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>`)
-    const resData = Response.data
-    console.log(`resData >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> `);
-    console.log(resData);
+
+    async function convertKorNameToRoman(korName) {
+      const apiResult = await lookupRomanName(korName);
+      if (apiResult) {
+        return apiResult;
+      }
+      return korName;
+    }
+
+    const testNames = ["가경동", "가곡동"];
+
+    for (const name of testNames) {
+      const romanName = await convertKorNameToRoman(name);
+      console.log(`${name} → ${romanName}`);
+    }
+    
     return { error: error, data: resData };
   },
 
@@ -485,47 +446,6 @@ module.exports = {
     result = DBData
     return { error: error, data: result };
   },
-
-  saveToDatabase : async(item) => {
-
-    function ensureHttp(url) {
-      if (!/^https?:\/\//i.test(url)) {
-        return 'http://' + url;
-      }
-      return url;
-    }
-    //mapper 경로
-    mybatisMapper.createMapper([`${global.appRoot}/services/openAPI_data.go.kr/controler.xml`]);
-    
-    try {
-      
-        const param = {
-          h_name : item?.yadmNm,
-          h_addr : item?.addr,
-          h_class : item?.clCd,
-          h_class_name : item?.clCdNm,
-          h_site : ensureHttp(item?.hospUrl) || null,
-          h_tel : item?.telno,
-          h_lon : item?.XPos,
-          h_lat : item?.YPos
-        }; 
-        const format = { language: "sql", indent: "  " };
-        const query = mybatisMapper.getStatement(
-            "controler",
-            "insertHospital",
-            param,
-            format
-        );
-        //console.log(`query : ${query}`)
-        const { DBError = null, RS = null } = await daoMysql.spCall(query);
-        const ret = await  functions.myBatisResult(DBError,RS)
-        return { success: true, data: ret };
-    }catch(e){
-        console.error(`error : ${e}`)
-        return { success : false,error: e, data: [] };
-    }
-
-  }
 
 
 }

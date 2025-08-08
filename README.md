@@ -50,3 +50,21 @@ node api.worker
 Korea Medicare
 
 
+# Read more about SSH config files: https://linux.die.net/man/5/ssh_config
+Host PRMagnet
+    HostName 13.209.158.207
+    User ec2-user
+    IdentityFile /Users/kormedi/Documents/WorkPlace/Docfile/pemkey/fpr-prod-cloud9.pem
+
+Host Aiga-Web-dev
+    HostName 115.165.71.58
+    User ubuntu
+    IdentityFile /Users/kormedi/Documents/WorkPlace/Docfile/pemkey/aiga2025.pem
+    IdentitiesOnly no
+    LogLevel DEBUG3
+    ConnectTimeout 60
+
+Host Dev-Aiga-Web
+    HostName 115.165.71.58
+    User ubuntu
+    IdentityFile /Users/kormedi/.ssh/aiga2025.pem

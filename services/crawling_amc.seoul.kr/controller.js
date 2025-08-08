@@ -320,11 +320,8 @@ module.exports = {
       totalCount: totalCount,
       url: tempUrl
     }
-
     return { error: error, data: result };
-
   },
-
 
   getTreatiseDetail: async (url, refPage) => {
     let result = null, error = null, DBCode = null
