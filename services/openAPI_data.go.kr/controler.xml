@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="controler">  
 
-    <insert id="insertHospital" parameterType="Hospital" useGeneratedKeys="true" keyProperty="hospitalCid">
+    <insert id="insertHospital">
         INSERT INTO hospital_all_list (
             hospital_name,
             hospital_addr,
@@ -12,6 +12,13 @@
             hospital_tel,
             hospital_lon,
             hospital_lat,
+            yoyang_giho,
+            sidocode,
+            sidocode_name,
+            sigungu_code,
+            sigungu_code_name,
+            eupmyeon,
+            open_date,
             created_at
         ) VALUES (
             #{h_name},
@@ -22,6 +29,13 @@
             #{h_tel},
             #{h_lon},
             #{h_lat},
+            #{h_ykiho},
+            #{h_sidoCD},
+            #{h_sidoCdNm},
+            #{h_sgguCd},
+            #{h_sgguCdNm},
+            #{h_emdongNm},
+            #{h_estbDd},
             NOW()
         )
         ON DUPLICATE KEY UPDATE
@@ -31,6 +45,152 @@
             hospital_site = #{h_site},
             hospital_lon = #{h_lon},
             hospital_lat = #{h_lat},
+            yoyang_giho = #{h_ykiho},
+            sidocode = #{h_sidoCD},
+            sidocode_name = #{h_sidoCdNm},
+            sigungu_code = #{h_sgguCd},
+            sigungu_code_name = #{h_sgguCdNm},
+            eupmyeon = #{h_emdongNm},
+            open_date = #{h_estbDd},
+            updated_at = NOW()
+    </insert>
+
+    <insert id="tempInsertHospital">
+        INSERT INTO hospital_all_list (
+            hospital_name,
+            hospital_addr,
+            hospital_class_code,
+            hospital_class_name,
+            hospital_site,
+            hospital_tel,
+            hospital_lon,
+            hospital_lat,
+            yoyang_giho,
+            sidocode,
+            sidocode_name,
+            sigungu_code,
+            sigungu_code_name,
+            eupmyeon,
+            open_date,
+            created_at
+        ) VALUES (
+            #{h_name},
+            #{h_addr},
+            #{h_class},
+            #{h_class_name},
+            #{h_site},
+            #{h_tel},
+            #{h_lon},
+            #{h_lat},
+            #{h_ykiho},
+            #{h_sidoCD},
+            #{h_sidoCdNm},
+            #{h_sgguCd},
+            #{h_sgguCdNm},
+            #{h_emdongNm},
+            #{h_estbDd},
+            NOW()
+        )
+        ON DUPLICATE KEY UPDATE
+            hospital_class_code = #{h_class},
+            hospital_class_name = #{h_class_name},
+            hospital_lon = #{h_lon},
+            hospital_lat = #{h_lat},
+            yoyang_giho = #{h_ykiho},
+            sidocode = #{h_sidoCD},
+            sidocode_name = #{h_sidoCdNm},
+            sigungu_code = #{h_sgguCd},
+            sigungu_code_name = #{h_sgguCdNm},
+            eupmyeon = #{h_emdongNm},
+            open_date = #{h_estbDd},
+            updated_at = NOW()
+    </insert>
+
+     <select id="select_origin_hospital">
+        SELECT 
+            a.hospital_name,
+            a.hospital_class_code,
+            a.sidocode,
+            a.hospital_addr,
+            a.hospital_lon,
+            a.hospital_lat,
+            a.hospital_tel,
+            a.yoyang_giho,
+            left(a.sidocode,2) as sidocodetwo
+        FROM
+            hospital_all_list as a
+        WHERE
+            1=1 and a.old_hid is null and a.hospital_class_code in ('01',11,21 )
+        ORDER BY a.hospital_cid ASC
+    </select>
+
+    <select id="select_origin_hospital_summary">
+       SELECT 
+            count(*) as cnt,count(*)+1 as newNo
+        FROM
+            hospital as a
+        WHERE
+            SUBSTRING(a.hid, 2, 2) = #{h_class_code} 
+            and SUBSTRING(a.hid, 7, 2) = #{h_sidocodetwo}
+            and SUBSTRING(a.hid, 4, 2) = 'KR'
+        LIMIT 1
+    </select>
+
+     <insert id="makeHospitalId">
+        INSERT INTO hospital (
+            hid,
+            baseName,
+            shortName,
+            address,
+            lon,
+            lat,
+            telephone,
+            yoyang_giho,
+            createAt
+        ) VALUES (
+            #{new_hid},
+            #{h_name},
+            #{h_name},
+            #{h_address},
+            #{h_lon},
+            #{h_lat},
+            #{h_tel},
+            #{h_ykiho},
+            NOW()
+        )
+        ON DUPLICATE KEY UPDATE
+            shortName = #{h_name},
+            address = #{h_address},
+            telephone = #{h_tel},
+            lon = #{h_lon},
+            lat = #{h_lat},
+            updateAt = NOW()
+    </insert>
+
+    <select id="select_table_hospital">
+        SELECT 
+            a.*
+        FROM
+            hospital as a
+        WHERE
+            1=1
+        ORDER BY a.hid
+    </select>
+
+    <insert id="makeHospitalAlias">
+        INSERT INTO hospital_alias (
+            hid,
+            standard_name,
+            alias_name,
+            created_at
+        ) VALUES (
+            #{h_hid},
+            #{h_name},
+            #{h_alias_name},
+            NOW()
+        )
+        ON DUPLICATE KEY UPDATE
+            hid = #{h_hid},
             updated_at = NOW()
     </insert>
 </mapper>

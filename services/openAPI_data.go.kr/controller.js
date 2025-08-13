@@ -505,14 +505,21 @@ module.exports = {
           h_class : item?.clCd,
           h_class_name : item?.clCdNm,
           h_site : ensureHttp(item?.hospUrl) || null,
-          h_tel : item?.telno,
+          h_tel : item?.telno == undefined ? null : item?.telno,
           h_lon : item?.XPos,
-          h_lat : item?.YPos
+          h_lat : item?.YPos,
+          h_sidoCD : item?.sidoCd == undefined ? null : item?.sidoCd,
+          h_sidoCdNm : item?.sidoCdNm == undefined ? null : item?.sidoCdNm,
+          h_sgguCd : item?.sgguCd == undefined ? null : item?.sgguCd,
+          h_sgguCdNm : item?.sgguCdNm == undefined ? null : item?.sgguCdNm,
+          h_emdongNm : item?.emdongNm == undefined ? null : item?.emdongNm,
+          h_ykiho : item?.ykiho == undefined ? null : item?.ykiho,
+          h_estbDd : item?.estbDd == undefined ? null : item?.estbDd,
         }; 
         const format = { language: "sql", indent: "  " };
         const query = mybatisMapper.getStatement(
             "controler",
-            "insertHospital",
+            "tempInsertHospital",
             param,
             format
         );

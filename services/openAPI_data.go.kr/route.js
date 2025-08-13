@@ -4,7 +4,9 @@ const CS = require(`${global.appRoot}/server/util/util.casting`);
 const RM = require(`${global.appRoot}/server/util/response.message`);
 const TS = require(`${global.appRoot}/server/middleware/message.handler`);
 const AUTH = require(`${global.appRoot}/server/middleware/auth.handler`);
-const uploadProfileImage = require(`${global.appRoot}/server/middleware/s3.handler`);
+const daoMysql = require(`${global.appRoot}/server/database/dao.mysql`);
+const mybatisMapper = require("mybatis-mapper");
+const functions = require(`${global.appRoot}/server/util/function`);
 const express = require('express');
 const asyncify = require('express-asyncify');
 const moment = require('moment-timezone');
@@ -68,7 +70,7 @@ router.get('/healthcheck', async function(req, res) {
  *      tags: [OpenAPI_data.go.kr-공공정보]
  *      responses:
  *        "200":
- *          description: 접속 테스트
+ *          description: 공공데이터 병원정보가져오기
  *          content:
  *            application/json:
  *              schema:
@@ -88,12 +90,12 @@ router.get('/hospital', async (req, res, next) => {
   const serviceKey = 'e7haGJX%2BVphQb%2B3Q%2FSqH8QgJtWFeokI1NWHKlKIYGfS6OxJ1EeYZ6Pp5cjAFV2xA7OzOORLLdwg0tZ2kwClFDw%3D%3D';
   //40551110  
   const NUM_OF_ROWS = 100;
-  const MAX_PAGE = 600;//190;✅ 266 페이지 처리 완료
+  const MAX_PAGE = 400;//200부터 처리해야함
   let list_cnt = 0;
   let list_success_cnt = 0;
   try {
-    for (let page = 500; page <= MAX_PAGE; page++) {
-      const url = `https://apis.data.go.kr/B551182/hospInfoServicev2/getHospBasisList?ServiceKey=${serviceKey}&pageNo=${page}&numOfRows=${NUM_OF_ROWS}&_type=json`;
+    for (let page = 23; page <= MAX_PAGE; page++) {
+      const url = `https://apis.data.go.kr/B551182/hospInfoServicev2/getHospBasisList?ServiceKey=${serviceKey}&pageNo=${page}&numOfRows=${NUM_OF_ROWS}&_type=json&clCd=31`;
       const response = await axios.get(url);
       const body = response.data?.response?.body;
       let items = body?.items?.item;
@@ -105,12 +107,16 @@ router.get('/hospital', async (req, res, next) => {
       }
 
       for (const hospital of items) {
-        const P1 = await crawlingCtrl.saveToDatabase(hospital); // 👉 여기에서 저장 실행
-        if ( P1.success ) {
-          list_success_cnt++;
+        console.log(`hospital?.clCd`,hospital?.clCd, ['01',41,29,11,28,21,51,31].includes(hospital?.clCd));
+        if ( ['01',41,29,11,28,21,51,31].includes(hospital?.clCd)) {
+          const P1 = await crawlingCtrl.saveToDatabase(hospital); // 👉 여기에서 저장 실행
+         // console.log(`P1.success`,);
+          if ( P1.success ) {
+            list_success_cnt++;
+          }
+          list_cnt++;
+          await CS.wait(500); // 2초정도로
         }
-        list_cnt++;
-        await CS.wait(500); // 2초정도로
       } 
       
       console.log(`✅ ${page} 페이지 처리 완료`);
@@ -127,6 +133,265 @@ router.get('/hospital', async (req, res, next) => {
     res.status(500).send('데이터 수집 중 오류 발생');
   }
   
+});
+
+
+
+/**
+ * @swagger
+ *  /v1/c/open.go.kr/make-hid:
+ *    get:
+ *      summary: "병원리스트 hid생성프로세스"
+ *      description: "병원정보 가져오기"
+ *      tags: [OpenAPI_data.go.kr-공공정보]
+ *      responses:
+ *        "200":
+ *          description: hospital 데이터 넣기 hid생성프로세스
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    users:
+ *                      type: object
+ *                      example:    
+ *                            { "code": 1000, "message": "접속성공" }
+ */
+
+router.get('/make-hid', async function(req, res) {   
+
+  function zeroFill(num, length = 6) {
+    return String(num).padStart(length, '0');
+  }
+  //mapper 경로
+  mybatisMapper.createMapper([`${global.appRoot}/services/openAPI_data.go.kr/controler.xml`]);
+  let list_target_cnt = 0;
+  let list_success_cnt = 0;
+  try {
+    const param = {
+    }; 
+    const format = { language: "sql", indent: "  " };
+    const query = mybatisMapper.getStatement(
+        "controler",
+        "select_origin_hospital",
+        param,
+        format
+    );
+    //console.log(`query : ${query}`)
+    const { DBError = null, RS = null } = await daoMysql.spCall(query);
+    
+    const ret = await  functions.myBatisResult(DBError,RS)
+    //console.log(`ret : ${JSON.stringify(ret.data[0])}`)
+    for ( i = 0; i < ret?.data.length ; i++ ) {
+      const summaryData = ret.data?.length > 0 ?  ret.data[i] : null;
+      //console.log(`summaryData : ${JSON.stringify(summaryData)}`)
+      if ( summaryData != null ) {
+        const param2 = {
+          h_class_code : summaryData?.hospital_class_code,
+          h_sidocodetwo : summaryData?.sidocodetwo,
+        }; 
+        const format2 = { language: "sql", indent: "  " };
+        const query2 = mybatisMapper.getStatement(
+            "controler",
+            "select_origin_hospital_summary",
+            param2 ,
+            format2
+        );
+        //console.log(`query : ${query}`)
+        const { DBError = null, RS = null } = await daoMysql.spCall(query2);
+        //console.log(`RS : ${RS}`)
+        const ret2 = await  functions.myBatisResult(DBError,RS)
+        //console.log(`ret2 : ${JSON.stringify(ret2.data[0])}`)
+        const summaryData2 = ret2.data?.length > 0 ?  ret2.data[0] : null;
+        //console.log(`summaryData2 : ${JSON.stringify(summaryData2)}`)
+        if ( summaryData2 != null ) {
+          try {
+            const newZerifill = zeroFill(summaryData2?.newNo);
+            const newHid = `H${summaryData?.hospital_class_code}KR-${summaryData?.sidocodetwo}${newZerifill}`;
+            const param3 = {
+              new_hid : newHid,
+              h_class_code : summaryData?.hospital_class_code,
+              h_sidocodetwo : summaryData?.sidocodetwo,
+              h_name : summaryData?.hospital_name,
+              h_address : summaryData?.hospital_addr,
+              h_lon : summaryData?.hospital_lon,
+              h_lat : summaryData?.hospital_lat,
+              h_tel : summaryData?.hospital_tel,
+              h_ykiho : summaryData?.yoyang_giho
+            }; 
+            //console.log(`param3 :  ${JSON.stringify(param3)}`)
+            const format3 = { language: "sql", indent: "  " };
+            const query3 = mybatisMapper.getStatement(
+                "controler",
+                "makeHospitalId",
+                param3,
+                format3
+            );
+            const { DBError = null, RS = null } = await daoMysql.spCall(query3);
+            const ret3 = await  functions.myBatisResult(DBError,RS);
+            list_target_cnt++;
+            if ( ret3.success ) {
+              list_success_cnt++;
+            }
+          }catch(e){
+              console.error(`error : ${e}`)
+              return { success : false,error: e, data: [] };
+          }
+        }
+      }
+      await CS.wait(500); 
+    }
+    return res.send({
+      code : 200,
+      success: true,
+      message: `대상 병원수 : ${list_target_cnt}, 정상저장 병원수 : ${list_success_cnt}`
+    });
+  } catch (error) {
+    console.error('에러 발생:', error.message);
+    res.status(500).send('데이터 수집 중 오류 발생');
+  }
+});
+
+
+
+/**
+ * @swagger
+ *  /v1/c/open.go.kr/make-hospital-alias:
+ *    get:
+ *      summary: "병원명 별칭 리스트 생성"
+ *      description: "병원정보 가져오기"
+ *      tags: [OpenAPI_data.go.kr-공공정보]
+ *      responses:
+ *        "200":
+ *          description: hospital 데이터 넣기 hid생성프로세스
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    users:
+ *                      type: object
+ *                      example:    
+ *                            { "code": 1000, "message": "접속성공" }
+ */
+
+router.get('/make-hospital-alias', async function(req, res) {   
+
+  function generateAliasCandidates(name) {
+    let candidates = new Set();
+
+    // 원본 그대로
+    candidates.add(name);
+    // 0. 괄호 내용 추출
+    const branchMatch = name.match(/\((.*?)\)/);
+    const branchName = branchMatch ? branchMatch[1] : null;
+
+    // 1. 불필요 수식어 제거
+    const stripped = name
+    .replace(/\(.*?\)/g, '') // 괄호 내용 제거
+    .replace(/학교법인|의료법인|교육재단|학원|재단/g, '')
+    .trim();
+
+    candidates.add(stripped);
+    
+    // 2. 대학교 → 대
+    if (stripped.includes('대학교')) {
+      candidates.add(stripped.replace(/대학교/g, '대'));
+    }
+
+    // 3. 병원 제거
+    if (stripped.includes('병원')) {
+      candidates.add(stripped.replace(/병원/g, '').trim());
+    }
+
+    // 4. 대학교 → 대 + 병원 제거
+    if (stripped.includes('대학교') && stripped.includes('병원')) {
+      candidates.add(
+        stripped.replace(/대학교/g, '대').replace(/병원/g, '').trim()
+      );
+    }
+
+    // 5. 괄호 안 내용 추가
+    if (branchName) {
+      candidates.add(`${stripped.replace(/병원/g, '')}${branchName}병원`);
+      candidates.add(`${stripped.replace(/대학교/g, '대').replace(/병원/g, '')}${branchName}병원`);
+      candidates.add(`${branchName}병원`);
+    }
+
+    // 6. 공백 제거 버전
+    Array.from(candidates).forEach(alias => {
+      candidates.add(alias.replace(/\s+/g, ''));
+    });
+
+    return Array.from(candidates);
+  }
+  //mapper 경로
+  mybatisMapper.createMapper([`${global.appRoot}/services/openAPI_data.go.kr/controler.xml`]);
+
+  let list_target_cnt = 0;
+  let list_success_cnt = 0;
+  try {
+    const param = {
+    }; 
+    const format = { language: "sql", indent: "  " };
+    const query = mybatisMapper.getStatement(
+        "controler",
+        "select_table_hospital",
+        param,
+        format
+    );
+    //console.log(`query : ${query}`)
+    const { DBError = null, RS = null } = await daoMysql.spCall(query);
+    
+    const ret = await  functions.myBatisResult(DBError,RS)
+    console.log(`ret : ${JSON.stringify(ret.data[0])}`)
+    for ( i = 0; i < ret?.data.length ; i++ ) {
+      const hospotalData = ret.data?.length > 0 ?  ret.data[i] : null;
+      console.log(`hospotalData : ${JSON.stringify(hospotalData)}`)
+      if ( hospotalData != null ) {
+        try {
+          const aliasArray = await generateAliasCandidates(hospotalData?.baseName);
+          for ( j = 0; j < aliasArray.length ; j++ ) {
+            const param3 = {
+              h_alias_name : aliasArray[j].replace("병원병원",'병원'),
+              h_name : hospotalData?.baseName,
+              h_hid : hospotalData?.hid,
+            }; 
+            console.log(`param3 :  ${JSON.stringify(param3)}`)
+            const format3 = { language: "sql", indent: "  " };
+            const query3 = mybatisMapper.getStatement(
+                "controler",
+                "makeHospitalAlias",
+                param3,
+                format3
+            );
+            //console.log(`query : ${query}`)
+            const { DBError = null, RS = null } = await daoMysql.spCall(query3);
+            const ret3 = await  functions.myBatisResult(DBError,RS)
+            if ( ret3.success ) {
+              list_success_cnt++;
+            }
+            list_target_cnt++;
+          }
+        }catch(e){
+            console.error(`error : ${e}`)
+            return { success : false,error: e, data: [] };
+        }
+      }
+    }
+    return res.send({
+      code : 200,
+      success: true,
+      message: `조회된 병원수 : ${list_target_cnt}, 작업된 병원수 : ${list_success_cnt}`
+    });
+  } catch (error) {
+    console.error('에러 발생:', error.message);
+    res.status(500).send('데이터 수집 중 오류 발생');
+  }
 });
 
 
