@@ -158,6 +158,8 @@ class App {
     // this.app.use('/v1/c/pubmed_firstauthor', require(`${global.appRoot}/services/pubmed_firstauthor/route`)); // 제1저자 처 
     this.app.use('/v1/c/open.go.kr', require(`${global.appRoot}/services/openAPI_data.go.kr/route`)); // 공공데이터
 
+    this.app.use('/v1/c/crawling_bedoc', require(`${global.appRoot}/services/crawling_bedoc/route`)); // 베닥병원 수집
+
   }
 
   errorHandler() {

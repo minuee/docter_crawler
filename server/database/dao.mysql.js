@@ -9,8 +9,6 @@ module.exports = {
     let error=null, result, fields;
     let DBconn
     let DBError = null;
-    console.log(`spName : ${spName}`)
-    // console.log(`info : ${info}`) 
     const pool = poolPromise;
     try {
         DBconn = await pool.getConnection();

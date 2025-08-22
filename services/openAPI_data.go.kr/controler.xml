@@ -43,9 +43,9 @@
             hospital_class_code = #{h_class},
             hospital_class_name = #{h_class_name},
             hospital_site = #{h_site},
+            hospital_tel = #{h_tel},
             hospital_lon = #{h_lon},
             hospital_lat = #{h_lat},
-            yoyang_giho = #{h_ykiho},
             sidocode = #{h_sidoCD},
             sidocode_name = #{h_sidoCdNm},
             sigungu_code = #{h_sgguCd},
@@ -106,7 +106,7 @@
             updated_at = NOW()
     </insert>
 
-     <select id="select_origin_hospital">
+    <select id="select_origin_hospital">
         SELECT 
             a.hospital_name,
             a.hospital_class_code,
@@ -120,7 +120,10 @@
         FROM
             hospital_all_list as a
         WHERE
-            1=1 and a.old_hid is null and a.hospital_class_code in ('01',11,21 )
+            1=1 and a.old_hid is null and a.hospital_class_code in ( 31,41,51 )
+            and a.yoyang_giho not in (
+                SELECT yoyang_giho FROM hospital GROUP BY yoyang_giho
+            )
         ORDER BY a.hospital_cid ASC
     </select>
 
@@ -189,8 +192,16 @@
             #{h_alias_name},
             NOW()
         )
-        ON DUPLICATE KEY UPDATE
-            hid = #{h_hid},
-            updated_at = NOW()
+        ON DUPLICATE KEY UPDATE hid = #{h_hid},updated_at = NOW()
     </insert>
+
+    <select id="select_bedoc_hospital">
+        SELECT 
+            a.*
+        FROM
+            hospital_bedoc_list as a
+        WHERE
+            1=1 and is_crawling_done = false
+        ORDER BY a.hospital_cid ASC
+    </select>
 </mapper>

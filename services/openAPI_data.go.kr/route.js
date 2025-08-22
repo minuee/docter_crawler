@@ -90,16 +90,17 @@ router.get('/hospital', async (req, res, next) => {
   const serviceKey = 'e7haGJX%2BVphQb%2B3Q%2FSqH8QgJtWFeokI1NWHKlKIYGfS6OxJ1EeYZ6Pp5cjAFV2xA7OzOORLLdwg0tZ2kwClFDw%3D%3D';
   //40551110  
   const NUM_OF_ROWS = 100;
-  const MAX_PAGE = 400;//200부터 처리해야함
+  const MAX_PAGE = 200;//200부터 처리해야함
   let list_cnt = 0;
   let list_success_cnt = 0;
   try {
-    for (let page = 23; page <= MAX_PAGE; page++) {
-      const url = `https://apis.data.go.kr/B551182/hospInfoServicev2/getHospBasisList?ServiceKey=${serviceKey}&pageNo=${page}&numOfRows=${NUM_OF_ROWS}&_type=json&clCd=31`;
+    for (let page = 1; page <= MAX_PAGE; page++) {
+      const url = `https://apis.data.go.kr/B551182/hospInfoServicev2/getHospBasisList?ServiceKey=${serviceKey}&pageNo=${page}&numOfRows=${NUM_OF_ROWS}&_type=json&clCd=51`;
       const response = await axios.get(url);
       const body = response.data?.response?.body;
       let items = body?.items?.item;
       if (!items) {
+        console.log(`items`,items);
         console.warn("⚠️ 병원 데이터가 없습니다.");
       } else if (!Array.isArray(items)) {
         // 단일 객체인 경우 배열로 감싸기
@@ -108,15 +109,14 @@ router.get('/hospital', async (req, res, next) => {
 
       for (const hospital of items) {
         console.log(`hospital?.clCd`,hospital?.clCd, ['01',41,29,11,28,21,51,31].includes(hospital?.clCd));
-        if ( ['01',41,29,11,28,21,51,31].includes(hospital?.clCd)) {
-          const P1 = await crawlingCtrl.saveToDatabase(hospital); // 👉 여기에서 저장 실행
-         // console.log(`P1.success`,);
-          if ( P1.success ) {
-            list_success_cnt++;
-          }
-          list_cnt++;
-          await CS.wait(500); // 2초정도로
+        const P1 = await crawlingCtrl.saveToDatabase(hospital); // 👉 여기에서 저장 실행
+        // console.log(`P1.success`,);
+        if ( P1.success ) {
+          list_success_cnt++;
         }
+        list_cnt++;
+        await CS.wait(500); // 2초정도로
+ 
       } 
       
       console.log(`✅ ${page} 페이지 처리 완료`);
