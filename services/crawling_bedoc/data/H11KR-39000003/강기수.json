@@ -1,5 +1,44 @@
 {
-  "isExist": false,
+  "isExist": true,
   "doctorName": "강기수",
-  "department": "소아청소년과"
+  "department": "소아청소년과",
+  "profileUrl": "https://www.jejunuh.co.kr/",
+  "specialty": "소화기질환, 크론병 및 궤양성대장염, 비만, 저체중, 당뇨병, 저신장, 성조숙증, 내분비질환, 희귀유전질환, 발달지연, 신경계질환",
+  "education": [
+    {
+      "date": "1999",
+      "content": "경상대학교 의학과 의학사"
+    },
+    {
+      "date": "2007",
+      "content": "경상대학교 의학과 의학석사"
+    },
+    {
+      "date": "2009",
+      "content": "경상대학교 의학과 의학박사"
+    }
+  ],
+  "experience": [
+    {
+      "date": null,
+      "content": "경상대학교병원 소아과 전공의"
+    },
+    {
+      "date": null,
+      "content": "서울대학교병원 소아소화기 전임의"
+    },
+    {
+      "date": null,
+      "content": "제주대학교 의학전문대학원 교수"
+    },
+    {
+      "date": "2011-2012",
+      "content": "Yale University School of Medicine 연수"
+    },
+    {
+      "date": null,
+      "content": "제주대학교병원 소아청소년과장 역임"
+    }
+  ],
+  "thesis": []
 }

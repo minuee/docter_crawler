@@ -1,50 +1,58 @@
-const puppeteer = require('puppeteer');
 const cheerio = require('cheerio');
 const fs = require('fs');
 const path = require('path');
 
 async function nationalRehabScraper(doctorData) {
-  console.log(`[CUSTOM] Scraping ${doctorData.bedoc_doctorname} at ${doctorData.hospital_site}`);
+  console.log(`[CUSTOM] Scraping ${doctorData.bedoc_doctorname} from local HTML file.`);
   const { hospital_site, bedoc_doctorname, bedoc_deptname, aiga_hid } = doctorData;
   const dataDir = path.join(global.appRoot, 'services', 'crawling_bedoc', 'data', aiga_hid);
-  if (!fs.existsSync(dataDir)) { fs.mkdirSync(dataDir, { recursive: true }); }
   const jsonFilePath = path.join(dataDir, `${bedoc_doctorname}.json`);
-
-  const browser = await puppeteer.launch({ headless: true });
-  const page = await browser.newPage();
+  const profileHtmlPath = path.join(dataDir, `${bedoc_doctorname}_profile.html`);
 
   try {
-    await page.goto(hospital_site, { waitUntil: 'networkidle2', timeout: 20000 });
-    const content = await page.content();
-    const $ = cheerio.load(content);
-
-    // 사용자가 알려준 정확한 선택자로 수정
-    const doctorNameInPage = $('span.mtip_name').text().trim();
-    let isExist = false;
-    console.log(`doctorNameInPage ${doctorNameInPage} ㅡㅡㅡ ${doctorNameInPage.includes(bedoc_doctorname)}.`);
-    if (doctorNameInPage && doctorNameInPage.includes(bedoc_doctorname)) {
-        isExist = true;
+    if (!fs.existsSync(profileHtmlPath)) {
+      const errorMsg = `Profile HTML file not found at ${profileHtmlPath}`;
+      console.error(`[ERROR] ${errorMsg}`);
+      const errorData = { isExist: false, doctorName: bedoc_doctorname, department: bedoc_deptname, error: errorMsg };
+      fs.writeFileSync(jsonFilePath, JSON.stringify(errorData, null, 2));
+      return { success: false, data: errorData };
     }
 
-    if (!isExist) {
+    const content = fs.readFileSync(profileHtmlPath, 'utf-8');
+    const $ = cheerio.load(content);
+
+    const doctorNameInPage = $('span.mtip_name').text().trim();
+    if (!doctorNameInPage || !doctorNameInPage.includes(bedoc_doctorname)) {
       console.log(`[WARN] Doctor ${bedoc_doctorname} not found on the page. Marking as isExist: false.`);
       const notFoundData = { isExist: false, doctorName: bedoc_doctorname, department: bedoc_deptname };
       fs.writeFileSync(jsonFilePath, JSON.stringify(notFoundData, null, 2));
       return { success: true, data: notFoundData };
     }
 
-    // 의사 정보가 확인되었으므로, 나머지 정보 수집
+    // --- New, more robust scraping logic ---
+
     const departmentInPage = $('p.doc_major span').text().trim();
-    const specialty = $('th:contains("전문분야")').next('td').text().trim();
+    
+    // More specific selector for specialty
+    const specialty = $('.doc_profile dt:contains("진료분야")').next('dd').text().trim();
 
     const education = [];
-    $('h4:contains("학력")').next('ul').find('li').each((i, el) => {
-        education.push({ date: null, content: $(el).text().trim() });
-    });
-
     const experience = [];
-    $('h4:contains("경력")').next('ul').find('li').each((i, el) => {
-        experience.push({ date: null, content: $(el).text().trim() });
+
+    // Iterate through each article section to reliably distinguish education from experience.
+    $('div.sub_article').each((i, article) => {
+        const title = $(article).find('h4.sub_article_title').text().trim();
+        const listItems = $(article).find('ul.sub_article_list li');
+
+        if (title === '주요학력') {
+            listItems.each((j, item) => {
+                education.push({ date: null, content: $(item).text().trim() });
+            });
+        } else if (title === '주요경력') {
+            listItems.each((j, item) => {
+                experience.push({ date: null, content: $(item).text().trim() });
+            });
+        }
     });
 
     const scrapedData = {
@@ -55,7 +63,7 @@ async function nationalRehabScraper(doctorData) {
       specialty: specialty,
       education: education,
       experience: experience,
-      thesis: [] // 논문 정보는 해당 페이지에서 찾을 수 없음
+      thesis: []
     };
 
     fs.writeFileSync(jsonFilePath, JSON.stringify(scrapedData, null, 2));
@@ -67,8 +75,6 @@ async function nationalRehabScraper(doctorData) {
     const errorData = { isExist: false, doctorName: bedoc_doctorname, department: bedoc_deptname, error: error.message };
     fs.writeFileSync(jsonFilePath, JSON.stringify(errorData, null, 2));
     return { success: false, data: null };
-  } finally {
-    if (browser && browser.isConnected()) { await browser.close(); }
   }
 }
 

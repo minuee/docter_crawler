@@ -1,0 +1,28 @@
+{
+  "isExist": true,
+  "doctorName": "고승권",
+  "department": "산부인과",
+  "profileUrl": "https://www.oshankook.net/",
+  "specialty": "만성신장병, 고혈압, 혈뇨, 단백뇨, 사구체신염, 통풍",
+  "education": [
+    {
+      "date": "2005",
+      "content": "이화여자대학교 의과대학 졸업"
+    },
+    {
+      "date": "2012",
+      "content": "이화여자대학교 의학전문대학원 의학석사"
+    }
+  ],
+  "experience": [
+    {
+      "date": "2005-2006",
+      "content": "이대목동병원 인턴"
+    },
+    {
+      "date": "2010-2014",
+      "content": "이대목동병원 내과 전공의"
+    }
+  ],
+  "thesis": []
+}

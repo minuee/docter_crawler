@@ -1,0 +1,36 @@
+{
+  "isExist": true,
+  "doctorName": "강혜진",
+  "department": "혈액종양내과",
+  "profileUrl": "http://www.kcch.re.kr",
+  "specialty": "대장암, 림프종, 다발성골수종, 백혈병, 방사면역치료",
+  "education": [
+    {
+      "date": "1992 - 1998",
+      "content": "전남대학교 의과 대학 졸업"
+    }
+  ],
+  "experience": [
+    {
+      "date": "2005 - 현재",
+      "content": "원자력병원 혈액종양내과 과장 (혈액종양센터장)"
+    },
+    {
+      "date": "2003 - 2005",
+      "content": "서울아산병원 혈액종양내과 전임의"
+    },
+    {
+      "date": "1999 - 2003",
+      "content": "서울아산병원 내과 전공의"
+    },
+    {
+      "date": "1998 - 1999",
+      "content": "서울아산병원 인턴"
+    },
+    {
+      "date": "2023",
+      "content": "제64회 대한혈액학회 국제학술대회 우수 포스터상 수상"
+    }
+  ],
+  "thesis": []
+}

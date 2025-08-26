@@ -1,0 +1,44 @@
+{
+  "isExist": true,
+  "doctorName": "강호정",
+  "department": "정형외과",
+  "profileUrl": "http://www.yonserang.com",
+  "specialty": "수부외과 클리닉, 견주관절 클리닉",
+  "education": [
+    {
+      "date": "1996-1999",
+      "content": "연세대학교 의과 대학원 박사"
+    },
+    {
+      "date": "1982-1984",
+      "content": "연세대학교 의과 대학원 석사"
+    },
+    {
+      "date": "1975-1981",
+      "content": "연세대학교 의과대학 학사"
+    }
+  ],
+  "experience": [
+    {
+      "date": "2022-04 ~ 현재",
+      "content": "연세사랑병원 명예원장"
+    },
+    {
+      "date": null,
+      "content": "前 강남세브란스병원 정형외과장"
+    },
+    {
+      "date": null,
+      "content": "前 연세대학교 의과대학 정형외과학 교수"
+    },
+    {
+      "date": "1994-1996",
+      "content": "시카고 대학교 연구조교수"
+    },
+    {
+      "date": "1990-1992",
+      "content": "연세대학교 부속 세브란스병원 연구강사"
+    }
+  ],
+  "thesis": []
+}

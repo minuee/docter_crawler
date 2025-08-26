@@ -1,5 +1,48 @@
 {
-  "isExist": false,
+  "isExist": true,
   "doctorName": "강중구",
-  "department": "외과"
+  "department": "외과",
+  "profileUrl": "https://ilsan.chamc.co.kr/",
+  "specialty": "대장암, 대장질환",
+  "education": [
+    {
+      "date": "1984",
+      "content": "연세대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 대학원 의학 석사 (외과학)"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 대학원 의학 박사"
+    }
+  ],
+  "experience": [
+    {
+      "date": "2023-현재",
+      "content": "건강보험심사평가원장"
+    },
+    {
+      "date": "2020-2023",
+      "content": "일산차병원 병원장"
+    },
+    {
+      "date": "2015-2018",
+      "content": "국민건강보험공단 일산병원장"
+    },
+    {
+      "date": null,
+      "content": "대한종양외과학회 회장 역임"
+    },
+    {
+      "date": null,
+      "content": "대한대장항문학회 회장 역임"
+    },
+    {
+      "date": null,
+      "content": "미국 클리블랜드 클리닉 및 일본 암센터 연수"
+    }
+  ],
+  "thesis": []
 }

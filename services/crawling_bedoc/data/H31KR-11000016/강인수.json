@@ -1,5 +1,27 @@
 {
-  "isExist": false,
+  "isExist": true,
   "doctorName": "강인수",
-  "department": "산부인과"
+  "department": "산부인과",
+  "profileUrl": "https://seoul.chamc.co.kr/",
+  "specialty": "착상 전 유전자 검사(PGT), 고령 난임, 반복적 착상 실패, 습관성 유산",
+  "education": [],
+  "experience": [
+    {
+      "date": null,
+      "content": "現 차의과학대학교 대구차병원 난임센터 교수"
+    },
+    {
+      "date": null,
+      "content": "차의과학대학교 차 여성의학연구소 서울역 유전학 연구원장"
+    },
+    {
+      "date": null,
+      "content": "제일병원 난임센터"
+    },
+    {
+      "date": null,
+      "content": "University of Texas Health Science Center at San Antonio, obstetrics & gynecology"
+    }
+  ],
+  "thesis": []
 }

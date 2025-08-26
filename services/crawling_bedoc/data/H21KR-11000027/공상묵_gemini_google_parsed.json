@@ -1,0 +1,44 @@
+{
+  "isExist": true,
+  "doctorName": "공상묵",
+  "department": "안과",
+  "profileUrl": "http://www.kimeye.com/kimeye/",
+  "specialty": "소아사시, 소아시력, 어린이 근시",
+  "education": [
+    {
+      "date": "1976.03 ~ 1983.02",
+      "content": "고려대학교 의학과 박사"
+    },
+    {
+      "date": "1974.03 ~ 1976.02",
+      "content": "고려대학교 의학과 석사"
+    },
+    {
+      "date": "1966.03 ~ 1972.02",
+      "content": "고려대학교 의학과 학사"
+    }
+  ],
+  "experience": [
+    {
+      "date": null,
+      "content": "現 건양대학교병원 안과 석좌교수"
+    },
+    {
+      "date": null,
+      "content": "前 김안과병원 사시센터 전문의"
+    },
+    {
+      "date": null,
+      "content": "前 김안과병원 병원장, 부원장, 진료부장 역임"
+    },
+    {
+      "date": "1984",
+      "content": "김안과병원 입사"
+    },
+    {
+      "date": null,
+      "content": "고려대학교 부속병원 인턴 및 레지던트 수료"
+    }
+  ],
+  "thesis": []
+}

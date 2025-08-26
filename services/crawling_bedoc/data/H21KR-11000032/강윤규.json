@@ -3,8 +3,46 @@
   "doctorName": "강윤규",
   "department": "재활의학과",
   "profileUrl": "https://www.nrc.go.kr/hospital/doctor/doctorList.do?department_no=18&menu_cd=01_04_02_02",
-  "specialty": "",
-  "education": [],
-  "experience": [],
+  "specialty": "만성통증, 두통, 근막통, 관절염, 절단과 환상통",
+  "education": [
+    {
+      "date": null,
+      "content": "고려대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "고려대학교 의학대학원 의학 석사"
+    },
+    {
+      "date": null,
+      "content": "고려대학교 의학대학원 의학 박사"
+    },
+    {
+      "date": null,
+      "content": "미국 텍사스대학 연수"
+    }
+  ],
+  "experience": [
+    {
+      "date": null,
+      "content": "現 국립재활원 원장"
+    },
+    {
+      "date": null,
+      "content": "前 고려대학교 안암병원 재활의학과 교수"
+    },
+    {
+      "date": "2008-2010",
+      "content": "대한재활의학회 이사장"
+    },
+    {
+      "date": "2013-2014",
+      "content": "대한임상통증학회 회장"
+    },
+    {
+      "date": null,
+      "content": "대한의료감정학회 부회장"
+    }
+  ],
   "thesis": []
 }

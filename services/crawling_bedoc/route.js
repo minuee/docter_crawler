@@ -1,5 +1,5 @@
 const config = require(`${global.appRoot}/server/config/configuration`);
-const crawlingCtrl = require(`${global.appRoot}/services/openAPI_data.go.kr/controller`);
+const crawlingCtrl = require(`${global.appRoot}/services/crawling_bedoc/controller`);
 const CS = require(`${global.appRoot}/server/util/util.casting`);
 const RM = require(`${global.appRoot}/server/util/response.message`);
 const TS = require(`${global.appRoot}/server/middleware/message.handler`);
@@ -9,17 +9,13 @@ const mybatisMapper = require("mybatis-mapper");
 const functions = require(`${global.appRoot}/server/util/function`);
 const express = require('express');
 const asyncify = require('express-asyncify');
-const moment = require('moment-timezone');
-const crypto = require('crypto');
-const axios = require('axios');
-const cheerio = require('cheerio');
-const xlsx = require('xlsx'); 
 const _ = require('lodash');
 const path = require('path');
 const fs = require('fs');
 const router = asyncify(express.Router());
-const xml2js = require('xml2js');
-const parser = new xml2js.Parser({ explicitArray: false });
+const geminiParser = require('./gemini_parser');
+
+
 /**
  * @swagger
  *  /v1/c/crawling_bedoc/healthcheck:
@@ -62,7 +58,6 @@ router.get('/healthcheck', async function(req, res) {
   }
 });
 
-
 /**
  * @swagger
  *  /v1/c/crawling_bedoc/collect:
@@ -87,7 +82,6 @@ router.get('/healthcheck', async function(req, res) {
  */
 
 router.get('/collect', async function(req, res) {   
-
   
   //mapper 경로
   mybatisMapper.createMapper([`${global.appRoot}/services/crawling_bedoc/controler.xml`]);
@@ -127,8 +121,6 @@ router.get('/collect', async function(req, res) {
             }
           }
 
-          // Call the dispatcher to handle the crawling for this doctor
-          const dispatcher = require('./dispatcher');
           /**
            * 데이터 수집항목 
            * {
@@ -136,7 +128,7 @@ router.get('/collect', async function(req, res) {
             "doctorName": "강덕희",
             "department": "신장내과",
             "profileUrl": "https://seoul.eumc.ac.kr/doctor/basicInfo.do?dr_sid=1001797&dept_cd=IMN", // 사이트가 정상적으로 파싱이 되고 진료과목과 의사이름이 있으면 해당 상세 아니면 false
-            "specialty": "만성신장병, 고혈압, 거품뇨, 혈뇨, 사구체신염, 고요산혈증, 통풍, 투석", // 진료분야 , 전문분야등 
+            "specialty": "만성신장병, 고혈압, 거품뇨, 혈뇨, 사구체신염, 고요산혈증, 통풍, 투석", // 진료분야 , 전문분야등으로 표시되어 있어 
             "education": [   
               {
                 "date": null, 년월이 있으면 YYYY.MM등으로 표시 없으면 null
@@ -155,10 +147,12 @@ router.get('/collect', async function(req, res) {
               }
             ]
             education 학력 , experience : 경력 
-            학력 영역이 없으면 약력 또는 경력에서 아래와 같은 기준으로 정리 
+            학력 영역이 없으면 약력 또는 경력, 주요경력에서 아래와 같은 기준으로 정리 
             * '석사', '박사', '졸업' 등의 키워드가 포함된 내용은 '학력'으로, 그 외는 '경력'으로 구분하여 수집합니다.
-            논문관련 내용도 있으면 수집한다
-           */
+            논문관련 내용도 있으면 수집한다 논문의 경우 논문 또는 연구업적,저서등으로 표시되어 있다.
+          */
+          // Call the dispatcher to handle the crawling for this doctor
+          const dispatcher = require('./dispatcher');
           const crawlResult = await dispatcher.dispatchAndCrawl(doctorData);
 
           // crawlResult.data.isExist가 true인 경우에만 성공으로 간주
@@ -209,10 +203,8 @@ router.get('/collect', async function(req, res) {
           );
           const { DBError = null, RS = null } = await daoMysql.spCall(queryNull);
           const retNull = await  functions.myBatisResult(DBError,RS)
-        
         }
       }
-      
     }
     return res.send({
       code : 200,
@@ -224,7 +216,6 @@ router.get('/collect', async function(req, res) {
     res.status(500).send('데이터 수집 중 오류 발생');
   }
 });
-
 
 /**
  * @swagger
@@ -328,5 +319,77 @@ router.get('/fetch_html', async function(req, res) {
   }
 });
 
+/**
+ * @swagger
+ *  /v1/c/crawling_bedoc/collect2:
+ *    get:
+ *      summary: "의사별 수집하기 (Gemini)"
+ *      description: "Gemini를 사용하여 정보를 파싱합니다."
+ *      tags: [crawling_bedoc-베닥의사 수집]
+ *      responses:
+ *        "200":
+ *          description: 의사별 수집하기 (Gemini)
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    users:
+ *                      type: object
+ *                      example:
+ *                            { "code": 1000, "message": "접속성공" }
+ */
+router.get('/collect2', async function(req, res) {
+
+  //mapper 경로
+  mybatisMapper.createMapper([`${global.appRoot}/services/crawling_bedoc/controler.xml`]);
+  let list_target_cnt = 0;
+  let list_success_cnt = 0;
+  const results = []; // for detailed logging
+
+  try {
+    const param = {
+    };
+    const format = { language: "sql", indent: "  " };
+    const query = mybatisMapper.getStatement(
+        "controler",
+        "select_bedoc_hospital",
+        param,
+        format
+    );
+    const { DBError = null, RS = null } = await daoMysql.spCall(query);
+
+    const ret = await  functions.myBatisResult(DBError,RS)
+
+    for ( let i = 0; i < ret?.data.length ; i++ ) {
+      const doctorData = ret.data?.length > 0 ?  ret.data[i] : null;
+
+      if ( doctorData != null && doctorData?.hospital_site && doctorData?.bedoc_deptname && doctorData?.bedoc_doctorname ) {
+          list_target_cnt++;
+          const crawlResult = await geminiParser.parseWithGemini(doctorData);
+
+          if (crawlResult.success) {
+            list_success_cnt++;
+            results.push({ doctor: doctorData.bedoc_doctorname, hospital: doctorData.hospital_name, status: 'On-Site Parse Success' });
+          } else {
+            results.push({ doctor: doctorData.bedoc_doctorname, hospital: doctorData.hospital_name, status: 'On-Site Parse Failed (Task Created)', reason: crawlResult.data.error });
+          }
+
+          await CS.wait(1000); // 1-second delay
+      }
+    }
+    return res.send({
+      code : 200,
+      success: true,
+      message: `Phase 1 (On-Site Parsing) Complete. Success: ${list_success_cnt} / ${list_target_cnt}`,
+      results: results
+    });
+  } catch (error) {
+    console.error('Error in /collect2 route:', error.message);
+    res.status(500).send('An error occurred during the collection process: ' + error.message);
+  }
+});
 
 module.exports = router;

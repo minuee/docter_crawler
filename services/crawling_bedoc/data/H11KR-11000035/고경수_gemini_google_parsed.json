@@ -1,0 +1,44 @@
+{
+  "isExist": true,
+  "doctorName": "고경수",
+  "department": "내분비내과",
+  "profileUrl": "http://www.paik.ac.kr/sanggye",
+  "specialty": "내분비, 당뇨병, 갑상선질환",
+  "education": [
+    {
+      "date": "1985",
+      "content": "서울대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 대학원 의학 석사 (내과학 전공)"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 대학원 의학 박사 (내과학 전공)"
+    }
+  ],
+  "experience": [
+    {
+      "date": "2020-09 ~ 현재",
+      "content": "인제대학교 상계백병원 원장"
+    },
+    {
+      "date": "1993 ~ 현재",
+      "content": "인제대학교 의과대학 내과학교실 교수"
+    },
+    {
+      "date": null,
+      "content": "서울대학교병원 인턴, 내과 전공의, 내분비대사내과 전임의 수료"
+    },
+    {
+      "date": "1998년부터 3년간",
+      "content": "미국 유타대학교 유전자전달연구소 선임연구원"
+    },
+    {
+      "date": null,
+      "content": "상계백병원 생명윤리심의위원회 위원장, 당뇨병센터장, 기획실장 등 주요 보직 역임"
+    }
+  ],
+  "thesis": []
+}

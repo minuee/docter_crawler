@@ -2,7 +2,6 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="controler">  
 
-    
     <select id="select_bedoc_hospital">
         SELECT 
             a.*,a.hospital_site as hospitalsite, a.hospital_doctor_site as hospital_site
@@ -11,10 +10,15 @@
         WHERE
             1=1 and is_crawling_done = false and  hospital_site != '' and  hospital_site is not null 
         ORDER BY a.hospital_cid ASC
-        LIMIT 10
+        LIMIT 10 OFFSET 10
     </select>
 
     <update id="hospital_site_is_null">
         UPDATE hospital_bedoc_list set  is_site_ok =  #{isOk}, site_check_date = NOW() WHERE hospital_cid = #{cid}
     </update>
+
+    <update id="hospital_update_doctor_site">
+        UPDATE hospital_bedoc_list set hospital_doctor_site = #{hospital_site} WHERE hospital_cid = #{cid}
+    </update>
+    
 </mapper>

@@ -1,5 +1,52 @@
 {
-  "isExist": false,
+  "isExist": true,
   "doctorName": "강구정",
-  "department": "외과"
+  "department": "외과",
+  "profileUrl": "https://dsmc.or.kr/daegu/doctor/info.cm?dept_code=DDGS&doctor_code=50002",
+  "specialty": "간이식, 간담도췌장암, 담낭암, 성인 탈장, 복강경 및 로봇 수술",
+  "education": [
+    {
+      "date": "1983",
+      "content": "경북대학교 의과대학 의학 학사"
+    },
+    {
+      "date": "1986",
+      "content": "경북대학교 의과대학 의학 석사"
+    },
+    {
+      "date": "1996",
+      "content": "경북대학교 의과대학 의학 박사"
+    }
+  ],
+  "experience": [
+    {
+      "date": null,
+      "content": "現 계명대학교 동산병원 간담췌외과 교수"
+    },
+    {
+      "date": null,
+      "content": "계명대학교 동산병원 인턴 및 레지던트 수료"
+    },
+    {
+      "date": null,
+      "content": "미국 듀크대학교 의과대학 간담췌 및 간이식 외과 연수 (교환교수)"
+    },
+    {
+      "date": null,
+      "content": "미국 메이요 클리닉 방문연구교수"
+    },
+    {
+      "date": null,
+      "content": "계명대학교 동산병원 외과학교실 주임교수 및 외과과장 역임"
+    },
+    {
+      "date": null,
+      "content": "한국간담췌외과학회 회장 역임"
+    },
+    {
+      "date": null,
+      "content": "대한민국의학한림원 정회원"
+    }
+  ],
+  "thesis": []
 }
