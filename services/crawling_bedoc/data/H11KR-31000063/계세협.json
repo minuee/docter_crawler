@@ -12,7 +12,7 @@
   "bedoc_doctor_site": "https://dongtan.hallym.or.kr/hallymuniv_sub.asp?left_menu=left_ireserve&screen=ptm500&tap=2",
   "bedoc_yoyanggiho": "JDQ4MTYyMiM1MSMkMSMkMCMkODkkMzgxMzUxIzExIyQxIyQ3IyQ3OSQ0NjEwMDIjNzEjJDEjJDgjJDgz",
   "bedoc_hospitalname": "동탄성심병원",
-  "bedoc_tel": "1522-2500",
+  "bedoc_tel": "031-780-5000",
   "bedoc_address": "경기도 화성시 동탄1동 큰재봉길 7",
   "bedoc_lon": "127.0801100",
   "bedoc_lat": "37.2167150",
@@ -43,5 +43,6 @@
   "hospitalsite": "http://dongtan.hallym.or.kr/",
   "isExist": null,
   "isSearchType": "html_failed",
-  "error": "Could not find medical staff link."
+  "error": "Could not find medical staff link.",
+  "doctorDetailUrl": "http://dongtan.hallym.or.kr/?deptname=소화기내과&doctorName=계세협"
 }

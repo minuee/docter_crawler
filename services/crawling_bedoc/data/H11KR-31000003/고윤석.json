@@ -41,7 +41,30 @@
   "crawling_done_udate": null,
   "hospital_doctor_site": "http://www.cmcujb.or.kr/",
   "hospitalsite": "http://www.cmcujb.or.kr/",
-  "isExist": null,
-  "isSearchType": "html_failed",
-  "error": "Could not find medical staff link."
+  "isExist": true,
+  "isSearchType": "google",
+  "doctorDetailUrl": "http://www.cmcujb.or.kr/?deptname=순환기/심장내과&doctorName=고윤석",
+  "profileUrl": null,
+  "specialty": "관상동맥 중재시술 (심근경색, 만성완전폐색 시술), 말초혈관 중재시술 (당뇨족 시술), 대동맥 중재시술 (대동맥 박리, 대동맥 궤양, 대동맥류 시술), 선천성 심장 질환 중재시술 (심방중격결손, 동맥관 개존증 시술), 심장 판막 질환 중재시술 (승모판 협착증에 풍선 확장술, 대동맥 판막 협착증에 판막 삽입술 (TAVI)), 신장동맥, 장간막 동맥 등 모든 동맥 질환 중재시술, 저항성 고혈압에 신장신경 제거술 (RDN)",
+  "education": [
+    { "date": null, "content": "가톨릭대학교 의과대학 졸업" },
+    { "date": null, "content": "가톨릭대학교 대학원 석사 학위 취득" },
+    { "date": null, "content": "가톨릭대학교 대학원 박사 학위 취득" }
+  ],
+  "experience": [
+    { "date": null, "content": "청와대 의무실 군의관" },
+    { "date": null, "content": "서울성모병원 순환기내과 임상강사" },
+    { "date": null, "content": "가톨릭대학교 의정부성모병원 순환기내과 조교수 및 부교수" },
+    { "date": null, "content": "서울성모병원 순환기내과 부교수 및 심장혈관센터 교수" },
+    { "date": null, "content": "한림대학교 성심병원 순환기내과 임상교수" },
+    { "date": null, "content": "김포우리병원 순환기내과 과장" }
+  ],
+  "수상": [],
+  "학술": [],
+  "언론": [],
+  "저서": [],
+  "논문": [],
+  "searchHospitalName": "가톨릭대학교의정부성모병원",
+  "isSameHospital": true,
+  "isAttend": false
 }

@@ -41,7 +41,24 @@
   "crawling_done_udate": null,
   "hospital_doctor_site": "http://www.kcch.re.kr",
   "hospitalsite": "http://www.kcch.re.kr",
-  "isExist": null,
-  "isSearchType": "html_failed",
-  "error": "Could not find medical staff link."
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "http://www.kcch.re.kr?deptname=혈액종양내과&doctorName=강혜진",
+  "profileUrl": null,
+  "specialty": "다발성골수종, 대장암, 림프종, 백혈병",
+  "education": [],
+  "experience": [],
+  "수상": [
+    { "date": "2023", "content": "제64회 대한혈액학회 국제학술대회 우수 포스터상 수상" }
+  ],
+  "학술": [
+    { "date": null, "content": "연구: 육종 치료 이후 발생한 이차성 혈액암에 대한 후향적 연구"}
+  ],
+  "언론": [],
+  "저서": [],
+  "논문": [],
+  "searchHospitalName": "한국원자력의학원 원자력병원",
+  "isSameHospital": true,
+  "isAttend": true
 }

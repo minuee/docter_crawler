@@ -10,7 +10,7 @@
   "bedoc_deptname": "정형외과",
   "bedoc_education": "{'내용': '1975 - 1981  연세대 의과 대학 학사n1982 - 1984  연세대 의과 대학원 석사n1996 - 1999  연세대 의과 대학원 박사'}",
   "bedoc_doctor_site": "http://www.yonserang.com/template/service/booking_info.php",
-  "bedoc_yoyanggiho": "JDQ4MTg4MSM1MSMkMSMkMCMkOTkkMzgxMzUxIzMxIyQxIyQzIyQ3OSQyNjE0ODEjODEjJDEjJDIjJDgz",
+  "bedoc_yoyanggiho": "JDQ4MTg4MSM1MSMkMSMkMCMkOTkkMzgxMzUxIzIxIyQxIyQzIyQ3OSQyNjE0ODEjODEjJDEjJDIjJDgz",
   "bedoc_hospitalname": "강남연세사랑병원",
   "bedoc_tel": "1577-0050",
   "bedoc_address": "서울특별시 서초구 방배동 478-3",
@@ -24,7 +24,7 @@
   "hospital_tel": "1577-0050",
   "hospital_lon": "126.9937383",
   "hospital_lat": "37.4740477",
-  "yoyang_giho": "JDQ4MTg4MSM1MSMkMSMkMCMkOTkkMzgxMzUxIzMxIyQxIyQzIyQ3OSQyNjE0ODEjODEjJDEjJDIjJDgz",
+  "yoyang_giho": "JDQ4MTg4MSM1MSMkMSMkMCMkOTkkMzgxMzUxIzIxIyQxIyQzIyQ3OSQyNjE0ODEjODEjJDEjJDIjJDgz",
   "sidocode": "110000",
   "sidocode_name": "서울",
   "sigungu_code": "110021",
@@ -41,7 +41,35 @@
   "crawling_done_udate": null,
   "hospital_doctor_site": "http://www.yonserang.com",
   "hospitalsite": "http://www.yonserang.com",
-  "isExist": null,
-  "isSearchType": "html_failed",
-  "error": "Cheerio parser could not extract education or experience."
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "http://www.yonserang.com?deptname=정형외과&doctorName=강호정",
+  "profileUrl": "https://img.it.chosun.com/sitedata/image/202204/04/2022040410301_0.jpg",
+  "specialty": "수부, 완관절, 주관절, 어깨관절 내시경 수술, 상지골절, 신경수술, 소아기형, 종양",
+  "education": [
+    { "date": "1999", "content": "연세대학교 의과대학원 박사" },
+    { "date": "1984", "content": "연세대학교 의과대학원 석사" },
+    { "date": "1981", "content": "연세대학교 의과대학 학사" }
+  ],
+  "experience": [
+    { "date": null, "content": "연세사랑병원 명예원장 (현)" },
+    { "date": null, "content": "강남세브란스병원 정형외과장 (전)" },
+    { "date": "1994", "content": "시카고 대학교 연구조교수" }
+  ],
+  "수상": [],
+  "학술": [
+    { "date": "2013", "content": "대한수부외과학회 이사장 역임" },
+    { "date": null, "content": "대한미세수술학회 편집위원장" }
+  ],
+  "언론": [
+    { "date": "2014", "content": "EBS '명의' - '손과 손목 통증' 편에 출연" }
+  ],
+  "저서": [],
+  "논문": [
+    "200편 이상의 국내외 학술 논문 발표"
+  ],
+  "searchHospitalName": "연세사랑병원",
+  "isSameHospital": true,
+  "isAttend": true
 }

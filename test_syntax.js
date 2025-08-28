@@ -1,0 +1,1 @@
+console.log('a:has-text("교수진")');

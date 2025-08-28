@@ -1,109 +1,74 @@
 {
+  "hospital_cid": 4,
+  "bedoc_id": "A8401",
+  "bedoc_career": "{'내용': '0000 - 0000  가톨릭대학교 대전성모병원 소화기내과 전문의n0000 - 0000  가톨릭대학교 대전성모병원 염증성장질환 클리닉 소장n0000 - 0000  가톨릭대학교 대전성모병원 소화기내과 과장(전)n0000 - 0000  가톨릭대학교 대전성모병원 소화내시경센터 소장(전)n0000 - 0000  미국 University of California, San Diego(UCSD) 연수n0000 - 0000  대한장연구학회 의료정책위원회 간사n0000 - 0000  대한장연구학회 소장영양연구회 위원n0000 - 0000  대한소화기연관학회 의료정책단 위원n0000 - 0000  대한소화기학회 정회원n0000 - 0000  대한소화기내시경학회 정회원n0000 - 0000  대한소화기기능성질환 운동학회 정회원'}",
+  "bedoc_reivew": "",
+  "bedoc_speciality": "염증성 장질환(크론병, 궤양성대장염), 대장암, 대장 용종, 과민성 장증후군, 만성설사, 만성변비, 기타 대장·소장 질환, 치료내시경",
+  "bedoc_rank": "대장질환-치료",
+  "bedoc_doctorname": "강상범",
+  "bedoc_image": "A8401.jpg",
+  "bedoc_deptname": "소화기내과",
+  "bedoc_education": "{'내용': '0000 - 0000  전북대학교 의과대학 졸업'}",
+  "bedoc_doctor_site": "https://www.cmcdj.or.kr/servlet/ContentsSvl?_tc=CONTENTS00000&cd2=001&cd3=007&cd4=001",
+  "bedoc_yoyanggiho": "JDQ4MTYyMiM2MSMkMSMkMiMkODkkMzgxMzUxIzExIyQxIyQzIyQ3OSQyNjE4MzIjNTEjJDEjJDIjJDgz",
+  "bedoc_hospitalname": "대전성모병원",
+  "bedoc_tel": "1577-0888",
+  "bedoc_address": "대전광역시 중구 대흥로 64(대흥동) 가톨릭대 대전성모병원",
+  "bedoc_lon": "127.4202510",
+  "bedoc_lat": "36.3228110",
+  "hospital_name": "학교법인 가톨릭학원 가톨릭대학교 대전성모병원",
+  "hospital_addr": "대전광역시 중구 대흥로 64, (대흥동)",
+  "hospital_class_code": "11",
+  "hospital_class_name": "종합병원",
+  "hospital_site": "https://www.cmcdj.or.kr/servlet/MainSvl?_tc=F001001001A02&cd2=001&cd3=001&cd4=001&cd5=A02&idx=31&deptidx=110",
+  "hospital_tel": "042-220-9114",
+  "hospital_lon": "127.4201630",
+  "hospital_lat": "36.3230420",
+  "yoyang_giho": "JDQ4MTYyMiM2MSMkMSMkMiMkODkkMzgxMzUxIzExIyQxIyQzIyQ3OSQyNjE4MzIjNTEjJDEjJDIjJDgz",
+  "sidocode": "250000",
+  "sidocode_name": "대전",
+  "sigungu_code": "250005",
+  "sigungu_code_name": "대전중구",
+  "eupmyeon": "대흥동",
+  "open_date": "19800515",
+  "aiga_hid": "H11KR-25000007",
+  "created_at": "2025-08-20T09:10:32.000Z",
+  "updated_at": "2025-08-22T09:25:32.000Z",
+  "is_site_ok": 1,
+  "is_crawling_done": 0,
+  "site_check_date": "2025-08-22T09:25:32.000Z",
+  "crawling_done_cdate": null,
+  "crawling_done_udate": null,
+  "hospital_doctor_site": "https://www.cmcdj.or.kr/servlet/MainSvl?_tc=F001001001A02&cd2=001&cd3=001&cd4=001&cd5=A02&idx=31&deptidx=110",
+  "hospitalsite": "https://www.cmcdj.or.kr/servlet/MainSvl?_tc=F001001001A02&cd2=001&cd3=001&cd4=001&cd5=A02&idx=31&deptidx=110",
   "isExist": true,
-  "doctorName": "강상범",
-  "department": "내과(소화기)",
-  "profileUrl": "https://www.cmcdj.or.kr/servlet/MainSvl?_tc=F001001001A02&cd2=001&cd3=001&cd4=001&cd5=A02&idx=31&deptidx=110",
-  "specialty": "염증성 장질환(크론병, 궤양성대장염), 대장암",
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "https://www.cmcdj.or.kr/cn/doctor/doctor_view.jsp?sno=29",
+  "profileUrl": null,
+  "specialty": "염증성 장질환(크론병, 궤양성대장염), 대장암, 과민성장증후군, 만성 설사 및 변비, 기타 소장 및 대장 질환, 치료 내시경, 위/식도 질환",
   "education": [
-    {
-      "date": null,
-      "content": "전북대학교 의학대학원 내과학 박사"
-    },
-    {
-      "date": null,
-      "content": "가톨릭대학교 의학대학원 내과학 석사"
-    },
-    {
-      "date": null,
-      "content": "전북대학교 의과대학 학사"
-    }
+    { "date": null, "content": "전북대학교 의학대학원 내과학 박사" },
+    { "date": null, "content": "가톨릭대학교 의학대학원 내과학 석사" },
+    { "date": null, "content": "전북대학교 의과대학 학사" }
   ],
   "experience": [
-    {
-      "date": null,
-      "content": "가톨릭대학교 대전성모병원 임상교수"
-    },
-    {
-      "date": null,
-      "content": "가톨릭대학교 대전성모병원 염증성장질환 클리닉 소장(현)"
-    },
-    {
-      "date": null,
-      "content": "가톨릭대학교 대전성모병원 내과(소화기) 과장(전)"
-    },
-    {
-      "date": null,
-      "content": "가톨릭대학교 대전성모병원 소화내시경센터 소장(전)"
-    },
-    {
-      "date": "2013",
-      "content": "미국 University of California, San Diego(UCSD) 연수"
-    },
-    {
-      "date": null,
-      "content": "대한장연구학회 정회원(현)"
-    },
-    {
-      "date": null,
-      "content": "대한소화기학회 정회원(현)"
-    },
-    {
-      "date": null,
-      "content": "대한소화기내시경학회 정회원(현)"
-    },
-    {
-      "date": null,
-      "content": "대한소화기기능성질환 운동학회 정회원(현)"
-    },
-    {
-      "date": null,
-      "content": "대한소화기암연구학회 정회원(현)"
-    }
+    { "date": null, "content": "가톨릭대학교 대전성모병원 임상교수" },
+    { "date": null, "content": "가톨릭대학교 대전성모병원 염증성장질환 클리닉 소장 (현)" },
+    { "date": "2013", "content": "미국 University of California, San Diego(UCSD) 연수" }
   ],
-  "thesis": [
-    "Lee HH, Gweon TG, Kang SG, Jung SH, Lee KM, Kang SB. Assessment of Fatigueand Associated Factors in Patients with Inflammatory Bowel Disease: AQuestionnaire-Based Study. J Clin Med. 2023 Apr 25;12(9):3116. doi:10.3390/jcm12093116. PMID: 37176558; PMCID: PMC10179196.",
-    "Lee SH, Kang SB. A focally flat-elevated lesion in distal transverse colonresembling a subepithelial tumor. Clin Endosc. 2023 May;56(3):388-390. doi:10.5946/ce.2023.049. Epub 2023 May 2. PMID: 37157955; PMCID: PMC10244152.",
-    "Kim SY, Shin SY, Park SJ, Im JP, Kim HJ, Lee KM, Kim JW, Jung SA, Lee J, KangSB, Shin SJ, Kim ES, Kim YS, Kim TO, Kim HS, Park DI, Kim HK, Kim ES, Kim YH,Teng D, Kim JH, Kim W, Saeed M, Moon JM, Kim K, Choi CH, Choi HK. Changes infecal metabolic and lipidomic features by anti-TNF treatment and prediction ofclinical remission in patients with ulcerative colitis. Therap AdvGastroenterol. 2023 May 2;16:17562848231168199. doi: 10.1177/17562848231168199.PMID: 37153496; PMCID: PMC10161336.",
-    "Park YS, Kang SB, Marchelletta RR, Penrose HM, Ruiter-Visser R, Jung B,Docherty MJ, Boland BS, Sandborn WJ, McCole DF. The ClC-2 Chloride ChannelActivator, Lubiprostone, Improves Intestinal Barrier Function in Biopsies fromCrohn's Disease but Not Ulcerative Colitis Patients. Pharmaceutics. 2023 Mar2;15(3):811. doi: 10.3390/pharmaceutics15030811. PMID: 36986672; PMCID:PMC10053841.",
-    "Shin SH, Oh K, Hong SN, Lee J, Oh SJ, Kim ES, Na SY, Kang SB, Koh SJ, BangKB, Jung SA, Jung SH, Kim KO, Park SH, Yang SK, Choi CH, Ye BD. Real-lifeeffectiveness and safety of tofacitinib treatment in patients with ulcerativecolitis: a KASID multicenter cohort study. Therap Adv Gastroenterol. 2023 Mar18;16:17562848231154103. doi: 10.1177/17562848231154103. PMID: 36950251; PMCID:PMC10026122.",
-    "Lee JS, Kang SB, Park K, Yoon YS, Yu CS, Hwang SW, Ye BD, Yang SK, Lee JL,Park SH. Clinical features of enteric and colo-duodenal fistula in patients withCrohn's disease. Intest Res. 2023 Feb 22. doi: 10.5217/ir.2022.00125. Epub aheadof print. PMID: 36809859.",
-    "Kang SG, Gweon TG, Lee HH, Lee KM, Jung SH, Kang SB. Reliability and Validityof Korean Version of Crohn's and Ulcerative Colitis Questionnaire-8. Biomed ResInt. 2022 Oct 7;2022:9746899. doi: 10.1155/2022/9746899. PMID: 36246964; PMCID:PMC9568317.",
-    "Park SK, Kang SB, Kim S, Kim TO, Cha JM, Im JP, Choi CH, Kim ES, Seo GS, EunCS, Han DS, Park DI. Additive effect of probiotics (Mutaflor) on5-aminosalicylic acid therapy in patients with ulcerative colitis. Korean JIntern Med. 2022 Sep;37(5):949-957. doi: 10.3904/kjim.2021.458. Epub 2022 Mar31. PMID: 36068716; PMCID: PMC9449212.",
-    "Shin SY, Kim S, Choi JW, Kang SB, Kim TO, Seo GS, Cha JM, Chun J, Jung Y, ImJP, Bang KB, Choi CH, Park SK, Park DI. The Common and Unique Pattern ofMicrobiome Profiles among Saliva, Tissue, and Stool Samples in Patients withCrohn's Disease. Microorganisms. 2022 Jul 20;10(7):1467. doi:10.3390/microorganisms10071467. PMID: 35889187; PMCID: PMC9320459.",
-    "Park SK, Kim YB, Kim S, Lee CW, Choi CH, Kang SB, Kim TO, Bang KB, Chun J,Cha JM, Im JP, Kim MS, Ahn KS, Kim SY, Park DI. Development of a MachineLearning Model to Predict Non-Durable Response to Anti-TNF Therapy in Crohn'sDisease Using Transcriptome Imputed from Genotypes. J Pers Med. 2022 Jun9;12(6):947. doi: 10.3390/jpm12060947. PMID: 35743732; PMCID: PMC9224874.",
-    "Ryu JE, Kang SG, Jung SH, Lee SH, Kang SB. Psychological Effects andMedication Adherence among Korean Patients with Inflammatory Bowel Diseaseduring the Coronavirus Disease 2019 Pandemic: A Single-Center Survey. J ClinMed. 2022 May 27;11(11):3034. doi: 10.3390/jcm11113034. PMID: 35683421; PMCID:PMC9181113.",
-    "Jung Y, Kang SB, Yoon HJ, Cha JM. Improving the tolerability and safety of1-L polyethylene glycol plus low-dose ascorbic acid for bowel preparation in ahealthy population: a randomized multicenter clinical trial. GastrointestEndosc. 2022 Aug;96(2):341-350.e1. doi: 10.1016/j.gie.2022.03.007. Epub 2022 Mar11. PMID: 35288148.",
-    "Park SK, Kim S, Lee GY, Kim SY, Kim W, Lee CW, Park JL, Choi CH, Kang SB,Kim TO, Bang KB, Chun J, Cha JM, Im JP, Ahn KS, Kim SY, Park DI. Development ofa Machine Learning Model to Distinguish between Ulcerative Colitis and Crohn'sDisease Using RNA Sequencing Data. Diagnostics (Basel). 2021 Dec 15;11(12):2365.doi: 10.3390/diagnostics11122365. PMID: 34943601; PMCID: PMC8700628.",
-    "Jang HB, Kang SB, Lee H, Choi BJ, Lee SC. Anastomotic leakage and chronicpresacral sinus after transanal total mesorectal excision (taTME) for rectalcancer: A comparative study to laparoscopic TME. Asian J Surg. 2022Nov;45(11):2197-2202. doi: 10.1016/j.asjsur.2021.11.009. Epub 2021 Nov 17. PMID:34801358.",
-    "Shin SY, Park SJ, Kim Y, Im JP, Kim HJ, Lee KM, Kim JW, Jung SA, Lee J, KangSB, Shin SJ, Kim ES, Kim YS, Kim TO, Kim HS, Park DI, Kim HK, Kim ES, Kim YH,Kim DH, Teng D, Kim JH, Kim W, Choi CH; IBD Research Group of the KoreanAssociation for the Study of Intestinal Diseases. Clinical outcomes andpredictors of response for adalimumab in patients with moderately to severelyactive ulcerative colitis: a KASID prospective multicenter cohort study. IntestRes. 2022 Jul;20(3):350-360. doi: 10.5217/ir.2021.00049. Epub 2021 Jul 23. PMID:34289648; PMCID: PMC9344242.",
-    "Ye BD, Cheon JH, Song KH, Kim JS, Kim YH, Yoon H, Lee KM, Kang SB, Jang BI,Park JJ, Kim TO, Lee DW, Foo CY, Shin JE, Park DI. The real-world outcomes ofvedolizumab in patients with ulcerative colitis in Korea: a multicenterretrospective study. Therap Adv Gastroenterol. 2021 Jul 5;14:17562848211024769.doi: 10.1177/17562848211024769. PMID: 34285716; PMCID: PMC8261845.",
-    "Cho DB, Lee W, Cha JM, Kim JH, Kim J, Kang SB, Eun CS. Second VictimExperience and Perception Discordance of the Colonoscopic Perforation. Dig DisSci. 2022 Jul;67(7):2857-2865. doi: 10.1007/s10620-021-07107-x. Epub 2021 Jul20. PMID: 34283361.",
-    "Kim ES, Kim KO, Jang BI, Kim EY, Lee YJ, Lee HS, Lee JS, Kim SK, Jung YJ,Kang SB, Agrawal M, Ungaro R, Colombel JF. Comparison of 1-Year Colectomy RiskBetween the US and Korean Patients with Acute Severe Ulcerative Colitis: APropensity Score Matching Analysis. Dig Dis Sci. 2022 Jul;67(7):2866-2875. doi:10.1007/s10620-021-07130-y. Epub 2021 Jul 14. PMID: 34263381; PMCID: PMC8758790.",
-    "Song JH, Kang EA, Park SK, Hong SN, Kim YS, Bang KB, Kim KO, Lee HS, KangSB, Shin SY, Song EM, Im JP, Choi CH; IBD Research Group of the KoreanAssociation for the Study of Intestinal Diseases. Long-term Outcomes after theDiscontinuation of Anti-Tumor Necrosis Factor-α Therapy in Patients withInflammatory Bowel Disease under Clinical Remission: A Korean Association forthe Study of Intestinal Disease Multicenter Study. Gut Liver. 2021 Sep15;15(5):752-762. doi: 10.5009/gnl20233. PMID: 33767028; PMCID: PMC8444111.",
-    "Kang EA, Jang J, Choi CH, Kang SB, Bang KB, Kim TO, Seo GS, Cha JM, Chun J,Jung Y, Kim HG, Im JP, Kim S, Ahn KS, Lee CK, Kim HJ, Kim MS, Park DI.Development of a Clinical and Genetic Prediction Model for Early IntestinalResection in Patients with Crohn's Disease: Results from the IMPACT Study. JClin Med. 2021 Feb 7;10(4):633. doi: 10.3390/jcm10040633. PMID: 33562363; PMCID:PMC7915022.",
-    "Kim J, Yoon H, Kim N, Lee KM, Jung SA, Choi CH, Kim ES, Jung Y, Eun CS, KimTO, Kang SB, Kim YS, Seo GS, Lee CK, Im JP, Park SJ, Park DI, Ye BD. ClinicalOutcomes and Response Predictors of Vedolizumab Induction Treatment for KoreanPatients With Inflammatory Bowel Diseases Who Failed Anti-TNF Therapy: A KASIDProspective Multicenter Cohort Study. Inflamm Bowel Dis. 2021 Nov15;27(12):1931-1941. doi: 10.1093/ibd/izaa361. PMID: 33501935.",
-    "Lee SH, Kang SB. Differential Diagnosis for Chronic Diarrhea: Are MultipleRandom Biopsies with Colonoscopy Mandatory? Clin Endosc. 2021 Jan;54(1):141-142.doi: 10.5946/ce.2021.030. Epub 2021 Jan 20. PMID: 33471992; PMCID: PMC7939782.",
-    "Park SK, Kim HN, Choi CH, Im JP, Cha JM, Eun CS, Kim TO, Kang SB, Bang KB,Kim HG, Jung Y, Yoon H, Han DS, Lee CW, Ahn K, Kim HL, Park DI. DifferentiallyAbundant Bacterial Taxa Associated with Prognostic Variables of Crohn's Disease:Results from the IMPACT Study. J Clin Med. 2020 Jun 5;9(6):1748. doi:10.3390/jcm9061748. PMID: 32516912; PMCID: PMC7357029.",
-    "Park SH, Kim HJ, Lee CK, Song EM, Kang SB, Jang BI, Kim ES, Kim KO, Lee YJ,Kim EY, Jung YJ, Park SK, Park DI, Ye BD, Jung SA, Yang SK. Safety and OptimalTiming of BCG Vaccination in Infants Born to Mothers Receiving Anti-TNF Therapyfor Inflammatory Bowel Disease. J Crohns Colitis. 2020 Dec 2;14(12):1780-1784.doi: 10.1093/ecco-jcc/jjaa099. PMID: 32417881.",
-    "Gweon TG, Kang SB. Accessories to Enhance Adenoma Detection Rates: Is theEndocuff Better than the Conventional Cap for Trainees? Clin Endosc. 2020May;53(3):251-252. doi: 10.5946/ce.2020.067. Epub 2020 May 7. PMID: 32375456;PMCID: PMC7280835.",
-    "Lee CK, Ha HJ, Oh SJ, Kim JW, Lee JK, Kim HS, Yoon SM, Kang SB, Kim ES, KimTO, Na SY, Lee J, Kim SW, Koo HS, Park BK, Lee HH, Kim ES, Park JJ, Kwak MS, ChaJM, Ye BD, Choi CH, Kim HJ. Nationwide validation study of diagnostic algorithmsfor inflammatory bowel disease in Korean National Health Insurance Servicedatabase. J Gastroenterol Hepatol. 2020 May;35(5):760-768. doi:10.1111/jgh.14855. Epub 2019 Oct 27. PMID: 31498502.",
-    "Seo KI, Kang SB. [Hepatobiliary Manifestation of Inflammatory BowelDisease]. Korean J Gastroenterol. 2019 May 25;73(5):248-259. Korean. doi:10.4166/kjg.2019.73.5.248. PMID: 31132831.",
-    "Park M, Lee J, Kang SB, Park Y. Recurrent Eosinophilic Pneumonia Associatedwith Mesalazine Suppository in a Patient with Ulcerative Colitis. Korean JGastroenterol. 2019 Apr 25;73(4):225-229. doi: 10.4166/kjg.2019.73.4.225. PMID:31030460.",
-    "Shin OR, Hyeon J, Kang SB, Kim JO. Plasmablastic lymphoma presenting withileocecal intussusception in an immunocompetent patient. Korean J Intern Med.2020 Jul;35(4):1018-1019. doi: 10.3904/kjim.2018.405. Epub 2019 Feb 28. PMID:30808128; PMCID: PMC7373955.",
-    "Park KS, Lee SW, Lee J, Kim MS, Park PH, Moon SJ, Kang SB, Lee DS. Smallgastric hyperplastic polyp with acute bleeding as an unusual presentation ofmalignancy: A case report. Medicine (Baltimore). 2018 Jun;97(22):e10899. doi:10.1097/MD.0000000000010899. PMID: 29851815; PMCID: PMC6392659.",
-    "Ahn HJ, Kang SB. Can histologic remission be a better prognostic factor andtherapeutic target beyond endoscopic mucosal healing in patients with ulcerativecolitis? Intest Res. 2018 Jan;16(1):1-3. doi: 10.5217/ir.2018.16.1.1. Epub 2018Jan 18. PMID: 29422792; PMCID: PMC5797256.",
-    "Kim SH, Jang S, Sung Y, Park JK, Park Y, Yun J, Kang SB. Use of Novel OralAnticoagulant to Treat Pulmonary Thromboembolism in Patient with UlcerativeColitis Superinfected Cytomegalovirus Colitis. Korean J Gastroenterol. 2017 Jul25;70(1):44-49. doi: 10.4166/kjg.2017.70.1.44. PMID: 28728316.",
-    "Lee SW, Park KC, Kim JG, Moon SJ, Kang SB, Lee DS, Sul HJ, Ji JS, Jeong HY.Dysregulation of MicroRNA-196b-5p and MicroRNA-375 in Gastric Cancer. J GastricCancer. 2016 Dec;16(4):221-229. doi: 10.5230/jgc.2016.16.4.221. Epub 2016 Dec20. PMID: 28053808; PMCID: PMC5206312.",
-    "Lee JW, Choi CH, Park JH, Kim JW, Kang SB, Koo JS, Kim YH, Kim YS, Joo YE,Chang SK. Clinical features of active tuberculosis that developed during anti-tumor necrosis factor therapy in patients with inflammatory bowel disease.Intest Res. 2016 Apr;14(2):146-51. doi: 10.5217/ir.2016.14.2.146. Epub 2016 Apr27. PMID: 27175115; PMCID: PMC4863048.",
-    "Kang SB, Marchelletta RR, Penrose H, Docherty MJ, McCole DF. A comparison oflinaclotide and lubiprostone dosing regimens on ion transport responses in humancolonic mucosa. Pharmacol Res Perspect. 2015 Mar;3(2):e00128. doi:10.1002/prp2.128. Epub 2015 Mar 13. PMID: 26038704; PMCID: PMC4448989.",
-    "Choi WH, Chang HJ, Seung JH, Ko BS, Kang SB. A case of a jejunal ectopicpancreas presenting as obscure gastrointestinal bleeding. Korean JGastroenterol. 2013 Sep;62(3):165-8. doi: 10.4166/kjg.2013.62.3.165. PMID:24077627.",
-    "Ko BS, Kim WT, Chang SS, Kim EH, Lee SW, Park WS, Kim YS, Nam SW, Lee DS,Kim JC, Kang SB. A case of ascending colon variceal bleeding treated with venouscoil embolization. World J Gastroenterol. 2013 Jan 14;19(2):311-5. doi:10.3748/wjg.v19.i2.311. PMID: 23345957; PMCID: PMC3547563.",
-    "Heo TY, An YY, Lee JH, Lee SW, Kim YS, Kang SB, Lee DS. [A case ofspontaneous hemorrhagic cholecystitis without gallstone]. Korean JGastroenterol. 2010 Oct;56(4):260-3. Korean. doi: 10.4166/kjg.2010.56.4.260.PMID: 20962563.",
-    "Nam SW, Bae SH, Lee SW, Kim YS, Kang SB, Choi JY, Cho SH, Yoon SK, Han JY,Yang JM, Lee YS. Short-term overlap lamivudine treatment with adefovir dipivoxilin patients with lamivudine-resistant chronic hepatitis B. World JGastroenterol. 2008 Mar 21;14(11):1781-4. doi: 10.3748/wjg.14.1781. PMID:18350610; PMCID: PMC2695919.",
-    "Jin SW, Her SH, Lee JM, Yoon HJ, Moon SJ, Kim PJ, Baek SH, Seung KB, Kim JH,Kang SB, Kim JH, Kim KY. The association between current Helicobacter pyloriinfection and coronary artery disease. Korean J Intern Med. 2007Sep;22(3):152-6. doi: 10.3904/kjim.2007.22.3.152. PMID: 17939331; PMCID:PMC2687700.",
-    "Son HS, Kim GS, Lee SW, Kang SB, Back JT, Nam SW, Lee DS, Ahn BM. [Toxichepatitis associated with carp juice ingestion]. Korean J Hepatol. 2006Mar;12(1):103-6. Korean. PMID: 16565611.",
-    "Nam SW, Baek JT, Kang SB, Lee DS, Kim JI, Cho SH, Park SH, Han JY, Ahn BM,Kim JK, Chung KW. A case of the hepatocellular carcinoma during the pregnancyand metastasis to the left atrium. Korean J Hepatol. 2005 Dec;11(4):381-5. PMID:16380667.",
-    "Nam SW, Baek JT, Lee DS, Kang SB, Ahn BM, Chung KW. A case of acutecholestatic hepatitis associated with the seeds of Psoralea corylifolia (Boh-Gol-Zhee). Clin Toxicol (Phila). 2005;43(6):589-91. doi: 10.1081/clt-200068863.PMID: 16255343.",
-    "Lee DS, Kang SB, Baek JT, Nam SW, Lee KM, Ahn BM, Lee EH, Han SW, Chung IS.[Immunohistochemical expression of bcl-2, bcl-xL, bax, p53 proteins in gastricadenoma and adenocarcinoma]. Korean J Gastroenterol. 2005 Jun;45(6):394-400.Korean. PMID: 15973073."
-  ]
+  "수상": [],
+  "학술": [
+    { "date": "2019", "content": "산업자원부 '유전자 의약산업진흥 유전체 분석시스템 구축사업' 국책 연구 선정" },
+    { "date": null, "content": "대한장연구학회 정회원" },
+    { "date": null, "content": "대한소화기학회 정회원" }
+  ],
+  "언론": [
+    { "date": "2022-12", "content": "매경헬스와 궤양성 대장염의 현황과 치료법에 대해 인터뷰" }
+  ],
+  "저서": [],
+  "논문": [],
+  "searchHospitalName": "가톨릭대학교 대전성모병원",
+  "isSameHospital": true,
+  "isAttend": true
 }

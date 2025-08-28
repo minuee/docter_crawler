@@ -4,13 +4,15 @@
 
     <select id="select_bedoc_hospital">
         SELECT 
-            a.*,a.hospital_site as hospitalsite, a.hospital_doctor_site as hospital_site
+            a.hospital_cid,a.bedoc_doctorname,a.bedoc_deptname,a.bedoc_doctor_site,a.bedoc_hospitalname,
+            a.hospital_name,a.hospital_addr
+            ,a.hospital_site as hospitalsite, a.hospital_doctor_site as hospital_site
         FROM
             hospital_bedoc_list as a
         WHERE
             1=1 and is_crawling_done = false and  hospital_site != '' and  hospital_site is not null 
         ORDER BY a.hospital_cid ASC
-        LIMIT 10 OFFSET 10
+        LIMIT 20 OFFSET 0
     </select>
 
     <update id="hospital_site_is_null">
@@ -19,6 +21,17 @@
 
     <update id="hospital_update_doctor_site">
         UPDATE hospital_bedoc_list set hospital_doctor_site = #{hospital_site} WHERE hospital_cid = #{cid}
+    </update>
+
+    <update id="hospital_bedoc_update">
+        UPDATE hospital_bedoc_list 
+        SET 
+            is_search_same_hospital = #{isSameHospital},
+            is_attend = #{isAttend},
+            search_type = #{isSearchType},
+            search_hospital_name = #{searchHospitalName},
+            is_site_ok = #{isExist}
+        WHERE hospital_cid = #{hospital_cid}
     </update>
     
 </mapper>

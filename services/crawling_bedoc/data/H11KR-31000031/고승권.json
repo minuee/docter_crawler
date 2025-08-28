@@ -41,7 +41,41 @@
   "crawling_done_udate": null,
   "hospital_doctor_site": "http://www.oshankook.net/",
   "hospitalsite": "http://www.oshankook.net/",
-  "isExist": null,
-  "isSearchType": "html_failed",
-  "error": "Cheerio parser could not extract education or experience."
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "http://www.oshankook.net/?deptname=산부인과&doctorName=고승권",
+  "profileUrl": null,
+  "specialty": "갱년기장애, 부인과수술, 부인암, 피임, 월경이상, 일반 산부인과",
+  "education": [
+    { "date": null, "content": "인하대학교 의과대학 졸업" }
+  ],
+  "experience": [
+    { "date": "2009.10", "content": "오산한국병원 산부인과 과장" },
+    { "date": null, "content": "인하대학교 의과대학 교수 (약 15년간 재직)" },
+    { "date": null, "content": "미국 남가주대학(University of Southern California) 교환교수" }
+  ],
+  "수상": [
+    { "date": "2025.07.05", "content": "오산시장 표창 수상" },
+    { "date": "2016", "content": "마르퀴즈 후즈 후 세계인명사전 (Marquis Who's Who in the World) 등재" },
+    { "date": "2018", "content": "마르퀴즈 후즈 후 세계인명사전 (Marquis Who's Who in the World) 등재" },
+    { "date": "2019", "content": "마르퀴즈 후즈 후 세계인명사전 (Marquis Who's Who in the World) 등재" },
+    { "date": "2016", "content": "영국 국제인명센터(IBC) '21세기 뛰어난 2000명의 지식인' 추천" },
+    { "date": "2016.12", "content": "영국 국제인명센터(IBC) '케임브리지 의학 공로상' 추천" }
+  ],
+  "학술": [
+    { "date": "2013", "content": "제115회 병원 진료과장 컨퍼런스에서 'Fetal programming' 주제로 발표" }
+  ],
+  "언론": [
+    { "date": "2009.10.18", "content": "MBC '시사매거진 2580' 출연" }
+  ],
+  "저서": [
+    { "date": null, "content": "국내 산부인과 교과서 집필 참여" }
+  ],
+  "논문": [
+    "오산한국병원 재직 중 SCI급 논문 3편 발표"
+  ],
+  "searchHospitalName": "오산한국병원",
+  "isSameHospital": true,
+  "isAttend": true
 }

@@ -1,52 +1,90 @@
 {
+  "hospital_cid": 1,
+  "bedoc_id": "A0106",
+  "bedoc_career": "{'내용': '1983 - 1984  계명대 동산병원 인턴n1984 - 1988  계명대 동산병원 레지던트n1991 - 1994  성분도병원 외과n1994 - 1994  계명대 동산병원 간담췌외과 연구강사n1994 - 1998  계명대 동산병원 간담췌외과 조교수n1998 - 2005  계명대 동산병원 간담췌외과 부교수n1999 - 2000  듀크의대 간담도 췌장 및 간이식 외과 연수(교환교수)n2005 -       계명대 동산병원 간담췌외과 교수n2010 - 2013  계명대 동산병원 외과학교실 주임교수 및 외과과장'}",
+  "bedoc_reivew": "",
+  "bedoc_speciality": "간, 담도, 췌장암, 담낭암, 간이식, 복강경수술",
+  "bedoc_rank": "간질환-수술",
+  "bedoc_doctorname": "강구정",
+  "bedoc_image": "A0106.jpg",
+  "bedoc_deptname": "외과",
+  "bedoc_education": "{'내용': ''}",
+  "bedoc_doctor_site": "http://www.dsmc.or.kr/content/01treatment/07_01.php",
+  "bedoc_yoyanggiho": "JDQ4MTYyMiM4MSMkMSMkMCMkODkkMzgxMzUxIzExIyQxIyQzIyQ3MiQzNjEwMDIjNjEjJDEjJDgjJDgz",
+  "bedoc_hospitalname": "계명대동산병원",
+  "bedoc_tel": "1577-6622",
+  "bedoc_address": "대구광역시 중구 성내2동 달성로 56",
+  "bedoc_lon": "128.5830030",
+  "bedoc_lat": "35.8694920",
+  "hospital_name": "계명대학교대구동산병원",
+  "hospital_addr": "대구광역시 중구 달성로 56, 계명대학교대구동산병원 (동산동)",
+  "hospital_class_code": "11",
+  "hospital_class_name": "종합병원",
+  "hospital_site": "https://daegu.dsmc.or.kr:49880/",
+  "hospital_tel": "053-250-8114",
+  "hospital_lon": "128.5831323",
+  "hospital_lat": "35.8694728",
+  "yoyang_giho": "JDQ4MTYyMiM4MSMkMSMkMCMkODkkMzgxMzUxIzExIyQxIyQzIyQ3MiQzNjEwMDIjNjEjJDEjJDgjJDgz",
+  "sidocode": "230000",
+  "sidocode_name": "대구",
+  "sigungu_code": "230006",
+  "sigungu_code_name": "대구중구",
+  "eupmyeon": "동산동",
+  "open_date": "20190329",
+  "aiga_hid": "H11KR-23000003",
+  "created_at": "2025-08-20T09:10:32.000Z",
+  "updated_at": "2025-08-22T09:25:20.000Z",
+  "is_site_ok": 0,
+  "is_crawling_done": 0,
+  "site_check_date": "2025-08-22T09:25:20.000Z",
+  "crawling_done_cdate": null,
+  "crawling_done_udate": null,
+  "hospital_doctor_site": "https://daegu.dsmc.or.kr:49880/",
+  "hospitalsite": "https://daegu.dsmc.or.kr:49880/",
   "isExist": true,
-  "doctorName": "강구정",
-  "department": "외과",
-  "profileUrl": "https://dsmc.or.kr/daegu/doctor/info.cm?dept_code=DDGS&doctor_code=50002",
-  "specialty": "간이식, 간담도췌장암, 담낭암, 성인 탈장, 복강경 및 로봇 수술",
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "https://www.dsmc.or.kr/doctor/doctor_info.html?part_code=01011&dr_no=229",
+  "profileUrl": null,
+  "specialty": "간이식, 간담췌장암, 담낭암, 성인 탈장, 복강경 및 로봇 수술",
   "education": [
-    {
-      "date": "1983",
-      "content": "경북대학교 의과대학 의학 학사"
-    },
-    {
-      "date": "1986",
-      "content": "경북대학교 의과대학 의학 석사"
-    },
-    {
-      "date": "1996",
-      "content": "경북대학교 의과대학 의학 박사"
-    }
+    { "date": "1983", "content": "경북대학교 의과대학 의학 학사" },
+    { "date": "1986", "content": "경북대학교 의과대학 의학 석사" },
+    { "date": "1996", "content": "경북대학교 의과대학 의학 박사" }
   ],
   "experience": [
-    {
-      "date": null,
-      "content": "現 계명대학교 동산병원 간담췌외과 교수"
-    },
-    {
-      "date": null,
-      "content": "계명대학교 동산병원 인턴 및 레지던트 수료"
-    },
-    {
-      "date": null,
-      "content": "미국 듀크대학교 의과대학 간담췌 및 간이식 외과 연수 (교환교수)"
-    },
-    {
-      "date": null,
-      "content": "미국 메이요 클리닉 방문연구교수"
-    },
-    {
-      "date": null,
-      "content": "계명대학교 동산병원 외과학교실 주임교수 및 외과과장 역임"
-    },
-    {
-      "date": null,
-      "content": "한국간담췌외과학회 회장 역임"
-    },
-    {
-      "date": null,
-      "content": "대한민국의학한림원 정회원"
-    }
+    { "date": "2005.03", "content": "계명대학교 동산병원 간담췌외과 교수" },
+    { "date": "2010.10", "content": "계명대학교 동산병원 외과학교실 주임교수 및 외과과장" },
+    { "date": "2009.03", "content": "미국 메이요 클리닉 방문연구교수" },
+    { "date": "1999.07", "content": "미국 듀크의대 간담도 췌장 및 간이식 외과 교환교수" },
+    { "date": "1998.10", "content": "계명대학교 동산병원 간담췌외과 부교수" },
+    { "date": "1994.09", "content": "계명대학교 동산병원 간담췌외과 조교수" }
   ],
-  "thesis": []
+  "수상": [
+    { "date": "2019", "content": "한국간담췌외과학회 우수논문상" },
+    { "date": "2005", "content": "한국간담췌외과학회 학술상" },
+    { "date": "2003", "content": "제1회 올해의 논픽션상 우수상" }
+  ],
+  "학술": [
+    { "date": "2018", "content": "대한민국의학한림원 정회원" },
+    { "date": "2019", "content": "World Journal of Hepatology 편집장" },
+    { "date": "2017.07", "content": "한국간담췌외과학회 회장 역임" }
+  ],
+  "언론": [
+    { "date": null, "content": "TBC '클리닉 건강365' 출연" },
+    { "date": null, "content": "대구극동방송 '사랑의 뜰안' 출연" }
+  ],
+  "저서": [
+    { "date": "2003", "content": "나는 외과의사다" },
+    { "date": "2007", "content": "수술, 마지막 선택" },
+    { "date": null, "content": "메이요 평전 (옮긴 책)" }
+  ],
+  "논문": [
+    "Gene Signature for Sorafenib Susceptibility in Hepatocellular Carcinoma (Liver Cancer, 2020)",
+    "Pan-cancer Analysis of Whole Genomes (nature, 2020)",
+    "Appropriate treatment modality for solitary small hepatocellular carcinoma (Clin Mol Hepatol, 2020)"
+  ],
+  "searchHospitalName": "계명대학교 대구동산병원",
+  "isSameHospital": true,
+  "isAttend": true
 }

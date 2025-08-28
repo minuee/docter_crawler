@@ -41,7 +41,44 @@
   "crawling_done_udate": null,
   "hospital_doctor_site": "http://www.ncc.re.kr",
   "hospitalsite": "http://www.ncc.re.kr",
-  "isExist": null,
-  "isSearchType": "html_failed",
-  "error": "Could not find medical staff link."
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "http://www.ncc.re.kr?deptname=정형외과&doctorName=강현귀",
+  "profileUrl": null,
+  "specialty": "근골격계 종양, 육종암, 골전이암의 진단 및 수술적 치료",
+  "education": [
+    { "date": "2001", "content": "전북대학교 의학과 박사" },
+    { "date": "1998", "content": "전북대학교 의학과 석사" },
+    { "date": "1994", "content": "전북대학교 의학과 학사" }
+  ],
+  "experience": [
+    { "date": "2023", "content": "대한3D프린팅융합의료학회 회장" },
+    { "date": "2023", "content": "대한근골격종양학회 회장" },
+    { "date": null, "content": "국립암센터 희귀암센터 센터장" },
+    { "date": null, "content": "국립암센터 정형외과 교수" },
+    { "date": "2005", "content": "서울대학교병원 골연부종양 전임의" }
+  ],
+  "수상": [
+    { "date": "2024", "content": "대한3D프린팅융합의료학회 구연상 금상, 은상 등 다수 수상" },
+    { "date": "2023", "content": "대한근골격종양학회 우수논문상" },
+    { "date": "2021", "content": "보건복지부 장관표창" },
+    { "date": "2019", "content": "국민건강보험공단 이사장 표창" },
+    { "date": "2017", "content": "대한정형외과학회 학술전시우수상" },
+    { "date": "2013", "content": "세계정형외과학술대회(AAOS) 종양/골대사질환 부문 최우수 포스터상" }
+  ],
+  "학술": [
+    { "date": null, "content": "3D 프린팅 기술을 이용한 골종양 수술 연구" },
+    { "date": null, "content": "암환자의 골반골 전이암에 대한 경피적 시멘트 성형술 연구" }
+  ],
+  "언론": [],
+  "저서": [
+    { "date": "2021", "content": "3D 프린팅 골 재건 임상 도해서(Clinical Atlas of 3D Printing Bone Reconstruction)" }
+  ],
+  "논문": [
+    "암환자의 골반골 전이암에 대한 경피적 시멘트 성형술"
+  ],
+  "searchHospitalName": "국립암센터",
+  "isSameHospital": true,
+  "isAttend": true
 }

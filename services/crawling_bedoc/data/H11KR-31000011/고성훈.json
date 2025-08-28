@@ -41,7 +41,32 @@
   "crawling_done_udate": null,
   "hospital_doctor_site": "http://www.ksungae.co.kr/Index.asp",
   "hospitalsite": "http://www.ksungae.co.kr/Index.asp",
-  "isExist": null,
-  "isSearchType": "html_failed",
-  "error": "Could not find medical staff link."
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "http://www.ksungae.co.kr/Index.asp?deptname=성형외과&doctorName=고성훈",
+  "profileUrl": "https://www.sungae.co.kr/images/content/doctor/20200302170317_1.jpg",
+  "specialty": "피부암 및 양성 종양, 화상, 안면부 외상",
+  "education": [
+    { "date": null, "content": "고려대학교 의학박사" },
+    { "date": null, "content": "신촌세브란스병원 성형외과 전공의" },
+    { "date": null, "content": "연세대학교 의과대학 졸업" }
+  ],
+  "experience": [
+    { "date": null, "content": "한림대학교 성형외과 교수" }
+  ],
+  "수상": [],
+  "학술": [
+    { "date": null, "content": "대한미세수술학회 정회원" },
+    { "date": null, "content": "대한수부외과학회 전 회장" },
+    { "date": null, "content": "대한두개안면성형외과학회 전 회장" },
+    { "date": null, "content": "대한미용성형학회 정회원" },
+    { "date": null, "content": "대한말초신경외과학회 고문" }
+  ],
+  "언론": [],
+  "저서": [],
+  "논문": [],
+  "searchHospitalName": "광명성애병원",
+  "isSameHospital": true,
+  "isAttend": true
 }

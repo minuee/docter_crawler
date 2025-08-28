@@ -1,44 +1,85 @@
 {
+  "hospital_cid": 2,
+  "bedoc_id": "A5924",
+  "bedoc_career": "{'내용': '0000 - 0000  경상대병원 소아과 전공의n0000 - 0000  서울대병원 소아소화기 전임의n0000 - 0000  제주대 의전원 교수n0000 - 0000  제주대 의전원 기획조정실장 역임n0000 - 0000  제주대병원 영양집중지원팀장 역임n0000 - 0000  제주대 의전원 소아과학교실 주임교수n0000 - 0000  제주대병원 소아청소년과장'}",
+  "bedoc_reivew": "",
+  "bedoc_speciality": "복통, 구토, 설사, 변비, 황달, 혈변, 크론병, 궤양성 대장염, 위장관 이물, 간염, 윌슨병, 저체중, 비만, 소아당뇨, 성조숙증, 저신장, 갑상선질환",
+  "bedoc_rank": "소아소화기-치료",
+  "bedoc_doctorname": "강기수",
+  "bedoc_image": "A5924.jpg",
+  "bedoc_deptname": "소아청소년과",
+  "bedoc_education": "{'내용': '1999 - 1999  경상대 의학과 의학사n2007 - 2007  경상대 의학과 의학석사n2009 - 2009  경상대 의학과 의학박사'}",
+  "bedoc_doctor_site": "http://www.jejunuh.co.kr/treatment/jiryu/outpatient/_/0/initview.do#.XMq4pZUx69I",
+  "bedoc_yoyanggiho": "JDQ4MTYyMiM4MSMkMSMkOCMkODkkMzgxMzUxIzExIyQxIyQzIyQ4OSQyNjE0ODEjNTEjJDEjJDYjJDgz",
+  "bedoc_hospitalname": "제주대병원",
+  "bedoc_tel": "064-717-1114",
+  "bedoc_address": "제주특별자치도 제주시 아라일동 아란13길 15",
+  "bedoc_lon": "126.5457560",
+  "bedoc_lat": "33.4670450",
+  "hospital_name": "제주대학교병원",
+  "hospital_addr": "제주특별자치도 제주시 아란13길 15-0,  0동 0층 0호 (아라일동,제주대학교병원)",
+  "hospital_class_code": "11",
+  "hospital_class_name": "종합병원",
+  "hospital_site": "http://www.jejunuh.co.kr/main.jsp",
+  "hospital_tel": "064-717-1114",
+  "hospital_lon": "126.5452109",
+  "hospital_lat": "37.4671105",
+  "yoyang_giho": "JDQ4MTYyMiM4MSMkMSMkOCMkODkkMzgxMzUxIzExIyQxIyQzIyQ4OSQyNjE0ODEjNTEjJDEjJDYjJDgz",
+  "sidocode": "390000",
+  "sidocode_name": "제주",
+  "sigungu_code": "390200",
+  "sigungu_code_name": "제주시",
+  "eupmyeon": "아라일동",
+  "open_date": "19651002",
+  "aiga_hid": "H11KR-39000003",
+  "created_at": "2025-08-20T09:10:32.000Z",
+  "updated_at": "2025-08-22T09:25:23.000Z",
+  "is_site_ok": 0,
+  "is_crawling_done": 0,
+  "site_check_date": "2025-08-22T09:25:23.000Z",
+  "crawling_done_cdate": null,
+  "crawling_done_udate": null,
+  "hospital_doctor_site": "http://www.jejunuh.co.kr/main.jsp",
+  "hospitalsite": "http://www.jejunuh.co.kr/main.jsp",
   "isExist": true,
-  "doctorName": "강기수",
-  "department": "소아청소년과",
-  "profileUrl": "https://www.jejunuh.co.kr/",
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "http://www.jejunuh.co.kr/?deptname=소아청소년과&doctorName=강기수",
+  "profileUrl": "https://www.jejunuh.co.kr/images/doctor/dr_kang_gisu.jpg",
   "specialty": "소화기질환, 크론병 및 궤양성대장염, 비만, 저체중, 당뇨병, 저신장, 성조숙증, 내분비질환, 희귀유전질환, 발달지연, 신경계질환",
   "education": [
-    {
-      "date": "1999",
-      "content": "경상대학교 의학과 의학사"
-    },
-    {
-      "date": "2007",
-      "content": "경상대학교 의학과 의학석사"
-    },
-    {
-      "date": "2009",
-      "content": "경상대학교 의학과 의학박사"
-    }
+    { "date": "1999", "content": "경상대학교 의학과 의학사" },
+    { "date": "2007", "content": "경상대학교 의학과 의학석사" },
+    { "date": "2009", "content": "경상대학교 의학과 의학박사" }
   ],
   "experience": [
-    {
-      "date": null,
-      "content": "경상대학교병원 소아과 전공의"
-    },
-    {
-      "date": null,
-      "content": "서울대학교병원 소아소화기 전임의"
-    },
-    {
-      "date": null,
-      "content": "제주대학교 의학전문대학원 교수"
-    },
-    {
-      "date": "2011-2012",
-      "content": "Yale University School of Medicine 연수"
-    },
-    {
-      "date": null,
-      "content": "제주대학교병원 소아청소년과장 역임"
-    }
+    { "date": null, "content": "경상대학교병원 소아과 전공의" },
+    { "date": null, "content": "서울대학교병원 소아소화기 전임의" },
+    { "date": null, "content": "제주대학교 의학전문대학원 교수" },
+    { "date": null, "content": "제주대학교 의학전문대학원 기획조정실장 역임" },
+    { "date": null, "content": "제주대학교병원 영양집중지원팀장 역임" },
+    { "date": null, "content": "제주대학교 의학전문대학원 소아과학교실 주임교수" },
+    { "date": null, "content": "제주대학교병원 소아청소년과장 역임" },
+    { "date": "2011.02", "content": "미국 Yale University School of Medicine 연수" }
   ],
-  "thesis": []
+  "수상": [
+    { "date": "2008", "content": "미국-아시아태평양간학회(AASLD-APASL) 우수연구자상" },
+    { "date": "2011", "content": "대한소아소화기영양학회 학술상" },
+    { "date": "2017", "content": "대한소아소화기영양학회 학술상" },
+    { "date": "2018", "content": "대한소아소화기영양학회 학술상" }
+  ],
+  "학술": [
+    { "date": null, "content": "대한소아과학회 'Pediatric Gastroenterology, Hepatology & Nutrition' 편집장" },
+    { "date": null, "content": "대한소화기내시경학회 정회원" },
+    { "date": null, "content": "대한간학회 정회원" }
+  ],
+  "언론": [],
+  "저서": [],
+  "논문": [
+    "Associations among the Degree of Nonalcoholic Fatty Liver Disease, Metabolic Syndrome, Degree of Obesity in children, and Parental Osesity",
+    "제주도 학생 고비만율 요인 분석"
+  ],
+  "searchHospitalName": "제주대학교병원",
+  "isSameHospital": true,
+  "isAttend": true
 }

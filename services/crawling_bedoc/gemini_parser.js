@@ -8,8 +8,10 @@ const path = require('path');
  * It attempts to parse doctor info from the hospital website and saves the state to a single JSON file.
  */
 async function parseWithGemini(doctorData) {
-    const { bedoc_doctorname, aiga_hid } = doctorData;
+    const { bedoc_doctorname, aiga_hid,hospital_addr } = doctorData;
     const dataDir = path.join(__dirname, 'data', aiga_hid);
+    // Ensure the directory exists before writing the file
+    fs.mkdirSync(dataDir, { recursive: true });
     const jsonFilePath = path.join(dataDir, `${bedoc_doctorname}.json`);
 
     // If a file already exists and is fully processed, skip.

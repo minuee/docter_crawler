@@ -14,6 +14,7 @@ const path = require('path');
 const fs = require('fs');
 const router = asyncify(express.Router());
 const geminiParser = require('./gemini_parser');
+const playwrightParser = require('./playwright_parser');
 
 
 /**
@@ -366,7 +367,7 @@ router.get('/collect2', async function(req, res) {
     for ( let i = 0; i < ret?.data.length ; i++ ) {
       const doctorData = ret.data?.length > 0 ?  ret.data[i] : null;
 
-      if ( doctorData != null && doctorData?.hospital_site && doctorData?.bedoc_deptname && doctorData?.bedoc_doctorname ) {
+      if ( doctorData != null && doctorData?.hospital_site && doctorData?.bedoc_deptname && doctorData?.bedoc_doctorname && doctorData?.hospital_addr ) {
           list_target_cnt++;
           const crawlResult = await geminiParser.parseWithGemini(doctorData);
 
@@ -389,6 +390,158 @@ router.get('/collect2', async function(req, res) {
   } catch (error) {
     console.error('Error in /collect2 route:', error.message);
     res.status(500).send('An error occurred during the collection process: ' + error.message);
+  }
+});
+
+/**
+ * @swagger
+ *  /v1/c/crawling_bedoc/collect3:
+ *    get:
+ *      summary: "의사별 수집하기 (Playwright)"
+ *      description: "Playwright를 사용하여 정보를 파싱합니다."
+ *      tags: [crawling_bedoc-베닥의사 수집]
+ *      responses:
+ *        "200":
+ *          description: 의사별 수집하기 (Playwright)
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    users:
+ *                      type: object
+ *                      example:
+ *                            { "code": 1000, "message": "접속성공" }
+ */
+router.get('/collect3', async function(req, res) {
+
+  //mapper 경로
+  mybatisMapper.createMapper([`${global.appRoot}/services/crawling_bedoc/controler.xml`]);
+  let list_target_cnt = 0;
+  let list_success_cnt = 0;
+  const results = []; // for detailed logging
+
+  try {
+    const param = {
+    };
+    const format = { language: "sql", indent: "  " };
+    const query = mybatisMapper.getStatement(
+        "controler",
+        "select_bedoc_hospital",
+        param,
+        format
+    );
+    const { DBError = null, RS = null } = await daoMysql.spCall(query);
+
+    const ret = await  functions.myBatisResult(DBError,RS)
+
+    for ( let i = 0; i < ret?.data.length ; i++ ) {
+      const doctorData = ret.data?.length > 0 ?  ret.data[i] : null;
+
+      if ( doctorData != null && doctorData?.hospital_site && doctorData?.bedoc_deptname && doctorData?.bedoc_doctorname && doctorData?.hospital_addr ) {
+          list_target_cnt++;
+          const crawlResult = await playwrightParser.parseWithPlaywright(doctorData);
+
+          if (crawlResult && crawlResult.success) {
+            list_success_cnt++;
+            results.push({ doctor: doctorData.bedoc_doctorname, hospital: doctorData.hospital_name, status: 'On-Site Parse Success (Playwright)' });
+          } else {
+            // Safely access error message
+            const errorMessage = (crawlResult && crawlResult.error) ? crawlResult.error : 'Unknown error during Playwright parsing';
+            results.push({ doctor: doctorData.bedoc_doctorname, hospital: doctorData.hospital_name, status: 'On-Site Parse Failed (Playwright)', reason: errorMessage });
+          }
+
+          await CS.wait(1000); // 1-second delay
+      }
+    }
+    return res.send({
+      code : 200,
+      success: true,
+      message: `Phase 1 (On-Site Parsing with Playwright) Complete. Success: ${list_success_cnt} / ${list_target_cnt}`,
+      results: results
+    });
+  } catch (error) {
+    console.error('Error in /collect3 route:', error.message);
+    res.status(500).send('An error occurred during the collection process: ' + error.message);
+  }
+});
+
+/**
+ * @swagger
+ *  /v1/c/crawling_bedoc/save:
+ *    get:
+ *      summary: "수집된 의사 데이터를 DB에 저장"
+ *      description: "services/crawling_bedoc/data/ 폴더의 JSON 파일들을 읽어 DB에 저장합니다."
+ *      tags: [crawling_bedoc-베닥의사 수집]
+ *      responses:
+ *        "200":
+ *          description: 데이터 저장 결과
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    message:u000a                      type: string
+ */
+router.get('/save', async function(req, res) {
+  //mapper 경로
+  mybatisMapper.createMapper([`${global.appRoot}/services/crawling_bedoc/controler.xml`]);
+  let saved_count = 0;
+  const errors = [];
+
+  try {
+    const dataDir = path.join(global.appRoot, 'services/crawling_bedoc/data');
+    const hospitalDirs = fs.readdirSync(dataDir, { withFileTypes: true })
+                           .filter(dirent => dirent.isDirectory())
+                           .map(dirent => dirent.name);
+    let  save_data = [];
+    for (const hospitalID of hospitalDirs) {
+      const doctorFiles = fs.readdirSync(path.join(dataDir, hospitalID))
+                            .filter(file => file.endsWith('.json'));
+
+      for (const fileName of doctorFiles) {
+        const filePath = path.join(dataDir, hospitalID, fileName);
+        let doctorData = null; // Declare doctorData here
+        let doctorName = 'Unknown Doctor'; // Declare and initialize
+        let hospitalName = 'Unknown Hospital'; // Declare and initialize
+
+        try {
+          const fileContent = fs.readFileSync(filePath, 'utf-8');
+          doctorData = JSON.parse(fileContent); // Assign to the outer-scoped variable
+
+          if (!doctorData) { // Handle cases where JSON.parse returns null/undefined
+            throw new Error('Parsed doctorData is null or undefined.');
+          }
+
+          doctorName = doctorData.bedoc_doctorname || 'Unknown Doctor';
+          hospitalName = doctorData.hospital_name || 'Unknown Hospital';
+
+          const saveResult = await crawlingCtrl.saveDoctorDataToBedocTable(doctorData);
+          if (saveResult.success) {
+            saved_count++;
+          } else {
+            errors.push(`Doctor ${doctorName} from ${hospitalName}: ${saveResult.error}`);
+          }
+        } catch (fileError) {
+          console.error(`[SAVE] Error processing file ${filePath}: ${fileError.message}`);
+          errors.push(`File ${filePath} (Doctor: ${doctorName}, Hospital: ${hospitalName}): ${fileError.message}`);
+        }
+      }
+    }
+
+    return res.send({
+      code: 200,
+      success: true,
+      message: `Saved ${saved_count} doctor records. Errors: ${errors.length}`,
+      errors: errors
+    });
+  } catch (error) {
+    console.error('Error in /save route:', error.message);
+    res.status(500).send('An error occurred during the save process: ' + error.message);
   }
 });
 
