@@ -510,7 +510,7 @@ router.get('/save', async function(req, res) {
           const fileContent = fs.readFileSync(filePath, 'utf-8');
           doctorData = JSON.parse(fileContent); // Assign to the outer-scoped variable
 
-          if (!doctorData || CS.isEmpty(doctorData?.doctorDetailUrl) || CS.isEmpty(doctorData?.bedoc_doctorname) || !doctorData?.isExist || doctorData?.isSearchType == "html_failed" ) { // Handle cases where JSON.parse returns null/undefined
+          if (!doctorData || CS.isEmpty(doctorData?.doctorDetailUrl) || CS.isEmpty(doctorData?.bedoc_doctorname) || doctorData?.isSearchType == "html_failed" ) { // Handle cases where JSON.parse returns null/undefined
             emptyDoctors.push(doctorData)
             throw new Error('Parsed doctorData is null or undefined.');
           }
@@ -548,6 +548,64 @@ router.get('/save', async function(req, res) {
   } catch (error) {
     console.error('Error in /save route:', error.message);
     res.status(500).send('An error occurred during the save process: ' + error.message);
+  }
+});
+
+/**
+ * @swagger
+ *  /v1/c/crawling_bedoc/get-allhid:
+ *    get:
+ *      summary: "HID전체 조회를 위한 api"
+ *      description: "HID전체 조회"
+ *      tags: [crawling_bedoc-베닥의사 수집]
+ *      responses:
+ *        "200":
+ *          description: 데이터 저장 결과
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    message:u000a                      type: string
+ */
+
+router.get('/get-allhid', async function(req, res) {
+  //mapper 경로
+  mybatisMapper.createMapper([`${global.appRoot}/services/crawling_bedoc/controler.xml`]);
+  const hospitalHIDList = [];
+  try {
+  
+    const param = {
+    }; 
+    const format = { language: "sql", indent: "  " };
+    const query = mybatisMapper.getStatement(
+        "controler",
+        "find_all_hospital_hid",
+        param,
+        format
+    );
+   
+    const { DBError = null, RS = null } = await daoMysql.spCall(query);
+    
+    const ret = await  functions.myBatisResult(DBError,RS)
+
+    // Save the data to a file
+    const outputPath = path.join(global.appRoot, 'services/crawling_bedoc', 'hospital_list.json');
+    fs.writeFileSync(outputPath, JSON.stringify(ret?.data, null, 2));
+    console.log(`Hospital data saved to ${outputPath}`);
+
+    console.log(`query : ${JSON.stringify(ret?.data[0])}`)
+    return res.send({
+      code: 200,
+      success: true,
+      message: `ok, and data saved to file`,
+      data: ret?.data[0]
+    });
+  } catch (error) {
+    console.error('Error in /get-allhid route:', error.message);
+    res.status(500).send('An error occurred during the get all hid process: ' + error.message);
   }
 });
 

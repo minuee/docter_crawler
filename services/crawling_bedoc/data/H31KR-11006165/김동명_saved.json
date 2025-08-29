@@ -1,0 +1,50 @@
+{
+  "hospital_cid": 60,
+  "bedoc_doctorname": "김동명",
+  "bedoc_deptname": "안과",
+  "bedoc_doctor_site": "http://www.gongdeokeye.com/",
+  "bedoc_hospitalname": "안과",
+  "hospital_tel": "02-704-3088",
+  "hospital_name": "SNU서울안과",
+  "hospital_addr": "서울특별시 마포구 만리재로 14 3층 (공덕동)",
+  "aiga_hid": "H31KR-11006165",
+  "hospitalsite": "http://www.gongdeokeye.com/",
+  "hospital_site": "http://www.gongdeokeye.com/",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "http://www.gongdeokeye.com/",
+  "profileUrl": null,
+  "specialty": null,
+  "학력": [
+    { "date": null, "content": "서울대학교 의과대학 졸업" },
+    { "date": null, "content": "서울대학교 의과대학 의학박사" },
+    { "date": null, "content": "서울대학교 의과대학 부속병원 인턴 수료" },
+    { "date": null, "content": "서울대학교 의과대학 부속병원 안과 레지던트 수료" }
+  ],
+  "경력": [
+    { "date": null, "content": "공덕서울안과의원 원장 (현)" },
+    { "date": null, "content": "서울대학교 의과대학 교수" },
+    { "date": null, "content": "서울대학교 의과대학 명예교수" },
+    { "date": null, "content": "서울대학교 의과대학 전임강사" },
+    { "date": null, "content": "서울대학교 의과대학 조교수" },
+    { "date": null, "content": "서울대학교 의과대학 부교수" }
+  ],
+  "수상": [],
+  "학술": [
+    { "date": null, "content": "대한안과학회 대의원" },
+    { "date": null, "content": "한국녹내장연구회 학술이사" }
+  ],
+  "언론": [
+    { "targetDate": "2000", "type": "기사", "text": "의협신문에 서울대병원 안과 김동명 교수팀의 연구 발표 내용 보도", "url": null, "issuer": "의협신문" }
+  ],
+  "저서": [],
+  "논문": [
+    "Archives of Ophthalmology지에 논문 발표"
+  ],
+  "searchHospitalName": "공덕서울안과의원",
+  "isSameHospital": false,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H31KR-11006165",
+  "searchHospitalAddress": "서울특별시 마포구 만리재로 14 3층 (공덕동)"
+}

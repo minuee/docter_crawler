@@ -1,0 +1,58 @@
+{
+  "hospital_cid": 56,
+  "bedoc_doctorname": "김달수",
+  "bedoc_deptname": "신경외과",
+  "bedoc_doctor_site": "http://www.myongji-sm.co.kr/consulting/cons2",
+  "bedoc_hospitalname": "명지성모병원",
+  "hospital_tel": "02-1899-1475",
+  "hospital_name": "명지성모병원",
+  "hospital_addr": "서울특별시 영등포구 도림로 156, 명지성모병원 (대림동)",
+  "aiga_hid": "H11KR-11000012",
+  "hospitalsite": "http://www.myongji-sm.co.kr/",
+  "hospital_site": "http://www.myongji-sm.co.kr/",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "http://www.myongji-sm.co.kr/?deptname=신경외과&doctorName=김달수",
+  "profileUrl": null,
+  "specialty": "모야모야병, 뇌경색, 뇌동맥류, 뇌동정맥기형, 안면경련, 뇌출혈, 두부외상, 두통",
+  "학력": [
+    { "date": null, "content": "가톨릭의대 수석 졸업" },
+    { "date": "1975", "content": "신경외과 전문의 자격 취득" }
+  ],
+  "경력": [
+    { "date": null, "content": "가톨릭의대 신경외과 교수" },
+    { "date": null, "content": "한국뇌혈관질환연구회 회장" },
+    { "date": "1999 ~ 2001", "content": "가톨릭대학교 의정부성모병원 원장" },
+    { "date": null, "content": "대한뇌혈관학회 회장 및 명예회장" },
+    { "date": null, "content": "미국 미시간대학교 교환교수" },
+    { "date": null, "content": "미국뇌혈관학회 회원" },
+    { "date": null, "content": "가톨릭의대 명예교수" },
+    { "date": null, "content": "대한민국의학한림원 정회원" },
+    { "date": null, "content": "국방부 의료자문교수" },
+    { "date": "2004", "content": "한일 뇌혈관외과학회 차기 회장 선임" },
+    { "date": "2009 ~ 현재", "content": "명지성모병원 명예원장" },
+    { "date": "~ 1982", "content": "부산, 서울 통합병원 신경외과 과장" }
+  ],
+  "수상": [],
+  "학술": [
+    { "date": "2011", "content": "아시아 모야모야병 국제학회에서 '성인 모야모야병의 수술치료' 발표 (교토)" },
+    { "date": "2011", "content": "대한뇌혈관학회 춘계학회에서 '모야모야병 환자에서 STA-MCA 문합술 후 합병된 뇌내출혈' 발표 (부산)" },
+    { "date": "2011", "content": "대한신경외과학회에서 '소아의 소뇌종양에 대한 방사선치료 후 발생한 모야모야증후군' 발표 (서울)" },
+    { "date": null, "content": "한국뇌혈관질환연구회, 대한뇌혈관학회, 한일 뇌혈관외과학회 등 주요 학회에서 회장직 역임" }
+  ],
+  "언론": [
+    { "targetDate": "2017.03.28", "type": "기사", "text": "75세에 뇌수술하는 명지성모병원 김달수 명예원장", "url": null, "issuer": "뉴스1" }
+  ],
+  "저서": [
+    { "targetDate": null, "type": "도서", "text": "두부손상과 혈", "url": null, "issuer": null }
+  ],
+  "논문": [
+    "모야모야병 환자에서 뇌출혈 후 합병된 뇌경색 (Acta Neurochir, 2011)"
+  ],
+  "searchHospitalName": "명지성모병원",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H11KR-11000012",
+  "searchHospitalAddress": "서울특별시 영등포구 도림로 156, 명지성모병원 (대림동)"
+}

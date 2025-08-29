@@ -1,0 +1,55 @@
+{
+  "hospital_cid": 48,
+  "bedoc_doctorname": "김균형",
+  "bedoc_deptname": "안과",
+  "bedoc_doctor_site": "https://www.cseye.net/01_intro/intro5.php",
+  "bedoc_hospitalname": "센트럴서울안과",
+  "hospital_tel": "02-792-2226",
+  "hospital_name": "센트럴서울안과의원",
+  "hospital_addr": "서울특별시 용산구 이촌로 224, (이촌동, 리버뷰맨션)",
+  "aiga_hid": "H31KR-11005188",
+  "hospitalsite": "http://www.cseye.net",
+  "hospital_site": "http://www.cseye.net",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "http://www.cseye.net?deptname=안과&doctorName=김균형",
+  "profileUrl": null,
+  "specialty": "백내장, 시력교정, 안구건조증. 특히 백내장, 각막질환, 고도근시, 굴절교정수술 등 안과 전안부 질환 치료에 강점",
+  "학력": [
+    { "date": "2003.02", "content": "고려대학교 의학과 졸업" },
+    { "date": "2006.08", "content": "고려대학교 대학원 안과학 석사" },
+    { "date": "2009.03", "content": "고려대학교 대학원 안과학 박사과정 수료" }
+  ],
+  "경력": [
+    { "date": "2004.02", "content": "고려대학교의료원 인턴 수료" },
+    { "date": "2008.02", "content": "고려대학교의료원 전공의 과정 수료" },
+    { "date": "2008.03 ~ 2009.02", "content": "고려대학교의료원 전임의" },
+    { "date": "2009.03 ~ 2010.02", "content": "가천의대 길병원 전임의" },
+    { "date": "2010.03 ~ 2015.02", "content": "가천의대 길병원 조교수" },
+    { "date": "2015 ~ 현재", "content": "센트럴서울안과의원 원장" }
+  ],
+  "수상": [
+    { "date": "2016", "content": "세계 3대 인명사전 중 하나인 '마르퀴즈 후즈 후 인더월드'에 등재" },
+    { "date": null, "content": "가천대 길병원 재직 당시 환자 배려 항목에서 의사 137명 중 1위 차지" }
+  ],
+  "학술": [
+    { "date": null, "content": "미국 안과학저널, 각막, 망막, 백내장 굴절수술 저널 등 국내외 학술지에 23편의 논문 게재" },
+    { "date": null, "content": "7년 연속 미국 백내장 굴절수술학회 및 유럽 백내장 굴절수술학회에 강연자로 초청" },
+    { "date": null, "content": "대한안과의사회 학술위원, 한국건성안학회 교육이사, 한국소비자원 소비자분쟁조정위원회 안과 분야 전문위원, 대한 검안 및 콘택트렌즈 학회지 편집위원, 한국 백내장 굴절 수술 학회 상임이사 등 활발한 학회 활동" },
+    { "date": "2024.05", "content": "알콘 심포지엄에서 한국 대표로 클라레온 팬옵틱스 연구 결과 발표" },
+    { "date": "2016, 2020", "content": "대한안과의사회 정기학술대회에 초청 강연자로 참여" }
+  ],
+  "언론": [
+    { "targetDate": null, "type": "기사", "text": "헬스중앙, 헬스조선 등 다수의 언론 기사를 통해 소개", "url": null, "issuer": null },
+    { "targetDate": "2024.09", "type": "방송", "text": "경제방송 삼프로TV 출연 (본업과 주식 투자를 병행하는 방법 인터뷰)", "url": null, "issuer": "삼프로TV" },
+    { "targetDate": "2025.01", "type": "유튜브", "text": "중앙헬스 유튜브 라이브 '눈 건강 클래스' 참여 (시력교정수술 정보 제공)", "url": null, "issuer": "중앙헬스" }
+  ],
+  "저서": [],
+  "논문": [],
+  "searchHospitalName": "센트럴서울안과의원",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H31KR-11005188",
+  "searchHospitalAddress": "서울특별시 용산구 이촌로 224, (이촌동, 리버뷰맨션)"
+}

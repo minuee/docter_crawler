@@ -1,0 +1,53 @@
+{
+  "hospital_cid": 55,
+  "bedoc_doctorname": "김남수",
+  "bedoc_deptname": "소아청소년과",
+  "bedoc_doctor_site": "https://www.uemc.ac.kr/medical/treatView.do?mno=meddp&dp_cd=PED&dr_sid=275",
+  "bedoc_hospitalname": "의정부을지대학교병원",
+  "hospital_tel": "031-951-1000",
+  "hospital_name": "학교법인 을지학원 의정부을지대학교병원",
+  "hospital_addr": "경기도 의정부시 동일로 712, 을지대학교 의정부캠퍼스 및 부속병원 (금오동)",
+  "aiga_hid": "H11KR-31000062",
+  "hospitalsite": "https://www.uemc.ac.kr/index.do",
+  "hospital_site": "https://www.uemc.ac.kr/index.do",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "https://www.uemc.ac.kr/medical/treatView.do?mno=meddp&dp_cd=PED&dr_sid=275",
+  "profileUrl": null,
+  "specialty": "선천성 심장질환, 소아 심장질환, 가와사키병, 부정맥",
+  "학력": [
+    { "date": null, "content": "서울대학교 의과대학 학사" },
+    { "date": null, "content": "서울대학교 의과대학원 석사" },
+    { "date": null, "content": "서울대학교 의과대학원 박사" }
+  ],
+  "경력": [
+    { "date": null, "content": "서울대학교병원 인턴" },
+    { "date": null, "content": "서울대학교병원 레지던트" },
+    { "date": null, "content": "부천 세종병원 소아과 과장" },
+    { "date": null, "content": "한양대학교 의과대학 교수(소아청소년과 소아심장)" },
+    { "date": null, "content": "일산차병원 소아청소년과 과장" },
+    { "date": null, "content": "명지병원 소아청소년과 교수" },
+    { "date": null, "content": "단원병원 소아청소년과 과장" },
+    { "date": null, "content": "인하대병원 진료교수" },
+    { "date": null, "content": "의정부을지대학교병원 소아청소년과 전문의 (현)" }
+  ],
+  "수상": [
+    { "date": "2021", "content": "보육 유공자 정부 포상 '대통령 표창'" }
+  ],
+  "학술": [
+    { "date": null, "content": "대한소아심장학회 이사장 역임" },
+    { "date": null, "content": "세계소아심장네트워크 회장 (현)" },
+    { "date": null, "content": "대한영유아청소년돌연사학회 회장 (현)" }
+  ],
+  "언론": [
+    { "targetDate": "2021", "type": "기사", "text": "대통령 표창 수상 소식 언론 보도", "url": null, "issuer": null }
+  ],
+  "저서": [],
+  "논문": [],
+  "searchHospitalName": "의정부을지대학교병원",
+  "isSameHospital": false,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H11KR-31000062",
+  "searchHospitalAddress": "경기도 의정부시 동일로 712, 을지대학교 의정부캠퍼스 및 부속병원 (금오동)"
+}

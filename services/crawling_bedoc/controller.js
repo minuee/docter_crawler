@@ -182,8 +182,19 @@ module.exports = {
           issuer: item?.issuer || null,
         });
       });
-    } else if (doctorData.수상 === undefined) {
+    } else if (doctorData.수상 === undefined) {//
       console.warn("doctorData.수상 is missing or undefined.");
+      if (doctorData.awards && !CS.isEmpty(doctorData.awards)) {
+        doctorData.awards.map((item) => {
+          biography.push({
+            targetDate: item?.targetDate ? item?.targetDate : item?.date ? item?.date : null,
+            type: "수상",
+            text: item?.text ? cleanText(item?.text) : item?.content ? cleanText(item?.content) : null,
+            url: item?.url || null,
+            issuer: item?.issuer || null,
+          });
+        });
+      } 
     }
 
     if (doctorData.학술 && !CS.isEmpty(doctorData.학술)) {
@@ -378,6 +389,153 @@ module.exports = {
 
 
   getNewHospitalID: async (searchHospitalName, searchHospitalAddress) => {
+    const fs = require('fs');
+    const hospitalListPath = path.join(global.appRoot, 'services', 'crawling_bedoc', 'hospital_list.json');
+
+    try {
+      if (!fs.existsSync(hospitalListPath)) {
+        return { success: false, error: "hospital_list.json not found. Please run the /get-allhid API first." };
+      }
+
+      const hospitalData = JSON.parse(fs.readFileSync(hospitalListPath, 'utf-8'));
+      
+      // Find potential matches by name (alias or standard name)
+      const nameMatches = hospitalData.filter(hospital => 
+        hospital.alias_name === searchHospitalName || hospital.standard_name === searchHospitalName
+      );
+
+      if (nameMatches.length === 0) {
+        return { success: false, data: null, error: "No hospital found with that name." };
+      }
+
+      if (nameMatches.length === 1) {
+        const newHid = nameMatches[0].new_hid;
+        return { success: true, data: newHid };
+      }
+
+      // If multiple name matches, use Jaccard similarity on the address
+      const jaccardSimilarity = (s1, s2) => {
+          if (!s1 || !s2) return 0;
+          const set1 = new Set(s1.toLowerCase().split(/\s+/).filter(word => word.length > 1));
+          const set2 = new Set(s2.toLowerCase().split(/\s+/).filter(word => word.length > 1));
+          const intersection = new Set([...set1].filter(x => set2.has(x)));
+          const union = new Set([...set1, ...set2]);
+          return union.size === 0 ? 0 : intersection.size / union.size;
+      };
+
+      let bestMatch = null;
+      let highestSimilarity = -1;
+
+      for (const hospital of nameMatches) {
+        const similarity = jaccardSimilarity(searchHospitalAddress, hospital.hospital_addr);
+        if (similarity > highestSimilarity) {
+          highestSimilarity = similarity;
+          bestMatch = hospital;
+        }
+      }
+
+      if (bestMatch) {
+        // Check for ambiguity (e.g., multiple matches with the same highest similarity)
+        const allSimilarities = nameMatches.map(hospital => jaccardSimilarity(searchHospitalAddress, hospital.hospital_addr));
+        const sortedSimilarities = [...allSimilarities].sort((a, b) => b - a);
+
+        if (highestSimilarity === 0 || (sortedSimilarities.length > 1 && sortedSimilarities[0] === sortedSimilarities[1])) {
+            return { success: false, data: null, error: "Ambiguous hospital match based on address similarity." };
+        }
+        
+        const newHid = bestMatch.new_hid;
+        return { success: true, data: newHid };
+      } else {
+        return { success: false, data: null, error: "Could not determine a single best match from multiple candidates." };
+      }
+
+    } catch (error) {
+      console.error(`Error in getNewHospitalID (file-based): ${error.message}`);
+      return { success: false, error: error.message, data: null };
+    }
+  },
+
+  getNewHospitalID_db: async (searchHospitalName, searchHospitalAddress) => {
+
+    const newHospitalName = searchHospitalName;
+    const newHospitalAddress = searchHospitalAddress;
+
+    mybatisMapper.createMapper([`${global.appRoot}/services/crawling_bedoc/controler.xml`]);
+    try {
+      
+      console.log(`getNewHospitalID:${newHospitalName}`);
+      
+      const param = {
+        newHospitalName,
+        newHospitalAddress, // Added newHospitalAddress
+      }; 
+      const format = { language: "sql", indent: "  " };
+      const query = mybatisMapper.getStatement(
+          "controler",
+          "find_hospital_hid",
+          param,
+          format
+      );
+      const { DBError = null, RS = null } = await daoMysql.spCall(query);
+      const ret = await  functions.myBatisResult(DBError,RS)
+
+      // Jaccard Similarity function (defined locally for this context)
+      const jaccardSimilarity = (s1, s2) => {
+          if (!s1 || !s2) return 0;
+          const set1 = new Set(s1.toLowerCase().split(/\s+/).filter(word => word.length > 1));
+          const set2 = new Set(s2.toLowerCase().split(/\s+/).filter(word => word.length > 1));
+          const intersection = new Set([...set1].filter(x => set2.has(x)));
+          const union = new Set([...set1, ...set2]);
+          return union.size === 0 ? 0 : intersection.size / union.size;
+      };
+
+      if ( ret?.data?.length > 0 ) {
+        if (ret.data.length === 1) {
+          // Only one result, return it directly
+          const newHid = ret.data[0]?.new_hid;
+          return { success: true, data : newHid };
+        } else {
+          // Multiple results, find the best match by address similarity
+          let bestMatch = null;
+          let highestSimilarity = -1;
+
+          for (const hospital of ret.data) {
+            const similarity = jaccardSimilarity(newHospitalAddress, hospital?.hospital_addr);
+            if (similarity > highestSimilarity) {
+              highestSimilarity = similarity;
+              bestMatch = hospital;
+            }
+          }
+
+          if (bestMatch) {
+            // Check if the best match is significantly better than others, or if there are ties
+            const allSimilarities = ret.data.map(hospital => jaccardSimilarity(newHospitalAddress, hospital?.hospital_addr));
+            const sortedSimilarities = [...allSimilarities].sort((a, b) => b - a);
+
+            // If the highest similarity is 0, or if there are multiple hospitals with the same highest similarity (ambiguous)
+            if (highestSimilarity === 0 || (sortedSimilarities.length > 1 && sortedSimilarities[0] === sortedSimilarities[1])) {
+                return { success: false, data : null, error: "Ambiguous hospital match due to similar addresses." };
+            }
+
+            const newHid = bestMatch?.new_hid;
+            return { success: true, data : newHid };
+          } else {
+            // No best match found (should not happen if ret.data.length > 0)
+            return { success: false, data : null, error: "No suitable hospital found among multiple matches." };
+          }
+        }
+      }else{
+        // No results found
+        return { success: false, data : null };
+      }
+
+    } catch (error) {
+      console.error(`Error in getNewHospitalID: ${error.message}`);
+      return { success: false, error: error.message, data : null };
+    }
+  },
+
+  getNewHospitalID_old: async (searchHospitalName, searchHospitalAddress) => {
 
     const newHospitalName = searchHospitalName;
     const newHospitalAddress = searchHospitalAddress;

@@ -44,7 +44,15 @@
             hospital_alias as a inner join hospital as b on a.hid = b.hid
         WHERE
             1=1 and alias_name = #{newHospitalName}
-        LIMIT 1
+    </select>
+
+    <select id="find_all_hospital_hid">
+        SELECT 
+            a.hid as new_hid,a.alias_name, a.standard_name, b.address as hospital_addr,b.telephone
+        FROM
+            hospital_alias as a inner join hospital as b on a.hid = b.hid
+        WHERE
+            1=1
     </select>
 
 </mapper>

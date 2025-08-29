@@ -1,0 +1,47 @@
+{
+  "hospital_cid": 42,
+  "bedoc_doctorname": "김광기",
+  "bedoc_deptname": "신경과",
+  "bedoc_doctor_site": "https://www.dumc.or.kr/isom/doctor/doc_info.jsp?doc_crud=S&option=D&dept_code=N&doct_no=200065",
+  "bedoc_hospitalname": "동국대학교일산불교병원",
+  "hospital_tel": "031-1577-7000",
+  "hospital_name": "동국대학교일산불교병원",
+  "hospital_addr": "경기도 고양시 일산동구 동국로 27, (식사동, 동국대학교일산병원)",
+  "aiga_hid": "H11KR-31000020",
+  "hospitalsite": "http://www.dumc.or.kr/isom",
+  "hospital_site": "http://www.dumc.or.kr/isom",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "https://www.dumc.or.kr/isom/doctor/doc_info.jsp?doc_crud=S&option=D&dept_code=N&doct_no=200065",
+  "profileUrl": null,
+  "specialty": "뇌전증(간질), 수면장애, 기억장애, 치매, 뇌전증클리닉, 수면장애·기억장애클리닉",
+  "학력": [
+    { "date": null, "content": "서울대학교 의과대학 졸업" }
+  ],
+  "경력": [
+    { "date": null, "content": "서울대학교병원 전공의" },
+    { "date": null, "content": "서울대학교병원 전임의" },
+    { "date": null, "content": "강원대학교병원 전임강사" },
+    { "date": null, "content": "미국 신시내티의과대학 신경과 (Center for Neuroimaging, Epilepsy Center of University of Cincinnati)" },
+    { "date": null, "content": "동국대학교의료원 기획처장 (현)" }
+  ],
+  "수상": [],
+  "학술": [
+    { "date": null, "content": "대한신경과학회" },
+    { "date": null, "content": "대한뇌전증(간질)학회" },
+    { "date": null, "content": "대한치매학회" },
+    { "date": null, "content": "대한수면학회/대한수면연구학회" },
+    { "date": null, "content": "대한 임상신경생리학회" }
+  ],
+  "언론": [],
+  "저서": [],
+  "논문": [
+    "알츠하이머병에서 백색질의 T1w/T2w 비율과 인지 기능 간의 연관성 (SCIENTIFIC REPORTS, 2024)"
+  ],
+  "searchHospitalName": "동국대학교일산불교병원",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H11KR-31000020",
+  "searchHospitalAddress": "경기도 고양시 일산동구 동국로 27, (식사동, 동국대학교일산병원)"
+}

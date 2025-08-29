@@ -1,0 +1,50 @@
+{
+  "hospital_cid": 45,
+  "bedoc_doctorname": "김구상",
+  "bedoc_deptname": "유방외과",
+  "bedoc_doctor_site": null,
+  "bedoc_hospitalname": "고신대학교복음병원",
+  "hospital_tel": "051-990-6114",
+  "hospital_name": "고신대학교복음병원",
+  "hospital_addr": "부산광역시 서구 감천로 262, (암남동)",
+  "aiga_hid": "H01KR-48000001",
+  "hospitalsite": "http://www.kosinmed.or.kr",
+  "hospital_site": "http://www.kosinmed.or.kr",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "http://www.kosinmed.or.kr?deptname=유방외과&doctorName=김구상",
+  "profileUrl": null,
+  "specialty": "유방암, 갑상선암, 맘모톰, 로봇 유방암 수술, 유전성 유방암, 암생존자 클리닉, 항암 및 호르몬 치료",
+  "학력": [
+    { "date": "2008 ~ 2010", "content": "아주대학교 대학원 의학박사" },
+    { "date": "2000 ~ 2002", "content": "단국대학교 대학원 의학석사" },
+    { "date": "1992 ~ 1998", "content": "단국대학교 의과대학 의학사" }
+  ],
+  "경력": [
+    { "date": "2020 ~ 현재", "content": "고신대학교 복음병원 유방외과 교수" },
+    { "date": "2015 ~ 2019", "content": "울산시티병원, 동강병원 유방갑상선센터장" },
+    { "date": "2013 ~ 2014", "content": "아주대학교 의과대학 부교수" },
+    { "date": "2008 ~ 2012", "content": "아주대학교 의과대학 조교수" },
+    { "date": "2006 ~ 2008", "content": "서울대학교 의과대학/분당서울대병원 임상강사" },
+    { "date": "2003 ~ 2006", "content": "공군항공우주의료원 외과장/비행군의관" },
+    { "date": "1998 ~ 2003", "content": "단국대의료원 수련의/전공의" }
+  ],
+  "수상": [
+    { "date": "2019", "content": "국제종양외과학회(SISSO) '제1회 KJCO Vest Reviewer' 우수상" }
+  ],
+  "학술": [
+    { "date": null, "content": "대한종양외과학회, 한국유방암학회 등 다수의 학회에서 활발하게 활동하며 학회지 편집위원, 연구위원 등을 역임" },
+    { "date": "2007 ~", "content": "한국인 유전성 유방암 연구 참여" }
+  ],
+  "언론": [
+    { "targetDate": null, "type": "인터뷰/유튜브", "text": "언론 인터뷰 및 유튜브 채널을 통해 유방암 치료에 대한 정보 제공", "url": null, "issuer": null }
+  ],
+  "저서": [],
+  "논문": [],
+  "searchHospitalName": "고신대학교복음병원",
+  "isSameHospital": false,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H01KR-48000001",
+  "searchHospitalAddress": "부산광역시 서구 감천로 262, (암남동)"
+}

@@ -1,0 +1,57 @@
+{
+  "hospital_cid": 43,
+  "bedoc_doctorname": "김광남",
+  "bedoc_deptname": "소아청소년과",
+  "bedoc_doctor_site": "https://www.mjh.or.kr/doctor/doctor_profile.php?med_cd=16&dr_cd=223",
+  "bedoc_hospitalname": "명지병원",
+  "hospital_tel": "031-810-5114",
+  "hospital_name": "의료법인명지의료재단명지병원",
+  "hospital_addr": "경기도 고양시 덕양구 화수로14번길 55, (화정동)",
+  "aiga_hid": "H11KR-31000048",
+  "hospitalsite": "https://mjh.or.kr",
+  "hospital_site": "https://mjh.or.kr",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "https://www.mjh.or.kr/doctor/doctor_profile.php?med_cd=16&dr_cd=223",
+  "profileUrl": "https://www.mjh.or.kr/images/doctor/223.jpg",
+  "specialty": "소아 류마티스, 소아 감염",
+  "학력": [
+    { "date": null, "content": "한양대학교 의과대학 졸업" },
+    { "date": null, "content": "한양대학교 의과대학 소아과 석사" },
+    { "date": null, "content": "한양대학교 의과대학 미생물학 박사" }
+  ],
+  "경력": [
+    { "date": null, "content": "한양대학병원 전공의" },
+    { "date": null, "content": "미국 UCLA 교환 연구원" },
+    { "date": "1997 ~ 2000", "content": "미국 신시내티 아동병원 메디컬 센터(CHMC) 소아 류마티스학 연수" },
+    { "date": null, "content": "미국 신시내티 아동병원 메디컬 센터(CHMC) 참관의" },
+    { "date": null, "content": "한림대학교 성심병원 소아청소년과 교수 (명지병원 합류 전)" },
+    { "date": "2019.10 ~ 현재", "content": "명지병원 소아청소년과 교수" },
+    { "date": null, "content": "명지병원 류마티스 센터 센터장" }
+  ],
+  "수상": [
+    { "date": null, "content": "대한 소아과 추계 학술대회 포스터 부문에서 소아 류마티스 관절염 관련 우수 포스터상 거의 매년 수상" }
+  ],
+  "학술": [
+    { "date": null, "content": "논문: C.I.A. mouse에서의 관절염 치료에 관한 연구 논문 발표" },
+    { "date": null, "content": "대한소아감염학회 교육연수 위원장 (전)" },
+    { "date": null, "content": "대한소아 임상면역학회 학술 위원장 (전)" },
+    { "date": null, "content": "대한 소아과학회 교육위원 (전)" },
+    { "date": null, "content": "대한 류마티스학회 이사 (전)" },
+    { "date": null, "content": "대한소아감염학회 평의원" },
+    { "date": null, "content": "대한백신학회 평의원" },
+    { "date": "2007 ~ 현재", "content": "소아 류마티스 질환 환우회 '무지개 캠프' 운영" }
+  ],
+  "언론": [
+    { "targetDate": null, "type": "인터뷰/강연", "text": "소아 류마티스 관절염 관련 다수의 언론 인터뷰 및 강연 진행", "url": null, "issuer": null },
+    { "targetDate": "2023.04", "type": "강연", "text": "비온뒤(Biond) 채널 - 무엇이든 물어보세요 - 소아 류마티스 관절염", "url": "https://www.youtube.com/watch?v=w-X826053wU", "issuer": "비온뒤(Biond)" }
+  ],
+  "저서": [],
+  "논문": [],
+  "searchHospitalName": "의료법인명지의료재단명지병원",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H11KR-31000048",
+  "searchHospitalAddress": "경기도 고양시 덕양구 화수로14번길 55, (화정동)"
+}
