@@ -1,0 +1,58 @@
+{
+  "hospital_cid": 21,
+  "bedoc_doctorname": "공창배",
+  "bedoc_deptname": "정형외과",
+  "bedoc_doctor_site": "https://www.kcch.re.kr/reserve/reserve.do",
+  "bedoc_hospitalname": "원자력병원",
+  "hospital_name": "한국원자력의학원원자력병원",
+  "hospital_addr": "서울특별시 노원구 노원로 75, 한국원자력의학원 (공릉동)",
+  "aiga_hid": "H11KR-11000039",
+  "hospitalsite": "http://www.kcch.re.kr",
+  "hospital_site": "http://www.kcch.re.kr",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "http://www.kcch.re.kr?deptname=정형외과&doctorName=공창배",
+  "profileUrl": null,
+  "specialty": "골연부종양, 척추 종양, 사지 골연부종양, 척추 전이성 골종양, 스포츠 손상, 스키 손상",
+  "education": [
+    { "date": "2009", "content": "서울대학교병원 척추 전임의 과정 수료" }
+  ],
+  "experience": [
+    { "date": null, "content": "한국원자력의학원 원자력병원 정형외과 전문의 (現)" },
+    { "date": "2009", "content": "서울대학교병원 척추 전임의 과정 수료" },
+    { "date": null, "content": "대한스키협회 의무의사 및 스키 국가대표 주치의" },
+    { "date": null, "content": "한국원자력의학원 홍보실장 (과거)" },
+    { "date": "2012", "content": "대한척추종양학회 설립 발기인 및 활동 (現)" },
+    { "date": null, "content": "대한근골격종양학회 총무 및 다양한 위원회 활동 (現)" },
+    { "date": "2018", "content": "2018 평창 동계올림픽 조직위원회 의무전문위원" }
+  ],
+  "수상": [
+    { "date": "2015", "content": "대한정형외과학회 추계학술대회 학술장려상 ('PET/MRI를 이용한 골육종의 수술전 항암 반응에 대한 조기 예측')" },
+    { "date": "2016", "content": "제33차 대한척추외과학회 춘계학술대회 '젊은 연구자상'" },
+    { "date": "2017", "content": "대한정형외과학회 추계 학술대회 학술상 본상 ('골육종의 방사선 치료에서 골다공증치료제의 방사선 치료 민감제로서의 작용')" },
+    { "date": "2022", "content": "제32차 대한근골격종양학회 추계학술대회 우수 논문상 ('골외성 점액성 연골육종의 임상 결과')" },
+    { "date": "2022", "content": "제32차 대한근골격종양학회 추계학술대회 우수 논문상 ('원위대퇴골 거대세포종 소파술 및 골시멘트 충진술 후 발생하는 슬관절의 골관절염')" },
+    { "date": "2024", "content": "제34차 대한근골격종양학회 추계학술대회 우수 구연상 ('원발성 및 전이성 척추 육종암에 대한 정위적 방사선치료 결과')" },
+    { "date": "2024", "content": "원자력안전위원회 위원장 표창 (방사선안전 및 방사능방재 분야 유공)" }
+  ],
+  "학술": [],
+  "언론": [
+    { "targetDate": null, "type": "영상", "text": "한국원자력의학원 유튜브 채널 출연", "url": null, "issuer": "한국원자력의학원" },
+    { "targetDate": null, "type": "기사", "text": "다수의 언론 기사를 통해 연구 성과와 수상 소식 보도", "url": null, "issuer": null }
+  ],
+  "저서": [],
+  "논문": [
+    "골육종의 방사선 치료에서 골다공증치료제의 방사선 치료 민감제로서의 작용 (2017)",
+    "PET/MRI를 이용한 골육종의 수술전 항암 반응에 대한 조기 예측 (2015)",
+    "골외성 점액성 연골육종의 임상 결과 (2022)",
+    "원위대퇴골 거대세포종 소파술 및 골시멘트 충진술 후 발생하는 슬관절의 골관절염 (2022)",
+    "원발성 및 전이성 척추 육종암에 대한 정위적 방사선치료 결과 (2024)",
+    "대한근골격종양학회지 및 대한정형외과학회지에 다수의 논문 게재"
+  ],
+  "searchHospitalName": "한국원자력의학원 원자력병원",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H11KR-11000039",
+  "searchHospitalAddress": "서울특별시 노원구 노원로 75, (공릉동)"
+}

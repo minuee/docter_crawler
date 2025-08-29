@@ -1,0 +1,49 @@
+{
+  "hospital_cid": 22,
+  "bedoc_doctorname": "곽미선",
+  "bedoc_deptname": "안과",
+  "bedoc_doctor_site": "http://www.fatima.or.kr/front/mymedical/resvrinfo.asp",
+  "bedoc_hospitalname": "대구파티마병원",
+  "hospital_name": "대구파티마병원",
+  "hospital_addr": "대구광역시 동구 아양로 99, (신암동)",
+  "aiga_hid": "H11KR-23000009",
+  "hospitalsite": "http://www.fatima.or.kr",
+  "hospital_site": "http://www.fatima.or.kr",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "http://www.fatima.or.kr?deptname=안과&doctorName=곽미선",
+  "profileUrl": null,
+  "specialty": "안성형, 누기, 안와, 백내장",
+  "education": [
+    { "date": "1990", "content": "경북대학교 의과대학 의학과 의학사" },
+    { "date": "1992", "content": "경북대학교 대학원 의학과 안과학 의학석사" },
+    { "date": "1998", "content": "경북대학교 대학원 의학과 안과학 의학박사" }
+  ],
+  "experience": [
+    { "date": "1995", "content": "경북대학교병원 안과 전문의" },
+    { "date": "1995.03.02", "content": "대구파티마병원 안과 과장 (現)" }
+  ],
+  "수상": [],
+  "학술": [
+    { "date": null, "content": "대한안과학회 정회원" },
+    { "date": null, "content": "대한안성형학회 정회원" },
+    { "date": "2015", "content": "제114회 대한안과학회 학술대회 포스터 발표: '안와하벽골절의 골절양상에 따른 수술 전, 수술 후 안구돌출계 및 안와용적의 차이점'" },
+    { "date": null, "content": "제120회 대한안과학회 학술대회 e-포스터 발표: '특발 경화성 안와염증 1예'" },
+    { "date": null, "content": "제120회 대한안과학회 학술대회 e-포스터 발표: '눈물점 폐쇄 환자에서 눈물점의 조직학적 소견에 대한 연구'" }
+  ],
+  "언론": [],
+  "저서": [],
+  "논문": [
+    "누기수술의 임상적 경험",
+    "선천성 비루관 폐쇄에 대한 단계별 치료의 효과",
+    "Medpor Barrier Sheet Implant를 이용한 안와골절정복술의 임상 경험",
+    "누구 접근법을 이용한 단독 안와내벽골절정복술 외 다수",
+    "안와에 국한된 사르코이드증 1예"
+  ],
+  "searchHospitalName": "대구파티마병원",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H11KR-23000009",
+  "searchHospitalAddress": "대구광역시 동구 아양로 99, (신암동)"
+}

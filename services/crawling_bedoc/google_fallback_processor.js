@@ -32,8 +32,9 @@ function processGoogleFallback() {
     // Gemini Action 1: Find all tasks.
     // Find all `{doctorName}.json` files and filter them to find where `isSearchType` is `html_failed`.
     const promptForFindingTasks = `
-        // Gemini, please find all outes*.jsonoutes files in the outesservices/crawling_bedoc/data/outes subdirectories.
-        // For each file, read its content and check if the value of the outesisSearchTypeoutes field is outes'html_failed'outes.
+        // Gemini, please find all outes*.jsonoutes files in the outesservices/crawling_bedoc/data/outes subdirectories.
+        // IMPORTANT: Exclude files ending with outes_saved.jsonoutes, as these are already processed.
+        // For each file, read its content and check if the value of the outesisSearchTypeoutes field is outes'html_failed'outes.
         // Create a list of file paths for all files that match this condition.
     `;
 
@@ -45,7 +46,7 @@ function processGoogleFallback() {
     // Gemini Action 3: Construct the Google Search query and execute it.
     const promptForGoogleSearch = `
         // Gemini, please construct the search query using the doctorData variables.
-        // const query = outes$outes{doctorData.hospital_name} outes$outes{doctorData.bedoc_doctorname} outes$outes{doctorData.bedoc_deptname} outes$outes{doctorData.hospital_addr} 프로필 경력 학력 사진 수상 학술 언론 저서 논문outes`;
+        // const query = outes$outes{doctorData.hospital_name} outes$outes{doctorData.bedoc_doctorname} outes$outes{doctorData.bedoc_deptname} outes$outes{doctorData.hospital_addr} 최신 프로필 경력 학력 사진 수상 학술 언론 저서 논문outes`;
         // Then, execute the google_web_search tool with this query.
     `;
 
@@ -67,7 +68,15 @@ function processGoogleFallback() {
         // - `저서` (books/writings): An array of objects, each with `targetDate`, `type`, `text`, `url`, `issuer`.
         // - `논문` (theses/papers): An array of strings.
         // - `searchHospitalName`: The name of the hospital found in the Google search results.
+        // - `searchHospitalAddress`: The address of the hospital found in the Google search results.
         // - `isSameHospital`: Boolean, true if `searchHospitalName` is similar to `doctorData.hospital_name`, false otherwise.
+        //
+        // Determine `found_hospital_aiga_hid`:
+        // - If `isSameHospital` is true, set `found_hospital_aiga_hid` to `doctorData.aiga_hid`.
+        // - If `isSameHospital` is false, use `controller.getNewHospitalID(synthesizedData.searchHospitalName, synthesizedData.searchHospitalAddress)` to find the new hospital's AIGA ID.
+        //   - If `getNewHospitalID` returns a valid ID, set `found_hospital_aiga_hid` to that ID.
+        //   - Otherwise (if `getNewHospitalID` fails or returns no ID), set `found_hospital_aiga_hid` to `doctorData.aiga_hid`.
+        //
         // Combine this with any useful data from the original doctorData object.
         // Create the final JSON object.
     `;

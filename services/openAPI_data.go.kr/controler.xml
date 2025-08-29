@@ -172,11 +172,10 @@
 
     <select id="select_table_hospital">
         SELECT 
-            a.*
-        FROM
+            a.* 
+        FROM 
             hospital as a
-        WHERE
-            1=1
+        WHERE 1=1 and a.hid not in ( SELECT hid FROM hospital_alias GROUP BY hid )
         ORDER BY a.hid
     </select>
 

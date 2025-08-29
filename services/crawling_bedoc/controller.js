@@ -29,6 +29,27 @@ module.exports = {
     console.log(error)
     result = DBData
     return { error: error, data: result };
+
+  },
+
+  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url) => {
+
+    let result = null, error = null, DBCode = null, DBData = null
+    const query = `CALL set_doctor_basic(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url]);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    // console.log(RS)
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
+
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+
   },
 
   setCrawlingdoctorBasic: async (rid, hid, deptName, doctorName, specialty, profileimgurl) => {
@@ -52,7 +73,6 @@ module.exports = {
 
   },
 
-
   setCrawlingdoctorBiography: async (rid, hid, doctorName, jsondata) => {
     
     let result = null, error = null, DBCode = null, DBData = null
@@ -70,6 +90,7 @@ module.exports = {
     console.log(error)
     result = DBData
     return { error: error, data: result };
+
   },
 
 
@@ -92,6 +113,7 @@ module.exports = {
     console.log(error)
     result = DBData
     return { error: error, data: result };
+
   },
 
   prepareBiographyData: (doctorData) => {
@@ -101,37 +123,61 @@ module.exports = {
     if (doctorData.학력 && !CS.isEmpty(doctorData.학력)) {
       doctorData.학력.map((item) => {
         biography.push({
-          targetDate: item?.date,
+          targetDate: item?.targetDate ? item?.targetDate : item?.date ? item?.date : null,
           type: "학력",
-          text: cleanText(item?.content),
+          text: item?.text ? cleanText(item?.text) : item?.content ? cleanText(item?.content) : null,
           url: null,
           issuer: null
         });
       });
     } else if (doctorData.학력 === undefined) {
-      console.warn("doctorData.학력 is missing or undefined.");
+      if (doctorData.education && !CS.isEmpty(doctorData.education)) {
+        doctorData.education.map((item) => {
+          biography.push({
+            targetDate: item?.targetDate ? item?.targetDate : item?.date ? item?.date : null,
+            type: "학력",
+            text: item?.text ? cleanText(item?.text) : item?.content ? cleanText(item?.content) : null,
+            url: null,
+            issuer: null
+          });
+        });
+      } else if (doctorData.학력 === undefined) {
+        console.warn("doctorData.학력 is missing or undefined.");
+      }
     }
 
     if (doctorData.경력 && !CS.isEmpty(doctorData.경력)) {
       doctorData.경력.map((item) => {
         biography.push({
-          targetDate: item?.date,
+          targetDate: item?.targetDate ? item?.targetDate : item?.date ? item?.date : null,
           type: "경력",
-          text: cleanText(item?.content),
+          text: item?.text ? cleanText(item?.text) : item?.content ? cleanText(item?.content) : null,
           url: null,
           issuer: null
         });
       });
     } else if (doctorData.경력 === undefined) {
-      console.warn("doctorData.경력 is missing or undefined.");
+      if (doctorData.experience && !CS.isEmpty(doctorData.experience)) {
+        doctorData.experience.map((item) => {
+          biography.push({
+            targetDate: item?.targetDate ? item?.targetDate : item?.date ? item?.date : null,
+            type: "경력",
+            text: item?.text ? cleanText(item?.text) : item?.content ? cleanText(item?.content) : null,
+            url: null,
+            issuer: null
+          });
+        });
+      } else if (doctorData.학력 === undefined) {
+        console.warn("doctorData.경력 is missing or undefined.");
+      }
     }
 
     if (doctorData.수상 && !CS.isEmpty(doctorData.수상)) {
       doctorData.수상.map((item) => {
         biography.push({
-          targetDate: item?.targetDate || null,
+          targetDate: item?.targetDate ? item?.targetDate : item?.date ? item?.date : null,
           type: "수상",
-          text: cleanText(item?.text),
+          text: item?.text ? cleanText(item?.text) : item?.content ? cleanText(item?.content) : null,
           url: item?.url || null,
           issuer: item?.issuer || null,
         });
@@ -143,9 +189,9 @@ module.exports = {
     if (doctorData.학술 && !CS.isEmpty(doctorData.학술)) {
       doctorData.학술.map((item) => {
         biography.push({
-          targetDate: item?.targetDate || null,
+          targetDate: item?.targetDate ? item?.targetDate : item?.date ? item?.date : null,
           type: "학술",
-          text: cleanText(item?.text),
+          text: item?.text ? cleanText(item?.text) : item?.content ? cleanText(item?.content) : null,
           url: item?.url || null,
           issuer: item?.issuer || null,
         });
@@ -157,9 +203,9 @@ module.exports = {
     if (doctorData.언론 && !CS.isEmpty(doctorData.언론)) {
       doctorData.언론.map((item) => {
         biography.push({
-          targetDate: item?.targetDate || null,
+          targetDate: item?.targetDate ? item?.targetDate : item?.date ? item?.date : null,
           type: "언론",
-          text: cleanText(item?.text),
+          text: item?.text ? cleanText(item?.text) : item?.content ? cleanText(item?.content) : null,
           url: item?.url || null,
           issuer: item?.issuer || null,
         });
@@ -203,24 +249,34 @@ module.exports = {
 
   saveDoctorDataToDb: async (doctorData) => {
     const doctorName = doctorData.bedoc_doctorname || '';
-    const hospitalID = doctorData.aiga_hid || '';
+    const tmpHospitalID = doctorData.aiga_hid || '';
+    const checkHospitalID = doctorData.found_hospital_aiga_hid || '';
     const deptName = doctorData.bedoc_deptname || '';
     const specialtyData = doctorData.specialty || '';
     const doctorProfileImgUrl = doctorData.profileUrl || '';
     const refUrl = doctorData.doctorDetailUrl;
 
-    try {
-      await CS.wait(300);
+    const hospitalID = checkHospitalID ? checkHospitalID : tmpHospitalID;
 
-      const SP2 = await module.exports.get_rid_encrypt(doctorName, refUrl);
-      if (SP2.error) {
-        console.log("SP2 DB fail.");
-        return { success: false, error: SP2.error };
+    try {
+      
+      if (CS.isEmpty(doctorName) || CS.isEmpty(refUrl) ) {
+        return { success: false, error: "Empty doctorName,refUrl" };
       }
-      const tempRid = SP2.data[0].rid_encrypt;
+      await CS.wait(300);
+      const SP1 = await module.exports.get_rid_encrypt(doctorName, refUrl);
+      if (SP1.error) {
+        console.log("SP1 DB fail.");
+        return { success: false, error: SP1.error };
+      }
+      const tempRid = SP1.data[0].rid_encrypt;
       if (CS.isEmpty(tempRid)) {
         return { success: false, error: "Empty rid_encrypt" };
       }
+
+      const SP2 = await module.exports.setCrawlingDoctorLink(tempRid, hospitalID, deptName, doctorName, refUrl);
+      if (SP2.error) return { success: false, error: "Empty rid_encrypt" };
+      await CS.wait(300);
 
       const SP3 = await module.exports.setCrawlingdoctorBasic(tempRid, hospitalID, deptName, doctorName, specialtyData, doctorProfileImgUrl);
       if (SP3.error) {
@@ -270,9 +326,11 @@ module.exports = {
       console.error(`Error in saveDoctorDataToDb: ${error.message}`);
       return { success: false, error: error.message };
     }
+
   },
 
   saveDoctorDataToBedocTable: async (doctorData) => {
+
     const hospital_cid = doctorData?.hospital_cid;
     const isExist = doctorData.isExist || '';
     const isSearchType = doctorData.isSearchType || '';
@@ -316,5 +374,86 @@ module.exports = {
       console.error(`Error in saveDoctorDataToDb: ${error.message}`);
       return { success: false, error: error.message };
     }
+  },
+
+
+  getNewHospitalID: async (searchHospitalName, searchHospitalAddress) => {
+
+    const newHospitalName = searchHospitalName;
+    const newHospitalAddress = searchHospitalAddress;
+
+    mybatisMapper.createMapper([`${global.appRoot}/services/crawling_bedoc/controler.xml`]);
+    try {
+      
+      console.log(`getNewHospitalID:${newHospitalName}`);
+      
+      const param = {
+        newHospitalName,
+        newHospitalAddress, // Added newHospitalAddress
+      }; 
+      const format = { language: "sql", indent: "  " };
+      const query = mybatisMapper.getStatement(
+          "controler",
+          "find_hospital_hid",
+          param,
+          format
+      );
+      const { DBError = null, RS = null } = await daoMysql.spCall(query);
+      const ret = await  functions.myBatisResult(DBError,RS)
+
+      // Jaccard Similarity function (defined locally for this context)
+      const jaccardSimilarity = (s1, s2) => {
+          if (!s1 || !s2) return 0;
+          const set1 = new Set(s1.toLowerCase().split(/\s+/).filter(word => word.length > 1));
+          const set2 = new Set(s2.toLowerCase().split(/\s+/).filter(word => word.length > 1));
+          const intersection = new Set([...set1].filter(x => set2.has(x)));
+          const union = new Set([...set1, ...set2]);
+          return union.size === 0 ? 0 : intersection.size / union.size;
+      };
+
+      if ( ret?.data?.length > 0 ) {
+        if (ret.data.length === 1) {
+          // Only one result, return it directly
+          const newHid = ret.data[0]?.new_hid;
+          return { success: true, data : newHid };
+        } else {
+          // Multiple results, find the best match by address similarity
+          let bestMatch = null;
+          let highestSimilarity = -1;
+
+          for (const hospital of ret.data) {
+            const similarity = jaccardSimilarity(newHospitalAddress, hospital?.hospital_addr);
+            if (similarity > highestSimilarity) {
+              highestSimilarity = similarity;
+              bestMatch = hospital;
+            }
+          }
+
+          if (bestMatch) {
+            // Check if the best match is significantly better than others, or if there are ties
+            const allSimilarities = ret.data.map(hospital => jaccardSimilarity(newHospitalAddress, hospital?.hospital_addr));
+            const sortedSimilarities = [...allSimilarities].sort((a, b) => b - a);
+
+            // If the highest similarity is 0, or if there are multiple hospitals with the same highest similarity (ambiguous)
+            if (highestSimilarity === 0 || (sortedSimilarities.length > 1 && sortedSimilarities[0] === sortedSimilarities[1])) {
+                return { success: false, data : null, error: "Ambiguous hospital match due to similar addresses." };
+            }
+
+            const newHid = bestMatch?.new_hid;
+            return { success: true, data : newHid };
+          } else {
+            // No best match found (should not happen if ret.data.length > 0)
+            return { success: false, data : null, error: "No suitable hospital found among multiple matches." };
+          }
+        }
+      }else{
+        // No results found
+        return { success: false, data : null };
+      }
+
+    } catch (error) {
+      console.error(`Error in getNewHospitalID: ${error.message}`);
+      return { success: false, error: error.message, data : null };
+    }
   }
-};
+}

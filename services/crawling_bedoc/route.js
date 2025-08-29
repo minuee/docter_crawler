@@ -492,16 +492,13 @@ router.get('/save', async function(req, res) {
   mybatisMapper.createMapper([`${global.appRoot}/services/crawling_bedoc/controler.xml`]);
   let saved_count = 0;
   const errors = [];
-
+  let emptyDoctors = [];
   try {
     const dataDir = path.join(global.appRoot, 'services/crawling_bedoc/data');
-    const hospitalDirs = fs.readdirSync(dataDir, { withFileTypes: true })
-                           .filter(dirent => dirent.isDirectory())
-                           .map(dirent => dirent.name);
-    let  save_data = [];
+    const hospitalDirs = fs.readdirSync(dataDir, { withFileTypes: true }).filter(dirent => dirent.isDirectory()).map(dirent => dirent.name);
+
     for (const hospitalID of hospitalDirs) {
-      const doctorFiles = fs.readdirSync(path.join(dataDir, hospitalID))
-                            .filter(file => file.endsWith('.json'));
+      const doctorFiles = fs.readdirSync(path.join(dataDir, hospitalID)).filter(file => file.endsWith('.json') && !file.endsWith('_saved.json'));
 
       for (const fileName of doctorFiles) {
         const filePath = path.join(dataDir, hospitalID, fileName);
@@ -513,16 +510,20 @@ router.get('/save', async function(req, res) {
           const fileContent = fs.readFileSync(filePath, 'utf-8');
           doctorData = JSON.parse(fileContent); // Assign to the outer-scoped variable
 
-          if (!doctorData) { // Handle cases where JSON.parse returns null/undefined
+          if (!doctorData || CS.isEmpty(doctorData?.doctorDetailUrl) || CS.isEmpty(doctorData?.bedoc_doctorname) || !doctorData?.isExist || doctorData?.isSearchType == "html_failed" ) { // Handle cases where JSON.parse returns null/undefined
+            emptyDoctors.push(doctorData)
             throw new Error('Parsed doctorData is null or undefined.');
           }
 
           doctorName = doctorData.bedoc_doctorname || 'Unknown Doctor';
           hospitalName = doctorData.hospital_name || 'Unknown Hospital';
 
-          const saveResult = await crawlingCtrl.saveDoctorDataToBedocTable(doctorData);
+          const saveResult = await crawlingCtrl.saveDoctorDataToDb(doctorData);
           if (saveResult.success) {
+            const saveBedocResult = await crawlingCtrl.saveDoctorDataToBedocTable(doctorData);
+            console.log(`saveResult.success: ${saveResult.success}`)
             saved_count++;
+            
           } else {
             errors.push(`Doctor ${doctorName} from ${hospitalName}: ${saveResult.error}`);
           }
@@ -530,13 +531,18 @@ router.get('/save', async function(req, res) {
           console.error(`[SAVE] Error processing file ${filePath}: ${fileError.message}`);
           errors.push(`File ${filePath} (Doctor: ${doctorName}, Hospital: ${hospitalName}): ${fileError.message}`);
         }
+        // Rename the file to mark as saved
+        const newFilePath = path.join(dataDir, hospitalID, fileName.replace('.json', '_saved.json'));
+        fs.renameSync(filePath, newFilePath);
+        console.log(`Renamed ${fileName} to ${fileName.replace('.json', '_saved.json')}`);
+        await CS.wait(1000); //의사 1명당 1초씩 텀은 준다
       }
     }
-
+    console.log(`Saved ${saved_count} doctor records. Errors: ${errors.length}, Empty Doctors: ${emptyDoctors.length}`)
     return res.send({
       code: 200,
       success: true,
-      message: `Saved ${saved_count} doctor records. Errors: ${errors.length}`,
+      message: `Saved ${saved_count} doctor records. Errors: ${errors.length}, Empty Doctors: ${emptyDoctors.length}`,
       errors: errors
     });
   } catch (error) {

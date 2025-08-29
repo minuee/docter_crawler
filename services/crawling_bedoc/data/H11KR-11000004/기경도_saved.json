@@ -1,0 +1,47 @@
+{
+  "hospital_cid": 38,
+  "bedoc_doctorname": "기경도",
+  "bedoc_deptname": "산부인과",
+  "bedoc_doctor_site": "http://www.khnmc.or.kr/03/02.jsp",
+  "bedoc_hospitalname": "강동경희대병원",
+  "hospital_name": "강동경희대학교의대병원",
+  "hospital_addr": "서울특별시 강동구 동남로 892, (상일동)",
+  "aiga_hid": "H11KR-11000004",
+  "hospitalsite": "http://www.khnmc.or.kr",
+  "hospital_site": "http://www.khnmc.or.kr",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "http://mint.or.kr?deptname=산부인과&doctorName=기경도",
+  "profileUrl": null,
+  "specialty": "부인암, 자궁선근증, 자궁근종, 난소종양, 골반장기탈출증, 로봇수술, 복강경수술, 단일공 수술",
+  "education": [
+    { "date": null, "content": "경희대학교 의과대학 졸업" },
+    { "date": null, "content": "경희대학교 의과대학원 석사" },
+    { "date": null, "content": "경희대학교 의과대학원 박사" }
+  ],
+  "experience": [
+    { "date": null, "content": "現 민트병원 원장" },
+    { "date": null, "content": "前 경희대학교 의과대학 산부인과 교수" },
+    { "date": null, "content": "前 강동경희대학교병원 산부인과 과장 및 목련교수" },
+    { "date": "2015", "content": "前 강동경희대학교병원 진료협력센터 부소장 (2015년부터)" },
+    { "date": "2011", "content": "前 강동경희대학교병원 산부인과 조교수 (2011년부터)" },
+    { "date": "2011", "content": "前 경희대학교 의과대학 산부인과학교실 조교수 (2011년부터)" },
+    { "date": null, "content": "대한산부인과학회 심사위원회 위원" },
+    { "date": null, "content": "대한부인종양학회 기획위원" },
+    { "date": null, "content": "대한골반통학회 연수위원장" },
+    { "date": "2014", "content": "대한부인종양연구회 자궁내막암분과 위원 (2014년부터)" }
+  ],
+  "수상": [
+    { "date": "2016", "content": "강동경희대학교병원 '목련교수' 1기 선정" }
+  ],
+  "학술": [],
+  "언론": [],
+  "저서": [],
+  "논문": [],
+  "searchHospitalName": "민트병원",
+  "isSameHospital": false,
+  "isAttend": true,
+  "found_hospital_aiga_hid" : "H21KR-11000071",
+  "searchHospitalAddress": "서울특별시 송파구 정의로8길 7, (문정동)"
+}

@@ -4,9 +4,8 @@
 
     <select id="select_bedoc_hospital">
         SELECT 
-            a.hospital_cid,a.bedoc_doctorname,a.bedoc_deptname,a.bedoc_doctor_site,a.bedoc_hospitalname,
-            a.hospital_name,a.hospital_addr
-            ,a.hospital_site as hospitalsite, a.hospital_doctor_site as hospital_site
+            a.hospital_cid,a.bedoc_doctorname,a.bedoc_deptname,a.bedoc_doctor_site,a.bedoc_hospitalname,a.hospital_tel,
+            a.hospital_name,a.hospital_addr,a.aiga_hid,a.hospital_site as hospitalsite, a.hospital_doctor_site as hospital_site
         FROM
             hospital_bedoc_list as a
         WHERE
@@ -26,12 +25,26 @@
     <update id="hospital_bedoc_update">
         UPDATE hospital_bedoc_list 
         SET 
+            search_doctor_site = #{doctorDetailUrl},
             is_search_same_hospital = #{isSameHospital},
             is_attend = #{isAttend},
             search_type = #{isSearchType},
             search_hospital_name = #{searchHospitalName},
-            is_site_ok = #{isExist}
+            is_site_ok = #{isExist},
+            is_crawling_done = 1,
+            site_check_date = NOW(),
+            crawling_done_cdate = NOW()
         WHERE hospital_cid = #{hospital_cid}
     </update>
     
+    <select id="find_hospital_hid">
+        SELECT 
+            a.hid as new_hid, b.address as hospital_addr,b.telephone
+        FROM
+            hospital_alias as a inner join hospital as b on a.hid = b.hid
+        WHERE
+            1=1 and alias_name = #{newHospitalName}
+        LIMIT 1
+    </select>
+
 </mapper>
