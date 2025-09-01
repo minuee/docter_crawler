@@ -1,0 +1,59 @@
+{
+  "hospital_cid": 170,
+  "bedoc_doctorname": "나경욱",
+  "bedoc_deptname": "정형외과",
+  "bedoc_doctor_site": "https://www.paik.ac.kr/ilsan/reservation/intro.asp",
+  "bedoc_hospitalname": "일산백병원",
+  "hospital_tel": "031-910-7114",
+  "hospital_name": "인제대학교일산백병원",
+  "hospital_addr": "경기도 고양시 일산서구 주화로 170, (대화동)",
+  "aiga_hid": "H11KR-31000056",
+  "hospitalsite": "http://www.paik.ac.kr/ilsan/",
+  "hospital_site": "http://www.paik.ac.kr/ilsan/",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "http://www.paik.ac.kr/ilsan/?deptname=정형외과&doctorName=나경욱",
+  "profileUrl": null,
+  "specialty": "정형외과, 무릎관절질환 (관절경수술, 절골술, 인공관절술, 스포츠손상(연골판, 십자인대수술, 슬개골 탈구), 외상후 뼈 교정술)",
+  "학력": [
+    { "date": null, "content": "고려대학교 의과대학 졸업" },
+    { "date": null, "content": "고려대학교 대학원 의학석사" },
+    { "date": null, "content": "고려대학교 대학원 의학박사" }
+  ],
+  "경력": [
+    { "date": null, "content": "고려대학교 의료원 전공의" },
+    { "date": null, "content": "고려대학교 의료원 임상강사" },
+    { "date": null, "content": "오스트리아 AO 스포츠의학 연수" },
+    { "date": null, "content": "미국 Harvard 대학병원 의공학 연구원" },
+    { "date": null, "content": "인제대학교 일산백병원 정형외과 교수" }
+  ],
+  "수상": [
+    
+  ],
+  "학술": [
+    { "date": "2021.10", "content": "대한관절경학회 제27대 회장 (2021년 10월 ~ 2022년 10월 임기)" },
+    { "date": null, "content": "대한정형외과학회지 분과편집위원장(무릎)" },
+    { "date": null, "content": "대한슬관절학회 메타위원장" },
+    { "date": null, "content": "한일절골술학회 Director" },
+    { "date": null, "content": "무릎절골술연구회 총무" },
+    { "date": null, "content": "대한슬관절학회 평의원" }
+  ],
+  "언론": [
+    { "targetDate": "2021.10.02", "type": "기사", "text": "대한관절경학회 회장 취임 관련 다수 언론 보도", "url": null, "issuer": null },
+    { "targetDate": "2022.03", "type": "인터뷰", "text": "'관절염 수술 명의'로 무릎 관리법 및 수술 관련 인터뷰 진행", "url": null, "issuer": null }
+  ],
+  "저서": [
+    
+  ],
+  "논문": [
+    "HTO, Meniscus, ACL, PCL, TKA 등 97개의 국제학술논문 게재",
+    "SCI 논문을 포함하여 국내외 90편의 연구 논문 발표",
+    "주요 논문으로는 'Arthroscopic hybrid fixation of a tibial eminence fracture in children', 'Patellar dislocation with genu valgum treated by DFO', 'Arthroscopic Excision of Solitary Intra-articular Osteochondroma of the Knee', 'Survival of total knee arthroplasty after high tibial osteotomy versus primary total knee arthroplasty: A meta-analysis', 'The weight-bearing scanogram technique provides better coronal limb alignment than the navigation technique in open high tibial osteotomy' 등"
+  ],
+  "searchHospitalName": "인제대학교일산백병원",
+  "searchHospitalAddress": "경기도 고양시 일산서구 주화로 170, (대화동)",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H11KR-31000056"
+}

@@ -1,0 +1,57 @@
+{
+  "hospital_cid": 141,
+  "bedoc_doctorname": "김창렬",
+  "bedoc_deptname": "소아청소년과",
+  "bedoc_doctor_site": "https://guri.hyumc.com/guri/guidance/ambulatoryCare/treatReserve.do",
+  "bedoc_hospitalname": "한양대구리병원",
+  "hospital_tel": "1644-9118",
+  "hospital_name": "한양대학교구리병원",
+  "hospital_addr": "경기도 구리시 경춘로 153, (교문동)",
+  "aiga_hid": "H11KR-31000064",
+  "hospitalsite": "http://guri.hyumc.com/index.asp?",
+  "hospital_site": "http://guri.hyumc.com/index.asp?",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "http://www.emc.ac.kr/default.asp?deptname=소아청소년과&doctorName=김창렬",
+  "profileUrl": null,
+  "specialty": "소아청소년과, 신생아학, 신생아-주산의학",
+  "학력": [
+    { "date": null, "content": "한양대학교 의과대학 졸업" },
+    { "date": null, "content": "한양대학교 대학원 의학 석사 및 박사 학위 취득" },
+    { "date": null, "content": "서울대학교 어린이병원 신생아학 전임의 수련" },
+    { "date": null, "content": "미국 브라운대학교 로드아일랜드 모자병원 신생아-주산의학 전임의 및 임상강사 수련" }
+  ],
+  "경력": [
+    { "date": null, "content": "한양대학교 의과대학 소아청소년과 교수" },
+    { "date": null, "content": "한양대학교구리병원 신생아집중치료 지역센터 센터장" },
+    { "date": "2019.11", "content": "대한신생아학회 회장 (2019년 11월 ~ 2021년 10월)" },
+    { "date": null, "content": "대한신생아학회 부회장" },
+    { "date": null, "content": "대한주산의학회 감사" },
+    { "date": null, "content": "통계청 영유아 사인분석 자문위원" },
+    { "date": "2025.02.01", "content": "의정부을지대학교병원 소아청소년과 교수 (2025년 2월 1일~)" }
+  ],
+  "수상": [
+    { "date": "2020", "content": "제26회 통계의 날 기념식에서 통계발전유공자로 대통령상 수상" }
+  ],
+  "학술": [
+    { "date": null, "content": "대한소아과학회" },
+    { "date": null, "content": "대한신생아학회" },
+    { "date": null, "content": "대한주산의학회" },
+    { "date": null, "content": "미국소아과학회 (American Academy of Pediatrics)" },
+    { "date": null, "content": "Society of Pediatric Research (SPR)" },
+    { "date": null, "content": "European Society of Pediatric Research (ESPR)" }
+  ],
+  "언론": [
+    { "targetDate": null, "type": "기사", "text": "대통령상 수상 및 의정부을지대학교병원 영입 등 주요 경력 사항에 대해 다수의 언론에 보도", "url": null, "issuer": null }
+  ],
+  "저서": [],
+  "논문": [
+    
+  ],
+  "searchHospitalName": "의정부을지대학교병원",
+  "searchHospitalAddress": "경기도 의정부시 동일로 712",
+  "isSameHospital": false,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H11KR-31000064"
+}

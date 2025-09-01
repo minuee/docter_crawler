@@ -1,0 +1,51 @@
+{
+  "hospital_cid": 148,
+  "bedoc_doctorname": "김하경",
+  "bedoc_deptname": "안과",
+  "bedoc_doctor_site": "https://kangnam.hallym.or.kr/hallymuniv_sub.asp?left_menu=left_ireserve&screen=ptm500&tap=2",
+  "bedoc_hospitalname": "강남성심병원",
+  "hospital_tel": "02-829-5114",
+  "hospital_name": "한림대학교 강남성심병원",
+  "hospital_addr": "서울특별시 영등포구 신길로 1, (대림동, 강남성심병원)",
+  "aiga_hid": "H11KR-11000040",
+  "hospitalsite": "http://kangnam.hallym.or.kr",
+  "hospital_site": "http://kangnam.hallym.or.kr",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "http://kangnam.hallym.or.kr?deptname=안과&doctorName=김하경",
+  "profileUrl": null,
+  "specialty": "안과, 유리체망막, 고난이 백내장",
+  "학력": [
+    { "date": "1970.03", "content": "서울대학교 의과대학 졸업 (1970년 3월 ~ 1976년 2월)" },
+    { "date": "1981.03", "content": "중앙대학교 제1캠퍼스 대학원 의학석사 졸업 (1981년 3월 ~ 1983년 2월)" },
+    { "date": "1983.03", "content": "중앙대학교 제1캠퍼스 대학원 의학박사 졸업 (1983년 3월 ~ 1986년 2월)" }
+  ],
+  "경력": [
+    { "date": "1979", "content": "서울대병원 인턴 수료 (1979년 ~ 1980년)" },
+    { "date": "1983", "content": "중앙대의료원 안과 전공의 수료 (~ 1983년)" },
+    { "date": "1983", "content": "서울대병원 안과 전임의 (1983년 ~ 1984년)" },
+    { "date": "1985", "content": "중앙대의료원 안과 전임의 (~ 1985년)" },
+    { "date": null, "content": "한림대학교 의과대학 객원교수" },
+    { "date": "2000", "content": "한림대학교강남성심병원 진료부원장 (2000년 ~ 2002년)" },
+    { "date": null, "content": "한림대학교강남성심병원 안과 객원교수" }
+  ],
+  "수상": [],
+  "학술": [
+    { "date": null, "content": "대한안과학회 회원" },
+    { "date": null, "content": "대한망막학회장 역임" }
+  ],
+  "언론": [
+    { "targetDate": "2020.05.17", "type": "기사", "text": "헬스조선 기사 \"천천히 시력 잃는 당뇨병…초기발견·집중치료 중요한 이유\"에서 당뇨병성 황반부종에 대해 언급", "url": null, "issuer": "헬스조선" },
+    { "targetDate": "2022.12.16", "type": "유튜브", "text": "YouTube 채널 '비온뒤'에서 \"당뇨병과 안과질환\"을 주제로 강남성심병원 김하경 교수 출연", "url": null, "issuer": "비온뒤" }
+  ],
+  "저서": [],
+  "논문": [
+    
+  ],
+  "searchHospitalName": "한림대학교 강남성심병원",
+  "searchHospitalAddress": "서울특별시 영등포구 신길로 1, (대림동, 강남성심병원)",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H11KR-11000040"
+}

@@ -1,0 +1,55 @@
+{
+  "hospital_cid": 104,
+  "bedoc_doctorname": "김암",
+  "bedoc_deptname": "산부인과",
+  "bedoc_doctor_site": "http://www.eulji.or.kr/reservation/reservation_pg03.jsp",
+  "bedoc_hospitalname": "노원을지대학교병원",
+  "hospital_tel": "02-970-8000",
+  "hospital_name": "노원을지대학교병원",
+  "hospital_addr": "서울특별시 노원구 한글비석로 68, 을지병원 (하계동)",
+  "aiga_hid": "H11KR-11000009",
+  "hospitalsite": "http://www.eulji.or.kr/default.asp",
+  "hospital_site": "http://www.eulji.or.kr/default.asp",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "https://uemc.ac.kr?deptname=산부인과&doctorName=김암",
+  "profileUrl": null,
+  "specialty": "산부인과, 고위험 임신, 다태 임신, 조산",
+  "학력": [
+    { "date": "1979.02", "content": "서울대학교 의과대학 의학과 의학사" },
+    { "date": "1987.02", "content": "서울대학교 대학원 의학과 산부인과전공 의학석사" },
+    { "date": "1991.02", "content": "서울대학교 대학원 의학과 산부인과전공 의학박사" }
+  ],
+  "경력": [
+    { "date": "1979.03", "content": "서울대학교병원 인턴 (1979년 3월 ~ 1980년 2월)" },
+    { "date": "1980.03", "content": "서울대학교병원 산부인과 전공의 (1980년 3월 ~ 1983년 2월)" },
+    { "date": "1986.08", "content": "충남대학교 의과대학 산부인과 전임강사 및 조교수 (1986년 8월 ~ 1989년 2월)" },
+    { "date": "1989.03", "content": "울산대학교 의과대학 산부인과 조교수 (1989년 3월 ~ 1993년)" },
+    { "date": "1991.09", "content": "미국 로스앤젤레스 UCLA/Cedars-Sinai Medical Center 연구강사 (research fellow) (1991년 9월 ~ 1992년 8월)" },
+    { "date": null, "content": "서울아산병원 산부인과 과장 역임" },
+    { "date": "2018.06.01", "content": "서울 노원구 을지병원 의무원장으로 영입" },
+    { "date": null, "content": "현재 의정부을지대병원 산부인과 석좌교수" }
+  ],
+  "수상": [
+    { "date": "2025.04.16", "content": "건강한 임신·출산 환경 조성과 의학 발전에 헌신한 공로로 '종근당 존경받는 병원인상' 수상" }
+  ],
+  "학술": [
+    { "date": "2008.03", "content": "한국의학도서관협의회장 (2008년 3월 ~ 2011년 3월)" },
+    { "date": "2009.11", "content": "대한산부인과초음파학회 회장 (2009년 11월 ~ 2011년 10월)" },
+    { "date": "2010.11", "content": "대한주산의학회 회장 (2010년 11월 ~ 2012년 12월)" },
+    { "date": "2016.10", "content": "한국의료분쟁조정중재원 의료사고보상심의위원회 위원 (2016년 10월 ~ 2019년 9월)" },
+    { "date": "2019.10", "content": "한국의료분쟁조정중재원 의료사고보상심의위원회 위원장 (2019년 10월 ~ 현재)" },
+    { "date": "2025", "content": "대한산부인과학회장 (2025년부터)" }
+  ],
+  "언론": [
+    { "targetDate": null, "type": "기사", "text": "김암 교수의 을지병원 영입 및 종근당 존경받는 병원인상 수상 등 주요 경력과 활동은 다수의 언론 기사를 통해 보도", "url": null, "issuer": null }
+  ],
+  "저서": [],
+  "논문": [],
+  "searchHospitalName": "의정부을지대학교병원",
+  "searchHospitalAddress": "경기도 의정부시 동일로 712",
+  "isSameHospital": false,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H11KR-11000009"
+}

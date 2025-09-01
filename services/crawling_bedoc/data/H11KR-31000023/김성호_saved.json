@@ -1,0 +1,45 @@
+{
+  "hospital_cid": 95,
+  "bedoc_doctorname": "김성호",
+  "bedoc_deptname": "소아청소년과",
+  "bedoc_doctor_site": "http://sejongh.co.kr/medical/call",
+  "bedoc_hospitalname": "세종병원",
+  "hospital_tel": "1599-6677",
+  "hospital_name": "부천세종병원",
+  "hospital_addr": "경기도 부천시 소사구 호현로489번길 28, (소사본동, 세종병원)",
+  "aiga_hid": "H11KR-31000023",
+  "hospitalsite": "http://www.sejongh.co.kr",
+  "hospital_site": "http://www.sejongh.co.kr",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "http://www.sejongh.co.kr?deptname=소아청소년과&doctorName=김성호",
+  "profileUrl": null,
+  "specialty": "소아청소년과, 소아 심장질환, 소아 심장중재술, 성인 선천성심장질환",
+  "학력": [
+    { "date": null, "content": "한양대학교 의과대학 졸업" }
+  ],
+  "경력": [
+    { "date": "1989", "content": "부천세종병원 소아심장 진료과장 시작" },
+    { "date": null, "content": "가천대 길병원 소아심장과장 역임" },
+    { "date": null, "content": "제주한라병원 심혈관센터장 (소아과장) 역임" },
+    { "date": null, "content": "부천세종병원 진료부원장 역임" },
+    { "date": null, "content": "현 대한소아심장학회 심중재술연구회 회장" }
+  ],
+  "수상": [
+    { "date": null, "content": "국내 최초로 심실중격결손의 비수술적 폐쇄(Amplatzer device) 등 13건의 시술 도입 및 최다 시술" },
+    { "date": null, "content": "선천성 심장병의 비수술적 치료(중재적 심도자술) 분야 권위자" }
+  ],
+  "학술": [
+    { "date": null, "content": "대한소아심장학회 심중재술연구회 회장으로 활동" },
+    { "date": null, "content": "대한소아청소년과학회 정기 학술대회 참여, 소아 심장 분야 학술 발전 기여" }
+  ],
+  "언론": [],
+  "저서": [],
+  "논문": [],
+  "searchHospitalName": "부천세종병원",
+  "searchHospitalAddress": "경기도 부천시 소사구 호현로489번길 28, (소사본동, 세종병원)",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H11KR-31000023"
+}

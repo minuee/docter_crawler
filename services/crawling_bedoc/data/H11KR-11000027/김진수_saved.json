@@ -1,0 +1,56 @@
+{
+  "hospital_cid": 135,
+  "bedoc_doctorname": "김진수",
+  "bedoc_deptname": "정형외과",
+  "bedoc_doctor_site": "http://www.cmhospital.co.kr/guide/reservation.php",
+  "bedoc_hospitalname": "CM병원",
+  "hospital_tel": "02-2678-0001",
+  "hospital_name": "씨엠병원",
+  "hospital_addr": "서울특별시 영등포구 영등포로36길 13, (영등포동4가, 충무병원)",
+  "aiga_hid": "H11KR-11000027",
+  "hospitalsite": "http://www.cmhospital.co.kr",
+  "hospital_site": "http://www.cmhospital.co.kr",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "http://www.cmhospital.co.kr?deptname=정형외과&doctorName=김진수",
+  "profileUrl": null,
+  "specialty": "정형외과, 족부 정형외과 (발과 발목), 스포츠 의학",
+  "학력": [
+    { "date": null, "content": "국립 경상대학교 의과대학 졸업" },
+    { "date": null, "content": "국립 경상대학교 의학박사" }
+  ],
+  "경력": [
+    { "date": null, "content": "전 을지대학교병원 정형외과 교수" },
+    { "date": "2015", "content": "CM병원 합류" },
+    { "date": null, "content": "서울 삼성 썬더스 Consultant doctor" },
+    { "date": null, "content": "대한민국 농구 국가대표팀 팀닥터" },
+    { "date": null, "content": "이랜드 FC 수석 팀닥터" },
+    { "date": null, "content": "대한체육회 의무위원회 위원" },
+    { "date": null, "content": "대한스포츠의학회 AT 관리위원회 간사" },
+    { "date": null, "content": "국군함평병원 스포츠분과 전문의" }
+  ],
+  "수상": [
+    { "date": "2014.09", "content": "미국족부족관절학회(American Orthopaedic Foot & Ankle Society) '2015 Traveling Fellowship Award' 수상" },
+    { "date": "2016", "content": "세계 3대 인명사전 '마르퀴즈 후즈후 인더월드' 2016년 판 등재" }
+  ],
+  "학술": [
+    { "date": null, "content": "발목 및 발 관련 정형외과 분야에서 활발한 연구 활동" },
+    { "date": null, "content": "ResearchGate 프로필을 통해 다양한 연구 논문을 확인할 수 있습니다." },
+    { "date": null, "content": "특히 발목 염좌, 만성 발목 불안정성, 족부 골절, 무지외반증, 거골의 골연골 병변 등에 대한 연구를 수행했습니다." }
+  ],
+  "언론": [
+    { "targetDate": "2015", "type": "기사", "text": "CM병원 합류 및 스포츠 의학 분야에서의 역할에 대해 여러 언론 보도에서 언급", "url": null, "issuer": null }
+  ],
+  "저서": [
+    
+  ],
+  "논문": [
+    
+  ],
+  "searchHospitalName": "씨엠병원",
+  "searchHospitalAddress": "서울특별시 영등포구 영등포로36길 13, (영등포동4가, 충무병원)",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H11KR-11000027"
+}

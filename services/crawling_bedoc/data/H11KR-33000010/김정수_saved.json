@@ -1,0 +1,52 @@
+{
+  "hospital_cid": 126,
+  "bedoc_doctorname": "김정수",
+  "bedoc_deptname": "소아청소년과",
+  "bedoc_doctor_site": "https://www.ccmc.or.kr/sub1.php?orders=21",
+  "bedoc_hospitalname": "청주성모병원",
+  "hospital_tel": "043-219-8000",
+  "hospital_name": "청주성모병원",
+  "hospital_addr": "충청북도 청주시 청원구 주성로 173-19, 청주성모병원",
+  "aiga_hid": "H11KR-33000010",
+  "hospitalsite": "http://www.ccmc.or.kr",
+  "hospital_site": "http://www.ccmc.or.kr",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "http://www.ccmc.or.kr?deptname=소아청소년과&doctorName=김정수",
+  "profileUrl": null,
+  "specialty": "소아청소년과, 소아신장질환 (단백뇨, 혈뇨, 요로감염), 수신증, 야뇨증, 성장, 성조숙, 비만, 호흡기 알레르기질환, 아토피, 소화기질환, 고혈압, 예방접종",
+  "학력": [
+    { "date": null, "content": "서울대학교 의과대학 졸업" },
+    { "date": null, "content": "서울대학교 의과대학원 의학 박사" }
+  ],
+  "경력": [
+    { "date": null, "content": "서울대학교병원 전공의" },
+    { "date": null, "content": "소아과 전문의" },
+    { "date": null, "content": "서울대학교병원 소아신장 전임의" },
+    { "date": null, "content": "해외 장기연수 (루이지애나 주립대학 의과대학, 뉴올리언스 어린이병원)" },
+    { "date": null, "content": "청주성모병원 외래진료부장 (現)" },
+    { "date": null, "content": "청주성모병원 소아청소년과 주임과장" }
+  ],
+  "수상": [
+    
+  ],
+  "학술": [
+    { "date": null, "content": "대한소아과 학회 정회원" },
+    { "date": null, "content": "대한소아신장학회 정회원" }
+  ],
+  "언론": [
+    { "targetDate": null, "type": "유튜브", "text": "청주성모병원 공식 유튜브 채널의 \"[몸맘innerVIEW]004_소아청소년과 김정수 과장\" 영상에서 확인", "url": null, "issuer": "청주성모병원" }
+  ],
+  "저서": [
+    
+  ],
+  "논문": [
+    
+  ],
+  "searchHospitalName": "청주성모병원",
+  "searchHospitalAddress": "충청북도 청주시 청원구 주성로 173-19, 청주성모병원",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H11KR-33000010"
+}

@@ -366,7 +366,7 @@ module.exports = {
         doctorProfileImgUrl,
         profileUrl,
         specialty,
-        searchHospitalName,
+        searchHospitalName : searchHospitalName ? searchHospitalName : doctorData?.hospital_name,
         isSameHospital : isSameHospital ? 1 : 0,
         isAttend : isAttend ? 1 : 0,
         foundHospitalHID

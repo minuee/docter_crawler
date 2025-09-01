@@ -1,0 +1,58 @@
+{
+  "hospital_cid": 111,
+  "bedoc_doctorname": "김영호",
+  "bedoc_deptname": "정형외과",
+  "bedoc_doctor_site": "http://yunsuh.ilikedoc.kr/",
+  "bedoc_hospitalname": "윤서병원",
+  "hospital_tel": "031-553-6650",
+  "hospital_name": "윤서병원",
+  "hospital_addr": "경기도 구리시 건원대로 47, (인창동)",
+  "aiga_hid": "H21KR-31000211",
+  "hospitalsite": "http://yunsuh.ilikedoc.kr/",
+  "hospital_site": "http://yunsuh.ilikedoc.kr/",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "http://yunsuh.ilikedoc.kr/?deptname=정형외과&doctorName=김영호",
+  "profileUrl": null,
+  "specialty": "정형외과, 인공고관절치환술",
+  "학력": [
+    { "date": null, "content": "한양대학교 의과대학 졸업" },
+    { "date": null, "content": "한양대학교 의과대학원 석사 및 박사 학위 취득" }
+  ],
+  "경력": [
+    { "date": null, "content": "윤서병원 원장" },
+    { "date": null, "content": "한양대학교병원 인턴과 레지던트 과정 수료" },
+    { "date": null, "content": "순천향대학교 천안병원 부교수 역임" },
+    { "date": null, "content": "영국 Northern General Hospital과 Wrightington Hospital에서 인공고관절치환술 분야 연수" },
+    { "date": null, "content": "한양대학교 정형외과 교수" },
+    { "date": null, "content": "전 한양대학교 구리병원 병원장" }
+  ],
+  "수상": [
+    { "date": "2011", "content": "대한고관절학회 우수논문상 ('고관절 주위 골절환자에서 알렌드로네이트 투여 후 복용 지속성 및 골밀도의 변화' 논문)" },
+    { "date": "2018", "content": "대한고관절학회 학술대회 최우수 연제상" },
+    { "date": "2019", "content": "대한고관절학회 해외 학술상" },
+    { "date": null, "content": "대한정형외과학회 학술상" },
+    { "date": null, "content": "대한고관절학회 학술상" }
+  ],
+  "학술": [
+    { "date": null, "content": "대한고관절학회 회장" },
+    { "date": null, "content": "대한정형외과학회 고시위원장" },
+    { "date": null, "content": "대한정형외과학회 수련교육위원" },
+    { "date": null, "content": "국제정형외과 및 외상학회 정회원" },
+    { "date": null, "content": "아시아ㆍ태평양 인공관절학회 이사 및 정회원" },
+    { "date": null, "content": "대한정형통증의학회 회장 및 평의원" },
+    { "date": null, "content": "ARTHROPLASTY 학술지 편집위원" },
+    { "date": null, "content": "건강심사평가원, 산재 자문위원, 서울지방병무청, 분쟁조정위원회 자문위원" }
+  ],
+  "언론": [],
+  "저서": [],
+  "논문": [
+    "'고관절 주위 골절환자에서 알렌드로네이트 투여 후 복용 지속성 및 골밀도의 변화' (2011년, 대한고관절학회 우수논문상 수상 논문)"
+  ],
+  "searchHospitalName": "윤서병원",
+  "searchHospitalAddress": "경기도 구리시 건원대로 47, (인창동)",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H21KR-31000211"
+}

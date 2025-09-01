@@ -1,0 +1,42 @@
+{
+  "hospital_cid": 149,
+  "bedoc_doctorname": "김하영",
+  "bedoc_deptname": "비뇨의학과",
+  "bedoc_doctor_site": "https://www.dkmc.or.kr/medguide/medguide02_01.php",
+  "bedoc_hospitalname": "동강병원",
+  "hospital_tel": "052-241-1114",
+  "hospital_name": "의료법인 동강의료재단 동강병원",
+  "hospital_addr": "울산광역시 중구 태화로 239, (태화동)",
+  "aiga_hid": "H11KR-26000004",
+  "hospitalsite": "http://www.dkmc.or.kr",
+  "hospital_site": "http://www.dkmc.or.kr",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "http://www.dkmc.or.kr?deptname=비뇨의학과&doctorName=김하영",
+  "profileUrl": null,
+  "specialty": "비뇨의학과, 요로결석, 요실금, 전립선",
+  "학력": [
+    { "date": "1976", "content": "서울대학교 의과대학 졸업" },
+    { "date": "1986", "content": "서울대학교 대학원 의학석사" },
+    { "date": "1989", "content": "고려대학교 대학원 의학박사" }
+  ],
+  "경력": [
+    { "date": "1977", "content": "서울대학교병원 인턴" },
+    { "date": "1981", "content": "서울대학교병원 레지던트" },
+    { "date": null, "content": "미국 미시간 대학 비뇨기과 연구원" },
+    { "date": "1985.03", "content": "한림대학교 한강성심병원 조교수 (1985. 3 ~ 1992. 2)" },
+    { "date": "1992.03", "content": "한림대학교 강동성심병원 교수 (1992. 3 ~ 2016. 2)" },
+    { "date": null, "content": "대한손보협회 자문교수" }
+  ],
+  "수상": [],
+  "학술": [],
+  "언론": [],
+  "저서": [],
+  "논문": [],
+  "searchHospitalName": "의료법인 동강의료재단 동강병원",
+  "searchHospitalAddress": "울산광역시 중구 태화로 239, (태화동)",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H11KR-26000004"
+}

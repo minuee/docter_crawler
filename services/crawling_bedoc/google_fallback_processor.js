@@ -5,6 +5,81 @@ const fs = require('fs');
 const path = require('path');
 
 /**
+ * this is a sample of the doctorData object
+ {
+  "hospital_cid": 53,
+  "bedoc_doctorname": "김기환",
+  "bedoc_deptname": "간담췌외과",
+  "bedoc_doctor_site": "https://www.cmcujb.or.kr/page/doctor/doctor_view.asp?p_sqno=54",
+  "bedoc_hospitalname": "가톨릭대학교의정부성모병원",
+  "hospital_tel": "1661-7500",
+  "hospital_name": "가톨릭대학교의정부성모병원",
+  "hospital_addr": "경기도 의정부시 천보로 271, 의정부성모병원 (금오동)",
+  "aiga_hid": "H11KR-31000003",
+  "hospitalsite": "http://www.cmcujb.or.kr/",
+  "hospital_site": "http://www.cmcujb.or.kr/",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "https://www.cmcujb.or.kr/page/doctor/doctor_view.asp?p_sqno=54",
+  "profileUrl": "https://www.cmcujb.or.kr/DATA/doctor/20190319104849_1.jpg",
+  "specialty": "간암, 담도암, 췌장암, 담낭암, 담석, 간이식, 로봇 및 복강경 수술",
+  "학력": [
+    { "date": "1984 ~ 1990", "content": "조선대학교 의학 학사" },
+    { "date": "1998 ~ 2003", "content": "가톨릭대학교 외과학 석사" },
+    { "date": "2003 ~ 2010", "content": "가톨릭대학교 외과학 박사" }
+  ],
+  "경력": [
+    { "date": "1993 ~ 1994", "content": "지방공사강남병원 인턴" },
+    { "date": "1995 ~ 1999", "content": "의정부성모병원 외과 레지던트" },
+    { "date": "1999 ~ 2002", "content": "의정부성모병원 외과 임상강사" },
+    { "date": "2002 ~ 2004", "content": "의정부성모병원 외과 전임강사" },
+    { "date": "2004 ~ 2010", "content": "의정부성모병원 외과 조교수" },
+    { "date": "2010 ~ 2017", "content": "의정부성모병원 외과 부교수" },
+    { "date": "2015", "content": "의정부성모병원 외과 임상과장" },
+    { "date": "2017 ~ 현재", "content": "의정부성모병원 외과 교수" },
+    { "date": "2007", "content": "Univ. of Pittsburgh (방문 또는 연수 추정)" }
+  ],
+  "수상": [
+    { "date": "2025.02.20", "content": "로봇수술 700례 달성" },
+    { "date": null, "content": "경기 동북부 병원 최초 간이식 성공" }
+  ],
+  "학술": [
+    { "date": "2021 ~ 현재", "content": "한국 간담췌외과학회 경인지회 회장" },
+    { "date": null, "content": "대한중환자의학회 정회원" },
+    { "date": null, "content": "대한임상종양학회 평생회원" },
+    { "date": null, "content": "대한이식학회 정회원" },
+    { "date": null, "content": "한국간담췌외과학회 평생회원" },
+    { "date": null, "content": "분자생물학회 정회원" },
+    { "date": null, "content": "대한내시경복강경외과학회 평생회원" },
+    { "date": null, "content": "대한외과학회 평생회원" }
+  ],
+  "언론": [
+    { "targetDate": "2025.02.20", "type": "기사", "text": "병원신문에 로봇수술 700례 달성 관련 기사 보도", "url": null, "issuer": "병원신문" },
+    { "targetDate": null, "type": "유튜브", "text": "로봇수술 어떻게 활용되고 있을까? (가톨릭대학교 의정부성모병원)", "url": null, "issuer": "가톨릭대학교 의정부성모병원" },
+    { "targetDate": null, "type": "기사", "text": "의정부성모병원 외과, 단일공 복강경수술 1000례 돌파 관련 기사", "url": null, "issuer": null }
+  ],
+  "저서": [],
+  "논문": [
+    "Robotic surgery enables safe and comfortable single-incision cholecystectomy: A comparison of robotic and laparoscopic approaches for single-incision surgery (JOURNAL OF MINIMAL ACCESS SURGERY, 2020년 9월, 공동저자)",
+    "Serum level of visfatin can reflect the severity of inflammation in patients with acute cholecystitis (ANNALS OF SURGICAL TREATMENT AND RESEARCH, 2020년 7월, 공동저자)",
+    "Greater Saphenous Vein Graft Revascularization of the Left Hepatic Artery after Resection of Intrahepatic Cholangiocarcinoma with Common Hepatic Artery Resection (ARCHIVES OF HAND AND MICROSURGERY, 2020년 6월, 공동저자)",
+    "A novel antifibrotic strategy utilizing conditioned media obtained from miR-150-transfected adipose-derived stem cells: validation in an animal model of liver fibrosis (EXPERIMENTAL AND MOLECULAR MEDICINE, 2020년 3월, 공동저자)",
+    "A Novel Way of Preventing Postoperative Pancreatic Fistula by Directly Injecting Profibrogenic Materials into the Pancreatic Parenchyma (INTERNATIONAL JOURNAL OF MOLECULAR SCIENCES, 2020년 3월, 공동저자)",
+    "Generation of induced secretome from adipose-derived stem cells specialized for disease-specific treatment: An experimental mouse model (WORLD JOURNAL OF STEM CELLS, 2020년 1월, 공동저자)",
+    "A Novel Hepatic Anti-Fibrotic Strategy Utilizing the Secretome Released from Etanercept-Synthesizing Adipose-Derived Stem Cells (INTERNATIONAL JOURNAL OF MOLECULAR SCIENCES, 2019년 12월, 공동저자)",
+    "A Comparative Study of Needlescopic Grasper Assisted Single Incision versus Three-Port versus Pure Single Incision Laparoscopic Cholecystectomy (JOURNAL OF MINIMALLY INVASIVE SURGERY, 2019년 12월, 교신저자)",
+    "Enhanced Therapeutic Potential of the Secretome… (INTERNATIONAL JOURNAL OF MOLECULAR SCIENCES, 2019년 11월, 공동저자)"
+  ],
+  "searchHospitalName": "가톨릭대학교의정부성모병원",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H11KR-31000003",
+  "searchHospitalAddress": "경기도 의정부시 천보로 271, 의정부성모병원 (금오동)"
+}
+ */
+
+/**
  * ==================================================================================================
  *                                    OVERALL WORKFLOW
  * ==================================================================================================
@@ -107,6 +182,19 @@ function processGoogleFallback() {
     console.log("4. SYNTHESIZE final JSON object using prompt:", promptForSynthesis.trim());
     console.log("5. CHECK doctor attendance using prompt:", promptForIsAttend.trim());
     console.log("6. UPDATE the original JSON file using prompt:", promptForFileUpdate.trim());
+    console.log("7. FINAL VERIFICATION: Check for any remaining 'html_failed' files.");
 }
+
+/**
+ * ==================================================================================================
+ *                  GEMINI EXECUTION PLAN FOR FINAL VERIFICATION (PHASE 3)
+ * ==================================================================================================
+ */
+// Gemini Action 7: Final Verification.
+// After all Phase 2 tasks are attempted, perform a final check.
+// Find all `{doctorName}.json` files in `services/crawling_bedoc/data/` subdirectories.
+// For each file, read its content and check if the value of the `isSearchType` field is still `'html_failed'`.
+// If any files are found with `isSearchType: 'html_failed'`, report them to the user.
+// If no such files are found, report that all 'html_failed' files have been processed.
 
 module.exports = { processGoogleFallback };

@@ -1,0 +1,61 @@
+{
+  "hospital_cid": 99,
+  "bedoc_doctorname": "김순현",
+  "bedoc_deptname": "안과",
+  "bedoc_doctor_site": "http://noon.co.kr/04/new_02_01.php",
+  "bedoc_hospitalname": "누네안과의원",
+  "hospital_tel": "02-1661-1175",
+  "hospital_name": "누네안과병원",
+  "hospital_addr": "서울특별시 강남구 테헤란로 408, 대치빌딩 지상9층~지상17층 (대치동)",
+  "aiga_hid": "H21KR-11000040",
+  "hospitalsite": "http://www.noon.co.kr",
+  "hospital_site": "http://www.noon.co.kr",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "http://www.noon.co.kr?deptname=안과&doctorName=김순현",
+  "profileUrl": null,
+  "specialty": "안과, 망막질환",
+  "학력": [
+    { "date": null, "content": "오하이오주립대학교 안과 연수" },
+    { "date": null, "content": "연세대학교 의과대학 졸업" },
+    { "date": null, "content": "연세대학교 대학원 의학 박사" },
+    { "date": "1990", "content": "안과 전문의 취득" },
+    { "date": "1995", "content": "의학박사 학위 취득" }
+  ],
+  "경력": [
+    { "date": "1990", "content": "연세대학교 의과대학 안과학교실 교수 (1990년 ~ 2001년 2월)" },
+    { "date": "2001.03", "content": "건양대학교 의과대학 안과학교실 교수" },
+    { "date": "2004", "content": "건양대학교 김안과병원 병원장" },
+    { "date": null, "content": "현 누네안과의원(누네안과병원) 대표원장" }
+  ],
+  "수상": [],
+  "학술": [
+    { "date": null, "content": "한국망막학회 회장" },
+    { "date": null, "content": "대한안과학회 학술대회 좌장 및 발표 (2014년, 2015년 등)" }
+  ],
+  "언론": [
+    { "targetDate": "2016.09.20", "type": "기사", "text": "[명의의 건강비결] 치명적인 망막질환 치료 권위자 누네안과병원 김순현 원장 (건강다이제스트)", "url": null, "issuer": "건강다이제스트" },
+    { "targetDate": "2004.01.17", "type": "인터뷰", "text": "인터뷰: 김순현 김안과병원장 (메디칼타임즈)", "url": null, "issuer": "메디칼타임즈" },
+    { "targetDate": "2014.02.27", "type": "유튜브", "text": "누네안과 김순현 원장 - 당뇨망막증 치료 (YouTube)", "url": null, "issuer": "YouTube" },
+    { "targetDate": "2004.01.18", "type": "기사", "text": "김안과병원 김순현 원장 (의약뉴스)", "url": null, "issuer": "의약뉴스" },
+    { "targetDate": "2004.01.19", "type": "인터뷰", "text": "인터뷰-김순현 (의협신문)", "url": null, "issuer": "의협신문" },
+    { "targetDate": "2013.06.24", "type": "방송", "text": "안과의사 김순현 선생님이 전하는 눈 건강 지키는 습관! - 닥터의 승부 80회 (JTBC)", "url": null, "issuer": "JTBC" },
+    { "targetDate": "2013.04.28", "type": "방송", "text": "안과 김순현 선생님, 자녀의 눈 6세 이전에 시력 완성된다! - 닥터의 승부 72회 (JTBC)", "url": null, "issuer": "JTBC" },
+    { "targetDate": "2013.06.09", "type": "방송", "text": "안과 김순현, 눈 번쩍 뜨이는 흰 쌀밥 먹는 방법 공개! - 닥터의 승부 78회 (JTBC)", "url": null, "issuer": "JTBC" },
+    { "targetDate": "2013.05.05", "type": "방송", "text": "안과 김순현, 김치가 눈 건강 해쳐.. - 닥터의 승부 73회 (JTBC)", "url": null, "issuer": "JTBC" },
+    { "targetDate": "2013.05.13", "type": "방송", "text": "노른자가 백내장을 예방한다는 안과 김순현 선생님! - 닥터의 승부 74회 (JTBC)", "url": null, "issuer": "JTBC" }
+  ],
+  "저서": [],
+  "논문": [
+    "박사학위논문: \"Diabetic retinopathy and peripapillary retinal thickness\"",
+    "공동 저자 논문: \"백내장수술 후 발생한 만성 재발 메티실린 내성...\"",
+    "논문: \"수정체초음파유화술이 당뇨망막병증의 진행에 미치는 영향 =\"",
+    "학술대회에서 연구 결과 발표 및 논문 작성 관련 활동"
+  ],
+  "searchHospitalName": "누네안과병원",
+  "searchHospitalAddress": "서울특별시 강남구 테헤란로 408, 대치빌딩 지상9층~지상17층 (대치동)",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H21KR-11000040"
+}

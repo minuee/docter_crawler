@@ -1,0 +1,73 @@
+{
+  "hospital_cid": 117,
+  "bedoc_doctorname": "김용찬",
+  "bedoc_deptname": "정형외과",
+  "bedoc_doctor_site": "http://www.khnmc.or.kr/03/02.jsp",
+  "bedoc_hospitalname": "강동경희대병원",
+  "hospital_tel": "02-440-7114",
+  "hospital_name": "강동경희대학교의대병원",
+  "hospital_addr": "서울특별시 강동구 동남로 892, (상일동)",
+  "aiga_hid": "H11KR-11000004",
+  "hospitalsite": "http://www.khnmc.or.kr",
+  "hospital_site": "http://www.khnmc.or.kr",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "http://www.khnmc.or.kr?deptname=정형외과&doctorName=김용찬",
+  "profileUrl": null,
+  "specialty": "퇴행성 척추질환 및 재수술, 척추변형(후만증, 측만증), 강직성 척추염, 척추 암 및 결핵성 척추염, 골다공증, 척추 종양 및 감염",
+  "학력": [
+    { "date": "1994", "content": "경희대학교 의과대학 학사" },
+    { "date": "2003", "content": "경희대학교 의과대학 석사" },
+    { "date": "2007", "content": "아주대학교 의과대학 박사" }
+  ],
+  "경력": [
+    { "date": null, "content": "現) 강동경희대학교병원 척추센터장" },
+    { "date": null, "content": "現) 경희대학교 의과대학 정형외과 교수" },
+    { "date": null, "content": "現) 강동경희대학교병원 적정관리실장" },
+    { "date": "2022", "content": "現) 강동경희대학교병원 정형외과장" },
+    { "date": null, "content": "전 콜롬비아 의과대학 정형외과 교환교수" },
+    { "date": null, "content": "전 워싱턴대학교 의학대학 정형외과 연구원" }
+  ],
+  "수상": [
+    { "date": "2024", "content": "Korea Spine Surgery Society 학술상" },
+    { "date": "2021", "content": "AOSpine Korea Congress 학술상" },
+    { "date": "2020", "content": "Korea Spine Surgery Society 학술상" },
+    { "date": "2019", "content": "일본척추외과학회 학술상" },
+    { "date": "2018", "content": "AOSpine Korea Congress 학술상" },
+    { "date": "2010", "content": "대한척추외과학회 학술상" }
+  ],
+  "학술": [
+    { "date": "2024.09", "content": "대한요추연구학회 회장 (2년 임기)" },
+    { "date": null, "content": "아시아 태평양 척추학회(APSS) 한국대표 / Executive Director" },
+    { "date": null, "content": "AOSpine 국제척추외과 의사교육 이사 / International Fellowship Director" },
+    { "date": null, "content": "Asian Spine Journal 편집위원" },
+    { "date": null, "content": "Journal of Orthopedic Surgery 편집위원" },
+    { "date": null, "content": "European Spine Journal 편집위원 / 심사위원" },
+    { "date": null, "content": "대한척수손상학회 이사 / 총무이사" },
+    { "date": null, "content": "대한척추외과학회 교육위원회 위원" },
+    { "date": null, "content": "대한정형외과학회의료평가 윤리위원회 위원" },
+    { "date": null, "content": "대한정형외과학회 임상진료지침위원회 위원" },
+    { "date": null, "content": "한국의료분쟁조정중재원 자문위원" }
+  ],
+  "언론": [
+    { "targetDate": "2021.03.26", "type": "방송", "text": "EBS 명의 (물러가라 허리통증, 척추질환)", "url": null, "issuer": "EBS" },
+    { "targetDate": "2022.04.15", "type": "방송", "text": "EBS 명의 (허리통증을 잡아라)", "url": null, "issuer": "EBS" },
+    { "targetDate": "2022.04.15", "type": "방송", "text": "EBS 명의 (허리를 곧추세우다)", "url": null, "issuer": "EBS" },
+    { "targetDate": "2025.03.27", "type": "방송", "text": "EBS 명의 (척추관 협착증) 예정", "url": null, "issuer": "EBS" },
+    { "targetDate": "2025.03.27", "type": "방송", "text": "KBS 아침마당 예정", "url": null, "issuer": "KBS" },
+    { "targetDate": null, "type": "방송", "text": "KBS 생로병사의 비밀 (골다공증 관련)", "url": null, "issuer": "KBS" }
+  ],
+  "저서": [
+    { "date": "2024.09.01", "content": "『척추외과학 제5판』 (공동 집필)" },
+    { "date": "2007.11.01", "content": "『해부학 컬러링 북』" }
+  ],
+  "논문": [
+    "총 120편 이상의 논문 발표"
+  ],
+  "searchHospitalName": "강동경희대학교의대병원",
+  "searchHospitalAddress": "서울특별시 강동구 동남로 892, (상일동)",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H11KR-11000004"
+}

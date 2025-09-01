@@ -1,0 +1,63 @@
+{
+  "hospital_cid": 120,
+  "bedoc_doctorname": "김재민",
+  "bedoc_deptname": "신경외과",
+  "bedoc_doctor_site": "https://guri.hyumc.com/guri/guidance/ambulatoryCare/treatReserve.do",
+  "bedoc_hospitalname": "한양대구리병원",
+  "hospital_tel": "1644-9118",
+  "hospital_name": "한양대학교구리병원",
+  "hospital_addr": "경기도 구리시 경춘로 153, (교문동)",
+  "aiga_hid": "H11KR-31000064",
+  "hospitalsite": "http://guri.hyumc.com/index.asp?",
+  "hospital_site": "http://guri.hyumc.com/index.asp?",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "https://www.smhp.co.kr/medical/doctor_view.php?idx=123&deptname=신경외과&doctorName=김재민",
+  "profileUrl": null,
+  "specialty": "신경외과",
+  "학력": [
+    { "date": null, "content": "한양대학교 의과대학 졸업" },
+    { "date": null, "content": "한양대학교 대학원 석사 및 박사 학위 취득" },
+    { "date": null, "content": "미국 오하이오주 신시내티의대 메디컬센터 신경외과 연수 (뇌혈관질환 수술 및 두개저부 수술해부 전공)" }
+  ],
+  "경력": [
+    { "date": "2023.06.01", "content": "현재 포항성모병원 신경외과 과장" },
+    { "date": null, "content": "한양대학교구리병원 신경외과 교수 역임" },
+    { "date": null, "content": "건국대학교 의과대학 신경외과학 교수 역임" },
+    { "date": "2016.10.04", "content": "한양대학교구리병원 병원장 역임" },
+    { "date": "2013.12.11", "content": "한양대학교구리병원 부원장 역임" },
+    { "date": "2009.10.27", "content": "한양대학교구리병원 교육연구부장 역임" },
+    { "date": "2016.10.04", "content": "대한신경외과학회 회장 역임" },
+    { "date": null, "content": "대한뇌혈관외과학회 회장 역임" },
+    { "date": null, "content": "미국신경외과학회 회원" },
+    { "date": null, "content": "대한신경외과학회 고시 부위원장, 편집위원, 총무 부위원장 역임" },
+    { "date": null, "content": "대한뇌혈관외과학회 기획·홍보위원장 역임" },
+    { "date": null, "content": "대한두개저외과학회 보험 및 총무위원장 역임" },
+    { "date": null, "content": "세계신경외과학회 재정 공동위원장 역임" }
+  ],
+  "수상": [
+    { "date": null, "content": "제9차 국제뇌혈관수술학회 최우수 구연상 'YNS Award (Young Neurosurgeons Award)' 수상" },
+    { "date": "2002", "content": "대한신경외과학회 뇌혈관부문 최우수 논문상 '이헌재 학술상' 수상" },
+    { "date": "2009", "content": "대한신경외과학회 뇌혈관부문 최우수 논문상 '이헌재 학술상' 수상" },
+    { "date": "2007", "content": "세계 3대 인명사전 '마르퀴즈 후즈후' 등재" },
+    { "date": "2007", "content": "ABI '올해의 인물' 선정" }
+  ],
+  "학술": [
+    { "date": "2013.12", "content": "대만두개저외과학회 초청 강연" }
+  ],
+  "언론": [
+    { "targetDate": null, "type": "기사", "text": "다수의 언론 보도를 통해 학회 활동 및 수상 소식이 전해짐", "url": null, "issuer": null }
+  ],
+  "저서": [],
+  "논문": [
+    "총 230여 편의 논문 발표, 이 중 50편은 해외 저명 학술지에 발표 (2016년 기준)",
+    "'두개골 바닥에 붙어 있어 수술이 어려운 저위 내경-후교통동맥부 뇌동맥류 수술시 단순 전추체상상기인대 절제술' (Surgical Neurology, 72권 2호)",
+    "'두개저부에 위치한 뇌동맥류 수술' 관련 논문 (미국신경외과학회지, 2000년)"
+  ],
+  "searchHospitalName": "포항성모병원",
+  "searchHospitalAddress": "경상북도 포항시 남구 대잠동길 17",
+  "isSameHospital": false,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H11KR-31000064"
+}

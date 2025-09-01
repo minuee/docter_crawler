@@ -1,0 +1,36 @@
+{
+  "hospital_cid": 145,
+  "bedoc_doctorname": "김철홍",
+  "bedoc_deptname": "정형외과",
+  "bedoc_doctor_site": "http://www.miraehos.co.kr/03counsel/01_01.php",
+  "bedoc_hospitalname": "부산미래병원",
+  "hospital_tel": "051-523-3200",
+  "hospital_name": "미래병원",
+  "hospital_addr": "부산광역시 동래구 충렬대로 358, (안락동)",
+  "aiga_hid": "H21KR-21000027",
+  "hospitalsite": "http://www.miraehos.co.kr",
+  "hospital_site": "http://www.miraehos.co.kr",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "http://www.miraehos.co.kr?deptname=정형외과&doctorName=김철홍",
+  "profileUrl": null,
+  "specialty": "정형외과, 어깨 통증 치료",
+  "학력": [],
+  "경력": [
+    { "date": null, "content": "부산광역시 동래구 충렬대로 358 (안락동)에 위치한 미래병원 정형외과의 김철홍 의무원장" },
+    { "date": "2020.09.24", "content": "KNN 건강튜브에서 \"어깨 통증 치료, 그 허와 실\" 강의 진행" }
+  ],
+  "수상": [],
+  "학술": [],
+  "언론": [
+    { "targetDate": "2020.09.24", "type": "강의", "text": "KNN 건강튜브에서 \"어깨 통증 치료, 그 허와 실\" 강의 진행", "url": null, "issuer": "KNN 건강튜브" }
+  ],
+  "저서": [],
+  "논문": [],
+  "searchHospitalName": "미래병원",
+  "searchHospitalAddress": "부산광역시 동래구 충렬대로 358, (안락동)",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H21KR-21000027"
+}

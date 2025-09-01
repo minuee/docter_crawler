@@ -1,0 +1,65 @@
+{
+  "hospital_cid": 107,
+  "bedoc_doctorname": "김영우",
+  "bedoc_deptname": "외과",
+  "bedoc_doctor_site": "https://www.ncc.re.kr/main.ncc?uri=ncc_reservation03",
+  "bedoc_hospitalname": "국립암센터",
+  "hospital_tel": "031-920-0114",
+  "hospital_name": "국립암센터",
+  "hospital_addr": "경기도 고양시 일산동구 일산로 323, (마두동)",
+  "aiga_hid": "H11KR-31000013",
+  "hospitalsite": "http://www.ncc.re.kr",
+  "hospital_site": "http://www.ncc.re.kr",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "http://www.ncc.re.kr?deptname=외과&doctorName=김영우",
+  "profileUrl": null,
+  "specialty": "외과, 위암 수술, 로봇 수술, 복강경 수술, 암 유전체 및 이행성 연구",
+  "학력": [
+    { "date": "1982", "content": "서울대학교 의과대학 의학과 학사 (1982년 ~ 1988년)" },
+    { "date": "1990", "content": "서울대학교 대학원 의학과 석사 (1990년 ~ 1992년)" },
+    { "date": "1992", "content": "서울대학교 대학원 의학과 박사 (1992년 ~ 1998년)" }
+  ],
+  "경력": [
+    { "date": null, "content": "국립암센터 연구소장" },
+    { "date": null, "content": "국립암센터 위암센터 전문의" },
+    { "date": null, "content": "국립암센터 국제암대학원대학교 암관리학과 교수" },
+    { "date": "2021.09", "content": "국립암센터 종양외과학연구과 영년제교수" },
+    { "date": "2025.03", "content": "국립암센터 국제암대학원대학교 보건AI학과 영년제교수" },
+    { "date": "2022.12", "content": "암정복추진기획단 단장 (2022년 12월부터 2024년 6월까지)" },
+    { "date": "1988", "content": "서울대학교 병원 인턴 (1988년 ~ 1989년)" },
+    { "date": "1989", "content": "서울대학교 병원 레지던트 (1989년 ~ 1993년)" },
+    { "date": "1997", "content": "이화여자대학교 의과대학 전임강사 및 조교수 (1997년 ~ 2002년)" },
+    { "date": "2002.09", "content": "국립암센터 위암센터 전문의 (2002년 9월 ~ 현재)" },
+    { "date": "2006", "content": "국립암센터 위암연구과 책임연구원 및 위암센터 센터장 (2006년 ~ 2012년)" },
+    { "date": "2008", "content": "국립암센터 암예방검진센터 센터장 (2008년 ~ 2010년 및 2017년 ~ 2020년)" },
+    { "date": "2021.02", "content": "국립암센터 연구소장 (2021년 2월 ~ 2025년 1월)" }
+  ],
+  "수상": [
+    { "date": "2016", "content": "유럽종양외과학회 최우수논문상 (Niall O'Higgins Best Proffered Paper Award)" },
+    { "date": "2018", "content": "함춘동아의학상" },
+    { "date": "2021", "content": "대한내시경복강경외과학회 우수논문상" }
+  ],
+  "학술": [
+    { "date": null, "content": "위암 수술 분야의 전문가로, 개복, 복강경, 로봇 수술을 포함한 위암의 수술적 치료와 임상 연구 수행" },
+    { "date": null, "content": "로봇 및 복강경 의료기기 개발, 암 유전체 및 이행성 연구 참여" },
+    { "date": "2021", "content": "'위 문합부 대망 보강술기' 연구" },
+    { "date": "2016", "content": "'진행성 위암 환자의 D2 림프절 절제수술에서 복강경과 개복 수술간의 비교 연구'" },
+    { "date": "2014", "content": "국제 학술지 'World Journal of Surgery' 편집위원 (2014년부터)" },
+    { "date": "2015", "content": "'World Journal of Gastrointestinal Oncology' 부편집장 역임 (2015년 ~ 2019년)" }
+  ],
+  "언론": [
+    { "targetDate": null, "type": "기사", "text": "연구 성과와 수상 소식 다수 언론 매체 통해 보도", "url": null, "issuer": null }
+  ],
+  "저서": [],
+  "논문": [
+    "'위 문합부 대망 보강술기' (2021년)",
+    "'진행성 위암 환자의 D2 림프절 절제수술에서 복강경과 개복 수술간의 비교 연구' (2016년)"
+  ],
+  "searchHospitalName": "국립암센터",
+  "searchHospitalAddress": "경기도 고양시 일산동구 일산로 323, (마두동)",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H11KR-31000013"
+}

@@ -1,0 +1,54 @@
+{
+  "hospital_cid": 142,
+  "bedoc_doctorname": "김창민",
+  "bedoc_deptname": "소화기내과",
+  "bedoc_doctor_site": "https://www.ncc.re.kr/main.ncc?uri=ncc_reservation03",
+  "bedoc_hospitalname": "국립암센터",
+  "hospital_tel": "031-920-0114",
+  "hospital_name": "국립암센터",
+  "hospital_addr": "경기도 고양시 일산동구 일산로 323, (마두동)",
+  "aiga_hid": "H11KR-31000013",
+  "hospitalsite": "http://www.ncc.re.kr",
+  "hospital_site": "http://www.ncc.re.kr",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "http://www.ncc.re.kr?deptname=소화기내과&doctorName=김창민",
+  "profileUrl": null,
+  "specialty": "소화기내과, 간암, 간질환",
+  "학력": [
+    { "date": "1978", "content": "서울대학교 의과대학 졸업 (1978년)" },
+    { "date": null, "content": "서울대학교 대학원 석사 및 박사 학위 취득" }
+  ],
+  "경력": [
+    { "date": null, "content": "서울대학교병원 인턴, 레지던트" },
+    { "date": null, "content": "원자력병원 소화기내과 과장" },
+    { "date": null, "content": "원자력병원 분자종양학 연구실장, 교육수련부장, 진료부장, 기획실장 역임" },
+    { "date": "2000.08.01", "content": "국립암센터 연구소장 임명" },
+    { "date": null, "content": "국립암센터 종양내과진료부장" },
+    { "date": null, "content": "국립암센터 간담췌암 연구과장" },
+    { "date": null, "content": "국립암센터 간암센터장" }
+  ],
+  "수상": [
+    { "date": "1991", "content": "아세아 태평양 간 연구회 \"Hans Popper Award\" 수상" }
+  ],
+  "학술": [
+    { "date": "2000", "content": "대한간학회 평의원 (2000년 기준)" },
+    { "date": "2000", "content": "대한간암연구회 학술위원 (2000년 기준)" },
+    { "date": "2000", "content": "인간유전체연구사업단 기획위원 (2000년 기준)" },
+    { "date": "2000", "content": "중앙약사심의위원회 유전자치료제 임상윤리평가소분과위원 (2000년 기준)" },
+    { "date": "2008", "content": "대한간암연구회 제10대 회장 취임" },
+    { "date": "2011.12.01", "content": "대한간학회 제10대 이사장 취임" },
+    { "date": "2016", "content": "대한내과학회 춘계학술발표논문집에 \"Senior Lecture: 소화기 : 한국인 간질환의 변천과 대응\" 발표" }
+  ],
+  "언론": [],
+  "저서": [],
+  "논문": [
+    "\"HBx gene of hepatitis B virus induces liver cancer in transgenic mice.\" - Kim CM, Koike K, Saito I, Miyamura T, Jay G Laboratory of Virology, Jerome H. Holland Laboratory, American Red Cross, Rockville, Maryland 20855. Nature 1991 May 23;351(6324):317-20."
+  ],
+  "searchHospitalName": "국립암센터",
+  "searchHospitalAddress": "경기도 고양시 일산동구 일산로 323, (마두동)",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H11KR-31000013"
+}

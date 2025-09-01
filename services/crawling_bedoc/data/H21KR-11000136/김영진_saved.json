@@ -1,0 +1,52 @@
+{
+  "hospital_cid": 109,
+  "bedoc_doctorname": "김영진",
+  "bedoc_deptname": "성형외과",
+  "bedoc_doctor_site": "http://www.scys.co.kr/guide/info.jsp",
+  "bedoc_hospitalname": "신촌연세병원",
+  "hospital_tel": "02-337-7582",
+  "hospital_name": "신촌연세병원",
+  "hospital_addr": "서울특별시 마포구 서강로 110, 지2층~6층 (신수동)",
+  "aiga_hid": "H21KR-11000136",
+  "hospitalsite": "http://www.scys.co.kr",
+  "hospital_site": "http://www.scys.co.kr",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "http://www.scys.co.kr?deptname=성형외과&doctorName=김영진",
+  "profileUrl": null,
+  "specialty": "성형외과, 수부외과, 재건성형, 수지접합",
+  "학력": [
+    { "date": null, "content": "연세대학교 의과대학 졸업" },
+    { "date": null, "content": "연세대학교 성형외과 전문의 수료" },
+    { "date": null, "content": "연세대학교 수부외과 전임의" }
+  ],
+  "경력": [
+    { "date": null, "content": "신촌연세병원 병원장" },
+    { "date": null, "content": "연세대학교 세브란스병원 성형외과 외래교수" },
+    { "date": null, "content": "고려대학교, 가톨릭대학교, 이화여자대학교 외래교수" },
+    { "date": null, "content": "대한성형외과학회 이사" },
+    { "date": null, "content": "대한수부외과학회 이사" },
+    { "date": "1999", "content": "신촌연세병원 개원" }
+  ],
+  "수상": [
+    { "date": "2011", "content": "신촌연세병원 보건복지부 수지접합 전문병원 지정" }
+  ],
+  "학술": [
+    { "date": null, "content": "미세현미경을 이용한 수지접합수술 등 재건성형 분야에 깊이 관여" },
+    { "date": null, "content": "대학 시절 의료 봉사 활동을 통해 재건성형에 관심" }
+  ],
+  "언론": [
+    { "targetDate": "2011", "type": "기사", "text": "연세대학교 관련 언론에서 기부 활동과 의료 철학에 대한 인터뷰 보도", "url": null, "issuer": null },
+    { "targetDate": "2018", "type": "기사", "text": "연세대학교 관련 언론에서 기부 활동과 의료 철학에 대한 인터뷰 보도", "url": null, "issuer": null },
+    { "targetDate": null, "type": "활동", "text": "신촌연세병원의 '사랑의 나눔식' 등 사회 공헌 활동 참여", "url": null, "issuer": null },
+    { "targetDate": null, "type": "후원", "text": "굿네이버스, 플랜코리아, 세이브더칠드런을 통해 해외 아동 300여 명 후원", "url": null, "issuer": null }
+  ],
+  "저서": [],
+  "논문": [],
+  "searchHospitalName": "신촌연세병원",
+  "searchHospitalAddress": "서울특별시 마포구 서강로 110, 지2층~6층 (신수동)",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H21KR-11000136"
+}
