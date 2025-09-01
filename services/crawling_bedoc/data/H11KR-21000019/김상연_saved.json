@@ -1,0 +1,54 @@
+{
+  "hospital_cid": 80,
+  "bedoc_doctorname": "김상연",
+  "bedoc_deptname": "이비인후과",
+  "bedoc_doctor_site": "https://www.paik.ac.kr/haeundae/reservation/intro.asp",
+  "bedoc_hospitalname": "해운대백병원",
+  "hospital_tel": "051-797-0100",
+  "hospital_name": "인제대학교 해운대백병원",
+  "hospital_addr": "부산광역시 해운대구 해운대로 875, (좌동)",
+  "aiga_hid": "H11KR-21000019",
+  "hospitalsite": "http://www.paik.ac.kr/haeundae/",
+  "hospital_site": "http://www.paik.ac.kr/haeundae/",
+  "isExist": true,
+  "isSearchType": "google",
+  "doctorDetailUrl": "https://www.paik.ac.kr/haeundae/?deptname=이비인후과&doctorName=김상연",
+  "profileUrl": "https://www.medifonews.com/news/photo/201902/12805_7145_1852.jpg",
+  "specialty": "이비인후과,갑상선암,두경부종양,로봇수술,음성질환,재건수술,타액선질환,침샘질환",
+  "학력": [
+    { "date": "2000", "content": "부산대학교 의학대학원 박사" },
+    { "date": "1999", "content": "가톨릭대학교 의학 학사 (~2005)" },
+    { "date": "2013", "content": "가톨릭대학교 이비인후과학 의학 박사 (~2020)" }
+  ],
+  "경력": [
+    { "date": "1990", "content": "부산대학교병원 인턴" },
+    { "date": "1994", "content": "부산대학교병원 이비인후과 레지던트" },
+    { "date": "1997", "content": "부산대학교병원 이비인후과 전임의사 (~1999)" },
+    { "date": "1999", "content": "인제대학교 부산백병원 이비인후과학교실 전임강사/조교수/부교수 (~2010)" },
+    { "date": "2003", "content": "미국 클리블랜드 클리닉 재단 면역학과 두경부 연구소 연구원 (~2004)" },
+    { "date": "2006", "content": "호주 바이오닉 이어 연구소" },
+    { "date": "2010", "content": "인제대학교 해운대백병원 이비인후과학교실 책임교수 및 과장 (~2012)" },
+    { "date": "2010", "content": "인제대학교 해운대백병원 진료협력센터장 (~2014.02)" },
+    { "date": "2014", "content": "인제대학교 해운대백병원 교육수련부장 (~2016.02)" },
+    { "date": "2016.03", "content": "인제대학교 해운대백병원 부원장 겸 진료부장 (~2020.02)" },
+    { "date": null, "content": "현재 인제대학교 의과대학 이비인후과학교실 교수" },
+    { "date": "2012", "content": "현재 인제대학교 이비인후과학교실 주임교수 및 해운대백병원 이비인후과 과장" }
+  ],
+  "수상": [
+    { "date": "2019", "content": "과학기술정보통신부·한국연구재단이 지원하는 2019년도 하반기 개인기초연구사업(생애 첫 연구) 선정" }
+  ],
+  "학술": [
+    { "date": null, "content": "주요 진료 분야: 갑상선암, 두경부종양, 로봇수술, 음성질환, 재건수술, 타액선질환, 침샘질환" },
+    { "date": null, "content": "연구 주제: '탈세포화 갑상선 지지대를 통한 갑상선 재생모델 개발'" }
+  ],
+  "언론": [
+    { "date": "2019", "type": "언론", "text": "'생애 첫 연구사업' 선정과 관련하여 메디포뉴스에 보도" }
+  ],
+  "저서": [],
+  "논문": [],
+  "searchHospitalName": "인제대학교 해운대백병원",
+  "searchHospitalAddress": "부산광역시 해운대구 해운대로 875",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H11KR-21000019"
+}

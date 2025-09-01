@@ -520,7 +520,7 @@ router.get('/save', async function(req, res) {
 
           const saveResult = await crawlingCtrl.saveDoctorDataToDb(doctorData);
           if (saveResult.success) {
-            const saveBedocResult = await crawlingCtrl.saveDoctorDataToBedocTable(doctorData);
+            const saveBedocResult = await crawlingCtrl.saveDoctorDataToBedocTable(doctorData,hospitalID);
             console.log(`saveResult.success: ${saveResult.success}`)
             saved_count++;
             

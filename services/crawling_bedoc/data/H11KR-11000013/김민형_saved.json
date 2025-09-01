@@ -1,0 +1,58 @@
+{
+  "hospital_cid": 74,
+  "bedoc_doctorname": "김민형",
+  "bedoc_deptname": "산부인과",
+  "bedoc_doctor_site": "https://www.mizmedi.com/wweb/medical/out",
+  "bedoc_hospitalname": "강서미즈메디병원",
+  "hospital_tel": "02-2007-1000",
+  "hospital_name": "미즈메디병원",
+  "hospital_addr": "서울특별시 강서구 강서로 295, (내발산동)",
+  "aiga_hid": "H11KR-11000013",
+  "hospitalsite": "https://www.mizmedi.com/",
+  "hospital_site": "https://www.mizmedi.com/",
+  "isExist": true,
+  "isSearchType": "google",
+  "doctorDetailUrl": "https://www.mizmedi.com/?deptname=산부인과&doctorName=김민형",
+  "profileUrl": null,
+  "specialty": "산부인과,고령 산모,자궁근종,임신,출산",
+  "학력": [
+    { "date": null, "content": "성균관대학교 의과대학원 박사 학위" },
+    { "date": null, "content": "전남대학교 의과대학원 석사 학위" }
+  ],
+  "경력": [
+    { "date": null, "content": "미즈메디병원 산과 분과장 (현재)" },
+    { "date": null, "content": "제일병원 산부인과 주산기과 전임의 및 전공의" },
+    { "date": null, "content": "단국대학교 의과대학 부교수" },
+    { "date": null, "content": "단국대학교 의과대학 제일병원 산부인과 전문의" }
+  ],
+  "수상": [
+    { "date": "2015", "content": "대한산부인과학술지 모체태아의학 최우수 논문상" },
+    { "date": "2014", "content": "제100차 대한산부인과학술대회 최우수 구연상" }
+  ],
+  "학술": [
+    { "date": null, "content": "대한의학유전학회 임상유전학인증의" },
+    { "date": null, "content": "대한모체태아의학회 국제협력위원장 및 임신성당뇨연구회 간사" },
+    { "date": null, "content": "대한 의학유전학회 학술위원" },
+    { "date": null, "content": "대한 모자보건학회 학술위원" },
+    { "date": null, "content": "대한 산부인과학회 정회원" },
+    { "date": "2019", "content": "제3회 이안도날드 국제 초음파컨퍼런스 포스터 발표" },
+    { "date": "2018", "content": "International Joint Conference on Genetics & Medicine 초청 연자" },
+    { "date": null, "content": "제19차 신생아 소생술 워크숍 수료" },
+    { "date": "2021", "content": "태아평가·관리위원회 심포지엄 이수" }
+  ],
+  "언론": [
+    { "date": null, "type": "언론", "text": "고령 산모 및 자궁근종 관련 중앙일보 기사 인용" },
+    { "date": null, "type": "언론", "text": "미즈메디병원의 'SAFE BIRTH 시스템' 구축 관련 후생신보 기사 언급" }
+  ],
+  "저서": [
+    { "date": "2016.02", "type": "공저", "text": "태아의 식생활 - 건강한 아기 탄생을 위한 최고의 식단" }
+  ],
+  "논문": [
+    "Placental microRNAs as potential biomarkers for noninvasive detection of trisomy 21 (제100차 대한산부인과학회 학술대회, 2014)"
+  ],
+  "searchHospitalName": "미즈메디병원",
+  "searchHospitalAddress": "서울특별시 강서구 강서로 295 (내발산동)",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H11KR-11000013"
+}

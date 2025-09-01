@@ -1,0 +1,41 @@
+{
+  "hospital_cid": 65,
+  "bedoc_doctorname": "김동호",
+  "bedoc_deptname": "소아청소년과",
+  "bedoc_doctor_site": "https://www.kcch.re.kr/reserve/reserve.do",
+  "bedoc_hospitalname": "원자력병원",
+  "hospital_tel": "02-970-2114",
+  "hospital_name": "한국원자력의학원원자력병원",
+  "hospital_addr": "서울특별시 노원구 노원로 75, 한국원자력의학원 (공릉동)",
+  "aiga_hid": "H11KR-11000039",
+  "hospitalsite": "http://www.kcch.re.kr",
+  "hospital_site": "http://www.kcch.re.kr",
+  "isExist": true,
+  "isSearchType": "google",
+  "doctorDetailUrl": "http://www.kcch.re.kr?deptname=소아청소년과&doctorName=김동호",
+  "profileUrl": "https://www.docdocdoc.co.kr/news/photo/202403/3015820_3017737_5734.jpg",
+  "specialty": "소아 감염 질환,소아 예방접종,여행자 의학",
+  "학력": [
+    { "date": null, "content": "서울대학교 의과대학 졸업" }
+  ],
+  "경력": [
+    { "date": "2024.04", "content": "제10대 한국원자력의학원 원자력병원장 (현재)" },
+    { "date": null, "content": "원자력병원 소아청소년과장 및 감염관리팀장 역임" },
+    { "date": "2003", "content": "원자력병원 소아청소년과 근무 시작" },
+    { "date": null, "content": "원자력병원 진료부장, 방사선의학임상연구부장 등 역임" }
+  ],
+  "수상": [],
+  "학술": [
+    { "date": null, "content": "과학기술정보통신부 주관 '약물 재창출 연구' 사업 참여" }
+  ],
+  "언론": [
+    { "date": null, "type": "인터뷰", "text": "방사선의학 웹진 및 유튜브 채널 '암은 원자력병원입니다' 등에서 소아 감염 질환과 감염병 대응에 대해 인터뷰" }
+  ],
+  "저서": [],
+  "논문": [],
+  "searchHospitalName": "한국원자력의학원원자력병원",
+  "searchHospitalAddress": "서울특별시 노원구 노원로 75, 한국원자력의학원 (공릉동)",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H11KR-11000039"
+}

@@ -57,16 +57,17 @@ function processGoogleFallback() {
         // - `doctorDetailUrl`: The specific detail page URL for the doctor. This field must NEVER be null.
         //   - Prioritize finding a `doctorDetailUrl` from Google search results that shares the same domain as `doctorData.hospital_site`.
         //   - If no such specific URL is found, or if the found URL is just the main hospital site (e.g., ending in .kr, .com, .kr/, .com/), use `doctorData.hospital_site` as the base.
-        //   - Always append `?deptname=${doctorData.bedoc_deptname}&doctorName=${doctorData.bedoc_doctorname}` to the chosen `doctorDetailUrl`.
+        //   - CRITICAL MANDATORY RULE: Always append the query string `?deptname=${doctorData.bedoc_deptname}&doctorName=${doctorData.bedoc_doctorname}` to the chosen `doctorDetailUrl`. The final URL must always include these parameters.
         // - `profileUrl`: The URL of a profile picture.
-        // - `specialty`: The doctor's specialty.
-        // - `학력` (education): An array of objects, each with `date` (YYYY.MM or null) and `content`.
-        // - `경력` (experience): An array of objects, each with `date` (YYYY.MM or null) and `content`.
-        // - `수상` (awards): An array of objects, each with `date` (YYYY.MM or null) and `content`.
-        // - `학술` (academic activities): An array of objects, each with `date` (YYYY.MM or null) and `content`.
-        // - `언론` (media coverage): An array of objects, each with `targetDate`, `type`, `text`, `url`, `issuer`.
-        // - `저서` (books/writings): An array of objects, each with `targetDate`, `type`, `text`, `url`, `issuer`.
-        // - `논문` (theses/papers): An array of strings.
+        // - `specialty`: The doctor's specialty. IMPORTANT: This must be a single string with values separated by commas (e.g., "Cardiology,Internal Medicine"). It must NOT be a JSON array.
+        // - `학력`: An array of objects, each with `date` (YYYY.MM or null) and `content`.
+        // - `경력`: An array of objects, each with `date` (YYYY.MM or null) and `content`.
+        // - `수상`: An array of objects, each with `date` (YYYY.MM or null) and `content`.
+        // - `학술`: An array of objects, each with `date` (YYYY.MM or null) and `content`.
+        // - `언론`: An array of objects, each with `targetDate`, `type`, `text`, `url`, `issuer`.
+        // - `저서`: An array of objects, each with `targetDate`, `type`, `text`, `url`, `issuer`.
+        // - `논문`: An array of strings.
+        // IMPORTANT: All the above fields (`학력` through `논문`) must use their Korean names as JSON keys.
         // - `searchHospitalName`: The name of the hospital found in the Google search results.
         // - `searchHospitalAddress`: The address of the hospital found in the Google search results.
         // - `isSameHospital`: Boolean, true if `searchHospitalName` is similar to `doctorData.hospital_name`, false otherwise.

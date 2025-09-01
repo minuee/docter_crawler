@@ -1,0 +1,54 @@
+{
+  "hospital_cid": 64,
+  "bedoc_doctorname": "김동준",
+  "bedoc_deptname": "정형외과",
+  "bedoc_doctor_site": "http://seoul.eumc.ac.kr/main.do",
+  "bedoc_hospitalname": "이대서울병원",
+  "hospital_tel": "1522-7000",
+  "hospital_name": "이화여자대학교의과대학부속서울병원",
+  "hospital_addr": "서울특별시 강서구 공항대로 260, 이화의대부속서울병원 (마곡동)",
+  "aiga_hid": "H01KR-11000015",
+  "hospitalsite": "https://seoul.eumc.ac.kr/main.do",
+  "hospital_site": "https://seoul.eumc.ac.kr/main.do",
+  "isExist": true,
+  "isSearchType": "google",
+  "doctorDetailUrl": "https://seoul.eumc.ac.kr/main.do?deptname=정형외과&doctorName=김동준",
+  "profileUrl": null,
+  "specialty": "척추외과학",
+  "학력": [
+    { "date": "1998.02", "content": "연세대학교 의과대학 의학박사" },
+    { "date": "1988.02", "content": "연세대학교 대학원 의학석사" },
+    { "date": "1985.02", "content": "연세대학교 의과대학 의학사" }
+  ],
+  "경력": [
+    { "date": "1993.09", "content": "이화여자대학교 의과대학 정형외과 교수 (현재)" },
+    { "date": "2012", "content": "미국 Cedars-Sinai Medical Center 척추 분야 연수" },
+    { "date": "2009", "content": "이화여자대학교 목동병원 의무부장" },
+    { "date": "2000", "content": "미국 피츠버그대학 병원 연구 전임의" },
+    { "date": "1995.09", "content": "미국 위스콘신 의과대학 정형외과 척추 전공 펠로우 (~1996.08)" },
+    { "date": "1990.02", "content": "성애병원 과장 (~1993.07)" },
+    { "date": "1986.03", "content": "연세대학교 신촌세브란스병원 정형외과 전공의 (~1990.02)" },
+    { "date": "1985.02", "content": "연세대학교 신촌세브란스병원 수련의 (~1986.01)" }
+  ],
+  "수상": [
+    { "date": null, "content": "유럽척추학회 우수 포스터상" },
+    { "date": null, "content": "대한척추외과학회 우수논문상 (임상, 기초)" }
+  ],
+  "학술": [
+    { "date": null, "content": "대한의학회 보건정책위원" },
+    { "date": null, "content": "대한정형외과학회 홍보위원회 간사" },
+    { "date": null, "content": "대한척추외과학회 학술위원" },
+    { "date": null, "content": "북미척추학회 회원" },
+    { "date": null, "content": "대한척추외과학회 회원" },
+    { "date": null, "content": "대한정형외과학회 회원" },
+    { "date": null, "content": "대한의사협회 회원" }
+  ],
+  "언론": [],
+  "저서": [],
+  "논문": [],
+  "searchHospitalName": "이화여자대학교 의과대학 부속 서울병원",
+  "searchHospitalAddress": "서울특별시 강서구 공항대로 260",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H01KR-11000015"
+}

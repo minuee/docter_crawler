@@ -1,0 +1,48 @@
+{
+  "hospital_cid": 68,
+  "bedoc_doctorname": "김리석",
+  "bedoc_deptname": "이비인후과",
+  "bedoc_doctor_site": "http://www.ddh.co.kr/03reserve/01.php",
+  "bedoc_hospitalname": "대동병원",
+  "hospital_tel": "051-554-1233",
+  "hospital_name": "대동병원",
+  "hospital_addr": "부산광역시 동래구 충렬대로 187, (명륜동)",
+  "aiga_hid": "H11KR-21000002",
+  "hospitalsite": "http://www.ddh.co.kr/",
+  "hospital_site": "http://www.ddh.co.kr/",
+  "isExist": true,
+  "isSearchType": "google",
+  "doctorDetailUrl": "http://www.ddh.co.kr/?deptname=이비인후과&doctorName=김리석",
+  "profileUrl": "https://www.bosa.co.kr/news/photo/200903/148690_45296_5655.jpg",
+  "specialty": "만성 중이염,난청,인공와우이식,각종 귀 질환",
+  "학력": [
+    { "date": null, "content": "서울대학교 대학원 의학박사" },
+    { "date": null, "content": "서울대학교 의과대학 졸업" }
+  ],
+  "경력": [
+    { "date": null, "content": "대동병원 이비인후과 과장 (현직)" },
+    { "date": null, "content": "동아대학교 의과대학 이비인후과 교수" },
+    { "date": null, "content": "서울대학교병원 이비인후과 전임의" },
+    { "date": null, "content": "서울대학교병원 이비인후과 수련의" },
+    { "date": "1986", "content": "일본 Teikyo 대학 이비인후과 연수 (~1987)" },
+    { "date": "1989", "content": "미국 The Ear Foundation 및 Vanderbilt 연수" }
+  ],
+  "수상": [],
+  "학술": [
+    { "date": "2007", "content": "대한청각학회 회장 (~2009)" },
+    { "date": "1999", "content": "국제청각유발반응학회(IERASG) 이사 (현재)" },
+    { "date": "2003", "content": "아태 인공와우이식학회(APSCI) 이사 (현재)" },
+    { "date": null, "content": "대한이비인후과학회 평의원" }
+  ],
+  "언론": [
+    { "date": "2018.02.28", "type": "방송", "text": "MBC '건강정보, 박기홍입니다': 편도 관련" },
+    { "date": "2009.03.12", "type": "언론", "text": "의학신문: 동아대학교의료원 재직 당시 '인공와우 이식수술 500예 기념식' 개최" }
+  ],
+  "저서": [],
+  "논문": [],
+  "searchHospitalName": "대동병원",
+  "searchHospitalAddress": "부산광역시 동래구 충렬대로 187 (명륜동)",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H11KR-21000002"
+}

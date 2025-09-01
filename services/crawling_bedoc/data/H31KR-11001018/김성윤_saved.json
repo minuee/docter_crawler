@@ -1,0 +1,51 @@
+{
+  "hospital_cid": 91,
+  "bedoc_doctorname": "김성윤",
+  "bedoc_deptname": "류마티스내과",
+  "bedoc_doctor_site": "http://www.kimrm.com/rheu/sub_re1.asp",
+  "bedoc_hospitalname": "김성윤내과의원",
+  "hospital_tel": "517-9293",
+  "hospital_name": "김성윤내과의원",
+  "hospital_addr": "서울특별시 강남구 논현로176길 14, 3층 (신사동)",
+  "aiga_hid": "H31KR-11001018",
+  "hospitalsite": "http://www.kimrm.com",
+  "hospital_site": "http://www.kimrm.com",
+  "isExist": true,
+  "isSearchType": "google",
+  "doctorDetailUrl": "http://www.kimrm.com?deptname=류마티스내과&doctorName=김성윤",
+  "profileUrl": null,
+  "specialty": "류마티스내과,내과,류마티스,알레르기성 비염 면역치료,축농증 수술,비염 수술",
+  "학력": [
+    { "date": "1975", "content": "한양대학교 의과대학 졸업" },
+    { "date": "1980", "content": "내과 전문의 취득" },
+    { "date": "1982", "content": "미국 시카고 러쉬 의과대학(Rush Medical School) 면역학 연수 (~1986)" },
+    { "date": null, "content": "미국 뉴욕 마운트 시나이 의과대학(Mount Sinai School of Medicine) 관절 질환 정형외과 연구소 류마티스내과 펠로우" },
+    { "date": null, "content": "미국 테네시 의과대학(University of Tennessee) 연구원" }
+  ],
+  "경력": [
+    { "date": "1981", "content": "한양대학교 의과대학 교수" },
+    { "date": "1989", "content": "국내 최초 류마티스내과 개설" },
+    { "date": "1989.06", "content": "국내 유일의 류마티스센터 설립" },
+    { "date": "1997", "content": "한양대학교 류마티스병원 초대 병원장 역임" },
+    { "date": null, "content": "대한류마티스내과의사회 고문 (현재)" }
+  ],
+  "수상": [],
+  "학술": [
+    { "date": null, "content": "미국 뉴욕대학교 의과대학 및 테네시주 의과학센터에서 류마티즘의 면역요법과 연골 분야 치료 연구" }
+  ],
+  "언론": [
+    { "date": "1993", "type": "언론", "text": "중앙일보에서 환자 대기 문제 및 국내 류마티즘 치료의 어려움에 대해 인터뷰" },
+    { "date": "1999", "type": "언론", "text": "중앙일보에서 한양대학교 류마티스병원 초대 병원장으로서 인터뷰" },
+    { "date": "1999", "type": "언론", "text": "조선일보에서 류마티스 관절염에 대해 인터뷰" },
+    { "date": "2013", "type": "언론", "text": "YTN에서 대한민국 류마티즘의 권위자로 소개" }
+  ],
+  "저서": [],
+  "논문": [
+    "류마티스관절염 활액 단핵구에서 microRNA와 mRNA의 발현분석 (대한류마티스학회지, 2011)"
+  ],
+  "searchHospitalName": "김성윤내과의원",
+  "searchHospitalAddress": "서울특별시 강남구 논현로176길 14, 3층 (신사동)",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H31KR-11001018"
+}

@@ -1,0 +1,62 @@
+{
+  "hospital_cid": 85,
+  "bedoc_doctorname": "김석화",
+  "bedoc_deptname": "성형외과",
+  "bedoc_doctor_site": "http://bundang.chamc.co.kr/Reservation/Reserve_1.aspx?menuCode=333",
+  "bedoc_hospitalname": "분당차병원",
+  "hospital_tel": "031-780-5000",
+  "hospital_name": "차의과학대학교분당차병원",
+  "hospital_addr": "경기도 성남시 분당구 야탑로 59, (야탑동)",
+  "aiga_hid": "H11KR-31000059",
+  "hospitalsite": "http://bundang.chamc.co.kr",
+  "hospital_site": "http://bundang.chamc.co.kr",
+  "isExist": true,
+  "isSearchType": "google",
+  "doctorDetailUrl": "http://bundang.chamc.co.kr?deptname=성형외과&doctorName=김석화",
+  "profileUrl": null,
+  "specialty": "선천적 얼굴 기형(구순구개열, 반안면왜소증, 두개안면기형 등),구개열 미세현미경 수술,소아청소년 및 성인 입술/코 변형 2차 수술 및 재수술,접힌 귀 클리닉",
+  "학력": [
+    { "date": "1981", "content": "서울대학교 의과대학원 박사 (~1989)" },
+    { "date": "1979", "content": "서울대학교 의과대학원 석사 (~1981)" },
+    { "date": "1974", "content": "서울대학교 의과대학 의학과 (~1978)" }
+  ],
+  "경력": [
+    { "date": "2020.09", "content": "現 차의과학대학교 분당차병원 성형외과 교수" },
+    { "date": "2020.09", "content": "現 차의과학대학교 분당차병원 차 심미의학연구원장" },
+    { "date": "2018.06", "content": "서울대학교 의료빅데이터연구센터장 (~2020.08)" },
+    { "date": "2014.06", "content": "서울대병원 어린이병원장 (~2016.06)" },
+    { "date": "2008.07", "content": "서울대학교 의과대학 성형외과학교실 주임교수 (~2014.07)" },
+    { "date": "2008.07", "content": "서울대학교병원 성형외과장 (~2014.07)" },
+    { "date": null, "content": "서울대학교 의과대학 교수, 부교수, 조교수 역임" },
+    { "date": "1990.07", "content": "IRPS, New York Medical College, USA (~1991.06)" }
+  ],
+  "수상": [
+    { "date": "2017", "content": "근정포장 수상" }
+  ],
+  "학술": [
+    { "date": "2023.03", "content": "한국과학기술단체총연합회 부회장 (현재)" },
+    { "date": "2021.01", "content": "대한의료정보학회 회장 (~2021.12)" },
+    { "date": "2010.01", "content": "한국생체재료학회 회장 역임 (~2010.12)" },
+    { "date": "2009.11", "content": "대한두개안면성형외과학회 회장 역임 (~2011.11)" },
+    { "date": "2008.11", "content": "환자안전연구회 회장 역임 (~2014.11)" },
+    { "date": "2008.11", "content": "대한성형외과학회 이사장 역임 (~2010.11)" }
+  ],
+  "언론": [
+    { "date": "2014", "type": "방송", "text": "EBS 명의 [재건성형] 출연" },
+    { "date": "2022.11.03", "type": "언론", "text": "코메디닷컴: 성형외과 김석화 교수, \"손흥민, 보호대 써도 운동 시작은 3~4주 뒤\"" },
+    { "date": "2022.02.07", "type": "언론", "text": "세계일보: \"소아 기형 외면하는 병원들… 국가가 힘 보태야\”_성형외과 김석화 교수" },
+    { "date": "2021.02.05", "type": "언론", "text": "소아 성형의 권위자, 김석화 교수가 전하는 구순구개열 치료법" },
+    { "date": "2020.11.25", "type": "언론", "text": "분당차여성병원, 국내 최초 구순구개열 다학제 진료 시작" },
+    { "date": "2020.11.24", "type": "언론", "text": "조선일보: 구순구개열 치료 국내 최초 다학제 진료 시작" },
+    { "date": "2020.09", "type": "언론", "text": "선천적 얼굴기형, 소아성형 세계적 권위자 김석화 교수 9월 14일(월) 진료 시작" }
+  ],
+  "저서": [],
+  "논문": [
+    "지방 이식에 있어서 히알루로니다아제의 효과에 대한 연구 (The Journal of craniofacial surgery)"
+  ],
+  "searchHospitalName": "차의과학대학교분당차병원",
+  "searchHospitalAddress": "경기도 성남시 분당구 야탑로 59 (야탑동)",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H11KR-31000059"
+}

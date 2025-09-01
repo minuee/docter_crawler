@@ -1,0 +1,51 @@
+{
+  "hospital_cid": 62,
+  "bedoc_doctorname": "김동욱",
+  "bedoc_deptname": "소아청소년과",
+  "bedoc_doctor_site": "https://www.paik.ac.kr/ilsan/reservation/intro.asp",
+  "bedoc_hospitalname": "일산백병원",
+  "hospital_tel": "031-910-7114",
+  "hospital_name": "인제대학교일산백병원",
+  "hospital_addr": "경기도 고양시 일산서구 주화로 170, (대화동)",
+  "aiga_hid": "H11KR-31000056",
+  "hospitalsite": "http://www.paik.ac.kr/ilsan/",
+  "hospital_site": "http://www.paik.ac.kr/ilsan/",
+  "isExist": true,
+  "isSearchType": "google",
+  "doctorDetailUrl": "http://www.paik.ac.kr/ilsan/?deptname=소아청소년과&doctorName=김동욱",
+  "profileUrl": "https://www.medifonews.com/news/photo/201404/113045_1.jpg",
+  "specialty": "소아신경과,소아뇌전증(간질),케톤생성식이요법",
+  "학력": [
+    { "date": null, "content": "서울대학교 의과대학 졸업" },
+    { "date": null, "content": "서울대학교 대학원 의학 석사 및 박사" }
+  ],
+  "경력": [
+    { "date": null, "content": "현직: 인제대학교 일산백병원 소아청소년과 교수" },
+    { "date": "2014", "content": "대한소아신경학회 회장 (~2016)" },
+    { "date": null, "content": "미국 UW 소아신경과 방문교수" },
+    { "date": null, "content": "대한소아신경학회 국제학회대표 및 부회장 역임" },
+    { "date": null, "content": "아시아대양주소아신경학회 운영위원 역임" }
+  ],
+  "수상": [],
+  "학술": [
+    { "date": null, "content": "아시아대양주간질기구(Asian-Oceanian Commission on Epileptology) 정회원" },
+    { "date": null, "content": "국제간질퇴치연맹(International League Against Epilepsy) 정회원" }
+  ],
+  "언론": [],
+  "저서": [
+    { "date": null, "type": "저서", "text": "도대체 건강이란 무엇인가" },
+    { "date": null, "type": "저서", "text": "케톤생성식이요법" },
+    { "date": "2017", "type": "저서", "text": "첫 시집 어머니" },
+    { "date": null, "type": "공저", "text": "홍창의 소아과학" },
+    { "date": null, "type": "공저", "text": "임상소아신경학" },
+    { "date": null, "type": "공저", "text": "임상뇌전증학" }
+  ],
+  "논문": [
+    "2008년 케톤생성식이요법이 뇌 신경세포의 재생량을 증가시킨다는 연구 결과를 국제 학술지에 발표"
+  ],
+  "searchHospitalName": "인제대학교 일산백병원",
+  "searchHospitalAddress": "경기도 고양시 일산서구 주화로 170 (대화동)",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H11KR-31000056"
+}

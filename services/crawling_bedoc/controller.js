@@ -340,7 +340,7 @@ module.exports = {
 
   },
 
-  saveDoctorDataToBedocTable: async (doctorData) => {
+  saveDoctorDataToBedocTable: async (doctorData,hospitalID) => {
 
     const hospital_cid = doctorData?.hospital_cid;
     const isExist = doctorData.isExist || '';
@@ -352,6 +352,7 @@ module.exports = {
     const searchHospitalName = doctorData.searchHospitalName || '';
     const isSameHospital = doctorData.isSameHospital || '';
     const isAttend = doctorData.isAttend || '';
+    const foundHospitalHID = doctorData.found_hospital_aiga_hid ? doctorData.found_hospital_aiga_hid : hospitalID;
     mybatisMapper.createMapper([`${global.appRoot}/services/crawling_bedoc/controler.xml`]);
     try {
       
@@ -367,7 +368,8 @@ module.exports = {
         specialty,
         searchHospitalName,
         isSameHospital : isSameHospital ? 1 : 0,
-        isAttend : isAttend ? 1 : 0
+        isAttend : isAttend ? 1 : 0,
+        foundHospitalHID
       }; 
       const format = { language: "sql", indent: "  " };
       const query = mybatisMapper.getStatement(

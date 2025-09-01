@@ -11,7 +11,7 @@
         WHERE
             1=1 and is_crawling_done = false and  hospital_site != '' and  hospital_site is not null 
         ORDER BY a.hospital_cid ASC
-        LIMIT 20 OFFSET 0
+        LIMIT 30 OFFSET 0
     </select>
 
     <update id="hospital_site_is_null">
@@ -33,7 +33,8 @@
             is_site_ok = #{isExist},
             is_crawling_done = 1,
             site_check_date = NOW(),
-            crawling_done_cdate = NOW()
+            crawling_done_cdate = NOW(),
+            found_hospital_hid = #{foundHospitalHID}
         WHERE hospital_cid = #{hospital_cid}
     </update>
     
