@@ -1,0 +1,44 @@
+{
+  "hospital_cid": 394,
+  "bedoc_doctorname": "이무용",
+  "bedoc_deptname": "심장내과",
+  "bedoc_doctor_site": "http://www.dumc.or.kr/medical/reservation/rsvmain.jsp?myurl=/medical/reservation/rsvmain.jsp&nowPageInfo=ILSH&nowMenuId=00000006",
+  "bedoc_hospitalname": "동국대일산병원",
+  "hospital_tel": "031-1577-7000",
+  "hospital_name": "동국대학교일산불교병원",
+  "hospital_addr": "경기도 고양시 일산동구 동국로 27, (식사동, 동국대학교일산병원)",
+  "aiga_hid": "H11KR-31000020",
+  "hospitalsite": "http://www.dumc.or.kr/isom",
+  "hospital_site": "http://www.dumc.or.kr/isom",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "http://www.dumc.or.kr/medical/reservation/rsvmain.jsp?myurl=/medical/reservation/rsvmain.jsp&nowPageInfo=ILSH&nowMenuId=00000006&deptname=심장내과&doctorName=이무용",
+  "profileUrl": null,
+  "specialty": "협심증, 심근경색증, 동맥경화, 고혈압, 고지혈증, 심부전",
+  "학력": [
+    { "date": null, "content": "서울대학교 의과대학 졸업" }
+  ],
+  "경력": [
+    { "date": null, "content": "국립의료원 전공의" },
+    { "date": null, "content": "서울대학교병원 전임의 (순환기내과)" },
+    { "date": null, "content": "독일 하이델베르크 의과대학병원" }
+  ],
+  "수상": [],
+  "학술": [
+    { "date": null, "content": "대한내과학회" },
+    { "date": null, "content": "대한심장학회" },
+    { "date": null, "content": "대한고혈압학회" }
+  ],
+  "언론": [
+    { "targetDate": null, "type": "유튜브", "text": "동국대학교 일산병원 심장내과의 명의로 언급", "url": null, "issuer": null },
+    { "targetDate": "2018", "type": "기사", "text": "저녁 식사 자리에 참석", "url": null, "issuer": null }
+  ],
+  "저서": [],
+  "논문": [],
+  "searchHospitalName": "동국대학교일산불교병원",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H11KR-31000020",
+  "searchHospitalAddress": "경기도 고양시 일산동구 동국로 27, (식사동, 동국대학교일산병원)"
+}

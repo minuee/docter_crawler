@@ -1,0 +1,50 @@
+{
+  "hospital_cid": 399,
+  "bedoc_doctorname": "이범석",
+  "bedoc_deptname": "재활의학과",
+  "bedoc_doctor_site": "http://www.ish.or.kr/reservation/reservation_info",
+  "bedoc_hospitalname": "국제성모병원",
+  "hospital_tel": "032-1600-8291",
+  "hospital_name": "가톨릭관동대학교 국제성모병원",
+  "hospital_addr": "인천광역시 서구 심곡로100번길 25-0, 인천국제성모병원",
+  "aiga_hid": "H11KR-22000003",
+  "hospitalsite": "http://www.ish.or.kr",
+  "hospital_site": "http://www.ish.or.kr",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "http://www.ish.or.kr/reservation/reservation_info?deptname=재활의학과&doctorName=이범석",
+  "profileUrl": null,
+  "specialty": "재활의학과, 척수손상재활, 척수장애인 재활, 장애인 성재활, 방광종합검진",
+  "학력": [
+    { "date": null, "content": "연세대학교 의과대학 졸업" },
+    { "date": null, "content": "연세대학교 보건대학원 보건정책 및 관리 관련 석사학위 취득" }
+  ],
+  "경력": [
+    { "date": null, "content": "국립재활원에서 26년간 근무" },
+    { "date": null, "content": "국립재활원 척수손상재활과장 역임" },
+    { "date": null, "content": "국립재활원장 역임" },
+    { "date": "2022.04", "content": "가톨릭관동대학교 국제성모병원 재활의학과에서 진료 시작" }
+  ],
+  "수상": [],
+  "학술": [
+    { "date": "2024.03.14", "content": "대한척수학회 회장 취임 (임기 2025년 2월까지)" },
+    { "date": null, "content": "대한재활의학회 이사" },
+    { "date": null, "content": "대한척수학회 부회장 역임" },
+    { "date": null, "content": "대한성학회 부회장" },
+    { "date": null, "content": "아시아척수학회(ASCoN) 한국대표" },
+    { "date": null, "content": "척수환자를 위한 가정에서의 건강관리 온라인 건강강좌 진행" },
+    { "date": null, "content": "척수 환자들을 위한 모임 주도 (환자들의 심리적 지지와 사회 복귀 도움)" }
+  ],
+  "언론": [
+    { "targetDate": null, "type": "방송", "text": "국립재활원장 재직 시 \"박마루의 뉴공감세상\" 등 여러 매체 출연", "url": null, "issuer": null },
+    { "targetDate": null, "type": "기사", "text": "척수 환자 치료 경험과 성 재활 프로그램에 대한 인터뷰 (청년의사 등 언론 보도)", "url": null, "issuer": null }
+  ],
+  "저서": [],
+  "논문": [],
+  "searchHospitalName": "가톨릭관동대학교 국제성모병원",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H11KR-22000003",
+  "searchHospitalAddress": "인천광역시 서구 심곡로100번길 25-0, 인천국제성모병원"
+}

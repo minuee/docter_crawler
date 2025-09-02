@@ -1,0 +1,64 @@
+{
+  "hospital_cid": 363,
+  "bedoc_doctorname": "유진홍",
+  "bedoc_deptname": "감염내과",
+  "bedoc_doctor_site": "https://www.cmcbucheon.or.kr/page/appointment",
+  "bedoc_hospitalname": "부천성모병원",
+  "hospital_tel": "032-1577-0675",
+  "hospital_name": "가톨릭대학교부천성모병원",
+  "hospital_addr": "경기도 부천시 원미구 소사로 327, 가톨릭대학교 부천성모병원 (소사동)",
+  "aiga_hid": "H11KR-31000002",
+  "hospitalsite": "http://www.cmcbucheon.or.kr",
+  "hospital_site": "http://www.cmcbucheon.or.kr",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "https://www.cmcbucheon.or.kr/page/appointment?deptname=감염내과&doctorName=유진홍",
+  "profileUrl": "https://www.mdon.co.kr/news/photo/202401/30119_30138_4744.jpg",
+  "specialty": "감염질환, 의료관련감염관리, 면역저하환자 감염, 후천성면역결핍증(AIDS), 분자역학, 항생제 내성",
+  "학력": [
+    { "date": "1994 ~ 1997", "content": "가톨릭대학교 의과대학 내과학 박사" },
+    { "date": "1988 ~ 1994", "content": "가톨릭대학교 의과대학 내과학 석사" },
+    { "date": "1980 ~ 1986", "content": "가톨릭대학교 의과대학 의학 학사" }
+  ],
+  "경력": [
+    { "date": "2011 ~ 2021", "content": "부천성모병원 감염내과 임상분과장" },
+    { "date": "2008 ~ 2012", "content": "가톨릭대학교 의과대학 감염내과학과장" },
+    { "date": "2007 ~ 2009", "content": "가톨릭중앙의료원 의료정보기획부장" },
+    { "date": "1999 ~ 2001", "content": "미국 하버드 의과대학 부속 매사추세츠 종합병원(MGH) 감염내과 교환교수" },
+    { "date": "1993 ~ 1995", "content": "성모병원 내과 임상강사" },
+    { "date": "1987 ~ 1990", "content": "강남성모병원 내과 레지던트" },
+    { "date": "1986 ~ 1987", "content": "강남성모병원 인턴" }
+  ],
+  "수상": [
+    { "date": "2021", "content": "저서 '내 곁의 적', 2021년 대한민국학술원 우수학술도서 선정" },
+    { "date": "2020", "content": "저서 '열, 패혈증, 염증', 2020년 세종도서 학술부문 선정" },
+    { "date": "2019", "content": "저서 '항생제 열전', 2019년 세종도서 학술부문 선정" },
+    { "date": "2017", "content": "국가 감염병 예방 및 관리 유공 대통령 근정포장" },
+    { "date": "2012", "content": "한국과학기술단체 총연합회 제22회 과학기술우수논문상" },
+    { "date": "2010", "content": "신종인플루엔자 대응 유공 보건복지부장관상" },
+    { "date": "1998", "content": "가톨릭대학교 의과대학원 제24회 학술상 임상부문 최우수 논문상" },
+    { "date": "1996", "content": "한국과학기술단체 총연합회 제6회 과학기술우수논문상" }
+  ],
+  "학술": [
+    { "date": "2024 ~ 현재", "content": "대한의학회 제25대 간행이사" },
+    { "date": "2024 ~ 현재", "content": "Journal of Korean Medical Science (JKMS) 편집장" },
+    { "date": "2021 ~ 2023", "content": "대한의학회 제24대 무임소이사" },
+    { "date": "2019 ~ 2021", "content": "대한감염학회 회장" },
+    { "date": "2018 ~ 2023", "content": "Journal of Korean Medical Science (JKMS) 부편집인" },
+    { "date": "2015 ~ 2017", "content": "대한의료관련감염관리학회 제11대 회장" }
+  ],
+  "언론": [],
+  "저서": [
+    { "targetDate": "2025", "type": "번역", "text": "의사과학자 애로우스미스", "url": null, "issuer": null },
+    { "targetDate": "2024", "type": "번역", "text": "착한 바이러스", "url": null, "issuer": null },
+    { "targetDate": "2018 ~ 현재", "type": "도서", "text": "이야기로 풀어보는 감염학 시리즈 (총 5권)", "url": null, "issuer": null },
+    { "targetDate": "2017", "type": "편찬", "text": "항생제의 길잡이 제4판", "url": null, "issuer": null }
+  ],
+  "논문": [],
+  "searchHospitalName": "가톨릭대학교부천성모병원",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H11KR-31000002",
+  "searchHospitalAddress": "경기도 부천시 원미구 소사로 327, 가톨릭대학교 부천성모병원 (소사동)"
+}

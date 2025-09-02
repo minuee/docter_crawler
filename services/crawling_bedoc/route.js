@@ -495,6 +495,7 @@ router.get('/save', async function(req, res) {
   let emptyDoctors = [];
   try {
     const dataDir = path.join(global.appRoot, 'services/crawling_bedoc/data');
+    const dataDoneDir = path.join(global.appRoot, 'services/crawling_bedoc/saved_data');
     const hospitalDirs = fs.readdirSync(dataDir, { withFileTypes: true }).filter(dirent => dirent.isDirectory()).map(dirent => dirent.name);
 
     for (const hospitalID of hospitalDirs) {

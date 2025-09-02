@@ -1,0 +1,51 @@
+{
+  "hospital_cid": 373,
+  "bedoc_doctorname": "윤아일린",
+  "bedoc_deptname": "소화기내과",
+  "bedoc_doctor_site": "https://www.paik.ac.kr/sanggye/reservation/intro.asp",
+  "bedoc_hospitalname": "상계백병원",
+  "hospital_tel": "02-2290-8114",
+  "hospital_name": "한양대학교병원",
+  "hospital_addr": "서울특별시 성동구 왕십리로 222",
+  "aiga_hid": "H11KR-11000035",
+  "hospitalsite": "https://www.hyumc.com/seoul/",
+  "hospital_site": "https://www.hyumc.com/seoul/",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": "Hospital changed from Inje University Sanggye Paik Hospital to Hanyang University Hospital.",
+  "doctorDetailUrl": "https://www.hyumc.com/seoul/doctor/info.do?DR_NO=40032&deptname=소화기내과&doctorName=윤아일린",
+  "profileUrl": "https://www.hyumc.com/seoul/app/images/doctor/20210316103349069_1.jpg",
+  "specialty": "간질환, 간경변, 간암, 알코올성 간질환",
+  "학력": [
+    { "date": "2013.08", "content": "고려대학교 의과대학원 의학박사" },
+    { "date": "2010.08", "content": "고려대학교 의과대학원 의학석사" },
+    { "date": "2006.02", "content": "고려대학교 의과대학 의학사" }
+  ],
+  "경력": [
+    { "date": "2021.03 ~ 현재", "content": "한양대학교병원 소화기내과 부교수" },
+    { "date": "2020.04 ~ 2021.02", "content": "인제대학교 상계백병원 소화기내과 부교수" },
+    { "date": "2014.03 ~ 2020.03", "content": "인제대학교 상계백병원 소화기내과 조교수" },
+    { "date": "2011.10 ~ 2014.02", "content": "고려대학교 구로병원 소화기내과 임상강사" },
+    { "date": "2011.03 ~ 2011.09", "content": "고려대학교 안산병원 소화기내과 임상강사" }
+  ],
+  "수상": [],
+  "학술": [
+    { "date": null, "content": "대한간학회 연구기획위원" },
+    { "date": null, "content": "대한간학회 보험위원" },
+    { "date": null, "content": "대한간암학회 간행위원" }
+  ],
+  "언론": [
+    { "targetDate": "2023", "type": "발표", "text": "한양대학교병원 암센터 '간 건강 심포지엄'에서 '알코올성 간염 치료의 최신 지견' 발표", "url": null, "issuer": "한양대학교병원 암센터" }
+  ],
+  "저서": [],
+  "논문": [
+    "No Difference in Incidence of Hepatocellular Carcinoma in Patients With Chronic Hepatitis B Virus Infection Treated With Entecavir Vs Tenofovir (주저자)",
+    "Long-term Prognosis of Acute-on-Chronic Liver Failure Survivors",
+    "The Impact of Previous Acute Decompensation on the Long-Term Prognosis of Alcoholic Hepatitis in Cirrhotic Patients"
+  ],
+  "searchHospitalName": "한양대학교병원",
+  "isSameHospital": false,
+  "isAttend": false,
+  "found_hospital_aiga_hid": "H11KR-11000035",
+  "searchHospitalAddress": "서울특별시 성동구 왕십리로 222"
+}

@@ -11,7 +11,7 @@
         WHERE
             1=1 and is_crawling_done = false and  hospital_site != '' and  hospital_site is not null 
         ORDER BY a.hospital_cid ASC
-        LIMIT 30 OFFSET 0
+        LIMIT 20 OFFSET 0
     </select>
 
     <update id="hospital_site_is_null">

@@ -1,0 +1,56 @@
+{
+  "hospital_cid": 380,
+  "bedoc_doctorname": "이관식",
+  "bedoc_deptname": "소화기내과",
+  "bedoc_doctor_site": "http://bundang.chamc.co.kr/Reservation/Reserve_1.aspx?menuCode=333",
+  "bedoc_hospitalname": "분당차병원",
+  "hospital_tel": "031-780-5000",
+  "hospital_name": "차의과학대학교분당차병원",
+  "hospital_addr": "경기도 성남시 분당구 야탑로 59, (야탑동)",
+  "aiga_hid": "H11KR-31000059",
+  "hospitalsite": "http://bundang.chamc.co.kr",
+  "hospital_site": "http://bundang.chamc.co.kr",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "http://bundang.chamc.co.kr/Reservation/Reserve_1.aspx?menuCode=333&deptname=소화기내과&doctorName=이관식",
+  "profileUrl": null,
+  "specialty": "위질환, 장질환, 소화기암, 치료내시경, 간염, 간암, 간경변증",
+  "학력": [
+    { "date": null, "content": "연세대학교 의과대학 박사" },
+    { "date": null, "content": "연세대학교 의과대학 석사" },
+    { "date": null, "content": "연세대학교 의과대학 학사" }
+  ],
+  "경력": [
+    { "date": "2022.09 ~ 현재", "content": "차의과학대학교 분당차병원 소화기내과 교수" },
+    { "date": null, "content": "연세대학교 의과대학 내과학 교수" },
+    { "date": null, "content": "강남세브란스병원 소화기내과 교수, 과장, 내과부장" },
+    { "date": null, "content": "강남세브란스병원 간암클리닉 팀장" },
+    { "date": "1993 ~ 1995", "content": "University of California, San Diego, V.A. Hospital 교환교수" }
+  ],
+  "수상": [
+    { "date": "2023", "content": "소화기연관학회 국제 소화기학술대회(KDDW) '김정룡 기념 강연' 수상" },
+    { "date": null, "content": "세계 3대 인명사전(마르퀴즈 후즈후, ABI, IBC) 등재" }
+  ],
+  "학술": [
+    { "date": "2018.12 ~ 2019.12", "content": "대한간학회 회장" },
+    { "date": "2012.07 ~ 2013.07", "content": "대한간암학회 회장" },
+    { "date": null, "content": "대한간학회 만성 B형간염 진료가이드라인 개정위원장" },
+    { "date": null, "content": "대한간학회 보험이사, 학술이사 역임" },
+    { "date": null, "content": "대한간암학회 총무 역임" }
+  ],
+  "언론": [
+    { "targetDate": "2023.12", "type": "기사", "text": "국제 소화기학술대회에서 주요 학술상 수상", "url": null, "issuer": null },
+    { "targetDate": "2022.09", "type": "기사", "text": "분당차병원에서 진료 시작", "url": null, "issuer": null }
+  ],
+  "저서": [],
+  "논문": [
+    "A disintegrin and metallopeptidase domain (ADAM) 12, ADAM 17mRNA and ADAM10 proteinhold potential as biomarkers fordetection of early gastric cancer (Scientific Reports, 2024-12)",
+    "100여 편의 소화기내과 및 간질환 관련 논문 발표"
+  ],
+  "searchHospitalName": "차의과학대학교분당차병원",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H11KR-31000059",
+  "searchHospitalAddress": "경기도 성남시 분당구 야탑로 59, (야탑동)"
+}

@@ -1,0 +1,41 @@
+{
+  "hospital_cid": 391,
+  "bedoc_doctorname": "이두연",
+  "bedoc_deptname": "정형외과",
+  "bedoc_doctor_site": "http://www.saeumhospital.kr/Module/Reserve/Reserve.asp?ModuleID=1",
+  "bedoc_hospitalname": "새움병원",
+  "hospital_tel": "02-1577-7015",
+  "hospital_name": "새움병원",
+  "hospital_addr": "서울특별시 금천구 시흥대로139길 8, 새움병원 (독산동)",
+  "aiga_hid": "H21KR-11000089",
+  "hospitalsite": "https://www.saeumhospital.kr/",
+  "hospital_site": "https://www.saeumhospital.kr/",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "http://www.saeumhospital.kr/Module/Reserve/Reserve.asp?ModuleID=1&deptname=정형외과&doctorName=이두연",
+  "profileUrl": null,
+  "specialty": "정형외과, 족부 및 무릎 관절 질환, 인공관절치환술, 관절내시경 치료, 스포츠 손상, 재활, 하지 질환",
+  "학력": [
+    { "date": null, "content": "한양대학교 의과대학 졸업" },
+    { "date": null, "content": "정형외과 전문의 및 전임의 수료" }
+  ],
+  "경력": [
+    { "date": null, "content": "혜민병원, 메디인병원, 선수촌병원 등에서 풍부한 임상경험" },
+    { "date": "2018.11.19", "content": "새움병원 관절클리닉 원장으로 진료 시작" }
+  ],
+  "수상": [],
+  "학술": [
+    { "date": null, "content": "새움병원 유튜브 채널에서 관절내시경 수술에 대해 설명하는 영상 출연" }
+  ],
+  "언론": [
+    { "targetDate": null, "type": "유튜브", "text": "관절내시경 수술 설명 영상 출연", "url": null, "issuer": "새움병원 유튜브 채널" }
+  ],
+  "저서": [],
+  "논문": [],
+  "searchHospitalName": "새움병원",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H21KR-11000089",
+  "searchHospitalAddress": "서울특별시 금천구 시흥대로139길 8, 독산동"
+}

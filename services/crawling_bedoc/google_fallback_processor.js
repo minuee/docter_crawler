@@ -141,7 +141,7 @@ function processGoogleFallback() {
         // - `학술`: An array of objects, each with `date` (YYYY.MM or null) and `content`.
         // - `언론`: An array of objects, each with `targetDate`, `type`, `text`, `url`, `issuer`.
         // - `저서`: An array of objects, each with `targetDate`, `type`, `text`, `url`, `issuer`.
-        // - `논문`: An array of strings.
+        // - `논문`: An array of strings. IMPORTANT: When extracting content for '논문', ensure all double quotes (") are removed, and single quotes (') are converted to backticks (`) to prevent JSON parsing issues.
         // IMPORTANT: All the above fields (`학력` through `논문`) must use their Korean names as JSON keys.
         // - `searchHospitalName`: The name of the hospital found in the Google search results.
         // - `searchHospitalAddress`: The address of the hospital found in the Google search results.

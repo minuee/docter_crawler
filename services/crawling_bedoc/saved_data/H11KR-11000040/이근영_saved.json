@@ -1,0 +1,72 @@
+{
+  "hospital_cid": 384,
+  "bedoc_doctorname": "이근영",
+  "bedoc_deptname": "산부인과",
+  "bedoc_doctor_site": "https://kangnam.hallym.or.kr/hallymuniv_sub.asp?left_menu=left_ireserve&screen=ptm500&tap=2",
+  "bedoc_hospitalname": "강남성심병원",
+  "hospital_tel": "02-829-5114",
+  "hospital_name": "한림대학교 강남성심병원",
+  "hospital_addr": "서울특별시 영등포구 신길로 1, (대림동, 강남성심병원)",
+  "aiga_hid": "H11KR-11000040",
+  "hospitalsite": "http://kangnam.hallym.or.kr",
+  "hospital_site": "http://kangnam.hallym.or.kr",
+  "isExist": true,
+  "isSearchType": "google",
+  "error": null,
+  "doctorDetailUrl": "https://kangnam.hallym.or.kr/hallymuniv_sub.asp?left_menu=left_ireserve&screen=ptm500&tap=2&deptname=산부인과&doctorName=이근영",
+  "profileUrl": null,
+  "specialty": "산과, 고위험산모, 유전학, 일반부인과(혹)",
+  "학력": [
+    { "date": "1972.03 ~ 1978.02", "content": "중앙대학교 의과대학 졸업" },
+    { "date": "1979.03 ~ 1981.02", "content": "중앙대학교 대학원 의학석사" },
+    { "date": "1981.03 ~ 1984.02", "content": "중앙대학교 대학원 의학박사" },
+    { "date": "1988 ~ 1989", "content": "미국 메릴랜드대학 주산기학 연수" }
+  ],
+  "경력": [
+    { "date": "1979.03 ~ 1983.02", "content": "한림대학교 한강성심병원 전공의 수료" },
+    { "date": "2012.09 ~ 2014.02", "content": "한림대학교의료원 부의료원장 역임" },
+    { "date": "2006.12 ~ 2010.08", "content": "한림대학교 강남성심병원 병원장 역임" },
+    { "date": null, "content": "한림대학교 의과대학 산부인과학교실 주임교수 역임" },
+    { "date": null, "content": "한림대학교 강남성심병원 산부인과 과장 역임" },
+    { "date": "2022.11.12", "content": "대한산부인과학회 제67대 회장 (선출, 임기 1년)" },
+    { "date": null, "content": "대한모체태아의학회 회장 역임" },
+    { "date": null, "content": "대한임상보험의학회 이사장 역임" },
+    { "date": "2005 ~ 2015", "content": "대한산부인과학회 보험위원회 위원장" }
+  ],
+  "수상": [
+    { "date": "2000", "content": "대한초음파학회 학술대회 학술상" },
+    { "date": "2001", "content": "보건복지부 장관상" },
+    { "date": "2003", "content": "보건복지부 장관상" },
+    { "date": "2005", "content": "대한산부인과학회 최우수논문상" },
+    { "date": "2007", "content": "대한산부인과초음파학회 학술상" },
+    { "date": "2005 ~ 2007", "content": "세계 3대 인명록 (미국 인명 정보기관 ABI, 영국 국제 인명센터 IBC) 연속 등재" },
+    { "date": "2022.10", "content": "제17회 임산부의 날 기념 대통령 표창" }
+  ],
+  "학술": [
+    { "date": null, "content": "조산, 특히 자궁경부무력증 분야 권위자로, 응급자궁경부봉합술 및 복식자궁경부봉합술 세계 최다 집도" },
+    { "date": null, "content": "조산 원인 자궁경부무력증 진단 및 새로운 치료법에 대한 다수 연구 논문 발표" },
+    { "date": null, "content": "자궁경부무력증 수술기구 'Lee's Cerclage Balloon' 개발" },
+    { "date": "2020", "content": "자궁경부암 1기 고위험 임산부의 건강한 여아 출산 성공 사례 국제학술지 등재" },
+    { "date": "2007", "content": "자궁경부암 환자에게 복식자궁경관봉축술 시행하여 쌍둥이 출산 성공" },
+    { "date": null, "content": "국제 산부인과 교과서 '자궁절제술(Hysterectomy)'의 '자궁경부암과 자궁경부절제술 후 임신 유지' 챕터(21장) 집필 (전 세계 6,000건 이상 다운로드 기록)" },
+    { "date": "2016", "content": "세계적인 의과학 전문 출판사 Springer 출간 'Management and Therapy of Early Pregnancy Complications' 교과서 집필진 참여" },
+    { "date": "2008", "content": "베트남 국제 산부인과학회 학술대회 특강" },
+    { "date": "2012", "content": "유럽 주산기학회 특강" },
+    { "date": "2017", "content": "일본 산부인과학회 학술대회 특강" },
+    { "date": "2018", "content": "일본 산부인과학회 학술대회 특강" },
+    { "date": "2017", "content": "아세아·오세아니아 산부인과 학술대회 특강" }
+  ],
+  "언론": [
+    { "targetDate": null, "type": "기사", "text": "대통령 표창 수상, 학회장 선출, 국제 교과서 집필 참여 등 업적과 활동에 대한 다수 언론 보도", "url": null, "issuer": null }
+  ],
+  "저서": [
+    { "targetDate": "2012", "type": "도서", "text": "국제 산부인과 교과서 '자궁절제술(Hysterectomy)' 챕터 공동 집필", "url": null, "issuer": null },
+    { "targetDate": "2016", "type": "도서", "text": "국제 산부인과 교과서 'Management and Therapy of Early Pregnancy Complications' 공동 집필", "url": null, "issuer": null }
+  ],
+  "논문": [],
+  "searchHospitalName": "한림대학교 강남성심병원",
+  "isSameHospital": true,
+  "isAttend": true,
+  "found_hospital_aiga_hid": "H11KR-11000040",
+  "searchHospitalAddress": "서울특별시 영등포구 신길로 1"
+}
