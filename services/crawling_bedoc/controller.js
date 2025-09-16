@@ -211,6 +211,20 @@ module.exports = {
       console.warn("doctorData.학술 is missing or undefined.");
     }
 
+    if (doctorData.학회 && !CS.isEmpty(doctorData.학회)) {
+      doctorData.학회.map((item) => {
+        biography.push({
+          targetDate: item?.targetDate ? item?.targetDate : item?.date ? item?.date : null,
+          type: "학회",
+          text: item?.text ? cleanText(item?.text) : item?.content ? cleanText(item?.content) : null,
+          url: item?.url || null,
+          issuer: item?.issuer || null,
+        });
+      });
+    } else if (doctorData.학회 === undefined) {
+      console.warn("doctorData.학회 is missing or undefined.");
+    }
+
     if (doctorData.언론 && !CS.isEmpty(doctorData.언론)) {
       doctorData.언론.map((item) => {
         biography.push({
@@ -365,7 +379,7 @@ module.exports = {
         doctorDetailUrl,
         doctorProfileImgUrl,
         profileUrl,
-        specialty,
+        specialty : specialty ? specialty : doctorData?.bedoc_deptname,
         searchHospitalName : searchHospitalName ? searchHospitalName : doctorData?.hospital_name,
         isSameHospital : isSameHospital ? 1 : 0,
         isAttend : isAttend ? 1 : 0,
@@ -615,5 +629,63 @@ module.exports = {
       console.error(`Error in getNewHospitalID: ${error.message}`);
       return { success: false, error: error.message, data : null };
     }
-  }
+  },
+
+
+  saveDoctorDetailToBedocTable: async (doctorData,hospitalID) => {
+
+    const rid_long = doctorData?.rid_long;
+    const hid = doctorData.hid;
+    const baseName = doctorData.baseName;
+    const deptname = doctorData.deptname;
+    const doctorname = doctorData.doctorname;
+    const doctor_url = doctorData.doctor_url;
+    const foundProfileUrl = doctorData.foundProfileUrl;
+    const findHospitalName = doctorData.findHospitalName;
+    const findDeptname = doctorData.findDeptname;
+
+
+    mybatisMapper.createMapper([`${global.appRoot}/services/crawling_bedoc/controler.xml`]);
+    try {
+      
+   
+      const param = {
+        rid_long,
+        hid,
+        baseName,
+        deptname,
+        doctorname,
+        doctor_url,
+        foundProfileUrl,
+        findHospitalName,
+        findDeptname
+      }; 
+      const format = { language: "sql", indent: "  " };
+      const query = mybatisMapper.getStatement(
+          "controler",
+          "hospital_aiga_detailurl_update",
+          param,
+          format
+      );
+      const { DBError = null, RS = null } = await daoMysql.spCall(query);
+      
+      if (DBError) {
+        console.error(`DBError in saveDoctorDetailToBedocTable: ${DBError.message}`);
+        return { success: false, error: DBError.message };
+      }
+
+      const affectedRows = RS?.affectedRows || 0;
+      if (affectedRows > 0) {
+        console.log(`Success, affectedRows: ${affectedRows}`);
+        return { success: true };
+      } else {
+        console.error(`Update failed, affectedRows: ${affectedRows}`);
+        return { success: false, error: 'UPDATE_FAILED_RECORD_NOT_FOUND' };
+      }
+
+    } catch (error) {
+      console.error(`Error in saveDoctorDetailToBedocTable: ${error.message}`);
+      return { success: false, error: error.message };
+    }
+  },
 }

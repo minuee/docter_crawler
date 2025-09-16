@@ -1,0 +1,38 @@
+{
+  "hospital_cid": 337,
+  "bedoc_id": "A8089",
+  "bedoc_hospitalsite": "http://www.schmc.ac.kr/seoul/kor/index.do",
+  "bedoc_doctorname": "어수택",
+  "bedoc_deptname": "호흡기내과",
+  "bedoc_hospitalname": "순천향대서울병원",
+  "hospital_name": "순천향대학교서울병원",
+  "aiga_hid": "H11KR-11000026",
+  "hospital_site": "https://www.schmc.ac.kr/seoul/doctr/home.do?key=1605&doctrNo=1207",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 용산구 대사관로 59, (한남동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "profileUrl": null,
+  "specialty": "간질성폐질환(폐섬유화증), 기관지 천식, 만성 폐쇄성 폐질환",
+  "isAttend": true,
+  "학력": [
+    { "content": "미국 National Jewish Medical and Research Center, Denver, USA 연수" },
+    { "content": "2013년 순천향대학교 CEO건강과학대학원, CEO주치의" },
+    { "content": "순천향대학교병원 내과 수련" },
+    { "content": "부산대학교 졸업" }
+  ],
+  "경력": null,
+  "학술": [
+    { "content": "미국 흉부 학회 회원" },
+    { "content": "아시아 태평양 호흡기 학회 회원" },
+    { "content": "대한 결핵 및 호흡기 학회 회원" },
+    { "content": "대한 내과 학회 회원" },
+    { "content": "천식 및 알레르기 학회 회원" },
+    { "content": "간질성폐질환연구회, 기관지천식연구회, 만성폐쇄성페질환 연구회 : 위원" },
+    { "content": "Association of Genetic Variants of NLRP4 with Exacerbation of Asthma: The Effect of Smoking. DNA Cell Biol 2019;38:76-" },
+    { "content": "Korean Guidelines for Diagnosis and Management of Interstitial Lung Diseases: Part" },
+    { "content": "Idiopathic Pulmonary Fibrosis. Tuberc Respir Dis (Seoul) 2019;82:102-" },
+    { "content": "Clinical features and prognosis of patients with idiopathic pulmonary fibrosis and chronic obstructive pulmonary disease. Int J Tuberc Lung Dis 2019;23:678-84." }
+  ]
+}

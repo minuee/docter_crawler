@@ -1,5 +1,6 @@
 {
   "ignore": [
-    "services/crawling_bedoc/data/*"
+    "services/crawling_bedoc/data/*",
+    "services/crawling_bedoc/saved_data/*"
   ]
 }

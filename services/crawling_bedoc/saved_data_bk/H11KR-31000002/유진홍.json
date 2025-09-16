@@ -1,0 +1,89 @@
+{
+  "hospital_cid": 363,
+  "bedoc_id": "A0144",
+  "bedoc_hospitalsite": "http://www.cmcbucheon.or.kr",
+  "bedoc_doctorname": "유진홍",
+  "bedoc_deptname": "감염내과",
+  "bedoc_hospitalname": "부천성모병원",
+  "hospital_name": "가톨릭대학교부천성모병원",
+  "aiga_hid": "H11KR-31000002",
+  "hospital_site": "https://www.cmcbucheon.or.kr/page/doctor/9/D0000989",
+  "site_type": "single",
+  "hospital_addr": "경기도 부천시 원미구 소사로 327, 가톨릭대학교 부천성모병원 (소사동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "https://www.cmcbucheon.or.kr/api/attach/view/doctor/D0000989/profile/1",
+  "specialty": "감염질환, 인터넷이나 모바일 예약 시 증상을 반드시 기입해주시기 바랍니다., 의료관련감염관리, 면역저하환자 감염, 후천성면역결핍증 (AIDS), Molecular typing, 항생제 내성",
+  "학력": [
+    { "date": "1980~1986", "content": "가톨릭대학교 의학 학사" },
+    { "date": "1988~1994", "content": "가톨릭대학교 내과학 석사" },
+    { "date": "1994~1997", "content": "가톨릭대학교 내과학 박사" }
+  ],
+  "경력": [
+    { "date": "2011~2021", "content": "부천성모병원 임상분과장" },
+    { "date": "2008~2012", "content": "가톨릭대학교 감염내과학과장" },
+    { "date": "2007~2009", "content": "가톨릭중앙의료원 의료정보기획부장" },
+    { "date": "1993~1995", "content": "성모병원 내과 임상강사" },
+    { "date": "1987~1990", "content": "강남성모병원 내과 레지던트" },
+    { "date": "1986~1987", "content": "강남성모병원 인턴" },
+    { "date": "1999~2001", "content": "미국 Boston, Harvard 의대 부속 Massachusetts General Hospital (MGH)감염내과 교환교수" }
+  ],
+  "수상": [
+    { "date": "2021", "content": "'내 곁의 적' 2021년 대한민국학술원 우수학술도서 학술부문 선정" },
+    { "date": "2020", "content": "'열, 패혈증, 염증' 2020년 세종도서(옛 문화체육관광부 우수학술도서) 학술부문 선정" },
+    { "date": "2019", "content": "'항생제 열전' 2019년 세종도서(옛 문화체육관광부 우수학술도서) 학술부문 선정" },
+    { "date": "2017", "content": "2017년도 국가 감염병 예방 및 감염병관리 유공 대통령 근정포장 수상" },
+    { "date": "2012", "content": "한국과학기술단체 총연합회 주최 제22회 과학기술우수논문상" },
+    { "date": "2010", "content": "보건복지부/질병관리본부 주최 신종인플루엔자 대응 유공자 표창 및 평가대회에서 보건복지부장관상" },
+    { "date": "1996", "content": "한국과학기술단체 총연합회 주최 제6회 과학기술우수논문상 (과총 제96-130호)" }
+  ],
+  "학술": [
+    { "date": "2024~현재", "content": "대한의학회 제25대 간행이사" },
+    { "date": "2024~현재", "content": "Journal of Korean Medical Science (JKMS)  Editor-in-Chief (편집장)" },
+    { "date": "2021~2023", "content": "대한의학회 제 24대 무임소이사" },
+    { "date": "2019~2021", "content": "대한감염학회 회장" },
+    { "date": "2018~2023", "content": "Journal of Korean Medical Science (JKMS) Deputy Editor (부편집인)" },
+    { "date": "2015~2018", "content": "Journal of Korean Medical Science (JKMS) 편집위원" },
+    { "date": "2015~2017", "content": "대한의료관련감염관리학회 (구: 병원감염관리학회) 11대 회장" }
+  ],
+  "논문": [
+    "Defining the Boundaries of AI Use in Scientific Writing: A Comparative Review of Editorial Policies (J Korean Med Sci 단독)",
+    "Antimicrobial Resistance The ‘Real’ Pandemic We Are Unaware Of, Yet Nearby (J Korean Med Sci 단독)",
+    "대한민국  의학의  쇠퇴가  시작되는가? (의료정책포럼 단독)",
+    "On the Controversies Surrounding the Lab-Leak Theory of COVID-19 (J Korean Med Sci 단독)",
+    "Reviving Medical Research in Korea After Impeachment of the President: A Roadmap to Restoration (J Korean Med Sci 단독)",
+    "Insights Into JKMS Submissions and Medical Journal Publications in Korea (J Korean Med Sci 교신저자)",
+    "Entering the New Year of 2025 With Concerns About the Decline of Medical Academics in Korea (J Korean Med Sci 단독)",
+    "How To Cope With Predatory Journals (J Korean Med Sci 단독)"
+  ],
+  "저서": [
+    "숨 가쁜 추적: 코로나19는 어디서 왔는가? (군자출판사 단독)",
+    "의사과학자 애로우스미스 (군자출판사 단독)",
+    "착한 바이러스 (군자출판사 단독)",
+    "유진홍 교수의 감염강의 42강 (군자출판사 단독)",
+    "내 곁의 적_의료관련 감염 (군자출판사 단독)",
+    "열, 패혈증, 염증 (군자출판사 단독)",
+    "항생제 열전 (군자출판사 단독)",
+    "한국전염병사 II (군자출판사 공동(대표저자))"
+  ],
+  "언론": [
+    { "targetDate": "2025.03.05", "type": "뉴스", "text": "[신간] ‘애로우스미스’", "url": "http://www.doctorstimes.com/news/articleView.html?idxno=231472" },
+    { "targetDate": "2025.01.20", "type": "뉴스", "text": "\"써 놓은 논문 고칠 시간도 없다\" 의정갈등 1년, 의학 연구 멈췄다", "url": "https://www.chosun.com/national/welfare-medical/2025/01/20/HTC6ZWKS2BFNROGW6A2AFRD6OY/?utm_source=daum&utm_medium=referral&utm_campaign=daum-news&kakao_from=mainnews" },
+    { "targetDate": "2025.01.14", "type": "뉴스", "text": "\"의정갈등 장기화되면 학술도 타락…약탈적 학술지 막아야\"", "url": "https://www.medicaltimes.com/Main/News/NewsView.html?ID=1162018" },
+    { "targetDate": "2024.12.30", "type": "뉴스", "text": "[2025 의료] 의정 갈등이 발목 잡은 2024년…내년 전망은?", "url": "https://v.daum.net/v/20241224170925651" },
+    { "targetDate": "2024.12.24", "type": "뉴스", "text": "대한의학회지 매주 발표 논문 50% 줄어 '3편'도 힘든 상황…\"한국 의학 국제적 위상 하락 신호\"", "url": "https://m.medigatenews.com/news/714711944" },
+    { "targetDate": "2024.12.24", "type": "뉴스", "text": "무모한 의대 증원에 뒤처지는 의학 연구…‘논문 제로’ 오나", "url": "https://www.docdocdoc.co.kr/news/articleView.html?idxno=3024356" },
+    { "targetDate": "2024.10.07", "type": "뉴스", "text": "병원 지키느라 지친 의사들…연구 실적 최대 86.5% ‘뚝’", "url": "https://v.daum.net/v/20241006151030357" },
+    { "targetDate": "2024.09.24", "type": "뉴스", "text": "의정 갈등으로 국내 의학 논문 급감, \"앞으로 더 줄어들 것\"", "url": "https://v.daum.net/v/20240924145206957" },
+    { "targetDate": "2024.09.20", "type": "뉴스", "text": "의대 교수들, 진료 업무 과부하에…‘연구·임상’ 할 시간도 없어", "url": "https://v.daum.net/v/20240920134501406" },
+    { "targetDate": "2024.08.14", "type": "뉴스", "text": "코로나19 재확산... \"고위험군에 여전히 위험, 증상 없어질 때까지 격리 권고\"", "url": "https://v.daum.net/v/20240813161155195" },
+    { "targetDate": "2024.07.25", "type": "뉴스", "text": "영향력 커진 국내 의학학술지들…JIF 1위 학술지는?", "url": "https://www.docdocdoc.co.kr/news/articleView.html?idxno=3019343" },
+    { "targetDate": "2024.07.22", "type": "뉴스", "text": "서울서 첫 말라리아 경보 발령...\"아프리카만큼 위협적이지는 않아\"", "url": "https://v.daum.net/v/20240722161107460" },
+    { "targetDate": "2024.07.05", "type": "뉴스", "text": "백일해 환자 366배 급증...집단 면역력 떨어진 탓", "url": "https://v.daum.net/v/20240704152024331" },
+    { "targetDate": "2024.06.14", "type": "뉴스", "text": "의정갈등으로 암·신약 연구 '올스톱'…\"국제 학계 신뢰도 추락\"", "url": "https://v.daum.net/v/20240613135812897" },
+    { "targetDate": "2024.05.27", "type": "뉴스", "text": "‘부실의대 난립 100년 전 미국 재현’ 걱정하는 전문가들", "url": "https://www.docdocdoc.co.kr/news/articleView.html?idxno=3017638&fbclid=IwZXh0bgNhZW0CMTEAAR1cpdGvOb1miDzLg8epTeEyNijxuqUu2ENGj50MhbI5a3fsERto5t6O3Dk_aem_AZ3-XwO6Bl3sm7rbsHee-dfVOsj16hJK-Av2SLew2aiXGUh32ambxM2BZqErUwKvF1CIZ7HmEbgTduD6kbFYVCKl" },
+    { "targetDate": "2024.05.23", "type": "뉴스", "text": "의정 갈등에 논문 절반 뚝, 국내 의학 연구까지 위축", "url": "https://v.daum.net/v/20240523060102684" }
+  ]
+}

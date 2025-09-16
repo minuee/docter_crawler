@@ -15,6 +15,7 @@ const fs = require('fs');
 const router = asyncify(express.Router());
 const geminiParser = require('./gemini_parser');
 const playwrightParser = require('./playwright_parser');
+const naverSearch = require('./naver_search');
 
 
 /**
@@ -360,6 +361,7 @@ router.get('/collect2', async function(req, res) {
         param,
         format
     );
+
     const { DBError = null, RS = null } = await daoMysql.spCall(query);
 
     const ret = await  functions.myBatisResult(DBError,RS)
@@ -367,7 +369,7 @@ router.get('/collect2', async function(req, res) {
     for ( let i = 0; i < ret?.data.length ; i++ ) {
       const doctorData = ret.data?.length > 0 ?  ret.data[i] : null;
 
-      if ( doctorData != null && doctorData?.hospital_site && doctorData?.bedoc_deptname && doctorData?.bedoc_doctorname && doctorData?.hospital_addr ) {
+      if ( doctorData != null && doctorData?.hospital_site && doctorData?.bedoc_deptname && doctorData?.bedoc_doctorname ) {
           list_target_cnt++;
           const crawlResult = await geminiParser.parseWithGemini(doctorData);
 
@@ -609,5 +611,177 @@ router.get('/get-allhid', async function(req, res) {
     res.status(500).send('An error occurred during the get all hid process: ' + error.message);
   }
 });
+
+
+
+/**
+ * @swagger
+ *  /v1/c/crawling_bedoc/find-detailurl:
+ *    get:
+ *      summary: "의사상세주소를 찾는 api"
+ *      description: "HID전체 조회"
+ *      tags: [crawling_bedoc-베닥의사 수집]
+ *      responses:
+ *        "200":
+ *          description: 데이터 저장 결과
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    message:u000a                      type: string
+ */
+
+router.get('/find-detailurl', async function(req, res) {
+  mybatisMapper.createMapper([`${global.appRoot}/services/crawling_bedoc/controler.xml`]);
+  const results = [];
+  try {
+    const param = {};
+    const format = { language: "sql", indent: "  " };
+    const query = mybatisMapper.getStatement("controler", "select_bedoc_hospital_detaill", param, format);
+    const { DBError = null, RS = null } = await daoMysql.spCall(query);
+    if (DBError) { throw new Error(DBError.message); }
+    const ret = await functions.myBatisResult(DBError, RS);
+
+    for (const doctorData of ret.data) {
+      const { hid, doctorname, deptname, baseName } = doctorData;
+      
+      const dirPath = path.join(global.appRoot, 'services/crawling_bedoc/data', hid);
+      if (!fs.existsSync(dirPath)) {
+        fs.mkdirSync(dirPath, { recursive: true });
+      }
+
+      const jsonFilePath = path.join(dirPath, `${doctorname}.json`);
+      fs.writeFileSync(jsonFilePath, JSON.stringify(doctorData, null, 2));
+
+      if (baseName) {
+        const searchQuery = `"${deptname}" "${doctorname}"`;
+
+        try {
+          const { htmlContent, linksData } = await naverSearch.getNaverHtmlAndLinks(searchQuery); // 1페이지 검색 (기본값)
+
+          if (htmlContent) {
+            const htmlFilePath = path.join(dirPath, `${doctorname}.html`);
+            fs.writeFileSync(htmlFilePath, htmlContent);
+
+            const linksFilePath = path.join(dirPath, `${doctorname}_links.json`);
+            fs.writeFileSync(linksFilePath, JSON.stringify(linksData, null, 2));
+
+            results.push({ doctor: doctorname, hid, status: 'html_and_links_saved', html_path: htmlFilePath, links_path: linksFilePath });
+          } else {
+            results.push({ doctor: doctorname, hid, status: 'html_fetch_failed', error: 'Failed to get HTML from Naver search.' });
+          }
+        } catch (e) {
+          results.push({ doctor: doctorname, hid, status: 'html_fetch_error', error: e.message });
+        }
+      } else {
+        results.push({ doctor: doctorname, hid, status: 'failed', error: 'Missing hospital name (baseName).' });
+      }
+      await CS.wait(1000);
+    }
+
+    return res.send({ code: 200, success: true, results: results });
+  } catch (error) {
+    console.error('Error in /find-detailurl route:', error.message);
+    res.status(500).send('An error occurred during the find detail URL process: ' + error.message);
+  }
+});
+
+
+/**
+ * @swagger
+ *  /v1/c/crawling_bedoc/save-detailurl:
+ *    get:
+ *      summary: "수집된 의사 데이터를 DB에 저장"
+ *      description: "services/crawling_bedoc/data/ 폴더의 JSON 파일들을 읽어 DB에 저장합니다."
+ *      tags: [crawling_bedoc-베닥의사 수집]
+ *      responses:
+ *        "200":
+ *          description: 데이터 저장 결과
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    message:u000a                      type: string
+ */
+router.get('/save-detailurl', async function(req, res) {
+  //mapper 경로
+  mybatisMapper.createMapper([`${global.appRoot}/services/crawling_bedoc/controler.xml`]);
+  let saved_count = 0;
+  const errors = [];
+  const updateFailures = []; // To log specific update failures
+  let skipped_count = 0;
+  try {
+    const dataDir = path.join(global.appRoot, 'services/crawling_bedoc/data');
+    const hospitalDirs = fs.readdirSync(dataDir, { withFileTypes: true })
+      .filter(dirent => dirent.isDirectory())
+      .map(dirent => dirent.name);
+
+    for (const hospitalID of hospitalDirs) {
+      const doctorFiles = fs.readdirSync(path.join(dataDir, hospitalID))
+        .filter(file => file.endsWith('.json')  && !file.endsWith('_links.json'));
+
+      for (const fileName of doctorFiles) {
+        const filePath = path.join(dataDir, hospitalID, fileName);
+        let doctorData = null; 
+
+        try {
+          const fileContent = fs.readFileSync(filePath, 'utf-8');
+          doctorData = JSON.parse(fileContent);
+
+          // Validation check
+          if (!doctorData || CS.isEmpty(doctorData.foundProfileUrl) || doctorData.foundProfileUrl === 'notFound' || CS.isEmpty(doctorData.hid) || CS.isEmpty(doctorData.findHospitalName)) {
+            skipped_count++;
+            const newFilePath = path.join(dataDir, hospitalID, fileName.replace('.json', '_saved.json'));
+            fs.renameSync(filePath, newFilePath);
+            // console.log(`Skipped and renamed invalid file: ${fileName}`);
+            continue; 
+          }
+
+          const saveResult = await crawlingCtrl.saveDoctorDetailToBedocTable(doctorData, hospitalID);
+          if (saveResult.success) {
+            saved_count++;
+            const newFilePath = path.join(dataDir, hospitalID, fileName.replace('.json', '_saved.json'));
+            fs.renameSync(filePath, newFilePath);
+            // console.log(`Successfully processed and renamed ${fileName}`);
+          } else {
+            // This is where we log the update failure
+            const failureLog = {
+                doctor: doctorData?.doctorname || 'Unknown',
+                hospital: doctorData?.baseName || 'Unknown',
+                rid_long: doctorData?.rid_long,
+                error: saveResult.error
+            };
+            updateFailures.push(failureLog);
+            errors.push(`Update failed for ${failureLog.doctor}: ${failureLog.error}`);
+            console.error(`[SAVE-DB] Update failed for file ${filePath}: ${saveResult.error}`);
+          }
+        } catch (fileError) {
+          const errorMessage = `File ${filePath}: ${fileError.message}`;
+          console.error(`[SAVE-FILE] Error processing ${errorMessage}`);
+          errors.push(errorMessage);
+        }
+        await CS.wait(100); 
+      }
+    }
+    console.log(`Saved ${saved_count} doctor records. Errors: ${errors.length}, Skipped: ${skipped_count}, Update Failures: ${updateFailures.length}`)
+    return res.send({
+      code: 200,
+      success: true,
+      message: `Saved ${saved_count} doctor records. Errors: ${errors.length}, Skipped: ${skipped_count}, Update Failures: ${updateFailures.length}`,
+      errors: errors,
+      updateFailures: updateFailures // Add this to the response
+    });
+  } catch (error) {
+    console.error('Critical error in /save-detailurl route:', error.message);
+    res.status(500).send('A critical error occurred during the save process: ' + error.message);
+  }
+});
+
 
 module.exports = router;

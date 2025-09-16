@@ -4,14 +4,52 @@
 
     <select id="select_bedoc_hospital">
         SELECT 
+            a.hospital_cid,
+            a.bedoc_id,
+            a.hospital_site as bedoc_hospitalsite, 
+            a.bedoc_doctorname,
+            a.bedoc_deptname,
+            a.bedoc_hospitalname,
+            a.new_hospitalname as hospital_name,
+            a.new_hospital_hid as aiga_hid,
+            a.new_doctor_url as hospital_site,
+             case when a.new_site_type = '복수(리스트)' then 'list' when a.new_site_type = '팝업' then 'popup' else 'single' end as site_type,
+            h.address as hospital_addr
+        FROM
+            hospital_bedoc_list as a left join hospital h on a.new_hospital_hid = h.hid
+        WHERE
+            1=1 and is_getdetail_done = false and  new_doctor_url != '' and  new_doctor_url is not null and a.new_hospital_hid is not null
+        ORDER BY a.hospital_cid ASC
+        LIMIT 5 OFFSET 50
+    </select>
+
+    <select id="select_bedoc_hospital_old">
+        SELECT 
             a.hospital_cid,a.bedoc_doctorname,a.bedoc_deptname,a.bedoc_doctor_site,a.bedoc_hospitalname,a.hospital_tel,
             a.hospital_name,a.hospital_addr,a.aiga_hid,a.hospital_site as hospitalsite, a.hospital_doctor_site as hospital_site
         FROM
             hospital_bedoc_list as a
         WHERE
-            1=1 and is_crawling_done = false and  hospital_site != '' and  hospital_site is not null 
+            1=1 and is_crawling_done = false and  hospital_doctor_site != '' and  hospital_doctor_site is not null 
         ORDER BY a.hospital_cid ASC
-        LIMIT 20 OFFSET 0
+        LIMIT 5 OFFSET 0
+    </select>
+
+    <select id="select_bedoc_hospital2">
+        SELECT 
+            a.hospital_cid,
+            a.aiga_hid,
+            a.new_hospitalname as hospital_name,
+            a.new_deptname as bedoc_deptname,
+            a.new_doctorname as bedoc_doctorname,
+            a.new_hospital_site as hospital_site,
+            a.site_enable,a.alright,a.is_access_ok
+        FROM
+            hospital_bedoc_tmp_list as a
+        WHERE
+            1=1 and is_access_ok = '1'
+        ORDER BY a.hospital_cid ASC
+        LIMIT 8 OFFSET 47
     </select>
 
     <update id="hospital_site_is_null">
@@ -55,5 +93,34 @@
         WHERE
             1=1
     </select>
+
+    <select id="select_bedoc_hospital_detaill">
+        SELECT 
+            a.rid_long,a.hid,h.baseName,a.deptname,a.doctorname,a.doctor_url
+        FROM
+            doctor_basic a INNER JOIN hospital h ON a.hid = h.hid and a.data_version_id = 3 
+            LEFT JOIN hospital_bedoc_list c ON  a.hid = c.found_hospital_hid and a.doctor_url = c.search_doctor_site and a.doctorname = c.bedoc_doctorname 
+            and a.deptname = ( ifnull(( CASE  WHEN a.doctor_url LIKE '%deptname=%' THEN SUBSTRING_INDEX(SUBSTRING_INDEX(a.doctor_url, 'deptname=', -1), '&', 1)  ELSE c.bedoc_deptname END ),a.deptname) )
+        WHERE 
+            a.data_version_id = 3 
+        ORDER BY h.baseName asc, a.doctorname asc
+        LIMIT 50 OFFSET 110
+    </select>
+
+    <update id="hospital_bedoc_detailurl_update">
+        UPDATE hospital_bedoc_list 
+        SET 
+            search_doctor_site = #{foundProfileUrl},
+            search_hospital_name = #{findHospitalName}
+        WHERE found_hospital_hid = #{hid} and bedoc_doctorname = #{doctorname} and bedoc_deptname = #{deptname}
+    </update>
+
+    <update id="hospital_aiga_detailurl_update">
+        UPDATE doctor_basic 
+        SET 
+            new_doctor_url = #{foundProfileUrl},
+            new_hospitalname = #{findHospitalName}
+        WHERE rid_long = #{rid_long} 
+    </update>
 
 </mapper>

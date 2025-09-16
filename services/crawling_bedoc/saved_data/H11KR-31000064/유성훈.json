@@ -1,0 +1,44 @@
+{
+  "hospital_cid": 355,
+  "bedoc_id": "A0186",
+  "bedoc_hospitalsite": "http://guri.hyumc.com/index.asp?",
+  "bedoc_doctorname": "유성훈",
+  "bedoc_deptname": "내분비내과",
+  "bedoc_hospitalname": "한양대구리병원",
+  "hospital_name": "한양대구리병원",
+  "aiga_hid": "H11KR-31000064",
+  "hospital_site": "https://guri.hyumc.com/guri/mediteam/mditeam.do?action=detail&searchCondition1=seqMediteam&searchCommonSeq=40&searchCommonCd1=2167648&searchCommonCd2=111140&searchKeyword=%EB%82%B4%EB%B6%84%EB%B9%84%EB%8C%80%EC%82%AC%EB%82%B4%EA%B3%BC",
+  "site_type": "single",
+  "hospital_addr": "경기도 구리시 경춘로 153, (교문동)",
+  "isExist": null,
+  "isSearchType": "html_failed",
+  "error": "Could not find medical staff link.",
+  "profileUrl":"https://guri.hyumc.com/upload/ckfinder/images/photo_doctor/guri/0%EB%82%B4%EB%B6%84%EB%B9%84%EB%8C%80%EC%82%AC%EB%82%B4%EA%B3%BC%EC%9C%A0%EC%84%B1%ED%9B%88%EA%B5%90%EC%88%98%EB%8B%983.jpg",
+ "specialty":"당뇨병, 갑상선질환, 골다공증, 내분비종양,일반내분비질환",
+ "학력":[
+    {"date":null,"content":"한양대학교 의과대학 졸업"},
+    {"date":null,"content":"한양대학교 대학원 의학석사"},
+    {"date":null,"content":"한양대학교 대학원의학박사"}
+  ],
+  "경력":[
+    {"date":null,"content":"서울대학병원 내분비내과 임상강사"},
+    {"date":null,"content":"분당서울대학병원 내분비내과 임상강사"},
+    {"date":null,"content":"한림대학교 한강성심병원 내분비내과 조교수"},
+    {"date":null,"content":"한림대학교 강남성심병원 내분비내과  조교수"},
+    {"date":null,"content":"한양대학교구리병원 내분비대사내과 부교수"},
+    {"date":null,"content":"Visiting Researcher, Endocrine Oncology, Uppsala University Hospital, Sweden"},
+    {"date":null,"content":"Visiting Researcher, Cardiovascular Institute, Stanford University College of Medicine, USA"},
+    {"date":null,"content":"現 한양대학교구리병원 내분비대사내과 교수"}
+  ],
+  "학술":[
+    {"date":null,"content":"대한내분비학회 총무이사"},{"date":null,"content":"대한당뇨병학회 간행위원회 Associate Editor, 윤리위원회, 기획위원회"},
+    {"date":null,"content":"대한노인병학회   학술위원회"},{"date":null,"content":"대한비만학회"},
+    {"date":null,"content":"한국지질동맥경화학회"}
+  ],
+  "언론":[
+    {"targetDate":null,"type":"KBS","text":"KBS","url":"https://vod .kbs.co.kr/index.html?source=episode&sname=vod&stype=vod&program_code=T2000-0032&program_id=PS-2022063301-01-000&broadcast_complete_yn=N&local_station_code=00&section_code=05&section_sub_code=03","issuer":null},
+    {"targetDate":null,"type":"KBS","text":"KBS","url":"https://vod.kbs.co.kr/index.html?source=episode&sname=vod&stype=vod&program_code=T2000-0038&program_id=PS-2022055835-01-000&broadcast_complete_yn=N&local_station_code=00&section_code=05&section_sub_code=03","issuer":null},
+    {"targetDate":null,"type":"NEWS","text":"NEWS","url":"javascript:nttView('news', '10612')","issuer":null},
+    {"targetDate":null,"type":"NEWS","text":"NEWS","url":"javascript:nttView('news', '10546')","issuer":null}],
+  "저서":[]
+}

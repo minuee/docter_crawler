@@ -1,3 +1,19 @@
+/**
+ * ==================================================================================================
+ *                                    ** 중요 시작 규칙 **
+ * ==================================================================================================
+ *
+ * 모든 작업은 항상 여기서 시작해야 합니다.
+ *
+ * 별도의 지시가 없는 한, 가장 먼저 수행해야 할 작업은 1단계 수집을 시작하는 것입니다.
+ * 이 작업은 '/v1/c/crawling_bedoc/collect2' 엔드포인트를 호출하여 수행됩니다.
+ *
+ * 셸 명령어 예시:
+ * curl http://localhost:1100/v1/c/crawling_bedoc/collect2
+ *
+ * 1단계가 완료된 후에만 2단계(Playwright Fallback)로 진행해야 합니다.
+ *
+ */
 // This script is a guide for the Gemini assistant to perform the automated, multi-phase parsing process.
 // It codifies the logic for handling the single, stateful JSON file for each doctor.
 
@@ -11,6 +27,7 @@ const path = require('path');
   "bedoc_doctorname": "김기환",
   "bedoc_deptname": "간담췌외과",
   "bedoc_doctor_site": "https://www.cmcujb.or.kr/page/doctor/doctor_view.asp?p_sqno=54",
+  "site_type": "single", // Can be 'single', 'list', or 'popup'
   "bedoc_hospitalname": "가톨릭대학교의정부성모병원",
   "hospital_tel": "1661-7500",
   "hospital_name": "가톨릭대학교의정부성모병원",
@@ -33,12 +50,16 @@ const path = require('path');
     { "date": "1993 ~ 1994", "content": "지방공사강남병원 인턴" },
     { "date": "1995 ~ 1999", "content": "의정부성모병원 외과 레지던트" },
     { "date": "1999 ~ 2002", "content": "의정부성모병원 외과 임상강사" },
-    { "date": "2002 ~ 2004", "content": "의정부성모병원 외과 전임강사" },
-    { "date": "2004 ~ 2010", "content": "의정부성모병원 외과 조교수" },
-    { "date": "2010 ~ 2017", "content": "의정부성모병원 외과 부교수" },
     { "date": "2015", "content": "의정부성모병원 외과 임상과장" },
     { "date": "2017 ~ 현재", "content": "의정부성모병원 외과 교수" },
     { "date": "2007", "content": "Univ. of Pittsburgh (방문 또는 연수 추정)" }
+  ],
+  "약력": [
+    // '약력'은 '학력'과 '경력'을 통합한 정보입니다.
+    // '약력' 내에서 '학력'을 구분하는 기준: 내용에 '학사', '석사', '박사', '졸업' 등의 키워드가 포함된 경우
+    // 예시: { "date": "YYYY ~ YYYY", "content": "내용 (학력)" }
+    // 그 외의 내용은 '경력'으로 분류합니다.
+    // 예시: { "date": "YYYY ~ 현재", "content": "내용 (경력)" }
   ],
   "수상": [
     { "date": "2025.02.20", "content": "로봇수술 700례 달성" },
@@ -48,10 +69,6 @@ const path = require('path');
     { "date": "2021 ~ 현재", "content": "한국 간담췌외과학회 경인지회 회장" },
     { "date": null, "content": "대한중환자의학회 정회원" },
     { "date": null, "content": "대한임상종양학회 평생회원" },
-    { "date": null, "content": "대한이식학회 정회원" },
-    { "date": null, "content": "한국간담췌외과학회 평생회원" },
-    { "date": null, "content": "분자생물학회 정회원" },
-    { "date": null, "content": "대한내시경복강경외과학회 평생회원" },
     { "date": null, "content": "대한외과학회 평생회원" }
   ],
   "언론": [
@@ -59,11 +76,14 @@ const path = require('path');
     { "targetDate": null, "type": "유튜브", "text": "로봇수술 어떻게 활용되고 있을까? (가톨릭대학교 의정부성모병원)", "url": null, "issuer": "가톨릭대학교 의정부성모병원" },
     { "targetDate": null, "type": "기사", "text": "의정부성모병원 외과, 단일공 복강경수술 1000례 돌파 관련 기사", "url": null, "issuer": null }
   ],
-  "저서": [],
+ "저서": [
+    { "date": "2025", "content": "「오늘부터 변비탈출」 2022년","issuer": "병원신문" },
+    {"date": "2025","content": "「알고먹자 유산균」 2021년","issuer": "병원신문" },
+  ]
   "논문": [
-    "Robotic surgery enables safe and comfortable single-incision cholecystectomy: A comparison of robotic and laparoscopic approaches for single-incision surgery (JOURNAL OF MINIMAL ACCESS SURGERY, 2020년 9월, 공동저자)",
+    "Robotic surgery enables safe and comfortable single-incision cholecystectomy: A comparison of robotic and laparoscopic approaches for single-incision surgery (JOURNAL OF MINIMAL ACCESS SURGURY, 2020년 9월, 공동저자)",
     "Serum level of visfatin can reflect the severity of inflammation in patients with acute cholecystitis (ANNALS OF SURGICAL TREATMENT AND RESEARCH, 2020년 7월, 공동저자)",
-    "Greater Saphenous Vein Graft Revascularization of the Left Hepatic Artery after Resection of Intrahepatic Cholangiocarcinoma with Common Hepatic Artery Resection (ARCHIVES OF HAND AND MICROSURGERY, 2020년 6월, 공동저자)",
+    "Greater Saphenous Vein Graft Revascularization of the Left Hepatic Arterty after Resection of Intrahepatic Cholangiocarcinoma with Common Hepatic Artery Resection (ARCHIVES OF HAND AND MICROSURGERY, 2020년 6월, 공동저자)",
     "A novel antifibrotic strategy utilizing conditioned media obtained from miR-150-transfected adipose-derived stem cells: validation in an animal model of liver fibrosis (EXPERIMENTAL AND MOLECULAR MEDICINE, 2020년 3월, 공동저자)",
     "A Novel Way of Preventing Postoperative Pancreatic Fistula by Directly Injecting Profibrogenic Materials into the Pancreatic Parenchyma (INTERNATIONAL JOURNAL OF MOLECULAR SCIENCES, 2020년 3월, 공동저자)",
     "Generation of induced secretome from adipose-derived stem cells specialized for disease-specific treatment: An experimental mouse model (WORLD JOURNAL OF STEM CELLS, 2020년 1월, 공동저자)",
@@ -81,6 +101,51 @@ const path = require('path');
 
 /**
  * ==================================================================================================
+ *                                    ** 중요 데이터 구조 규칙 **
+ * ==================================================================================================
+ *
+ * '학력', '경력', '수상', '학술', '언론', '저서', '논문'과 같이 배열 형태의 데이터를 저장할 때는
+ * 반드시 다음 한글 키(key)를 사용해야 합니다. 영문 키(예: 'education')는 허용되지 않습니다.
+ *
+ * 예시:
+ * {
+ *   "학력": [
+ *     { "date": "YYYY ~ YYYY", "content": "내용" },
+ *     ...
+ *   ],
+ *   "경력": [
+ *     { "date": "YYYY ~ 현재", "content": "내용" },
+ *     ...
+ *   ],
+ *   "수상": [
+ *     { "date": "YYYY.MM.DD", "content": "내용" },
+ *     ...
+ *   ],
+ *   "학술": [
+ *     { "date": "YYYY ~ 현재", "content": "내용" },
+ *     ...
+ *   ],
+ *   "언론": [
+ *     { "targetDate": "YYYY.MM.DD", "type": "기사", "text": "내용", "url": null, "issuer": "발행처" },
+ *     ...
+ *   ],
+ *   "저서": [
+ *      { "date": "2025", "content": "「오늘부터 변비탈출」 2022년","issuer": "병원신문" },
+      ]
+ *     ...
+ *   ],
+ *   "논문": [
+ *     "논문 내용",
+ *     ...
+ *   ]
+ * }
+ *
+ * 이 규칙은 데이터 일관성과 시스템 전반의 호환성을 위해 필수적입니다.
+ *
+ */
+
+/**
+ * ==================================================================================================
  *                                    OVERALL WORKFLOW
  * ==================================================================================================
  *
@@ -91,15 +156,15 @@ const path = require('path');
  *     - SUCCESS: It writes a JSON file for the doctor with `isSearchType: 'html'` and all extracted data.
  *     - FAILURE: It writes a JSON file with `isSearchType: 'html_failed'` to queue the doctor for Phase 2.
  *
- * 2.  **Phase 2: Google Search Fallback (Orchestrated by the Gemini Assistant)**
+ * 2.  **Phase 2: Playwright Fallback (Orchestrated by the Gemini Assistant)**
  *     - After Phase 1 is complete, Gemini finds all JSON files where `isSearchType` is `html_failed`.
- *     - For each file, Gemini follows the "Gemini Execution Plan for Google Fallback" described below.
+ *     - For each file, Gemini reads the `site_type` field and follows the corresponding advanced parsing plan described below.
  *
  */
 
 /**
  * ==================================================================================================
- *                  GEMINI EXECUTION PLAN FOR GOOGLE FALLBACK (PHASE 2)
+ *                  GEMINI EXECUTION PLAN FOR PLAYWRIGHT FALLBACK (PHASE 2)
  * ==================================================================================================
  */
 function processGoogleFallback() {
@@ -115,74 +180,100 @@ function processGoogleFallback() {
 
     // For each task file found, perform the following actions:
 
-    // Gemini Action 2: Read the file to get the original doctorData.
+    // Gemini Action 2: Read the file to get the original doctorData, including the new 'site_type' field.
     // const doctorData = JSON.parse(fs.readFileSync(taskPath, 'utf-8'));
 
-    // Gemini Action 3: Construct the Google Search query and execute it.
-    const promptForGoogleSearch = `
-        // Gemini, please construct the search query using the doctorData variables.
-        // const query = outes$outes{doctorData.hospital_name} outes$outes{doctorData.bedoc_doctorname} outes$outes{doctorData.bedoc_deptname} outes$outes{doctorData.hospital_addr} 최신 프로필 경력 학력 사진 수상 학술 언론 저서 논문outes`;
-        // Then, execute the google_web_search tool with this query.
+    // Gemini Action 3: Advanced Parsing via Playwright based on 'site_type'
+    const promptForAdvancedParsing = `
+        // Gemini, for this 'html_failed' task, you will perform a targeted parsing routine with Playwright based on the 'site_type' provided in the doctor's data.
+        //
+        // ==================================================================================================
+        // **매우 중요: PARSER.JS 사용 지침**
+        // ==================================================================================================
+        // 각 병원별로 'parser.js' 파일이 해당 병원의 데이터 디렉토리 내에 생성 및 유지되어야 합니다.
+        // (예: services/crawling_bedoc/data/{aiga_hid}/parser.js).
+        // 이 'parser.js' 파일은 해당 병원의 모든 의사에게 재사용 가능해야 합니다.
+        // 이 파일은 의사별 데이터(bedoc_doctorname, bedoc_deptname, hospital_site, site_type 등)를
+        // 명령줄 인자로 받아 처리해야 합니다.
+        // **절대 범용 Playwright 스크립트를 사용하지 마십시오.** 각 병원별 'parser.js'를 사용해야 합니다.
+        // 이 파일은 사용 후 삭제되어서는 안 됩니다.
+        // ==================================================================================================
+        //
+        // ==================================================================================================
+        // **주의: PARSER.JS 재사용 및 업데이트 절차**
+        // ==================================================================================================
+        // 1. **항상 기존 파서 사용을 최우선으로 합니다.**
+        //    - 작업을 시작할 때, 해당 병원 디렉토리(services/crawling_bedoc/data/{aiga_hid}/)에 'parser.js'가 이미 있는지 확인합니다.
+        //    - 파일이 존재하면, **반드시** 그 파일을 먼저 실행하여 데이터 수집을 시도해야 합니다.
+        //    - 절대로 웹사이트를 먼저 분석하거나 새 파서를 만들려고 시도해서는 안 됩니다. 기본 원칙은 '재사용'입니다.
+        //
+        // 2. **파서 수정은 수집 실패 시에만 진행합니다.**
+        //    - 기존 'parser.js'를 실행했지만, '윤강섭' 의사 사례처럼 데이터 필드가 비어있는 등 결과가 만족스럽지 않을 경우에만 파서 수정 단계로 넘어갑니다.
+        //    - 이 경우에만 웹사이트 구조를 다시 분석하여 기존 'parser.js'를 디버깅하고 업데이트합니다.
+        // ==================================================================================================
+        //
+        // Your task is to:
+        // 1.  **Read doctorData.site_type**. This will be 'single', 'list', or 'popup'.
+        // 2.  **Navigate**: Launch a headless browser and navigate to doctorData.bedoc_doctor_site. Wait for the page to fully render.
+        //
+        // **시간 초과 정책**:
+        // Playwright 파싱 스크립트('parser.js') 내에 자체 타임아웃 로직을 구현해야 합니다.
+        // 스크립트 실행 시 타이머를 설정하고, 10분이 경과하면 '더보기' 버튼 클릭 등의 데이터 수집 작업을 중단해야 합니다.
+        // 시간이 초과되면, 스크립트는 오류를 발생시키는 대신 그때까지 수집된 데이터를 바탕으로 정상적으로 결과물을 출력하고 종료되어야 합니다.
+        // 이를 통해 작업이 무한정 실행되는 것을 방지하고, 제한 시간 내에 수집된 정보라도 활용할 수 있습니다.
+        //
+        // 3.  **Execute Action based on 'site_type'**:
+        //
+        //     a. **If 'site_type' is 'single'**:
+        //        - The current page is the detail page. The target HTML is ready. Proceed directly to Step 4 (Parse Final Content).
+        //
+        //     b. **If 'site_type' is 'list'**:
+        //        - **Locate Doctor**: Find the specific HTML element for the target doctor by searching for doctorData.bedoc_doctorname and/or doctorData.bedoc_deptname.
+        //        - **Find & Click Target**: Within the doctor's element, find and click the link or button that navigates to their detail page.
+        //        - **Wait for Navigation**: Wait for the page navigation to complete. The new page's HTML is your target HTML. Proceed to Step 4.
+        //
+        //     c. **If 'site_type' is 'popup'**:
+        //        - **Locate Doctor**: Find the specific HTML element for the target doctor by searching for doctorData.bedoc_doctorname and/or doctorData.bedoc_deptname.
+        //        - **Find & Click Target**: Within the doctor's element, find and click the button that opens the details popup (e.g., "상세보기").
+        //        - **Handle Popup**: You must handle two kinds of popups.
+        //             i.  **New Window/Tab**: Listen for a 'popup' event in Playwright. If a new window opens, switch your context to it. That new window's HTML is your target HTML.
+        //             ii. **Modal/Layer**: If no new window opens, the details are in a modal on the same page. Wait for the modal element to appear, then the HTML of the current page (including the modal) is your target HTML.
+        //        - Once the popup content is accessible, proceed to Step 4.
+        //
+        // 4.  **Parse Final Content**:
+        //     a. You should now have the final target HTML containing the doctor's detailed profile.
+        //     b. **CRITICAL PRE-PROCESSING STEP:** Sanitize this final HTML. Remove '<script>', '<style>', '<nav>', etc., and focus on core content tags ('<main>', '<article>', '<table>', '<p>') to avoid errors.
+        //     c. Analyze the **sanitized content** to extract all required fields ('profileUrl', 'specialty', '학력', '경력', etc.).
+        //
+        // 5.  **Synthesize Data**: Create a new JSON object ('synthesizedData') with the extracted data.
     `;
 
-    // Gemini Action 4: Synthesize the final JSON from the original data and Google results.
-    const promptForSynthesis = `
-        // Gemini, please analyze the Google Search results to find the doctor's profile.
-        // Extract the following fields:
-        // - `doctorDetailUrl`: The specific detail page URL for the doctor. This field must NEVER be null.
-        //   - Prioritize finding a `doctorDetailUrl` from Google search results that shares the same domain as `doctorData.hospital_site`.
-        //   - If no such specific URL is found, or if the found URL is just the main hospital site (e.g., ending in .kr, .com, .kr/, .com/), use `doctorData.hospital_site` as the base.
-        //   - CRITICAL MANDATORY RULE: Always append the query string `?deptname=${doctorData.bedoc_deptname}&doctorName=${doctorData.bedoc_doctorname}` to the chosen `doctorDetailUrl`. The final URL must always include these parameters.
-        // - `profileUrl`: The URL of a profile picture.
-        // - `specialty`: The doctor's specialty. IMPORTANT: This must be a single string with values separated by commas (e.g., "Cardiology,Internal Medicine"). It must NOT be a JSON array.
-        // - `학력`: An array of objects, each with `date` (YYYY.MM or null) and `content`.
-        // - `경력`: An array of objects, each with `date` (YYYY.MM or null) and `content`.
-        // - `수상`: An array of objects, each with `date` (YYYY.MM or null) and `content`.
-        // - `학술`: An array of objects, each with `date` (YYYY.MM or null) and `content`.
-        // - `언론`: An array of objects, each with `targetDate`, `type`, `text`, `url`, `issuer`.
-        // - `저서`: An array of objects, each with `targetDate`, `type`, `text`, `url`, `issuer`.
-        // - `논문`: An array of strings. IMPORTANT: When extracting content for '논문', ensure all double quotes (") are removed, and single quotes (') are converted to backticks (`) to prevent JSON parsing issues.
-        // IMPORTANT: All the above fields (`학력` through `논문`) must use their Korean names as JSON keys.
-        // - `searchHospitalName`: The name of the hospital found in the Google search results.
-        // - `searchHospitalAddress`: The address of the hospital found in the Google search results.
-        // - `isSameHospital`: Boolean, true if `searchHospitalName` is similar to `doctorData.hospital_name`, false otherwise.
-        //
-        // Determine `found_hospital_aiga_hid`:
-        // - If `isSameHospital` is true, set `found_hospital_aiga_hid` to `doctorData.aiga_hid`.
-        // - If `isSameHospital` is false, use `controller.getNewHospitalID(synthesizedData.searchHospitalName, synthesizedData.searchHospitalAddress)` to find the new hospital's AIGA ID.
-        //   - If `getNewHospitalID` returns a valid ID, set `found_hospital_aiga_hid` to that ID.
-        //   - Otherwise (if `getNewHospitalID` fails or returns no ID), set `found_hospital_aiga_hid` to `doctorData.aiga_hid`.
-        //
-        // Combine this with any useful data from the original doctorData object.
-        // Create the final JSON object.
-    `;
-
-    // Gemini Action 5: Check doctor's attendance at the hospital.
+    // Gemini Action 4: Check doctor's attendance at the hospital.
     const promptForIsAttend = `
-        // Gemini, using the 'doctorDetailUrl' (or 'profileUrl' if 'doctorDetailUrl' is null) from the synthesized data,
-        // read the content of that URL.
-        // Then, check if 'doctorData.bedoc_deptname' and 'doctorData.bedoc_doctorname' are present in the page content.
-        // Set 'isAttend' to true if both are found, false otherwise.
-        // Add this 'isAttend' field to the synthesized JSON data.
+        // Gemini, using the final sanitized content from the parsing step (Action 3),
+        // check if 'doctorData.bedoc_doctorname' is present.
+        // The presence of the doctor's name on their own profile page/popup is a strong indicator of current attendance.
+        // Set 'isAttend' to true if the name is found, false otherwise.
+        // Add this 'isAttend' field to the synthesizedData JSON object.
     `;
 
-    // Gemini Action 6: Update the JSON file with the new data.
+    // Gemini Action 5: Update the JSON file with the new data.
     const promptForFileUpdate = `
-        // Gemini, overwrite the existing JSON file with the newly synthesized data.
-        // - If data was found: set outesisExist: trueoutes and outesisSearchType: 'google'outes.
-        // - If no data was found after the search: set outesisExist: falseoutes and outesisSearchType: 'google'outes.
-        // Note: For files within 'services/crawling_bedoc/data/', do not ask for confirmation before overwriting. For other files, ask for confirmation.
-    `
+        // Gemini, merge the 'synthesizedData' with the original 'doctorData'.
+        // Then, overwrite the existing JSON file with the final merged data.
+        // - If new data was extracted: set isExist: true and isSearchType: 'html_playwright'.
+        // - If no new data was extracted after the Playwright attempt: set isExist: false and isSearchType: 'html_playwright_failed'.
+        // Note: For files within 'services/crawling_bedoc/data/', do not ask for confirmation before overwriting.
+    `;
 
     // This is a summary of the prompts for Gemini to follow for each failed task.
-    console.log("--- Gemini Execution Plan for Google Fallback ---");
+    console.log("--- Gemini Execution Plan for Playwright Fallback ---");
     console.log("1. FIND all JSON files where isSearchType == 'html_failed'.");
-    console.log("2. For each file, READ its content.");
-    console.log("3. GOOGLE SEARCH using prompt:", promptForGoogleSearch.trim());
-    console.log("4. SYNTHESIZE final JSON object using prompt:", promptForSynthesis.trim());
-    console.log("5. CHECK doctor attendance using prompt:", promptForIsAttend.trim());
-    console.log("6. UPDATE the original JSON file using prompt:", promptForFileUpdate.trim());
-    console.log("7. FINAL VERIFICATION: Check for any remaining 'html_failed' files.");
+    console.log("2. For each file, READ its content (including 'site_type').");
+    console.log("3. EXECUTE advanced parsing based on 'site_type' using prompt:", promptForAdvancedParsing.trim());
+    console.log("4. CHECK doctor attendance from final content using prompt:", promptForIsAttend.trim());
+    console.log("5. UPDATE the original JSON file using prompt:", promptForFileUpdate.trim());
+    console.log("6. FINAL VERIFICATION: Check for any remaining 'html_failed' or 'html_playwright_failed' files.");
 }
 
 /**
@@ -193,8 +284,8 @@ function processGoogleFallback() {
 // Gemini Action 7: Final Verification.
 // After all Phase 2 tasks are attempted, perform a final check.
 // Find all `{doctorName}.json` files in `services/crawling_bedoc/data/` subdirectories.
-// For each file, read its content and check if the value of the `isSearchType` field is still `'html_failed'`.
-// If any files are found with `isSearchType: 'html_failed'`, report them to the user.
-// If no such files are found, report that all 'html_failed' files have been processed.
+// For each file, read its content and check if the value of the `isSearchType` field is still `'html_failed'` or is `'html_playwright_failed'`.
+// If any such files are found, report them to the user for manual review.
+// If no such files are found, report that all fallback processes have been completed.
 
 module.exports = { processGoogleFallback };

@@ -72,13 +72,16 @@ async function parseWithGemini(doctorData) {
             }
         });
 
+        // Force all files to be processed by the Phase 2 fallback, as per user request.
+        // The initial parse is now only for URL validation and basic HTML capture.
         if (education.length === 0 && experience.length === 0) {
             throw new Error('Cheerio parser could not extract education or experience.');
         }
 
-        const parsedData = { ...doctorData, isExist: true, isSearchType: 'html', doctorSiteUrl: finalUrl, profileUrl, education, experience, thesis: [] };
+        // Even on successful extraction, mark as 'html_failed' to trigger Gemini's detailed processing.
+        const parsedData = { ...doctorData, isExist: null, isSearchType: 'html_failed', error: "Forced fallback for detailed parsing.", doctorSiteUrl: finalUrl, profileUrl, education, experience, thesis: [] };
         fs.writeFileSync(jsonFilePath, JSON.stringify(parsedData, null, 2));
-        console.log(`[On-Site] Success for ${bedoc_doctorname}.`);
+        console.log(`[On-Site] Marked for Fallback: ${bedoc_doctorname}.`);
         return { success: true, data: parsedData };
 
     } catch (error) {

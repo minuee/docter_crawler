@@ -1,0 +1,99 @@
+<!DOCTYPE html><html><head><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+<title>자동화 확인</title>
+
+<style>
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Segoe UI', sans-serif;
+	background-color: #e6f2ff; /* 연한 파란색 배경 */
+}
+
+.popup-wrapper {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.popup-box {
+	background-color: #ffffff;
+	border: 1px solid #99c2ff;
+	padding: 30px;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
+	text-align: center;
+	width: 80%;
+	max-width: 400px;
+}
+
+h2 {
+	color: #0059b3;
+	margin-bottom: 20px;
+}
+
+.g-recaptcha {
+	margin: 0 auto;
+	margin-top: 15px;
+	display: table;
+}
+
+#submitBtn {
+	margin-top: 20px;
+	padding: 10px 20px;
+	font-size: 15px;
+	background-color: #3399ff;
+	color: white;
+	border: none;
+	border-radius: 6px;
+	cursor: pointer;
+}
+
+#submitBtn:hover {
+	background-color: #267acc;
+}
+</style>
+</head>
+<body>
+	<div class="popup-wrapper">
+		<div class="popup-box">
+			<h2>로봇이 아닌지 확인해주세요</h2>
+
+			<form id="captchaForm" method="post" action="/seoul/botCaptchaVerifymethod.do">
+				<input type="hidden" id="capch_response" name="capch_response"> 
+				<input type="hidden" name="returnUrl" value="/seoul/mediteam/mditeam.do?action=detail&amp;searchCondition1=nmTagMediteam&amp;searchCommonSeq=&amp;searchCommonCd1=2210038&amp;searchCommonCd2=111110&amp;searchKeyword=%EC%9C%A4%EC%95%84%EC%9D%BC%EB%A6%B0">
+
+				<!-- <div class="g-recaptcha" data-sitekey="6LcDimMUAAAAAGQEJk4Cc3mlq6FcL8zd15fRegSj"></div> -->
+				<div class="g-recaptcha" id="capcha"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" width="304" height="78" role="presentation" name="a-v90r8mvkbsv8" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LcDimMUAAAAAGQEJk4Cc3mlq6FcL8zd15fRegSj&amp;co=aHR0cHM6Ly9zZW91bC5oeXVtYy5jb206NDQz&amp;hl=en&amp;v=44LqIOwVrGhp2lJ3fODa493O&amp;size=normal&amp;anchor-ms=20000&amp;execute-ms=15000&amp;cb=t6cpqnlwh1be"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div>
+				<button type="button" id="submitBtn" onclick="submitCaptchaForm()">확인</button>
+			</form>
+		</div>
+	</div>
+	
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/44LqIOwVrGhp2lJ3fODa493O/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-81KiK8GhWyH80MsZl1vdzmMYc0XQX9aDGqEfT0ckWF5GLPX10rwo5y8vjpybBo6f"></script><script>
+		function verifyCallback(response) {
+	      document.getElementById("capch_response").value = response;
+	    }
+
+		var onloadCallback = function() {
+			grecaptcha.render('capcha', {
+				'sitekey' : '6LcDimMUAAAAAGQEJk4Cc3mlq6FcL8zd15fRegSj',
+				'callback' : verifyCallback,
+			});
+		};
+
+		function submitCaptchaForm() {
+			var token = document.getElementById("capch_response").value;
+			if (!token) {
+				alert("로봇 인증을 완료해주세요.");
+				return false;
+			}
+			document.getElementById("captchaForm").submit();
+		}
+	</script>
+	<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&amp;render=explicit" async="" defer=""></script>
+
+
+<div style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility linear 0.3s, opacity 0.3s linear; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;"></div><div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div><div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div><div style="z-index: 2000000000; position: relative;"><iframe title="recaptcha challenge expires in two minutes" name="c-v90r8mvkbsv8" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/bframe?hl=en&amp;v=44LqIOwVrGhp2lJ3fODa493O&amp;k=6LcDimMUAAAAAGQEJk4Cc3mlq6FcL8zd15fRegSj&amp;bft=0dAFcWeA4tOVL0U7stmeDwFsoiT53WLwHK0Z5yETgRRTcTEm59Ro7WKRFbNBL6EoFtfJu5py65VTu9O8zFjiw8K1nhAiA2sHjRfg" style="width: 100%; height: 100%;"></iframe></div></div></body></html>

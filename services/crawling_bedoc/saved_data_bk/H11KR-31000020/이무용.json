@@ -1,0 +1,27 @@
+{
+  "hospital_cid": 394,
+  "bedoc_id": "A8224",
+  "bedoc_hospitalsite": "http://www.dumc.or.kr/isom",
+  "bedoc_doctorname": "이무용",
+  "bedoc_deptname": "심장내과",
+  "bedoc_hospitalname": "동국대일산병원",
+  "hospital_name": "동국대일산병원",
+  "aiga_hid": "H11KR-31000020",
+  "hospital_site": "http://www.dumc.or.kr/medical/department/departmentDoctorDetail.jsp?act=deptDocInfo&nowPageInfo=ILSH&nowMenuId=00000060&deptCode=CCVSC&docCode=050915",
+  "site_type": "single",
+  "hospital_addr": "경기도 고양시 일산동구 동국로 27, (식사동, 동국대학교일산병원)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "specialty": "협심증, 심근경색증, 동맥경화, 고혈압, 고지혈증, 심부전",
+  "학력": [
+    { "content": "서울대학교 의과대학 졸업" }
+  ],
+  "경력": [
+    { "content": "국립의료원 전공의" },
+    { "content": "서울대학교병원 전임의(순환기내과)" },
+    { "content": "독일 하이델베르크 의과대학병원" }
+  ],
+  "profileUrl": null,
+  "isAttend": true
+}

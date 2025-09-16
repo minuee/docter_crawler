@@ -1,0 +1,16 @@
+{
+  "hospital_cid": 348,
+  "bedoc_id": "A5429",
+  "bedoc_hospitalsite": "http://www.samsungyoon.com",
+  "bedoc_doctorname": "오하영",
+  "bedoc_deptname": "신장내과",
+  "bedoc_hospitalname": "삼성윤내과",
+  "hospital_name": "삼성윤내과",
+  "aiga_hid": "H31KR-11004044",
+  "hospital_site": "http://www.samsungyoon.com/src/sub0105.php",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 강남구 광평로 295, 사이룩스오피스텔 서관 2층 206,207,208,209,210,211호 (수서동)",
+  "isExist": "image",
+  "isSearchType": "html_playwright_failed",
+  "error": "Could not extract doctor profile from the provided URL. Content does not seem to contain doctor information."
+}
