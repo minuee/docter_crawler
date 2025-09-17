@@ -1,21 +1,20 @@
+
 const { chromium } = require('playwright');
 
-(async () => {
-    const url = process.argv[2];
-    if (!url) {
-        console.error('Please provide a URL as an argument.');
-        process.exit(1);
-    }
+const url = process.argv[2];
 
+async function getPageContent() {
     const browser = await chromium.launch({ headless: true });
     const page = await browser.newPage();
     try {
         await page.goto(url, { waitUntil: 'networkidle', timeout: 60000 });
-        const html = await page.content();
-        console.log(html);
+        const content = await page.content();
+        console.log(content);
     } catch (e) {
-        console.error(`Error fetching page: ${e.message}`);
+        console.error(`Error fetching page content: ${e.message}`);
     } finally {
         await browser.close();
     }
-})();
+}
+
+getPageContent();

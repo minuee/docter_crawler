@@ -1,183 +1,176 @@
+
 const { chromium } = require('playwright');
 const fs = require('fs');
-const path = require('path');
+const cheerio = require('cheerio');
 
-// Define findSectionData and findSpecialty outside parse function
-
-
-const findSpecialty = async (page) => {
-    const specialtyTitle = await page.$('p.title:has-text("전문분야")');
-    if (specialtyTitle) {
-        const explainTextDiv = await specialtyTitle.evaluateHandle(el => el.closest('.special').querySelector('.special_explain'));
-        if (explainTextDiv) {
-            return await explainTextDiv.evaluate(el => el.innerText.trim());
-        }
-    }
-    return '';
+// 텍스트 정제 함수
+const cleanText = (text) => {
+    return text ? text.replace(/\s+/g, ' ').replace(/"/g, '').trim() : '';
 };
 
-const extractCurriSection = async (page, titleText) => {
-    const sectionDiv = await page.$(`div.list:has(p.curri_title:has-text("${titleText}"))`);
-    if (sectionDiv) {
-        const listItems = await sectionDiv.$$eval('ul.dot_list li', (elements) => { // Fixed: $$eval
-            return elements.map(el => el.innerText.trim().replace(/"/g, "'")).filter(text => text); // Fixed: replace
-        });
-        return listItems;
+async function parseDoctorProfile(doctorData) {
+    if (!doctorData || !doctorData.hospital_site) {
+        throw new Error("Invalid doctor data or missing hospital site URL.");
     }
-    return [];
-};
 
-const extractSubSection = async (page, parentTitleText, subTitleText) => {
-    const parentSectionDiv = await page.$(`div.curri_section:has(p.curri_title:has-text("${parentTitleText}"))`);
-    if (parentSectionDiv) {
-        const subTitleElement = await parentSectionDiv.$(`p.curri_title:has-text("${subTitleText}")`);
-        if (subTitleElement) {
-            const listContainer = await subTitleElement.evaluateHandle(el => el.nextElementSibling);
-            if (listContainer && await listContainer.evaluate(el => el.tagName === 'UL')) { // Ensure it's a UL
-                const listItems = await listContainer.evaluate((ulElement) => {
-                    return Array.from(ulElement.querySelectorAll('li')).map(el => el.innerText.trim().replace(/"/g, "'")).filter(text => text);
-                });
-                return listItems;
-            }
-        }
-    }
-    return [];
-};
+    const browser = await chromium.launch({ headless: true });
+    const page = await browser.newPage();
 
-const extractBooksFromAcademicSection = async (page, parentTitleText) => {
-    const parentSectionDiv = await page.$(`div.curri_section:has(p.curri_title:has-text("${parentTitleText}"))`);
-    if (parentSectionDiv) {
-        const booksTitle = await parentSectionDiv.$('p.curri_title:has-text("저서")');
-        if (booksTitle) {
-            const booksList = await booksTitle.evaluateHandle(el => el.nextElementSibling);
-            if (booksList && await booksList.evaluate(el => el.tagName === 'UL')) { // Ensure it's a UL
-                const listItems = await booksList.evaluate((ulElement) => {
-                    return Array.from(ulElement.querySelectorAll('li')).map(el => el.innerText.trim().replace(/"/g, "'")).filter(text => text);
-                });
-                return listItems;
-            }
-        }
-    }
-    return [];
-};
-
-
-async function parse(url) {
-    const browser = await chromium.launch({ headless: true, args: ['--no-sandbox', '--disable-setuid-sandbox'] });
-    const context = await browser.newContext({ userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36' });
-    const page = await context.newPage();
+    const synthesizedData = { 학력: [], 경력: [], 논문: [], 저서: [], 언론: [], 수상: [], 학술: [] };
+    let error = null;
+    let isAttend = false;
 
     try {
-        await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+        await page.goto(doctorData.hospital_site, { waitUntil: 'networkidle', timeout: 60000 });
 
-        // Scrape papers
-        const paperTitles = [];
-        try {
-            // Wait for the "논문" tab to be active and content to be visible
-            await page.click('ul.news_tab li[rel="paper"]'); // Click the "논문" tab
-            await page.waitForSelector('div#paper ol.thesisList li', { state: 'visible', timeout: 10000 }); // Wait for thesis list items
+        if ((await page.content()).includes(doctorData.bedoc_doctorname)) {
+            isAttend = true;
+        }
 
-            const titlesOnPage = await page.$$eval('div#paper ol.thesisList li', (elements) => { // Fixed: $$eval
-                return elements.map(el => el.innerText.trim().replace(/"/g, "'")).filter(text => text); // Fixed: replace
-            });
-            paperTitles.push(...titlesOnPage);
+        const profileImgSrc = await page.$eval('.profile_topImg img', img => img.src).catch(() => null);
+        if (profileImgSrc) {
+            synthesizedData.profileUrl = new URL(profileImgSrc, doctorData.hospital_site).href;
+        }
+        
+        synthesizedData.specialty = cleanText(await page.$eval('dl.special dd', dd => dd.textContent).catch(() => ''));
 
-            // Check for "더보기" button for papers and click if available
-            try {
-                const moreButton = page.locator('div#paper .thesisBtn'); // Assuming thesisBtn is the "더보기" for papers
-                if (await moreButton.isVisible()) {
-                    await moreButton.click();
-                    await page.waitForTimeout(1000); // Small wait for content to load after click
-                    const additionalTitles = await page.$$eval('div#paper ol.thesisList li', (elements) => { // Fixed: $$eval
-                        return elements.map(el => el.innerText.trim().replace(/"/g, "'")).filter(text => text); // Fixed: replace
-                    });
-                    paperTitles.push(...additionalTitles);
+        const careerContent = await page.evaluate(() => {
+            const data = { '교수 경력': [], '진료 경력': [] };
+            document.querySelectorAll('.curri_area .list').forEach(list => {
+                const title = list.querySelector('.curri_title')?.textContent.trim();
+                if (title === '교수 경력' || title === '진료 경력') {
+                    const items = [];
+                    list.querySelectorAll('.dot_list li').forEach(li => items.push(li.textContent.trim()));
+                    data[title] = items;
                 }
-            } catch (e) {
-                console.log(`No additional paper "더보기" button found or clickable: ${e.message}`);
+            });
+            return data;
+        });
+
+        if (careerContent['교수 경력']) {
+            careerContent['교수 경력'].forEach(item => synthesizedData.경력.push({ date: null, content: cleanText(item) }));
+        }
+        if (careerContent['진료 경력']) {
+            careerContent['진료 경력'].forEach(item => synthesizedData.경력.push({ date: null, content: cleanText(item) }));
+        }
+
+        const mixedSectionItems = await page.$$eval('div#ctl00_ContentPlaceHolder1_p2 ul.dot_list li', elements => {
+            return elements.map(el => ({ text: el.textContent.trim(), isPart: el.classList.contains('part') }));
+        });
+
+        let currentCategory = null;
+        mixedSectionItems.forEach(item => {
+            if (item.isPart) {
+                currentCategory = item.text;
+            } else if (item.text) {
+                if (currentCategory === '학회') {
+                    synthesizedData.학술.push({ date: null, content: cleanText(item.text) });
+                } else if (currentCategory === '수상경력') {
+                    synthesizedData.수상.push({ date: null, content: cleanText(item.text) });
+                } else if (currentCategory === '보직경력') {
+                    synthesizedData.경력.push({ date: null, content: cleanText(item.text) });
+                }
             }
+        });
 
-        } catch (e) {
-            console.error(`Could not scrape papers: ${e.message}`);
+        await page.click('ul.news_tab li[rel="paper"]');
+        await page.waitForTimeout(500);
+
+        let thesisMoreButtonVisible = true;
+        while (thesisMoreButtonVisible) {
+            const button = await page.$('.thesisBtn');
+            if (button && await button.isVisible()) {
+                await button.click();
+                await page.waitForTimeout(500);
+            } else {
+                break;
+            }
         }
 
-        // --- NEW: Extract specialty, education, experience, profileUrl outside page.evaluate ---
-        const specialty = await findSpecialty(page);
-        const professorExperience = await extractCurriSection(page, '교수 경력');
-        const clinicalExperience = await extractCurriSection(page, '진료 경력');
+        const paperContent = await page.content();
+        const $paper = cheerio.load(paperContent);
+        $paper('ol.thesisList li').each((i, el) => {
+            const paperText = cleanText($paper(el).text().replace(/^\d+\s*/, '').trim());
+            if (paperText) {
+                synthesizedData.논문.push(paperText);
+            }
+        });
 
-        let education = [];
-        let experience = [];
-        let academicActivities = [];
-        let books = [];
+        await page.click('ul.news_tab li[rel="article"]');
+        await page.waitForTimeout(500);
 
-        // Combine professor and clinical experience into 경력
-        experience = [...professorExperience, ...clinicalExperience].map(content => ({ content }));
-
-        // Extract data from "학회/연구/Postdoctorial Fellowship/수상경력" section
-        const academicSectionDiv = await page.$(`div.curri_section:has(p.curri_title:has-text("학회/연구/Postdoctorial Fellowship/수상경력"))`);
-        if (academicSectionDiv) {
-            const academicListItems = await academicSectionDiv.$eval('div.list > ul.dot_list li', (elements) => {
-                return elements.map(el => el.innerText.trim().replace(/"/g, "'")).filter(text => text);
-            });
-
-            // Categorize items from academicListItems
-            academicListItems.forEach(item => {
-                if (item.includes('학사') || item.includes('석사') || item.includes('박사') || item.includes('졸업')) {
-                    education.push({ content: item });
-                } else if (item.includes('학회')) {
-                    academicActivities.push({ content: item });
-                } else if (item.includes('연구')) {
-                    academicActivities.push({ content: item });
-                } else if (item.includes('Postdoctorial Fellowship')) {
-                    experience.push({ content: item }); // Treat as experience
-                } else if (item.includes('저서')) {
-                    books.push({ content: item });
-                } else {
-                    // Default to academic activities if not explicitly categorized
-                    academicActivities.push({ content: item });
-                }
-            });
+        let articleMoreButtonVisible = true;
+        while (articleMoreButtonVisible) {
+            const button = await page.$('.boardBtn');
+            if (button && await button.isVisible()) {
+                await button.click();
+                await page.waitForTimeout(500);
+            } else {
+                break;
+            }
         }
 
-        const profileUrl = null; // Explicitly set profileUrl to null as it's a placeholder
+        const articleContent = await page.content();
+        const $article = cheerio.load(articleContent);
+        $article('ul#tiles li').each((i, el) => {
+            const text = cleanText($article(el).find('.txt').text());
+            const date = cleanText($article(el).find('.date').text());
+            const url = $article(el).find('a').attr('href');
+            if (text) {
+                synthesizedData.언론.push({ targetDate: date, type: '기사', text: text, url: url ? new URL(url, doctorData.hospital_site).href : null, issuer: null });
+            }
+        });
 
-        // Scrape other data
-        const data = await page.evaluate((dataToPass) => {
-            const { scrapedPapers, specialty, education, experience, academicActivities, books, profileUrl } = dataToPass;
-            return {
-                specialty,
-                학력: education,
-                경력: experience,
-                논문: scrapedPapers.map(p => p.replace(/^\d+\.\s*/, '')), // Clean up numbering like "1. "
-                학술: academicActivities,
-                저서: books,
-                profileUrl,
-            };
-        }, { scrapedPapers: paperTitles, specialty, education, experience, academicActivities, books, profileUrl });
-
-        await browser.close();
-        return { success: true, data };
-
-    } catch (error) {
-        await browser.close();
-        console.error(`Error in schmc.ac.kr parser: ${error.message}`);
-        return { success: false, error: error.message };
+    } catch (e) {
+        error = `Playwright execution failed: ${e.message}`;
+        console.error(error);
+        isAttend = false;
+    } finally {
+        if (browser) {
+            await browser.close();
+        }
     }
+
+    const finalResult = { ...synthesizedData, isAttend, error };
+    Object.keys(finalResult).forEach(key => {
+        if (Array.isArray(finalResult[key]) && finalResult[key].length === 0) {
+            delete finalResult[key];
+        }
+    });
+
+    return finalResult;
 }
 
 if (require.main === module) {
-    (async () => {
-        const url = process.argv[2];
-        if (!url) {
-            console.error('Please provide a URL as an argument.');
-            process.exit(1);
-        }
-        const result = await parse(url);
-        if (result.success) {
-            console.log(JSON.stringify(result.data, null, 2));
-        }
-    })();
-}
+    const doctorFilePath = process.argv[2];
+    let doctorData;
+    try {
+        doctorData = JSON.parse(fs.readFileSync(doctorFilePath, 'utf-8'));
+    } catch (e) {
+        console.error(`Error reading or parsing file: ${doctorFilePath}`);
+        process.exit(1);
+    }
 
-module.exports = { parse };
+    parseDoctorProfile(doctorData)
+        .then(result => {
+            const updatedDoctorData = { ...doctorData, ...result };
+
+            if (result.error) {
+                updatedDoctorData.isSearchType = 'html_playwright_failed';
+                updatedDoctorData.isExist = false;
+            } else {
+                updatedDoctorData.isSearchType = 'html_playwright';
+                updatedDoctorData.isExist = true;
+            }
+            updatedDoctorData.isAttend = result.isAttend;
+            delete updatedDoctorData.error; // Clear previous errors on success
+
+            fs.writeFileSync(doctorFilePath, JSON.stringify(updatedDoctorData, null, 2), 'utf-8');
+            console.log(`Successfully updated file: ${doctorFilePath}`);
+        })
+        .catch(error => {
+            console.error(`Critical error processing ${doctorFilePath}:`, error);
+            const errorData = { ...doctorData, isSearchType: 'html_playwright_failed', isExist: false, error: error.message };
+            fs.writeFileSync(doctorFilePath, JSON.stringify(errorData, null, 2), 'utf-8');
+        });
+}
