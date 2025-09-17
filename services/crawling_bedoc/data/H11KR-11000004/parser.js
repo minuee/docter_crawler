@@ -91,105 +91,82 @@ const cheerio = require('cheerio');
 
         // --- Start of "더보기" button handling ---
         const clickMoreButtons = async () => {
-            const maxClicks = 50;
+            const maxClicks = 50; // Set a hard limit to prevent infinite loops
             let clickedCount = 0;
-            let buttonFoundAndClicked = true;
 
-            while (buttonFoundAndClicked && clickedCount < maxClicks) {
-                buttonFoundAndClicked = false;
+            while (clickedCount < maxClicks) {
                 console.log(`--- Iteration ${clickedCount + 1} ---`);
+                let buttonFoundAndClickedThisIteration = false;
 
-                // Store initial state of content sections
-                const thesisElements = await page.$('tbody#thesis tr');
-                const initialThesisCount = thesisElements ? thesisElements.length : 0;
+                // Store initial counts
+                const initialThesisCount = (await page.$('tbody#thesis tr'))?.length || 0;
+                const initialBookCount = (await page.$('tbody#book tr'))?.length || 0;
+                const initialGenericContentCount = (await page.$('div.info_box.infotable_box tbody tr'))?.length || 0;
+                const initialNewsCount = (await page.$('div.infonews_box_list ul#news li'))?.length || 0;
 
-                const bookElements = await page.$('tbody#book tr');
-                const initialBookCount = bookElements ? bookElements.length : 0;
-
-                const genericContentElements = await page.$('div.info_box.infotable_box tbody tr');
-                const initialGenericContentCount = genericContentElements ? genericContentElements.length : 0;
-
-                const newsElements = await page.$('div.infonews_box_list ul#news li');
-                const initialNewsCount = newsElements ? newsElements.length : 0;
-
-                // Generic "더보기" buttons
-                const genericMoreButton = await page.$('button:has-text("더보기")') ||
-                                          await page.$('a:has-text("더보기")') ||
-                                          await page.$('button:has-text("더보기 +")') ||
-                                          await page.$('a:has-text("더보기 +")');
-
+                // Attempt to click generic "더보기" button
+                const genericMoreButton = await page.$('button:has-text("더보기"), a:has-text("더보기"), button:has-text("더보기 +"), a:has-text("더보기 +")');
                 if (genericMoreButton) {
-                    console.log('Found generic "더보기" button.');
                     try {
+                        console.log('Found generic "더보기" button.');
                         await genericMoreButton.click();
-                        await page.waitForTimeout(1000); // Add a small delay after click
-                        // Wait for content to change, or a maximum of 5 seconds
                         await page.waitForFunction(
-                            (initialGenericCount, initialNewsCount) =>
-                                document.querySelectorAll('div.info_box.infotable_box tbody tr').length > initialGenericCount ||
-                                document.querySelectorAll('div.infonews_box_list ul#news li').length > initialNewsCount,
+                            (counts) => 
+                                (document.querySelectorAll('div.info_box.infotable_box tbody tr').length > counts.generic) ||
+                                (document.querySelectorAll('div.infonews_box_list ul#news li').length > counts.news),
                             { timeout: 5000 },
-                            initialGenericContentCount,
-                            initialNewsCount
-                        ).catch(() => console.log('Generic content or news content did not expand within 5 seconds.'));
-                        clickedCount++;
-                        buttonFoundAndClicked = true;
-                        console.log('Clicked generic "더보기" button successfully.');
-                    } catch (clickError) {
-                        console.log(`Could not click generic more button: ${clickError.message}`);
+                            { generic: initialGenericContentCount, news: initialNewsCount }
+                        );
+                        console.log('Generic content expanded.');
+                        buttonFoundAndClickedThisIteration = true;
+                    } catch (e) {
+                        console.log('Generic "더보기" click did not expand content or timed out.');
                     }
-                } else {
-                    console.log('No generic "더보기" button found.');
                 }
 
-                // Specific "더보기" for 논문 (thesis)
-                const thesisMoreButton = await page.$('a[href="javascript:moreThesis();"]');
+                // Attempt to click thesis "더보기" button
+                const thesisButtonSelector = 'a.btn_gray_line[href="javascript:moreThesis();"]';
+                const thesisMoreButton = await page.$(thesisButtonSelector);
                 if (thesisMoreButton) {
-                    console.log('Found thesis "더보기" button.');
                     try {
+                        console.log('Found thesis "더보기" button.');
                         await page.evaluate(() => moreThesis());
-                        // Wait for thesis content to change
                         await page.waitForFunction(
                             (initialCount) => document.querySelectorAll('tbody#thesis tr').length > initialCount,
                             { timeout: 5000 },
                             initialThesisCount
-                        ).catch(() => console.log('Thesis content did not expand within 5 seconds.'));
-                        clickedCount++;
-                        buttonFoundAndClicked = true;
-                        console.log('Executed moreThesis() for 논문 successfully.');
-                    } catch (evalError) {
-                        console.log(`Could not execute moreThesis(): ${evalError.message}`);
+                        );
+                        console.log('Thesis content expanded.');
+                        buttonFoundAndClickedThisIteration = true;
+                    } catch (e) {
+                        console.log('Thesis "더보기" click did not expand content or timed out.');
                     }
-                } else {
-                    console.log('No thesis "더보기" button found.');
                 }
 
-                // Specific "더보기" for 저서 (books)
+                // Attempt to click book "더보기" button
                 const bookMoreButton = await page.$('a[href="javascript:fnGetTreatise(\'book\');"]');
                 if (bookMoreButton) {
-                    console.log('Found book "더보기" button.');
                     try {
+                        console.log('Found book "더보기" button.');
                         await page.evaluate(() => fnGetTreatise('book'));
-                        // Wait for book content to change
                         await page.waitForFunction(
                             (initialCount) => document.querySelectorAll('tbody#book tr').length > initialCount,
                             { timeout: 5000 },
                             initialBookCount
-                        ).catch(() => console.log('Book content did not expand within 5 seconds.'));
-                        clickedCount++;
-                        buttonFoundAndClicked = true;
-                        console.log('Executed fnGetTreatise(\'book\') for 저서 successfully.');
-                    } catch (evalError) {
-                        console.log(`Could not execute fnGetTreatise('book'): ${evalError.message}`);
+                        );
+                        console.log('Book content expanded.');
+                        buttonFoundAndClickedThisIteration = true;
+                    } catch (e) {
+                        console.log('Book "더보기" click did not expand content or timed out.');
                     }
-                } else {
-                    console.log('No book "더보기" button found.');
                 }
 
-                console.log(`End of iteration ${clickedCount}. buttonFoundAndClicked: ${buttonFoundAndClicked}`);
-                // If no buttons were found or clicked in this iteration, stop.
-                if (!buttonFoundAndClicked) {
-                    break;
+                if (buttonFoundAndClickedThisIteration) {
+                    clickedCount++;
+                    await page.waitForTimeout(1000); // Wait a bit for UI to settle
+                } else {
+                    console.log('No more expandable content found. Exiting loop.');
+                    break; // Exit loop if no buttons were successfully clicked and expanded content
                 }
             }
         };
