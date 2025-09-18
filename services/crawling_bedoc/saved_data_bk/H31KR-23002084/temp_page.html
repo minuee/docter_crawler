@@ -1,0 +1,876 @@
+
+
+	<div id="log">
+		<div class="layer_alert">
+			<div class="txt_log mgb10"></div>
+			<div id="inputmsg"><a href="javascript:close_log('/');" class="btn btn_blue">확인</a></div>
+		</div>
+	</div>
+	
+	<script>
+	//$(document).ready(function(){
+	//	on_log("진료예약이 접수되었습니다.<br />빠른 시간내 상담원을 통하여 진료예약이<br />완료될수 있도록 도와드리겠습니다.","");
+	//});
+	</script>
+
+	<a href="javascript:scrollLink('wrap');" class="btn_totop">↑<br>위로가기</a>
+
+	<div id="quick">
+		<ul class="spec_ul css_animation">
+			<!--<li><a href="/front/reservation/diagnosis.php"><i><img src="/design/image/common/ico_aside1.png" alt="외래진료 예약" /></i>진료예약<br />안내</a></li>-->
+			<li><a href="/front/reservation/reservation_intro.php"><i><img src="/design/image/common/ico_aside1.png" alt="외래진료 예약"></i>진료예약<br>안내</a></li>
+			<!-- 2019-11-13 <li><a href="/front/reservation/screening.php"><i><img src="/design/image/common/ico_aside2.png" alt="건강검진 예약" /></i>증명서발급<br />안내</a></li> -->
+		</ul>
+		<ul class="second_ul">
+			<li class="btn_quick_come"><a href="/front/intro/contact.php">찾아오시는길</a></li>
+			<li class="block_quick_intro">
+				<div class="tit_quick_block">드림종합병원</div>
+				<div class="num_quick_block"><strong style="font-size:1.5em;">053.</strong><br><strong style="font-size:1.5em;">640.</strong><br><strong style="font-size:1.5em;">8800</strong></div>
+				<ul class="cs_quick_time">
+					<li class="txt_quick_date">평일<br>08:30~17:30</li>
+					<li class="txt_quick_date">토요일<br>08:30~12:30</li>
+				</ul>
+				<ul class="cs_quick_wrap01">
+					<li class="tit_cs"><i></i><br>진료협력센터</li>
+					<li class="num_cs" style="line-height:1;"><strong style="font-size:1.5em;">053.</strong><br><strong style="font-size:1.5em;">640.</strong><br><strong style="font-size:1.5em;">8871</strong></li>
+				</ul>
+				<ul class="cs_quick_time">
+					<li class="txt_quick_date">평일<br>08:30~17:30</li>
+					<li class="txt_quick_date">토요일<br>08:30~12:30</li>
+					<li class="txt_quick_date">운영시간 외<br><div>응급센터</div>053-640-8575</li>
+				</ul>
+				<ul class="cs_quick_wrap">
+					<li class="tit_cs"><i></i><br>24시간<br>응급진료</li>
+					<li class="num_cs" style="line-height:1;"><strong style="font-size:1.5em;">053.</strong><br><strong style="font-size:1.5em;">640.</strong><br><strong style="font-size:1.5em;">8575</strong></li>
+				</ul>
+			</li>
+		</ul>
+		<!-- 2019-11-29
+		<a href="javascript:scrollLink('wrap');" class="btn_aside_totop">TOP</a>
+		-->
+	</div><div id="wrap">
+	<!-- #header -->
+	<div id="header">
+		<!-- #gnb -->
+		<div id="gnb">
+		
+			<div class="inner">
+
+			<a href="/front/member/login.php" class="btn_gnb_login"><i></i>로그인</a>
+				<a href="/front/member/agree.php" class="btn_gnb_join"><i></i>회원가입</a>
+				
+				<a href="/front/etc/sitemap.php" class="btn_gnb_sitemap"><i></i>사이트맵</a>
+			</div>		</div>
+		<!-- // #gnb -->
+		<!-- #lnb -->
+		
+		<div id="lnb">
+			<div class="inner lnb_nav">
+				<h1><a href="/front/">asdafsfdf</a></h1>
+				<a href="javascript:;" class="toggle_lnb"><img src="/design/image/common/img_lnb_toggle.png" alt="토글"></a>
+				<ul class="lnb_nav_dep1">
+					<li><a href="/front/reservation/reservation_intro.php" class="btn_lnb_dep1">진료예약</a></li>
+					<li><a href="/front/medical/medical.php" class="btn_lnb_dep1">진료안내</a></li>
+					<li><a href="/front/board/list.php?code=health1" class="btn_lnb_dep1">건강정보</a></li>
+					<li><a href="/front/intro/ci.php" class="btn_lnb_dep1">병원안내</a></li>
+				</ul>
+			</div>
+			<div class="dummy_lnb">
+				<div class="cate_nav">
+					<div class="inner">
+						<ul class="lnb_dummy_dep1 fl_c">
+							<li class="tit_cate">
+								<div class="tit_lnb_cate">진료예약</div>
+								<div class="txt_lnb_cate">대한민국 대표 소화기 질환 중점병원<br>세상의 빛이 되는 병원</div>
+							</li>
+							<li class="line2">
+								<a href="/front/reservation/reservation_intro.php" class="btn_lnb_dep1">진료예약</a>
+								<!-- 2019-08-19 박용태 삭제
+								<div class="lnb_dummy_dep2">
+									<a href="javascript:;" class="btn_lnb_dep2">진료과예약</a>
+									<a href="javascript:;" class="btn_lnb_dep2">건강검진예약</a>
+								</div>
+								-->
+							</li>
+							<li class="line2">
+								<a href="/front/reservation/call.php" class="btn_lnb_dep1">전화예약</a>
+							</li>
+							<!--
+							<li class="line3">
+								<a href="javascript:;" class="btn_lnb_dep1">증명서발급신청</a>
+								<div class="lnb_dummy_dep2">
+									<a href="javascript:;" class="btn_lnb_dep2">증명서발급안내</a>
+									<a href="javascript:;" class="btn_lnb_dep2">인터넷증명서발급신청</a>
+									<a href="javascript:;" class="btn_lnb_dep2">제증명수수료금액</a>
+								</div>
+							</li>
+							-->
+						</ul>
+						<ul class="lnb_dummy_dep1 fl_c">
+							<li class="tit_cate">
+								<div class="tit_lnb_cate">진료안내</div>
+								<div class="txt_lnb_cate">대한민국 대표 소화기 질환 중점병원<br>세상의 빛이 되는 병원</div>
+							</li>
+							<li class="line3">
+								<a href="/front/medical/medical.php" class="btn_lnb_dep1">진료과</a>
+							</li>
+							<!-- 2019-10-24
+							<li class="line5">
+								<a href="/front/medical/center.php" class="btn_lnb_dep1">전문진료센터</a>
+							</li>
+							-->
+							<li class="line3">
+								<a href="/front/medical/clinic.php" class="btn_lnb_dep1">전문클리닉</a>
+							</li>
+							<li class="line3">
+								<a href="/front/medical/intro.php" class="btn_lnb_dep1">건강증진센터</a>
+								<div class="lnb_dummy_dep2">
+									<!--a href="/front/medical/intro.php" class="btn_lnb_dep2">건강증진센터 소개</a-->
+									<a href="/front/medical/program.php" class="btn_lnb_dep2">프로그램안내</a>
+									<a href="/front/medical/step.php" class="btn_lnb_dep2">검진절차</a>
+									<a href="/front/medical/health_reserv.php" class="btn_lnb_dep2">검진예약안내</a>
+									<a href="/front/medical/careful.php" class="btn_lnb_dep2">검진시 유의사항</a>
+									<a href="/front/medical/civil_health.php" class="btn_lnb_dep2">국민건강 보험공단 검진</a>
+								</div>
+							</li>
+							<!-- 2019-10-24
+							<li class="line5">
+								<a href="javascript:;" class="btn_lnb_dep1">응급의료센터</a>
+							</li>
+							-->
+						</ul>
+						<ul class="lnb_dummy_dep1 m_dp_n fl_c">
+							<li class="tit_cate">
+								<div class="tit_lnb_cate">건강정보</div>
+								<div class="txt_lnb_cate">대한민국 대표 소화기 질환 중점병원<br>세상의 빛이 되는 병원</div>
+							</li>
+							<li class="line2">
+								<a href="/front/board/list.php?code=health1" class="btn_lnb_dep1">건강강좌</a>
+							</li>
+							<li class="line2">
+								<a href="/front/board/list.php?code=health2" class="btn_lnb_dep1">질병정보</a>
+							</li>
+							<!--
+							<li class="line3">
+								<a href="/front/board/list.php?code=health3" class="btn_lnb_dep1">영양정보</a>
+							</li>
+							
+							<li>
+								<a href="/front/board/list.php?code=health4" class="btn_lnb_dep1">의료장비안내</a>
+							</li>
+							-->
+						</ul>
+						<ul class="lnb_dummy_dep1 fl_c">
+							<li class="tit_cate">
+								<div class="tit_lnb_cate">병원안내</div>
+								<div class="txt_lnb_cate">대한민국 대표 소화기 질환 중점병원<br>세상의 빛이 되는 병원</div>
+							</li>
+							<li class="line4">
+								<a href="/front/intro/greeting.php" class="btn_lnb_dep1">병원소개</a>
+								<div class="lnb_dummy_dep2">
+									<a href="/front/intro/greeting.php" class="btn_lnb_dep2">대표원장인사말</a>
+									<!-- <a href="/front/intro/introduce.php" class="btn_lnb_dep2">드림병원소개</a> -->
+									<a href="/front/intro/ci.php" class="btn_lnb_dep2">HI</a>
+								</div>
+							</li>
+							<li class="line4">
+								<a href="/front/intro/tour1.php" class="btn_lnb_dep1">이용안내</a>
+								<div class="lnb_dummy_dep2">
+									<a href="/front/intro/tour1.php" class="btn_lnb_dep2">병원둘러보기</a>
+									<!-- 2019-11-29 <a href="/front/intro/facilitie.php" class="btn_lnb_dep2">편의시설</a> -->
+									<a href="/front/intro/contact.php" class="btn_lnb_dep2">찾아오시는길</a>
+									<a href="/front/intro/equipment.php" class="btn_lnb_dep2">보유장비</a>
+							
+									<!-- 2019-10-24 <a href="/front/intro/park.php" class="btn_lnb_dep2">주차안내</a> -->
+								</div>
+							</li>
+							<li class="line4">
+								<a href="/front/board/list.php?code=photo" class="btn_lnb_dep1">드림톡톡</a>
+								<div class="lnb_dummy_dep2">
+									<a href="/front/board/list.php?code=photo" class="btn_lnb_dep2">드림포토</a>
+									<a href="/front/board/list.php?code=movie" class="btn_lnb_dep2">드림영상</a>
+									<a href="/front/board/list.php?code=share" class="btn_lnb_dep2">드림과나눔</a>
+									<!-- <a href="/front/board/list.php?code=consult" class="btn_lnb_dep2">드림상담실</a> -->
+								</div>
+							</li>
+							<li class="line4">
+								<a href="/front/board/list.php?code=notice" class="btn_lnb_dep1">고객센터</a>
+								<div class="lnb_dummy_dep2">
+									<a href="/front/board/list.php?code=notice" class="btn_lnb_dep2">공지사항</a>
+									<a href="/front/board/list.php?code=compliment" class="btn_lnb_dep2">칭찬합시다</a>
+									<a href="/front/board/customer.php" class="btn_lnb_dep2">고객의소리</a>
+									<a href="/front/board/list.php?code=faq" class="btn_lnb_dep2">자주하는질문</a>
+									<a href="/front/board/list.php?code=internship" class="btn_lnb_dep2">인턴쉽후기</a>
+								</div>
+							</li>
+							<!--
+							<li class="line5">
+								<a href="/front/board/list.php?code=event1" class="btn_lnb_dep1">이벤트</a>
+								<div class="lnb_dummy_dep2">
+									<a href="/front/board/list.php?code=event1" class="btn_lnb_dep2">나도 프로 SNS</a>
+									<a href="/front/board/list.php?code=event2" class="btn_lnb_dep2">오타를 찾아라</a>
+									<a href="/front/board/list.php?code=event3" class="btn_lnb_dep2">굿아이디어</a>
+								</div>
+							</li>
+							-->
+						</ul>
+					</div>
+				</div>
+				<div class="bg_dummy"></div>
+			</div>
+		</div>
+		<script>
+		$(".lnb_nav_dep1 li").on("mouseenter", function(e){
+			if($("html").hasClass("is_m")) return false;
+			var target = $(e.currentTarget);
+			var idx = target.index();
+			$("html").addClass("is_lnb");
+			$(".lnb_dummy_dep1").removeClass("active").eq(idx).addClass("active");
+		});
+		$(".bg_dummy").on("mouseenter", function(){
+			$("html").removeClass("is_lnb");
+		});
+
+		$(document).on("click", ".toggle_lnb", function(){
+			if($("html").hasClass("is_m")) {
+				$("html").removeClass("is_m");
+			} else {
+				$("html").addClass("is_m");
+			}
+		});
+		$(window).resize(function(){
+			if($(window).width() > 1200) $("html").removeClass("is_m");
+			if($(window).width() < 1200 && $("html").hasClass("is_m") == false) $("html").removeClass("is_lnb");
+		});
+		</script>		<!-- // #lnb -->
+	</div>
+	<!-- // #header -->
+	<!-- #container -->
+	<div id="container">
+				
+		<!-- content -->
+		<div id="content" class="sub">
+			<div class="inner">
+				<div id="snb">
+					
+					<div class="tit_snb">
+						<div class="cate_name1">Medical introduction</div>
+						<div class="cate_name2">진료안내</div>
+					</div>
+					<ul class="snb_nav">
+						<li>
+							<a href="/front/medical/medical.php" class="link_snb1 active">진료과</a>
+						</li>
+						<!-- 2019-10-24
+						<li>
+							<a href="/front/medical/center.php" class="link_snb1 ">전문진료센터</a>
+						</li>
+						-->
+						<li>
+							<a href="/front/medical/clinic.php" class="link_snb1 ">전문클리닉</a>
+						</li>
+						<li>
+							<a href="/front/medical/intro.php" class="link_snb1 ">건강증진센터</a>
+							<ul>
+								<!--li><a href="/front/medical/intro.php" class="link_snb2 ">건강증진센터 소개</a></li-->
+								<li><a href="/front/medical/program.php" class="link_snb2 ">프로그램안내</a></li>
+								<li><a href="/front/medical/step.php" class="link_snb2 ">검진절차</a></li>
+								<li><a href="/front/medical/health_reserv.php" class="link_snb2 ">검진예약안내</a></li>
+								<li><a href="/front/medical/careful.php" class="link_snb2 ">검진시 유의사항</a></li>
+								<li><a href="/front/medical/civil_health.php" class="link_snb2 ">국민건강 보험공단 검진</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="ban_snb_wrap">
+												<a href="/front/intro/contact.php" class="ban_snb_item ico_bg ico_location">
+							<span class="ban_snb_title">오시는길</span>
+							<span class="ban_snb_desc">LOCATION</span>
+						</a>
+						<a href="/front/reservation/reservation_intro.php" class="ban_snb_item ico_bg ico_reservation">
+							<span class="ban_snb_title">진료예약</span>
+							<span class="ban_snb_desc">RESERVATION</span>
+						</a>
+						<div class="ban_snb_item">
+							<span class="ban_snb_title">진료시간</span>
+							<span class="ban_snb_text">평&nbsp;&nbsp;&nbsp;&nbsp;일 : 08:30 ~ 17:30</span>
+							<span class="ban_snb_text">토요일 : 08:30 ~ 12:30</span>
+							<span class="ban_snb_text t_c_red">일요일/공휴일 휴진</span>
+						</div>					</ul>				</div>
+				
+				<div id="content_box">
+					<div class="block_page_title">
+						<h2 class="tit_page">진료과</h2>
+						<div class="loc">
+							<img src="/design/image/content/ico_loc_home.png" alt="메인">
+							<i><img src="/design/image/content/ico_loc_arrow.png" alt="로케이션 화살표"></i><span>진료안내</span>
+							<i><img src="/design/image/content/ico_loc_arrow.png" alt="로케이션 화살표"></i><strong>진료과</strong>
+						</div>
+					</div>
+
+										<div class="sect">
+
+						
+					<div class="block_medical_title">
+						<div class="ico ico2"></div>
+						<h2 class="tit_medical">드림종합병원 <strong>외과</strong></h2>
+						<div class="txt_medical">드림종합병원의 다양한 진료과/의료진을 확인해 보세요.</div>
+						<div class="btn_medical_group">
+							<a href="/front/reservation/reservation.php?tit_reserv=1" class="btn btn_red btn_sm">진료예약</a>
+							<a href="/front/medical/medical.php" class="btn btn_blue btn_sm">전체진료과</a>
+						</div>
+					</div>
+
+					<div class="data_sect">
+						<div class="tit_sect">진료과 소개</div>
+						<div class="txt_sect">
+							<p class="txt_med_style">외과는 환자의 질환을 수술적으로 치료하는 진료과로서 소화기외과, 유방 내분비외과, 혈관외과 등 전문영역으로 구분하여 진료하고 있으며 소화기외과내에는 상부위장관외과, 대장항문외과, 간담도췌장외과의 전문 진료영역으로 세분하여 진료를 시행하고 있습니다.</p>
+							<!-- 2019-10-24 <p><img src="http://placehold.it/400x267" alt="임시이미지" /></p> -->
+						</div>
+					</div>
+
+					<div class="data_sect">
+						<div class="tit_sect">전문클리닉</div>
+						<div class="txt_sect">
+							<ul class="clinic_group">
+								<li><a href="./clinic.php?clinic=4">비만대사수술 클리닉</a></li>
+								<li><a href="./clinic.php?clinic=5">탈장 클리닉</a></li>
+								<li><a href="./clinic.php?clinic=6">대장암 클리닉</a></li>
+								<li><a href="./clinic.php?clinic=7">대장항문 클리닉</a></li>
+								<li><a href="./clinic.php?clinic=8">과민성 장 증후군</a></li>
+								<li><a href="./clinic.php?clinic=9">하지정맥류 클리닉</a></li>
+								<li><a href="./clinic.php?clinic=11">변비 클리닉</a></li>
+								<li><a href="./clinic.php?clinic=17">담석증 클리닉</a></li>
+								<!-- 2019-11-29 <li><a href="./clinic.php?clinic=12">복강경 클리닉</a></li>
+								<li><a href="./clinic.php?clinic=13">장루 클리닉</a></li>
+								<li><a href="./clinic.php?clinic=14">치질 클리닉</a></li>
+								<li><a href="./clinic.php?clinic=15">유방암 클리닉</a></li>
+								<li><a href="./clinic.php?clinic=16">갑상선 클리닉</a></li>
+								<li><a href="./clinic.php?clinic=18">맘모톰 클리닉</a></li> -->
+							</ul>
+						</div>
+					</div>
+
+					<div class="data_sect">
+						<div class="tit_sect">진료의 소개</div>
+						<div class="txt_sect">
+							<!-- 의료진 -->
+
+
+														<div class="doctor_wrap round_block">
+								<div class="med_cate"><strong>외과</strong></div>
+								<div class="doctor_thumb">
+									<img src="/data/doctor/202503/1893521978_Odo75xC6_EC9DB4ED839CEC889C.png" alt="이태순 외과원장">
+
+									
+									<a href="/front/reservation/reservation.php?tit_reserv=1&amp;doctor=64" class="btn btn_sm btn_blue btn_block">진료예약</a>
+
+									
+
+
+								</div>
+								<div class="doctor_info">
+									<div class="doctor_name">이태순<span>외과원장</span></div>
+									<div class="doctor_career">
+										<p></p><div class="doctor_career">
+<div class="txt_style3 t_c_greyLight">외과 전문의</div><div class="txt_style3 t_c_greyLight">대구가톨릭대학교 의과대학 졸업</div><div class="txt_style3">대구가톨릭대학병원 외과전문의 수료</div><div class="txt_style3">대구계명대학교 동산의료원 대장항문외과 임상강사 역임</div><div class="txt_style3">서울 아산병원 대장항문외과 연수</div><div class="txt_style3">독일 Fiderklinik, 독일 Havelhoehe klinik 연수</div><div class="txt_style3">일본 도쿄 사회보험중앙병원 대장항문과 연수</div><div class="txt_style3">일본 지치대학 사이타마 의료센터 대장항문외과 연수</div></div>
+									</div>
+
+																		
+
+
+									<div class="doctor_time">
+										<table>
+											<thead>
+											<tr>
+												<th scope="col">구분</th>
+												<th scope="col">월</th>
+												<th scope="col">화</th>
+												<th scope="col">수</th>
+												<th scope="col">목</th>
+												<th scope="col">금</th>
+												<th scope="col">토</th>
+											</tr>
+											</thead>
+											<tbody>
+											<tr>
+												<th class="ta_c">
+													<span class="t_c_green">오전</span>
+												</th>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="1">진료</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="blue">수술</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="1">진료</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="blue">수술</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="1">진료</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="red">휴진</font></span>
+												</td>
+											</tr>
+											<tr>
+												<th class="ta_c">
+													<span class="t_c_blue">오후</span>
+												</th>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="1">진료</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="blue">수술</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="red">휴진</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="1">진료</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="red">휴진</font></span>
+												</td>
+												<td class="ta_c">
+													<!-- 2021-10-21 <span class="t_c_green"><font color='red'>휴진</font></span> -->
+													<span class="t_c_green">-</span>
+												</td>
+											</tr>
+											<!-- 2019-11-29
+											<tr>
+												<th class="ta_c">
+													<span class="t_c_red">야간</span>
+												</th>
+												<td class="ta_c">
+													<span class="t_c_green"></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"></span>
+												</td>
+											</tr>
+											-->
+											</tbody>
+										</table>
+									</div>
+																	</div>
+							</div>
+														<div class="doctor_wrap round_block">
+								<div class="med_cate"><strong>외과</strong></div>
+								<div class="doctor_thumb">
+									<img src="/data/doctor/202503/1893521978_AzJUu5ad_EC9DB4ECA095EC9588.png" alt="이정안 원장">
+
+									
+									<a href="/front/reservation/reservation.php?tit_reserv=1&amp;doctor=131" class="btn btn_sm btn_blue btn_block">진료예약</a>
+
+									
+
+
+								</div>
+								<div class="doctor_info">
+									<div class="doctor_name">이정안<span>원장</span></div>
+									<div class="doctor_career">
+										<p></p><div class="doctor_career"><p></p><div class="txt_style3 t_c_greyLight">경북대학교 의과대학 의학과 의학사</div><div class="txt_style3 t_c_greyLight">경북대학교 대학원 의학과 외과학 의학석사</div><div class="txt_style3 t_c_greyLight">경북대학교 대학원 의학과 외과학 의학박사</div><div class="txt_style3">대구파티마병원 제14대 의무원장</div><div class="txt_style3">대구경북외과학회 회장 역임</div><div class="txt_style3">경북대학교 의학전문 대학원 외래교수</div><div class="txt_style3">경북대학교 치과대학 외래 부교수</div><div class="txt_style3">대구파티마병원 외과 전문의</div><div class="txt_style3">대한내시경복강경외과학회 평생회원</div><div class="txt_style3">대한혈관외과 정회원</div><div class="txt_style3">대한탈장학회 회원</div><div class="txt_style3">대한 대장항문병 학회 평생회원</div><div class="txt_style3">대구 경북외과학회 학회장</div><p></p></div>
+									</div>
+
+																		
+
+
+									<div class="doctor_time">
+										<table>
+											<thead>
+											<tr>
+												<th scope="col">구분</th>
+												<th scope="col">월</th>
+												<th scope="col">화</th>
+												<th scope="col">수</th>
+												<th scope="col">목</th>
+												<th scope="col">금</th>
+												<th scope="col">토</th>
+											</tr>
+											</thead>
+											<tbody>
+											<tr>
+												<th class="ta_c">
+													<span class="t_c_green">오전</span>
+												</th>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="1">진료</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="1">진료</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="blue">수술</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="1">진료</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="1">진료</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="red">휴진</font></span>
+												</td>
+											</tr>
+											<tr>
+												<th class="ta_c">
+													<span class="t_c_blue">오후</span>
+												</th>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="blue">수술</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="red">휴진</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="blue">수술</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="blue">수술</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="blue">수술</font></span>
+												</td>
+												<td class="ta_c">
+													<!-- 2021-10-21 <span class="t_c_green"><font color='red'>휴진</font></span> -->
+													<span class="t_c_green">-</span>
+												</td>
+											</tr>
+											<!-- 2019-11-29
+											<tr>
+												<th class="ta_c">
+													<span class="t_c_red">야간</span>
+												</th>
+												<td class="ta_c">
+													<span class="t_c_green"></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"></span>
+												</td>
+											</tr>
+											-->
+											</tbody>
+										</table>
+									</div>
+																	</div>
+							</div>
+														<div class="doctor_wrap round_block">
+								<div class="med_cate"><strong>외과</strong></div>
+								<div class="doctor_thumb">
+									<img src="/data/doctor/202503/1893521978_YV1rKIRO_EC9DB4ECA780EAB7BC.png" alt="이지근 과장">
+
+									
+									<a href="/front/reservation/reservation.php?tit_reserv=1&amp;doctor=132" class="btn btn_sm btn_blue btn_block">진료예약</a>
+
+									
+
+
+								</div>
+								<div class="doctor_info">
+									<div class="doctor_name">이지근<span>과장</span></div>
+									<div class="doctor_career">
+										<p></p><div class="doctor_career"><p></p><div class="txt_style3 t_c_greyLight">순천향대학교 의과대학 졸업</div><div class="txt_style3">순천향대학교 대학원 의학과 석사</div><div class="txt_style3">순천향대학교 서울병원 인턴 수료</div><div class="txt_style3">순천향대학교 서울병원 외과 전공의</div><div class="txt_style3">순천향대학 서울병원 외과 임상강사</div><div class="txt_style3">대구의료원 외과 과장</div><div class="txt_style3">대한 외과학회 정회원</div><p></p></div>
+									</div>
+
+																		
+
+
+									<div class="doctor_time">
+										<table>
+											<thead>
+											<tr>
+												<th scope="col">구분</th>
+												<th scope="col">월</th>
+												<th scope="col">화</th>
+												<th scope="col">수</th>
+												<th scope="col">목</th>
+												<th scope="col">금</th>
+												<th scope="col">토</th>
+											</tr>
+											</thead>
+											<tbody>
+											<tr>
+												<th class="ta_c">
+													<span class="t_c_green">오전</span>
+												</th>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="blue">수술</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="1">진료</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="blue">수술</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="1">진료</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="blue">수술</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="1">진료</font></span>
+												</td>
+											</tr>
+											<tr>
+												<th class="ta_c">
+													<span class="t_c_blue">오후</span>
+												</th>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="1">진료</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="1">진료</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="1">진료</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="red">휴진</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="1">진료</font></span>
+												</td>
+												<td class="ta_c">
+													<!-- 2021-10-21 <span class="t_c_green"><font color='red'>휴진</font></span> -->
+													<span class="t_c_green">-</span>
+												</td>
+											</tr>
+											<!-- 2019-11-29
+											<tr>
+												<th class="ta_c">
+													<span class="t_c_red">야간</span>
+												</th>
+												<td class="ta_c">
+													<span class="t_c_green"></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"></span>
+												</td>
+											</tr>
+											-->
+											</tbody>
+										</table>
+									</div>
+																	</div>
+							</div>
+														<div class="doctor_wrap round_block">
+								<div class="med_cate"><strong>외과</strong></div>
+								<div class="doctor_thumb">
+									<img src="/data/doctor/202505/1893521978_rQJ8jIuU_ED9988ED8E98EC9DB4ECA780.png" alt="이도빈 과장">
+
+									
+									<a href="/front/reservation/reservation.php?tit_reserv=1&amp;doctor=143" class="btn btn_sm btn_blue btn_block">진료예약</a>
+
+									
+
+
+								</div>
+								<div class="doctor_info">
+									<div class="doctor_name">이도빈<span>과장</span></div>
+									<div class="doctor_career">
+										<p></p><div class="doctor_career"><p></p><div class="txt_style3 t_c_greyLight">외과 전문의</div><div class="txt_style3">대구가톨릭대학교 의과대학 졸업</div><div class="txt_style3">대구가톨릭대학병원 인턴 수료</div><div class="txt_style3">대구가톨릭대학병원 외과 전공의 수료</div></div>
+									</div>
+
+																		
+
+
+									<div class="doctor_time">
+										<table>
+											<thead>
+											<tr>
+												<th scope="col">구분</th>
+												<th scope="col">월</th>
+												<th scope="col">화</th>
+												<th scope="col">수</th>
+												<th scope="col">목</th>
+												<th scope="col">금</th>
+												<th scope="col">토</th>
+											</tr>
+											</thead>
+											<tbody>
+											<tr>
+												<th class="ta_c">
+													<span class="t_c_green">오전</span>
+												</th>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="green">내시경</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="blue">수술</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="1">진료</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="blue">수술</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="green">내시경</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="1">진료</font></span>
+												</td>
+											</tr>
+											<tr>
+												<th class="ta_c">
+													<span class="t_c_blue">오후</span>
+												</th>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="1">진료</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="blue">수술</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="green">내시경</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="1">진료</font></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"><font color="red">휴진</font></span>
+												</td>
+												<td class="ta_c">
+													<!-- 2021-10-21 <span class="t_c_green"><font color='red'>휴진</font></span> -->
+													<span class="t_c_green">-</span>
+												</td>
+											</tr>
+											<!-- 2019-11-29
+											<tr>
+												<th class="ta_c">
+													<span class="t_c_red">야간</span>
+												</th>
+												<td class="ta_c">
+													<span class="t_c_green"></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"></span>
+												</td>
+												<td class="ta_c">
+													<span class="t_c_green"></span>
+												</td>
+											</tr>
+											-->
+											</tbody>
+										</table>
+									</div>
+																	</div>
+							</div>
+														<!-- // 진명인 내과원장 -->
+						</div>
+					</div>
+
+					<div class="sect ta_c"><a href="/front/medical/medical.php" class="btn btn_blue btn_sm">전체진료과</a></div>					</div>
+					
+					<div class="sect">
+						<!-- 2019-11-29
+<div class="score round_block">
+	<form name="" target="" method="get">
+		<div class="ico_score"><img src="/design/image/content/ico_score.png" alt="페이지 만족도 설문" /></div>
+		<div class="question">현재 페이지의 내용과 사용 편의성에 만족하십니까?</div>
+		<div class="choice">
+			<label><input type="radio" name="score" value="5">매우만족</label>
+			<label><input type="radio" name="score" value="4">만족</label>
+			<label><input type="radio" name="score" value="3">보통</label>
+			<label><input type="radio" name="score" value="2">불만</label>
+			<label><input type="radio" name="score" value="1">매우불만</label>
+		</div>
+		<button type="button" class="btn btn_black">평가하기</button>
+	</form>
+</div>
+-->					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // content -->
+
+	</div>
+	<!-- // #container -->
+	<!-- #footer -->
+	<div id="footer">
+		<div class="btn_footer_group">
+			<div class="inner">
+				<!-- <a href="javascript:;">병원윤리강령</a> -->
+				<a href="/front/etc/patient.php">환자권리장전</a>
+				<!-- <a href="/front/etc/use.php">이용약관</a> -->
+				<a href="/front/etc/privacy.php">개인정보처리방침</a>
+				<a href="/front/etc/certificate.php" class="spec_link">비급여수가표</a>
+				<a href="/front/etc/email.php">이메일무단수집거부</a>
+				<a href="/front/etc/video.php">영상정보처리기기운영관리방침</a>
+			</div>
+		</div>
+		<div class="copyright">
+			<div class="inner">
+				<div class="btn_footer_sns" itemscope="" itemtype="http://schema.org/Organization">
+					<link itemprop="url" href="http://dreamh.co.kr/front/">
+					<!--<a href="https://blog.naver.com/daegu_dreamhosp" itemprop="sameAs" target="_blank"></a>-->
+					<a href="https://www.youtube.com/channel/UCUpI6Nt_JnLh1oBUByRGlyw" itemprop="sameAs" target="_blank"><img src="/design/image/common/btn_footer_youtube.png" alt="유튜브 로고"></a>
+					<a href="https://blog.naver.com/daegu_dreamhosp" itemprop="sameAs" target="_blank"><img src="/design/image/common/btn_footer_blog.png" alt="블로그 로고"></a>
+					<a href="https://ko-kr.facebook.com/dreamhospital" itemprop="sameAs" target="_blank"><img src="/design/image/common/btn_footer_face.png" alt="페이스북 로고"></a>
+				</div>
+				<div class="txt_copyright">주소 : 42474 대구시 남구 대명로 153 (지하철 1호선 안지랑역 4번출구 앞)<span>|</span>대표전화 : 053-640-8800<span>|</span>팩스 : 053-640-8998</div>
+				<div class="txt_copyright">COPYRIGHT ⓒ 2019 DreamHospital. All Rights Reserved.</div>
+			</div>
+		</div>
+	</div>
+	<!-- // #footer -->
+</div>
+<!--네이버스크립트-->	
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+if(!wcs_add) var wcs_add = {};
+wcs_add["wa"] = "124f449781e6040";
+if(window.wcs) {
+wcs_do();
+}
+</script>
+
