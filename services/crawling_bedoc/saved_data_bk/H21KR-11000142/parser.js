@@ -14,7 +14,7 @@ async function parse(url) {
         const data = await page.evaluate(() => {
             const getList = (selector) => Array.from(document.querySelectorAll(selector))
                                      .map(el => el.innerText.trim().replace(/"/g, ''))
-                                     .filter(item => item); // Filter out empty strings
+                                     .filter(item => item);
 
             const getListFromNextUl = (titleText) => {
                 const allTitles = document.querySelectorAll('p.his-title');
@@ -32,44 +32,23 @@ async function parse(url) {
             };
 
             const specialty = document.querySelector('.field > span')?.innerText.trim().replace(/"/g, '') || '';
-            
             const education = getListFromNextUl('학력');
             const experience = getListFromNextUl('경력사항');
             const activities = getList('#tab-3 ul li');
-            const publicationsRaw = getList('#tab-4 ul li');
+            const papers = getList('#tab-4 ul li');
 
             let profileUrl = '';
             const bgImageStyle = document.querySelector('span.bg.bg1')?.style.backgroundImage;
             if (bgImageStyle) {
-                profileUrl = bgImageStyle.slice(4, -1).replace(/[""]/g, "");
+                profileUrl = bgImageStyle.slice(4, -1).replace(/["\'\\]/g, "");
             }
-
-            const books = [];
-            const papers = [];
-            let isBookSection = false;
-            let isPaperSection = false;
-
-            publicationsRaw.forEach(item => {
-                if (item.includes('저서')) {
-                    isBookSection = true;
-                    isPaperSection = false;
-                    return;
-                }
-                if (item.includes('논문')) {
-                    isBookSection = false;
-                    isPaperSection = true;
-                    return;
-                }
-                if (isBookSection) books.push(item);
-                if (isPaperSection) papers.push(item);
-            });
 
             return {
                 specialty,
                 학력: education.map(item => ({ content: item })),
                 경력: experience.map(item => ({ content: item })),
                 논문: papers,
-                저서: books,
+                저서: [],
                 학술: activities.map(item => ({ content: item })),
                 profileUrl: profileUrl ? `https://www.yangh.co.kr${profileUrl}` : ''
             };

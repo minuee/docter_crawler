@@ -97,13 +97,13 @@ const cheerio = require('cheerio');
             }
         }
 
-        await handleTabPagination('li#box_tab3 a', '#box_area3 tbody#brisTbody', 'tr', 'div#pageList', '논문', ($$, el) => {
-            const tds = $$(el).find('td');
-            if (tds.length > 1) {
-                const title = $$(tds[0]).text().trim();
-                const journal = $$(tds[1]).text().trim();
-                const year = $$(tds[2]).text().trim();
-                if (title) return `${title} (${journal}, ${year}년)`;
+        await handleTabPagination('li#box_tab3 a', '#box_area3 tbody#brisTbody', 'tr', 'div#pageList', '논문', ($, el) => {
+            const td = $(el).find('td');
+            const title = td.find('a.tit').text().trim();
+            const journal = td.find('span.from').text().trim();
+            const yearAndMonth = td.find('span.date').text().trim();
+            if (title) {
+                return `${title} (${journal}, ${yearAndMonth})`;
             }
             return null;
         });

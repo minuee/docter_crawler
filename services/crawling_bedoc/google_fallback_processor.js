@@ -157,7 +157,7 @@ const path = require('path');
  *     - FAILURE: It writes a JSON file with `isSearchType: 'html_failed'` to queue the doctor for Phase 2.
  *
  * 2.  **Phase 2: Playwright Fallback (Orchestrated by the Gemini Assistant)**
- *     - After Phase 1 is complete, Gemini finds all JSON files where `isSearchType` is `html_failed`.
+ *     - After Phase 1 is complete, Gemini processes ALL JSON files from Phase 1, regardless of their 'isSearchType' status.
  *     - For each file, Gemini reads the `site_type` field and follows the corresponding advanced parsing plan described below.
  *
  */
@@ -170,12 +170,11 @@ const path = require('path');
 function processGoogleFallback() {
 
     // Gemini Action 1: Find all tasks.
-    // Find all `{doctorName}.json` files and filter them to find where `isSearchType` is `html_failed`.
+    // Find all `{doctorName}.json` files from Phase 1.
     const promptForFindingTasks = `
         // Gemini, please find all outes*.jsonoutes files in the outesservices/crawling_bedoc/data/outes subdirectories.
         // IMPORTANT: Exclude files ending with outes_saved.jsonoutes, as these are already processed.
-        // For each file, read its content and check if the value of the outesisSearchTypeoutes field is outes'html_failed'outes.
-        // Create a list of file paths for all files that match this condition.
+        // Create a list of all file paths found.
     `;
 
     // For each task file found, perform the following actions:
