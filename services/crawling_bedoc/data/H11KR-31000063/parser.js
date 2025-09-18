@@ -1,166 +1,97 @@
-
 const { chromium } = require('playwright');
 const cheerio = require('cheerio');
 
-(async () => {
-    const doctorData = JSON.parse(process.argv[2]);
-    const { hospital_site, bedoc_doctorname, site_type, bedoc_hospitalsite } = doctorData;
-
-    const browser = await chromium.launch({ headless: true });
-    const context = await browser.newContext({
-        userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-    });
-    let page = await context.newPage();
-
-    let extractedHtml = null;
-    let isAttend = false;
-    let error = null;
-    let parsedDetails = {};
-
-    try {
-        await page.goto(hospital_site, { waitUntil: 'domcontentloaded', timeout: 120000 });
-
-        // --- Start of "더보기" button handling (generic) ---
-        const clickMoreButtons = async (currentPage) => {
-            const maxClicks = 10; // Limit to prevent infinite loops
-            let clickedCount = 0;
-            let buttonFound = true;
-
-            while (buttonFound && clickedCount < maxClicks) {
-                buttonFound = false;
-                const moreButton = await currentPage.$('button:has-text("더보기")') ||
-                                   await currentPage.$('a:has-text("더보기")') ||
-                                   await currentPage.$('button:has-text("더보기 +")') ||
-                                   await currentPage.$('a:has-text("더보기 +")');
-
-                if (moreButton) {
-                    try {
-                        await moreButton.click();
-                        await currentPage.waitForTimeout(1000); // Wait for content to load
-                        clickedCount++;
-                        buttonFound = true;
-                    } catch (clickError) {
-                        console.log(`Could not click more button: ${clickError.message}`);
-                        buttonFound = false;
-                    }
-                }
-            }
-        };
-        // --- End of "더보기" button handling ---
-
-        await clickMoreButtons(page); // Click more buttons on the main page
-
-        let rawHtml = await page.content();
-        let $ = cheerio.load(rawHtml);
-
-        // Sanitize HTML (remove scripts, styles, etc.)
-        $('script, style, nav, header, footer, iframe, noscript').remove();
-        extractedHtml = $('body').html();
-
-        if (extractedHtml && extractedHtml.includes(bedoc_doctorname)) {
-            isAttend = true;
-        }
-
-        // --- Detailed parsing logic for Kangnam Hallym Hospital ---
-        // Extract Profile URL
-        const profileImgSrc = $('div.pic img').attr('src');
-        if (profileImgSrc) {
-            parsedDetails.profileUrl = new URL(profileImgSrc, hospital_site).href;
-        }
-
-        // Extract Specialty
-        parsedDetails.specialty = $('article.detail .part_txt p').text().trim().replace(/"/g, '');
-
-        // Extract 학력
-        parsedDetails.학력 = [];
-        $('#tab_con01 td.dw-02 p').each((i, el) => {
-            const text = $(el).text().trim();
-            if (text) {
-                const parts = text.split(/\s+/);
-                const date = parts[0] || null;
-                const content = parts.slice(1).join(' ');
-                parsedDetails.학력.push({ date, content: content.replace(/"/g, '') });
-            }
-        });
-
-        // Extract 경력
-        parsedDetails.경력 = [];
-        $('#tab_con02 td p').each((i, el) => {
-            const text = $(el).text().trim();
-            if (text) {
-                parsedDetails.경력.push({ date: null, content: text.replace(/"/g, '') });
-            }
-        });
-
-        // Extract 학술
-        parsedDetails.학술 = [];
-        $('#tab_con03 td p').each((i, el) => {
-            const text = $(el).text().trim();
-            if (text) {
-                const parts = text.split(/\s+/);
-                const date = parts[1] === '~' ? `${parts[0]} ${parts[1]} ${parts[2]}` : null;
-                const content = date ? parts.slice(3).join(' ') : text;
-                parsedDetails.학술.push({ date, content: content.replace(/"/g, '') });
-            }
-        });
-
-        // Extract 수상
-        parsedDetails.수상 = [];
-        $('#tab_con04 td p').each((i, el) => {
-            const text = $(el).text().trim();
-            if (text) {
-                parsedDetails.수상.push({ date: null, content: text.replace(/"/g, '') });
-            }
-        });
-
-        // Extract 논문/저서
-        parsedDetails.논문 = [];
-        parsedDetails.저서 = [];
-        const publicationsHtml = await page.$eval('#tab_con05 td', el => el.innerHTML);
-        const publicationsText = publicationsHtml.replace(/<br>/g, '\n');
-        const lines = publicationsText.split('\n').map(l => l.trim()).filter(l => l);
-
-        let currentCategory = '';
-        lines.forEach(line => {
-            if (line.includes('국제학회지 발표논문') || line.includes('국내학회지 발표논문')) {
-                currentCategory = '논문';
-            } else if (line.includes('저서, 저술')) {
-                currentCategory = '저서';
-            } else if (line) {
-                if (currentCategory === '논문') {
-                    parsedDetails.논문.push(line.replace(/^\d+\.\s*/, '').replace(/"/g, ''));
-                } else if (currentCategory === '저서') {
-                    parsedDetails.저서.push({ date: null, content: line.replace(/^\d+\.\s*/, '').replace(/"/g, ''), issuer: null });
-                }
-            }
-        });
-
-        // 언론보도
-        parsedDetails.언론 = [];
-        try {
-            await page.click('a[href="#tab_con06"]');
-            await page.waitForSelector('#tab_con06.active', { state: 'visible', timeout: 5000 });
-            const newsItems = await page.locator('#boardContents td p').all();
-            for(const item of newsItems) {
-                const date = await item.locator('span').innerText();
-                const link = item.locator('a');
-                const text = await link.innerText();
-                const url = await link.getAttribute('href');
-                parsedDetails.언론.push({ targetDate: date, type: '기사', text, url });
-            }
-        } catch(e) { /* ignore */ }
-
-    } catch (e) {
-        error = `Error during Playwright execution: ${e.message}`;
-    } finally {
-        if (browser && browser.isConnected()) {
-            await browser.close();
-        }
+async function parse() {
+    const url = process.argv[2];
+    if (!url) {
+        console.error('URL is required.');
+        process.exit(1);
     }
 
-    console.log(JSON.stringify({
-        isAttend: isAttend,
-        error: error,
-        ...parsedDetails
-    }));
-})();
+    const browser = await chromium.launch({ headless: true });
+    const page = await browser.newPage();
+    const synthesizedData = { 학력: [], 경력: [], 학술: [], 수상: [], 논문: [], 언론: [], 저서: [] };
+
+    try {
+        await page.goto(url, { waitUntil: 'networkidle' });
+
+        const staticHtml = await page.content();
+        const $ = cheerio.load(staticHtml);
+
+        synthesizedData.profileUrl = new URL($('article.pic img').attr('src'), url).href;
+        synthesizedData.specialty = $('div.denti p').attr('title');
+
+        const parseTable = (title) => {
+            const items = [];
+            $(`#tab_con01 h4:contains('${title}')`).next('table').find('td p').each((i, p) => {
+                const date = $(p).find('span').eq(0).text().trim();
+                const content = $(p).find('span').eq(1).text().trim();
+                if (content) {
+                    items.push({ date: date || null, content });
+                }
+            });
+            return items;
+        };
+
+        synthesizedData.학력 = parseTable('학력');
+        synthesizedData.경력 = parseTable('경력');
+        synthesizedData.학술 = parseTable('학회활동');
+
+        const publicationsHtml = $('#tab_con02 .thesis_list').html();
+        if (publicationsHtml) {
+            const lines = publicationsHtml.split('<br>').map(l => cheerio.load(l).text().trim()).filter(l => l);
+            lines.forEach(line => {
+                if (line.startsWith('대표 논문 및 저서')) return;
+                if (line.includes('저서') || line.includes('저자')) {
+                     synthesizedData.저서.push({ date: null, content: line.replace(/^\\d+\\.\s*/, ''), issuer: null });
+                } else if (line) {
+                     synthesizedData.논문.push(line.replace(/^\\d+\\.\s*/, ''));
+                }
+            });
+        }
+
+        try {
+            await page.click('a[href="#tab_con03"]');
+            await page.waitForSelector('#boardContents ul li', { state: 'visible', timeout: 5000 });
+            const mediaItems = await page.$$eval('#boardContents ul li', (items) => 
+                items.map(item => {
+                    const link = item.querySelector('a');
+                    const date = item.querySelector('.date')?.textContent.trim();
+                    const text = link?.textContent.trim();
+                    const url = link?.href;
+                    return { targetDate: date, type: '기사', text, url, issuer: null };
+                })
+            );
+            synthesizedData.언론 = mediaItems;
+        } catch (e) {
+            console.log('Could not parse Media tab:', e.message);
+        }
+        
+        try {
+            await page.click('a[href="#tab_con04"]');
+            await page.waitForSelector('#boardContentsYTB ul li', { state: 'visible', timeout: 5000 });
+            const magazineItems = await page.$$eval('#boardContentsYTB ul li', (items) => 
+                items.map(item => {
+                    const link = item.querySelector('a');
+                    const date = item.querySelector('.date')?.textContent.trim();
+                    const text = link?.textContent.trim();
+                    const url = link?.href;
+                    return { targetDate: date, type: '건강매거진', text, url, issuer: null };
+                })
+            );
+            synthesizedData.언론.push(...magazineItems);
+        } catch (e) {
+            console.log('Could not parse Health Magazine tab:', e.message);
+        }
+
+        console.log(JSON.stringify(synthesizedData, null, 2));
+
+    } catch (e) {
+        console.error('Error during parsing:', e.stack);
+        process.exit(1);
+    } finally {
+        await browser.close();
+    }
+}
+
+parse();

@@ -1,0 +1,89 @@
+{
+  "hospital_cid": 547,
+  "bedoc_id": "A0510",
+  "bedoc_hospitalsite": "http://www.brmh.org",
+  "bedoc_doctorname": "정호경",
+  "bedoc_deptname": "안과",
+  "bedoc_hospitalname": "서울보라매병원",
+  "hospital_name": "서울보라매병원",
+  "aiga_hid": "H11KR-11000019",
+  "hospital_site": "https://www.brmh.org/custom/popup/layer_doctor_view.do?dt_no=381&medi_code=001020000%7C001020000",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 동작구 보라매로5길 20, (신대방동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "http://www.brmh.org/upload/TB_MEDITEAM/8848c2e6cfe041b694713378b42dc800.png",
+  "specialty": "성형안과, 갑상선안질환, 보톡스, 사시(안과에서 진단된 사시/약시만 예약이 가능합니다. 콜센터(1577-0075)에서 상담 후 예약하시기 바랍니다.)",
+  "학력": [
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 대학원  / 의학박사"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 대학원  / 의학석사"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 의과대학   / 의학사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 교수"
+    },
+    {
+      "date": null,
+      "content": "안과 전문의"
+    },
+    {
+      "date": null,
+      "content": "서울특별시보라매병원 안과 과장\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t2018.08\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t~\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t2022.08\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t)"
+    },
+    {
+      "date": null,
+      "content": "서울특별시보라매병원 임상연구윤리센터장\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t2018.02\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t~\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t2021.12\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t)"
+    },
+    {
+      "date": null,
+      "content": "서울특별시보라매병원 안과 과장\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t2003.03\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t~\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t2010.08\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t)"
+    },
+    {
+      "date": null,
+      "content": "서울대병원 안과 전공의\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t(\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t1998.03\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t~\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t2002.02\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t)"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한안과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한성형안과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "한국소아사시학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "한국신경안과학회 정회원"
+    }
+  ],
+  "논문": [
+    "습성 나이관련황반변성 환자들의 인식조사: 정기적 안저검사의 필요성에 관한 고찰 (검안 및 콘택트렌즈학회지, 2024-12)",
+    "A Preliminary Evaluation of the Diagnostic Performance of a Smartphone-Based Machine Learning-Assisted System for Evaluation of Clinical Activity Score in Digital Images of Thyroid-Associated Orbitopathy. (Thyroid, 2024-06)",
+    "Prevalence of human papillomavirus in eyelid carcinoma among Koreans: a clinicopathological study. (BMC Ophthalmol, 2023-09)",
+    "Change of peripapillary retinal nerve fiber layer and choroidal thickness during 4-year myopic progress: Boramae Myopia Cohort Study Report 4 (The British journal of ophthalmology, 2023-08)",
+    "Comparative risk of blindness and vision-threatening ocular comorbidities in patients with Behçet's disease versus the general population. (Rheumatology (Oxford), 2023-05)",
+    "Ophthalmic manifestations and visual outcomes of granulomatosis with polyangiitis: a retrospective multicentre study in Korea (Eye, 2023-05)",
+    "Differentiating malignant and benign eyelid lesions using deep learning. (Sci Rep, 2023-03)",
+    "Serum microRNA as a potential biomarker for the activity of thyroid eye disease. (Sci Rep, 2023-01)",
+    "The effects of using spacer grafts on lower-eyelid retraction surgery in patients with facial nerve palsy (European journal of ophthalmology, 2022-07)",
+    "Outcomes of enucleation and porous polyethylene orbital implant insertion in patients with paediatric retinoblastoma: a long-term follow-up study (The British journal of ophthalmology, 2022-04)"
+  ]
+}
