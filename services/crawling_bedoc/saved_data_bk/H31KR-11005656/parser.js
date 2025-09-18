@@ -6,61 +6,39 @@ const cleanText = (text) => {
     return text ? text.replace(/\s\s+/g, ' ').trim() : '';
 };
 
-// 학력/경력 분류 함수
-const parseHistory = (items) => {
-    const education = [];
-    const experience = [];
-    const eduKeywords = ['석사', '박사', '학사'];
-
-    items.forEach(item => {
-        if (eduKeywords.some(keyword => item.content.includes(keyword))) {
-            education.push(item);
-        } else {
-            experience.push(item);
-        }
-    });
-    return { education, experience };
-};
-
-
 // 파싱 메인 함수
 async function parseDoctorProfile(doctorData) {
     const browser = await chromium.launch({ headless: true });
     const page = await browser.newPage();
-    const synthesizedData = { 학력: [], 경력: [], 학술: [], 수상: [], specialty: null, profileUrl: null };
+    const synthesizedData = { 경력: [], 학술: [], profileUrl: null };
     let error = null;
     let isAttend = false;
 
     try {
         await page.goto(doctorData.hospital_site, { waitUntil: 'networkidle' });
 
-        if ((await page.textContent('body')).includes(doctorData.bedoc_doctorname)) {
-            isAttend = true;
+        // 의사 컨테이너 찾기
+        const doctorContainer = page.locator(`div.doctor:has-text("${doctorData.bedoc_doctorname}")`);
+        if (await doctorContainer.count() === 0) {
+            throw new Error(`Doctor ${doctorData.bedoc_doctorname} not found on the page.`);
         }
+        isAttend = true;
 
-        synthesizedData.profileUrl = await page.locator('.swiper-slide-active img').getAttribute('src').then(src => new URL(src, page.url()).href).catch(() => null);
-        synthesizedData.specialty = await page.locator('.speci p').nth(1).innerText().then(cleanText);
+        // 프로필 이미지 추출
+        synthesizedData.profileUrl = await doctorContainer.locator('img').getAttribute('src');
 
-        const parseSection = async (title) => {
-            const sectionLocator = page.locator(`div.prd_list:has(h4.tit:text-is('${title}'))`);
-            if (await sectionLocator.count() > 0) {
-                return sectionLocator.locator('.history dl').evaluateAll(nodes => 
-                    nodes.map(n => ({
-                        date: n.querySelector('dt')?.textContent.trim() || null,
-                        content: n.querySelector('dd li')?.textContent.trim() || ''
-                    }))
-                );
+        // 경력, 학술 정보 추출
+        const details = await doctorContainer.locator('dd > div').allInnerTexts();
+        details.forEach(line => {
+            const cleanedLine = cleanText(line);
+            if (cleanedLine) {
+                if (cleanedLine.includes('교수')) {
+                    synthesizedData.경력.push({ date: null, content: cleanedLine });
+                } else if (cleanedLine.includes('학회')) {
+                    synthesizedData.학술.push({ date: null, content: cleanedLine });
+                }
             }
-            return [];
-        };
-
-        const historyItems = await parseSection('학력/경력');
-        const { education, experience } = parseHistory(historyItems);
-        synthesizedData.학력 = education;
-        synthesizedData.경력 = experience;
-
-        synthesizedData.학술 = await parseSection('학회활동');
-        synthesizedData.수상 = await parseSection('수상');
+        });
 
     } catch (e) {
         error = `Playwright execution failed: ${e.message}`;
