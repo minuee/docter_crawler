@@ -20,7 +20,7 @@
         WHERE
             1=1 and is_getdetail_done = false and  new_doctor_url != '' and  new_doctor_url is not null and a.new_hospital_hid is not null
         ORDER BY a.hospital_cid ASC
-        LIMIT 5 OFFSET 145
+        LIMIT 5 OFFSET 150
     </select>
 
     <select id="select_bedoc_hospital_old">
