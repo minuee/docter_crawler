@@ -34,80 +34,63 @@ const cheerio = require('cheerio');
 
         // --- Start of detailed parsing logic ---
 
-        // Helper function to extract list items with date and content
-        const extractListItems = ($, selector) => {
-            const items = [];
-            $(selector).each((i, el) => {
-                const text = $(el).text().trim();
-                // Attempt to parse date and content. This is a generic approach.
-                // Real-world parsing would need more specific selectors/regex.
-                const match = text.match(/^(\d{4}(?: ~ \d{4})?|\d{4}\.\d{2}\.\d{2})?\s*(.*)$/);
-                if (match) {
-                    items.push({
-                        date: match[1] || null,
-                        content: match[2].replace(/"/g, '') // Remove double quotes
-                    });
-                } else {
-                    items.push({ date: null, content: text.replace(/"/g, '') }); // Remove double quotes
-                }
-            });
-            return items;
-        };
-
-        // Helper function to extract simple list of strings
-        const extractSimpleList = ($, selector) => {
-            const items = [];
-            $(selector).each((i, el) => {
-                items.push($(el).text().trim().replace(/"/g, '')); // Remove double quotes
-            });
-            return items;
-        };
-
         // Extract Profile URL
         const profileImgSrc = $('.profile .photo img').attr('src');
         if (profileImgSrc) {
             parsedDetails.profileUrl = new URL(profileImgSrc, doctorData.hospital_site).href;
         }
 
-        // Extract Specialty (assuming it's near the doctor's name or in a specific tag)
-        // This is a very generic selector, might need refinement
+        // Extract Specialty
         parsedDetails.specialty = $('.info p').first().text().trim();
 
-        // Extract 학력 (Education)
-        parsedDetails.학력 = extractListItems($, '#tab-info01 .list li'); // Assuming a common structure
+        // Initialize arrays
+        parsedDetails.학력 = [];
+        parsedDetails.경력 = [];
+        parsedDetails.학술 = [];
+        parsedDetails.논문 = [];
+        parsedDetails.언론 = [];
 
-        // Extract 경력 (Experience)
-        parsedDetails.경력 = extractListItems($, '#tab-info01 .list li'); // Assuming a common structure
+        // Parse Education, Experience, and Academic Activities from the first tab
+        $('#tab-info01 .heading-depth04').each((i, el) => {
+            const heading = $(el).find('h4.title').text().trim();
+            const listItems = $(el).next('ul.list').find('li').map((j, li) => $(li).text().trim().replace(/"/g, '')).get();
 
-        // Extract 수상 (Awards)
-        parsedDetails.수상 = extractListItems($, '#tab-info01 .list li'); // Assuming a common structure
-
-        // Extract 학술 (Academic Activities)
-        parsedDetails.학술 = extractListItems($, '#tab-info01 .list li'); // Assuming a common structure
-
-        // Extract 언론 (Media Coverage)
-        const mediaItems = [];
-        $('#pressList li').each((i, el) => {
-            const link = $(el).find('a');
-            const text = link.text().trim();
-            const url = link.attr('href');
-            const date = $(el).find('span').text().trim(); // Assuming date is in a span
-            // Further parsing of 'type' and 'issuer' from 'text' might be needed
-            mediaItems.push({
-                targetDate: date || null,
-                type: null, // Needs more specific parsing from text
-                text: text.replace(/"/g, ''), // Remove double quotes
-                url: url || null,
-                issuer: null // Needs more specific parsing from text
-            });
+            if (heading === '학력사항') {
+                listItems.forEach(item => parsedDetails.학력.push({ date: null, content: item }));
+            } else if (heading === '교육 및 연구경력') {
+                listItems.forEach(item => parsedDetails.경력.push({ date: null, content: item }));
+            } else if (heading === '기타 학술 관련 경력') {
+                listItems.forEach(item => parsedDetails.학술.push({ date: null, content: item }));
+            }
         });
-        parsedDetails.언론 = mediaItems;
 
-        // Extract 저서 (Books)
-        parsedDetails.저서 = extractSimpleList($, '#tab-info02 .list li'); // Assuming a common structure
+        // Parse Theses from the second tab
+        $('#tab-info02 .list li').each((i, el) => {
+            const text = $(el).text().trim().replace(/"/g, '');
+            if (text) {
+                parsedDetails.논문.push(text);
+            }
+        });
+        
+        // Set 저서 to 논문 as they are the same in the current parser
+        parsedDetails.저서 = parsedDetails.논문;
 
-        // Extract 논문 (Theses/Papers)
-        parsedDetails.논문 = extractSimpleList($, '#tab-info02 .list li'); // Assuming a common structure
+        // Parse Media Coverage from the third tab
+        $('#tab-info03 #pressList li').each((i, el) => {
+            const link = $(el).find('a');
+            const text = link.text().trim().replace(/"/g, '');
+            const url = link.attr('href');
+            const date = $(el).find('span').text().trim();
+            if (text) {
+                parsedDetails.언론.push({
+                    targetDate: date || null,
+                    type: null,
+                    text: text,
+                    url: url ? new URL(url, doctorData.hospital_site).href : null,
+                    issuer: null
+                });
+            }
+        });
 
         // --- End of detailed parsing logic ---
 

@@ -60,27 +60,34 @@ const { chromium } = require('playwright');
         result.경력 = historyData.경력;
         result.학술 = historyData.학술;
 
-        // Thesis with robust pagination
+        // Thesis with correct pagination handling and DEBUGGING
         result.논문 = [];
-        let currentPage = 1;
-        while (true) {
+        let pageCount = 1;
+        const maxPages = 50; // Safety break
+        while (pageCount <= maxPages) {
+            console.log(`[DEBUG] Scraping page ${pageCount}...`);
             await page.waitForSelector('ul#_thesisContainer li', { timeout: 5000 });
             const pageItems = await page.evaluate(() => 
                 Array.from(document.querySelectorAll('ul#_thesisContainer li span[data-key="thesisNm"]'), el => el.textContent.trim().replace(/"/g, ''))
             );
             result.논문.push(...pageItems);
 
-            const nextLink = page.locator(`span.pagination a._thesisPagingNo[data-thesispaging="${currentPage + 1}"]`);
-
-            if (await nextLink.count() > 0 && await nextLink.isVisible()) {
-                await nextLink.click();
-                await page.waitForTimeout(1000);
-                currentPage++;
+            const nextButton = page.locator('a.next[data-thesispaging="next"]');
+            
+            if (await nextButton.count() > 0 && await nextButton.isVisible()) {
+                console.log(`[DEBUG] Next button found. Clicking to go to page ${pageCount + 1}.`);
+                await nextButton.click();
+                await page.waitForTimeout(1500);
+                pageCount++;
             } else {
-                break; // No more visible pages
+                console.log("[DEBUG] Next button not found. Ending pagination.");
+                break; // No more next button, exit loop
             }
         }
-        result.논문 = [...new Set(result.논문)];
+        if (pageCount > maxPages) {
+            console.log(`[DEBUG] Reached max page limit of ${maxPages}. Stopping.`);
+        }
+        result.논문 = [...new Set(result.논문)]; // Use Set to ensure uniqueness
 
     } catch (e) {
         result.error = `Error during Playwright execution: ${e.message}`;
