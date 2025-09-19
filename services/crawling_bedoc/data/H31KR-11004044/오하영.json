@@ -1,0 +1,42 @@
+{
+  "hospital_cid": 348,
+  "bedoc_id": "A5429",
+  "bedoc_hospitalsite": "http://www.samsungyoon.com",
+  "bedoc_doctorname": "오하영",
+  "bedoc_deptname": "신장내과",
+  "bedoc_hospitalname": "삼성윤내과",
+  "hospital_name": "삼성윤내과",
+  "aiga_hid": "H31KR-11004044",
+  "hospital_site": "http://www.samsungyoon.com/src/sub0105.php",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 강남구 광평로 295, 사이룩스오피스텔 서관 2층 206,207,208,209,210,211호 (수서동)",
+  "isExist": true,
+  "isSearchType": "html_ocr",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": null,
+  "specialty": null,
+  "경력": [
+    { "date": "1980.3 ~ 1983.2", "content": "서울대학교 병원 내과(레지던트)" },
+    { "date": "1989.10 ~ 1991.6", "content": "한림대학교 의과대학 한강성심병원(조교수)" },
+    { "date": "1991.7 ~ 1993.12", "content": "미국 University of Southern California대학(연구원)" },
+    { "date": "1994.1 ~ 2005.8", "content": "성균관의대 삼성서울병원 신장내과 분과장" },
+    { "date": "1999.1 ~ 2003.2", "content": "성균관의대 삼성서울병원 진료지원실장" },
+    { "date": "2002.4 ~ 2018.8", "content": "성균관의대 교수" },
+    { "date": "2003.3 ~ 2005.8", "content": "성균관의대 삼성서울병원 QA관리실장" },
+    { "date": "2005.9 ~ 2010.1", "content": "성균관의대 내과 과장" },
+    { "date": "2005.9 ~ 2010.1", "content": "성균관의대 내과학교실 주임교수" },
+    { "date": "2010.1 ~ 2012.3", "content": "성균관의대 삼성서울병원 진료 부원장" },
+    { "date": "2014.3 ~ 2018.2", "content": "성균관대학교 대학평의원회 평의원" },
+    { "date": "2015.1 ~ 2017.12", "content": "성균관대학교 건강센터 소장" }
+  ],
+  "학술": [
+    { "date": "1995.5 ~ 현재", "content": "대한신장학회 평의원" },
+    { "date": "1998.5 ~ 2000.5", "content": "대한신장학회 일반 이사" },
+    { "date": "2002.5 ~ 2004.5", "content": "대한신장학회 보험법제 이사" },
+    { "date": "2003.5 ~ 2004.5", "content": "대한신장학회 신장분야 의료제도개선위원회 위원장" },
+    { "date": "2003.8 ~ 현재", "content": "대한내과학회 평의원" },
+    { "date": "2004.6 ~ 2006.5", "content": "대한신장학회 투석 이사" },
+    { "date": "2006.9 ~ 2010.5", "content": "2010 아시아-태평양 신장학회 전시위원장" }
+  ]
+}

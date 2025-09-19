@@ -1,0 +1,54 @@
+{
+  "hospital_cid": 475,
+  "bedoc_id": "A0477",
+  "bedoc_hospitalsite": "http://www.friendclinic.com/2011/reservation/online_regist_calendar.php?smenu=friend5&PHPSESSID=21cbaa6b3cdaa6cf5c5ad5707d9e3254",
+  "bedoc_doctorname": "이태규",
+  "bedoc_deptname": "신경과",
+  "bedoc_hospitalname": "이태규뇌리신경과의원",
+  "hospital_name": "이태규뇌리신경과의원",
+  "aiga_hid": "H31KR-11008195",
+  "hospital_site": "http://www.friendclinic.com/2011/contents/contents0102.php",
+  "site_type": "list",
+  "hospital_addr": "서울특별시 강남구 논현로 648, 선기빌딩 4층 (논현동)",
+  "isExist": true,
+  "isSearchType": "html_ocr",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": null,
+  "specialty": null,
+  "학력": [
+    { "date": null, "content": "서울대학교 의과대학 겸임교수 출신" },
+    { "date": null, "content": "미국 ECFMG 자격취득" }
+  ],
+  "경력": [
+    { "date": null, "content": "서울대학병원 신경과 전문의" },
+    { "date": null, "content": "하버드의대 MGH병원 임상전임의사" },
+    { "date": null, "content": "클리브랜드 클리닉 재단 병원 임상전임의사" }
+  ],
+  "학술": [
+    { "date": null, "content": "대한두통학회 보험이사 (전)" },
+    { "date": null, "content": "대한뇌신경초음파학회 이사" },
+    { "date": null, "content": "대한 신경과학회 정책위원회 위원" },
+    { "date": null, "content": "대한 노인신경학회, 대한 치매학회 정회원" },
+    { "date": null, "content": "대한 뇌졸중학회, 임상신경 생리학회 정회원" },
+    { "date": null, "content": "대한의사협회 의료정책연수과정 수료" },
+    { "date": null, "content": "대한신경과의사회 회장" }
+  ],
+  "저서": [
+    { "date": "2001", "content": "뇌졸중" },
+    { "date": "2002", "content": "두통" }
+  ],
+  "논문": [
+    { "date": null, "content": "논문: Lancet(제1저자) 등 국내외 학술지 다수 게재" }
+  ],
+  "수상": [
+    { "date": null, "content": "세계인명사전 등재 (마퀴스 Who's Who)" },
+    { "date": null, "content": "미국신경과학회(AAN) '외국인학술상' 수상" },
+    { "date": null, "content": "동아일보선정 뇌졸중 분야 베스트 닥터" },
+    { "date": "2011", "content": "서울지방국세청장상" }
+  ],
+  "언론": [
+    { "date": null, "content": "대국민 교육 : KBS TV, 라디오 등 다수 출연" },
+    { "date": "2016", "content": "조선일보 스콜업그레이드 개인 최다 기부자" }
+  ]
+}
