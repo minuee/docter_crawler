@@ -15,7 +15,9 @@ const { chromium } = require('playwright');
       process.exit(1);
     }
 
+    console.log(`[DEBUG] Navigating to ${url}...`);
     await page.goto(url, { waitUntil: 'networkidle' });
+    console.log('[DEBUG] Navigation successful. Evaluating page...');
 
     const doctorData = await page.evaluate(() => {
       const data = {};

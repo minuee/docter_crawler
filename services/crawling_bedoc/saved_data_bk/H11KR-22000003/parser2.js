@@ -1,56 +1,39 @@
 const { chromium } = require('playwright');
 
 (async () => {
-  const timeout = 2 * 60 * 1000; // 2-minute timeout
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), timeout);
-
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
 
   try {
-    const url = process.argv[2];
-    if (!url) {
-      console.error('Please provide a URL as a command-line argument.');
-      process.exit(1);
-    }
-
-    console.log(`[DEBUG] Navigating to ${url}...`);
-    await page.goto(url, { waitUntil: 'networkidle' });
-    console.log('[DEBUG] Navigation successful. Evaluating page...');
+    const url = 'https://www.ish.or.kr/main/doctor/view.do?md_idx=56&doctor_code=545598&mp_idx=60&mc_idx=';
+    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
 
     const doctorData = await page.evaluate(() => {
       const data = {};
       const baseUrl = 'https://www.ish.or.kr';
 
-      // Profile URL from background-image
       const profileBgDiv = document.querySelector('.section1 > .wsize');
       if (profileBgDiv) {
         const style = profileBgDiv.getAttribute('style');
-        const match = style.match(/url\((['"]?)(.*?)\1\)/);
+        const match = style.match(/url\((['"]?)(.*?)\\1\)/);
         if (match && match[2]) {
           data.profileUrl = new URL(match[2], baseUrl).href;
         }
       }
 
-      // Specialty
       data.specialty = document.querySelector('p.clinic > span')?.textContent.trim() || null;
 
-      // Helper to process sections like 학력, 경력
       const extractDlSection = (title) => {
         const dts = Array.from(document.querySelectorAll('dl.jsInfo dt'));
         const targetDt = dts.find(dt => dt.textContent.trim() === title);
         if (!targetDt) return [];
-
         const liElements = Array.from(targetDt.nextElementSibling.querySelectorAll('li'));
         return liElements.map(li => {
           const dateEl = li.querySelector('span');
           let date = null;
           let content = '';
-
           if (dateEl) {
             date = dateEl.textContent.trim();
-            // Remove the span to get the remaining content
             const clone = li.cloneNode(true);
             clone.querySelector('span').remove();
             content = clone.textContent.trim();
@@ -61,12 +44,10 @@ const { chromium } = require('playwright');
         });
       };
       
-      // 학회활동, 수상 (different structure)
       const extractNodateDlSection = (title) => {
         const dts = Array.from(document.querySelectorAll('dl.jsInfo.nodate dt'));
         const targetDt = dts.find(dt => dt.textContent.trim() === title);
         if (!targetDt) return [];
-
         const liElements = Array.from(targetDt.nextElementSibling.querySelectorAll('li'));
         return liElements.map(li => {
             let text = li.textContent.trim();
@@ -81,12 +62,10 @@ const { chromium } = require('playwright');
         });
       };
 
-      // Papers
       const extractPapers = () => {
         const dts = Array.from(document.querySelectorAll('dl.jsInfo.w100 dt'));
         const targetDt = dts.find(dt => dt.textContent.trim() === '논문');
         if (!targetDt) return [];
-
         const liElements = Array.from(targetDt.nextElementSibling.querySelectorAll('li'));
         return liElements.map(li => {
           const year = li.querySelector('p.year')?.textContent.trim();
@@ -108,14 +87,9 @@ const { chromium } = require('playwright');
     console.log(JSON.stringify(doctorData, null, 2));
 
   } catch (error) {
-    if (error.name === 'AbortError') {
-      console.error('Script timed out after 2 minutes.');
-    } else {
       console.error('An error occurred:', error);
-    }
-    console.log(JSON.stringify({}, null, 2)); // Output empty for failure
+      console.log(JSON.stringify({}, null, 2));
   } finally {
-    clearTimeout(timer);
     await browser.close();
   }
 })();
