@@ -1,0 +1,48 @@
+{
+  "hospital_cid": 644,
+  "bedoc_id": "A0913",
+  "bedoc_hospitalsite": "http://gangnam.chamc.co.kr",
+  "bedoc_doctorname": "한원보",
+  "bedoc_deptname": "산부인과",
+  "bedoc_hospitalname": "강남차병원",
+  "hospital_name": "강남차병원",
+  "aiga_hid": "H11KR-11000037",
+  "hospital_site": "https://gangnam.chamc.co.kr/treatment/list/obstetrics/reservation.cha#none",
+  "site_type": "list",
+  "hospital_addr": "서울특별시 강남구 논현로 566, 강남차병원(역삼동650-9, 606-4, 605외2필지(지하7층~지하1층, 지상2층~7층)) (역삼동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('div.medical_schedule_list').filter({ hasText: '한원보' }).locator('.medical_schedule_con_area').locator('a:has-text(\"수상경력·논문\")')\u001b[22m\n\u001b[2m    - locator resolved to <a href=\"#none\">수상경력·논문</a>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    58 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n",
+  "profileUrl": "https://wmanager.chamc.co.kr/file/doctor/2_%ED%95%9C%EC%9B%90%EB%B3%B4_%EA%B5%90%EC%88%98%EB%8B%98_1.png",
+  "specialty": "초음파, 일반산부인과",
+  "학력": [
+    {
+      "date": null,
+      "content": "의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "산부인과 전문의"
+    },
+    {
+      "date": null,
+      "content": "現 차의과대학교 산부인과 교수"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한산부인과의학회"
+    },
+    {
+      "date": null,
+      "content": "대한초음파의학회"
+    },
+    {
+      "date": null,
+      "content": "대한 성의학회"
+    }
+  ]
+}

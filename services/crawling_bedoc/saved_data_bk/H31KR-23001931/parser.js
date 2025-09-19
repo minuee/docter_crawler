@@ -21,40 +21,37 @@ if (!jsonFilePath) {
     const page = await browser.newPage();
     await page.goto(url, { waitUntil: 'networkidle' });
 
-    // Find the button for the specific doctor and click it
-    const doctorButton = page.locator(`li:has-text("${doctorName}") > a[class^="docter-btn"]`);
-    if (await doctorButton.count() === 0) {
-        throw new Error(`Could not find button for doctor ${doctorName}`);
-    }
-    await doctorButton.click();
-
-    // Wait for the modal to become active
-    const modalSelector = 'ul.prf.active';
-    await page.waitForSelector(modalSelector, { state: 'visible', timeout: 10000 });
-
-    const htmlContent = await page.innerHTML(modalSelector);
+    const htmlContent = await page.content();
     const $ = cheerio.load(htmlContent);
 
-    const extractedData = { 학력: [], 경력: [] };
+    const extractedData = { 학력: [], 경력: [], 학술: [] };
 
-    const bgImage = $("li[style*=\"background-image\"]").attr("style");
-    const urlMatch = bgImage.match(/url\(([^)]+)\)/);
-    if (urlMatch && urlMatch[1]) {
-        extractedData.profileUrl = new URL(urlMatch[1].replace(/['"]/g, ''), url).href;
+    const profileImg = $("img[alt*=\"${doctorName}\"]");
+    if (profileImg.length > 0) {
+        extractedData.profileUrl = new URL(profileImg.attr('src'), url).href;
     }
 
-    extractedData.specialty = $(".txt.mb70").text().replace('전문진료과목','').trim();
+    const specialtyText = $("h3.heading").filter((i, el) => $(el).text().includes(doctorName)).next('p').text().trim();
+    if(specialtyText) extractedData.specialty = specialtyText;
 
-    $(".txt-box > ul > li").each((i, el) => {
-        const text = $(el).text().trim().replace(/^ㆍ\s*/, '');
-        if (!text || text.includes('약력 및 경력')) return;
+    const contentBlock = $("p:has(strong:contains(\"학력\"))");
+    if (contentBlock.length > 0) {
+        let currentCategory = null;
+        contentBlock.contents().each((i, node) => {
+            if (node.type === 'tag' && node.name === 'strong') {
+                const title = $(node).text().trim();
+                if (title.includes('학력')) currentCategory = '학력';
+                else if (title.includes('경력')) currentCategory = '경력';
+                else if (title.includes('학회활동')) currentCategory = '학술';
+            } else if (node.type === 'text') {
+                const text = node.data.trim();
+                if (text && currentCategory) {
+                    extractedData[currentCategory].push({ date: null, content: text });
+                }
+            }
+        });
+    }
 
-        if (text.includes('졸업') || text.includes('석사') || text.includes('박사')) {
-            extractedData.학력.push({ date: null, content: text });
-        } else {
-            extractedData.경력.push({ date: null, content: text });
-        }
-    });
     const finalData = { ...originalData, ...extractedData, isExist: true, isSearchType: 'html_playwright', error: null };
 
     fs.writeFileSync(jsonFilePath, JSON.stringify(finalData, null, 2), 'utf-8');

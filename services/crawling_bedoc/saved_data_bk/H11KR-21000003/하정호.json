@@ -1,0 +1,152 @@
+{
+  "hospital_cid": 633,
+  "bedoc_id": "A0484",
+  "bedoc_hospitalsite": "http://www.kcch.re.kr",
+  "bedoc_doctorname": "하정호",
+  "bedoc_deptname": "신경과",
+  "bedoc_hospitalname": "원자력병원",
+  "hospital_name": "원자력병원",
+  "aiga_hid": "H11KR-21000003",
+  "hospital_site": "https://www.kcch.re.kr/doctor/profViewPop.do?deptNo=57&profNo=84",
+  "site_type": "single",
+  "hospital_addr": "부산광역시 기장군 장안읍 좌동길 40, (장안읍)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "학력": [
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 졸업"
+    }
+  ],
+  "경력": [
+    {
+      "date": "2006.08 ~ 현재",
+      "content": "원자력병원 신경과 과장"
+    },
+    {
+      "date": "1999.09 ~ 2006.07",
+      "content": "동국대학교 병원 신경과 부교수"
+    },
+    {
+      "date": "1998.03 ~ 1999.08",
+      "content": "서울아산병원 신경과 전임의"
+    },
+    {
+      "date": "1997.03 ~ 1998.02",
+      "content": "울산대학교병원 신경과 전임강사"
+    },
+    {
+      "date": "1992.03 ~ 1997.02",
+      "content": "서울아산병원  전공의"
+    },
+    {
+      "date": null,
+      "content": "의학박사"
+    }
+  ],
+  "학술": [
+    {
+      "date": "201401 ~ 201501",
+      "content": "Helen Wills Neuroscience institute in UC Berkeley에서 퇴행성 뇌질환의 최신지견 습득"
+    },
+    {
+      "date": null,
+      "content": "대한 치매학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한 통증자율신경학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한 임상신경생리학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한 신경과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한 두통학회 정회원"
+    }
+  ],
+  "논문": [
+    "Head-to-head Comparison of 18F-FP-CIT and 123I-FP-CIT for Dopamine Transporter Imaging in Patients with Parkinson’s Disease: A Preliminary Study (Synapse, 2018)",
+    "Head-to-Head Comparison of 11C-PiB and 18F-FC119S for Aβ Imaging in Healthy Subjects, Mild Cognitive Impairment Patients, and Alzheimer's Disease Patients (Medicine, 2017)"
+  ],
+  "언론": [
+    {
+      "targetDate": null,
+      "type": "기사",
+      "text": "치매 치료의 최적기, 경도인지장애 AtoZ! - 신경과 하정호 과장",
+      "url": "javascript: openUrl('https://blog.naver.com/PostView.naver?blogId=kirams1963&logNo=223468681467&categoryNo=6&parentCategoryNo=6&viewDate=&currentPage=1&postListTopCurrentPage=&from=thumbnailList')",
+      "issuer": "블로그"
+    },
+    {
+      "targetDate": null,
+      "type": "기사",
+      "text": "두통이 알리는 메시지를 놓치지 마세요! - 원자력병원 신경과 하정호 과장",
+      "url": "javascript: openUrl('https://blog.naver.com/PostView.naver?blogId=kirams1963&logNo=223108352589&categoryNo=6&parentCategoryNo=6&viewDate=&currentPage=2&postListTopCurrentPage=&from=thumbnailList')",
+      "issuer": "블로그"
+    },
+    {
+      "targetDate": null,
+      "type": "기사",
+      "text": "술 먹고 필름 끊기면 치매 위험↑- 원자력병원 신경과 하정호 과장",
+      "url": "javascript: openUrl('https://blog.naver.com/PostView.naver?blogId=kirams1963&logNo=222773757899&categoryNo=6&parentCategoryNo=6&viewDate=&currentPage=3&postListTopCurrentPage=&from=thumbnailList')",
+      "issuer": "블로그"
+    },
+    {
+      "targetDate": null,
+      "type": "기사",
+      "text": "손발 저림, 혈액순환 탓이 아니다! – 원자력병원 신경과 하정호 과장",
+      "url": "javascript: openUrl('https://blog.naver.com/PostView.naver?blogId=kirams1963&logNo=222594957952&categoryNo=6&parentCategoryNo=6&viewDate=&currentPage=3&postListTopCurrentPage=&from=thumbnailList')",
+      "issuer": "블로그"
+    },
+    {
+      "targetDate": null,
+      "type": "기사",
+      "text": "지끈지끈 두통, 진통제도 안 듣는다면? – 원자력병원 신경과 하정호 과장",
+      "url": "javascript: openUrl('https://blog.naver.com/PostView.naver?blogId=kirams1963&logNo=222498927037&categoryNo=6&parentCategoryNo=6&viewDate=&currentPage=4&postListTopCurrentPage=&from=thumbnailList')",
+      "issuer": "블로그"
+    },
+    {
+      "targetDate": null,
+      "type": "기사",
+      "text": "[진료실 문답] 치매 부르는 경도인지장애",
+      "url": "javascript: openUrl('https://www.kukinews.com/newsView/kuk202406140091')",
+      "issuer": "국민일보"
+    },
+    {
+      "targetDate": null,
+      "type": "기사",
+      "text": "치매 치료의 최적기, 경도인지장애 AtoZ! - 신경과 하정호 과장",
+      "url": "javascript: openUrl('https://blog.naver.com/kirams1963/223468681467')",
+      "issuer": "블로그"
+    },
+    {
+      "targetDate": null,
+      "type": "기사",
+      "text": "[진료실에서] 진통제 안 듣는 두통, 전문의 진료 받아야",
+      "url": "javascript: openUrl('https://www.kukinews.com/newsView/kuk202107120015')",
+      "issuer": "쿠키뉴스"
+    },
+    {
+      "targetDate": null,
+      "type": "기사",
+      "text": "암은 원자력병원입니다.-치매-신경과 하정호 과장",
+      "url": "javascript: openUrl('https://www.youtube.com/embed/_ZY-O65iZfY')",
+      "issuer": "유튜브"
+    },
+    {
+      "targetDate": null,
+      "type": "기사",
+      "text": "원자력병원, 개원의 연수강좌 개최 - 신경계 질환",
+      "url": "javascript: openUrl('www.whosaeng.com/110889')",
+      "issuer": ""
+    }
+  ],
+  "profileUrl": "https://www.kcch.re.kr/_upload/profImg/9a1fc434-e218-450f-8543-6d4ee5d8430c",
+  "specialty": "두통,파킨슨병,떨림,근긴장 이상,치매,뇌혈관질환,뇌전증,통증"
+}

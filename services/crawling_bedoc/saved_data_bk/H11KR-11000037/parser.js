@@ -75,7 +75,8 @@ const path = require('path');
         });
 
         const awardsTab = contentArea.locator('a:has-text("수상경력·논문")');
-        if (await awardsTab.count() > 0) {
+        if (await awardsTab.count() > 0 && await awardsTab.isVisible()) {
+            console.log('Clicking "수상경력·논문" tab...');
             await awardsTab.click();
             await page.waitForTimeout(1000);
 

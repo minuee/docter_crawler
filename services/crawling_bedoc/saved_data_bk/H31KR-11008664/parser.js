@@ -1,90 +1,76 @@
 const { chromium } = require('playwright');
+const fs = require('fs');
+const path = require('path');
 const cheerio = require('cheerio');
 
-async function main() {
-    if (process.argv.length < 3) {
-        console.error('Usage: node parser.js <doctorDataJsonString>');
-        process.exit(1);
-    }
-
-    const doctorData = JSON.parse(process.argv[2]);
-    const { hospital_site, bedoc_doctorname } = doctorData;
-
-    const browser = await chromium.launch({ headless: true });
-    const context = await browser.newContext();
-    const page = await context.newPage();
-
-    let result = {};
-    let error = null;
-
-    try {
-        await page.goto(hospital_site, { waitUntil: 'networkidle', timeout: 60000 });
-
-        const doctorLocator = page.locator(`li:has(h6.dt-name > b:text-is("${bedoc_doctorname}"))`);
-        if (await doctorLocator.count() === 0) {
-            throw new Error(`Doctor ${bedoc_doctorname} not found on list page.`);
-        }
-
-        const detailButton = doctorLocator.locator('a.docter-btn7');
-        await detailButton.click();
-
-        // Wait for the modal specified by the user
-        await page.waitForSelector('#docter7', { state: 'visible', timeout: 10000 });
-
-        const modalContent = await page.innerHTML('#docter7');
-        const $ = cheerio.load(modalContent);
-
-        const isAttend = true; // We found the doctor
-
-        // Profile URL from background-image
-        let profileUrl = null;
-        const style = $('li[style*="background-image"]').attr('style');
-        if (style) {
-            const urlMatch = style.match(/url\(([^)]+)\)/);
-            if (urlMatch && urlMatch[1]) {
-                profileUrl = new URL(urlMatch[1], hospital_site).href;
-            }
-        }
-
-        const specialty = $('h6.sub:contains("전문진료과목")').parent().text().replace('전문진료과목','').trim();
-
-        const 학력 = [];
-        const 경력 = [];
-        const 학술 = [];
-        const 수상 = [];
-
-        $('h6.sub:contains("약력 및 경력")').parent().nextAll('li').each((i, el) => {
-            const text = $(el).text().trim().replace(/^ㆍ\s*/, '');
-            if (!text) return;
-
-            if (text.includes('졸업') || text.includes('석사') || text.includes('박사')) {
-                학력.push({ date: null, content: text });
-            } else if (text.includes('학회') || text.includes('회장') || text.includes('위원')) {
-                학술.push({ date: null, content: text });
-            } else if (text.includes('수상')) {
-                수상.push({ date: null, content: text });
-            } else {
-                경력.push({ date: null, content: text });
-            }
-        });
-
-        result = {
-            isAttend,
-            profileUrl,
-            specialty,
-            학력,
-            경력,
-            학술,
-            수상,
-        };
-
-    } catch (e) {
-        error = `Error during Playwright execution: ${e.message}`;
-    } finally {
-        await browser.close();
-    }
-
-    console.log(JSON.stringify({ ...result, error }));
+const jsonFilePath = process.argv[2];
+if (!jsonFilePath) {
+  console.error('Error: JSON file path is required.');
+  process.exit(1);
 }
 
-main();
+(async () => {
+  let browser;
+  let originalData;
+
+  try {
+    originalData = JSON.parse(fs.readFileSync(jsonFilePath, 'utf-8'));
+    const { hospital_site: url, bedoc_doctorname: doctorName } = originalData;
+
+    browser = await chromium.launch({ headless: true });
+    const page = await browser.newPage();
+    await page.goto(url, { waitUntil: 'networkidle' });
+
+    // Find the button for the specific doctor and click it
+    const doctorButton = page.locator(`li:has-text("${doctorName}") > a[class^="docter-btn"]`);
+    if (await doctorButton.count() === 0) {
+        throw new Error(`Could not find button for doctor ${doctorName}`);
+    }
+    await doctorButton.click();
+
+    // Wait for the modal to become active
+    const modalSelector = 'ul.prf.active';
+    await page.waitForSelector(modalSelector, { state: 'visible', timeout: 10000 });
+
+    const htmlContent = await page.innerHTML(modalSelector);
+    const $ = cheerio.load(htmlContent);
+
+    const extractedData = { 학력: [], 경력: [] };
+
+    const bgImage = $("li[style*=\"background-image\"]").attr("style");
+    const urlMatch = bgImage.match(/url\(([^)]+)\)/);
+    if (urlMatch && urlMatch[1]) {
+        extractedData.profileUrl = new URL(urlMatch[1].replace(/['"]/g, ''), url).href;
+    }
+
+    extractedData.specialty = $(".txt.mb70").text().replace('전문진료과목','').trim();
+
+    $(".txt-box > ul > li").each((i, el) => {
+        const text = $(el).text().trim().replace(/^ㆍ\s*/, '');
+        if (!text || text.includes('약력 및 경력')) return;
+
+        if (text.includes('졸업') || text.includes('석사') || text.includes('박사')) {
+            extractedData.학력.push({ date: null, content: text });
+        } else {
+            extractedData.경력.push({ date: null, content: text });
+        }
+    });
+    const finalData = { ...originalData, ...extractedData, isExist: true, isSearchType: 'html_playwright', error: null };
+
+    fs.writeFileSync(jsonFilePath, JSON.stringify(finalData, null, 2), 'utf-8');
+    console.log(`Successfully processed and updated: ${path.basename(jsonFilePath)}`);
+
+  } catch (error) {
+    console.error(`Error during playwright execution for ${path.basename(jsonFilePath)}:`, error.message);
+    if (originalData) {
+        originalData.isSearchType = 'html_playwright_failed';
+        originalData.error = error.message;
+        fs.writeFileSync(jsonFilePath, JSON.stringify(originalData, null, 2), 'utf-8');
+    }
+    process.exit(1);
+  } finally {
+    if (browser) {
+      await browser.close();
+    }
+  }
+})();

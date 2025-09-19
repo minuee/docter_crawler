@@ -1,7 +1,8 @@
+
 const { chromium } = require('playwright');
 const fs = require('fs');
 
-const url = 'https://www.jeilent.com/home/homepage.php?homefile=s0102.html';
+const url = 'https://hormone-doctor.imweb.me/introduction';
 
 (async () => {
   const browser = await chromium.launch({ headless: true });
@@ -11,10 +12,9 @@ const url = 'https://www.jeilent.com/home/homepage.php?homefile=s0102.html';
     console.log(`Navigating to ${url}...`);
     await page.goto(url, { waitUntil: 'networkidle' });
 
-    console.log('Saving main page HTML...');
-    const mainHtml = await page.content();
-    fs.writeFileSync('temp_jeil.html', mainHtml);
-    console.log('Main page HTML saved to temp_jeil.html');
+    console.log('Taking screenshot...');
+    await page.screenshot({ path: 'hasseungwoo_profile.png', fullPage: true });
+    console.log('Screenshot saved as hasseungwoo_profile.png');
 
   } catch (error) {
     console.error('An error occurred:', error.message);
