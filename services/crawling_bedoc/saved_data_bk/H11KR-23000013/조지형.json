@@ -1,0 +1,88 @@
+{
+  "hospital_cid": 573,
+  "bedoc_id": "A0235",
+  "bedoc_hospitalsite": "https://daegu.dsmc.or.kr:49880/",
+  "bedoc_doctorname": "조지형",
+  "bedoc_deptname": "외과",
+  "bedoc_hospitalname": "계명대동산병원",
+  "hospital_name": "구병원",
+  "aiga_hid": "H11KR-23000013",
+  "hospital_site": "http://www.gooh.co.kr/Sub01/Sub01_04.asp",
+  "site_type": "list",
+  "hospital_addr": "대구광역시 달서구 감삼북길 141, (감삼동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "isAttend": true,
+  "학력": [
+    {
+      "date": null,
+      "content": "계명대학교 의과대학 학사"
+    },
+    {
+      "date": null,
+      "content": "계명대학교 의학대학원 외과학석사"
+    },
+    {
+      "date": null,
+      "content": "경상대학교 의학대학원 외과학박사수료"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "現.구병원 갑상선/유방외과 원장"
+    },
+    {
+      "date": null,
+      "content": "계명대학교 동산의료원 인턴"
+    },
+    {
+      "date": null,
+      "content": "계명대학교 동산의료원 외과 레지던트"
+    },
+    {
+      "date": null,
+      "content": "경상북도 김천의료원 외과 과장"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 병원 유방내분비외과 연구강사(전임의)"
+    },
+    {
+      "date": null,
+      "content": "계명대학교 동산의료원 유방내분비외과 조교수"
+    },
+    {
+      "date": null,
+      "content": "계명대학교 동산병원 유방갑상선센터 센터장"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한외과학회 평생회원"
+    },
+    {
+      "date": null,
+      "content": "한국 유방암학회 평생회원"
+    },
+    {
+      "date": null,
+      "content": "대한 임상종양학회 평생회원"
+    },
+    {
+      "date": null,
+      "content": "대한 내분비외과학회 평생회원"
+    },
+    {
+      "date": null,
+      "content": "대한 신경몬터링학회 평생회원"
+    },
+    {
+      "date": null,
+      "content": "최소침습 로봇, 내시경 갑상선 학회 평생회원"
+    }
+  ],
+  "specialty": "유방외과",
+  "profileUrl": "http://file1.page1.co.kr/goohospi/Doctor/0/250031-11.JPG"
+}
