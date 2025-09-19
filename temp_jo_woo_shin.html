@@ -1,0 +1,1778 @@
+
+<div class="site-wrapper" style="position: relative;">
+
+
+<!-- 로고 -->
+	<section class="text-center hidden-xs hidden-sm">
+<div class="container">
+	<div class="row">
+		<a name="top"></a>
+		<div class="logo">
+			<div class="row nopadding">
+				<div class="col-sm-12">
+					<div class="col-sm-7 col-xs-7 nopadding box1">
+						<a href="/html/main.asp" title=""><img src="/images/logo.png" alt="" class="respoimg left"></a>
+					</div>
+					<div class="col-sm-5 col-xs-5 text-right nopadding box2" style="display: flex; justify-content: space-between; align-items: center;">
+						<!-- 진료 문의 및 예약 -->
+						<div style="text-align: right; ">
+							<p class="txc font-weight3 margin-top1" style="margin-bottom: 0;">
+								진료 문의 및 예약
+							</p>
+							<h2 class="txn big1 font-weight8 margintx" style="margin: 0;">1899-7584</h2>
+						</div>
+						<!-- 언어 선택 버튼 및 소셜 링크 -->
+						<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 5px;">
+							<!-- 언어 선택 버튼 -->
+							<div style="position: relative; display: inline-block;" id="selectlang">
+								<button style="background: #ffffff; border: 1px solid #ccc; padding: 8px; font-size: 16px; cursor: pointer; border-radius: 5px;">
+									 <i class="fas fa-globe"></i> 언어선택
+								</button>
+								<div style="display: none; position: absolute; background: #fff; border: 1px solid #ccc; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); margin-top: 5px; z-index: 9999;">
+									<a href="/html/main.asp" class="language-link" style="display: flex; align-items: center; padding: 10px; text-decoration: none; color: #333;">
+										<img src="/images/kr.png" alt="한국어"> 
+									</a>
+									<a href="/en/main.asp" class="language-link" style="display: flex; align-items: center; padding: 10px; text-decoration: none; color: #333;">
+										<img src="/images/us.png?241122" alt="English"> 
+									</a>
+									<a href="/ru/main.asp" class="language-link" style="display: flex; align-items: center; padding: 10px; text-decoration: none; color: #333;">
+										<img src="/images/ru.png?241122" alt="Русский"> 
+									</a>
+								</div>
+							</div>
+							<!-- 소셜 링크 -->
+							<div class="social-links" style="display: flex; gap: 5px;">
+								<a href="https://www.youtube.com/@아산재건정형외과" target="_blank"><img src="/images/sns01.png" alt="YouTube"></a>
+								<a href="https://www.instagram.com/asan.recon.hospital" target="_blank"><img src="/images/sns02.png" alt="Instagram"></a>
+								<a href="https://www.facebook.com/asanrecon" target="_blank"><img src="/images/sns03.png" alt="Facebook"></a>
+								<a href="https://blog.naver.com/asanrecon" target="_blank"><img src="/images/sns04.png" alt="Blog"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+
+
+
+
+<style>
+/* 드롭다운 메뉴 기본 스타일 */
+#selectlang > div a {
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    background-color: #FFFFFF; /* 흰색 배경 */
+    border-radius: 4px; /* 모서리 둥글게 */    
+}
+
+#selectlang > div a:hover {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+.language-link {
+
+}
+.language-link img {
+    margin-right: 10px;
+    width: 48px;
+    height: 32px;
+    background-color: #f0f0f0;
+}
+</style>
+
+
+
+<script>
+// 버튼 클릭 시 드롭다운 메뉴 표시/숨기기
+const languageButton = document.querySelector("#selectlang > button");
+const languageMenu = document.querySelector("#selectlang > div");
+
+languageButton.addEventListener("click", () => {
+    const isMenuVisible = languageMenu.style.display === "block";
+    languageMenu.style.display = isMenuVisible ? "none" : "block";
+});
+
+// 다른 곳을 클릭하면 메뉴 닫기
+document.addEventListener("click", (e) => {
+    if (!languageButton.contains(e.target)) {
+        languageMenu.style.display = "none";
+    }
+});
+
+
+</script>
+	
+	
+<div class="clearfix"></div>    
+
+<!-- 상단메뉴 -->
+	<style>
+        float:none;
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+</style>
+
+
+
+
+<nav class="header-section big two">
+<div class="container">
+    
+
+    <div class="row hidden-md hidden-lg" style="background:#FFFFFF;">
+        <a name="top"></a>
+
+        <div class="logo">
+        
+            <div class="row nopadding">    
+                <div class="col-sm-12 ">
+                    <div class="col-sm-6  col-sm-6 col-xs-7  nopadding">	
+                        <a href="/html/main.asp" title=""> <img src="/images/logo.png" alt="" class="respoimg left"> </a> 		
+                    </div>
+                    <div class="col-sm-6  col-sm-6 col-xs-5 text-right nopadding">	
+                        <p class="txc  font-weight3 margin-top1">진료 문의 및 예약</p>
+                        <h2 class="txn big1 font-weight8 margintx">1899-7584</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row nopadding">   
+                <div class="col-sm-12 "> 
+                    <div class="social-links" style="display: flex; flex-wrap: wrap; gap: 5px; justify-content: end;">
+                        <a href="/html/main.asp" class="language-link">
+                            <img src="/images/kr.png" alt="한국어" style="width: 45px; height: 30px; object-fit: cover; border-radius: 4px;">
+                        </a>
+                        <a href="/en/main.asp" class="language-link">
+                            <img src="/images/us.png?241122" alt="English" style="width: 45px; height: 30px; object-fit: cover; border-radius: 4px;">
+                        </a>
+                        <a href="/ru/main.asp" class="language-link">
+                            <img src="/images/ru.png?241122" alt="Русский" style="width: 45px; height: 30px; object-fit: cover; border-radius: 4px;">
+                        </a>
+
+                        <a href="https://www.youtube.com/@아산재건정형외과" target="_blank" class="flag-link">
+                            <img src="/images/sns01.png" alt="YouTube" style="width: 30px; height: auto;">
+                        </a>
+                        <a href="https://www.instagram.com/asan.recon.hospital" target="_blank" class="flag-link">
+                            <img src="/images/sns02.png" alt="Instagram" style="width: 30px; height: auto;">
+                        </a>
+                        <a href="https://www.facebook.com/asanrecon" target="_blank" class="flag-link">
+                            <img src="/images/sns03.png" alt="Facebook" style="width: 30px; height: auto;">
+                        </a>
+                        <a href="https://blog.naver.com/asanrecon" target="_blank" class="flag-link">
+                            <img src="/images/sns04.png" alt="Blog" style="width: 30px; height: auto;">
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="mod-menu">
+      <div class="row">
+	      
+        <div class="col-sm-12">       
+          <div class="main-nav">
+		
+            <ul class="nav navbar-nav top-nav">
+              <li class="visible-xs menu-icon"> <a href="javascript:void(0)" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false"> <i aria-hidden="true" class="fa  fa-bars"></i> </a> </li>
+            </ul>
+		  
+		  
+            <div id="menu" class="collapse">		  		   
+              <ul class="nav navbar-nav">       
+                <li> <a href="/html/main.asp#point"><span>병원 소개</span></a> </li>
+                <li> <a href="/html/main.asp#team"><span>의료진 소개</span></a> </li>
+				        <li> <a href="/html/main.asp#cure"><span>진료과목</span></a> </li>
+				        <li> <a href="/html/main.asp#info"><span>진료안내</span></a> </li>
+                <li> <a href="/html/main.asp#story"><span>재건STORY</span></a> </li>
+                <li> <a href="/html/main.asp#map2"><span>오시는 길</span></a> </li>
+              </ul>
+            </div>
+			
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</nav>
+
+
+
+
+<div class="clearfix"></div>
+
+
+<!-- slider -->
+<div class="master-slider ms-skin-default ms-wk" id="masterslider1" style="visibility: visible; opacity: 1; margin: 0px; width: 1280px; transition-duration: 1000ms; transition-property: all; transition-timing-function: linear;"><div class="ms-container"><div class="ms-inner-controls-cont" style="max-width: 2000px;"><div class="ms-view ms-basic-view ms-grab-cursor" style="width: 1280px; height: 512px; left: 0px;"><div class="ms-slide-container" style="transform: translateX(-3840px) translateZ(0px);"><div class="ms-slide slide-2" data-delay="5" style="width: 1280px; height: 512px; left: 0px;"><div class="ms-slide-loading"></div><div class="ms-slide-bgcont" style="height: 100%;"><img src="/images/blank.gif" alt="" border="0" style="visibility: hidden;"></div></div><div class="ms-slide slide-2" data-delay="5" style="width: 1280px; height: 512px; left: 1280px;"><div class="ms-slide-loading"></div><div class="ms-slide-bgcont" style="height: 100%;"><img src="/images/blank.gif" alt="" border="0" style="visibility: hidden;"></div></div><div class="ms-slide slide-2" data-delay="5" style="width: 1280px; height: 512px; left: 2560px;"><div class="ms-slide-loading"></div><div class="ms-slide-bgcont" style="height: 100%;"><img src="/images/blank.gif" alt="" border="0" style="visibility: hidden;"></div></div><div class="ms-slide slide-1 ms-sl-selected" data-delay="5" style="width: 1280px; height: 512px; left: 3840px;"><div class="ms-slide-loading"></div><div class="ms-slide-bgcont" style="height: 100%;"><img src="/images/blank.gif" alt="" border="0" style="visibility: hidden;"></div></div><div class="ms-slide slide-1" data-delay="5" style="width: 1280px; height: 512px; left: 5120px;"><div class="ms-slide-loading"></div><div class="ms-slide-bgcont" style="height: 100%;"><img src="/images/blank.gif" alt="" border="0" style="visibility: hidden;"></div></div><div class="ms-slide slide-1" data-delay="5" style="width: 1280px; height: 512px; left: 6400px;"><div class="ms-slide-loading"></div><div class="ms-slide-bgcont" style="height: 100%;"><img src="/images/blank.gif" alt="" border="0" style="visibility: hidden;"></div></div><div class="ms-slide slide-2" data-delay="5" style="width: 1280px; height: 512px; left: 7680px;"><div class="ms-slide-loading"></div><div class="ms-slide-bgcont" style="height: 100%;"><img src="/images/blank.gif" alt="" border="0" style="visibility: hidden;"></div></div><div class="ms-slide slide-2" data-delay="5" style="width: 1280px; height: 512px; left: 8960px;"><div class="ms-slide-loading"></div><div class="ms-slide-bgcont" style="height: 100%;"><img src="/images/blank.gif" alt="" border="0" style="visibility: hidden;"></div></div></div></div><div class="ms-nav-next"></div><div class="ms-nav-prev"></div><div class="ms-bullets ms-dir-h ms-align-bottom" style="bottom: 10px; width: 160px;"><div class="ms-bullets-count"><div class="ms-bullet ms-bullet-selected" style="margin: 5px;"></div><div class="ms-bullet" style="margin: 5px;"></div><div class="ms-bullet" style="margin: 5px;"></div><div class="ms-bullet" style="margin: 5px;"></div><div class="ms-bullet" style="margin: 5px;"></div><div class="ms-bullet" style="margin: 5px;"></div><div class="ms-bullet" style="margin: 5px;"></div><div class="ms-bullet" style="margin: 5px;"></div></div></div></div></div>
+      <!-- 비만 -->
+      <!-- AI -->
+	  <!-- 협력병원 -->
+	  <!-- 조우신교수 -->
+	    
+    
+	
+	
+</div>
+
+<div class="master-slider ms-skin-default ms-wk" id="masterslider2" style="visibility: visible; opacity: 1; margin: 0px; transition-duration: 1000ms; transition-property: all; transition-timing-function: linear;"><div class="ms-container"><div class="ms-inner-controls-cont" style="max-width: 460px;"><div class="ms-view ms-basic-view ms-grab-cursor" style="width: 460px; height: 600px; left: 0px;"><div class="ms-slide-container" style="transform: translateX(-1380px) translateZ(0px);"><div class="ms-slide slide-2" data-delay="5" style="width: 460px; height: 600px; left: 0px;"><div class="ms-slide-loading"></div><div class="ms-slide-bgcont" style="height: 100%;"><img src="/images/blank.gif" alt="" border="0" style="visibility: hidden;"></div></div><div class="ms-slide slide-2" data-delay="5" style="width: 460px; height: 600px; left: 460px;"><div class="ms-slide-loading"></div><div class="ms-slide-bgcont" style="height: 100%;"><img src="/images/blank.gif" alt="" border="0" style="visibility: hidden;"></div></div><div class="ms-slide slide-2" data-delay="5" style="width: 460px; height: 600px; left: 920px;"><div class="ms-slide-loading"></div><div class="ms-slide-bgcont" style="height: 100%;"><img src="/images/blank.gif" alt="" border="0" style="visibility: hidden;"></div></div><div class="ms-slide slide-1 ms-sl-selected" data-delay="5" style="width: 460px; height: 600px; left: 1380px;"><div class="ms-slide-loading"></div><div class="ms-slide-bgcont" style="height: 100%;"><img src="/images/blank.gif" alt="" border="0" style="visibility: hidden;"></div></div><div class="ms-slide slide-1" data-delay="5" style="width: 460px; height: 600px; left: 1840px;"><div class="ms-slide-loading"></div><div class="ms-slide-bgcont" style="height: 100%;"><img src="/images/blank.gif" alt="" border="0" style="visibility: hidden;"></div></div><div class="ms-slide slide-1" data-delay="5" style="width: 460px; height: 600px; left: 2300px;"><div class="ms-slide-loading"></div><div class="ms-slide-bgcont" style="height: 100%;"><img src="/images/blank.gif" alt="" border="0" style="visibility: hidden;"></div></div><div class="ms-slide slide-2" data-delay="5" style="width: 460px; height: 600px; left: 2760px;"><div class="ms-slide-loading"></div><div class="ms-slide-bgcont" style="height: 100%;"><img src="/images/blank.gif" alt="" border="0" style="visibility: hidden;"></div></div><div class="ms-slide slide-2" data-delay="5" style="width: 460px; height: 600px; left: 3220px;"><div class="ms-slide-loading"></div><div class="ms-slide-bgcont" style="height: 100%;"><img src="/images/blank.gif" alt="" border="0" style="visibility: hidden;"></div></div></div></div><div class="ms-nav-next"></div><div class="ms-nav-prev"></div><div class="ms-bullets ms-dir-h ms-align-bottom" style="bottom: 10px; width: 160px;"><div class="ms-bullets-count"><div class="ms-bullet ms-bullet-selected" style="margin: 5px;"></div><div class="ms-bullet" style="margin: 5px;"></div><div class="ms-bullet" style="margin: 5px;"></div><div class="ms-bullet" style="margin: 5px;"></div><div class="ms-bullet" style="margin: 5px;"></div><div class="ms-bullet" style="margin: 5px;"></div><div class="ms-bullet" style="margin: 5px;"></div><div class="ms-bullet" style="margin: 5px;"></div></div></div></div></div>
+      
+	  
+	  
+	  
+	    
+    
+    
+	
+</div>
+
+
+
+<div class="clearfix"></div>
+
+
+
+<!-- 의료진 안내 --><a name="team"></a>
+<section class="mainpadding background-team">
+<div class="container">
+<div class="row">
+	
+<h2 class="titlemw">의료진 안내</h2>
+<h5 class="titlemsw ppadding">아산재건정형외과의원은 풍부한 임상 경험과 노하우 그리고 기술력을 보유한 전문 의료진이<br class="hidden-xs"> 환자들의 빠른 일상으로의 복귀를 위해 최선을 다하고 있습니다. </h5>
+
+
+<!--<div class="col-md-1 col-sm-12 col-xs-12 "></div>-->
+
+<div class="col-md-12 col-sm-12 col-xs-12 nopadding">
+
+	<!--조훈식-->
+	<div class="col-md-3 col-sm-6 col-xs-12 margin-bottom2">
+	<img src="/images/m-team/man01-23.jpg" alt="" class="respoimg">	
+	<div class="bg-color-zblack center padding-bottom">
+	<img src="/images/m-team/man01t-23.jpg" alt="" class="respoimg">
+	<a href="doctorpop_jhs.asp" class="image-popup-vertical-fit"><button type="button" class="gobut "> 자세히 보기 </button></a>	
+	</div>	
+	</div>   
+
+
+	<!--조우신-->
+	<div class="col-md-3 col-sm-6 col-xs-12 margin-bottom2">
+	<img src="/images/m-team/man02-23.jpg" alt="" class="respoimg">	
+	<div class="bg-color-zblack center padding-bottom">
+	<img src="/images/m-team/man02t-23.jpg" alt="" class="respoimg">
+	<a href="doctorpop_jws.asp" class="image-popup-vertical-fit"><button type="button" class="gobut "> 자세히 보기 </button></a>		   
+	</div>	
+	</div>   
+
+
+
+	<!--방재현-->
+	<div class="col-md-3 col-sm-6 col-xs-12 margin-bottom2">
+	<img src="/images/m-team/man07-23.jpg" alt="" class="respoimg">	
+	<div class="bg-color-zblack center padding-bottom">
+	<img src="/images/m-team/man07t-23.jpg" alt="" class="respoimg">
+	<a href="doctorpop_bjh.asp" class="image-popup-vertical-fit"><button type="button" class="gobut "> 자세히 보기 </button></a>		   
+	</div>	
+	</div>
+	
+		
+	<!--옥차형
+	<div class="col-md-15 col-sm-6 col-xs-12 margin-bottom2">
+	<img src="/images/m-team/man08-23.jpg" alt="" class="respoimg">	
+	<div class="bg-color-zblack center padding-bottom">
+	<img src="/images/m-team/man08t-23.jpg" alt="" class="respoimg">
+	<a href="doctorpop_och.asp"  class="image-popup-vertical-fit"><button type="button" class="gobut "> 자세히 보기 </button></a>		   
+	</div>	
+	</div>-->
+
+
+	<!--백진우
+	<div class="col-md-15 col-sm-6 col-xs-12 margin-bottom2">
+	<img src="/images/m-team/man03-23.jpg" alt="" class="respoimg">	
+	<div class="bg-color-zblack center padding-bottom">
+	<img src="/images/m-team/man03t-23.jpg" alt="" class="respoimg">
+	<a href="doctorpop_bjw.asp"  class="image-popup-vertical-fit"><button type="button" class="gobut "> 자세히 보기 </button></a>		   
+	</div>	
+	</div>  -->
+	
+	
+
+	<!--장승원-->
+	<div class="col-md-3 col-sm-6 col-xs-12 margin-bottom2">
+	<img src="/images/m-team/man09-23.jpg" alt="" class="respoimg">	
+	<div class="bg-color-zblack center padding-bottom">
+	<img src="/images/m-team/man09t-23.jpg" alt="" class="respoimg">
+	<a href="doctorpop_jsw.asp" class="image-popup-vertical-fit"><button type="button" class="gobut "> 자세히 보기 </button></a>		   
+	</div>	
+	</div>  	
+
+
+</div>
+
+<div class="col-md-1 col-sm-12 col-xs-12 "></div>
+
+
+</div>
+</div>
+</section><!-- end 의료인 안내 -->
+
+<div class="clearfix"></div>
+
+<div class="main-content  hidden-sm hidden-xs">
+
+    <div class="owl-carousel owl-theme owl-loaded owl-drag">
+        
+
+
+        
+    <div class="owl-stage-outer"><div class="owl-stage" style="transform: translate3d(-2560px, 0px, 0px); transition: all; width: 7680px;"><div class="owl-item cloned" style="width: 1280px;"><div class="item">
+
+            <!-- 원장인사말 -->
+            <section class="mainpaddingb background-team2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-12 nopadding">
+                        
+                        <div class="margin15">
+                            
+                            <div class="col-md-8 col-sm-12 col-xs-12 nopadding">
+                                <h2 class="titlemc">원장님 인사말</h2> 
+								<div class=" margin-bottom5"></div>                       
+                                
+                               <h1 class="txw font-weight3  margin-bottom" style="font-family:'Nanum brush script';"> 한 걸음 더!!</h1>
+								<h6 class="font-weight3 txw line-height4">
+                                &nbsp;&nbsp;&nbsp;자신의 몸을 책임질 수 있는 의사가 손 닿는 곳에 있고 언제든지 연락을 주고 받을 수 있다면 얼마나 든든할까요?<br>
+                                그래서 [아산재건정형외과의원]가 몸과 마음이 아파 일상을 잃어버린 모든 이들을 위해 한 걸음 더 내딛어 여기까지 왔습니다. <br>
+                                &nbsp;&nbsp;&nbsp;의사로서 책임을 진다는 것은 두 가지 의미입니다. 뛰어난 기술과 노력 그리고 희생으로 신체적 건강을 최대한 [재건]하는 것이 그 첫 번째요, 끊임없는 소통과 관심 그리고 보상으로 정신-사회적 건강을 최대한 [재건]하는 것이 그 두 번째입니다. 이런 [재건]을 통해서만 의사와 환자는 완전한 치료에 이를 수 있고, 다른 차원의 의료 서비스를 경험할 수 있습니다.<br>
+                                &nbsp;&nbsp;&nbsp;저는 서울 아산병원 정형외과에서 훌륭한 은사님께 무릎 인공관절에 관련된 모든 의술과 지식을 사사받았고 국내외 연수 프로그램을 통해 최신 정형외과 기술을 바르게 체득하였습니다. 이를 바탕으로 수많은 수술 경험을 축적하였고 초고난이도 수술들을 성공적으로 집도하여 발표하였습니다.  바로 [재건]은 이러한 자신감에서 드리는 약속입니다.<br>
+                                &nbsp;&nbsp;또한 지금까지 수술했던 모든 이들과 끊임없이 소통하고 있습니다. 퇴원하면서 꽉 잡았던 따뜻한 손을 지금도 잊지 않고 정기적으로 안부를 여쭙고, 늘 올바른 방향으로 치료받을 수 있도록 개인적인 대화의 채널을 열어놓고 있습니다. 이렇게 [재건]은 사랑에서 드리는 약속입니다.<br>
+                               &nbsp;&nbsp;&nbsp; [아산재건정형외과의원]은 경기 북부에 꼭 필요한 병원이 될 것입니다. 신뢰와 소통을 통해 끊임없이 발전하여 누구나 인연을 맺고 싶은 병원으로 도약할 것입니다. 우리는 '한 걸음 더 가까이' 언제나 함께하는 병원입니다.<br><br>
+
+                                2020-10-29 <br>
+                                원장 조훈식 올림
+                                </h6>
+                            </div>
+                        </div>
+                    
+                        <div class="col-md-4 col-sm-12 col-xs-12 nopadding hidden-sm hidden-xs "><img src="/images/m-team/man03.png" alt="" class="respoimg right animate" data-anim-type="fadeInLeft" data-anim-delay="100"></div>
+                        <div class="col-md-4 col-sm-12 col-xs-12 nopadding visible-sm visible-xs"><img src="/images/m-team/man03m.png" alt="" class="respoimg center animate" data-anim-type="fadeInLeft" data-anim-delay="100"></div>
+                    </div>
+                </div>
+            </div>
+            </section><!-- end 원장인사말 -->	
+        </div></div><div class="owl-item cloned" style="width: 1280px;"><div class="item">
+            <!-- 축하의글 -->
+            <section class="mainpadding background-team3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 nopadding">
+                        <div class="margin15">
+
+                        <div class="col-md-12 col-sm-12 col-xs-12 nopadding hidden-sm hidden-xs "><img src="/images/m-team/man04.png" alt="" class="respoimg right"></div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 nopadding visible-sm visible-xs"><img src="/images/m-team/man04m.png" alt="" class="respoimg center"></div>
+
+
+                        </div>
+                    </div>	   
+                </div>
+            </div>
+            </section><!-- end 축하의글 -->	
+        </div></div><div class="owl-item active" style="width: 1280px;"><div class="item">
+
+            <!-- 원장인사말 -->
+            <section class="mainpaddingb background-team2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-12 nopadding">
+                        
+                        <div class="margin15">
+                            
+                            <div class="col-md-8 col-sm-12 col-xs-12 nopadding">
+                                <h2 class="titlemc">원장님 인사말</h2> 
+								<div class=" margin-bottom5"></div>                       
+                                
+                               <h1 class="txw font-weight3  margin-bottom" style="font-family:'Nanum brush script';"> 한 걸음 더!!</h1>
+								<h6 class="font-weight3 txw line-height4">
+                                &nbsp;&nbsp;&nbsp;자신의 몸을 책임질 수 있는 의사가 손 닿는 곳에 있고 언제든지 연락을 주고 받을 수 있다면 얼마나 든든할까요?<br>
+                                그래서 [아산재건정형외과의원]가 몸과 마음이 아파 일상을 잃어버린 모든 이들을 위해 한 걸음 더 내딛어 여기까지 왔습니다. <br>
+                                &nbsp;&nbsp;&nbsp;의사로서 책임을 진다는 것은 두 가지 의미입니다. 뛰어난 기술과 노력 그리고 희생으로 신체적 건강을 최대한 [재건]하는 것이 그 첫 번째요, 끊임없는 소통과 관심 그리고 보상으로 정신-사회적 건강을 최대한 [재건]하는 것이 그 두 번째입니다. 이런 [재건]을 통해서만 의사와 환자는 완전한 치료에 이를 수 있고, 다른 차원의 의료 서비스를 경험할 수 있습니다.<br>
+                                &nbsp;&nbsp;&nbsp;저는 서울 아산병원 정형외과에서 훌륭한 은사님께 무릎 인공관절에 관련된 모든 의술과 지식을 사사받았고 국내외 연수 프로그램을 통해 최신 정형외과 기술을 바르게 체득하였습니다. 이를 바탕으로 수많은 수술 경험을 축적하였고 초고난이도 수술들을 성공적으로 집도하여 발표하였습니다.  바로 [재건]은 이러한 자신감에서 드리는 약속입니다.<br>
+                                &nbsp;&nbsp;또한 지금까지 수술했던 모든 이들과 끊임없이 소통하고 있습니다. 퇴원하면서 꽉 잡았던 따뜻한 손을 지금도 잊지 않고 정기적으로 안부를 여쭙고, 늘 올바른 방향으로 치료받을 수 있도록 개인적인 대화의 채널을 열어놓고 있습니다. 이렇게 [재건]은 사랑에서 드리는 약속입니다.<br>
+                               &nbsp;&nbsp;&nbsp; [아산재건정형외과의원]은 경기 북부에 꼭 필요한 병원이 될 것입니다. 신뢰와 소통을 통해 끊임없이 발전하여 누구나 인연을 맺고 싶은 병원으로 도약할 것입니다. 우리는 '한 걸음 더 가까이' 언제나 함께하는 병원입니다.<br><br>
+
+                                2020-10-29 <br>
+                                원장 조훈식 올림
+                                </h6>
+                            </div>
+                        </div>
+                    
+                        <div class="col-md-4 col-sm-12 col-xs-12 nopadding hidden-sm hidden-xs "><img src="/images/m-team/man03.png" alt="" class="respoimg right animate" data-anim-type="fadeInLeft" data-anim-delay="100"></div>
+                        <div class="col-md-4 col-sm-12 col-xs-12 nopadding visible-sm visible-xs"><img src="/images/m-team/man03m.png" alt="" class="respoimg center animate" data-anim-type="fadeInLeft" data-anim-delay="100"></div>
+                    </div>
+                </div>
+            </div>
+            </section><!-- end 원장인사말 -->	
+        </div></div><div class="owl-item" style="width: 1280px;"><div class="item">
+            <!-- 축하의글 -->
+            <section class="mainpadding background-team3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 nopadding">
+                        <div class="margin15">
+
+                        <div class="col-md-12 col-sm-12 col-xs-12 nopadding hidden-sm hidden-xs "><img src="/images/m-team/man04.png" alt="" class="respoimg right"></div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 nopadding visible-sm visible-xs"><img src="/images/m-team/man04m.png" alt="" class="respoimg center"></div>
+
+
+                        </div>
+                    </div>	   
+                </div>
+            </div>
+            </section><!-- end 축하의글 -->	
+        </div></div><div class="owl-item cloned" style="width: 1280px;"><div class="item">
+
+            <!-- 원장인사말 -->
+            <section class="mainpaddingb background-team2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-12 nopadding">
+                        
+                        <div class="margin15">
+                            
+                            <div class="col-md-8 col-sm-12 col-xs-12 nopadding">
+                                <h2 class="titlemc">원장님 인사말</h2> 
+								<div class=" margin-bottom5"></div>                       
+                                
+                               <h1 class="txw font-weight3  margin-bottom" style="font-family:'Nanum brush script';"> 한 걸음 더!!</h1>
+								<h6 class="font-weight3 txw line-height4">
+                                &nbsp;&nbsp;&nbsp;자신의 몸을 책임질 수 있는 의사가 손 닿는 곳에 있고 언제든지 연락을 주고 받을 수 있다면 얼마나 든든할까요?<br>
+                                그래서 [아산재건정형외과의원]가 몸과 마음이 아파 일상을 잃어버린 모든 이들을 위해 한 걸음 더 내딛어 여기까지 왔습니다. <br>
+                                &nbsp;&nbsp;&nbsp;의사로서 책임을 진다는 것은 두 가지 의미입니다. 뛰어난 기술과 노력 그리고 희생으로 신체적 건강을 최대한 [재건]하는 것이 그 첫 번째요, 끊임없는 소통과 관심 그리고 보상으로 정신-사회적 건강을 최대한 [재건]하는 것이 그 두 번째입니다. 이런 [재건]을 통해서만 의사와 환자는 완전한 치료에 이를 수 있고, 다른 차원의 의료 서비스를 경험할 수 있습니다.<br>
+                                &nbsp;&nbsp;&nbsp;저는 서울 아산병원 정형외과에서 훌륭한 은사님께 무릎 인공관절에 관련된 모든 의술과 지식을 사사받았고 국내외 연수 프로그램을 통해 최신 정형외과 기술을 바르게 체득하였습니다. 이를 바탕으로 수많은 수술 경험을 축적하였고 초고난이도 수술들을 성공적으로 집도하여 발표하였습니다.  바로 [재건]은 이러한 자신감에서 드리는 약속입니다.<br>
+                                &nbsp;&nbsp;또한 지금까지 수술했던 모든 이들과 끊임없이 소통하고 있습니다. 퇴원하면서 꽉 잡았던 따뜻한 손을 지금도 잊지 않고 정기적으로 안부를 여쭙고, 늘 올바른 방향으로 치료받을 수 있도록 개인적인 대화의 채널을 열어놓고 있습니다. 이렇게 [재건]은 사랑에서 드리는 약속입니다.<br>
+                               &nbsp;&nbsp;&nbsp; [아산재건정형외과의원]은 경기 북부에 꼭 필요한 병원이 될 것입니다. 신뢰와 소통을 통해 끊임없이 발전하여 누구나 인연을 맺고 싶은 병원으로 도약할 것입니다. 우리는 '한 걸음 더 가까이' 언제나 함께하는 병원입니다.<br><br>
+
+                                2020-10-29 <br>
+                                원장 조훈식 올림
+                                </h6>
+                            </div>
+                        </div>
+                    
+                        <div class="col-md-4 col-sm-12 col-xs-12 nopadding hidden-sm hidden-xs "><img src="/images/m-team/man03.png" alt="" class="respoimg right animate" data-anim-type="fadeInLeft" data-anim-delay="100"></div>
+                        <div class="col-md-4 col-sm-12 col-xs-12 nopadding visible-sm visible-xs"><img src="/images/m-team/man03m.png" alt="" class="respoimg center animate" data-anim-type="fadeInLeft" data-anim-delay="100"></div>
+                    </div>
+                </div>
+            </div>
+            </section><!-- end 원장인사말 -->	
+        </div></div><div class="owl-item cloned" style="width: 1280px;"><div class="item">
+            <!-- 축하의글 -->
+            <section class="mainpadding background-team3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 nopadding">
+                        <div class="margin15">
+
+                        <div class="col-md-12 col-sm-12 col-xs-12 nopadding hidden-sm hidden-xs "><img src="/images/m-team/man04.png" alt="" class="respoimg right"></div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 nopadding visible-sm visible-xs"><img src="/images/m-team/man04m.png" alt="" class="respoimg center"></div>
+
+
+                        </div>
+                    </div>	   
+                </div>
+            </div>
+            </section><!-- end 축하의글 -->	
+        </div></div></div></div><div class="owl-dots" style="display: none;"><button role="button" class="owl-dot active" style="display: none;"><span></span></button><button role="button" class="owl-dot" style="display: none;"><span></span></button></div></div>
+
+    <div class="owl-theme">
+        <div class="owl-controls">
+            <div class="custom-nav owl-nav"><button type="button" role="presentation" class="owl-prev"><i class="fas fa-angle-left"></i></button><button type="button" role="presentation" class="owl-next"><i class="fas fa-angle-right"></i></button></div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="clearfix"></div>
+
+
+
+<!-- 진료과목안내 --><a name="cure"></a>
+<section class="mainpadding">
+<div class="container">
+<div class="row">
+
+<div class="col-md-12 nopadding">
+
+<h2 class="titlem margin-bottom2">진료과목안내</h2>
+<h5 class="titlesm ppadding"> 아산재건정형외과의원은 환자 개개인의 증상과 통증을 정확하게 진단하여<br class="hidden-xs"> 빠르고 효과적인 치료를 약속 드립니다. </h5>
+
+    <div class="col-md-12 margin-bottom"><div class=" txline"><h3><mark> 일반 클리닉 </mark> </h3></div></div>
+	<div class="col-md-3 col-sm-3 col-xs-6  nopadding">
+		<a href="https://blog.naver.com/asanrecon/222456863391" target="_blank" onmouseover="MM_swapImage('curelink1','','../images/m-cure/c01ov.jpg?230803',1)" onmouseout="MM_swapImgRestore()">
+		<img src="../images/m-cure/c01.jpg?230803" name="curelink1" class="respoimg center" border="0"></a></div>
+	<div class="col-md-3 col-sm-3 col-xs-6  nopadding">
+		<a href="https://blog.naver.com/asanrecon/222482776017" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('curelink2','','../images/m-cure/c02ov.jpg?230803',1)">
+		<img src="../images/m-cure/c02.jpg?230803" name="curelink2" target="_blank" class="respoimg center" border="0"></a></div>
+	<div class="col-md-3 col-sm-3 col-xs-6  nopadding">
+		<a href="https://blog.naver.com/asanrecon/222476969683" target="_blank" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('curelink3','','../images/m-cure/c03ov.jpg?230803',1)">
+		<img src="../images/m-cure/c03.jpg?230803" name="curelink3" class="respoimg center" border="0"></a></div>	
+    <div class="col-md-3 col-sm-3 col-xs-6  nopadding">
+		<a href="https://blog.naver.com/asanrecon/222475131738" target="_blank" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('curelink4','','../images/m-cure/c04ov.jpg?240705',1)">
+		<img src="../images/m-cure/c04.jpg?240705" name="curelink4" class="respoimg center" border="0"></a></div>
+	
+	<div class="clearfix margin-bottom2"></div>	
+	
+    <div class="col-md-12 margin-bottom"><div class=" txline"><h3><mark> 특수 클리닉 </mark> </h3></div></div>
+    <div class="col-md-3 col-sm-3 col-xs-6  nopadding">
+		<a href="https://blog.naver.com/asanrecon/222592205668" target="_blank" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('curelink5','','../images/m-cure/c05ov.jpg?230803',1)">
+		<img src="../images/m-cure/c05.jpg?230803" name="curelink5" class="respoimg center" border="0"></a></div>
+	<div class="col-md-3 col-sm-3 col-xs-6  nopadding">
+		<a href="https://blog.naver.com/asanrecon/222467285744" target="_blank" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('curelink6','','../images/m-cure/c06ov.jpg?230803',1)">
+		<img src="../images/m-cure/c06.jpg?230803" name="curelink6" class="respoimg center" border="0"></a></div>
+	<div class="col-md-3 col-sm-3 col-xs-6  nopadding">
+		<a href="https://blog.naver.com/asanrecon/222485569818" target="_blank" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('curelink7','','../images/m-cure/c07ov.jpg?230803',1)">
+		<img src="../images/m-cure/c07.jpg?230803" name="curelink7" class="respoimg center" border="0"></a></div>	
+    <div class="col-md-3 col-sm-3 col-xs-6  nopadding">
+		<a href="#" target="" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('curelink8','','../images/m-cure/c08ov.jpg?230803',1)">
+		<img src="../images/m-cure/c08.jpg?230803" name="curelink8" class="respoimg center" border="0"></a></div>	
+		
+</div>
+	
+</div>
+</div>
+</section><!-- end 진료과목안내 -->
+
+
+<div class="clearfix"></div>
+
+<!-- 4가지 키포인트--><a name="point"></a>
+<section class="mainpadding background-point">
+<div class="container">
+<div class="row">
+
+<h2 class="titlem">4가지 KEY POINT</h2>
+<h2 class="text-center txc  margin-bottom1 ppadding"> 한 걸음 더! <br class="visible-xs">아산재건정형외과의원의 인공관절 치환술 </h2>
+<h5 class="titlesm  margin-bottom3 ppadding"> 숙련된 경험과 노하우로 고난이도 골절 수술도 마다하지 않고 끝까지 책임을 다해 치료하는 재수술 전문병원입니다. </h5>
+
+<div class="margin15">
+ <div class="col-md-3  col-sm-6 col-xs-6 nopadding "><img src="/images/m-point/point01.jpg" alt="" class="respoimg animate" data-anim-type="fadeInUp" data-anim-delay="100"></div>
+ <div class="col-md-3  col-sm-6 col-xs-6 nopadding "><div class="margin-top4 visible-lg visible-md "></div><img src="/images/m-point/point02.jpg" alt="" class="respoimg animate" data-anim-type="fadeInUp" data-anim-delay="300"></div>
+ <div class="col-md-3  col-sm-6 col-xs-6 nopadding "><img src="/images/m-point/point03.jpg" alt="" class="respoimg animate" data-anim-type="fadeInUp" data-anim-delay="500"></div>
+ <div class="col-md-3  col-sm-6 col-xs-6 nopadding "><div class="margin-top4 visible-lg visible-md "></div><img src="/images/m-point/point04.jpg" alt="" class="respoimg animate" data-anim-type="fadeInUp" data-anim-delay="700"></div>
+</div> 
+ 
+ 
+
+</div>
+</div>
+</section><!-- end 4가지 키포인트 -->
+
+<div class="clearfix"></div>
+
+
+<!-- 아산재건 STORY--><a name="story"></a>
+<section class="mainpadding">
+<div class="container">
+<div class="row">
+
+<h2 class="titlem">아산재건 STORY</h2>
+<h5 class="titlesm  ppadding"> 아산재건정형외과의원은 3개층, 270평, 17개의 입원실을 보유하고 365일 외상ㆍ관절 센터를 운영하고 있는<br class="hidden-xs"> 
+경기 북부 양주지역 유일한 재건 수술 전문 병원입니다. </h5>
+
+<div class="margin15">
+ <div class="col-md-6 nopadding "><img src="/images/m-story/story.jpg" alt="" class="respoimg"></div>
+ <div class="col-md-6 nopadding ">
+ <div style="height: 0px; padding-bottom: 56.25%; position: relative;">
+ 
+
+<iframe width="100%" height="384" src="https://www.youtube.com/embed/gXJ5cs5RIAs" title="한 걸음 더! 아산재건정형외과 조훈식 원장입니다." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" style="left: 0px; width: 100%; height: 100%; position: absolute;"></iframe>
+
+<!--
+ <video width="100%" height="384" src="/html/vod/vod.mp4" frameborder="0" allowfullscreen="" style="left: 0px; width: 100%; height: 100%; position: absolute;" allow="autoplay; encrypted-media" controls poster="/images/main-img/Capture_0824125933.jpg"></video>
+//--> 
+ 
+ </div>
+
+ 
+ <!--<img src="/images/m-story/vod.jpg" alt="" class="respoimg" />//-->
+ 
+ 
+ </div>
+</div>
+
+</div>
+</div>
+</section><!-- end 아산재건 STORY -->
+
+
+<section class="mainpadding background-story youtube">
+<div class="container ">
+<div class="row  ">
+<h2 class="titlem">아산재건 <img src="/images/main-img/youtubelogo.png"></h2>
+			
+    <a href="https://www.youtube.com/watch?v=G2T96JHwCkI" target="_blank">
+    
+ 	<div class="col-md-3 col-sm-6 col-xs-12 nopadding">
+	 	<div class="margin15 blogbox">
+
+		 	<div class="icon_group"><i class="snsi icon_sns_y"></i></div>
+
+	 		<div class="item-img-wrap blogimgbox"><img src="/upload_data/board/board02/20241106/32ce9c04a986b6360b0ea1984ed86c6c.jpg" alt="" class="respoimg asanrecon_img"></div>
+	 		<div class="blogbox1"><p class="txb font-weight4">사제의 따뜻한 동행, 지역의료의 희망이 되다.</p></div>
+	 		<!--<div class="blogbox2"><p class="txn font-weight4 ps"></p> </div>//-->
+ 		</div>
+	</div>
+    
+    </a>
+    
+    <a href="https://www.youtube.com/watch?v=HKTnSjbtFqs" target="_blank">
+    
+ 	<div class="col-md-3 col-sm-6 col-xs-12 nopadding">
+	 	<div class="margin15 blogbox">
+
+		 	<div class="icon_group"><i class="snsi icon_sns_y"></i></div>
+
+	 		<div class="item-img-wrap blogimgbox"><img src="/upload_data/board/board02/20241104/c9f0f895fb98ab9159f51fd0297e236d.jpg" alt="" class="respoimg asanrecon_img"></div>
+	 		<div class="blogbox1"><p class="txb font-weight4">인공관절 수술 후 재활까지 원스톱으로 !</p></div>
+	 		<!--<div class="blogbox2"><p class="txn font-weight4 ps"></p> </div>//-->
+ 		</div>
+	</div>
+    
+    </a>
+    
+    <a href="https://www.youtube.com/watch?v=VT3_BWAOOIo" target="_blank">
+    
+ 	<div class="col-md-3 col-sm-6 col-xs-12 nopadding">
+	 	<div class="margin15 blogbox">
+
+		 	<div class="icon_group"><i class="snsi icon_sns_y"></i></div>
+
+	 		<div class="item-img-wrap blogimgbox"><img src="/upload_data/board/board02/20241104/8f14e45fceea167a5a36dedd4bea2543.jpg" alt="" class="respoimg asanrecon_img"></div>
+	 		<div class="blogbox1"><p class="txb font-weight4">책임질 수 없다면 수술하지 않겠습니다</p></div>
+	 		<!--<div class="blogbox2"><p class="txn font-weight4 ps"></p> </div>//-->
+ 		</div>
+	</div>
+    
+    </a>
+    
+    <a href="https://www.youtube.com/watch?v=0MnxwxE9QvA" target="_blank">
+    
+ 	<div class="col-md-3 col-sm-6 col-xs-12 nopadding">
+	 	<div class="margin15 blogbox">
+
+		 	<div class="icon_group"><i class="snsi icon_sns_y"></i></div>
+
+	 		<div class="item-img-wrap blogimgbox"><img src="/upload_data/board/board02/20241104/1679091c5a880faf6fb5e6087eb1b2dc.jpg" alt="" class="respoimg asanrecon_img"></div>
+	 		<div class="blogbox1"><p class="txb font-weight4">인공관절 수술 자신있습니다 !</p></div>
+	 		<!--<div class="blogbox2"><p class="txn font-weight4 ps"></p> </div>//-->
+ 		</div>
+	</div>
+    
+    </a>
+    
+    <a href="https://www.youtube.com/watch?v=IfJIUIFcQpI" target="_blank">
+    
+ 	<div class="col-md-3 col-sm-6 col-xs-12 nopadding">
+	 	<div class="margin15 blogbox">
+
+		 	<div class="icon_group"><i class="snsi icon_sns_y"></i></div>
+
+	 		<div class="item-img-wrap blogimgbox"><img src="/upload_data/board/board02/20241104/e4da3b7fbbce2345d7772b0674a318d5.jpg" alt="" class="respoimg asanrecon_img"></div>
+	 		<div class="blogbox1"><p class="txb font-weight4">퇴행성 관절염 'SAVE THE MENISCUS'</p></div>
+	 		<!--<div class="blogbox2"><p class="txn font-weight4 ps"></p> </div>//-->
+ 		</div>
+	</div>
+    
+    </a>
+    
+    <a href="https://www.youtube.com/watch?v=Y47LEJFOWzY" target="_blank">
+    
+ 	<div class="col-md-3 col-sm-6 col-xs-12 nopadding">
+	 	<div class="margin15 blogbox">
+
+		 	<div class="icon_group"><i class="snsi icon_sns_y"></i></div>
+
+	 		<div class="item-img-wrap blogimgbox"><img src="/upload_data/board/board02/20241104/a87ff679a2f3e71d9181a67b7542122c.jpg" alt="" class="respoimg asanrecon_img"></div>
+	 		<div class="blogbox1"><p class="txb font-weight4">신영일의 비즈정보플러스 조훈식 대표원장님 인터뷰</p></div>
+	 		<!--<div class="blogbox2"><p class="txn font-weight4 ps"></p> </div>//-->
+ 		</div>
+	</div>
+    
+    </a>
+    
+    <a href="https://www.youtube.com/watch?v=4WT7UwYm50E" target="_blank">
+    
+ 	<div class="col-md-3 col-sm-6 col-xs-12 nopadding">
+	 	<div class="margin15 blogbox">
+
+		 	<div class="icon_group"><i class="snsi icon_sns_y"></i></div>
+
+	 		<div class="item-img-wrap blogimgbox"><img src="/upload_data/board/board02/20241104/eccbc87e4b5ce2fe28308fd9f2a7baf3.jpg" alt="" class="respoimg asanrecon_img"></div>
+	 		<div class="blogbox1"><p class="txb font-weight4">퇴행성 관절염의 오해와 진실</p></div>
+	 		<!--<div class="blogbox2"><p class="txn font-weight4 ps"></p> </div>//-->
+ 		</div>
+	</div>
+    
+    </a>
+    
+    <a href="https://www.youtube.com/watch?v=lNP29285F-k" target="_blank">
+    
+ 	<div class="col-md-3 col-sm-6 col-xs-12 nopadding">
+	 	<div class="margin15 blogbox">
+
+		 	<div class="icon_group"><i class="snsi icon_sns_y"></i></div>
+
+	 		<div class="item-img-wrap blogimgbox"><img src="/upload_data/board/board02/20241104/c81e728d9d4c2f636f067f89cc14862c(0).jpg" alt="" class="respoimg asanrecon_img"></div>
+	 		<div class="blogbox1"><p class="txb font-weight4">축구경기 중 무릎 전방십자인대 파열!</p></div>
+	 		<!--<div class="blogbox2"><p class="txn font-weight4 ps"></p> </div>//-->
+ 		</div>
+	</div>
+    
+    </a>
+     
+
+
+<div class=" col-md-12 center nopadding hide">
+		<a href="/EZ/rb/board.asp?BoardModule=Board&amp;tbcode=board02"><button type="button" class="gobut "> 더보기 </button></a>
+ </div>
+
+ 
+</div>
+</div>
+</section><!-- end 아산재건 STORY 블로그-->
+
+
+
+<div class="clearfix"></div>
+
+
+<!-- 아산재건 STORY 블로그-->
+<section class="mainpadding background-story">
+<div class="container ">
+<div class="row  ">
+
+			
+    <a href="https://blog.naver.com/asanrecon/223110654449" target="_blank">
+    
+ 	<div class="col-md-3 col-sm-6 col-xs-6 nopadding">
+	 	<div class="margin15 blogbox">
+
+		 	<div class="icon_group"><i class="snsi icon_sns_n"></i></div>
+
+	 		<div class="item-img-wrap blogimgbox"><img src="/upload_data/board/board01/20230804/acf4b89d3d503d8252c9c4ba75ddbf6d.jpg" alt="" class="respoimg asanrecon_img"></div>
+	 		<div class="blogbox1"><p class="txb font-weight4">[아산재건 수술후기] 좌측 족관절 관절염 말기</p></div>
+	 		<!--<div class="blogbox2"><p class="txn font-weight4 ps"></p> </div>//-->
+ 		</div>
+	</div>
+    
+    </a>
+    
+    <a href="https://blog.naver.com/asanrecon/223110258136" target="_blank">
+    
+ 	<div class="col-md-3 col-sm-6 col-xs-6 nopadding">
+	 	<div class="margin15 blogbox">
+
+		 	<div class="icon_group"><i class="snsi icon_sns_n"></i></div>
+
+	 		<div class="item-img-wrap blogimgbox"><img src="/upload_data/board/board01/20230804/1efa39bcaec6f3900149160693694536.jpg" alt="" class="respoimg asanrecon_img"></div>
+	 		<div class="blogbox1"><p class="txb font-weight4">[아산재건 수술후기] 우측 종골 분쇄 골절</p></div>
+	 		<!--<div class="blogbox2"><p class="txn font-weight4 ps"></p> </div>//-->
+ 		</div>
+	</div>
+    
+    </a>
+    
+    <a href="https://blog.naver.com/asanrecon/223109789961" target="_blank">
+    
+ 	<div class="col-md-3 col-sm-6 col-xs-6 nopadding">
+	 	<div class="margin15 blogbox">
+
+		 	<div class="icon_group"><i class="snsi icon_sns_n"></i></div>
+
+	 		<div class="item-img-wrap blogimgbox"><img src="/upload_data/board/board01/20230804/4e0928de075538c593fbdabb0c5ef2c3(0).jpg" alt="" class="respoimg asanrecon_img"></div>
+	 		<div class="blogbox1"><p class="txb font-weight4">[아산재건 수술후기] 우측 발목 전거비 인대 파열</p></div>
+	 		<!--<div class="blogbox2"><p class="txn font-weight4 ps"></p> </div>//-->
+ 		</div>
+	</div>
+    
+    </a>
+    
+    <a href="https://blog.naver.com/asanrecon/223108435829" target="_blank">
+    
+ 	<div class="col-md-3 col-sm-6 col-xs-6 nopadding">
+	 	<div class="margin15 blogbox">
+
+		 	<div class="icon_group"><i class="snsi icon_sns_n"></i></div>
+
+	 		<div class="item-img-wrap blogimgbox"><img src="/upload_data/board/board01/20230804/5f2c22cb4a5380af7ca75622a6426917.jpg" alt="" class="respoimg asanrecon_img"></div>
+	 		<div class="blogbox1"><p class="txb font-weight4">[아산재건 수술후기] 좌측 제4 근위지골 골절</p></div>
+	 		<!--<div class="blogbox2"><p class="txn font-weight4 ps"></p> </div>//-->
+ 		</div>
+	</div>
+    
+    </a>
+    
+    <a href="https://blog.naver.com/asanrecon/223106274499" target="_blank">
+    
+ 	<div class="col-md-3 col-sm-6 col-xs-6 nopadding">
+	 	<div class="margin15 blogbox">
+
+		 	<div class="icon_group"><i class="snsi icon_sns_n"></i></div>
+
+	 		<div class="item-img-wrap blogimgbox"><img src="/upload_data/board/board01/20230804/4e0cb6fb5fb446d1c92ede2ed8780188(0).jpg" alt="" class="respoimg asanrecon_img"></div>
+	 		<div class="blogbox1"><p class="txb font-weight4">[아산재건 수술후기] 우측 슬관절 내측 반월상 연골판 파열</p></div>
+	 		<!--<div class="blogbox2"><p class="txn font-weight4 ps"></p> </div>//-->
+ 		</div>
+	</div>
+    
+    </a>
+    
+    <a href="https://blog.naver.com/asanrecon/223103762491" target="_blank">
+    
+ 	<div class="col-md-3 col-sm-6 col-xs-6 nopadding">
+	 	<div class="margin15 blogbox">
+
+		 	<div class="icon_group"><i class="snsi icon_sns_n"></i></div>
+
+	 		<div class="item-img-wrap blogimgbox"><img src="/upload_data/board/board01/20230804/99f16d388736f651ac198bf317974481(0).jpg" alt="" class="respoimg asanrecon_img"></div>
+	 		<div class="blogbox1"><p class="txb font-weight4">[아산재건 수술후기] 손가락 골절 및 장갑 손상</p></div>
+	 		<!--<div class="blogbox2"><p class="txn font-weight4 ps"></p> </div>//-->
+ 		</div>
+	</div>
+    
+    </a>
+    
+    <a href="https://blog.naver.com/asanrecon/223100041783" target="_blank">
+    
+ 	<div class="col-md-3 col-sm-6 col-xs-6 nopadding">
+	 	<div class="margin15 blogbox">
+
+		 	<div class="icon_group"><i class="snsi icon_sns_n"></i></div>
+
+	 		<div class="item-img-wrap blogimgbox"><img src="/upload_data/board/board01/20230804/eb6fdc36b281b7d5eabf33396c2683a2.jpg" alt="" class="respoimg asanrecon_img"></div>
+	 		<div class="blogbox1"><p class="txb font-weight4">[아산재건 수술후기] 좌측 슬관절 내측 반월상 연골판 파열</p></div>
+	 		<!--<div class="blogbox2"><p class="txn font-weight4 ps"></p> </div>//-->
+ 		</div>
+	</div>
+    
+    </a>
+    
+    <a href="https://blog.naver.com/asanrecon/223098826637" target="_blank">
+    
+ 	<div class="col-md-3 col-sm-6 col-xs-6 nopadding">
+	 	<div class="margin15 blogbox">
+
+		 	<div class="icon_group"><i class="snsi icon_sns_n"></i></div>
+
+	 		<div class="item-img-wrap blogimgbox"><img src="/upload_data/board/board01/20230804/6c3cf77d52820cd0fe646d38bc2145ca.jpg" alt="" class="respoimg asanrecon_img"></div>
+	 		<div class="blogbox1"><p class="txb font-weight4">[아산재건 수술후기] 우측 제3수지 신전건 열상 및 열린 상처</p></div>
+	 		<!--<div class="blogbox2"><p class="txn font-weight4 ps"></p> </div>//-->
+ 		</div>
+	</div>
+    
+    </a>
+     
+
+
+<div class=" col-md-12 center nopadding">
+		<a href="/EZ/rb/board.asp?BoardModule=Board&amp;tbcode=board01"><button type="button" class="gobut "> 더보기 </button></a>
+ </div>
+
+ 
+</div>
+</div>
+</section><!-- end 아산재건 STORY 블로그-->
+
+<div class="clearfix"></div>
+
+
+
+<!-- 진료안내 --><a name="info"></a>
+<section class="mainpadding background-info">
+<div class="container">
+<div class="row">
+	
+<h2 class="titlemw">진료 안내</h2>
+<h5 class="titlemsw ppadding">아산재건정형외과의원은 평일뿐만 아니라 토요일과 일요일에도 정상진료합니다.  </h5>
+
+
+<div class="col-md-12 nopadding">
+				 <!-- 진료시간표 -->
+ <div class="margin15">
+
+<!-- 진료시간표 -->
+	<div class="col-md-6 col-sm-12 col-xs-12 nopadding">
+		<div class="margin15 infobox1">
+			<div class="col-md-4 col-sm-4 col-xs-12">
+				<div class="txbg">
+					<h4 class="txw font-weight4 margin-bottom1 text-center "><span class="txc">평일</span>진료시간</h4>
+				</div>
+			</div>
+			<div class="col-md-8 col-sm-8 col-xs-12 padding-top">
+				<h2 class="txw font-weight7 margin-bottom visible-xs">월-금요일 : 09:00 ~ 18:00</h2>
+                <h3 class="txw font-weight7 margin-bottom hidden-xs">월-금요일 : 09:00 ~ 18:00</h3>
+				<h5 class="txw font-weight3 margin-bottom2">점심시간 : 13:00 ~ 14:00</h5>
+			</div>
+			<div class="col-md-4 col-sm-4 col-xs-12">
+				<div class="txbg">
+					<h4 class="txw font-weight4 margin-bottom1 text-center "><span class="txc">주말</span>진료시간</h4>
+				</div>
+			</div>
+			<div class="col-md-8 col-sm-8 col-xs-12 padding-top">
+				<h2 class="txw font-weight7 margin-bottom visible-xs">토-<span style="color:#ffff00">일요일</span> : 09:00 ~ 13:00</h2>
+                <h3 class="txw font-weight7 margin-bottom hidden-xs">토-<span style="color:#ffff00">일요일</span> : 09:00 ~ 13:00</h3>
+				<h5 class="txw font-weight3 margin-bottom2">점심시간 없이 진료합니다</h5>
+			</div>
+			<div class="col-md-12">
+				<h5 class="txc font-weight3 margin-bottom2">*공휴일 휴무입니다</h5>
+			</div>
+		</div>
+	</div>
+	<!-- 전화위치 -->
+	<div class="col-md-6 col-sm-12 col-xs-12 nopadding">
+		<div class="margin15 infobox2">
+			<div class="col-md-2 col-sm-2 col-xs-3 nopadding">
+				<img src="/images/m-info/icon01.png" alt="" class="respoimg">
+			</div>
+			<div class="col-md-10 col-sm-10 col-xs-9 nopadding">
+				<h5 class="txw font-weight3">진료 문의 및 예약</h5>
+				<h2 class="txw big3 font-weight5 margin-bottom2">1899-7584</h2>
+			</div>
+			<div class="clearfix margin-bottom">
+			</div>
+			<div class="col-md-2 col-sm-2 col-xs-3 nopadding">
+				<img src="/images/m-info/icon02.png" alt="" class="respoimg">
+			</div>
+			<div class="col-md-10 col-sm-10 col-xs-9 nopadding">
+				<h5 class="txw font-weight3 margin-bottom">위치안내</h5>
+				<h4 class="txw font-weight5 margin-bottom2">경기 양주시 고읍남로 18 <br class="visible-xs">
+				가보프라자 3,4,7층</h4>
+			</div>
+			<div class="clearfix margin-bottom">
+			</div>
+            <!--
+			<div class="mtbox visible-xs ">
+				<a href="https://booking.naver.com/booking/13/bizes/571385" target="_blank">
+				<h3 class="white font-weight7 text-center">빠 른 예 약</h3>
+				</a>
+			</div>
+            //-->
+		</div>
+	</div>
+
+
+    <!--
+
+    <div class="col-md-6 nopadding">
+        
+    </div>
+    <div class="col-md-6 nopadding"><img src="/images/m-info/time.jpg" alt="" class="respoimg" /></div>
+    
+    </div>
+	//-->		 
+    
+    <div class="clearfix"></div>
+	
+    <!-- 시설 -->
+
+                 <div class="margin15"></div>
+                 <div class="margin15"></div>
+
+                 <div class="margin15">
+                        <h2 class="titlemw">시설 안내</h2>
+                        <h5 class="titlemsw ppadding">아산재건정형외과의원은 3층 외래 및 비만센터 <br class="hidden-xs">
+                        4층 병동 및 수술센터 7층 재활물리치료센터로 구성되어 있습니다.  </h5>
+                 </div>
+
+                <div class="margin15 ">
+                <div class="col-md-4 col-sm-4 col-xs-4 nopadding fbtn fbtnov" id="div_3f_btn" data-src="cna3f" style="display:block;">3F</div>
+                <div class="col-md-4 col-sm-4 col-xs-4 nopadding fbtn" id="div_4f_btn" data-src="cna4f" style="display:block;">4F</div>
+                <div class="col-md-4 col-sm-4 col-xs-4 nopadding fbtn" id="div_7f_btn" data-src="cna7f" style="display:block;">7F</div>
+                </div>
+
+				<div class="margin-bottom"></div>
+
+
+
+
+		         <div class="col-md-12 col-sm-12 col-xs-12 nopadding">
+				 
+				 <div class="margin15 ">
+
+
+					<div class="col-md-12 col-sm-12 col-xs-12 nopadding div_f" style="display:block;">
+					<div class="ms-display-template">
+						<div class="ms-display-cont ">
+
+							<div class="ms-dis-slider-cont" style="position: relative;">
+								<!-- masterslider -->
+								<div class="master-slider ms-skin-default ms-wk" id="masterslider_cnaBuil" style="visibility: visible; opacity: 1; margin: 0px; transition-duration: 1000ms; transition-property: all; transition-timing-function: linear;"><div class="ms-container"><div class="ms-inner-controls-cont" style="max-width: 1300px;"><div class="ms-view ms-basic-view ms-grab-cursor" style="width: 1110px; height: 683.077px;"><div class="ms-slide-container" style="transform: translateX(-7770px) translateZ(0px);"><div class="ms-slide cna7f builcna" data-src="cna7f" style="width: 1110px; height: 683.077px; left: 0px; z-index: 1;"><div class="ms-slide-loading"></div><div class="ms-slide-bgcont" style="height: 100%;"><img src="/EZ/TP/common/js/masterslider/style/blank.gif" alt="" style="visibility: hidden;"></div></div><div class="ms-slide cna7f builcna" data-src="cna7f" style="width: 1110px; height: 683.077px; left: 1110px; z-index: 2;"><div class="ms-slide-loading"></div><div class="ms-slide-bgcont" style="height: 100%;"><img src="/EZ/TP/common/js/masterslider/styleblank.gif" alt="" style="visibility: hidden;"></div></div><div class="ms-slide cna7f builcna" data-src="cna7f" style="width: 1110px; height: 683.077px; left: 2220px; z-index: 3;"><div class="ms-slide-loading"></div><div class="ms-slide-bgcont" style="height: 100%;"><img src="/EZ/TP/common/js/masterslider/styleblank.gif" alt="" style="visibility: hidden;"></div></div><div class="ms-slide cna7f builcna" data-src="cna7f" style="width: 1110px; height: 683.077px; left: 3330px; z-index: 4;"><div class="ms-slide-loading"></div><div class="ms-slide-bgcont" style="height: 100%;"><img src="/EZ/TP/common/js/masterslider/styleblank.gif" alt="" style="visibility: hidden;"></div></div><div class="ms-slide cna7f builcna" data-src="cna7f" style="width: 1110px; height: 683.077px; left: 4440px; z-index: 5;"><div class="ms-slide-loading"></div><div class="ms-slide-bgcont" style="height: 100%;"><img src="/EZ/TP/common/js/masterslider/styleblank.gif" alt="" style="visibility: hidden;"></div></div><div class="ms-slide cna7f builcna" data-src="cna7f" style="width: 1110px; height: 683.077px; left: 5550px; z-index: 6;"><div class="ms-slide-loading"></div><div class="ms-slide-bgcont" style="height: 100%;"><img src="/EZ/TP/common/js/masterslider/styleblank.gif" alt="" style="visibility: hidden;"></div></div><div class="ms-slide cna7f builcna" data-src="cna7f" style="width: 1110px; height: 683.077px; left: 6660px; z-index: 7;"><div class="ms-slide-loading"></div><div class="ms-slide-bgcont" style="height: 100%;"><img src="/EZ/TP/common/js/masterslider/styleblank.gif" alt="" style="visibility: hidden;"></div></div><div class="ms-slide cna3f builcna ms-sl-selected" data-src="cna3f" style="width: 1110px; height: 683.077px; left: 7770px; z-index: 8;"><div class="ms-slide-loading"></div><div class="ms-slide-bgcont" style="height: 100%;"><img src="/EZ/TP/common/js/masterslider/style/blank.gif" alt="" style="visibility: hidden;"></div></div><div class="ms-slide cna3f builcna" data-src="cna3f" style="width: 1110px; height: 683.077px; left: 8880px; z-index: 7;"><div class="ms-slide-loading"></div><div class="ms-slide-bgcont" style="height: 100%;"><img src="/EZ/TP/common/js/masterslider/style/blank.gif" alt="" style="visibility: hidden;"></div></div><div class="ms-slide cna3f builcna" data-src="cna3f" style="width: 1110px; height: 683.077px; left: 9990px; z-index: 6;"><div class="ms-slide-loading"></div><div class="ms-slide-bgcont" style="height: 100%;"><img src="/EZ/TP/common/js/masterslider/style/blank.gif" alt="" style="visibility: hidden;"></div></div><div class="ms-slide cna3f builcna" data-src="cna3f" style="width: 1110px; height: 683.077px; left: 11100px; z-index: 5;"><div class="ms-slide-loading"></div><div class="ms-slide-bgcont" style="height: 100%;"><img src="/EZ/TP/common/js/masterslider/style/blank.gif" alt="" style="visibility: hidden;"></div></div><div class="ms-slide cna3f builcna" data-src="cna3f" style="width: 1110px; height: 683.077px; left: 12210px; z-index: 4;"><div class="ms-slide-loading"></div><div class="ms-slide-bgcont" style="height: 100%;"><img src="/EZ/TP/common/js/masterslider/style/blank.gif" alt="" style="visibility: hidden;"></div></div><div class="ms-slide cna3f builcna" data-src="cna3f" style="width: 1110px; height: 683.077px; left: 13320px; z-index: 3;"><div class="ms-slide-loading"></div><div class="ms-slide-bgcont" style="height: 100%;"><img src="/EZ/TP/common/js/masterslider/style/blank.gif" alt="" style="visibility: hidden;"></div></div><div class="ms-slide cna3f builcna" data-src="cna3f" style="width: 1110px; height: 683.077px; left: 14430px; z-index: 2;"><div class="ms-slide-loading"></div><div class="ms-slide-bgcont" style="height: 100%;"><img src="/EZ/TP/common/js/masterslider/style/blank.gif" alt="" style="visibility: hidden;"></div></div><div class="ms-slide cna3f builcna" data-src="cna3f" style="width: 1110px; height: 683.077px; left: 15540px; z-index: 1;"><div class="ms-slide-loading"></div><div class="ms-slide-bgcont" style="height: 100%;"><img src="/EZ/TP/common/js/masterslider/style/blank.gif" alt="" style="visibility: hidden;"></div></div></div></div><div class="ms-nav-next"></div><div class="ms-nav-prev"></div></div></div>
+
+
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+
+
+
+
+									
+									
+									
+									
+									
+									
+									
+									
+
+
+                                    
+									
+									
+									
+									
+									
+									
+								</div>
+                            </div>
+						</div>
+					</div>
+					</div>
+                                                                
+							
+                        
+				
+                 </div>
+				 </div>
+	   
+</div>
+
+	   
+	   
+</div>
+</div>
+</div></section><!-- end 진료안내 -->
+
+
+
+
+
+<div class="clearfix"></div>
+
+
+
+
+
+<!-- 오시는길 --><a name="map2"></a>
+<section class="mainpadding">
+                <div class="container">
+                    <div class="row">
+
+                        <h2 class="titlem">오시는 길</h2>
+                        <h5 class="titlesm  ppadding"> 아산재건정형외과의원은 스타벅스 양주고읍점 및 다이소 맞은편에 있습니다.</h5>
+                        
+
+
+                        <div class="clearfix"></div>
+                    <div class="margin15 ">
+		            <div class="col-md-12 col-sm-12 col-xs-12  nopadding">
+				 
+                 
+
+                            <!-- * 카카오맵 - 지도퍼가기 -->
+                            <!-- 1. 지도 노드 -->
+                            <div id="daumRoughmapContainer1690941220449" class="root_daum_roughmap root_daum_roughmap_landing" style="width:100%"></div>
+
+                            <!--
+                                2. 설치 스크립트
+                                * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+                            -->
+                            <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script><script charset="UTF-8" src="http://t1.daumcdn.net/kakaomapweb/roughmap/place/prod/20250630/roughmapLander.js"></script>
+
+                            <!-- 3. 실행 스크립트 -->
+                            <script charset="UTF-8">
+
+                                var filter = "win16|win32|win64|mac|macintel"; 
+                                var mapHeight = "0"
+
+                                if ( navigator.platform ) { 
+                                    if ( filter.indexOf( navigator.platform.toLowerCase() ) < 0 ) {
+                                        mapHeight = "400"
+                                    } else { 
+                                        mapHeight = "650"
+                                    } 
+                                }
+                                
+
+                                new daum.roughmap.Lander({
+                                    "timestamp" : "1690941220449",
+                                    "key" : "2fpyn",
+                                    "mapHeight" : mapHeight
+                                }).render();
+                            </script>        
+                            
+                            </div>
+
+                    </div>
+                    </div>
+
+                        <div class="col-md-4 nopadding "></div>
+                        <div class="col-md-4 nopadding ">
+                            <div class="col-md-1 nopadding"></div>
+                            <div class="col-md-5 nopadding"><a href="http://kko.to/KAql8Lffj" target="_blank"><img src="/images/m-map/bt01.jpg" alt="" border="0" class="respoimg center"></a></div>
+                            <div class="col-md-5 nopadding"><a href="http://naver.me/xdIfHNJB" target="_blank"><img src="/images/m-map/bt02.jpg" alt="" border="0" class="respoimg center"></a></div>
+                            <div class="col-md-1 nopadding "></div>
+                        </div>
+                        <div class="col-md-4 nopadding "></div>
+
+
+
+                        <div class="clearfix"></div>
+
+                        <div class="margin15"></div>
+                        <div class="margin15"></div>
+
+
+
+                        <div class="clearfix"></div>
+
+                        <div class="margin15"></div>
+                            <div class="margin15">
+                                <div class="col-md-6 nopadding">
+                                
+                                    <img src="/images/m-map/map01.jpg" style="display: block; margin: 0 auto;" alt="" class="respoimg">
+                                    <h2 class="titlem">버스 이용 시</h2>
+                                
+                                    <img src="/images/m-map/busstop.jpg" alt="" class="respoimg">
+                                
+                                </div>
+                                
+                                <div class="col-md-6 nopadding">
+                                    
+                                    <img src="/images/m-map/map03.jpg" style="display: block; margin: 0 auto;" alt="" class="respoimg">
+                                    <h2 class="titlem">자차 이용 시</h2>
+
+                                    <img src="/images/m-map/car.jpg" alt="" class="respoimg"></div>
+                            </div>
+
+                        </div>
+                </section></div>
+            <!-- end 오시는길 -->
+ 
+<footer class="padding-top3 bg-color-copy">
+<div class="row nopadding">
+    	    
+    <div class="col-md-12 container-fluid  padding-bottom2">
+    <div class="container">
+		
+	    <div class="col-md-3 col-sm-4 col-xs-12 margin-bottom1 center">
+	    <img src="/images/logo-copy.png" alt="" class="respoimg">
+	    </div>
+       
+	    <div class="col-md-3 col-sm-0 col-xs-0 white text-left margin-bottom1"></div>
+		
+		<div class="col-md-3 col-sm-4 col-xs-12 white text-left margin-bottom1">
+        <p class="copytx">
+		경기 양주시 고읍남로 18 가보프라자 3층<br>
+		대표자 : 조훈식<br>
+		사업자등록번호 : 145-97-01277</p>
+        </div>
+		
+	    <div class="col-md-3 col-sm-4 col-xs-12 white text-left margin-bottom1">
+        <p class="txw  font-weight3">진료 문의 및 예약</p>
+	 	<h2 class="txw big1 font-weight9"><strong>1899-7584</strong></h2>
+        </div>		
+        
+		
+    </div>
+    </div>
+	
+
+
+
+</div>
+</footer>
+
+<div class="clearfix"></div> 
+
+<footer class="padding-top3 bg-color-copy2">
+<div class="row nopadding">
+    	    
+    <div class="col-md-12 container-fluid ">
+    <div class="container">
+		      
+	    <div class="col-md-7 col-sm-6 col-xs-12 white text-left margin-bottom2">
+        <p class="copytx">
+		COPYRIGHT ⓒ 2021 ASAN RECONSTRUCTIVE ORTHOPAEDICS ALL RIGHT RESERVED.</p>
+        </div>
+
+        <div class="col-md-5 col-sm-6 col-xs-12 center  margin-bottom2">
+		<a href="/html/sub/cost.asp" class="copybut ">비급여항목</a> <a href="/html/sub/privacy.asp" class="copybut ">개인정보취급방침</a>
+        </div>
+		
+    </div>
+    </div>
+	
+
+
+	<!--<div class="margin-bottom7 visible-xs visible-sm visible-md">
+		<div class="foot3 center">
+			<a onMouseDown="wcall()" href="tel:1899-7584"><img src="/images/icon-copy/im01.png" alt=""></a><a href="http://pf.kakao.com/_MQSxaK" ><img src="/images/icon-copy/im02.png" alt=""></a><a href="/html/sub01/03.asp"><img src="/images/icon-copy/im03.png" alt=""></a><a href="/html/sub01/04.asp"><img src="/images/icon-copy/im04.png" alt=""></a>
+		</div>
+	</div>-->
+
+
+</div>
+</footer>
+
+
+<div id="banner" class="hidden-xs hidden-sm hidden-md " style="position: absolute; left: 1440px; top: 280px; width: 100px; z-index: 1;">
+  <a href="https://booking.naver.com/booking/13/bizes/571385" target="_blank"><img src="/images/quick/q01.jpg" name="q1" width="87" border="0" class="margin0"></a>
+  <a href="/html/main.asp#team"><img src="/images/quick/q02.jpg" name="q2" width="87" border="0" class="margin0"></a>
+  <a href="https://blog.naver.com/asanrecon" target="_blank"><img src="/images/quick/q03.jpg" name="q3" width="87" border="0" class="margin0"></a>
+  <a href="https://www.facebook.com/asanrecon" target="_blank"><img src="/images/quick/q04.jpg" name="q4" width="87" border="0" class="margin0"></a>
+  <a href="https://www.instagram.com/asan_recon_hospital/" target="_blank"><img src="/images/quick/q05.jpg" name="q5" width="87" border="0" class="margin0"></a>
+  <a href="/html/main.asp#map"><img src="/images/quick/q06.jpg" name="q6" width="87" border="0" class="margin0"></a>
+  <a href="#top"> <img src="/images/quick/top.jpg" width="87" class="margin0"></a>
+</div>
+
+
+
+
+<script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+<script type="text/javascript">
+if(!wcs_add) var wcs_add = {};
+wcs_add["wa"] = "f664f4083982b8";
+if(window.wcs) {
+wcs_do();
+}
+</script>
+
+
+
+
+<!-- ######### JS FILES ######### -->
+<!-- get jQuery from the google apis -->
+<script type="text/javascript" src="/EZ/TP/common/js/universal/jquery.js"></script>
+<script src="/EZ/TP/common/js/style-switcher/styleselector.js"></script>
+<script src="/EZ/TP/common/js/animations/js/animations.min.js" type="text/javascript"></script>
+<script src="/EZ/TP/common/js/bootstrap/bootstrap.min.js"></script>
+<script src="/EZ/TP/common/js/megamenu/js/main.js"></script>
+<script src="/EZ/TP/common/js/masterslider/masterslider.min.js"></script>
+
+<script src="/EZ/TP/common/js/scrolltotop/totop.js" type="text/javascript"></script>
+<script src="/EZ/TP/common/js/masterslider/tab.js"></script>
+
+<script type="text/javascript" src="/EZ/TP/common/js/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+<script type="text/javascript" src="/EZ/TP/common/js/cubeportfolio/js/main.js"></script>
+
+<script src="/EZ/TP/common/js/parallax/parallax.js"></script>
+<script src="/EZ/TP/common/js/tabs/one/opentabby.js"></script>
+<script type="text/javascript">
+	// tabs
+	$(".openTabby").openTabby();
+	$(".openTabby2").openTabby2();
+
+</script>
+<script src="/EZ/TP/common/js/hslider/jquery.scrollslider.js"></script>
+
+
+
+
+<script src="/EZ/TP/common/js/cssmenu/leftmenuscript.js"></script>
+
+
+
+
+
+
+<script type="text/javascript" src="/EZ/TP/common/js/numbers/incrementalNumber.js"> </script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    incrementalNumber();
+  });
+</script>
+
+<script type="text/javascript" src="/EZ/TP/common/js/universal/custom.js"></script>
+
+
+<script>
+ 
+jQuery(document).ready(function($) {
+  
+    $(".scroll").click(function(event){     
+        event.preventDefault();
+        $('html,body').animate({scrollTop:$(this.hash).offset().top}, 1500);
+    });
+
+
+
+	$("#menu .nav li a").hover(
+			
+		function () {
+			$('.dm-align-2').addClass('minh-200');
+			$('.subbg').css('display','block');
+
+			console.log($('.dm-align-2').height());
+		}
+	);
+
+
+	$(".dm-align-2").hover (
+
+		function () {
+
+
+			$('.dm-align-2').addClass('minh-200');
+			$('.subbg').css('display','block');
+
+			console.log($('.dm-align-2').height());
+		
+		},
+		function (){
+			
+			$('.dm-align-2').removeClass('minh-200');		
+			$('.subbg').css('display','none');
+		}
+	);
+
+
+
+
+	if ($(window).width() > 992) {
+	$(window).scroll(function(){  
+		if ($(this).scrollTop() > 40) {
+			$('.header-section').addClass("navbar-fixed-top");
+			// add padding top to show content behind navbar
+			$('body').css('padding-top', $('.navbar').outerHeight() + 'px');
+
+			$('.subbg').css("position","fixed");
+			$('.subbg').addClass("navbar-fixed-top");
+			$('.subbg').css('height', '270px');
+			
+
+			
+		
+
+		}else{
+			$('.header-section').removeClass("navbar-fixed-top");
+			// remove padding top from body
+			$('body').css('padding-top', '0');
+
+			$('.subbg').css("position","absolute");
+			$('.subbg').removeClass("navbar-fixed-top");
+			$('.subbg').css('height', '200px');
+
+		}   
+	});
+	} 
+
+
+});
+
+
+
+</script>
+
+<script type="text/JavaScript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+
+
+
+<script>
+
+  $( document ).ready(function() {
+      
+      $('#banner').css({position:'absolute'}).css({
+          left: (($(window).width() - $('#banner').outerWidth()) / 2) + 850    
+      });
+
+      $(window).resize();
+
+
+        var currentPosition = parseInt($("#banner").css("top")); 
+        $(window).scroll(function() { 
+                var position = $(window).scrollTop(); 
+                $("#banner").stop().animate({"top":position+currentPosition+"px"},1000); 
+        });
+
+
+
+ 
+      $('.blogbox').hover(
+        function () {
+          $(this).addClass('on');
+        },
+        function () {
+          $(this).removeClass('on');
+        }
+      );
+
+  }); 
+  
+  
+  $(window).resize(function(){
+      $('#banner').css({position:'absolute'}).css({
+          left: (($(window).width() - $('#banner').outerWidth()) / 2) + 850
+      });
+  });
+
+/*
+   $(window).scroll(function() {
+      $("#banner").stop().animate({   "top" : ($(window).scrollTop() + 380) + "px"   }, 500);
+   });
+*/
+
+  $(function() { 
+      $("#banner a img").hover(function(){ 
+          $(this).attr("src", $(this).attr("src").replace(".jpg", "ov.jpg")); 
+      }, function(){ 
+          $(this).attr("src", $(this).attr("src").replace("ov.jpg", ".jpg")); 
+      }); 
+  });   
+
+
+</script>
+
+
+<script type="text/javascript" src="/EZ/js/ez.js?ver=20259199504"></script>
+<script type="text/javascript" src="/EZ/js/jquery.popup.js"></script>	
+
+
+
+
+<script type="text/javascript">
+    var slider1 = new MasterSlider();
+ 
+    // adds Arrows navigation control to the slider// slider.control('arrows');
+   
+     slider1.setup('masterslider1' , {
+         width:2000,    
+         height:800,   
+         space:0,	
+         layout:'fullwidth',		//boxed ,	fullwidth(브라우저 너비에 맞게 적용), fullscreen(브라우저 너비와 높이 맞게 적용), fillwidth(부모요소 너비에 맞게), autofill(부모요소 너비와 높이), partialview(boxed형과 비슷 인근 슬라이드 표시)
+         loop:true,			
+         preload:0,
+         autoplay:true,		
+		 overPause: false,
+		 speed:'17',			
+		 dir:'h',					
+		 view:'basic',			
+			filters: {
+                /*
+				grayscale: 1,
+				opacity: 0.5,
+				brightness: 2
+                */
+			}		 
+    });
+	slider1.control('arrows' , {autohide:false});		
+	slider1.control('bullets' , {autohide:false  , dir:"h", align:"bottom"});			
+
+
+
+
+    var slider2 = new MasterSlider();
+
+       slider2.setup('masterslider2' , {
+         width:460,    
+         height:600,   
+         space:0,	
+         layout:'fillwidth',		//boxed ,	fullwidth(브라우저 너비에 맞게 적용), fullscreen(브라우저 너비와 높이 맞게 적용), fillwidth(부모요소 너비에 맞게), autofill(부모요소 너비와 높이), partialview(boxed형과 비슷 인근 슬라이드 표시)
+         loop:true,			
+         preload:0,
+         autoplay:true,		
+		 overPause: false,
+		 speed:'17',			
+		 dir:'h',					
+		 view:'basic',			
+			filters: {
+                /*
+				grayscale: 1,
+				opacity: 0.5,
+				brightness: 2
+                */
+			}		 
+    });  
+
+	slider2.control('arrows' , {autohide:false});		
+	slider2.control('bullets' , {autohide:false  , dir:"h", align:"bottom"});			
+
+
+
+
+	var sub_masterslider = new MasterSlider();
+ 
+
+     sub_masterslider.setup('masterslider_cnaBuil' , {
+         width:1300,    // 슬라이드 기본너비
+         height:800,   // 슬라이드 기준높이
+         space:0,	// 슬라이드간 간격
+         layout:'boxed',		//boxed ,	fullwidth(브라우저 너비에 맞게 적용), fullscreen(브라우저 너비와 높이 맞게 적용), fillwidth(부모요소 너비에 맞게), autofill(부모요소 너비와 높이), partialview(boxed형과 비슷 인근 슬라이드 표시)
+         loop:true,			
+         preload:0,
+         autoplay:true,		//자동플레이 
+		 overPause: false,
+		 speed:'17',			//스피드 0~100
+		 dir:'h',					//슬라이드 가로변경 - h, 세로변경 - v 
+		 view:'basic',			//슬라이드 전환효과 basic, fade, mask, flow, stack, scale, focus
+			filters: {
+			//	grayscale: 1,
+			//	opacity: 0.5,
+			//	brightness: 2
+			}		 
+    });
+
+	sub_masterslider.control('arrows' , {autohide:false});		//좌우 화살표
+/*	sub_masterslider.control('bullets' , {autohide:false  , dir:"h", align:"bottom"});	*/		//하단 bullets 표시
+
+
+
+	sub_masterslider.api.addEventListener(MSSliderEvent.CHANGE_START , function(){
+		var idval = sub_masterslider.api.index();
+
+		if(idval >= 0 && idval <= 9){
+			$('.fbtn').removeClass('fbtnov');
+    		$('#div_3f_btn').addClass('fbtnov');
+		}else if(idval >= 10 && idval <= 17){
+			$('.fbtn').removeClass('fbtnov');
+			$('#div_4f_btn').addClass('fbtnov');
+		}else if(idval >= 18 && idval <= 24){
+			$('.fbtn').removeClass('fbtnov');
+			$('#div_7f_btn').addClass('fbtnov');
+		}
+	})
+
+
+    $(document).on("click", ".fbtn", function () {
+		$('.fbtn').removeClass('fbtnov');
+    	$(this).addClass('fbtnov');
+
+		var d = $(this).attr("data-src");
+	
+        console.log(d);
+
+		if(d=="cna3f"){
+			sub_masterslider.api.gotoSlide(0);
+		}else if(d=="cna4f"){
+			sub_masterslider.api.gotoSlide(10);
+		}else if(d=="cna7f"){
+			sub_masterslider.api.gotoSlide(18);
+		}
+
+
+  	});
+
+
+
+
+</script>
+
+
+
+
+<script src="/EZ/TP/common/js/owlcarousel/owl.carousel.min.js?ver=20201119"></script>
+<script>
+
+$('.main-content .owl-carousel').owlCarousel({
+    /*stagePadding: 50,*/
+    loop: true,
+    margin: 0,
+    nav: true,
+    navText: [
+        '<i class="fas fa-angle-left"></i>',
+        '<i class="fas fa-angle-right"></i>'
+    ],
+    navContainer: '.main-content .custom-nav',
+    responsive:{
+        0:{
+            items:1
+        },
+        300:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        },
+    }
+});
+
+$('.owl-dots').hide();
+$('.owl-dot').hide();
+</script>
+
+
+
+
+
+<script src="/EZ/TP/common/js/Magnific-Popup/jquery.magnific-popup.js"></script>
+
+
+<script>
+(function( $ ) {
+    "use strict";
+    $(function() {
+        function animated_contents() {
+            $(".zt-skill-bar > div ").each(function (i) {
+                var $this  = $(this),
+                    skills = $this.data('width');
+
+                $this.css({'width' : skills + '%'});
+
+            });
+        }
+        
+        if(jQuery().appear) {
+            $('.zt-skill-bar').appear().on('appear', function() {
+                animated_contents();
+            });
+        } else {
+            animated_contents();
+        }
+    });
+}(jQuery));
+
+
+$(document).ready(function() {
+
+
+
+
+	$('.image-popup-vertical-fit').magnificPopup({
+
+		type: 'ajax',
+		closeOnContentClick: true,
+        alignTop: true,
+        overflowY: 'scroll' 
+                    
+	});
+
+
+
+
+
+
+
+
+});
+
+
+</script>
+
+
+
+
+
+
+    <article id="popups_item58" class="popups_item animation_popups_right show ui-draggable ui-draggable-handle" data-popups-w="400" data-popups-h="305" style="width:400px;height:auto;top:170px;left:400px;z-index:1000000020;">
+		<div class="popups_item_cont">
+            <p><img src="/upload_data/popup/pop250801-03.jpg" style="width: 500px;"><br></p><div align="center" class="closebox"><input type="checkbox" name="check" id="noopen_58" onclick="close_pop(58);"> <font style="font-size:16px;">오늘하루 이 창을 열지 않음</font>&nbsp;&nbsp; <a href="#" onclick="close_pop(58)"><img src="/EZ/popup/button_close.gif" border="0" align="absmiddle"></a></div>
+        </div>
+    </article>
+
+
+
+
+    <article id="popups_item59" class="popups_item animation_popups_right show ui-draggable ui-draggable-handle" data-popups-w="400" data-popups-h="305" style="width:400px;height:auto;top:492px;left:400px;">
+		<div class="popups_item_cont">
+            <p><a href="https://re-visit.kr/l/47515/QRQVSSWXZRY" target="_blank"><img src="/upload_data/popup/pop250801-04.jpg" style="width: 500px;"></a><br></p><div align="center" class="closebox"><input type="checkbox" name="check" id="noopen_59" onclick="close_pop(59);"> <font style="font-size:16px;">오늘하루 이 창을 열지 않음</font>&nbsp;&nbsp; <a href="#" onclick="close_pop(59)"><img src="/EZ/popup/button_close.gif" border="0" align="absmiddle"></a></div>
+        </div>
+    </article>
+
+
+
+
+    <article id="popups_item63" class="popups_item animation_popups_right show ui-draggable ui-draggable-handle" data-popups-w="400" data-popups-h="305" style="width:400px;height:auto;top:170px;left:800px;">
+		<div class="popups_item_cont">
+            <p><a href="https://www.youtube.com/@낭만닥터조훈식" target="_blank"><img src="/upload_data/popup/pop250801-8.jpg" style="width: 500px;"></a><br></p><div align="center" class="closebox"><input type="checkbox" name="check" id="noopen_63" onclick="close_pop(63);"> <font style="font-size:16px;">오늘하루 이 창을 열지 않음</font>&nbsp;&nbsp; <a href="#" onclick="close_pop(63)"><img src="/EZ/popup/button_close.gif" border="0" align="absmiddle"></a></div>
+        </div>
+    </article>
+
+
+
+
+    <article id="popups_item64" class="popups_item animation_popups_right show ui-draggable ui-draggable-handle" data-popups-w="400" data-popups-h="305" style="width:400px;height:auto;top:170px;left:0px;">
+		<div class="popups_item_cont">
+            <p><img src="/upload_data/popup/pop250902-1.JPG" style="width: 400px;"><br></p><div align="center" class="closebox"><input type="checkbox" name="check" id="noopen_64" onclick="close_pop(64);"> <font style="font-size:16px;">오늘하루 이 창을 열지 않음</font>&nbsp;&nbsp; <a href="#" onclick="close_pop(64)"><img src="/EZ/popup/button_close.gif" border="0" align="absmiddle"></a></div>
+        </div>
+    </article>
+
+
+
+
+    <article id="popups_item65" class="popups_item animation_popups_right show ui-draggable ui-draggable-handle" data-popups-w="400" data-popups-h="305" style="width:400px;height:auto;top:492px;left:0px;">
+		<div class="popups_item_cont">
+            <p><img src="/upload_data/popup/pop250902-2.JPG" style="width: 400px;"><br></p><div align="center" class="closebox"><input type="checkbox" name="check" id="noopen_65" onclick="close_pop(65);"> <font style="font-size:16px;">오늘하루 이 창을 열지 않음</font>&nbsp;&nbsp; <a href="#" onclick="close_pop(65)"><img src="/EZ/popup/button_close.gif" border="0" align="absmiddle"></a></div>
+        </div>
+    </article>
+
+
+
+
+    <article id="popups_item66" class="popups_item animation_popups_right show ui-draggable ui-draggable-handle" data-popups-w="400" data-popups-h="305" style="width:400px;height:auto;top:492px;left:800px;">
+		<div class="popups_item_cont">
+            <p><img src="/upload_data/popup/pop250902-3(1).JPG" style="width: 400px;"><br></p><div align="center" class="closebox"><input type="checkbox" name="check" id="noopen_66" onclick="close_pop(66);"> <font style="font-size:16px;">오늘하루 이 창을 열지 않음</font>&nbsp;&nbsp; <a href="#" onclick="close_pop(66)"><img src="/EZ/popup/button_close.gif" border="0" align="absmiddle"></a></div>
+        </div>
+    </article>
+
+
+
+
+    <article id="popups_item67" class="popups_item animation_popups_right show ui-draggable ui-draggable-handle" data-popups-w="400" data-popups-h="305" style="width:400px;height:auto;top:170px;left:1200px;">
+		<div class="popups_item_cont">
+            <p><img src="/upload_data/popup/pop250902-4.jpg" style="width: 400px;"><br></p><div align="center" class="closebox"><input type="checkbox" name="check" id="noopen_67" onclick="close_pop(67);"> <font style="font-size:16px;">오늘하루 이 창을 열지 않음</font>&nbsp;&nbsp; <a href="#" onclick="close_pop(67)"><img src="/EZ/popup/button_close.gif" border="0" align="absmiddle"></a></div>
+        </div>
+    </article>
+
+
+
+

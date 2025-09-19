@@ -1,4 +1,3 @@
-
 const { chromium } = require('playwright');
 
 // Arguments from command line
@@ -13,15 +12,13 @@ async function parse() {
     try {
         await page.goto(hospital_site, { waitUntil: 'networkidle', timeout: 60000 });
 
-        // Step 1: Locate the specific doctor's container on the list page.
         const doctorContainer = page.locator('div.medical_schedule_con_area', { hasText: bedoc_doctorname });
 
-        // Step 2: Click the "주요약력" link within that container to reveal the info.
+        // --- Extract from "주요약력" tab ---
         const profileLink = doctorContainer.locator('a:has-text("주요약력")');
         await profileLink.click();
-        await page.waitForTimeout(1000); // Wait for the content to become visible.
+        await page.waitForTimeout(1000);
 
-        // Step 3: Extract the data from within the same container.
         const specialty = await doctorContainer.locator('dl.professional dd').textContent();
 
         const profileItems = await doctorContainer.locator('.profile_list li').allTextContents();
@@ -43,11 +40,45 @@ async function parse() {
             }
         });
 
+        // --- Extract from "수상경력·논문" tab ---
+        const awardsTab = doctorContainer.locator('a:has-text("수상경력·논문")');
+        await awardsTab.click();
+        await page.waitForTimeout(1000);
+
+        const awardsAndPapersContainer = doctorContainer.locator('.schedule_tab_con.on');
+        
+        const awards = [];
+        const papers = [];
+
+        let isAwardSection = false;
+        const allElements = await awardsAndPapersContainer.locator('.profile_list > *').all();
+
+        for (const element of allElements) {
+            const tagName = await element.evaluate(node => node.tagName);
+            const text = (await element.textContent())?.trim();
+
+            if (tagName === 'B' && text === '수상내역') {
+                isAwardSection = true;
+                continue;
+            }
+
+            if (tagName === 'LI' && text) {
+                if (isAwardSection) {
+                    awards.push({ date: null, content: text });
+                } else {
+                    papers.push(text);
+                }
+            }
+        }
+
+
         synthesizedData = {
             specialty: specialty ? specialty.replace(/\s+/g, ' ').trim() : null,
             '학력': education,
             '경력': experience,
             '학술': academic,
+            '수상': awards,
+            '논문': papers
         };
 
     } catch (e) {

@@ -28,7 +28,8 @@ async function parse() {
     let synthesizedData = {};
 
     try {
-        await page.goto(url, { waitUntil: 'networkidle', timeout: 60000 });
+        await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+        await page.waitForSelector('.doc_img', { state: 'visible', timeout: 15000 });
 
         const profileUrl = await page.locator('.doc_img').getAttribute('src').catch(() => null);
         const specialty = await page.locator('.subj_t').textContent().catch(() => null);

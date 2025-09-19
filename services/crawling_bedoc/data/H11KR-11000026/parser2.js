@@ -25,12 +25,14 @@ async function parse() {
         return;
     }
 
-    let synthesizedData = {};
-
     try {
+        // 1. Go to the page and wait for the initial DOM to be ready.
         await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
-        await page.waitForSelector('.doc_img', { state: 'visible', timeout: 15000 });
 
+        // 2. CRUCIAL STEP: Wait for the dynamic content (career info) to be loaded by JavaScript.
+        await page.waitForSelector('div#_careerContainer td[data-key="careerSj"]', { state: 'attached', timeout: 15000 });
+
+        // 3. Now that content is loaded, extract everything.
         const profileUrl = await page.locator('.doc_img').getAttribute('src').catch(() => null);
         const specialty = await page.locator('.subj_t').textContent().catch(() => null);
 
@@ -41,7 +43,7 @@ async function parse() {
         const academicItems = await page.locator('div._careerContainer:has(h3:has-text("학회활동")) td[data-key="careerSj"]').allTextContents();
         const academic = academicItems.map(item => ({ date: null, content: item.trim() }));
 
-        synthesizedData = {
+        const synthesizedData = {
             profileUrl: profileUrl ? new URL(profileUrl, url).href : null,
             specialty: specialty ? specialty.trim() : null,
             '학력': education,
@@ -52,37 +54,18 @@ async function parse() {
         const papers = new Set();
         try {
             const moreButton = page.locator('button#_toggleThesis');
-            await moreButton.click();
-            await page.waitForSelector('ul#_thesisContainer li', { state: 'visible', timeout: 5000 });
-
-            const pageInfo = await page.locator('#_thesisMobilePaging').textContent({ timeout: 2000 });
-            const totalPages = parseInt(pageInfo.split('/')[1].trim(), 10);
-
-            if (isNaN(totalPages)) {
-                throw new Error("Could not determine total pages for papers.");
-            }
-
-            for (let i = 0; i < totalPages; i++) {
-                const firstPaperOnPage = await page.locator('ul#_thesisContainer span[data-key="thesisNm"]').first().textContent();
+            if (await moreButton.count() > 0) {
+                await moreButton.click();
+                await page.waitForSelector('ul#_thesisContainer li', { state: 'attached', timeout: 10000 });
+                await page.waitForTimeout(1000); // Extra wait
 
                 const paperTitles = await page.locator('ul#_thesisContainer span[data-key="thesisNm"]').allTextContents();
                 paperTitles.forEach(t => papers.add(t.trim()));
-
-                if (i < totalPages - 1) {
-                    await page.locator('a.next[data-thesispaging="next"]').click();
-                    
-                    await page.waitForTimeout(2000);
-                }
             }
             synthesizedData['논문'] = Array.from(papers);
-            delete synthesizedData.paper_error;
         } catch (e) {
             synthesizedData.paper_error = e.message;
-            if (papers.size > 0) {
-                synthesizedData['논문'] = Array.from(papers);
-            } else {
-                synthesizedData['논문'] = [];
-            }
+            synthesizedData['논문'] = [];
         }
 
         const bodyText = await page.textContent('body');
@@ -90,10 +73,12 @@ async function parse() {
 
         const finalData = { ...originalData, ...synthesizedData, isAttend };
 
-        const hasNewData = education.length > 0 || experience.length > 0 || papers.length > 0;
+        const hasNewData = education.length > 0 || experience.length > 0 || papers.size > 0;
         if (hasNewData) {
             finalData.isExist = true;
             finalData.isSearchType = 'html_playwright';
+            delete finalData.error;
+            delete finalData.paper_error;
         } else {
             finalData.isExist = false;
             finalData.isSearchType = 'html_playwright_failed';
@@ -107,7 +92,7 @@ async function parse() {
         const finalData = { ...originalData };
         finalData.isExist = false;
         finalData.isSearchType = 'html_playwright_failed';
-        finalData.error = e.message;
+        finalData.error = `Execution Error: ${e.message}`;
         fs.writeFileSync(json_file_path, JSON.stringify(finalData, null, 2));
         console.log(JSON.stringify({ success: false, error: e.message }, null, 2));
     } finally {

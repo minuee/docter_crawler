@@ -1,12 +1,17 @@
 const { chromium } = require('playwright');
+const fs = require('fs');
 
-async function getHtml() {
-  const browser = await chromium.launch({ headless: true });
+(async () => {
+  const browser = await chromium.launch();
   const page = await browser.newPage();
-  await page.goto('https://www.hanilmed.net/portal/deptMn/deptMnDoctorPop.do?menuNo=24010103&dcCode=25510006&dtCode=03010500%20&dcDept1=03010500', { waitUntil: 'networkidle' });
-  const bodyHtml = await page.evaluate(() => document.body.innerHTML);
-  console.log(bodyHtml);
-  await browser.close();
-}
-
-getHtml();
+  try {
+    await page.goto('https://ntrh.or.kr/index.php/html/11', { waitUntil: 'domcontentloaded' });
+    const bodyHtml = await page.evaluate(() => document.body.innerHTML);
+    fs.writeFileSync('temp_ntrh_list.html', bodyHtml);
+    console.log('Successfully fetched and saved body HTML to temp_ntrh_list.html');
+  } catch (error) {
+    console.error('Error fetching page:', error);
+  } finally {
+    await browser.close();
+  }
+})();
