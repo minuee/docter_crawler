@@ -1,117 +1,132 @@
 const { chromium } = require('playwright');
 const cheerio = require('cheerio');
 
-(async () => {
-    const doctorData = JSON.parse(process.argv[2]);
-    const { hospital_site, bedoc_doctorname } = doctorData;
+// 텍스트 정제 함수
+const cleanText = (text) => {
+    return text ? text.replace(/\s\s+/g, ' ').replace(/"/g, "'").trim() : '';
+};
 
+// 파싱 메인 함수
+async function parseDoctorProfile(doctorData) {
     const browser = await chromium.launch({ headless: true });
-    const context = await browser.newContext({
-        userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-    });
-    let page = await context.newPage();
-
-    let isAttend = false;
+    const page = await browser.newPage();
+    const synthesizedData = { 학력: [], 경력: [], 학술: [], 언론: [], 논문: [], 저서: [], specialty: null, profileUrl: null };
     let error = null;
-    let parsedDetails = {};
+    let isAttend = false;
 
     try {
-        await page.goto(hospital_site, { waitUntil: 'networkidle', timeout: 60000 });
+        await page.goto(doctorData.hospital_site, { waitUntil: 'networkidle' });
 
-        const rawHtml = await page.content();
-        const $ = cheerio.load(rawHtml);
+        const contentHtml = await page.content();
+        const $ = cheerio.load(contentHtml);
 
-        // Sanitize HTML
-        $('script, style, nav, header, footer, iframe, noscript').remove();
-        const extractedHtml = $('body').html();
-
-        if (extractedHtml && extractedHtml.includes(bedoc_doctorname)) {
+        // 재직 여부 확인
+        if ($('body').text().includes(doctorData.bedoc_doctorname)) {
             isAttend = true;
         }
 
-        // --- Detailed parsing logic for Kangnam Hallym Hospital (Updated) ---
-
-        // Extract Profile URL
-        const profileImgSrc = $('div.pic img').attr('src');
+        // 프로필 이미지 추출
+        const profileImgSrc = $('.pic img').attr('src');
         if (profileImgSrc) {
-            parsedDetails.profileUrl = new URL(profileImgSrc, hospital_site).href;
+            synthesizedData.profileUrl = new URL(profileImgSrc, doctorData.hospital_site).href;
         }
 
-        // Extract Specialty
-        parsedDetails.specialty = $('div.part_txt p').attr('title') || $('div.part_txt p').text().trim();
-        parsedDetails.specialty = parsedDetails.specialty.replace(/"/g, '');
+        // 전문분야 추출
+        synthesizedData.specialty = cleanText($('.denti p').attr('title'));
 
-        // Extract 학력 from #tab_con01
-        parsedDetails.학력 = [];
-        $('#tab_con01 td.dw-02 p').each((i, el) => {
-            const date = $(el).find('span').first().text().trim();
-            const content = $(el).find('span').last().text().trim();
-            if (content) {
-                parsedDetails.학력.push({
-                    date: date || null,
-                    content: content.replace(/"/g, '')
-                });
-            }
-        });
+        // Helper to parse sections in the first tab
+        const parseInfoSection = (title) => {
+            const items = [];
+            $(`h4:contains('${title}')`).next('table').find('td p').each((i, el) => {
+                const date = cleanText($(el).find('span').first().text());
+                const content = cleanText($(el).find('span').last().text());
+                if (content) {
+                    items.push({ date: date || null, content });
+                }
+            });
+            return items;
+        };
 
-        // Extract 경력 from #tab_con02
-        parsedDetails.경력 = [];
-        $('#tab_con02 td p').each((i, el) => {
-            const date = $(el).find('span').first().text().trim();
-            const content = $(el).find('span').last().text().trim();
-             if (content) {
-                parsedDetails.경력.push({
-                    date: date || null,
-                    content: content.replace(/"/g, '')
-                });
-            }
-        });
+        synthesizedData.학력 = parseInfoSection('학력');
+        synthesizedData.경력 = parseInfoSection('경력');
+        synthesizedData.학술 = parseInfoSection('학회활동');
 
-        // Extract 학술 from #tab_con03
-        parsedDetails.학술 = [];
-        $('#tab_con03 td p').each((i, el) => {
-            const content = $(el).find('span').last().text().trim();
-            if (content) {
-                parsedDetails.학술.push({
-                    date: null,
-                    content: content.replace(/"/g, '')
-                });
-            }
-        });
-        
-        // Extract 논문/저서 from #tab_con05
-        parsedDetails.논문 = [];
-        parsedDetails.저서 = [];
-        const publicationsNode = $('#tab_con05 td');
+        // Parse '논문/저서' from the second tab
+        const publicationsNode = $('#tab_con02 .thesis_list');
         publicationsNode.find('br').replaceWith('\n');
-        const publicationsText = publicationsNode.text().trim();
-        const lines = publicationsText.split('\n').map(line => line.trim()).filter(line => line);
+        const publicationsText = publicationsNode.text();
+        const lines = publicationsText.split('\n').map(line => line.trim()).filter(Boolean);
+        
+        let currentCategory = '논문'; // Default category
 
         lines.forEach(line => {
-            // Remove the heading if it exists and add all lines to '논문'
-            const cleanLine = line.replace('📌저서/저술', '').trim();
-            if (cleanLine) {
-                parsedDetails.논문.push(cleanLine.replace(/\"/g, ''));
+            if (line.includes('◎ 저서/저술')) {
+                currentCategory = '저서';
+                return; // Skip the header line
+            } else if (line.includes('◎')) {
+                currentCategory = '논문'; // Reset to paper if another category starts
+                return; // Skip header line
+            }
+
+            if (currentCategory === '저서') {
+                synthesizedData.저서.push({ content: cleanText(line) });
+            } else {
+                synthesizedData.논문.push(cleanText(line));
             }
         });
 
+        // Click the '언론보도' tab and wait for its content
+        const mediaResponsePromise = page.waitForResponse(res => res.url().includes('ajax_board.asp'));
+        await page.click('a[href="#tab_con03"]');
+        const mediaResponse = await mediaResponsePromise;
+        const mediaHtml = await mediaResponse.text();
+        const $$ = cheerio.load(mediaHtml);
 
-        // Initialize other fields as empty arrays if not found
-        if (!parsedDetails.수상) parsedDetails.수상 = [];
-        if (!parsedDetails.언론) parsedDetails.언론 = [];
+        $$('ul.clr li').each((i, el) => {
+            const issuer = cleanText($$(el).find('p.news').text());
+            const text = cleanText($$(el).find('p.tit a').text());
+            const targetDate = cleanText($$(el).find('p.date').text());
+            const urlScript = $$(el).find('p.tit a').attr('href');
+            const urlMatch = urlScript ? urlScript.match(/'([^']+)'/) : null;
+            const url = urlMatch ? urlMatch[1] : null;
 
+            synthesizedData.언론.push({ targetDate, type: '기사', text, url, issuer });
+        });
 
     } catch (e) {
-        error = `Error during Playwright execution: ${e.message}`;
+        error = `Playwright execution failed: ${e.message}`;
+        console.error(error);
+        isAttend = false;
     } finally {
-        if (browser && browser.isConnected()) {
-            await browser.close();
-        }
+        if (browser) { await browser.close(); }
     }
 
-    console.log(JSON.stringify({
-        isAttend: isAttend,
-        error: error,
-        ...parsedDetails
-    }));
-})();
+    const finalResult = { ...synthesizedData, isAttend, error };
+    Object.keys(finalResult).forEach(key => { 
+        if (Array.isArray(finalResult[key]) && finalResult[key].length === 0) { 
+            delete finalResult[key]; 
+        }
+    });
+
+    return finalResult;
+}
+
+// 메인 실행 로직
+if (require.main === module) {
+    const doctorDataJson = process.argv[2];
+    if (!doctorDataJson) {
+        console.error("Please provide the doctor's JSON data as a string argument.");
+        process.exit(1);
+    }
+
+    const doctorData = JSON.parse(doctorDataJson);
+
+    parseDoctorProfile(doctorData)
+        .then(result => {
+            console.log(JSON.stringify(result, null, 2));
+        })
+        .catch(error => {
+            console.error(`A critical error occurred:`, error);
+            console.log(JSON.stringify({ error: error.message }, null, 2));
+        });
+}

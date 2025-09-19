@@ -1,0 +1,44 @@
+{
+  "hospital_cid": 604,
+  "bedoc_id": "A5404",
+  "bedoc_hospitalsite": "http://www.cmcep.or.kr/",
+  "bedoc_doctorname": "최범순",
+  "bedoc_deptname": "신장내과",
+  "bedoc_hospitalname": "은평성모병원",
+  "hospital_name": "가톨릭대학교 은평성모병원",
+  "aiga_hid": "H11KR-11000002",
+  "hospital_site": "https://www.cmcep.or.kr/page/doctor/1271/D0000910",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 은평구 통일로 1021, (진관동)",
+  "isExist": null,
+  "isSearchType": "html_failed",
+  "error": "Forced fallback for detailed parsing.",
+  "doctorSiteUrl": "https://www.cmcep.or.kr/page/doctor/1271/D0000910",
+  "profileUrl": null,
+  "education": [
+    {
+      "content": "1987~1993\n                                                     가톨릭대학교 의학 학사"
+    },
+    {
+      "content": "1996~2003\n                                                     가톨릭대학교 내과학 석사"
+    },
+    {
+      "content": "2003~2006\n                                                     가톨릭대학교 내과학 박사"
+    }
+  ],
+  "experience": [
+    {
+      "content": "2019~현재\n                                                     가톨릭대학교 은평성모병원 교수"
+    },
+    {
+      "content": "2018~2019\n                                                     가톨릭대학교 성바오로병원 교수"
+    },
+    {
+      "content": "2013~2018\n                                                     가톨릭대학교 서울성모병원 교수"
+    },
+    {
+      "content": "2008~2013\n                                                     가톨릭대학교 서울성모병원 부교수"
+    }
+  ],
+  "thesis": []
+}
