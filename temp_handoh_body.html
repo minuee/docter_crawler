@@ -1,0 +1,1617 @@
+
+	
+<link rel="stylesheet" href="../JoditEditor/jodit.custom.css">
+<link rel="stylesheet" href="../JoditEditor/jodit.min.css"><style media="screen">
+#div_loading{ position:fixed; text-align:center; top:50%; left:50%; margin-top:0px; margin-left:0px; z-index:1000; justify-content:center; align-items:center}
+#div_loading .xi{ font-size:3em;-webkit-animation:xi-spin 2s infinite linear;animation:xi-spin 2s infinite linear}
+#div_loading .tt{ font-size:1em}
+</style>
+<div id="div_loading" style="display:none;"><i class="xi xi-spinner-1 xi-spin"></i><br><i class="tt">잠시만 기다려주세요.</i></div>
+<iframe name="doquery" style="display: none;"></iframe>
+<!--header-->
+<div id="header">
+  
+  <div class="headerWrap">
+    <div class="topWrap">
+      <div class="box2 inner flex hr">
+        <div class="layR flex">
+          
+          
+          <ul class="menu flex wrap mem">
+                          <li><a href="../sub_member/login.php" class="in flex vc"><i class="xi xi-log-in"></i><i class="tt">로그인</i></a></li>
+              <li><a href="../sub_member/join.php" class="in flex vc"><i class="xi xi-user-plus-o"></i><i class="tt">회원가입</i></a></li>
+                      </ul>
+          <ul class="menu flex wrap lang">
+              
+             <li class="en"><a href="http://www.handoh.com/eng/main/" class="in flex vc"><i class="flag"><img src="../images/flag/us.svg"></i><strong class="tt">ENGLISH</strong></a></li> 
+             <li class="cn"><a href="http://www.handoh.com/chn/main/" class="in flex vc"><i class="flag"><img src="../images/flag/cn.svg"></i><strong class="tt">中文</strong></a></li> 
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="menuWrap">
+      <div class="box2 inner flex space">
+        <h1 class="logo flex vc flexH"><a href="../main/" class="in"><img src="../images/inc/logo_new.png" alt="한도병원"></a></h1>
+        <div class="gnb_wrap"><ul class="gnb flex">
+  <li class="m_treatment on plus">
+    <a href="../sub_treatment/department.php" class="dp1 flex ac"><span class="tt">진료안내</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_department on plus">
+        <a href="../sub_treatment/department.php" class="flex ac"><span class="tt">진료과/의료진</span></a>
+        <ul class="dp3 flex">
+                      <li class="ssm_0001_"><a href="../sub_treatment/department_view.php?cate=0001_" class="flex ac"><span class="tt">소화기내과</span></a></li>
+                      <li class="ssm_0003_"><a href="../sub_treatment/department_view.php?cate=0003_" class="flex ac"><span class="tt">신장내과</span></a></li>
+                      <li class="ssm_0002_"><a href="../sub_treatment/department_view.php?cate=0002_" class="flex ac"><span class="tt">심장내과</span></a></li>
+                      <li class="ssm_0004_"><a href="../sub_treatment/department_view.php?cate=0004_" class="flex ac"><span class="tt">외과</span></a></li>
+                      <li class="ssm_0005_"><a href="../sub_treatment/department_view.php?cate=0005_" class="flex ac"><span class="tt">신경외과</span></a></li>
+                      <li class="ssm_0006_"><a href="../sub_treatment/department_view.php?cate=0006_" class="flex ac"><span class="tt">정형외과</span></a></li>
+                      <li class="ssm_0007_"><a href="../sub_treatment/department_view.php?cate=0007_" class="flex ac"><span class="tt">심장혈관 흉부외과</span></a></li>
+                      <li class="ssm_0008_"><a href="../sub_treatment/department_view.php?cate=0008_" class="flex ac"><span class="tt">신경과</span></a></li>
+                      <li class="ssm_0009_"><a href="../sub_treatment/department_view.php?cate=0009_" class="flex ac"><span class="tt">부인과</span></a></li>
+                      <li class="ssm_0010_"><a href="../sub_treatment/department_view.php?cate=0010_" class="flex ac"><span class="tt">소아청소년과</span></a></li>
+                      <li class="ssm_0011_"><a href="../sub_treatment/department_view.php?cate=0011_" class="flex ac"><span class="tt">비뇨의학과</span></a></li>
+                      <li class="ssm_0012_"><a href="../sub_treatment/department_view.php?cate=0012_" class="flex ac"><span class="tt">재활의학과</span></a></li>
+                      <li class="ssm_0013_"><a href="../sub_treatment/department_view.php?cate=0013_" class="flex ac"><span class="tt">마취통증의학과</span></a></li>
+                      <li class="ssm_0014_"><a href="../sub_treatment/department_view.php?cate=0014_" class="flex ac"><span class="tt">응급의학과</span></a></li>
+                      <li class="ssm_0015_"><a href="../sub_treatment/department_view.php?cate=0015_" class="flex ac"><span class="tt">영상의학과</span></a></li>
+                      <li class="ssm_0016_"><a href="../sub_treatment/department_view.php?cate=0016_" class="flex ac"><span class="tt">진단검사의학과</span></a></li>
+                      <li class="ssm_0018_"><a href="../sub_treatment/department_view.php?cate=0018_" class="flex ac"><span class="tt">안과</span></a></li>
+                      <li class="ssm_0019_"><a href="../sub_treatment/department_view.php?cate=0019_" class="flex ac"><span class="tt">치과</span></a></li>
+                      <li class="ssm_0020_"><a href="../sub_treatment/department_view.php?cate=0020_" class="flex ac"><span class="tt">이비인후과</span></a></li>
+                      <li class="ssm_0021_"><a href="../sub_treatment/department_view.php?cate=0021_" class="flex ac"><span class="tt">내분비내과</span></a></li>
+                      <li class="ssm_0024_"><a href="../sub_treatment/department_view.php?cate=0024_" class="flex ac"><span class="tt">호흡기내과</span></a></li>
+                      <li class="ssm_0017_"><a href="../sub_treatment/department_view.php?cate=0017_" class="flex ac"><span class="tt">종합건강증진센터</span></a></li>
+                      <li class="ssm_0027_"><a href="../sub_treatment/department_view.php?cate=0027_" class="flex ac"><span class="tt">정신건강의학과</span></a></li>
+                    <!-- <li class="ssm_0001"><a href="../sub_treatment/department_view.php?dp3=0001" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0002"><a href="../sub_treatment/department_view.php?dp3=0002" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0003"><a href="../sub_treatment/department_view.php?dp3=0003" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0004"><a href="../sub_treatment/department_view.php?dp3=0004" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0005"><a href="../sub_treatment/department_view.php?dp3=0005" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0006"><a href="../sub_treatment/department_view.php?dp3=0006" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0007"><a href="../sub_treatment/department_view.php?dp3=0007" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0008"><a href="../sub_treatment/department_view.php?dp3=0008" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0009"><a href="../sub_treatment/department_view.php?dp3=0009" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0010"><a href="../sub_treatment/department_view.php?dp3=0010" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0011"><a href="../sub_treatment/department_view.php?dp3=0011" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0012"><a href="../sub_treatment/department_view.php?dp3=0012" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0013"><a href="../sub_treatment/department_view.php?dp3=0013" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0014"><a href="../sub_treatment/department_view.php?dp3=0014" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0015"><a href="../sub_treatment/department_view.php?dp3=0015" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0016"><a href="../sub_treatment/department_view.php?dp3=0016" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0017"><a href="../sub_treatment/department_view.php?dp3=0017" class="flex ac"><span class="tt"></span></a></li> -->
+        </ul>
+      </li>
+      <li class="sm_reservation plus">
+        <a href="../sub_treatment/reservation_treat.php" class="flex ac"><span class="tt">진료예약</span></a>
+        <ul class="dp3 flex">
+          <li class="ssm_treat"><a href="../sub_treatment/reservation_treat.php" class="flex ac"><span class="tt">진료상담예약</span></a></li>
+          <li class="ssm_all"><a href="../sub_treatment/reservation_all.php" class="flex ac"><span class="tt">종합검진예약</span></a></li>
+        </ul>
+      </li>
+      <li class="sm_equipment"><a href="../sub_treatment/equipment.php" class="flex ac"><span class="tt">진료장비</span></a></li>
+      <li class="sm_ambulatoryCare"><a href="../sub_treatment/ambulatoryCare.php" class="flex ac"><span class="tt">외래진료절차안내</span></a></li>
+      <li class="sm_info"><a href="../sub_treatment/info.php" class="flex ac"><span class="tt">입퇴원절차안내</span></a></li>
+      <li class="sm_cooperation"><a href="../sub_treatment/cooperation.php" class="flex ac"><span class="tt">진료협력안내</span></a></li>
+    </ul>
+  </li>
+  <li class="m_center plus">
+    <a href="../sub_center/index.php" class="dp1 flex ac"><span class="tt">전문센터</span></a>
+    <ul class="dp2 flex tt_word">
+              <li class="sm_0001"><a href="../sub_center/view.php?dp2=0001&amp;cate=0001_" class="flex ac"><span class="tt">소화기센터</span></a> </li>
+              <li class="sm_0002"><a href="../sub_center/view.php?dp2=0002&amp;cate=0002_" class="flex ac"><span class="tt">심·뇌혈관 센터</span></a> </li>
+              <li class="sm_0003"><a href="../sub_center/view.php?dp2=0003&amp;cate=0003_" class="flex ac"><span class="tt">척추센터</span></a> </li>
+              <li class="sm_0004"><a href="../sub_center/view.php?dp2=0004&amp;cate=0004_" class="flex ac"><span class="tt">관절센터</span></a> </li>
+              <li class="sm_0005"><a href="../sub_center/view.php?dp2=0005&amp;cate=0005_" class="flex ac"><span class="tt">재활센터</span></a> </li>
+              <li class="sm_0006"><a href="../sub_center/view.php?dp2=0006&amp;cate=0006_" class="flex ac"><span class="tt">신장혈액투석센터</span></a> </li>
+              <li class="sm_0007"><a href="../sub_center/view.php?dp2=0007&amp;cate=0007_" class="flex ac"><span class="tt">응급의료센터</span></a> </li>
+              <li class="sm_0008"><a href="../sub_center/view.php?dp2=0008&amp;cate=0008_" class="flex ac"><span class="tt">건강증진센터</span></a> </li>
+              <li class="sm_0009"><a href="../sub_center/view.php?dp2=0009&amp;cate=0009_" class="flex ac"><span class="tt">산업의학센터</span></a> </li>
+            <!-- <li class="sm_0001"><a href="../sub_center/view.php?dp2=0001" class="flex ac"><span class="tt">소화기센터</span></a></li>
+            <li class="sm_0002"><a href="../sub_center/view.php?dp2=0002" class="flex ac"><span class="tt">심·뇌혈관 센터</span></a></li>
+            <li class="sm_0003"><a href="../sub_center/view.php?dp2=0003" class="flex ac"><span class="tt">척추센터</span></a></li>
+            <li class="sm_0004"><a href="../sub_center/view.php?dp2=0004" class="flex ac"><span class="tt">관절센터</span></a></li>
+            <li class="sm_0005"><a href="../sub_center/view.php?dp2=0005" class="flex ac"><span class="tt">재활센터</span></a></li>
+            <li class="sm_0006"><a href="../sub_center/view.php?dp2=0006" class="flex ac"><span class="tt">신장혈액투석센터</span></a></li>
+            <li class="sm_0007"><a href="../sub_center/view.php?dp2=0007" class="flex ac"><span class="tt">응급의료센터</span></a></li>
+            <li class="sm_0008"><a href="../sub_center/view.php?dp2=0008" class="flex ac"><span class="tt">건강증진센터</span></a></li>
+            <li class="sm_0009"><a href="../sub_center/view.php?dp2=0009" class="flex ac"><span class="tt">산업의학센터</span></a></li> -->
+    </ul>
+  </li>
+  <li class="m_facilities plus">
+    <a href="../sub_facilities/floorPlans.php" class="dp1 flex ac"><span class="tt">병원둘러보기</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_floorPlans"><a href="../sub_facilities/floorPlans.php" class="flex ac"><span class="tt">본관</span></a></li>
+      <!--<li class="sm_floorPlans">
+            	<a href="../sub_facilities/floorPlans.php" class="flex ac"><span class="tt">본관</span></a>
+                <ul class="dp3 flex">
+                    <li class="ssm_tab1"><a href="" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_tab2"><a href="" class="flex ac"><span class="tt"></span></a></li>
+                </ul>
+            </li>-->
+      <li class="sm_annexe"><a href="../sub_facilities/annexe.php" class="flex ac"><span class="tt">별관</span></a></li>
+      <li class="sm_convenient"><a href="../sub_facilities/convenient.php" class="flex ac"><span class="tt">편의시설</span></a></li>
+      <li class="sm_parking"><a href="../sub_facilities/parking.php" class="flex ac"><span class="tt">주차안내</span></a></li>
+    </ul>
+  </li>
+  <li class="m_guide plus">
+    <a href="../sub_guide/visit.php" class="dp1 flex ac"><span class="tt">이용안내</span></a>
+    <ul class="dp2 flex">
+      <!--<li class="sm_floorPlans">
+            	<a href="" class="flex ac"><span class="tt"></span></a>
+                <ul class="dp3 flex">
+                    <li class="ssm_tab1"><a href="" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_tab2"><a href="" class="flex ac"><span class="tt"></span></a></li>
+                </ul>
+            </li>
+            <li class="sm_convenient"><a href="" class="flex ac"><span class="tt"></span></a></li>
+            <li class="sm_parking"><a href="" class="flex ac"><span class="tt"></span></a></li>-->
+      <li class="sm_visit"><a href="../sub_guide/visit.php" class="flex ac"><span class="tt">면회안내</span></a></li>
+      <li class="sm_certi plus">
+        <a href="../sub_guide/certi_certificate.php" class="flex ac"><span class="tt">제증명서발급안내</span></a>
+        <ul class="dp3 flex">
+          <li class="ssm_certificate"><a href="../sub_guide/certi_certificate.php" class="flex ac"><span class="tt">제증명서발급안내</span></a></li>
+          <li class="ssm_dutyRecordCopy"><a href="../sub_guide/certi_dutyRecordCopy.php" class="flex ac"><span class="tt">의무기록사본발급안내</span></a></li>
+          <li class="ssm_nonpay"><a href="../sub_guide/certi_nonpay.php" class="flex ac"><span class="tt">비급여진료비안내</span></a></li>
+          <li class="ssm_years"><a href="../sub_guide/certi_years.php" class="flex ac"><span class="tt">연말정산서류신청</span></a></li>
+          <!--<li class="ssm_data"><a href="" class="flex ac"><span class="tt"></span></a></li>-->
+        </ul>
+      </li>
+      <li class="sm_welfare plus">
+        <a href="../sub_guide/welfare_tab1.php" class="flex ac"><span class="tt">의료사회복지안내</span></a>
+        <ul class="dp3 flex">
+          <li class="ssm_tab1"><a href="../sub_guide/welfare_tab1.php" class="flex ac"><span class="tt">의료사회복지</span></a></li>
+          <li class="ssm_tab2"><a href="../sub_guide/welfare_tab2.php" class="flex ac"><span class="tt">자원봉사</span></a></li>
+          <li class="ssm_tab3"><a href="../sub_guide/welfare_tab3.php" class="flex ac"><span class="tt">한걸음봉사단</span></a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="m_board plus">
+    <a href="../sub_board/notice.php" class="dp1 flex ac"><span class="tt">한도마당</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_notice"><a href="../sub_board/notice.php" class="flex ac"><span class="tt">공지사항</span></a></li>
+      <li class="sm_news"><a href="../sub_board/news.php" class="flex ac"><span class="tt">병원소식</span></a></li>
+      <li class="sm_press"><a href="../sub_board/press.php" class="flex ac"><span class="tt">언론보도</span></a></li>
+      <li class="sm_recruit"><a href="../sub_board/recruit.php" class="flex ac"><span class="tt">인재채용</span></a></li>
+      <li class="sm_dormitory"><a href="../sub_board/dormitory.php" class="flex ac"><span class="tt">생활관안내</span></a></li>
+      <li class="sm_pharmacy"><a href="../sub_board/pharmacy.php" class="flex ac"><span class="tt">원외약국 게시판</span></a></li>
+      <li class="sm_event"><a href="../sub_event/event.php" class="flex ac"><span class="tt">진행이벤트</span></a></li>
+    </ul>
+  </li>
+      <li class="m_service plus">
+    <a href="../sub_service/customer.php?mode=write" class="dp1 flex ac"><span class="tt">고객마당</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_customer"><a href="../sub_service/customer.php?mode=write" class="flex ac"><span class="tt">고객의 소리</span></a></li>
+      <li class="sm_review"><a href="../sub_service/review.php" class="flex ac"><span class="tt">진료후기</span></a></li>
+      <li class="sm_counsel"><a href="../sub_service/counsel.php" class="flex ac"><span class="tt">건강질병상담</span></a></li>
+      <li class="sm_kitchenPhysic"><a href="../sub_service/kitchenPhysic.php" class="flex ac"><span class="tt">환자영양식</span></a></li>
+    </ul>
+  </li>
+  <li class="m_hospital plus">
+    <a href="../sub_hospital/greetings.php" class="dp1 flex ac"><span class="tt">병원소개</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_greetings"><a href="../sub_hospital/greetings.php" class="flex ac"><span class="tt">인사말</span></a></li>
+      <li class="sm_vision"><a href="../sub_hospital/vision.php" class="flex ac"><span class="tt">한도비전</span></a></li>
+      <li class="sm_history"><a href="../sub_hospital/history.php" class="flex ac"><span class="tt">한도연혁</span></a></li>
+      <!--<li class="sm_brochure"><a href="" class="flex ac"><span class="tt"></span></a></li>-->
+      <li class="sm_info"><a href="../sub_hospital/info.php" class="flex ac"><span class="tt">전화번호안내</span></a></li>
+      <li class="sm_location"><a href="../sub_hospital/location.php" class="flex ac"><span class="tt">찾아오시는길</span></a></li>
+    </ul>
+  </li>
+  <li class="m_mypage plus">
+    <a href="../sub_mypage/modify.php" class="dp1 flex ac"><span class="tt">마이페이지</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_modify"><a href="../sub_mypage/modify.php" class="flex ac"><span class="tt">개인정보수정</span></a></li>
+      <li class="sm_secession"><a href="../sub_mypage/secession.php" class="flex ac"><span class="tt">회원탈퇴</span></a></li>
+    </ul>
+  </li>
+  <li class="m_staff plus">
+    <a href="../sub_staff/family.php" class="dp1 flex ac"><span class="tt">직원전용</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_family"><a href="../sub_staff/family.php" class="flex ac"><span class="tt">가족알림방</span></a></li>
+      <li class="sm_inhabit"><a href="../sub_staff/inhabit.php" class="flex ac"><span class="tt">서식자료</span></a></li>
+      <li class="sm_free"><a href="../sub_staff/free.php" class="flex ac"><span class="tt">자유게시판</span></a></li>
+      <li class="sm_qps"><a href="../sub_staff/qps.php" class="flex ac"><span class="tt">QPS 게시판</span></a></li>
+      <li class="sm_infection"><a href="../sub_staff/infection.php" class="flex ac"><span class="tt">감염관리 게시판</span></a></li>
+      <li class="sm_health"><a href="../sub_staff/health.php" class="flex ac"><span class="tt">보건관리 게시판</span></a></li>
+      <li class="sm_food"><a href="../sub_staff/food.php" class="flex ac"><span class="tt">직원영양식</span></a></li>
+      <li class="sm_kind"><a href="../sub_staff/kind.php" class="flex ac"><span class="tt">친절 게시판</span></a></li>
+      <li class="sm_sound"><a href="../sub_staff/sound.php?mode=write" class="flex ac"><span class="tt">직원의 소리</span></a></li>
+      <li class="sm_photo"><a href="../sub_staff/photo.php" class="flex ac"><span class="tt">포토갤러리</span></a></li>
+      <li class="sm_mail"><a href="http://webmail.handoh.com/intro.php" class="flex ac" target="_blank"><span class="tt">한도병원 i-mail</span></a></li>
+      <li class="sm_pacs"><a href="http://121.139.209.250/LoginMode0.asp" class="flex ac" target="_blank"><span class="tt">대아한도 PACS</span></a></li>
+      <li class="sm_medical plus">
+        <a href="../sub_staff/medical_tab1.php" class="flex ac"><span class="tt">의료기관 인증</span></a>
+        <ul class="dp3 flex">
+          <li class="ssm_tab1"><a href="../sub_staff/medical_tab1.php" class="flex ac"><span class="tt">규정</span></a></li>
+          <li class="ssm_tab2"><a href="../sub_staff/medical_tab2.php" class="flex ac"><span class="tt">공유게시판</span></a></li>
+          <li class="ssm_tab3"><a href="../sub_staff/medical_tab3.php" class="flex ac"><span class="tt">자료실</span></a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="m_policy plus">
+    <a href="../sub_policy/agree.php" class="dp1 flex ac"><span class="tt">개인보호정책</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_agree"><a href="../sub_policy/agree.php" class="flex ac"><span class="tt">이용약관</span></a></li>
+      <li class="sm_privacy"><a href="../sub_policy/privacy.php" class="flex ac"><span class="tt">개인정보처리방침</span></a></li>
+      <li class="sm_email"><a href="../sub_policy/email.php" class="flex ac"><span class="tt">이메일무단수집거부</span></a></li>
+      <li class="sm_rnd"><a href="../sub_policy/rnd.php" class="flex ac"><span class="tt">환자의 권리와 의무</span></a></li>
+    </ul>
+  </li>
+  <li class="m_document plus">
+    <a href="" class="dp1 flex ac"><span class="tt">서식지</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_document"><a href="../sub_document/document.php" class="flex ac"><span class="tt">서식지</span></a></li>
+    </ul>
+  </li>
+  <li class="m_event plus">
+    <a href="" class="dp1 flex ac"><span class="tt">진행이벤트</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_event"><a href="../sub_event/event.php" class="flex ac"><span class="tt">진행이벤트</span></a></li>
+    </ul>
+  </li>
+</ul></div>
+        <div class="side_wrap flex vc flexH">
+          <a href="../sub_staff/family.php" class="link_btn"><span class="tt">직원전용</span></a>
+          <!--전체메뉴-->
+          <div class="allWrap">
+            <a href="javascript:void(0);" class="btn_all flex vc hr flexH" onclick="toggleClass(this,'#header','allOpen'); toggleClass(this,'html,body','hidden')"><strong class="tt">MENU</strong><span class="btn_in"><i class="ham"></i></span></a>
+            <div id="nav" class="all">
+              <div class="wrap_bg pcHide" onclick="toggleClass(this,'#header','allOpen'); toggleClass(this,'html,body','hidden')"></div>
+              <div class="wrap_in">
+                <div class="all_scroll">
+                  <div class="box1">
+                    <div class="allconWrap flex col">
+                      <div class="all_top">
+                        <ul class="all_link flex wrap">
+                          <li><a href="../sub_member/login.php" class="in flex ac"><span class="tt">로그인</span></a></li>
+                          <li><a href="../sub_member/join.php" class="in flex ac"><span class="tt">회원가입</span></a></li>
+                          <li><a href="../sub_mypage/modify.php" class="in flex ac"><span class="tt">마이페이지</span></a></li>
+                        </ul>
+                      </div>
+                      <div class="all_gnb"><ul class="gnb flex">
+  <li class="m_treatment on plus">
+    <a href="../sub_treatment/department.php" class="dp1 flex ac"><span class="tt">진료안내</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_department on plus">
+        <a href="../sub_treatment/department.php" class="flex ac"><span class="tt">진료과/의료진</span></a>
+        <ul class="dp3 flex">
+                      <li class="ssm_0001_"><a href="../sub_treatment/department_view.php?cate=0001_" class="flex ac"><span class="tt">소화기내과</span></a></li>
+                      <li class="ssm_0003_"><a href="../sub_treatment/department_view.php?cate=0003_" class="flex ac"><span class="tt">신장내과</span></a></li>
+                      <li class="ssm_0002_"><a href="../sub_treatment/department_view.php?cate=0002_" class="flex ac"><span class="tt">심장내과</span></a></li>
+                      <li class="ssm_0004_"><a href="../sub_treatment/department_view.php?cate=0004_" class="flex ac"><span class="tt">외과</span></a></li>
+                      <li class="ssm_0005_"><a href="../sub_treatment/department_view.php?cate=0005_" class="flex ac"><span class="tt">신경외과</span></a></li>
+                      <li class="ssm_0006_"><a href="../sub_treatment/department_view.php?cate=0006_" class="flex ac"><span class="tt">정형외과</span></a></li>
+                      <li class="ssm_0007_"><a href="../sub_treatment/department_view.php?cate=0007_" class="flex ac"><span class="tt">심장혈관 흉부외과</span></a></li>
+                      <li class="ssm_0008_"><a href="../sub_treatment/department_view.php?cate=0008_" class="flex ac"><span class="tt">신경과</span></a></li>
+                      <li class="ssm_0009_"><a href="../sub_treatment/department_view.php?cate=0009_" class="flex ac"><span class="tt">부인과</span></a></li>
+                      <li class="ssm_0010_"><a href="../sub_treatment/department_view.php?cate=0010_" class="flex ac"><span class="tt">소아청소년과</span></a></li>
+                      <li class="ssm_0011_"><a href="../sub_treatment/department_view.php?cate=0011_" class="flex ac"><span class="tt">비뇨의학과</span></a></li>
+                      <li class="ssm_0012_"><a href="../sub_treatment/department_view.php?cate=0012_" class="flex ac"><span class="tt">재활의학과</span></a></li>
+                      <li class="ssm_0013_"><a href="../sub_treatment/department_view.php?cate=0013_" class="flex ac"><span class="tt">마취통증의학과</span></a></li>
+                      <li class="ssm_0014_"><a href="../sub_treatment/department_view.php?cate=0014_" class="flex ac"><span class="tt">응급의학과</span></a></li>
+                      <li class="ssm_0015_"><a href="../sub_treatment/department_view.php?cate=0015_" class="flex ac"><span class="tt">영상의학과</span></a></li>
+                      <li class="ssm_0016_"><a href="../sub_treatment/department_view.php?cate=0016_" class="flex ac"><span class="tt">진단검사의학과</span></a></li>
+                      <li class="ssm_0018_"><a href="../sub_treatment/department_view.php?cate=0018_" class="flex ac"><span class="tt">안과</span></a></li>
+                      <li class="ssm_0019_"><a href="../sub_treatment/department_view.php?cate=0019_" class="flex ac"><span class="tt">치과</span></a></li>
+                      <li class="ssm_0020_"><a href="../sub_treatment/department_view.php?cate=0020_" class="flex ac"><span class="tt">이비인후과</span></a></li>
+                      <li class="ssm_0021_"><a href="../sub_treatment/department_view.php?cate=0021_" class="flex ac"><span class="tt">내분비내과</span></a></li>
+                      <li class="ssm_0024_"><a href="../sub_treatment/department_view.php?cate=0024_" class="flex ac"><span class="tt">호흡기내과</span></a></li>
+                      <li class="ssm_0017_"><a href="../sub_treatment/department_view.php?cate=0017_" class="flex ac"><span class="tt">종합건강증진센터</span></a></li>
+                      <li class="ssm_0027_"><a href="../sub_treatment/department_view.php?cate=0027_" class="flex ac"><span class="tt">정신건강의학과</span></a></li>
+                    <!-- <li class="ssm_0001"><a href="../sub_treatment/department_view.php?dp3=0001" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0002"><a href="../sub_treatment/department_view.php?dp3=0002" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0003"><a href="../sub_treatment/department_view.php?dp3=0003" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0004"><a href="../sub_treatment/department_view.php?dp3=0004" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0005"><a href="../sub_treatment/department_view.php?dp3=0005" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0006"><a href="../sub_treatment/department_view.php?dp3=0006" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0007"><a href="../sub_treatment/department_view.php?dp3=0007" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0008"><a href="../sub_treatment/department_view.php?dp3=0008" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0009"><a href="../sub_treatment/department_view.php?dp3=0009" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0010"><a href="../sub_treatment/department_view.php?dp3=0010" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0011"><a href="../sub_treatment/department_view.php?dp3=0011" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0012"><a href="../sub_treatment/department_view.php?dp3=0012" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0013"><a href="../sub_treatment/department_view.php?dp3=0013" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0014"><a href="../sub_treatment/department_view.php?dp3=0014" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0015"><a href="../sub_treatment/department_view.php?dp3=0015" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0016"><a href="../sub_treatment/department_view.php?dp3=0016" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0017"><a href="../sub_treatment/department_view.php?dp3=0017" class="flex ac"><span class="tt"></span></a></li> -->
+        </ul>
+      </li>
+      <li class="sm_reservation plus">
+        <a href="../sub_treatment/reservation_treat.php" class="flex ac"><span class="tt">진료예약</span></a>
+        <ul class="dp3 flex">
+          <li class="ssm_treat"><a href="../sub_treatment/reservation_treat.php" class="flex ac"><span class="tt">진료상담예약</span></a></li>
+          <li class="ssm_all"><a href="../sub_treatment/reservation_all.php" class="flex ac"><span class="tt">종합검진예약</span></a></li>
+        </ul>
+      </li>
+      <li class="sm_equipment"><a href="../sub_treatment/equipment.php" class="flex ac"><span class="tt">진료장비</span></a></li>
+      <li class="sm_ambulatoryCare"><a href="../sub_treatment/ambulatoryCare.php" class="flex ac"><span class="tt">외래진료절차안내</span></a></li>
+      <li class="sm_info"><a href="../sub_treatment/info.php" class="flex ac"><span class="tt">입퇴원절차안내</span></a></li>
+      <li class="sm_cooperation"><a href="../sub_treatment/cooperation.php" class="flex ac"><span class="tt">진료협력안내</span></a></li>
+    </ul>
+  </li>
+  <li class="m_center plus">
+    <a href="../sub_center/index.php" class="dp1 flex ac"><span class="tt">전문센터</span></a>
+    <ul class="dp2 flex tt_word">
+              <li class="sm_0001"><a href="../sub_center/view.php?dp2=0001&amp;cate=0001_" class="flex ac"><span class="tt">소화기센터</span></a> </li>
+              <li class="sm_0002"><a href="../sub_center/view.php?dp2=0002&amp;cate=0002_" class="flex ac"><span class="tt">심·뇌혈관 센터</span></a> </li>
+              <li class="sm_0003"><a href="../sub_center/view.php?dp2=0003&amp;cate=0003_" class="flex ac"><span class="tt">척추센터</span></a> </li>
+              <li class="sm_0004"><a href="../sub_center/view.php?dp2=0004&amp;cate=0004_" class="flex ac"><span class="tt">관절센터</span></a> </li>
+              <li class="sm_0005"><a href="../sub_center/view.php?dp2=0005&amp;cate=0005_" class="flex ac"><span class="tt">재활센터</span></a> </li>
+              <li class="sm_0006"><a href="../sub_center/view.php?dp2=0006&amp;cate=0006_" class="flex ac"><span class="tt">신장혈액투석센터</span></a> </li>
+              <li class="sm_0007"><a href="../sub_center/view.php?dp2=0007&amp;cate=0007_" class="flex ac"><span class="tt">응급의료센터</span></a> </li>
+              <li class="sm_0008"><a href="../sub_center/view.php?dp2=0008&amp;cate=0008_" class="flex ac"><span class="tt">건강증진센터</span></a> </li>
+              <li class="sm_0009"><a href="../sub_center/view.php?dp2=0009&amp;cate=0009_" class="flex ac"><span class="tt">산업의학센터</span></a> </li>
+            <!-- <li class="sm_0001"><a href="../sub_center/view.php?dp2=0001" class="flex ac"><span class="tt">소화기센터</span></a></li>
+            <li class="sm_0002"><a href="../sub_center/view.php?dp2=0002" class="flex ac"><span class="tt">심·뇌혈관 센터</span></a></li>
+            <li class="sm_0003"><a href="../sub_center/view.php?dp2=0003" class="flex ac"><span class="tt">척추센터</span></a></li>
+            <li class="sm_0004"><a href="../sub_center/view.php?dp2=0004" class="flex ac"><span class="tt">관절센터</span></a></li>
+            <li class="sm_0005"><a href="../sub_center/view.php?dp2=0005" class="flex ac"><span class="tt">재활센터</span></a></li>
+            <li class="sm_0006"><a href="../sub_center/view.php?dp2=0006" class="flex ac"><span class="tt">신장혈액투석센터</span></a></li>
+            <li class="sm_0007"><a href="../sub_center/view.php?dp2=0007" class="flex ac"><span class="tt">응급의료센터</span></a></li>
+            <li class="sm_0008"><a href="../sub_center/view.php?dp2=0008" class="flex ac"><span class="tt">건강증진센터</span></a></li>
+            <li class="sm_0009"><a href="../sub_center/view.php?dp2=0009" class="flex ac"><span class="tt">산업의학센터</span></a></li> -->
+    </ul>
+  </li>
+  <li class="m_facilities plus">
+    <a href="../sub_facilities/floorPlans.php" class="dp1 flex ac"><span class="tt">병원둘러보기</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_floorPlans"><a href="../sub_facilities/floorPlans.php" class="flex ac"><span class="tt">본관</span></a></li>
+      <!--<li class="sm_floorPlans">
+            	<a href="../sub_facilities/floorPlans.php" class="flex ac"><span class="tt">본관</span></a>
+                <ul class="dp3 flex">
+                    <li class="ssm_tab1"><a href="" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_tab2"><a href="" class="flex ac"><span class="tt"></span></a></li>
+                </ul>
+            </li>-->
+      <li class="sm_annexe"><a href="../sub_facilities/annexe.php" class="flex ac"><span class="tt">별관</span></a></li>
+      <li class="sm_convenient"><a href="../sub_facilities/convenient.php" class="flex ac"><span class="tt">편의시설</span></a></li>
+      <li class="sm_parking"><a href="../sub_facilities/parking.php" class="flex ac"><span class="tt">주차안내</span></a></li>
+    </ul>
+  </li>
+  <li class="m_guide plus">
+    <a href="../sub_guide/visit.php" class="dp1 flex ac"><span class="tt">이용안내</span></a>
+    <ul class="dp2 flex">
+      <!--<li class="sm_floorPlans">
+            	<a href="" class="flex ac"><span class="tt"></span></a>
+                <ul class="dp3 flex">
+                    <li class="ssm_tab1"><a href="" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_tab2"><a href="" class="flex ac"><span class="tt"></span></a></li>
+                </ul>
+            </li>
+            <li class="sm_convenient"><a href="" class="flex ac"><span class="tt"></span></a></li>
+            <li class="sm_parking"><a href="" class="flex ac"><span class="tt"></span></a></li>-->
+      <li class="sm_visit"><a href="../sub_guide/visit.php" class="flex ac"><span class="tt">면회안내</span></a></li>
+      <li class="sm_certi plus">
+        <a href="../sub_guide/certi_certificate.php" class="flex ac"><span class="tt">제증명서발급안내</span></a>
+        <ul class="dp3 flex">
+          <li class="ssm_certificate"><a href="../sub_guide/certi_certificate.php" class="flex ac"><span class="tt">제증명서발급안내</span></a></li>
+          <li class="ssm_dutyRecordCopy"><a href="../sub_guide/certi_dutyRecordCopy.php" class="flex ac"><span class="tt">의무기록사본발급안내</span></a></li>
+          <li class="ssm_nonpay"><a href="../sub_guide/certi_nonpay.php" class="flex ac"><span class="tt">비급여진료비안내</span></a></li>
+          <li class="ssm_years"><a href="../sub_guide/certi_years.php" class="flex ac"><span class="tt">연말정산서류신청</span></a></li>
+          <!--<li class="ssm_data"><a href="" class="flex ac"><span class="tt"></span></a></li>-->
+        </ul>
+      </li>
+      <li class="sm_welfare plus">
+        <a href="../sub_guide/welfare_tab1.php" class="flex ac"><span class="tt">의료사회복지안내</span></a>
+        <ul class="dp3 flex">
+          <li class="ssm_tab1"><a href="../sub_guide/welfare_tab1.php" class="flex ac"><span class="tt">의료사회복지</span></a></li>
+          <li class="ssm_tab2"><a href="../sub_guide/welfare_tab2.php" class="flex ac"><span class="tt">자원봉사</span></a></li>
+          <li class="ssm_tab3"><a href="../sub_guide/welfare_tab3.php" class="flex ac"><span class="tt">한걸음봉사단</span></a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="m_board plus">
+    <a href="../sub_board/notice.php" class="dp1 flex ac"><span class="tt">한도마당</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_notice"><a href="../sub_board/notice.php" class="flex ac"><span class="tt">공지사항</span></a></li>
+      <li class="sm_news"><a href="../sub_board/news.php" class="flex ac"><span class="tt">병원소식</span></a></li>
+      <li class="sm_press"><a href="../sub_board/press.php" class="flex ac"><span class="tt">언론보도</span></a></li>
+      <li class="sm_recruit"><a href="../sub_board/recruit.php" class="flex ac"><span class="tt">인재채용</span></a></li>
+      <li class="sm_dormitory"><a href="../sub_board/dormitory.php" class="flex ac"><span class="tt">생활관안내</span></a></li>
+      <li class="sm_pharmacy"><a href="../sub_board/pharmacy.php" class="flex ac"><span class="tt">원외약국 게시판</span></a></li>
+      <li class="sm_event"><a href="../sub_event/event.php" class="flex ac"><span class="tt">진행이벤트</span></a></li>
+    </ul>
+  </li>
+      <li class="m_service plus">
+    <a href="../sub_service/customer.php?mode=write" class="dp1 flex ac"><span class="tt">고객마당</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_customer"><a href="../sub_service/customer.php?mode=write" class="flex ac"><span class="tt">고객의 소리</span></a></li>
+      <li class="sm_review"><a href="../sub_service/review.php" class="flex ac"><span class="tt">진료후기</span></a></li>
+      <li class="sm_counsel"><a href="../sub_service/counsel.php" class="flex ac"><span class="tt">건강질병상담</span></a></li>
+      <li class="sm_kitchenPhysic"><a href="../sub_service/kitchenPhysic.php" class="flex ac"><span class="tt">환자영양식</span></a></li>
+    </ul>
+  </li>
+  <li class="m_hospital plus">
+    <a href="../sub_hospital/greetings.php" class="dp1 flex ac"><span class="tt">병원소개</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_greetings"><a href="../sub_hospital/greetings.php" class="flex ac"><span class="tt">인사말</span></a></li>
+      <li class="sm_vision"><a href="../sub_hospital/vision.php" class="flex ac"><span class="tt">한도비전</span></a></li>
+      <li class="sm_history"><a href="../sub_hospital/history.php" class="flex ac"><span class="tt">한도연혁</span></a></li>
+      <!--<li class="sm_brochure"><a href="" class="flex ac"><span class="tt"></span></a></li>-->
+      <li class="sm_info"><a href="../sub_hospital/info.php" class="flex ac"><span class="tt">전화번호안내</span></a></li>
+      <li class="sm_location"><a href="../sub_hospital/location.php" class="flex ac"><span class="tt">찾아오시는길</span></a></li>
+    </ul>
+  </li>
+  <li class="m_mypage plus">
+    <a href="../sub_mypage/modify.php" class="dp1 flex ac"><span class="tt">마이페이지</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_modify"><a href="../sub_mypage/modify.php" class="flex ac"><span class="tt">개인정보수정</span></a></li>
+      <li class="sm_secession"><a href="../sub_mypage/secession.php" class="flex ac"><span class="tt">회원탈퇴</span></a></li>
+    </ul>
+  </li>
+  <li class="m_staff plus">
+    <a href="../sub_staff/family.php" class="dp1 flex ac"><span class="tt">직원전용</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_family"><a href="../sub_staff/family.php" class="flex ac"><span class="tt">가족알림방</span></a></li>
+      <li class="sm_inhabit"><a href="../sub_staff/inhabit.php" class="flex ac"><span class="tt">서식자료</span></a></li>
+      <li class="sm_free"><a href="../sub_staff/free.php" class="flex ac"><span class="tt">자유게시판</span></a></li>
+      <li class="sm_qps"><a href="../sub_staff/qps.php" class="flex ac"><span class="tt">QPS 게시판</span></a></li>
+      <li class="sm_infection"><a href="../sub_staff/infection.php" class="flex ac"><span class="tt">감염관리 게시판</span></a></li>
+      <li class="sm_health"><a href="../sub_staff/health.php" class="flex ac"><span class="tt">보건관리 게시판</span></a></li>
+      <li class="sm_food"><a href="../sub_staff/food.php" class="flex ac"><span class="tt">직원영양식</span></a></li>
+      <li class="sm_kind"><a href="../sub_staff/kind.php" class="flex ac"><span class="tt">친절 게시판</span></a></li>
+      <li class="sm_sound"><a href="../sub_staff/sound.php?mode=write" class="flex ac"><span class="tt">직원의 소리</span></a></li>
+      <li class="sm_photo"><a href="../sub_staff/photo.php" class="flex ac"><span class="tt">포토갤러리</span></a></li>
+      <li class="sm_mail"><a href="http://webmail.handoh.com/intro.php" class="flex ac" target="_blank"><span class="tt">한도병원 i-mail</span></a></li>
+      <li class="sm_pacs"><a href="http://121.139.209.250/LoginMode0.asp" class="flex ac" target="_blank"><span class="tt">대아한도 PACS</span></a></li>
+      <li class="sm_medical plus">
+        <a href="../sub_staff/medical_tab1.php" class="flex ac"><span class="tt">의료기관 인증</span></a>
+        <ul class="dp3 flex">
+          <li class="ssm_tab1"><a href="../sub_staff/medical_tab1.php" class="flex ac"><span class="tt">규정</span></a></li>
+          <li class="ssm_tab2"><a href="../sub_staff/medical_tab2.php" class="flex ac"><span class="tt">공유게시판</span></a></li>
+          <li class="ssm_tab3"><a href="../sub_staff/medical_tab3.php" class="flex ac"><span class="tt">자료실</span></a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="m_policy plus">
+    <a href="../sub_policy/agree.php" class="dp1 flex ac"><span class="tt">개인보호정책</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_agree"><a href="../sub_policy/agree.php" class="flex ac"><span class="tt">이용약관</span></a></li>
+      <li class="sm_privacy"><a href="../sub_policy/privacy.php" class="flex ac"><span class="tt">개인정보처리방침</span></a></li>
+      <li class="sm_email"><a href="../sub_policy/email.php" class="flex ac"><span class="tt">이메일무단수집거부</span></a></li>
+      <li class="sm_rnd"><a href="../sub_policy/rnd.php" class="flex ac"><span class="tt">환자의 권리와 의무</span></a></li>
+    </ul>
+  </li>
+  <li class="m_document plus">
+    <a href="" class="dp1 flex ac"><span class="tt">서식지</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_document"><a href="../sub_document/document.php" class="flex ac"><span class="tt">서식지</span></a></li>
+    </ul>
+  </li>
+  <li class="m_event plus">
+    <a href="" class="dp1 flex ac"><span class="tt">진행이벤트</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_event"><a href="../sub_event/event.php" class="flex ac"><span class="tt">진행이벤트</span></a></li>
+    </ul>
+  </li>
+</ul></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--전체메뉴 end-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="quick">
+	<div class="quickWrap flex col space">
+    	<div class="quick_menu">
+        	<ul class="menu">
+            	<li class="home"><a href="../main/" class="in"><p class="icon flex ac"><i class="xi xi-home"></i></p></a></li>
+            	<li>
+                	<a href="../sub_treatment/reservation_treat.php" class="in flex vc">
+                        <p class="txt"><strong class="tt">진료예약</strong></p>
+                        <p class="icon flex ac"><img src="../images/icon/icon_quick01.svg?v=1.0" alt=""></p>
+                    </a>
+                </li>
+                <li>
+                	<a href="../sub_hospital/location.php" class="in flex vc">
+                        <p class="txt"><strong class="tt">찾아오시는길</strong></p>
+                        <p class="icon flex ac"><img src="../images/icon/icon_quick02.svg?v=1.0" alt=""></p>
+                    </a>
+                </li>
+                <li>
+                	<a href="../sub_center/index.php" class="in flex vc">
+                        <p class="txt"><strong class="tt">센터소개</strong></p>
+                        <p class="icon flex ac"><img src="../images/icon/icon_quick03.svg?v=1.0" alt=""></p>
+                    </a>
+                </li>
+                <li>
+                	<a href="../sub_treatment/search.php" class="in flex vc ac">
+                        <p class="txt"><strong class="tt">진료과/의료진 검색</strong></p>
+                        <p class="icon flex ac"><img src="../images/icon/icon_quick04.svg?v=1.0" alt=""></p>
+                    </a>
+                </li>
+                <!--<li>
+                	<a href="javascript:alert('준비중입니다.');" class="in flex vc">
+                        <p class="txt"><strong class="tt">재활자립병원</strong></p>
+                        <p class="icon flex ac"><img src="../images/icon/icon_quick05.svg?v=1.0" alt="" /></p>
+                    </a>
+                </li>-->
+            </ul>
+        </div>
+        <div class="quick_sns">
+        	<ul class="sns flex wrap">
+	<li><a href="https://map.naver.com/p/entry/place/11851683?lng=126.807629300001&amp;lat=37.334070800001&amp;placePath=%2F%3Fac%3D1%26adm_lat%3D37.3279709%26adm_long%3D126.7970249%26bizId%3D11851683%26bookingRedirectUrl%3Dhttps%253A%252F%252Fm.booking.naver.com%252Fbooking%252F13%252Fbizes%252F1002821%253Ftheme%253Dplace%26debug%3D0%26deviceType%3Dpc%26lgl_lat%3D37.3332548%26lgl_long%3D126.7908383%26lgl_rcode%3D02273108%26ngn_country%3DKR%26nlu_query%3D%257B%2522qr%2522%253A%255B%257B%2522query%2522%253A%2522%25ED%2595%259C%25EB%258F%2584%2522%252C%2522c_score%2522%253A-0.319%252C%2522c_score_org%2522%253A-0.319%252C%2522score%2522%253A-2.737%252C%2522qr_category%2522%253A4%252C%2522qr_type%2522%253A31%257D%255D%252C%2522hospital%2522%253A%257B%2522source%2522%253A%2522placesearch%2522%252C%2522sid%2522%253A%252211851683%2522%252C%2522q%2522%253A%2522%25ED%2595%259C%25EB%258F%2584%25EB%25B3%2591%25EC%259B%2590%2522%257D%252C%2522nluQuery%2522%253A%2522%25ED%2595%259C%25EB%258F%2584%25EB%25B3%2591%25EC%259B%2590%2522%257D%26nqx_theme%3D%257B%2522theme%2522%253A%257B%2522sub%2522%253A%255B%257B%2522name%2522%253A%2522hospital%2522%257D%255D%257D%257D%26r1%3D%25EA%25B2%25BD%25EA%25B8%25B0%25EB%258F%2584%26r2%3D%25EC%2595%2588%25EC%2582%25B0%25EC%258B%259C%2520%25EB%258B%25A8%25EC%259B%2590%25EA%25B5%25AC%26r3%3D%25EB%25B0%25B1%25EC%259A%25B4%25EB%258F%2599%26rcode%3D02273555%26rev%3D45%26sm%3Dtop_hty%26spq%3D0%26ssc%3Dtab.nx.all%26target%3Dpc%26where%3Dnexearch%26x%3D126.7970249%26y%3D37.3279709&amp;c=15.00,0,0,0,dh" class="in flex ac blog" target="_blank"><i class="xi"></i></a></li>
+  <li><a href="javascript:void(0);" class="in flex ac youtube" target=""><i class="xi"></i></a></li>
+  <li><a href="https://www.facebook.com/handohospital" class="in flex ac facebook" target="_blank"><i class="xi"></i></a></li>
+  <li><a href="javascript:void(0);" class="in flex ac instagram" target=""><i class="xi"></i></a></li>
+  <li><a href="javascript:void(0);" class="in flex ac kakao" target=""><i class="xi"></i></a></li>
+</ul>        </div>
+    </div>
+</div></div>
+<!--header end-->
+
+<!--contents-->
+<div id="contents" class="fullH_min">
+            <div class="sub_page_top bgfix bg_treatment">
+        <div class="box1 inner">
+          <h2 class="sub_tit"><strong class="tit">진료안내</strong></h2>
+          <div class="sub_page_menu">
+
+          <!--  서브페이지 메뉴 신디자인 -->
+            <div class="menu flex">
+              <div class="home"><a href="../main/" class="tit flex ac"><i class="xi xi-home-o"></i></a></div>
+              <div class="depth_1 def">
+                <p class="tit flex vc"><span class="tt">진료안내<i class="xi arrow"></i></span></p>
+                <ul class="gnb flex">
+  <li class="m_treatment on plus">
+    <a href="../sub_treatment/department.php" class="dp1 flex ac"><span class="tt">진료안내</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_department on plus">
+        <a href="../sub_treatment/department.php" class="flex ac"><span class="tt">진료과/의료진</span></a>
+        <ul class="dp3 flex">
+                      <li class="ssm_0001_"><a href="../sub_treatment/department_view.php?cate=0001_" class="flex ac"><span class="tt">소화기내과</span></a></li>
+                      <li class="ssm_0003_"><a href="../sub_treatment/department_view.php?cate=0003_" class="flex ac"><span class="tt">신장내과</span></a></li>
+                      <li class="ssm_0002_"><a href="../sub_treatment/department_view.php?cate=0002_" class="flex ac"><span class="tt">심장내과</span></a></li>
+                      <li class="ssm_0004_"><a href="../sub_treatment/department_view.php?cate=0004_" class="flex ac"><span class="tt">외과</span></a></li>
+                      <li class="ssm_0005_"><a href="../sub_treatment/department_view.php?cate=0005_" class="flex ac"><span class="tt">신경외과</span></a></li>
+                      <li class="ssm_0006_"><a href="../sub_treatment/department_view.php?cate=0006_" class="flex ac"><span class="tt">정형외과</span></a></li>
+                      <li class="ssm_0007_"><a href="../sub_treatment/department_view.php?cate=0007_" class="flex ac"><span class="tt">심장혈관 흉부외과</span></a></li>
+                      <li class="ssm_0008_"><a href="../sub_treatment/department_view.php?cate=0008_" class="flex ac"><span class="tt">신경과</span></a></li>
+                      <li class="ssm_0009_"><a href="../sub_treatment/department_view.php?cate=0009_" class="flex ac"><span class="tt">부인과</span></a></li>
+                      <li class="ssm_0010_"><a href="../sub_treatment/department_view.php?cate=0010_" class="flex ac"><span class="tt">소아청소년과</span></a></li>
+                      <li class="ssm_0011_"><a href="../sub_treatment/department_view.php?cate=0011_" class="flex ac"><span class="tt">비뇨의학과</span></a></li>
+                      <li class="ssm_0012_"><a href="../sub_treatment/department_view.php?cate=0012_" class="flex ac"><span class="tt">재활의학과</span></a></li>
+                      <li class="ssm_0013_"><a href="../sub_treatment/department_view.php?cate=0013_" class="flex ac"><span class="tt">마취통증의학과</span></a></li>
+                      <li class="ssm_0014_"><a href="../sub_treatment/department_view.php?cate=0014_" class="flex ac"><span class="tt">응급의학과</span></a></li>
+                      <li class="ssm_0015_"><a href="../sub_treatment/department_view.php?cate=0015_" class="flex ac"><span class="tt">영상의학과</span></a></li>
+                      <li class="ssm_0016_"><a href="../sub_treatment/department_view.php?cate=0016_" class="flex ac"><span class="tt">진단검사의학과</span></a></li>
+                      <li class="ssm_0018_"><a href="../sub_treatment/department_view.php?cate=0018_" class="flex ac"><span class="tt">안과</span></a></li>
+                      <li class="ssm_0019_"><a href="../sub_treatment/department_view.php?cate=0019_" class="flex ac"><span class="tt">치과</span></a></li>
+                      <li class="ssm_0020_"><a href="../sub_treatment/department_view.php?cate=0020_" class="flex ac"><span class="tt">이비인후과</span></a></li>
+                      <li class="ssm_0021_"><a href="../sub_treatment/department_view.php?cate=0021_" class="flex ac"><span class="tt">내분비내과</span></a></li>
+                      <li class="ssm_0024_"><a href="../sub_treatment/department_view.php?cate=0024_" class="flex ac"><span class="tt">호흡기내과</span></a></li>
+                      <li class="ssm_0017_"><a href="../sub_treatment/department_view.php?cate=0017_" class="flex ac"><span class="tt">종합건강증진센터</span></a></li>
+                      <li class="ssm_0027_"><a href="../sub_treatment/department_view.php?cate=0027_" class="flex ac"><span class="tt">정신건강의학과</span></a></li>
+                    <!-- <li class="ssm_0001"><a href="../sub_treatment/department_view.php?dp3=0001" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0002"><a href="../sub_treatment/department_view.php?dp3=0002" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0003"><a href="../sub_treatment/department_view.php?dp3=0003" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0004"><a href="../sub_treatment/department_view.php?dp3=0004" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0005"><a href="../sub_treatment/department_view.php?dp3=0005" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0006"><a href="../sub_treatment/department_view.php?dp3=0006" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0007"><a href="../sub_treatment/department_view.php?dp3=0007" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0008"><a href="../sub_treatment/department_view.php?dp3=0008" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0009"><a href="../sub_treatment/department_view.php?dp3=0009" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0010"><a href="../sub_treatment/department_view.php?dp3=0010" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0011"><a href="../sub_treatment/department_view.php?dp3=0011" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0012"><a href="../sub_treatment/department_view.php?dp3=0012" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0013"><a href="../sub_treatment/department_view.php?dp3=0013" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0014"><a href="../sub_treatment/department_view.php?dp3=0014" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0015"><a href="../sub_treatment/department_view.php?dp3=0015" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0016"><a href="../sub_treatment/department_view.php?dp3=0016" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0017"><a href="../sub_treatment/department_view.php?dp3=0017" class="flex ac"><span class="tt"></span></a></li> -->
+        </ul>
+      </li>
+      <li class="sm_reservation plus">
+        <a href="../sub_treatment/reservation_treat.php" class="flex ac"><span class="tt">진료예약</span></a>
+        <ul class="dp3 flex">
+          <li class="ssm_treat"><a href="../sub_treatment/reservation_treat.php" class="flex ac"><span class="tt">진료상담예약</span></a></li>
+          <li class="ssm_all"><a href="../sub_treatment/reservation_all.php" class="flex ac"><span class="tt">종합검진예약</span></a></li>
+        </ul>
+      </li>
+      <li class="sm_equipment"><a href="../sub_treatment/equipment.php" class="flex ac"><span class="tt">진료장비</span></a></li>
+      <li class="sm_ambulatoryCare"><a href="../sub_treatment/ambulatoryCare.php" class="flex ac"><span class="tt">외래진료절차안내</span></a></li>
+      <li class="sm_info"><a href="../sub_treatment/info.php" class="flex ac"><span class="tt">입퇴원절차안내</span></a></li>
+      <li class="sm_cooperation"><a href="../sub_treatment/cooperation.php" class="flex ac"><span class="tt">진료협력안내</span></a></li>
+    </ul>
+  </li>
+  <li class="m_center plus">
+    <a href="../sub_center/index.php" class="dp1 flex ac"><span class="tt">전문센터</span></a>
+    <ul class="dp2 flex tt_word">
+              <li class="sm_0001"><a href="../sub_center/view.php?dp2=0001&amp;cate=0001_" class="flex ac"><span class="tt">소화기센터</span></a> </li>
+              <li class="sm_0002"><a href="../sub_center/view.php?dp2=0002&amp;cate=0002_" class="flex ac"><span class="tt">심·뇌혈관 센터</span></a> </li>
+              <li class="sm_0003"><a href="../sub_center/view.php?dp2=0003&amp;cate=0003_" class="flex ac"><span class="tt">척추센터</span></a> </li>
+              <li class="sm_0004"><a href="../sub_center/view.php?dp2=0004&amp;cate=0004_" class="flex ac"><span class="tt">관절센터</span></a> </li>
+              <li class="sm_0005"><a href="../sub_center/view.php?dp2=0005&amp;cate=0005_" class="flex ac"><span class="tt">재활센터</span></a> </li>
+              <li class="sm_0006"><a href="../sub_center/view.php?dp2=0006&amp;cate=0006_" class="flex ac"><span class="tt">신장혈액투석센터</span></a> </li>
+              <li class="sm_0007"><a href="../sub_center/view.php?dp2=0007&amp;cate=0007_" class="flex ac"><span class="tt">응급의료센터</span></a> </li>
+              <li class="sm_0008"><a href="../sub_center/view.php?dp2=0008&amp;cate=0008_" class="flex ac"><span class="tt">건강증진센터</span></a> </li>
+              <li class="sm_0009"><a href="../sub_center/view.php?dp2=0009&amp;cate=0009_" class="flex ac"><span class="tt">산업의학센터</span></a> </li>
+            <!-- <li class="sm_0001"><a href="../sub_center/view.php?dp2=0001" class="flex ac"><span class="tt">소화기센터</span></a></li>
+            <li class="sm_0002"><a href="../sub_center/view.php?dp2=0002" class="flex ac"><span class="tt">심·뇌혈관 센터</span></a></li>
+            <li class="sm_0003"><a href="../sub_center/view.php?dp2=0003" class="flex ac"><span class="tt">척추센터</span></a></li>
+            <li class="sm_0004"><a href="../sub_center/view.php?dp2=0004" class="flex ac"><span class="tt">관절센터</span></a></li>
+            <li class="sm_0005"><a href="../sub_center/view.php?dp2=0005" class="flex ac"><span class="tt">재활센터</span></a></li>
+            <li class="sm_0006"><a href="../sub_center/view.php?dp2=0006" class="flex ac"><span class="tt">신장혈액투석센터</span></a></li>
+            <li class="sm_0007"><a href="../sub_center/view.php?dp2=0007" class="flex ac"><span class="tt">응급의료센터</span></a></li>
+            <li class="sm_0008"><a href="../sub_center/view.php?dp2=0008" class="flex ac"><span class="tt">건강증진센터</span></a></li>
+            <li class="sm_0009"><a href="../sub_center/view.php?dp2=0009" class="flex ac"><span class="tt">산업의학센터</span></a></li> -->
+    </ul>
+  </li>
+  <li class="m_facilities plus">
+    <a href="../sub_facilities/floorPlans.php" class="dp1 flex ac"><span class="tt">병원둘러보기</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_floorPlans"><a href="../sub_facilities/floorPlans.php" class="flex ac"><span class="tt">본관</span></a></li>
+      <!--<li class="sm_floorPlans">
+            	<a href="../sub_facilities/floorPlans.php" class="flex ac"><span class="tt">본관</span></a>
+                <ul class="dp3 flex">
+                    <li class="ssm_tab1"><a href="" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_tab2"><a href="" class="flex ac"><span class="tt"></span></a></li>
+                </ul>
+            </li>-->
+      <li class="sm_annexe"><a href="../sub_facilities/annexe.php" class="flex ac"><span class="tt">별관</span></a></li>
+      <li class="sm_convenient"><a href="../sub_facilities/convenient.php" class="flex ac"><span class="tt">편의시설</span></a></li>
+      <li class="sm_parking"><a href="../sub_facilities/parking.php" class="flex ac"><span class="tt">주차안내</span></a></li>
+    </ul>
+  </li>
+  <li class="m_guide plus">
+    <a href="../sub_guide/visit.php" class="dp1 flex ac"><span class="tt">이용안내</span></a>
+    <ul class="dp2 flex">
+      <!--<li class="sm_floorPlans">
+            	<a href="" class="flex ac"><span class="tt"></span></a>
+                <ul class="dp3 flex">
+                    <li class="ssm_tab1"><a href="" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_tab2"><a href="" class="flex ac"><span class="tt"></span></a></li>
+                </ul>
+            </li>
+            <li class="sm_convenient"><a href="" class="flex ac"><span class="tt"></span></a></li>
+            <li class="sm_parking"><a href="" class="flex ac"><span class="tt"></span></a></li>-->
+      <li class="sm_visit"><a href="../sub_guide/visit.php" class="flex ac"><span class="tt">면회안내</span></a></li>
+      <li class="sm_certi plus">
+        <a href="../sub_guide/certi_certificate.php" class="flex ac"><span class="tt">제증명서발급안내</span></a>
+        <ul class="dp3 flex">
+          <li class="ssm_certificate"><a href="../sub_guide/certi_certificate.php" class="flex ac"><span class="tt">제증명서발급안내</span></a></li>
+          <li class="ssm_dutyRecordCopy"><a href="../sub_guide/certi_dutyRecordCopy.php" class="flex ac"><span class="tt">의무기록사본발급안내</span></a></li>
+          <li class="ssm_nonpay"><a href="../sub_guide/certi_nonpay.php" class="flex ac"><span class="tt">비급여진료비안내</span></a></li>
+          <li class="ssm_years"><a href="../sub_guide/certi_years.php" class="flex ac"><span class="tt">연말정산서류신청</span></a></li>
+          <!--<li class="ssm_data"><a href="" class="flex ac"><span class="tt"></span></a></li>-->
+        </ul>
+      </li>
+      <li class="sm_welfare plus">
+        <a href="../sub_guide/welfare_tab1.php" class="flex ac"><span class="tt">의료사회복지안내</span></a>
+        <ul class="dp3 flex">
+          <li class="ssm_tab1"><a href="../sub_guide/welfare_tab1.php" class="flex ac"><span class="tt">의료사회복지</span></a></li>
+          <li class="ssm_tab2"><a href="../sub_guide/welfare_tab2.php" class="flex ac"><span class="tt">자원봉사</span></a></li>
+          <li class="ssm_tab3"><a href="../sub_guide/welfare_tab3.php" class="flex ac"><span class="tt">한걸음봉사단</span></a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="m_board plus">
+    <a href="../sub_board/notice.php" class="dp1 flex ac"><span class="tt">한도마당</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_notice"><a href="../sub_board/notice.php" class="flex ac"><span class="tt">공지사항</span></a></li>
+      <li class="sm_news"><a href="../sub_board/news.php" class="flex ac"><span class="tt">병원소식</span></a></li>
+      <li class="sm_press"><a href="../sub_board/press.php" class="flex ac"><span class="tt">언론보도</span></a></li>
+      <li class="sm_recruit"><a href="../sub_board/recruit.php" class="flex ac"><span class="tt">인재채용</span></a></li>
+      <li class="sm_dormitory"><a href="../sub_board/dormitory.php" class="flex ac"><span class="tt">생활관안내</span></a></li>
+      <li class="sm_pharmacy"><a href="../sub_board/pharmacy.php" class="flex ac"><span class="tt">원외약국 게시판</span></a></li>
+      <li class="sm_event"><a href="../sub_event/event.php" class="flex ac"><span class="tt">진행이벤트</span></a></li>
+    </ul>
+  </li>
+      <li class="m_service plus">
+    <a href="../sub_service/customer.php?mode=write" class="dp1 flex ac"><span class="tt">고객마당</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_customer"><a href="../sub_service/customer.php?mode=write" class="flex ac"><span class="tt">고객의 소리</span></a></li>
+      <li class="sm_review"><a href="../sub_service/review.php" class="flex ac"><span class="tt">진료후기</span></a></li>
+      <li class="sm_counsel"><a href="../sub_service/counsel.php" class="flex ac"><span class="tt">건강질병상담</span></a></li>
+      <li class="sm_kitchenPhysic"><a href="../sub_service/kitchenPhysic.php" class="flex ac"><span class="tt">환자영양식</span></a></li>
+    </ul>
+  </li>
+  <li class="m_hospital plus">
+    <a href="../sub_hospital/greetings.php" class="dp1 flex ac"><span class="tt">병원소개</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_greetings"><a href="../sub_hospital/greetings.php" class="flex ac"><span class="tt">인사말</span></a></li>
+      <li class="sm_vision"><a href="../sub_hospital/vision.php" class="flex ac"><span class="tt">한도비전</span></a></li>
+      <li class="sm_history"><a href="../sub_hospital/history.php" class="flex ac"><span class="tt">한도연혁</span></a></li>
+      <!--<li class="sm_brochure"><a href="" class="flex ac"><span class="tt"></span></a></li>-->
+      <li class="sm_info"><a href="../sub_hospital/info.php" class="flex ac"><span class="tt">전화번호안내</span></a></li>
+      <li class="sm_location"><a href="../sub_hospital/location.php" class="flex ac"><span class="tt">찾아오시는길</span></a></li>
+    </ul>
+  </li>
+  <li class="m_mypage plus">
+    <a href="../sub_mypage/modify.php" class="dp1 flex ac"><span class="tt">마이페이지</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_modify"><a href="../sub_mypage/modify.php" class="flex ac"><span class="tt">개인정보수정</span></a></li>
+      <li class="sm_secession"><a href="../sub_mypage/secession.php" class="flex ac"><span class="tt">회원탈퇴</span></a></li>
+    </ul>
+  </li>
+  <li class="m_staff plus">
+    <a href="../sub_staff/family.php" class="dp1 flex ac"><span class="tt">직원전용</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_family"><a href="../sub_staff/family.php" class="flex ac"><span class="tt">가족알림방</span></a></li>
+      <li class="sm_inhabit"><a href="../sub_staff/inhabit.php" class="flex ac"><span class="tt">서식자료</span></a></li>
+      <li class="sm_free"><a href="../sub_staff/free.php" class="flex ac"><span class="tt">자유게시판</span></a></li>
+      <li class="sm_qps"><a href="../sub_staff/qps.php" class="flex ac"><span class="tt">QPS 게시판</span></a></li>
+      <li class="sm_infection"><a href="../sub_staff/infection.php" class="flex ac"><span class="tt">감염관리 게시판</span></a></li>
+      <li class="sm_health"><a href="../sub_staff/health.php" class="flex ac"><span class="tt">보건관리 게시판</span></a></li>
+      <li class="sm_food"><a href="../sub_staff/food.php" class="flex ac"><span class="tt">직원영양식</span></a></li>
+      <li class="sm_kind"><a href="../sub_staff/kind.php" class="flex ac"><span class="tt">친절 게시판</span></a></li>
+      <li class="sm_sound"><a href="../sub_staff/sound.php?mode=write" class="flex ac"><span class="tt">직원의 소리</span></a></li>
+      <li class="sm_photo"><a href="../sub_staff/photo.php" class="flex ac"><span class="tt">포토갤러리</span></a></li>
+      <li class="sm_mail"><a href="http://webmail.handoh.com/intro.php" class="flex ac" target="_blank"><span class="tt">한도병원 i-mail</span></a></li>
+      <li class="sm_pacs"><a href="http://121.139.209.250/LoginMode0.asp" class="flex ac" target="_blank"><span class="tt">대아한도 PACS</span></a></li>
+      <li class="sm_medical plus">
+        <a href="../sub_staff/medical_tab1.php" class="flex ac"><span class="tt">의료기관 인증</span></a>
+        <ul class="dp3 flex">
+          <li class="ssm_tab1"><a href="../sub_staff/medical_tab1.php" class="flex ac"><span class="tt">규정</span></a></li>
+          <li class="ssm_tab2"><a href="../sub_staff/medical_tab2.php" class="flex ac"><span class="tt">공유게시판</span></a></li>
+          <li class="ssm_tab3"><a href="../sub_staff/medical_tab3.php" class="flex ac"><span class="tt">자료실</span></a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="m_policy plus">
+    <a href="../sub_policy/agree.php" class="dp1 flex ac"><span class="tt">개인보호정책</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_agree"><a href="../sub_policy/agree.php" class="flex ac"><span class="tt">이용약관</span></a></li>
+      <li class="sm_privacy"><a href="../sub_policy/privacy.php" class="flex ac"><span class="tt">개인정보처리방침</span></a></li>
+      <li class="sm_email"><a href="../sub_policy/email.php" class="flex ac"><span class="tt">이메일무단수집거부</span></a></li>
+      <li class="sm_rnd"><a href="../sub_policy/rnd.php" class="flex ac"><span class="tt">환자의 권리와 의무</span></a></li>
+    </ul>
+  </li>
+  <li class="m_document plus">
+    <a href="" class="dp1 flex ac"><span class="tt">서식지</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_document"><a href="../sub_document/document.php" class="flex ac"><span class="tt">서식지</span></a></li>
+    </ul>
+  </li>
+  <li class="m_event plus">
+    <a href="" class="dp1 flex ac"><span class="tt">진행이벤트</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_event"><a href="../sub_event/event.php" class="flex ac"><span class="tt">진행이벤트</span></a></li>
+    </ul>
+  </li>
+</ul>              </div>
+                            <div class="depth_2 def">
+                <p class="tit flex vc" onclick="toggleClass(this,'.def','on',true)"><span class="tt">진료과/의료진<i class="xi arrow"></i></span></p>
+                <ul class="gnb flex">
+  <li class="m_treatment on plus">
+    <a href="../sub_treatment/department.php" class="dp1 flex ac"><span class="tt">진료안내</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_department on plus">
+        <a href="../sub_treatment/department.php" class="flex ac"><span class="tt">진료과/의료진</span></a>
+        <ul class="dp3 flex">
+                      <li class="ssm_0001_"><a href="../sub_treatment/department_view.php?cate=0001_" class="flex ac"><span class="tt">소화기내과</span></a></li>
+                      <li class="ssm_0003_"><a href="../sub_treatment/department_view.php?cate=0003_" class="flex ac"><span class="tt">신장내과</span></a></li>
+                      <li class="ssm_0002_"><a href="../sub_treatment/department_view.php?cate=0002_" class="flex ac"><span class="tt">심장내과</span></a></li>
+                      <li class="ssm_0004_"><a href="../sub_treatment/department_view.php?cate=0004_" class="flex ac"><span class="tt">외과</span></a></li>
+                      <li class="ssm_0005_"><a href="../sub_treatment/department_view.php?cate=0005_" class="flex ac"><span class="tt">신경외과</span></a></li>
+                      <li class="ssm_0006_"><a href="../sub_treatment/department_view.php?cate=0006_" class="flex ac"><span class="tt">정형외과</span></a></li>
+                      <li class="ssm_0007_"><a href="../sub_treatment/department_view.php?cate=0007_" class="flex ac"><span class="tt">심장혈관 흉부외과</span></a></li>
+                      <li class="ssm_0008_"><a href="../sub_treatment/department_view.php?cate=0008_" class="flex ac"><span class="tt">신경과</span></a></li>
+                      <li class="ssm_0009_"><a href="../sub_treatment/department_view.php?cate=0009_" class="flex ac"><span class="tt">부인과</span></a></li>
+                      <li class="ssm_0010_"><a href="../sub_treatment/department_view.php?cate=0010_" class="flex ac"><span class="tt">소아청소년과</span></a></li>
+                      <li class="ssm_0011_"><a href="../sub_treatment/department_view.php?cate=0011_" class="flex ac"><span class="tt">비뇨의학과</span></a></li>
+                      <li class="ssm_0012_"><a href="../sub_treatment/department_view.php?cate=0012_" class="flex ac"><span class="tt">재활의학과</span></a></li>
+                      <li class="ssm_0013_"><a href="../sub_treatment/department_view.php?cate=0013_" class="flex ac"><span class="tt">마취통증의학과</span></a></li>
+                      <li class="ssm_0014_"><a href="../sub_treatment/department_view.php?cate=0014_" class="flex ac"><span class="tt">응급의학과</span></a></li>
+                      <li class="ssm_0015_"><a href="../sub_treatment/department_view.php?cate=0015_" class="flex ac"><span class="tt">영상의학과</span></a></li>
+                      <li class="ssm_0016_"><a href="../sub_treatment/department_view.php?cate=0016_" class="flex ac"><span class="tt">진단검사의학과</span></a></li>
+                      <li class="ssm_0018_"><a href="../sub_treatment/department_view.php?cate=0018_" class="flex ac"><span class="tt">안과</span></a></li>
+                      <li class="ssm_0019_"><a href="../sub_treatment/department_view.php?cate=0019_" class="flex ac"><span class="tt">치과</span></a></li>
+                      <li class="ssm_0020_"><a href="../sub_treatment/department_view.php?cate=0020_" class="flex ac"><span class="tt">이비인후과</span></a></li>
+                      <li class="ssm_0021_"><a href="../sub_treatment/department_view.php?cate=0021_" class="flex ac"><span class="tt">내분비내과</span></a></li>
+                      <li class="ssm_0024_"><a href="../sub_treatment/department_view.php?cate=0024_" class="flex ac"><span class="tt">호흡기내과</span></a></li>
+                      <li class="ssm_0017_"><a href="../sub_treatment/department_view.php?cate=0017_" class="flex ac"><span class="tt">종합건강증진센터</span></a></li>
+                      <li class="ssm_0027_"><a href="../sub_treatment/department_view.php?cate=0027_" class="flex ac"><span class="tt">정신건강의학과</span></a></li>
+                    <!-- <li class="ssm_0001"><a href="../sub_treatment/department_view.php?dp3=0001" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0002"><a href="../sub_treatment/department_view.php?dp3=0002" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0003"><a href="../sub_treatment/department_view.php?dp3=0003" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0004"><a href="../sub_treatment/department_view.php?dp3=0004" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0005"><a href="../sub_treatment/department_view.php?dp3=0005" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0006"><a href="../sub_treatment/department_view.php?dp3=0006" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0007"><a href="../sub_treatment/department_view.php?dp3=0007" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0008"><a href="../sub_treatment/department_view.php?dp3=0008" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0009"><a href="../sub_treatment/department_view.php?dp3=0009" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0010"><a href="../sub_treatment/department_view.php?dp3=0010" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0011"><a href="../sub_treatment/department_view.php?dp3=0011" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0012"><a href="../sub_treatment/department_view.php?dp3=0012" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0013"><a href="../sub_treatment/department_view.php?dp3=0013" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0014"><a href="../sub_treatment/department_view.php?dp3=0014" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0015"><a href="../sub_treatment/department_view.php?dp3=0015" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0016"><a href="../sub_treatment/department_view.php?dp3=0016" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_0017"><a href="../sub_treatment/department_view.php?dp3=0017" class="flex ac"><span class="tt"></span></a></li> -->
+        </ul>
+      </li>
+      <li class="sm_reservation plus">
+        <a href="../sub_treatment/reservation_treat.php" class="flex ac"><span class="tt">진료예약</span></a>
+        <ul class="dp3 flex">
+          <li class="ssm_treat"><a href="../sub_treatment/reservation_treat.php" class="flex ac"><span class="tt">진료상담예약</span></a></li>
+          <li class="ssm_all"><a href="../sub_treatment/reservation_all.php" class="flex ac"><span class="tt">종합검진예약</span></a></li>
+        </ul>
+      </li>
+      <li class="sm_equipment"><a href="../sub_treatment/equipment.php" class="flex ac"><span class="tt">진료장비</span></a></li>
+      <li class="sm_ambulatoryCare"><a href="../sub_treatment/ambulatoryCare.php" class="flex ac"><span class="tt">외래진료절차안내</span></a></li>
+      <li class="sm_info"><a href="../sub_treatment/info.php" class="flex ac"><span class="tt">입퇴원절차안내</span></a></li>
+      <li class="sm_cooperation"><a href="../sub_treatment/cooperation.php" class="flex ac"><span class="tt">진료협력안내</span></a></li>
+    </ul>
+  </li>
+  <li class="m_center plus">
+    <a href="../sub_center/index.php" class="dp1 flex ac"><span class="tt">전문센터</span></a>
+    <ul class="dp2 flex tt_word">
+              <li class="sm_0001"><a href="../sub_center/view.php?dp2=0001&amp;cate=0001_" class="flex ac"><span class="tt">소화기센터</span></a> </li>
+              <li class="sm_0002"><a href="../sub_center/view.php?dp2=0002&amp;cate=0002_" class="flex ac"><span class="tt">심·뇌혈관 센터</span></a> </li>
+              <li class="sm_0003"><a href="../sub_center/view.php?dp2=0003&amp;cate=0003_" class="flex ac"><span class="tt">척추센터</span></a> </li>
+              <li class="sm_0004"><a href="../sub_center/view.php?dp2=0004&amp;cate=0004_" class="flex ac"><span class="tt">관절센터</span></a> </li>
+              <li class="sm_0005"><a href="../sub_center/view.php?dp2=0005&amp;cate=0005_" class="flex ac"><span class="tt">재활센터</span></a> </li>
+              <li class="sm_0006"><a href="../sub_center/view.php?dp2=0006&amp;cate=0006_" class="flex ac"><span class="tt">신장혈액투석센터</span></a> </li>
+              <li class="sm_0007"><a href="../sub_center/view.php?dp2=0007&amp;cate=0007_" class="flex ac"><span class="tt">응급의료센터</span></a> </li>
+              <li class="sm_0008"><a href="../sub_center/view.php?dp2=0008&amp;cate=0008_" class="flex ac"><span class="tt">건강증진센터</span></a> </li>
+              <li class="sm_0009"><a href="../sub_center/view.php?dp2=0009&amp;cate=0009_" class="flex ac"><span class="tt">산업의학센터</span></a> </li>
+            <!-- <li class="sm_0001"><a href="../sub_center/view.php?dp2=0001" class="flex ac"><span class="tt">소화기센터</span></a></li>
+            <li class="sm_0002"><a href="../sub_center/view.php?dp2=0002" class="flex ac"><span class="tt">심·뇌혈관 센터</span></a></li>
+            <li class="sm_0003"><a href="../sub_center/view.php?dp2=0003" class="flex ac"><span class="tt">척추센터</span></a></li>
+            <li class="sm_0004"><a href="../sub_center/view.php?dp2=0004" class="flex ac"><span class="tt">관절센터</span></a></li>
+            <li class="sm_0005"><a href="../sub_center/view.php?dp2=0005" class="flex ac"><span class="tt">재활센터</span></a></li>
+            <li class="sm_0006"><a href="../sub_center/view.php?dp2=0006" class="flex ac"><span class="tt">신장혈액투석센터</span></a></li>
+            <li class="sm_0007"><a href="../sub_center/view.php?dp2=0007" class="flex ac"><span class="tt">응급의료센터</span></a></li>
+            <li class="sm_0008"><a href="../sub_center/view.php?dp2=0008" class="flex ac"><span class="tt">건강증진센터</span></a></li>
+            <li class="sm_0009"><a href="../sub_center/view.php?dp2=0009" class="flex ac"><span class="tt">산업의학센터</span></a></li> -->
+    </ul>
+  </li>
+  <li class="m_facilities plus">
+    <a href="../sub_facilities/floorPlans.php" class="dp1 flex ac"><span class="tt">병원둘러보기</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_floorPlans"><a href="../sub_facilities/floorPlans.php" class="flex ac"><span class="tt">본관</span></a></li>
+      <!--<li class="sm_floorPlans">
+            	<a href="../sub_facilities/floorPlans.php" class="flex ac"><span class="tt">본관</span></a>
+                <ul class="dp3 flex">
+                    <li class="ssm_tab1"><a href="" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_tab2"><a href="" class="flex ac"><span class="tt"></span></a></li>
+                </ul>
+            </li>-->
+      <li class="sm_annexe"><a href="../sub_facilities/annexe.php" class="flex ac"><span class="tt">별관</span></a></li>
+      <li class="sm_convenient"><a href="../sub_facilities/convenient.php" class="flex ac"><span class="tt">편의시설</span></a></li>
+      <li class="sm_parking"><a href="../sub_facilities/parking.php" class="flex ac"><span class="tt">주차안내</span></a></li>
+    </ul>
+  </li>
+  <li class="m_guide plus">
+    <a href="../sub_guide/visit.php" class="dp1 flex ac"><span class="tt">이용안내</span></a>
+    <ul class="dp2 flex">
+      <!--<li class="sm_floorPlans">
+            	<a href="" class="flex ac"><span class="tt"></span></a>
+                <ul class="dp3 flex">
+                    <li class="ssm_tab1"><a href="" class="flex ac"><span class="tt"></span></a></li>
+                    <li class="ssm_tab2"><a href="" class="flex ac"><span class="tt"></span></a></li>
+                </ul>
+            </li>
+            <li class="sm_convenient"><a href="" class="flex ac"><span class="tt"></span></a></li>
+            <li class="sm_parking"><a href="" class="flex ac"><span class="tt"></span></a></li>-->
+      <li class="sm_visit"><a href="../sub_guide/visit.php" class="flex ac"><span class="tt">면회안내</span></a></li>
+      <li class="sm_certi plus">
+        <a href="../sub_guide/certi_certificate.php" class="flex ac"><span class="tt">제증명서발급안내</span></a>
+        <ul class="dp3 flex">
+          <li class="ssm_certificate"><a href="../sub_guide/certi_certificate.php" class="flex ac"><span class="tt">제증명서발급안내</span></a></li>
+          <li class="ssm_dutyRecordCopy"><a href="../sub_guide/certi_dutyRecordCopy.php" class="flex ac"><span class="tt">의무기록사본발급안내</span></a></li>
+          <li class="ssm_nonpay"><a href="../sub_guide/certi_nonpay.php" class="flex ac"><span class="tt">비급여진료비안내</span></a></li>
+          <li class="ssm_years"><a href="../sub_guide/certi_years.php" class="flex ac"><span class="tt">연말정산서류신청</span></a></li>
+          <!--<li class="ssm_data"><a href="" class="flex ac"><span class="tt"></span></a></li>-->
+        </ul>
+      </li>
+      <li class="sm_welfare plus">
+        <a href="../sub_guide/welfare_tab1.php" class="flex ac"><span class="tt">의료사회복지안내</span></a>
+        <ul class="dp3 flex">
+          <li class="ssm_tab1"><a href="../sub_guide/welfare_tab1.php" class="flex ac"><span class="tt">의료사회복지</span></a></li>
+          <li class="ssm_tab2"><a href="../sub_guide/welfare_tab2.php" class="flex ac"><span class="tt">자원봉사</span></a></li>
+          <li class="ssm_tab3"><a href="../sub_guide/welfare_tab3.php" class="flex ac"><span class="tt">한걸음봉사단</span></a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="m_board plus">
+    <a href="../sub_board/notice.php" class="dp1 flex ac"><span class="tt">한도마당</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_notice"><a href="../sub_board/notice.php" class="flex ac"><span class="tt">공지사항</span></a></li>
+      <li class="sm_news"><a href="../sub_board/news.php" class="flex ac"><span class="tt">병원소식</span></a></li>
+      <li class="sm_press"><a href="../sub_board/press.php" class="flex ac"><span class="tt">언론보도</span></a></li>
+      <li class="sm_recruit"><a href="../sub_board/recruit.php" class="flex ac"><span class="tt">인재채용</span></a></li>
+      <li class="sm_dormitory"><a href="../sub_board/dormitory.php" class="flex ac"><span class="tt">생활관안내</span></a></li>
+      <li class="sm_pharmacy"><a href="../sub_board/pharmacy.php" class="flex ac"><span class="tt">원외약국 게시판</span></a></li>
+      <li class="sm_event"><a href="../sub_event/event.php" class="flex ac"><span class="tt">진행이벤트</span></a></li>
+    </ul>
+  </li>
+      <li class="m_service plus">
+    <a href="../sub_service/customer.php?mode=write" class="dp1 flex ac"><span class="tt">고객마당</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_customer"><a href="../sub_service/customer.php?mode=write" class="flex ac"><span class="tt">고객의 소리</span></a></li>
+      <li class="sm_review"><a href="../sub_service/review.php" class="flex ac"><span class="tt">진료후기</span></a></li>
+      <li class="sm_counsel"><a href="../sub_service/counsel.php" class="flex ac"><span class="tt">건강질병상담</span></a></li>
+      <li class="sm_kitchenPhysic"><a href="../sub_service/kitchenPhysic.php" class="flex ac"><span class="tt">환자영양식</span></a></li>
+    </ul>
+  </li>
+  <li class="m_hospital plus">
+    <a href="../sub_hospital/greetings.php" class="dp1 flex ac"><span class="tt">병원소개</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_greetings"><a href="../sub_hospital/greetings.php" class="flex ac"><span class="tt">인사말</span></a></li>
+      <li class="sm_vision"><a href="../sub_hospital/vision.php" class="flex ac"><span class="tt">한도비전</span></a></li>
+      <li class="sm_history"><a href="../sub_hospital/history.php" class="flex ac"><span class="tt">한도연혁</span></a></li>
+      <!--<li class="sm_brochure"><a href="" class="flex ac"><span class="tt"></span></a></li>-->
+      <li class="sm_info"><a href="../sub_hospital/info.php" class="flex ac"><span class="tt">전화번호안내</span></a></li>
+      <li class="sm_location"><a href="../sub_hospital/location.php" class="flex ac"><span class="tt">찾아오시는길</span></a></li>
+    </ul>
+  </li>
+  <li class="m_mypage plus">
+    <a href="../sub_mypage/modify.php" class="dp1 flex ac"><span class="tt">마이페이지</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_modify"><a href="../sub_mypage/modify.php" class="flex ac"><span class="tt">개인정보수정</span></a></li>
+      <li class="sm_secession"><a href="../sub_mypage/secession.php" class="flex ac"><span class="tt">회원탈퇴</span></a></li>
+    </ul>
+  </li>
+  <li class="m_staff plus">
+    <a href="../sub_staff/family.php" class="dp1 flex ac"><span class="tt">직원전용</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_family"><a href="../sub_staff/family.php" class="flex ac"><span class="tt">가족알림방</span></a></li>
+      <li class="sm_inhabit"><a href="../sub_staff/inhabit.php" class="flex ac"><span class="tt">서식자료</span></a></li>
+      <li class="sm_free"><a href="../sub_staff/free.php" class="flex ac"><span class="tt">자유게시판</span></a></li>
+      <li class="sm_qps"><a href="../sub_staff/qps.php" class="flex ac"><span class="tt">QPS 게시판</span></a></li>
+      <li class="sm_infection"><a href="../sub_staff/infection.php" class="flex ac"><span class="tt">감염관리 게시판</span></a></li>
+      <li class="sm_health"><a href="../sub_staff/health.php" class="flex ac"><span class="tt">보건관리 게시판</span></a></li>
+      <li class="sm_food"><a href="../sub_staff/food.php" class="flex ac"><span class="tt">직원영양식</span></a></li>
+      <li class="sm_kind"><a href="../sub_staff/kind.php" class="flex ac"><span class="tt">친절 게시판</span></a></li>
+      <li class="sm_sound"><a href="../sub_staff/sound.php?mode=write" class="flex ac"><span class="tt">직원의 소리</span></a></li>
+      <li class="sm_photo"><a href="../sub_staff/photo.php" class="flex ac"><span class="tt">포토갤러리</span></a></li>
+      <li class="sm_mail"><a href="http://webmail.handoh.com/intro.php" class="flex ac" target="_blank"><span class="tt">한도병원 i-mail</span></a></li>
+      <li class="sm_pacs"><a href="http://121.139.209.250/LoginMode0.asp" class="flex ac" target="_blank"><span class="tt">대아한도 PACS</span></a></li>
+      <li class="sm_medical plus">
+        <a href="../sub_staff/medical_tab1.php" class="flex ac"><span class="tt">의료기관 인증</span></a>
+        <ul class="dp3 flex">
+          <li class="ssm_tab1"><a href="../sub_staff/medical_tab1.php" class="flex ac"><span class="tt">규정</span></a></li>
+          <li class="ssm_tab2"><a href="../sub_staff/medical_tab2.php" class="flex ac"><span class="tt">공유게시판</span></a></li>
+          <li class="ssm_tab3"><a href="../sub_staff/medical_tab3.php" class="flex ac"><span class="tt">자료실</span></a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li class="m_policy plus">
+    <a href="../sub_policy/agree.php" class="dp1 flex ac"><span class="tt">개인보호정책</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_agree"><a href="../sub_policy/agree.php" class="flex ac"><span class="tt">이용약관</span></a></li>
+      <li class="sm_privacy"><a href="../sub_policy/privacy.php" class="flex ac"><span class="tt">개인정보처리방침</span></a></li>
+      <li class="sm_email"><a href="../sub_policy/email.php" class="flex ac"><span class="tt">이메일무단수집거부</span></a></li>
+      <li class="sm_rnd"><a href="../sub_policy/rnd.php" class="flex ac"><span class="tt">환자의 권리와 의무</span></a></li>
+    </ul>
+  </li>
+  <li class="m_document plus">
+    <a href="" class="dp1 flex ac"><span class="tt">서식지</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_document"><a href="../sub_document/document.php" class="flex ac"><span class="tt">서식지</span></a></li>
+    </ul>
+  </li>
+  <li class="m_event plus">
+    <a href="" class="dp1 flex ac"><span class="tt">진행이벤트</span></a>
+    <ul class="dp2 flex">
+      <li class="sm_event"><a href="../sub_event/event.php" class="flex ac"><span class="tt">진행이벤트</span></a></li>
+    </ul>
+  </li>
+</ul>              </div>
+                                                      </div>
+
+
+          </div>
+        </div>
+      </div>
+        <div class="sub_con_top" id="view">
+      <div class="box1 inner flex wrap space vc">
+        <h3 class="con_tit">
+          <strong class="tit">
+            진료과/의료진                    </strong>
+        </h3>
+        <ul class="con_nav flex vc">
+          <li><a href="../main/" class="home"><i class="xi xi-home-o"></i></a></li>
+          <li><i class="tt">진료안내</i></li>
+                      <li><i class="tt">진료과/의료진</i></li>
+                            </ul>
+      </div>
+    </div>
+      <!--본문 -->
+<div class="doc">
+	<div class="box1">
+    <!--<div class="view_area">
+          </div>-->
+  </div>
+  <div class="box1">
+      <div class="doctor_wrap ">
+    <div class="t_box ac">
+      <div class="tit_wrap">
+        <p class="tit">소화기내과 의료진 소개</p>
+      </div>
+    </div>
+          <ul class="sub_doctors flex wrap page_sec2">
+                  <li>
+            <div class="wrap_in flex">
+              <div class="img_wrap">
+                <div class="resize s4">
+                  <div class="re va_wrap flex vc hc"><img src="../shop_sun/files/pro_img/list/thumb/pro_20230418104724_0.png" alt=""></div>
+                </div>
+              </div>
+              <div class="doc_info_wrap flex">
+                <div class="info">
+                  <p class="t1">소화기센터 명예원장/센터장</p>
+                  <p class="t2">최재현</p>
+                  <p class="t3">소화기치료내시경, 희귀질환(크론병, 궤양성대장염, 베제트병)</p>                  <p class="t4">전화번호 : 031-8040-1266</p>                  <p class="t4">진료일정 : <span class="c_point">매주 수요일 오후 휴진</span></p>                  <div class="table_wrap page_sec3 mo_none">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="board_st st1">
+                      <thead>
+                        <tr>
+                          <th class="">구분</th>
+                          <th class="">월</th>
+                          <th class="">화</th>
+                          <th class="">수</th>
+                          <th class="">목</th>
+                          <th class="">금</th>
+                          <th class="">토</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="">오전</td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                  </tr>
+                        <tr>
+                          <td class="">오후</td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc no">휴무</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc "></p>
+                                                          </td>
+                                                  </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="doc_info_wrap w100 pcHide">
+                  <div class="btn_wrap mgT flex wrap ">
+                    <a href="javascript:layerOpen('../sub_treatment/pop_pro.php?number=72')" class="btn b1"><i class="xi icon"></i><i>약력소개</i></a>
+                    <a href="javascript:layerOpen('../sub_treatment/pop_hours.php?number=72')" class="btn b2"><i class="xi icon"></i><i>진료시간표</i></a>
+                  </div>
+                </div>
+                <div class="info mo_none">
+                  <p class="t5"><i class="xi-library c_point"></i> 주요약력</p>
+                  <div class="info_margin">
+                    <p class="t6">-고려대학교 의학박사</p><p class="t6">-소화기내과 전문의·내시경 전문의</p><p class="t6">-고려대학교 의과대학 교수</p><p class="t6">-미국 MD ANDERSON 암센터 교환교수</p><p class="t6">-3년 연속 동아일보 선정 대한민국 소화기내과 10대 명의</p><p class="t6">-한국일보 선정 대한민국 건강지킴이 대상 수상</p><p class="t6">-IBC선정 세계 100대 의학자</p><p class="t6">-고려대학교 부속 안산병원 병원장</p><p class="t6">-대한장연구학회 회장</p><p class="t6">-나은병원 소화기내과 명예원장·센터장</p>                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+                  <li>
+            <div class="wrap_in flex">
+              <div class="img_wrap">
+                <div class="resize s4">
+                  <div class="re va_wrap flex vc hc"><img src="../shop_sun/files/pro_img/list/thumb/pro_20250320143034_0.png" alt=""></div>
+                </div>
+              </div>
+              <div class="doc_info_wrap flex">
+                <div class="info">
+                  <p class="t1">제1소화기내과 진료부장</p>
+                  <p class="t2">하민수</p>
+                  <p class="t3">소화기 질환(위/대장 질환, 치료 내시경, 간질환, 췌담도 질환, 크론병, 궤양성대장염) 고혈압, 당뇨, 고지혈증, 기타 내과 질환</p>                  <p class="t4">전화번호 : 031-8040-1264</p>                  <p class="t4">진료일정 : <span class="c_point">토요일 격주 휴무 / 격주 목요일 오후 휴진</span></p>                  <div class="table_wrap page_sec3 mo_none">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="board_st st1">
+                      <thead>
+                        <tr>
+                          <th class="">구분</th>
+                          <th class="">월</th>
+                          <th class="">화</th>
+                          <th class="">수</th>
+                          <th class="">목</th>
+                          <th class="">금</th>
+                          <th class="">토</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="">오전</td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                  </tr>
+                        <tr>
+                          <td class="">오후</td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc "></p>
+                                                          </td>
+                                                  </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="doc_info_wrap w100 pcHide">
+                  <div class="btn_wrap mgT flex wrap ">
+                    <a href="javascript:layerOpen('../sub_treatment/pop_pro.php?number=108')" class="btn b1"><i class="xi icon"></i><i>약력소개</i></a>
+                    <a href="javascript:layerOpen('../sub_treatment/pop_hours.php?number=108')" class="btn b2"><i class="xi icon"></i><i>진료시간표</i></a>
+                  </div>
+                </div>
+                <div class="info mo_none">
+                  <p class="t5"><i class="xi-library c_point"></i> 주요약력</p>
+                  <div class="info_margin">
+                    <p class="t6">경희대학교 의과대학 졸업</p><p class="t6">가천대 길병원 내과 전공의</p><p class="t6">가천대 길병원 소화기 내과 임상강사, 외래교수</p><p class="t6">대한 소화기 내시경 학회 내시경 세부 전문의</p><p class="t6">대한 소화기 학회 분과전문의</p><p class="t6">시흥 센트럴 병원 내과 부장</p><p class="t6">시흥 센트럴 병원 소화기 센터장</p><p class="t6">시흥 센트럴 병원 진료협력센터장</p>                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+                  <li>
+            <div class="wrap_in flex">
+              <div class="img_wrap">
+                <div class="resize s4">
+                  <div class="re va_wrap flex vc hc"><img src="../shop_sun/files/pro_img/list/thumb/pro_20230510075402_0.png" alt=""></div>
+                </div>
+              </div>
+              <div class="doc_info_wrap flex">
+                <div class="info">
+                  <p class="t1">제2소화기내과 내과진료부장</p>
+                  <p class="t2">한봉준</p>
+                  <p class="t3">소화기질환(상부위장관,대장질환, 간질환,췌담도질환,치료내시경), 호흡질환, 진단·치료 내시경</p>                  <p class="t4">전화번호 : 031-8040-1717</p>                  <p class="t4">진료일정 : <span class="c_point">격주 금요일 오후 휴진 / 토요일 격주 휴진</span></p>                  <div class="table_wrap page_sec3 mo_none">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="board_st st1">
+                      <thead>
+                        <tr>
+                          <th class="">구분</th>
+                          <th class="">월</th>
+                          <th class="">화</th>
+                          <th class="">수</th>
+                          <th class="">목</th>
+                          <th class="">금</th>
+                          <th class="">토</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="">오전</td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc si">시술</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                  </tr>
+                        <tr>
+                          <td class="">오후</td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc si">시술</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc si">시술</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc "></p>
+                                                          </td>
+                                                  </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="doc_info_wrap w100 pcHide">
+                  <div class="btn_wrap mgT flex wrap ">
+                    <a href="javascript:layerOpen('../sub_treatment/pop_pro.php?number=74')" class="btn b1"><i class="xi icon"></i><i>약력소개</i></a>
+                    <a href="javascript:layerOpen('../sub_treatment/pop_hours.php?number=74')" class="btn b2"><i class="xi icon"></i><i>진료시간표</i></a>
+                  </div>
+                </div>
+                <div class="info mo_none">
+                  <p class="t5"><i class="xi-library c_point"></i> 주요약력</p>
+                  <div class="info_margin">
+                    <p class="t6">-연세대학교 의학대학 졸업</p><p class="t6">-서울아산병원 임상강사</p><p class="t6">-합천고려병원 내과과장</p><p class="t6">-서울녹색병원 내과과장</p><p class="t6">-서울강북삼성병원 임상조교수</p><p class="t6">-안산근로복지공단병원 과장</p>                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+                  <li>
+            <div class="wrap_in flex">
+              <div class="img_wrap">
+                <div class="resize s4">
+                  <div class="re va_wrap flex vc hc"><img src="../shop_sun/files/pro_img/list/thumb/pro_20230829112643_0.png" alt=""></div>
+                </div>
+              </div>
+              <div class="doc_info_wrap flex">
+                <div class="info">
+                  <p class="t1">제3소화기내과 내과진료부장</p>
+                  <p class="t2">옥태진</p>
+                  <p class="t3">호흡기 내과(폐렴·기관지염·천식·만성폐쇄성 폐질환), 소화기 질환 (상부위장관,대장질환, 간질환,췌담도질환,치료내시경), 심장질환, 동맥경화증, 협심증, 부정맥</p>                  <p class="t4">전화번호 : 031-8040-1296</p>                  <p class="t4">진료일정 : <span class="c_point">토요일 격주 휴무 / 격주 금요일 오후 휴진</span></p>                  <div class="table_wrap page_sec3 mo_none">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="board_st st1">
+                      <thead>
+                        <tr>
+                          <th class="">구분</th>
+                          <th class="">월</th>
+                          <th class="">화</th>
+                          <th class="">수</th>
+                          <th class="">목</th>
+                          <th class="">금</th>
+                          <th class="">토</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="">오전</td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                  </tr>
+                        <tr>
+                          <td class="">오후</td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc "></p>
+                                                          </td>
+                                                  </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="doc_info_wrap w100 pcHide">
+                  <div class="btn_wrap mgT flex wrap ">
+                    <a href="javascript:layerOpen('../sub_treatment/pop_pro.php?number=79')" class="btn b1"><i class="xi icon"></i><i>약력소개</i></a>
+                    <a href="javascript:layerOpen('../sub_treatment/pop_hours.php?number=79')" class="btn b2"><i class="xi icon"></i><i>진료시간표</i></a>
+                  </div>
+                </div>
+                <div class="info mo_none">
+                  <p class="t5"><i class="xi-library c_point"></i> 주요약력</p>
+                  <div class="info_margin">
+                    <p class="t6">-연세대학교 의과대학 졸업</p><p class="t6">-서울아산병원 인턴/레지던트/전문의</p><p class="t6">-내시경세부전문의</p><p class="t6">-대한심초음파학회 정회원</p><p class="t6">-심초음파 인증의</p>                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+                  <li>
+            <div class="wrap_in flex">
+              <div class="img_wrap">
+                <div class="resize s4">
+                  <div class="re va_wrap flex vc hc"><img src="../shop_sun/files/pro_img/list/thumb/pro_20250217100431_0.png" alt=""></div>
+                </div>
+              </div>
+              <div class="doc_info_wrap flex">
+                <div class="info">
+                  <p class="t1">제4소화기내과 진료과장</p>
+                  <p class="t2">이세희</p>
+                  <p class="t3">위·대장질환, 위·대장 내시경, 간·췌장 질환, 고혈압·당뇨·고지혈증·갑상선 질환, 호흡기 및 알레르기 질환, 천식, 만성폐질환, 기타 내과 질환</p>                  <p class="t4">전화번호 : 031-8040-1263</p>                  <p class="t4">진료일정 : <span class="c_point">토요일 격주 휴무 / 격주 수요일 오후 휴진</span></p>                  <div class="table_wrap page_sec3 mo_none">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="board_st st1">
+                      <thead>
+                        <tr>
+                          <th class="">구분</th>
+                          <th class="">월</th>
+                          <th class="">화</th>
+                          <th class="">수</th>
+                          <th class="">목</th>
+                          <th class="">금</th>
+                          <th class="">토</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="">오전</td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                  </tr>
+                        <tr>
+                          <td class="">오후</td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc "></p>
+                                                          </td>
+                                                  </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="doc_info_wrap w100 pcHide">
+                  <div class="btn_wrap mgT flex wrap ">
+                    <a href="javascript:layerOpen('../sub_treatment/pop_pro.php?number=106')" class="btn b1"><i class="xi icon"></i><i>약력소개</i></a>
+                    <a href="javascript:layerOpen('../sub_treatment/pop_hours.php?number=106')" class="btn b2"><i class="xi icon"></i><i>진료시간표</i></a>
+                  </div>
+                </div>
+                <div class="info mo_none">
+                  <p class="t5"><i class="xi-library c_point"></i> 주요약력</p>
+                  <div class="info_margin">
+                    <p class="t6">- 아주대병원 인턴</p><p class="t6">- 아주대병원 내과전공의</p><p class="t6">- 아주대병원 소화기내과 진료과장</p><p class="t6">- 다보스병원 소화기 센터장</p><p class="t6"></p><p class="t6"></p>                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+                  <li>
+            <div class="wrap_in flex">
+              <div class="img_wrap">
+                <div class="resize s4">
+                  <div class="re va_wrap flex vc hc"><img src="../shop_sun/files/pro_img/list/thumb/pro_20230829112713_0.png" alt=""></div>
+                </div>
+              </div>
+              <div class="doc_info_wrap flex">
+                <div class="info">
+                  <p class="t1">제5소화기내과 진료과장</p>
+                  <p class="t2">류한석</p>
+                  <p class="t3">위·대장질환, 위·대장 내시경, 간·췌장 질환, 고혈압·당뇨·고지혈증·갑상선 질환, 호흡기 및 알레르기 질환, 기타 내과 질환</p>                  <p class="t4">전화번호 : 031-8040-1276</p>                  <p class="t4">진료일정 : <span class="c_point">토요일 격주 휴무 / 격주 수요일 오후 휴진</span></p>                  <div class="table_wrap page_sec3 mo_none">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="board_st st1">
+                      <thead>
+                        <tr>
+                          <th class="">구분</th>
+                          <th class="">월</th>
+                          <th class="">화</th>
+                          <th class="">수</th>
+                          <th class="">목</th>
+                          <th class="">금</th>
+                          <th class="">토</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="">오전</td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                  </tr>
+                        <tr>
+                          <td class="">오후</td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc jin">진료</p>
+                                                          </td>
+                                                      <td class="">
+                                                              <p class="cir flex vc hc "></p>
+                                                          </td>
+                                                  </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="doc_info_wrap w100 pcHide">
+                  <div class="btn_wrap mgT flex wrap ">
+                    <a href="javascript:layerOpen('../sub_treatment/pop_pro.php?number=78')" class="btn b1"><i class="xi icon"></i><i>약력소개</i></a>
+                    <a href="javascript:layerOpen('../sub_treatment/pop_hours.php?number=78')" class="btn b2"><i class="xi icon"></i><i>진료시간표</i></a>
+                  </div>
+                </div>
+                <div class="info mo_none">
+                  <p class="t5"><i class="xi-library c_point"></i> 주요약력</p>
+                  <div class="info_margin">
+                    <p class="t6">-충남대학교 의과대학 의학학사</p><p class="t6">-아주대학교 의과대학 의학석사</p><p class="t6">-아주대학교병원 내과 전공의</p><p class="t6">-국군대구병원 내과 과장</p><p class="t6">-강남세브란스병원 소화기내과 임상강사</p><p class="t6">-강남세브란스병원 외래조교수</p><p class="t6">-동부제일병원 내과 과장</p><p class="t6">-대한소화기내시경학회 소화기내시경 전문의</p><p class="t6">-대한내과학회 정회원</p><p class="t6">-대한소화기학회 평생회원</p><p class="t6">-대한소화기내시경학회 평생회원</p>                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+              </ul>
+      </div>
+      </div>
+</div>
+<!--본문 end-->
+	
+	
+</div>
+<!--contents end-->
+
+<!--footer-->
+<div id="footer">
+	<a href="javascript:goTop();" class="goTop flex ac"><span><i class="xi xi-angle-up-thin"></i><i class="tt en">TOP</i></span></a>
+	<div class="box1">
+    	<div class="menuWrap flex wrap space vc">
+    		<ul class="menu_wrap flex wrap vc">
+            	<li><a href="../sub_policy/privacy.php" class="in c_point2"><span class="tt">개인정보처리방침</span></a></li>
+                <li><a href="../sub_policy/agree.php" class="in"><span class="tt">이용약관</span></a></li>
+                <li><a href="../sub_policy/email.php" class="in"><span class="tt">이메일무단수집거부</span></a></li>
+                <li><a href="../sub_policy/rnd.php" class="in"><span class="tt">환자의 권리와 의무</span></a></li>
+                <li><a href="../sub_guide/certi_nonpay.php" class="in"><span class="tt">비급여진료비안내</span></a></li>
+            </ul>
+            <ul class="sns flex wrap">
+	<li><a href="https://map.naver.com/p/entry/place/11851683?lng=126.807629300001&amp;lat=37.334070800001&amp;placePath=%2F%3Fac%3D1%26adm_lat%3D37.3279709%26adm_long%3D126.7970249%26bizId%3D11851683%26bookingRedirectUrl%3Dhttps%253A%252F%252Fm.booking.naver.com%252Fbooking%252F13%252Fbizes%252F1002821%253Ftheme%253Dplace%26debug%3D0%26deviceType%3Dpc%26lgl_lat%3D37.3332548%26lgl_long%3D126.7908383%26lgl_rcode%3D02273108%26ngn_country%3DKR%26nlu_query%3D%257B%2522qr%2522%253A%255B%257B%2522query%2522%253A%2522%25ED%2595%259C%25EB%258F%2584%2522%252C%2522c_score%2522%253A-0.319%252C%2522c_score_org%2522%253A-0.319%252C%2522score%2522%253A-2.737%252C%2522qr_category%2522%253A4%252C%2522qr_type%2522%253A31%257D%255D%252C%2522hospital%2522%253A%257B%2522source%2522%253A%2522placesearch%2522%252C%2522sid%2522%253A%252211851683%2522%252C%2522q%2522%253A%2522%25ED%2595%259C%25EB%258F%2584%25EB%25B3%2591%25EC%259B%2590%2522%257D%252C%2522nluQuery%2522%253A%2522%25ED%2595%259C%25EB%258F%2584%25EB%25B3%2591%25EC%259B%2590%2522%257D%26nqx_theme%3D%257B%2522theme%2522%253A%257B%2522sub%2522%253A%255B%257B%2522name%2522%253A%2522hospital%2522%257D%255D%257D%257D%26r1%3D%25EA%25B2%25BD%25EA%25B8%25B0%25EB%258F%2584%26r2%3D%25EC%2595%2588%25EC%2582%25B0%25EC%258B%259C%2520%25EB%258B%25A8%25EC%259B%2590%25EA%25B5%25AC%26r3%3D%25EB%25B0%25B1%25EC%259A%25B4%25EB%258F%2599%26rcode%3D02273555%26rev%3D45%26sm%3Dtop_hty%26spq%3D0%26ssc%3Dtab.nx.all%26target%3Dpc%26where%3Dnexearch%26x%3D126.7970249%26y%3D37.3279709&amp;c=15.00,0,0,0,dh" class="in flex ac blog" target="_blank"><i class="xi"></i></a></li>
+  <li><a href="javascript:void(0);" class="in flex ac youtube" target=""><i class="xi"></i></a></li>
+  <li><a href="https://www.facebook.com/handohospital" class="in flex ac facebook" target="_blank"><i class="xi"></i></a></li>
+  <li><a href="javascript:void(0);" class="in flex ac instagram" target=""><i class="xi"></i></a></li>
+  <li><a href="javascript:void(0);" class="in flex ac kakao" target=""><i class="xi"></i></a></li>
+</ul>        </div>
+        <div class="copyWrap flex wrap">
+        	<div class="logo"><img src="../images/inc/logo_new.png" alt="한도병원"></div>
+            <div class="info_wrap">     	
+                <ul class="info flex wrap">
+                    <li><span class="tt">대아의료재단 한도병원</span></li>
+                    <li><span class="tt">대표자명 : 성대영</span></li>
+                    <li><span class="tt">등록번호 : 134-82-07603</span></li>
+                    <li class="br"></li>
+                    <li><span class="tt">주소 : 경기도 안산시 단원구 선부광장로 103(선부동)</span></li>
+                    <li><span class="tt">전화번호 : </span> <a class="tt" onclick="telLink('031-8040-1114',this)">031-8040-1114</a></li>
+                    <li><span class="tt">팩스번호 : 031-8040-1155</span></li>
+                </ul>
+                <div class="copy"><p class="tt en">Copyright(c) HANDOH. All rights reserved.</p></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer end-->
+<script type="text/javascript">
+//<![CDATA[
+function gnbOn(){
+	var obj = $(".gnb");
+	obj.find("li.m_treatment").addClass("on");
+	obj.find("li.m_treatment li.sm_department").addClass("on");
+	obj.find("li.m_treatment li.sm_department li.ssm_").addClass("on");
+	obj.find("li.m_treatment li.sm_department li.ssm_ li.sssm_").addClass("on");
+	}
+
+UI.Layout.bodyEvent();	
+gnbOn();
+UI.Layout.gnbPlus();
+UI.Layout.headGnb();
+UI.Layout.m_gnbNav();
+UI.Motion.mouseWheel();
+//]]>
+</script>
+<!--끝-->
+
+
