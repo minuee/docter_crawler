@@ -1,0 +1,63 @@
+{
+  "hospital_cid": 620,
+  "bedoc_id": "A6036",
+  "bedoc_hospitalsite": "http://www.brmh.org",
+  "bedoc_doctorname": "최지은",
+  "bedoc_deptname": "소아청소년과",
+  "bedoc_hospitalname": "서울보라매병원",
+  "hospital_name": "서울보라매병원",
+  "aiga_hid": "H11KR-11000019",
+  "hospital_site": "https://www.brmh.org/custom/popup/layer_doctor_view.do?dt_no=367&medi_code=001014000|001014000",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 동작구 보라매로5길 20, (신대방동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "http://www.brmh.org/upload/TB_MEDITEAM/d9fae37e3c5442e1bef8364b62e881bc.png",
+  "specialty": "소아신경과 : 발달지연, 두통, 뇌전증, 뇌기형 운동발달지연, ADHD 등",
+  "학술": [
+    {
+      "date": null,
+      "content": "미국소아신경학회 회원"
+    },
+    {
+      "date": null,
+      "content": "유럽 소아신경학회 회원"
+    },
+    {
+      "date": null,
+      "content": "국제 소아신경학회 회원"
+    },
+    {
+      "date": null,
+      "content": "대한소아신경학회 간행위원장"
+    },
+    {
+      "date": null,
+      "content": "대한소아신경학회지 편집위원"
+    }
+  ],
+  "수상": [
+    {
+      "date": null,
+      "content": "2019.05 대한소아신경학회 공로상"
+    },
+    {
+      "date": null,
+      "content": "2020.10 대한소아신경학회 Annals of Child Neurolgy 최우수 논문상"
+    }
+  ],
+  "논문": [
+    "SYNGAP1-related developmental and epileptic encephalopathy: Genotypic and phenotypic characteristics and longitudinal insights. (Am J Med Genet A, 2024-08)",
+    "Clinical Presentation and Prognosis of SARS-CoV-2 Infection in Infants Aged ≤90 Days: Insights for Management During Outbreaks. (Pediatr Infect Vaccine, 2023-08)",
+    "Distinct Clinical and Laboratory Features of COVID-19 in Children During the Pre-Delta, Delta and Omicron Wave. (Pediatr Infect Dis J, 2023-05)",
+    "Broad spectrum of phenotype and genotype in Korean α-dystroglycan related muscular dystrophy presenting to a tertiary pediatric neuromuscular center. (Neuromuscul Disord, 2023-05)",
+    "Increased type III interferons and NK cell functions in SARS-CoV-2-infected children. (Signal Transduct Target Ther, 2023-02)",
+    "USP13 regulates HMGB1 stability and secretion through its deubiquitinase activity (Molecular medicine, 2022-12)",
+    "The Korean undiagnosed diseases program phase I: expansion of the nationwide network and the development of long-term infrastructure (Orphanet journal of rare diseases, 2022-10)",
+    "Variations of Resting-State EEG-Based Functional Networks in Brain Maturation From Early Childhood to Adolescence (Journal of clinical neurology, 2022-09)",
+    "Clinico-radiological characteristics of anti-myelin oligodendrocyte glycoprotein antibody-associated autoimmune encephalitis in children (Developmental medicine and child neurology, 2022-08)",
+    "Genetic diagnosis of infantile-onset epilepsy in the clinic: Application of whole-exome sequencing following epilepsy gene panel testing (Clinical genetics, 2021-03)"
+  ]
+}

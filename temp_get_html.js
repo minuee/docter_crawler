@@ -1,15 +1,32 @@
 const { chromium } = require('playwright');
+const fs = require('fs');
 
 (async () => {
-  const browser = await chromium.launch();
-  const page = await browser.newPage();
+  const url = process.argv[2];
+  if (!url) {
+    console.error('Please provide a URL as an argument.');
+    process.exit(1);
+  }
+
+  let browser;
   try {
-    await page.goto('https://kangnam.hallym.or.kr/ptm207.asp?Doctor_Id=298', { waitUntil: 'networkidle' });
-    const bodyHTML = await page.evaluate(() => document.body.innerHTML);
-    console.log(bodyHTML);
+    browser = await chromium.launch({ headless: true });
+    const context = await browser.newContext({
+        userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    });
+    const page = await context.newPage();
+    await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
+
+    // Get the FULL HTML content for debugging selectors
+    const fullHtml = await page.content();
+
+    console.log(fullHtml);
+
   } catch (error) {
-    console.error('Error fetching page:', error);
+    console.error(`Error fetching HTML: ${error.message}`);
   } finally {
-    await browser.close();
+    if (browser) {
+      await browser.close();
+    }
   }
 })();

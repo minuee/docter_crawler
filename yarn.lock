@@ -2377,6 +2377,11 @@ iconv-lite@0.6.3:
   dependencies:
     safer-buffer ">= 2.1.2 < 3.0.0"
 
+iconv@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.npmjs.org/iconv/-/iconv-3.0.1.tgz"
+  integrity sha512-lJnFLxVc0d82R7GfU7a9RujKVUQ3Eee19tPKWZWBJtAEGRHVEyFzCtbNl3GPKuDnHBBRT4/nDS4Ru9AIDT72qA==
+
 ieee754@^1.1.13, ieee754@^1.1.4, ieee754@1.1.13:
   version "1.1.13"
   resolved "https://registry.npmjs.org/ieee754/-/ieee754-1.1.13.tgz"

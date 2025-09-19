@@ -64,11 +64,19 @@ async function parseDoctorProfile(doctorData) {
 
         // 학력 (education) 추출 개선
         const educationList = [];
-        // 1. dt-dd 구조 탐색
-        $('dt:contains("학력")').next('dd').find('li, p').each((i, el) => {
+        // NEW: .so-tit.a span:contains("학력사항") 구조 탐색 (최평화 의사 페이지 특화)
+        $('div.so-tit.a span:contains("학력사항")').closest('.part').find('p').each((i, el) => {
             const text = $(el).text().trim();
             if (text) educationList.push({ content: text.replace(/"/g, '') });
         });
+
+        // 1. dt-dd 구조 탐색
+        if (educationList.length === 0) {
+            $('dt:contains("학력")').next('dd').find('li, p').each((i, el) => {
+                const text = $(el).text().trim();
+                if (text) educationList.push({ content: text.replace(/"/g, '') });
+            });
+        }
         // 2. table 구조 탐색
         if (educationList.length === 0) {
             $('th:contains("학력")').next('td').find('li, p').each((i, el) => {
@@ -90,11 +98,19 @@ async function parseDoctorProfile(doctorData) {
 
         // 경력 (experience) 추출 개선
         const experienceList = [];
-        // 1. dt-dd 구조 탐색
-        $('dt:contains("경력")').next('dd').find('li, p').each((i, el) => {
+        // NEW: .so-tit.b span:contains("경력사항") 구조 탐색 (최평화 의사 페이지 특화)
+        $('div.so-tit.b span:contains("경력사항")').closest('.part').find('p').each((i, el) => {
             const text = $(el).text().trim();
             if (text) experienceList.push({ content: text.replace(/"/g, '') });
         });
+
+        // 1. dt-dd 구조 탐색
+        if (experienceList.length === 0) {
+            $('dt:contains("경력")').next('dd').find('li, p').each((i, el) => {
+                const text = $(el).text().trim();
+                if (text) experienceList.push({ content: text.replace(/"/g, '') });
+            });
+        }
         // 2. table 구조 탐색
         if (experienceList.length === 0) {
             $('th:contains("경력")').next('td').find('li, p').each((i, el) => {
@@ -117,8 +133,8 @@ async function parseDoctorProfile(doctorData) {
         // 주요활동 (학술) 추출
         const academicList = [];
         $('div.part div.so-tit.c:contains("주요활동")').nextAll('p').each((i, el) => {
-            const text = $(el).text().trim();
-            if (text) academicList.push({ content: text.replace(/"/g, '') });
+            const text = $(el).html().split('<br>').map(t => cheerio.load(t).text().trim()).filter(t => t);
+            text.forEach(t => academicList.push({ content: t.replace(/"/g, '') }));
         });
         extractedData.학술 = academicList;
 
@@ -128,13 +144,11 @@ async function parseDoctorProfile(doctorData) {
         $('#tab-2 div.so-tit.d:contains("논문/저서")').nextAll('p').each((i, el) => {
             const text = $(el).text().trim();
             if (text) {
-                // 간단한 구분 로직, 필요시 정교화
                 if (text.includes('논문 :')) {
                     thesisList.push(text.replace('논문 :', '').trim().replace(/"/g, ''));
                 } else if (text.includes('저서 :')) {
                     booksList.push({ content: text.replace('저서 :', '').trim().replace(/"/g, '') });
                 } else {
-                    // 명확히 구분되지 않는 경우 논문으로 간주
                     thesisList.push(text.replace(/"/g, ''));
                 }
             }
