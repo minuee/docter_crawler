@@ -1,4 +1,5 @@
 const { chromium } = require('playwright');
+const cheerio = require('cheerio');
 const fs = require('fs');
 
 // 텍스트 정제 함수
@@ -33,34 +34,40 @@ async function parseDoctorProfile(doctorData) {
 
     try {
         await page.goto(doctorData.hospital_site, { waitUntil: 'networkidle' });
+        const html = await page.content();
+        const $ = cheerio.load(html);
 
-        if ((await page.textContent('body')).includes(doctorData.bedoc_doctorname)) {
+        if ($('body').text().includes(doctorData.bedoc_doctorname)) {
             isAttend = true;
         }
 
-        synthesizedData.profileUrl = await page.locator('.swiper-slide-active img').getAttribute('src').then(src => new URL(src, page.url()).href).catch(() => null);
-        synthesizedData.specialty = await page.locator('.speci p').nth(1).innerText().then(cleanText);
+        const profileSrc = $('p.pic img').attr('src');
+        if (profileSrc) {
+            synthesizedData.profileUrl = new URL(profileSrc, doctorData.hospital_site).href;
+        }
 
-        const parseSection = async (title) => {
-            const sectionLocator = page.locator(`div.prd_list:has(h4.tit:text-is('${title}'))`);
-            if (await sectionLocator.count() > 0) {
-                return sectionLocator.locator('.history dl').evaluateAll(nodes => 
-                    nodes.map(n => ({
-                        date: n.querySelector('dt')?.textContent.trim() || null,
-                        content: n.querySelector('dd li')?.textContent.trim() || ''
-                    }))
-                );
-            }
-            return [];
+        const specialties = [];
+        $('h4.tit:contains("연구, 관심분야")').nextUntil('h4').filter('ul.list').find('li').each((i, el) => {
+            specialties.push($(el).text().trim());
+        });
+        synthesizedData.specialty = specialties.join(', ');
+
+        const parseTable = (title) => {
+            const items = [];
+            $('h4.tit').filter((i, el) => $(el).text().trim() === title)
+                .next('table.table1').find('tbody tr').each((i, tr) => {
+                    const date = $(tr).find('th').text().trim();
+                    const content = $(tr).find('td').text().trim();
+                    if (content) {
+                        items.push({ date: date || null, content });
+                    }
+            });
+            return items;
         };
 
-        const historyItems = await parseSection('학력/경력');
-        const { education, experience } = parseHistory(historyItems);
-        synthesizedData.학력 = education;
-        synthesizedData.경력 = experience;
-
-        synthesizedData.학술 = await parseSection('학회활동');
-        synthesizedData.수상 = await parseSection('수상');
+        synthesizedData.학력 = parseTable('학력');
+        synthesizedData.경력 = parseTable('경력');
+        synthesizedData.학술 = parseTable('학회활동');
 
     } catch (e) {
         error = `Playwright execution failed: ${e.message}`;

@@ -1,24 +1,11 @@
 const { chromium } = require('playwright');
 const fs = require('fs');
 
-const url = 'https://www.jeilent.com/home/homepage.php?homefile=s0102.html';
-
 (async () => {
-  const browser = await chromium.launch({ headless: true });
+  const browser = await chromium.launch();
   const page = await browser.newPage();
-
-  try {
-    console.log(`Navigating to ${url}...`);
-    await page.goto(url, { waitUntil: 'networkidle' });
-
-    console.log('Saving main page HTML...');
-    const mainHtml = await page.content();
-    fs.writeFileSync('temp_jeil.html', mainHtml);
-    console.log('Main page HTML saved to temp_jeil.html');
-
-  } catch (error) {
-    console.error('An error occurred:', error.message);
-  } finally {
-    await browser.close();
-  }
+  await page.goto('https://www.jejunuh.co.kr/dept/imh/medicalstaff/_/10251/docDtl.do?showTab=profile', { waitUntil: 'networkidle' });
+  const bodyHTML = await page.evaluate(() => document.body.innerHTML);
+  fs.writeFileSync('/Users/kormedi/Documents/WorkPlace/bitbucket/docter_crawler/temp_jejunuh_detail_body.html', bodyHTML);
+  await browser.close();
 })();
