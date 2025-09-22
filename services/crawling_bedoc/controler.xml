@@ -19,7 +19,7 @@
             hospital_bedoc_list as a left join hospital h on a.new_hospital_hid = h.hid
         WHERE
             1=1 and is_getdetail_done = false and  new_doctor_url != '' and  new_doctor_url is not null and a.new_hospital_hid is not null
-            and a.bedoc_doctorname in ( '이태규', '이호기', '임승길', '이병창','이인홍', '유한익','엄대섭','오봉열','오하영','유기환','유연식' )
+            and a.bedoc_doctorname in ( '전대근','이승신','양재혁', '이무용' ,'이규원')
         ORDER BY a.hospital_cid ASC
         LIMIT 20
     </select>

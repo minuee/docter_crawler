@@ -1,0 +1,91 @@
+{
+  "hospital_cid": 619,
+  "bedoc_id": "A8413",
+  "bedoc_hospitalsite": "http://guri.hyumc.com/index.asp?",
+  "bedoc_doctorname": "최준호",
+  "bedoc_deptname": "정신건강의학과",
+  "bedoc_hospitalname": "한양대구리병원",
+  "hospital_name": "한양대구리병원",
+  "aiga_hid": "H11KR-31000064",
+  "hospital_site": "https://guri.hyumc.com/guri/mediteam/mditeam.do?action=detail&searchCondition1=nmTagMediteam&searchCommonSeq=&searchCommonCd1=2027344&searchCommonCd2=111330&searchKeyword=%EC%B5%9C%EC%A4%80%ED%98%B8",
+  "site_type": "single",
+  "hospital_addr": "경기도 구리시 경춘로 153, (교문동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "https://guri.hyumc.com/upload/ckfinder/images/photo_doctor/guri/0%EC%A0%95%EC%8B%A0%EA%B1%B4%EA%B0%95%EC%9D%98%ED%95%99%EA%B3%BC%EC%B5%9C%EC%A4%80%ED%98%B8%EA%B5%90%EC%88%98%EB%8B%98%EA%B5%90%EC%88%98%EB%8B%983.jpg",
+  "specialty": "조현병, 조기정신병, 조울증, 우울증, 재발성우울증",
+  "학력": [
+    {
+      "date": null,
+      "content": "한양대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "한양대학교 의과대학 정신건강의학과 석사 및 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "한양대학교 구리병원 정신건강의학과 전임의 및 임상교수"
+    },
+    {
+      "date": null,
+      "content": "현)한양대학교 의과대학 정신건강의학과 교수"
+    },
+    {
+      "date": null,
+      "content": "Brain stimulation lab of MUSC (Medical University of South Carolina), SC, USA."
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한신경정신의학회 진료심의위원회 의무이사"
+    },
+    {
+      "date": null,
+      "content": "대한생물정신의학회 기획이사"
+    },
+    {
+      "date": null,
+      "content": "대한조현병학회 보험이사"
+    },
+    {
+      "date": null,
+      "content": "대한생물치료정신의학회 평이사"
+    }
+  ],
+  "언론": [
+    {
+      "targetDate": null,
+      "type": "서울신문",
+      "text": "서울신문",
+      "url": "https://www.seoul.co.kr/news/life/health-news/2025/09/16/20250916027002?wlog_tag3",
+      "issuer": null
+    },
+    {
+      "targetDate": null,
+      "type": "이데일리 SPN",
+      "text": "이데일리 SPN",
+      "url": "https://www.edaily.co.kr/News/Read?newsId=01892566642271912&mediaCodeNo=257&OutLnkChk=Y",
+      "issuer": null
+    },
+    {
+      "targetDate": null,
+      "type": "세계일보",
+      "text": "세계일보",
+      "url": "https://www.segye.com/newsView/20250223507751?OutUrl=naver",
+      "issuer": null
+    },
+    {
+      "targetDate": null,
+      "type": "머니투데이",
+      "text": "머니투데이",
+      "url": "https://news.mt.co.kr/mtview.php?no=2024011215122150492",
+      "issuer": null
+    }
+  ]
+}

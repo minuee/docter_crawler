@@ -1,0 +1,88 @@
+{
+  "hospital_cid": 608,
+  "bedoc_id": "A0227",
+  "bedoc_hospitalsite": "http://www.kdh.or.kr",
+  "bedoc_doctorname": "최수윤",
+  "bedoc_deptname": "외과",
+  "bedoc_hospitalname": "강동성심병원",
+  "hospital_name": "강동성심병원",
+  "aiga_hid": "H11KR-11000023",
+  "hospital_site": "https://www.kdh.or.kr/sub202_1.php?bid=111210",
+  "site_type": "popup",
+  "hospital_addr": "서울특별시 강동구 성안로 150, (길동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "profileUrl": "https://www.kdh.or.kr/files/1623331677/1623331677.jpg",
+  "specialty": "갑상선암(재발 전이암), 유방암, 내분비외과",
+  "학력": [
+    {
+      "content": "전남대학교 의과대학"
+    },
+    {
+      "content": "아주대학교 대학원 의학석사"
+    }
+  ],
+  "경력": [
+    {
+      "content": "(現) 강동성심병원 외과 임상교수"
+    },
+    {
+      "content": "(現) 강동성심병원 유방암센터 센터장"
+    },
+    {
+      "content": "강동성심병원 부교수"
+    },
+    {
+      "content": "NSABP 단기연수"
+    },
+    {
+      "content": "아주대학교 의료원 유방 내분비외과 전임의"
+    },
+    {
+      "content": "아주대학교 의료원 전공의"
+    }
+  ],
+  "학술": [
+    {
+      "content": "심평원 진료심사평가 자문위원"
+    },
+    {
+      "content": "대한내분비외과학회 회원"
+    },
+    {
+      "content": "대한갑상선학회 회원"
+    },
+    {
+      "content": "한국유방암학회 회원"
+    },
+    {
+      "content": "대한외과학회 회원"
+    },
+    {
+      "content": "대한유방갑상선외과의사회"
+    }
+  ],
+  "논문": [
+    "1. 무증상 갈색세포종/교신저자/2010",
+    "2. Late Lung Function in the Repaired Congenital Diaphragmatic Hernia/제1저자/2010",
+    "3. Laparoscopic vs Transumbilical Single-Port Laparoscopic Appendectomy; Results of Prospective Randomized Trial/공동저자/2010",
+    "4. Clinicopathologic Characteristics of Papillary Carcinoma in the Thyroid Isthmus/갑상선 협부내 유두암의 임상병리학적 특성/제1저자/2010",
+    "5. 유방암의 골전이에 대한 치료/공동저자/2008",
+    "6. 갑상선 유두암 추적관찰의 최신지견/공동저자/2008"
+  ],
+  "언론": [
+    {
+      "targetDate": "2014-01-10",
+      "type": "기사",
+      "text": "무엇이든 물어보세요 - 유방암 - 외과 최수윤 교수",
+      "url": "http://www.kbs.co.kr/1tv/sisa/whatever/vod/index,1,list,3.html#//"
+    },
+    {
+      "targetDate": "2009-02-02",
+      "type": "기사",
+      "text": "로봇-내시경수술로 흉터 최소화… 갑상샘종양 최신 치료법 ",
+      "url": "http://www.donga.com/fbin/output?n=200902020107"
+    }
+  ],
+  "isAttend": true
+}
