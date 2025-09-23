@@ -1,4 +1,5 @@
 const { chromium } = require('playwright');
+const fs = require('fs');
 
 const url = process.argv[2];
 
@@ -45,7 +46,7 @@ async function parse() {
         await browser.close();
     }
 
-    console.log(JSON.stringify(synthesizedData, null, 2));
+    fs.writeFileSync('/Users/kormedi/Documents/WorkPlace/bitbucket/docter_crawler/services/crawling_bedoc/data/H11KR-38000020/temp_output.json', JSON.stringify(synthesizedData, null, 2));
 }
 
 parse();

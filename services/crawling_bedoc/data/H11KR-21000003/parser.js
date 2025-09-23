@@ -1,106 +1,100 @@
 const { chromium } = require('playwright');
 const fs = require('fs');
+const cheerio = require('cheerio');
 
 (async () => {
-    const url = process.argv[2];
-    if (!url) {
-        console.error('Please provide a URL as an argument.');
+    const doctorDataPath = process.argv[2];
+    if (!doctorDataPath) {
+        console.error('Please provide the path to the doctor\'s JSON file.');
         process.exit(1);
     }
+    const doctorData = JSON.parse(fs.readFileSync(doctorDataPath, 'utf-8'));
 
-    const outputFilePath = 'parser_output.json';
-    const browser = await chromium.launch({ headless: true });
-    const page = await browser.newPage();
+    const browser = await chromium.launch();
+    const context = await browser.newContext();
+    const page = await context.newPage();
+
+    let synthesizedData = { 학력: [], 경력: [], 논문: [], 저서: [], 학술: [], 언론: [], specialty: null, profileUrl: null };
+    let isAttend = false;
 
     try {
-        await page.goto(url, { waitUntil: 'domcontentloaded' });
-        await page.waitForSelector("dl dd:has-text('스포츠손상')", { timeout: 10000 });
+        await page.goto(doctorData.hospital_site, { waitUntil: 'domcontentloaded' });
+        const mainPageContent = await page.content();
+        const $ = cheerio.load(mainPageContent);
+        const baseUrl = 'https://www.kcch.re.kr';
 
-        const synthesizedData = { 학력: [], 경력: [], 학술: [], 논문: [], 언론: [] };
-
-        // --- Extract static info ---
-        synthesizedData.specialty = await page.locator("dl dd:has-text('스포츠손상')").innerText();
-        const profileUrlSrc = await page.locator('.swiper_doc_detailImg .swiper-slide-active img').getAttribute('src');
-        if(profileUrlSrc) {
-            synthesizedData.profileUrl = new URL(profileUrlSrc, url).href;
+        if (mainPageContent.includes(doctorData.bedoc_doctorname)) {
+            isAttend = true;
         }
 
+        // Profile URL
+        const profileImgSrc = $('div.doc_details_img .swiper-slide-active img').attr('src');
+        if (profileImgSrc) {
+            synthesizedData.profileUrl = new URL(profileImgSrc, baseUrl).href;
+        }
 
-        // --- Click and Extract Tab Content ---
+        // Specialty
+        synthesizedData.specialty = $('dl.txt:contains("전문분야") dd').text().trim();
 
-        // 학력 및 경력
-        await page.click('a[href="#doc_detailsBox_tab01"]');
-        await page.waitForSelector('#doc_detailsBox_tab01', { state: 'visible' });
-        const edu_exp_rows = await page.locator('#doc_detailsBox_tab01 tbody tr').all();
-        for(const row of edu_exp_rows) {
-            const content = await row.locator('td').nth(2).innerText();
-            if (content) {
-                if (content.includes('졸업') || content.includes('석사') || content.includes('박사')) {
-                    synthesizedData.학력.push({ date: null, content: content });
-                } else {
-                    const startDate = await row.locator('td').nth(0).innerText();
-                    const endDate = await row.locator('td').nth(1).innerText();
-                    let date = startDate;
-                    if(endDate && endDate !== '현재') {
-                        date = `${startDate} ~ ${endDate}`;
-                    } else if (endDate === '현재') {
-                         date = `${startDate} ~ 현재`;
-                    }
-                    synthesizedData.경력.push({ date: date || null, content: content });
-                }
+        // Education and Career
+        $('#doc_detailsBox_tab01 tbody tr').each((i, row) => {
+            const cells = $(row).find('td');
+            const startDate = $(cells[0]).text().trim();
+            const endDate = $(cells[1]).text().trim();
+            const content = $(cells[2]).text().trim();
+            const date = endDate === '현재' ? `${startDate}~현재` : (startDate && endDate ? `${startDate}~${endDate}`: startDate);
+
+            if (content.includes('석사') || content.includes('박사') || content.includes('졸업')) {
+                synthesizedData.학력.push({ date: date || null, content });
+            } else {
+                synthesizedData.경력.push({ date: date || null, content });
             }
-        }
+        });
 
-        // 학회 활동
-        await page.click('a[href="#doc_detailsBox_tab02"]');
-        await page.waitForSelector('#doc_detailsBox_tab02', { state: 'visible' });
-        const academic_rows = await page.locator('#doc_detailsBox_tab02 tbody tr').all();
-        for(const row of academic_rows) {
-            const content = await row.locator('td').nth(2).innerText();
-             if (content) {
-                 const startDate = await row.locator('td').nth(0).innerText();
-                 const endDate = await row.locator('td').nth(1).innerText();
-                 let date = startDate;
-                 if(endDate && endDate !== '현재') {
-                     date = `${startDate} ~ ${endDate}`;
-                 } else if (endDate === '현재') {
-                      date = `${startDate} ~ 현재`;
-                 }
-                synthesizedData.학술.push({ date: date || null, content: content });
-            }
-        }
+        // Academic Activities
+        $('#doc_detailsBox_tab02 tbody tr').each((i, row) => {
+            const cells = $(row).find('td');
+            const startDate = $(cells[0]).text().trim();
+            const endDate = $(cells[1]).text().trim();
+            const content = $(cells[2]).text().trim();
+            const date = endDate === '현재' ? `${startDate}~현재` : (startDate && endDate ? `${startDate}~${endDate}`: startDate);
+            synthesizedData.학술.push({ date: date || null, content });
+        });
 
-        // 논문
-        await page.click('a[href="#doc_detailsBox_tab03"]');
-        await page.waitForSelector('#doc_detailsBox_tab03', { state: 'visible' });
-        const paper_rows = await page.locator('#doc_detailsBox_tab03 tbody tr').all();
-        for(const row of paper_rows) {
-            const year = await row.locator('td').nth(1).innerText();
-            const title = await row.locator('td').nth(2).innerText();
-            const journal = await row.locator('td').nth(3).innerText();
-            if (title) {
-                synthesizedData.논문.push(`${title} (${journal}, ${year})`);
-            }
-        }
+        // Publications
+        $('#doc_detailsBox_tab03 tbody tr').each((i, row) => {
+            const cells = $(row).find('td');
+            const year = $(cells[1]).text().trim();
+            const title = $(cells[2]).text().trim();
+            const journal = $(cells[3]).text().trim();
+            synthesizedData.논문.push(`${title} (${journal}, ${year}년)`);
+        });
 
-        // 미디어
-        await page.click('a[href="#doc_detailsBox_tab05"]');
-        await page.waitForSelector('#doc_detailsBox_tab05', { state: 'visible' });
-        const media_rows = await page.locator('#doc_detailsBox_tab05 tbody tr').all();
-        for(const row of media_rows) {
-            const issuer = await row.locator('td').nth(0).innerText();
-            const text = await row.locator('td').nth(1).locator('a').innerText();
-            const url = await row.locator('td').nth(1).locator('a').getAttribute('href');
-            if (text) {
-                synthesizedData.언론.push({ targetDate: null, type: '기사', text: text, url: url, issuer: issuer });
-            }
-        }
+        // Media
+        $('#doc_detailsBox_tab05 tbody tr').each((i, row) => {
+            const cells = $(row).find('td');
+            const media = $(cells[0]).text().trim();
+            const title = $(cells[1]).text().trim();
+            const url = $(cells[1]).find('a').attr('href');
+            synthesizedData.언론.push({ targetDate: null, type: media, text: title, url: url ? url : null, issuer: media });
+        });
 
-        fs.writeFileSync(outputFilePath, JSON.stringify(synthesizedData, null, 2));
+        const finalData = { 
+            ...doctorData, 
+            ...synthesizedData, 
+            isSearchType: 'html_playwright', 
+            isExist: true, 
+            isAttend: isAttend, 
+            error: null 
+        };
+
+        fs.writeFileSync(doctorDataPath, JSON.stringify(finalData, null, 2), 'utf-8');
+        console.log(`File updated successfully: ${doctorDataPath}`);
 
     } catch (e) {
-        fs.writeFileSync(outputFilePath, JSON.stringify({ error: e.message, stack: e.stack }));
-        process.exit(1);
+        const errorData = { ...doctorData, isSearchType: 'html_playwright_failed', isExist: false, error: e.message };
+        fs.writeFileSync(doctorDataPath, JSON.stringify(errorData, null, 2), 'utf-8');
+        console.error(`Error processing ${doctorData.bedoc_doctorname}: ${e.message}`);
     } finally {
         await browser.close();
     }

@@ -1,1008 +1,661 @@
 
-<link rel="stylesheet" href="/js/style.css" type="text/css">
-<script type="text/javascript" src="/js/jquery.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-naviclose=null
-nav_timer=null
-left_moving=false
-
-$("#nav .clear div:eq(0)").show()
-
-	for(i=0;i<$("#nav .clear div:eq(0)>ul>li").length;i++){
-		if($("#nav .clear div:eq(0)>ul>li:eq("+i+")").find("ul").html()!=null){
-			$("#nav .clear div:eq(0)>ul>li:eq("+i+")>a").attr("href",$("#nav .clear div:eq(0)>ul>li:eq("+i+")>a").attr("href")+"/"+$("#nav .clear div:eq(0)>ul>li:eq("+i+")>a").attr("href").substr(7,3)+"1")
-		}
-	}
-
-	for (i=0;i<8 ;i++ ){
-		if($("#nav .clear div:eq("+i+")>ul>li:eq(0)").find("ul").html()!=null){
-			$(".navi .dep1 .fl:eq("+i+") a").attr("href",$(".navi .dep1 .fl:eq("+i+") a").attr("href")+"/"+$(".navi .dep1 .fl:eq("+i+") a").attr("href").substr(4,2)+"1/"+$(".navi .dep1 .fl:eq("+i+") a").attr("href").substr(4,2)+"11")
-		}else{
-			$(".navi .dep1 .fl:eq("+i+") a").attr("href",$(".navi .dep1 .fl:eq("+i+") a").attr("href")+"/"+$(".navi .dep1 .fl:eq("+i+") a").attr("href").substr(4,2)+"1")
-		}
-		for (j=0;j<$(".navi .dep2 ul:eq("+i+") li").length ;j++ ){
-			if ($("#nav .clear div:eq("+i+")>ul>li:eq("+j+")").find("ul").html()!=null){
-				$(".navi .dep2 ul:eq("+i+") li:eq("+j+") a").attr("href",$(".navi .dep2 ul:eq("+i+") li:eq("+j+") a").attr("href")+"/"+$(".navi .dep2 ul:eq("+i+") li:eq("+j+") a").attr("href").substr(7,3)+"1")
-			}
-		}
-	}
-
-	
-	s_set=function(){
-		if ($("#nav .clear div:eq(0)").html()!=null && $("#nav .clear div:eq(0)").find("ul:eq(0)>li:eq(2)").html()!=null){
-			$("#nav .clear div:eq(0)").find("ul:eq(0)>li:eq(2) ul").show()
-			$("#nav .clear div:eq(0)").find("ul:eq(0)>li:eq(2)>a>img").attr("src",$("#nav .clear div:eq(0)").find("ul:eq(0)>li:eq(2)>a>img").attr("src").replace("x.gif","o.gif"))
-			if ($("#nav .clear div:eq(0)").find("ul:eq(0)>li:eq(2) li:eq(0)").html()!=null){
-				$("#nav .clear div:eq(0)").find("ul:eq(0)>li:eq(2) li:eq(0) img").attr("src",$("#nav .clear div:eq(0)").find("ul:eq(0)>li:eq(2) li:eq(0) img").attr("src").replace("x.gif","o.gif"))
-			}
-		}
-		//alert(3)
-	}
-
-	
-	
-	nav_reset=function(){
-		$("#nav ul ul").hide()
-		$("#nav .clear div:eq(0)").find("ul:eq(0) li>a>img").each(function(){
-			$(this).attr("src",$(this).attr("src").replace("o.gif","x.gif"))
-		})
-	}
-
-	$(window).scroll(function(){
-		$(".quick").stop()
-		$(".quick").animate({top:$(document).scrollTop()+"px"},500)
-	})
-
-	$(".quick .top").click(function(){
-		$(document).scrollTop(0)
-	})
-
-	$(".tabmenu img").click(function(){
-		tabno=$(".tabmenu img").index($(this))
-		$(".tabmenu img").each(function(){
-			$(this).attr("src",$(this).attr("src").replace("o.gif",".gif"))
-		})
-		$(this).attr("src",$(this).attr("src").replace(".gif","o.gif"))
-		$(".tabview").hide()
-		$(".tabview:eq("+tabno+")").show()
-	})
-
-	$(".dep1 img").hover(function(){
-		clearTimeout(naviclose)
-		$(".dep2box .dep2").slideDown(300)
-	},function(){
-		naviclose=setTimeout("$('.dep2box .dep2').slideUp(300)",500)
-	})
-
-	$(".dep2box .dep2").hover(function(){
-		clearTimeout(naviclose)
-	},function(){
-		naviclose=setTimeout("$('.dep2box .dep2').slideUp(300)",500)
-	})
-
-	$(".navi .dep2 .fl li img").hover(function(){
-		$(this).attr("src",$(this).attr("src").replace(".png","o.png"))
-	},function(){
-		$(this).attr("src",$(this).attr("src").replace("o.png",".png"))
-	})
-
-	$(".navi .dep2 .fl").hover(function(){
-		$(this).css("background","#f2f7fc")
-	},function(){
-		$(this).css("background","#fff")
-	})
-/*
-	$(".leftnavi>li").hover(function(){
-		clearTimeout(nav_timer)
-		left_moving=true
-		$(this).find("img:eq(0)").attr("src",$(this).find("img:eq(0)").attr("src").replace("x.gif","o.gif"))
-		$(this).siblings().each(function(){
-			$(this).find("img:eq(0)").attr("src",$(this).find("img:eq(0)").attr("src").replace("o.gif","x.gif"))
-		})
-		$(this).find("ul").addClass("cul")
-		$("#nav ul ul").each(function(){
-			if($(this).attr("class")!="left_dep2 cul"){
-				$(this).slideUp(100)
-			}
-		})
-		$(this).find("ul").slideDown(100)
-		$("#nav ul ul").each(function(){
-			$(this).removeClass("cul")
-		})
-	},function(){
-		nav_timer=setTimeout("nav_reset();s_set()",1000)
-	})
-*/
-	$(".leftnavi>li").mousemove(function(){
-		clearTimeout(nav_timer)
-		if(left_moving==false){
-			left_moving=true
-			if($(this).find("ul").html()==null){left_moving=false}
-			$(this).find("img:eq(0)").attr("src",$(this).find("img:eq(0)").attr("src").replace("x.gif","o.gif"))
-			$(this).siblings().each(function(){
-				$(this).find("img:eq(0)").attr("src",$(this).find("img:eq(0)").attr("src").replace("o.gif","x.gif"))
-			})
-			$(this).find("ul").addClass("cul")
-			$("#nav ul ul").each(function(){
-				if($(this).attr("class")!="left_dep2 cul"){
-					$(this).slideUp(200)
-				}
-			})
-			$(this).find("ul").slideDown(200,function(){left_moving=false})
-			$("#nav ul ul").each(function(){
-				$(this).removeClass("cul")
-			})
-		}
-	})
-
-	$(".leftnavi>li").mouseout(function(){
-		nav_timer=setTimeout("nav_reset();s_set()",1000)
-	})
-
-	$(".left_dep2 li").mouseover(function(){
-		$(".left_dep2 li").each(function(){
-			$(this).find("img").attr("src",$(this).find("img").attr("src").replace("o.gif","x.gif"))
-		})
-		$(this).find("img").attr("src",$(this).find("img").attr("src").replace("x.gif","o.gif"))
-	})
-
-	s_set()
-	
-	$(".quick .pop,.quick_pop").click(function(){
-		$(".quick_pop").toggle()
-	})
-})
-</script>
-<div id="wrap">
+<div class="wrap">	
 		<div id="header">
-		<div class="clear box">
-			<a href="/?main=Y" class="fl logo"><img src="/img/logo.gif" alt=""></a>
-			<div class="top fr">
-				<ul class="topmenu fl">
-					<li class="fl first"><a href="/?c=01/015"><img src="/img/topmenu3.gif" alt=""></a></li>
-					<!-- <li class="fl"><a href="/?c=16/161 "><img src="/img/topmenu4.gif" alt="" /></a></li> -->
-				</ul>
-				<ul class="top_smenu fr">
-					<li class="fl"><a href="#"><img src="/img/top_g.gif" alt=""></a></li>
-					<li class="fl"><a href="#"><img src="/img/top_f.gif" alt=""></a></li>
-					<li class="fl last"><a href="#"><img src="/img/top_t.gif" alt=""></a></li>
-				</ul>
+		<div class="bg">
+		</div>
+
+		<div id="hs1">
+			<div class="d_container">			
+				<div id="d_gnb">
+					<ul class="left">
+						<li><a href="../hanheart/sub01_01.php">사랑과 나눔</a></li>
+						<li><a href="../csboard/sub01_01.php">고객참여</a></li>
+						<li><a href="../clinical/sub03_01.php">교육연구</a></li>
+						<li><a href="../cscenter/sub01_01.php">병원소식</a></li>
+						<li><a href="../hospital/sub01_01.php">병원소개</a></li>
+						<li class="pc_ver"><a href="../refer/sub01_01.php">진료협력센터</a></li>
+						<li class="pc_ver"><a href="https://recruit.hanheart.co.kr" target="_blank">채용사이트</a></li>
+					</ul>	
+					<div class="right">
+						<ul>
+														<li><a href="../member/login.php">로그인</a></li>
+							<li><a href="../member/join.php">회원가입</a></li>
+														<li class="lag">								
+								<button onclick="myFunction()" class="dropbtn">KOR</button>
+								<div id="dropdown" class="dropmenu">
+									<ul>
+										<li><a href="../main/main.php">KOR</a></li>
+										<li><a href="/eng" target="_blank">ENG</a></li>
+										
+									</ul>
+								</div>												
+							</li>		
+						</ul>
+						<div class="close">
+							<span></span>
+						</div>
+					</div>					
+				</div>
 			</div>
+		</div>
+	
+		
+		<div id="hs2">
+			<div class="d_container">
+				<div class="lnb_btn2">
+					<a class="search_btn">
+						<i class="fa fa-search" aria-hidden="true"></i><!--모바일메뉴아이콘-->
+					</a>
+				</div>
+				<div id="d_lnb_btn">
+					<span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+				</div>
+				
+				<h1><a href="../main/main.php"><img src="../img/logo.png" alt="창원한마음병원"></a></h1>
+				<div id="d_lnb">
+					
+					<div id="d_lnb_bg">
+						<div class="d_container">
+						</div>
+						<div class="shadow">
+						</div>
+					</div>
+					<ul>
+						<li class="d1"><a href="../medical/medical_list.php">진료과/의료진 <i></i></a>
+							<div class="sub">
+								<dl>
+									<dd><a href="../medical/medical_list.php">센터/진료과안내</a></dd>
+									<dd><a href="../medical/doctor_list.php">의료진</a></dd>
+									<!--<dd><a href="../medical/clinic_list.php">클리닉</a></dd>클리닉	-->								
+								</dl>
+							</div>
+						</li>
+						<li class="d2"><a href="../reservation/select_center.php">예약/차트 <i></i></a>
+							<div class="sub">
+								<dl>
+									<dd><a href="https://b2b.exona.kr:11101/0a205c930af0485eaaa33f8e258726fe" target="_blank">빠른예약 바로가기</a></dd>
+									<dd><a href="../reservation/select_center.php">센터진료과예약</a></dd>
+									<dd><a href="../reservation/select_doctor.php">의료진선택예약</a></dd>
+									<dd><a href="../reservation/status.php">진료대기순서</a></dd>
+									<dd><a href="../reservation/status2.php">CT, MRI, 초음파 검사 대기순서</a></dd>
+									<!--<dd><a href="../reservation/dayreceipt.php">당일접수</a></dd> 당일접수-->
+									<dd><a href="../reservation/certification_info.php">증명서발급안내</a></dd>
+									<dd><a href="../reservation/non-benefit.php">비급여안내</a></dd>
+									<dd class="has-dep"><a href="../reservation/mychart.php">나의 진료차트</a>
+										<dl class="sub-dep">
+											<dd><a href="../reservation/datainfo.php">진료내역</a></dd>
+											<dd><a href="../reservation/reservation_check.php">예약확인/취소</a></dd>
+											<dd><a href="../reservation/receipt.php">처방전조회</a></dd>
+											<dd><a href="../reservation/certification.php">증명서발급이력</a></dd>
+											<dd><a href="../reservation/medi_check.php">종합검진예약이력</a></dd>
+											<dd><a href="../reservation/myqna.php">건강상담이력</a></dd>
+										</dl>
+									
+									</dd>
+									<dd><a href="../reservation/gynecology.php">장애친화 치과∙산부인과</a></dd>
+
+								</dl>
+							</div>
+						</li>
+						<li class="d3"><a href="../health/sub01_01.php">건강검진 <i></i></a>
+							<div class="sub">
+								<dl>
+									<dd><a href="../health/sub01_01.php">종합건강검진</a></dd>							
+									<dd><a href="../health/sub05_01.php">국가건강검진</a></dd>							
+									<dd><a href="../health/sub06_01.php">특수건강검진</a></dd>							
+									<dd><a href="../health/sub04_01.php">예약/문진표</a></dd>							
+								</dl>
+							</div>
+						</li>
+						<li class="d4"><a href="../column/sub02_01.php">건강소식 <i></i></a>
+							<div class="sub">
+								<dl>
+									<dd><a href="../column/sub02_01.php">의료칼럼</a></dd>
+									<!-- <dd><a href=""></a></dd> -->
+									<dd><a href="../column/sub05_01.php">Hi 한마음</a></dd>
+									<dd><a href="https://www.youtube.com/channel/UCzgIc4Q8nIZyE9je673YWUQ" target="_blank">한마음TV</a></dd>
+									<dd><a href="../column/sub04_01.php">건강상담</a></dd>
+								</dl>
+							</div>
+						</li>
+						<li class="d5"><a href="../userguide/sub10_01.php">병원안내 <i></i></a>
+							<div class="sub">
+								<dl>
+									<dd><a href="../userguide/sub10_01.php">진료비 Hi-Pass안내</a></dd>
+									<dd><a href="../userguide/sub01_01.php">외래진료안내</a></dd>
+									<dd><a href="../userguide/sub02_01.php">입퇴원안내</a></dd>
+									<dd><a href="../userguide/sub03_01.php">응급진료안내</a></dd>
+									<dd><a href="../userguide/sub12_01.php">고압산소치료실안내</a></dd>
+									<dd><a href="../userguide/sub04_01.php">병원이용안내</a></dd>
+									<dd><a href="../userguide/sub05_01.php">편의시설안내</a></dd>
+									<dd><a href="../userguide/sub06_01.php">시설대관안내</a></dd>
+									<dd><a href="../userguide/sub07_01.php">장례식장안내</a></dd>
+									<dd><a href="../userguide/sub08_01.php">찾아오시는길</a></dd>
+									<dd><a href="../userguide/sub09_01.php">전화번호안내</a></dd>
+									<dd><a href="../userguide/sub11_01.php">간호·간병 통합서비스 안내</a></dd>
+								</dl>
+							</div>
+						</li>
+
+						<li class="d6"><a href="../refer/sub01_01.php">진료협력센터 <i></i></a>
+							<div class="sub">
+								<dl>
+									<dd><a href="../refer/sub01_01.php">진료협력센터</a></dd>
+									<dd><a href="../refer/sub02_01.php">협력네트워크</a></dd>
+									<dd><a href="../refer/sub03_01.php">공지사항</a></dd>
+								</dl>
+							</div>
+						</li>
+					
+						
+						
+						<li class="tail">
+							<form name="search_frm_pc" action="/search/list.php" method="get" onsubmit="return chkSearchFrm(this)">
+							<div class="top_search">
+								<input type="search" name="all_search" id="all_search" placeholder="검색어를 입력하세요." value="">
+								<button type="submit" class="btn_search"></button>
+							</div>
+							</form>
+						   
+							<div class="sitebar">
+								<a href="#" class=""><span class="sitebar pc_ver"></span></a>
+							</div>								
+						</li>	
+						
+					</ul>
+				</div>
+				<div id="d_lnb2">		
+					<div class="close">
+						<span></span>
+					</div>
+					<div class="msearch">
+						<form name="search_frm_m" action="/search/list.php" method="get" onsubmit="return chkSearchFrm(this)">
+						<div class="top_search">
+							<input type="search" name="all_search" id="all_search" placeholder="검색어를 입력하세요." value="">
+							<button type="submit" class="btn_search"></button>
+						</div>			
+						</form>
+					</div>		
+
+				</div>
+			
+			</div>
+			<div id="d_lnb_mask">
+			</div>
+			<div id="d_lnb_mask2">
+			</div>
+
+
 		</div>
 		
-		<div class="navi">
-			<div class="navibg">
-				<ul class="dep1 clear" style="height:24px">
-					<li class="fl first"><a href="/?c=01/011"><img src="/img/nav_m1.png" alt=""></a></li>
-					<li class="fl "><a href="/?c=02/021"><img src="/img/nav_m2.png" alt=""></a></li>
-					<li class="fl "><a href="/?c=03/031/0311"><img src="/img/nav_m3.png" alt=""></a></li>
-					<li class="fl "><a href="/?c=04/041"><img src="/img/nav_m4.png" alt=""></a></li>
-					<li class="fl "><a href="/?c=05/051/0511"><img src="/img/nav_m5.png" alt=""></a></li>
-					<li class="fl "><a href="/?c=06/061"><img src="/img/nav_m6.png" alt=""></a></li>
-					<li class="fl "><a href="/?c=07/071/0711"><img src="/img/nav_m7.png" alt=""></a></li>
-					<li class="fl "><a href="/?c=08/081"><img src="/img/nav_m8.png" alt=""></a></li>
-					<li class="fl "><a href="/?c=09"><img src="/img/nav_m9.png" alt=""></a></li>
-					<li class="fl "><a href="/?c=10"><img src="/img/nav_m0.png" alt=""></a></li>
-					<li class="fl first"><a href="/?c=11"><img src="/img/nav_m1.png" alt=""></a></li>
-					<li class="fl "><a href="/?c=12"><img src="/img/nav_m2.png" alt=""></a></li>
-					<li class="fl "><a href="/?c=99"><img src="/img/nav_m9.png" alt=""></a></li>
-					<li class="fl "><a href="/?c=13"><img src="/img/nav_m3.png" alt=""></a></li>
-					<li class="fl "><a href="/?c=15"><img src="/img/nav_m5.png" alt=""></a></li>
-					<li class="fl "><a href="/?c=16"><img src="/img/nav_m6.png" alt=""></a></li>
-					<li class="fl "><a href="/?c=17"><img src="/img/nav_m7.png" alt=""></a></li>
-				</ul>
-			</div>
-			<div class="dep2box">
-				<div class="dep2 clear">
-					<ul class="nav_m1 fl">
-													<li><a href="/?c=01/011"><img src="/img/nav_m11.png" alt=""></a></li>
-																			<li><a href="/?c=01/012"><img src="/img/nav_m12.png" alt=""></a></li>
-																			<li><a href="/?c=01/013"><img src="/img/nav_m13.png" alt=""></a></li>
-																			<li><a href="/?c=01/016"><img src="/img/nav_m16.png" alt=""></a></li>
-																			<li><a href="/?c=01/014"><img src="/img/nav_m14.png" alt=""></a></li>
-																			<li><a href="/?c=01/015"><img src="/img/nav_m15.png" alt=""></a></li>
-												</ul>
-					<ul class="nav_m2 fl">
-													<li><a href="/?c=02/021"><img src="/img/nav_m21.png" alt=""></a></li>
-																			<li><a href="/?c=02/023/0231"><img src="/img/nav_m23.png" alt=""></a></li>
-																			<li><a href="/?c=02/025"><img src="/img/nav_m25.png" alt=""></a></li>
-																			<li><a href="/?c=02/026"><img src="/img/nav_m26.png" alt=""></a></li>
-												</ul>
-					<ul class="nav_m3 fl">
-													<li><a href="/?c=03/031/0311"><img src="/img/nav_m31.png" alt=""></a></li>
-																			<li><a href="/?c=03/032/0321"><img src="/img/nav_m32.png" alt=""></a></li>
-																			<li><a href="/?c=03/033/0331"><img src="/img/nav_m33.png" alt=""></a></li>
-																			<li><a href="/?c=03/034/0341"><img src="/img/nav_m34.png" alt=""></a></li>
-												</ul>
-					<ul class="nav_m4 fl">
-													<li><a href="/?c=04/041"><img src="/img/nav_m41.png" alt=""></a></li>
-																			<li><a href="/?c=04/042"><img src="/img/nav_m42.png" alt=""></a></li>
-																			<li><a href="/?c=04/043"><img src="/img/nav_m43.png" alt=""></a></li>
-																			<li><a href="/?c=04/044"><img src="/img/nav_m44.png" alt=""></a></li>
-																			<li><a href="/?c=04/045"><img src="/img/nav_m45.png" alt=""></a></li>
-																			<li><a href="/?c=04/046"><img src="/img/nav_m46.png" alt=""></a></li>
-																			<li><a href="/?c=04/047"><img src="/img/nav_m47.png" alt=""></a></li>
-												</ul>
-					<ul class="nav_m5 fl">
-													<li><a href="/?c=05/051/0511"><img src="/img/nav_m51.png" alt=""></a></li>
-																			<li><a href="/?c=05/052/0521"><img src="/img/nav_m52.png" alt=""></a></li>
-												</ul>
-					<ul class="nav_m6 fl">
-													<li><a href="/?c=06/061"><img src="/img/nav_m61.png" alt=""></a></li>
-																			<li><a href="/?c=06/062"><img src="/img/nav_m62.png" alt=""></a></li>
-																			<li><a href="/?c=06/063"><img src="/img/nav_m63.png" alt=""></a></li>
-																			<li><a href="/?c=06/064"><img src="/img/nav_m64.png" alt=""></a></li>
-																			<li><a href="/?c=06/065"><img src="/img/nav_m65.png" alt=""></a></li>
-												</ul>
-					<ul class="nav_m7 fl">
-													<li><a href="/?c=07/071/0711"><img src="/img/nav_m71.png" alt=""></a></li>
-																			<li><a href="/?c=07/072/0721"><img src="/img/nav_m72.png" alt=""></a></li>
-																			<li><a href="/?c=07/073/0731"><img src="/img/nav_m73.png" alt=""></a></li>
-																			<li><a href="/?c=07/074/0741"><img src="/img/nav_m74.png" alt=""></a></li>
-																			<li><a href="/?c=07/075/0751"><img src="/img/nav_m75.png" alt=""></a></li>
-																			<li><a href="/?c=07/076/0761"><img src="/img/nav_m76.png" alt=""></a></li>
-																			<li><a href="/?c=07/077/0771"><img src="/img/nav_m77.png" alt=""></a></li>
-																			<li><a href="/?c=07/078"><img src="/img/nav_m78.png" alt=""></a></li>
-												</ul>
-					<ul class="nav_m8 fl">
-													<li><a href="/?c=08/081"><img src="/img/nav_m81.png" alt=""></a></li>
-																			<li><a href="/?c=08/082"><img src="/img/nav_m82.png" alt=""></a></li>
-																			<li><a href="/?c=08/084"><img src="/img/nav_m84.png" alt=""></a></li>
-																			<li><a href="/?c=08/086"><img src="/img/nav_m86.png" alt=""></a></li>
-																			<li><a href="/?c=08/087"><img src="/img/nav_m87.png" alt=""></a></li>
-																			<li><a href="/?c=08/088"><img src="/img/nav_m88.png" alt=""></a></li>
-																			<li><a href="/?c=08/0810"><img src="/img/nav_m810.png" alt=""></a></li>
-												</ul>
-					<ul class="nav_m9 fl">
-													<li><a href="/?c=09/091"><img src="/img/nav_m91.png" alt=""></a></li>
-																			<li><a href="/?c=09/092"><img src="/img/nav_m92.png" alt=""></a></li>
-												</ul>
-					<ul class="nav_m0 fl">
-													<li><a href="/?c=10/101"><img src="/img/nav_m01.png" alt=""></a></li>
-																			<li><a href="/?c=10/102"><img src="/img/nav_m02.png" alt=""></a></li>
-																			<li><a href="/?c=10/103"><img src="/img/nav_m03.png" alt=""></a></li>
-																			<li><a href="/?c=10/104"><img src="/img/nav_m04.png" alt=""></a></li>
-												</ul>
-					<ul class="nav_m1 fl">
-													<li><a href="/?c=11/111"><img src="/img/nav_m11.png" alt=""></a></li>
-																			<li><a href="/?c=11/112"><img src="/img/nav_m12.png" alt=""></a></li>
-												</ul>
-					<ul class="nav_m2 fl">
-													<li><a href="/?c=12/121"><img src="/img/nav_m21.png" alt=""></a></li>
-																			<li><a href="/?c=12/122"><img src="/img/nav_m22.png" alt=""></a></li>
-												</ul>
-					<ul class="nav_m9 fl">
-													<li><a href="/?c=99/0822"><img src="/img/nav_m822.png" alt=""></a></li>
-												</ul>
-					<ul class="nav_m3 fl">
-													<li><a href="/?c=13/131"><img src="/img/nav_m31.png" alt=""></a></li>
-																			<li><a href="/?c=13/132"><img src="/img/nav_m32.png" alt=""></a></li>
-																			<li><a href="/?c=13/133"><img src="/img/nav_m33.png" alt=""></a></li>
-												</ul>
-					<ul class="nav_m5 fl">
-													<li><a href="/?c=15/151"><img src="/img/nav_m51.png" alt=""></a></li>
-												</ul>
-					<ul class="nav_m6 fl">
-													<li><a href="/?c=16/161"><img src="/img/nav_m61.png" alt=""></a></li>
-												</ul>
-					<ul class="nav_m7 fl">
-													<li><a href="/?c=17/171"><img src="/img/nav_m71.png" alt=""></a></li>
-												</ul>
-<!--
-					<ul class="nav_m1 fl">
-						<li><a href="#"><img src="/img/nav_m11.png" alt="" /></a></li>
-						<li><a href="#"><img src="/img/nav_m12.png" alt="" /></a></li>
-						<li><a href="#"><img src="/img/nav_m13.png" alt="" /></a></li>
-						<li><a href="#"><img src="/img/nav_m14.png" alt="" /></a></li>
-						<li><a href="#"><img src="/img/nav_m15.png" alt="" /></a></li>
-					</ul>
-					<ul class="nav_m2 fl">
-						<li><a href="#"><img src="/img/nav_m21.png" alt="" /></a></li>
-						<li><a href="#"><img src="/img/nav_m22.png" alt="" /></a></li>
-						<li><a href="#"><img src="/img/nav_m23.png" alt="" /></a></li>
-						<li><a href="#"><img src="/img/nav_m24.png" alt="" /></a></li>
-						<li><a href="#"><img src="/img/nav_m25.png" alt="" /></a></li>
-					</ul>
-					<ul class="nav_m3 fl">
-						<li><a href="#"><img src="/img/nav_m31.png" alt="" /></a></li>
-						<li><a href="#"><img src="/img/nav_m32.png" alt="" /></a></li>
-						<li><a href="#"><img src="/img/nav_m33.png" alt="" /></a></li>
-						<li><a href="#"><img src="/img/nav_m34.png" alt="" /></a></li>
-					</ul>
-					<ul class="nav_m4 fl">
-						<li><a href="#"><img src="/img/nav_m41.png" alt="" /></a></li>
-						<li><a href="#"><img src="/img/nav_m42.png" alt="" /></a></li>
-					</ul>
-					<ul class="nav_m5 fl">
-						<li><a href="#"><img src="/img/nav_m51.png" alt="" /></a></li>
-						<li><a href="#"><img src="/img/nav_m52.png" alt="" /></a></li>
-					</ul>
-					<ul class="nav_m6 fl">
-						<li><a href="#"><img src="/img/nav_m61.png" alt="" /></a></li>
-						<li><a href="#"><img src="/img/nav_m62.png" alt="" /></a></li>
-						<li><a href="#"><img src="/img/nav_m63.png" alt="" /></a></li>
-					</ul>
-					<ul class="nav_m7 fl">
-						<li><a href="#"><img src="/img/nav_m71.png" alt="" /></a></li>
-						<li><a href="#"><img src="/img/nav_m72.png" alt="" /></a></li>
-						<li><a href="#"><img src="/img/nav_m73.png" alt="" /></a></li>
-						<li><a href="#"><img src="/img/nav_m74.png" alt="" /></a></li>
-						<li><a href="#"><img src="/img/nav_m75.png" alt="" /></a></li>
-						<li><a href="#"><img src="/img/nav_m76.png" alt="" /></a></li>
-						<li><a href="#"><img src="/img/nav_m77.png" alt="" /></a></li>
-						<li><a href="#"><img src="/img/nav_m78.png" alt="" /></a></li>
-					</ul>
-					<ul class="nav_m8 fl">
-						<li><a href="#"><img src="/img/nav_m81.png" alt="" /></a></li>
-						<li><a href="#"><img src="/img/nav_m82.png" alt="" /></a></li>
-						<li><a href="#"><img src="/img/nav_m83.png" alt="" /></a></li>
-						<li><a href="#"><img src="/img/nav_m84.png" alt="" /></a></li>
-						<li><a href="#"><img src="/img/nav_m85.png" alt="" /></a></li>
-						<li><a href="#"><img src="/img/nav_m86.png" alt="" /></a></li>
-						<li><a href="#"><img src="/img/nav_m87.png" alt="" /></a></li>
-						<li><a href="#"><img src="/img/nav_m88.png" alt="" /></a></li>
-						<li><a href="#"><img src="/img/nav_m89.png" alt="" /></a></li>
-						<li><a href="#"><img src="/img/nav_m810.png" alt="" /></a></li>
-					</ul>-->
-				</div>
-			</div>
-
-<!--
-			<ul class="dep1">
-												<li class="dep1li"><a href="#"><img src="/img/nav_m01x.gif" alt="" class="dep1img" /></a>
-					<ul class="dn">
-																			<li><a href="./?c=01/011" target=""><img src="/img/nav_m011x.gif" alt="" /></a></li>
-										        													<li><a href="./?c=01/012" target=""><img src="/img/nav_m012x.gif" alt="" /></a></li>
-										        													<li><a href="./?c=01/013" target=""><img src="/img/nav_m013x.gif" alt="" /></a></li>
-										        													<li><a href="./?c=01/016" target=""><img src="/img/nav_m016x.gif" alt="" /></a></li>
-										        													<li><a href="./?c=01/014" target=""><img src="/img/nav_m014x.gif" alt="" /></a></li>
-										        													<li class="last"><a href="./?c=01/015" target=""><img src="/img/nav_m015x.gif" alt="" /></a></li>
-										        					</ul>
-				</li>
-								<li class="dep1li"><a href="#"><img src="/img/nav_m02x.gif" alt="" class="dep1img" /></a>
-					<ul class="dn">
-																			<li><a href="./?c=02/021" target=""><img src="/img/nav_m021x.gif" alt="" /></a></li>
-										        													<li><a href="./?c=02/023" target=""><img src="/img/nav_m023x.gif" alt="" /></a></li>
-										        													<li><a href="./?c=02/025" target=""><img src="/img/nav_m025x.gif" alt="" /></a></li>
-										        													<li class="last"><a href="./?c=02/026" target=""><img src="/img/nav_m026x.gif" alt="" /></a></li>
-										        					</ul>
-				</li>
-								<li class="dep1li"><a href="#"><img src="/img/nav_m03x.gif" alt="" class="dep1img" /></a>
-					<ul class="dn">
-																			<li><a href="./?c=03/031" target=""><img src="/img/nav_m031x.gif" alt="" /></a></li>
-										        													<li><a href="./?c=03/032" target=""><img src="/img/nav_m032x.gif" alt="" /></a></li>
-										        													<li><a href="./?c=03/033" target=""><img src="/img/nav_m033x.gif" alt="" /></a></li>
-										        													<li class="last"><a href="./?c=03/034" target=""><img src="/img/nav_m034x.gif" alt="" /></a></li>
-										        					</ul>
-				</li>
-								<li class="dep1li"><a href="#"><img src="/img/nav_m04x.gif" alt="" class="dep1img" /></a>
-					<ul class="dn">
-																			<li><a href="./?c=04/041" target=""><img src="/img/nav_m041x.gif" alt="" /></a></li>
-										        													<li><a href="./?c=04/042" target=""><img src="/img/nav_m042x.gif" alt="" /></a></li>
-										        													<li><a href="./?c=04/043" target=""><img src="/img/nav_m043x.gif" alt="" /></a></li>
-										        													<li><a href="./?c=04/044" target=""><img src="/img/nav_m044x.gif" alt="" /></a></li>
-										        													<li><a href="./?c=04/045" target=""><img src="/img/nav_m045x.gif" alt="" /></a></li>
-										        													<li><a href="./?c=04/046" target=""><img src="/img/nav_m046x.gif" alt="" /></a></li>
-										        													<li class="last"><a href="./?c=04/047" target=""><img src="/img/nav_m047x.gif" alt="" /></a></li>
-										        					</ul>
-				</li>
-								<li class="dep1li"><a href="#"><img src="/img/nav_m05x.gif" alt="" class="dep1img" /></a>
-					<ul class="dn">
-																			<li><a href="./?c=05/051" target=""><img src="/img/nav_m051x.gif" alt="" /></a></li>
-										        													<li class="last"><a href="./?c=05/052" target=""><img src="/img/nav_m052x.gif" alt="" /></a></li>
-										        					</ul>
-				</li>
-								<li class="dep1li"><a href="#"><img src="/img/nav_m06x.gif" alt="" class="dep1img" /></a>
-					<ul class="dn">
-																			<li><a href="./?c=06/061" target=""><img src="/img/nav_m061x.gif" alt="" /></a></li>
-										        													<li><a href="./?c=06/062" target=""><img src="/img/nav_m062x.gif" alt="" /></a></li>
-										        													<li><a href="./?c=06/063" target=""><img src="/img/nav_m063x.gif" alt="" /></a></li>
-										        													<li><a href="./?c=06/064" target=""><img src="/img/nav_m064x.gif" alt="" /></a></li>
-										        													<li class="last"><a href="./?c=06/065" target=""><img src="/img/nav_m065x.gif" alt="" /></a></li>
-										        					</ul>
-				</li>
-								<li class="dep1li"><a href="#"><img src="/img/nav_m07x.gif" alt="" class="dep1img" /></a>
-					<ul class="dn">
-																			<li><a href="./?c=07/071" target=""><img src="/img/nav_m071x.gif" alt="" /></a></li>
-										        													<li><a href="./?c=07/072" target=""><img src="/img/nav_m072x.gif" alt="" /></a></li>
-										        													<li><a href="./?c=07/073" target=""><img src="/img/nav_m073x.gif" alt="" /></a></li>
-										        													<li><a href="./?c=07/074" target=""><img src="/img/nav_m074x.gif" alt="" /></a></li>
-										        													<li><a href="./?c=07/075" target=""><img src="/img/nav_m075x.gif" alt="" /></a></li>
-										        													<li><a href="./?c=07/076" target=""><img src="/img/nav_m076x.gif" alt="" /></a></li>
-										        													<li><a href="./?c=07/077" target=""><img src="/img/nav_m077x.gif" alt="" /></a></li>
-										        													<li class="last"><a href="./?c=07/078" target=""><img src="/img/nav_m078x.gif" alt="" /></a></li>
-										        					</ul>
-				</li>
-								<li class="dep1li"><a href="#"><img src="/img/nav_m08x.gif" alt="" class="dep1img" /></a>
-					<ul class="dn">
-																			<li><a href="./?c=08/081" target=""><img src="/img/nav_m081x.gif" alt="" /></a></li>
-										        													<li><a href="./?c=08/082" target=""><img src="/img/nav_m082x.gif" alt="" /></a></li>
-										        													<li><a href="./?c=08/084" target=""><img src="/img/nav_m084x.gif" alt="" /></a></li>
-										        													<li><a href="./?c=08/086" target=""><img src="/img/nav_m086x.gif" alt="" /></a></li>
-										        													<li><a href="./?c=08/087" target=""><img src="/img/nav_m087x.gif" alt="" /></a></li>
-										        													<li><a href="./?c=08/088" target=""><img src="/img/nav_m088x.gif" alt="" /></a></li>
-										        													<li class="last"><a href="./?c=08/0810" target=""><img src="/img/nav_m0810x.gif" alt="" /></a></li>
-										        					</ul>
-				</li>
-								<li class="dep1li"><a href="#"><img src="/img/nav_m09x.gif" alt="" class="dep1img" /></a>
-					<ul class="dn">
-																			<li><a href="./?c=09/091" target=""><img src="/img/nav_m091x.gif" alt="" /></a></li>
-										        													<li class="last"><a href="./?c=09/092" target=""><img src="/img/nav_m092x.gif" alt="" /></a></li>
-										        					</ul>
-				</li>
-								<li class="dep1li"><a href="#"><img src="/img/nav_m10x.gif" alt="" class="dep1img" /></a>
-					<ul class="dn">
-																			<li><a href="./?c=10/101" target=""><img src="/img/nav_m101x.gif" alt="" /></a></li>
-										        													<li><a href="./?c=10/102" target=""><img src="/img/nav_m102x.gif" alt="" /></a></li>
-										        													<li><a href="./?c=10/103" target=""><img src="/img/nav_m103x.gif" alt="" /></a></li>
-										        													<li class="last"><a href="./?c=10/104" target=""><img src="/img/nav_m104x.gif" alt="" /></a></li>
-										        					</ul>
-				</li>
-								<li class="dep1li"><a href="#"><img src="/img/nav_m11x.gif" alt="" class="dep1img" /></a>
-					<ul class="dn">
-																			<li><a href="./?c=11/111" target=""><img src="/img/nav_m111x.gif" alt="" /></a></li>
-										        													<li class="last"><a href="./?c=11/112" target=""><img src="/img/nav_m112x.gif" alt="" /></a></li>
-										        					</ul>
-				</li>
-								<li class="dep1li"><a href="#"><img src="/img/nav_m12x.gif" alt="" class="dep1img" /></a>
-					<ul class="dn">
-																			<li><a href="./?c=12/121" target=""><img src="/img/nav_m121x.gif" alt="" /></a></li>
-										        													<li class="last"><a href="./?c=12/122" target=""><img src="/img/nav_m122x.gif" alt="" /></a></li>
-										        					</ul>
-				</li>
-								<li class="dep1li"><a href="#"><img src="/img/nav_m99x.gif" alt="" class="dep1img" /></a>
-					<ul class="dn">
-																			<li class="last"><a href="./?c=99/0822" target=""><img src="/img/nav_m0822x.gif" alt="" /></a></li>
-										        					</ul>
-				</li>
-								<li class="dep1li"><a href="#"><img src="/img/nav_m13x.gif" alt="" class="dep1img" /></a>
-					<ul class="dn">
-																			<li><a href="./?c=13/131" target=""><img src="/img/nav_m131x.gif" alt="" /></a></li>
-										        													<li><a href="./?c=13/132" target=""><img src="/img/nav_m132x.gif" alt="" /></a></li>
-										        													<li class="last"><a href="./?c=13/133" target=""><img src="/img/nav_m133x.gif" alt="" /></a></li>
-										        					</ul>
-				</li>
-								<li class="dep1li"><a href="#"><img src="/img/nav_m15x.gif" alt="" class="dep1img" /></a>
-					<ul class="dn">
-																			<li class="last"><a href="./?c=15/151" target=""><img src="/img/nav_m151x.gif" alt="" /></a></li>
-										        					</ul>
-				</li>
-								<li class="dep1li"><a href="#"><img src="/img/nav_m16x.gif" alt="" class="dep1img" /></a>
-					<ul class="dn">
-																			<li class="last"><a href="./?c=16/161" target=""><img src="/img/nav_m161x.gif" alt="" /></a></li>
-										        					</ul>
-				</li>
-								<li class="dep1li"><a href="#"><img src="/img/nav_m17x.gif" alt="" class="dep1img" /></a>
-					<ul class="dn">
-																			<li class="last"><a href="./?c=17/171" target=""><img src="/img/nav_m171x.gif" alt="" /></a></li>
-										        					</ul>
-				</li>
-							</ul>
--->
-
-		</div>
-		<div class="logo2"><div class="box"><img src="/img/logo2.gif" alt=""></div></div>
+		
 	</div>
-	<div id="container">
-		<div class="quick">
-			<a href="/?c=08/084"><img src="/img/quick1.gif" alt=""></a>
-			<a href="/?c=02/023/0233"><img src="/img/quick2.gif" alt=""></a>
-			<a href="/?c=03/033/0333"><img src="/img/quick3.gif" alt=""></a>
-			<a href="/?c=03/033/0332"><img src="/img/quick4.gif" alt=""></a>
-			<a href="/?c=03/034/0341"><img src="/img/quick5.gif" alt=""></a>
-			<a href="/?c=06/062"><img src="/img/quick6.gif" alt=""></a>
-			<a href="/?c=05/052/0521"><img src="/img/quick7.gif" alt=""></a>
-			<a href="/?c=05/051/0511"><img src="/img/quick8.gif" alt=""></a>
-			<img src="/img/quick10.gif" alt="" class="pointer pop">
-			<img src="/img/quick9.gif" alt="" class="top pointer">
-			<div class="quick_pop">
-				<div class="head">여기는 시각이 불편하신 분을 위한 공간입니다.</div>
-				<div class="blue">함춘여성크리닉 홈페이지를 찾아주신 여러분, 진심으로 환영합니다.<br>건강하고 똑똑한 생명의 탄생은 전 인류의 축복입니다.  </div>
-				<div class="cont">소중한 아이의 건강한 탄생을 위해 불임과 유전 진단 및<br>산전 기형진단 전문병원으로서 노력해 온 함춘여성크리닉은<br>오늘도 전 의료진과 연구진이 함께 연구하며 의학발전을 도모하고 있습니다.<br><br>지금까지 해 왔던 것처럼 '함춘'은 항상 겸손하고 조심스러운 자세로<br>진료와 연구에 전력을 다하여<br>여러분들께 희망과 기쁨을 드리는 병원으로 남겠습니다.<br><br>감사합니다.</div>
-				<div class="name">함춘여성크리닉 직원 일동</div>
-				<div class="clear" style="margin-top:15px">
-					<!-- <div class="fl left">서초 함춘</div> -->
-					<div class="fl right" style="width:100%;text-align:center;">서울시 서초구 서초중앙로8길 10  전화번호 : 02-2182-3400</div>
-				</div>
-				<!-- <div class="clear">
-					<div class="fl left">압구정 함춘</div>
-					<div class="fl right">서울시 강남구 신사동 638-1  전화번호 : 02-2017-9900</div>
-				</div> -->
-			</div>
-		</div>
-		<div id="nav">
-		<div class="clear">
-			<div style="display: block;">
-				<img src="/img/nav_left01.gif" alt="" class="title">
-				<ul class="leftnavi">
-	
-					<li><a href="/?c=01/011"><img src="/img/nav_left011x.gif" alt=""></a>
+
+
+	<div id="sub_visual" class="sub01">
+		<div class="pdinner">		
+			<h2 class="tit_h2 motion01">센터/진료과안내</h2>					
+		</div>	
+						<!--2차메뉴_S -->
+	<div id="sub_drop" class="">
+		<ul class="nav inner">
+		
+			<li class="dropdown home">
+				<a href="../main/main.php"><img src="../img/ic_home.png" alt="메인으로"></a>
+			</li>
+
+			<li class="dropdown deph01">
+				<a class="dropbtn">진료과/의료진</a>
+				<!--<ul class="dropmenu sub-menu">		
+					<li><a href="../medical/medical_list.php">진료과/의료진</a></li>
+					<li><a href="https://b2b.exona.kr:11101/0a205c930af0485eaaa33f8e258726fe">예약/차트</a></li>
+					<li><a href="../health/sub01_01.php">건강검진</a></li>
+					<li><a href="">건강소식</a></li>
+					<li><a href="../userguide/sub01_01.php">병원안내</a></li>	
+					<li><a href="../hanheart/sub01_01.php">사랑과 나눔</a></li>	
+					<li><a href="../csboard/sub01_01.php">고객참여</a></li>	
+					<li><a href="../clinical/sub01_01.php">교육연구</a></li>	
+					<li><a href="../cscenter/sub01_01.php">병원소식</a></li>	
+					<li><a href="../hospital/sub01_01.php">병원소개</a></li>	
+				</ul>-->
+			</li> 
+			<li class="dropdown deph02">
+				<a class="dropbtn">센터/진료과안내</a>
+				<ul class="dropmenu sub-menu">
 					
-							</li>
+						<li><a href="../medical/medical_list.php">센터/진료과안내</a></li>
+						<li><a href="../medical/doctor_list.php">의료진</a></li>
+						<li><a href="../medical/clinic_list.php">클리닉</a></li>
+
+									</ul>
+				<script src="../js/jquery-tab-nav.js"></script>
+				<script>
+				;(function($) {
+					$('.nav').tabNav();
+				})(jQuery);
+				</script>
+
+			</li>
+		</ul>	
+	</div>
+
+	</div>
 	
-					<li><a href="/?c=01/012"><img src="/img/nav_left012x.gif" alt=""></a>
-					
-							</li>
-	
-					<li><a href="/?c=01/013"><img src="/img/nav_left013o.gif" alt=""></a>
-					
-							</li>
-	
-					<li><a href="/?c=01/016"><img src="/img/nav_left016x.gif" alt=""></a>
-					
-							</li>
-	
-					<li><a href="/?c=01/014"><img src="/img/nav_left014x.gif" alt=""></a>
-					
-							</li>
-	
-					<li><a href="/?c=01/015"><img src="/img/nav_left015x.gif" alt=""></a>
-					
-							</li>
-					</ul>
-			</div>				
-						<div>
-				<img src="/img/nav_left02.gif" alt="" class="title">
-				<ul class="leftnavi">
-	
-					<li><a href="/?c=02/021"><img src="/img/nav_left021x.gif" alt=""></a>
-					
-							</li>
-	
-					<li><a href="/?c=02/023"><img src="/img/nav_left023x.gif" alt=""></a>
-					
-		<ul class="left_dep2">			<li><a href="/?c=02/023/0231"><img src="/img/nav_m0231x.gif" alt=""></a></li>
-					<li><a href="/?c=02/023/0232"><img src="/img/nav_m0232x.gif" alt=""></a></li>
-					<li><a href="/?c=02/023/0233"><img src="/img/nav_m0233x.gif" alt=""></a></li>
-		</ul>					</li>
-	
-					<li><a href="/?c=02/025"><img src="/img/nav_left025x.gif" alt=""></a>
-					
-							</li>
-	
-					<li><a href="/?c=02/026"><img src="/img/nav_left026x.gif" alt=""></a>
-					
-							</li>
-					</ul>
-			</div>				
-						<div>
-				<img src="/img/nav_left03.gif" alt="" class="title">
-				<ul class="leftnavi">
-	
-					<li><a href="/?c=03/031"><img src="/img/nav_left031x.gif" alt=""></a>
-					
-		<ul class="left_dep2">			<li><a href="/?c=03/031/0311"><img src="/img/nav_m0311x.gif" alt=""></a></li>
-					<li><a href="/?c=03/031/0312"><img src="/img/nav_m0312x.gif" alt=""></a></li>
-					<li><a href="/?c=03/031/0313"><img src="/img/nav_m0313x.gif" alt=""></a></li>
-					<li><a href="/?c=03/031/0314"><img src="/img/nav_m0314x.gif" alt=""></a></li>
-		</ul>					</li>
-	
-					<li><a href="/?c=03/032"><img src="/img/nav_left032x.gif" alt=""></a>
-					
-		<ul class="left_dep2">			<li><a href="/?c=03/032/0321"><img src="/img/nav_m0321x.gif" alt=""></a></li>
-		</ul>					</li>
-	
-					<li><a href="/?c=03/033"><img src="/img/nav_left033x.gif" alt=""></a>
-					
-		<ul class="left_dep2">			<li><a href="/?c=03/033/0331"><img src="/img/nav_m0331x.gif" alt=""></a></li>
-					<li><a href="/?c=03/033/0332"><img src="/img/nav_m0332x.gif" alt=""></a></li>
-					<li><a href="/?c=03/033/0333"><img src="/img/nav_m0333x.gif" alt=""></a></li>
-					<li><a href="/?c=03/033/0334"><img src="/img/nav_m0334x.gif" alt=""></a></li>
-					<li><a href="/?c=03/033/0335"><img src="/img/nav_m0335x.gif" alt=""></a></li>
-		</ul>					</li>
-	
-					<li><a href="/?c=03/034"><img src="/img/nav_left034x.gif" alt=""></a>
-					
-		<ul class="left_dep2">			<li><a href="/?c=03/034/0341"><img src="/img/nav_m0341x.gif" alt=""></a></li>
-					<li><a href="/?c=03/034/0342"><img src="/img/nav_m0342x.gif" alt=""></a></li>
-					<li><a href="/?c=03/034/0343"><img src="/img/nav_m0343x.gif" alt=""></a></li>
-		</ul>					</li>
-					</ul>
-			</div>				
-						<div>
-				<img src="/img/nav_left04.gif" alt="" class="title">
-				<ul class="leftnavi">
-	
-					<li><a href="/?c=04/041"><img src="/img/nav_left041x.gif" alt=""></a>
-					
-							</li>
-	
-					<li><a href="/?c=04/042"><img src="/img/nav_left042x.gif" alt=""></a>
-					
-							</li>
-	
-					<li><a href="/?c=04/043"><img src="/img/nav_left043x.gif" alt=""></a>
-					
-							</li>
-	
-					<li><a href="/?c=04/044"><img src="/img/nav_left044x.gif" alt=""></a>
-					
-							</li>
-	
-					<li><a href="/?c=04/045"><img src="/img/nav_left045x.gif" alt=""></a>
-					
-							</li>
-	
-					<li><a href="/?c=04/046"><img src="/img/nav_left046x.gif" alt=""></a>
-					
-							</li>
-	
-					<li><a href="/?c=04/047"><img src="/img/nav_left047x.gif" alt=""></a>
-					
-							</li>
-					</ul>
-			</div>				
-						<div>
-				<img src="/img/nav_left05.gif" alt="" class="title">
-				<ul class="leftnavi">
-	
-					<li><a href="/?c=05/051"><img src="/img/nav_left051x.gif" alt=""></a>
-					
-		<ul class="left_dep2">			<li><a href="/?c=05/051/0511"><img src="/img/nav_m0511x.gif" alt=""></a></li>
-					<li><a href="/?c=05/051/0512"><img src="/img/nav_m0512x.gif" alt=""></a></li>
-					<li><a href="/?c=05/051/0513"><img src="/img/nav_m0513x.gif" alt=""></a></li>
-					<li><a href="/?c=05/051/0514"><img src="/img/nav_m0514x.gif" alt=""></a></li>
-		</ul>					</li>
-	
-					<li><a href="/?c=05/052"><img src="/img/nav_left052x.gif" alt=""></a>
-					
-		<ul class="left_dep2">			<li><a href="/?c=05/052/0521"><img src="/img/nav_m0521x.gif" alt=""></a></li>
-					<li><a href="/?c=05/052/0522"><img src="/img/nav_m0522x.gif" alt=""></a></li>
-		</ul>					</li>
-					</ul>
-			</div>				
-						<div>
-				<img src="/img/nav_left06.gif" alt="" class="title">
-				<ul class="leftnavi">
-	
-					<li><a href="/?c=06/061"><img src="/img/nav_left061x.gif" alt=""></a>
-					
-							</li>
-	
-					<li><a href="/?c=06/062"><img src="/img/nav_left062x.gif" alt=""></a>
-					
-							</li>
-	
-					<li><a href="/?c=06/063"><img src="/img/nav_left063x.gif" alt=""></a>
-					
-							</li>
-	
-					<li><a href="/?c=06/064"><img src="/img/nav_left064x.gif" alt=""></a>
-					
-							</li>
-	
-					<li><a href="/?c=06/065"><img src="/img/nav_left065x.gif" alt=""></a>
-					
-							</li>
-					</ul>
-			</div>				
-						<div>
-				<img src="/img/nav_left07.gif" alt="" class="title">
-				<ul class="leftnavi">
-	
-					<li><a href="/?c=07/071"><img src="/img/nav_left071x.gif" alt=""></a>
-					
-		<ul class="left_dep2">			<li><a href="/?c=07/071/0711"><img src="/img/nav_m0711x.gif" alt=""></a></li>
-					<li><a href="/?c=07/071/0712"><img src="/img/nav_m0712x.gif" alt=""></a></li>
-					<li><a href="/?c=07/071/0713"><img src="/img/nav_m0713x.gif" alt=""></a></li>
-					<li><a href="/?c=07/071/0714"><img src="/img/nav_m0714x.gif" alt=""></a></li>
-		</ul>					</li>
-	
-					<li><a href="/?c=07/072"><img src="/img/nav_left072x.gif" alt=""></a>
-					
-		<ul class="left_dep2">			<li><a href="/?c=07/072/0721"><img src="/img/nav_m0721x.gif" alt=""></a></li>
-					<li><a href="/?c=07/072/0722"><img src="/img/nav_m0722x.gif" alt=""></a></li>
-					<li><a href="/?c=07/072/0723"><img src="/img/nav_m0723x.gif" alt=""></a></li>
-		</ul>					</li>
-	
-					<li><a href="/?c=07/073"><img src="/img/nav_left073x.gif" alt=""></a>
-					
-		<ul class="left_dep2">			<li><a href="/?c=07/073/0731"><img src="/img/nav_m0731x.gif" alt=""></a></li>
-					<li><a href="/?c=07/073/0732"><img src="/img/nav_m0732x.gif" alt=""></a></li>
-					<li><a href="/?c=07/073/0733"><img src="/img/nav_m0733x.gif" alt=""></a></li>
-		</ul>					</li>
-	
-					<li><a href="/?c=07/074"><img src="/img/nav_left074x.gif" alt=""></a>
-					
-		<ul class="left_dep2">			<li><a href="/?c=07/074/0741"><img src="/img/nav_m0741x.gif" alt=""></a></li>
-					<li><a href="/?c=07/074/0742"><img src="/img/nav_m0742x.gif" alt=""></a></li>
-					<li><a href="/?c=07/074/0743"><img src="/img/nav_m0743x.gif" alt=""></a></li>
-		</ul>					</li>
-	
-					<li><a href="/?c=07/075"><img src="/img/nav_left075x.gif" alt=""></a>
-					
-		<ul class="left_dep2">			<li><a href="/?c=07/075/0751"><img src="/img/nav_m0751x.gif" alt=""></a></li>
-					<li><a href="/?c=07/075/0752"><img src="/img/nav_m0752x.gif" alt=""></a></li>
-					<li><a href="/?c=07/075/0753"><img src="/img/nav_m0753x.gif" alt=""></a></li>
-					<li><a href="/?c=07/075/0754"><img src="/img/nav_m0754x.gif" alt=""></a></li>
-		</ul>					</li>
-	
-					<li><a href="/?c=07/076"><img src="/img/nav_left076x.gif" alt=""></a>
-					
-		<ul class="left_dep2">			<li><a href="/?c=07/076/0761"><img src="/img/nav_m0761x.gif" alt=""></a></li>
-					<li><a href="/?c=07/076/0762"><img src="/img/nav_m0762x.gif" alt=""></a></li>
-		</ul>					</li>
-	
-					<li><a href="/?c=07/077"><img src="/img/nav_left077x.gif" alt=""></a>
-					
-		<ul class="left_dep2">			<li><a href="/?c=07/077/0771"><img src="/img/nav_m0771x.gif" alt=""></a></li>
-					<li><a href="/?c=07/077/0772"><img src="/img/nav_m0772x.gif" alt=""></a></li>
-		</ul>					</li>
-	
-					<li><a href="/?c=07/078"><img src="/img/nav_left078x.gif" alt=""></a>
-					
-							</li>
-					</ul>
-			</div>				
-						<div>
-				<img src="/img/nav_left08.gif" alt="" class="title">
-				<ul class="leftnavi">
-	
-					<li><a href="/?c=08/081"><img src="/img/nav_left081x.gif" alt=""></a>
-					
-							</li>
-	
-					<li><a href="/?c=08/082"><img src="/img/nav_left082x.gif" alt=""></a>
-					
-							</li>
-	
-					<li><a href="/?c=08/084"><img src="/img/nav_left084x.gif" alt=""></a>
-					
-							</li>
-	
-					<li><a href="/?c=08/086"><img src="/img/nav_left086x.gif" alt=""></a>
-					
-							</li>
-	
-					<li><a href="/?c=08/087"><img src="/img/nav_left087x.gif" alt=""></a>
-					
-							</li>
-	
-					<li><a href="/?c=08/088"><img src="/img/nav_left088x.gif" alt=""></a>
-					
-							</li>
-	
-					<li><a href="/?c=08/0810"><img src="/img/nav_left0810x.gif" alt=""></a>
-					
-							</li>
-					</ul>
-			</div>				
-						<div>
-				<img src="/img/nav_left09.gif" alt="" class="title">
-				<ul class="leftnavi">
-	
-					<li><a href="/?c=09/091"><img src="/img/nav_left091x.gif" alt=""></a>
-					
-							</li>
-	
-					<li><a href="/?c=09/092"><img src="/img/nav_left092x.gif" alt=""></a>
-					
-		<ul class="left_dep2">			<li><a href="/?c=09/092/0921"><img src="/img/nav_m0921x.gif" alt=""></a></li>
-					<li><a href="/?c=09/092/0922"><img src="/img/nav_m0922x.gif" alt=""></a></li>
-		</ul>					</li>
-					</ul>
-			</div>				
-						<div>
-				<img src="/img/nav_left10.gif" alt="" class="title">
-				<ul class="leftnavi">
-	
-					<li><a href="/?c=10/101"><img src="/img/nav_left101x.gif" alt=""></a>
-					
-							</li>
-	
-					<li><a href="/?c=10/102"><img src="/img/nav_left102x.gif" alt=""></a>
-					
-							</li>
-	
-					<li><a href="/?c=10/103"><img src="/img/nav_left103x.gif" alt=""></a>
-					
-							</li>
-	
-					<li><a href="/?c=10/104"><img src="/img/nav_left104x.gif" alt=""></a>
-					
-							</li>
-					</ul>
-			</div>				
-						<div>
-				<img src="/img/nav_left11.gif" alt="" class="title">
-				<ul class="leftnavi">
-	
-					<li><a href="/?c=11/111"><img src="/img/nav_left111x.gif" alt=""></a>
-					
-							</li>
-	
-					<li><a href="/?c=11/112"><img src="/img/nav_left112x.gif" alt=""></a>
-					
-							</li>
-					</ul>
-			</div>				
-						<div>
-				<img src="/img/nav_left12.gif" alt="" class="title">
-				<ul class="leftnavi">
-	
-					<li><a href="/?c=12/121"><img src="/img/nav_left121x.gif" alt=""></a>
-					
-							</li>
-	
-					<li><a href="/?c=12/122"><img src="/img/nav_left122x.gif" alt=""></a>
-					
-							</li>
-					</ul>
-			</div>				
-						<div>
-				<img src="/img/nav_left99.gif" alt="" class="title">
-				<ul class="leftnavi">
-	
-					<li><a href="/?c=99/0822"><img src="/img/nav_left0822x.gif" alt=""></a>
-					
-							</li>
-					</ul>
-			</div>				
-						<div>
-				<img src="/img/nav_left13.gif" alt="" class="title">
-				<ul class="leftnavi">
-	
-					<li><a href="/?c=13/131"><img src="/img/nav_left131x.gif" alt=""></a>
-					
-		<ul class="left_dep2">			<li><a href="/?c=13/131/0611"><img src="/img/nav_m0611x.gif" alt=""></a></li>
-					<li><a href="/?c=13/131/0612"><img src="/img/nav_m0612x.gif" alt=""></a></li>
-					<li><a href="/?c=13/131/0613"><img src="/img/nav_m0613x.gif" alt=""></a></li>
-					<li><a href="/?c=13/131/0614"><img src="/img/nav_m0614x.gif" alt=""></a></li>
-					<li><a href="/?c=13/131/0615"><img src="/img/nav_m0615x.gif" alt=""></a></li>
-		</ul>					</li>
-	
-					<li><a href="/?c=13/132"><img src="/img/nav_left132x.gif" alt=""></a>
-					
-		<ul class="left_dep2">			<li><a href="/?c=13/132/0621"><img src="/img/nav_m0621x.gif" alt=""></a></li>
-					<li><a href="/?c=13/132/0622"><img src="/img/nav_m0622x.gif" alt=""></a></li>
-					<li><a href="/?c=13/132/0623"><img src="/img/nav_m0623x.gif" alt=""></a></li>
-		</ul>					</li>
-	
-					<li><a href="/?c=13/133"><img src="/img/nav_left133x.gif" alt=""></a>
-					
-		<ul class="left_dep2">			<li><a href="/?c=13/133/0631"><img src="/img/nav_m0631x.gif" alt=""></a></li>
-					<li><a href="/?c=13/133/0632"><img src="/img/nav_m0632x.gif" alt=""></a></li>
-					<li><a href="/?c=13/133/0633"><img src="/img/nav_m0633x.gif" alt=""></a></li>
-		</ul>					</li>
-					</ul>
-			</div>				
-						<div>
-				<img src="/img/nav_left15.gif" alt="" class="title">
-				<ul class="leftnavi">
-	
-					<li><a href="/?c=15/151"><img src="/img/nav_left151x.gif" alt=""></a>
-					
-							</li>
-					</ul>
-			</div>				
-						<div>
-				<img src="/img/nav_left16.gif" alt="" class="title">
-				<ul class="leftnavi">
-	
-					<li><a href="/?c=16/161"><img src="/img/nav_left161x.gif" alt=""></a>
-					
-							</li>
-					</ul>
-			</div>				
-						<div>
-				<img src="/img/nav_left17.gif" alt="" class="title">
-				<ul class="leftnavi">
-	
-					<li><a href="/?c=17/171"><img src="/img/nav_left171x.gif" alt=""></a>
-					
-							</li>
-					</ul>
-			</div>				
-			<!--
-			<div>
-				<img src="/img/nav_left01.gif" alt="" class="title" />
-				<ul class="leftnavi">
-					<li><a href="#"><img src="/img/nav_left11x.gif" alt="" /></a></li>
-					<li><a href="#"><img src="/img/nav_left12x.gif" alt="" /></a>
-						<ul class="left_dep2">
-							<li><a href="#"><img src="/img/nav_m11.png" alt="" /></a></li>
-							<li><a href="#"><img src="/img/nav_m11.png" alt="" /></a></li>
-							<li><a href="#"><img src="/img/nav_m11.png" alt="" /></a></li>
-						</ul>
-					</li>
-					<li><a href="#"><img src="/img/nav_left13x.gif" alt="" /></a></li>
-					<li><a href="#"><img src="/img/nav_left14x.gif" alt="" /></a>
-						<ul class="left_dep2">
-							<li><a href="#"><img src="/img/nav_m11.png" alt="" /></a></li>
-							<li><a href="#"><img src="/img/nav_m11.png" alt="" /></a></li>
-							<li><a href="#"><img src="/img/nav_m11.png" alt="" /></a></li>
-						</ul>
-					</li>
-					<li><a href="#"><img src="/img/nav_left15x.gif" alt="" /></a></li>
-				</ul>
-			</div>
--->
-		</div>
-		</div>
-		<div id="contents">
-<!--/sub_top-->
-						<div class="conhead">
-				<ul class="clear">
-					<li class="fl"><img src="/img/path_home.gif" alt=""> Home</li>
-					<li class="fl">병원소개</li>
-					<li class="fl ">의료진소개</li>
-					<li class="fl last">서초</li>				</ul>
-				<div class="title"><img src="/img/m0131_title.gif" alt=""></div>
-				<img src="/img/subtitle.gif" alt="">
-			</div>
-																					
+	<div class="subwrap">
+		
+		<div class="sub_con sub_con011">	
+			
+			<!--<h3 class="conh3 mb">센터/진료과안내</h3>-->
 
 			
-			<div class="m013">
-	<img src="/img/m131_img1.gif" alt="">
-<img src="/img/m131_pht1_1_01.jpg" alt="" class="mtop">
-<img src="/img/250904_m131_pht1_2_02.jpg" alt="" class="mtop">
-<div class="m013_btnbox"><a href="/?c=01/013"><img src="/img/btn_list.gif" alt=""></a></div>
+	
+
+
+<div class="sector_nav_wrap">
+	<div class="inner">
+		<div class="all_sector_catagory center">
+			<ul>
+							<li><a href="/medical/detail_doctor.php?deptCd=123654789">간·담도·췌장센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=1234567890">뇌센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=11223213">심혈관센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=23543243">심장혈관흉부센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=2313213">암센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=4242">방사선종양센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=4354">건강증진센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=320320">구강의학센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=23">난임센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=52342">내분비센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=323908">전립선비뇨센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=5775">신장센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=567">소화기센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=234121144">심리수면센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=3445">아동의학센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=2323">안이센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=56875">여성의학센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=464854844">영상의학센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=425252">유방센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=2342351">갑상선센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=2342342">응급의료센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=2342">인터벤션센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=56457">재활의학센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=7980879">중앙수술센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=4294967295">척추·관절센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=3216854">피부성형센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=768">호흡기알레르기센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=49758">진료협력센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=34534534">장기이식센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=232323">무수혈센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=237894576">뇌혈관센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=3285447">턱교정 및 안면윤곽수술센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=654456454">임플란트보철센터</a></li>	
+							<li><a href="/medical/detail_doctor.php?deptCd=234235">진행성간암치료센터</a></li>	
+						</ul>
+		</div>
+		<div class="all_sector_catagory">
+			<ul>
+						<li><a href="/medical/detail_doctor.php?deptCd=2010300000" class="on">소화기내과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2010400000">순환기내과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2010500000">내분비대사내과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2010600000">호흡기내과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2010700000">신장내과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2011000000">감염내과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2011100000">류마티스내과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2011200000">혈액종양내과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2020000000">신경과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2030000000">정신건강의학과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2040000000">외과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2050000000">정형외과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2060000000">신경외과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2070000000">심장혈관흉부외과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2080000000">성형외과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2090000000">마취통증의학과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2100000000">산부인과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2110000000">소아청소년과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2120000000">안과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2130000000">이비인후과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2140000000">피부과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2150000000">비뇨의학과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2160000000">영상의학과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2170000000">방사선종양학과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2180000000">핵의학과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2200000000">진단검사의학과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2210000000">병리과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2220000000">재활의학과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2240000000">치과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2260000000">구강악안면외과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2280000000">응급의학과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2230000000">가정의학과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2250000000">직업환경의학과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=2370100000">건강증진과</a></li>	
+						<li><a href="/medical/detail_doctor.php?deptCd=3061000000">중환자의학과</a></li>	
+						</ul>
+		</div>
+		<div class="tit">
+			<h2>소화기내과</h2>
+			<a class="btn_sector_all" href="./doctor_list.php"><span>전체 의료진</span></a>
+		</div>
+		<div class="doctor_nav nav-scroller nav-scroller--snap">
+			<nav class="nav-scroller-nav">
+				<ul class="nav-scroller-content">
+										<li class="nav-scroller-item"><a href="/medical/detail_doctor.php?deptCd=2010300000&amp;doctorId=12220280" class="nav-scroller-item ">
+					<div class="photo">
+										<img src="/bbsDown/doctor/2022072939882775830_s.png" alt="황준성">
+										</div>
+					<span>황준성</span></a></li>
+										<li class="nav-scroller-item"><a href="/medical/detail_doctor.php?deptCd=2010300000&amp;doctorId=12230464" class="nav-scroller-item ">
+					<div class="photo">
+										<img src="/bbsDown/doctor/2023101080451972100_s.png" alt="정창욱">
+										</div>
+					<span>정창욱</span></a></li>
+										<li class="nav-scroller-item"><a href="/medical/detail_doctor.php?deptCd=2010300000&amp;doctorId=12220365" class="nav-scroller-item ">
+					<div class="photo">
+										<img src="/bbsDown/doctor/2022081633737627994_s.png" alt="김명환">
+										</div>
+					<span>김명환</span></a></li>
+										<li class="nav-scroller-item"><a href="/medical/detail_doctor.php?deptCd=2010300000&amp;doctorId=12250136" class="nav-scroller-item ">
+					<div class="photo">
+										<img src="/bbsDown/doctor/2025022707654624423_s.png" alt="공성민">
+										</div>
+					<span>공성민</span></a></li>
+										<li class="nav-scroller-item"><a href="/medical/detail_doctor.php?deptCd=2010300000&amp;doctorId=12220387" class="nav-scroller-item ">
+					<div class="photo">
+										<img src="/bbsDown/doctor/2022080190617178961_s.png" alt="박나래">
+										</div>
+					<span>박나래</span></a></li>
+										<li class="nav-scroller-item"><a href="/medical/detail_doctor.php?deptCd=2010300000&amp;doctorId=12140016" class="nav-scroller-item ">
+					<div class="photo">
+										<img src="/bbsDown/doctor/2021031754114111984_s.png" alt="김연수">
+										</div>
+					<span>김연수</span></a></li>
+										<li class="nav-scroller-item"><a href="/medical/detail_doctor.php?deptCd=2010300000&amp;doctorId=12230477" class="nav-scroller-item ">
+					<div class="photo">
+										<img src="/bbsDown/doctor/2023101935475677128_s.png" alt="양원열">
+										</div>
+					<span>양원열</span></a></li>
+										<li class="nav-scroller-item"><a href="/medical/detail_doctor.php?deptCd=2010300000&amp;doctorId=12240069" class="nav-scroller-item ">
+					<div class="photo">
+										<img src="/bbsDown/doctor/2024041558514939249_s.png" alt="이형한">
+										</div>
+					<span>이형한</span></a></li>
+									</ul>
+			</nav>
+		  <button class="nav-scroller-btn nav-scroller-btn--left" aria-label="Scroll left">
+			<span>이전</span>
+		  </button>
+
+		  <button class="nav-scroller-btn nav-scroller-btn--right active" aria-label="Scroll right">
+			<span>다음</span>
+		  </button>
+		</div>
+	</div>
 </div>
-			
+<div class="contents_none">
+	<div class="pdinner">
+		<p>의료진을 선택해주세요.</p>
+	</div>
+</div>
+
+
+<div id="view_resume1" class="no-display popinfo">
+	<h1>의료진 경력 상세보기</h1> <!--경력부분을 내용에따라 각각 경력/학회활동 /저서및논문 으로 변경-->
+	<div class="popcon view_resume" id="view_resume_box1"></div>	
+</div>
+
+<div id="view_resume2" class="no-display popinfo">
+	<h1>의료진 학회활동 상세보기</h1> <!--경력부분을 내용에따라 각각 경력/학회활동 /저서및논문 으로 변경-->
+	<div class="popcon view_resume" id="view_resume_box2"></div>	
+</div>
+
+<div id="view_resume3" class="no-display popinfo">
+	<h1>의료진 저서및논문 상세보기</h1> <!--경력부분을 내용에따라 각각 경력/학회활동 /저서및논문 으로 변경-->
+	<div class="popcon view_resume" id="view_resume_box3"></div>	
+</div>
 
 
 
-	<!--sub_bottom-->
-		</div>
-	</div>	
+
+
+
+		</div><!--subcon-->
+	</div><!--subwrap-->
+
+
+<script>
+$(document).ready(function(){
+	var OT_ID = "";
+	var deptCd = "";
+	var doctorId = "";
+	var _data = deptCd+"|"+doctorId;
+
+	//진료과 이동(PC)
+	$('.all_sector_catagory').each(function(){
+		var height = 0;
+		// console.log($(this))
+		console.log($(this).find('li a.on'))
+		if($(this).find('li a.on').length > 0){
+			console.log($(this))
+			//console.log('test2');
+			//alert('t');
+			height = $('.all_sector_catagory').height();
+			offTop = $(this).find('li a.on').offset().top;
+			//alert(height);
+			console.log(offTop-height);
+			$(this).animate({
+				scrollTop: offTop-height
+			},500);
+		}
+	});
+
+	//API 통신 - 진료시간표
+	if (doctorId == "12220198" || doctorId == "12240138" || doctorId == "12240531") {
+		$('.loading_box').css('display', 'none')
+	} else {
+		findSchedule(OT_ID,_data);
+	}
+	
+
+	//220719 소화기내과인 경우 팝업 띄우기
+	$('.ic_reservation').on('click',function(){
+		let deptCd = $(this).data('deptcd');
+
+		if(deptCd=='2010300000'){
+			alert('교수님의 내시경 시술로 인하여 예약시간의 변동이 있을 수 있으니 필히 전화로 문의주시기 바랍니다.\n055-225-0000');
+		}
+
+		// 250314 신경외과 추가
+		if(deptCd == '2060000000'){
+			alert('교수님의 신경외과 시술로 인하여 예약시간의 변동이 있을 수 있으니 필히 전화로 문의주시기 바랍니다.\n055-225-0000');
+		}
+	});
+});
+</script>
+
+
+	
+	
+	<a href="javascript:void(0);" onclick="window.open('https://b2b.exona.kr:11101/568b7bcf26c14d22b21e5fb26ebc1bfa', '한마음편한예약', 'width=390, height=844, location=no, status=no, scrollbars=yes');" class="chat"><img src="/img/chat.png" alt=""></a>
 	<div id="footer">
-		<div class="footerbg">
-		<div class="box"><img src="/img/foot_info.gif" alt=""></div>
-		</div>
-		<div class="box clear">
-			<div class="fl leftbox">
-				<ul class="clear footmenu">
-					<li class="fl first"><a href="/?c=17/171"><img src="/img/footmenu1.gif" alt=""></a></li>
-					<li class="fl"><a href="/?c=01/015"><img src="/img/footmenu3.gif" alt=""></a></li>
+		<div class="bottom_li">
+			<div class="inner">
+				<div class="relative_li">
+					<div class="dropdown">
+						<a onclick="myFunction2()" class="dropbtn">유관기관 바로가기</a>
+						<div id="dropdown2" class="dropmenu">
+							<ul>					
+								<li><a href="https://sangnam.hanheart.co.kr" target="_blank" title="새창으로 이동">상남한마음병원</a></li>
+								<li><a href="https://recruit.hanheart.co.kr" target="_blank" title="새창으로 이동">한마음채용사이트</a></li>
+								<li><a href="https://www.hanyang.ac.kr/" target="_blank" title="새창으로 이동">한양대학교</a></li>
+								<li><a href="https://medix.hanyang.ac.kr/" target="_blank" title="새창으로 이동">한양대학교 의과대학</a></li>
+								<li><a href="http://www.masanhp.co.kr/" target="_blank" title="새창으로 이동">시립마산요양병원</a></li>
+								<li><a href="https://www.ambatel.com/grandmercure/changwon/ko/main.do" target="_blank" title="새창으로 이동">그랜드머큐어앰배서더창원</a></li>
+								<li><a href="https://cafe.daum.net/hanjubu" target="_blank" title="새창으로 이동">한마음주부대학</a></li>
+								<li><a href="http://www.hannanum.kr/" target="_blank" title="새창으로 이동">필봉장학재단</a></li>
+								<li><a href="#" target="_blank" title="새창으로 이동">재난통신지원대</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<ul class="foot_li">
+					<li class="ylTxt2"><a href="../guide/sub01_01.php">개인정보처리방침</a></li>
+					<li><a href="../guide/sub02_01.php">이용약관</a></li>
+					<li><a href="../guide/sub03_01.php">환자권리와 의무</a></li>
+					<!--<li><a href=""></a></li>			-->	
+					<li><a href="../guide/sub05_01.php">안전보건경영방침</a></li>				
+					<li><a href="../guide/sub06_01.php">안전보건목표</a></li>				
 				</ul>
-				<img src="/img/foot_email.gif" alt="">
 			</div>
-			<img src="/img/foot_logo.gif" alt="" class="fr flogo">
+		</div>
+		<div class="inner footinfo">
+			<div class="box">
+				<h4>창원한마음병원</h4>
+				<address>주소   (51139) 경상남도 창원시 의창구 용동로 57번길 8</address>
+				<ul>
+					<li>대표전화 055-225-0000</li>				
+					<li>대표팩스 055-225-0001</li>				
+					<li>이메일 hanheart@hanheart.co.kr</li>				
+				</ul>
+			</div>
+			
+		</div>
+		<div class="copy">
+			<p class="inner">Copyright ⓒ <b>2021 changwon hanmaeum hospital</b>. <span><a href="/wssm" title="관리자페이지로이동" target="_blank">관리자</a></span>  
+				<span class="mEnter">All Rights Reserved. designed by 크리에이티브마루.</span> 
+			</p>
 		</div>
 	</div>
-</div>
+	<div id="pageup">
+	</div>
 
-<div id="_box_layer_"></div>
-<div id="_action_layer_"></div>
-<div id="_hidden_layer_"></div>
-<div id="_overLayer_" class="hide"></div>
-<iframe name="_action_frame_home" width="0" height="0" frameborder="0" scrolling="no"></iframe>
-<script type="text/javascript">
-//<![CDATA[
-document.body.onclick = closeMemberLayer;
-document.onkeydown = closeImgLayer;
-//]]>
-</script>
+	<script type="text/javascript">
+		$("#pageup").pageup();
+		 function warning()
+		 { 
+			 alert("준비중입니다.");
+			 //보여줄 내용을 써주세요.
+		  }
+		$(document).ready(function() {
+			RESPONSIVEUI.responsiveTabs();
+		})
+	</script>
 
-<script type="text/javascript">
-//<![CDATA[
-var Popstring = '';
-if (getCookie('popview').indexOf('[10]') == -1)
-{
-		Popstring += '[10]';
-	 
-}
-if (getCookie('popview').indexOf('[11]') == -1)
-{
-		Popstring += '[11]';
-	 
-}
-if(Popstring!='')
-{
-	frames._action_frame_home.location.href='/?r=home&system=popup.layer&iframe=Y&pop='+Popstring;
-}
-function hidePopupLayer(uid) 
-{ 
-	if (getId('popCheck_'+uid).checked == true)
-	{
-		var nowcookie = getCookie('popview');
-		setCookie('popview', '['+uid+']' + nowcookie , 1);
-	}    
-	getId('poplayer'+uid).style.display = 'none';
-}
-//]]>
-</script>
+
+</div><!--wrap-->
+<link rel="stylesheet" media="all" href="../js/aos/aos.css">
+<script type="text/javascript" src="../js/aos/aos.js"></script>
+
+<!-- litebox -->
+		<script src="../plugin/litebox/jquery-ui.min.js"></script>
+		<link rel="stylesheet" media="all" href="../plugin/litebox/litebox.css">
+		<script type="text/javascript" src="../plugin/litebox/litebox.js"></script>
+		<script type="text/javascript" src="../plugin/litebox/backbone.js"></script>
+		<script type="text/javascript" src="../plugin/litebox/images-loaded.min.js"></script>
+		<script type="text/javascript">
+			$('.litebox').liteBox();
+		</script>
+<!-- litebox -->
+
+
+
+
+<script type="text/javascript" src="../plugin/share/wow.js"></script>
+<link rel="stylesheet" media="all" href="../plugin/share/animate.css">
+<script>
+	wow = new WOW(
+		{
+			boxClass:     'wow',
+			animateClass: 'animated',
+			offset:       100,
+			callback:     function(box) {
+			  console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+			}
+		}
+	);
+	wow.init();
+
+	//검색창
+	function chkSearchFrm(f){
+		if(f.all_search.value==""){
+			alert('검색어를 입력해주세요.');
+			f.all_search.focus();
+			return false;
+		}
+	}
+  </script>
+
+
+<script>
+	   AOS.init({
+		//startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+		startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+		initClassName: 'aos-init', // class applied after initialization
+		animatedClassName: 'aos-animate', // class applied on animation
+		useClassNames: true,// if true, will add content of `data-aos` as classes on scroll
+
+        easing: 'ease-in-out-cubic',
+		offset: 30, // offset (in px) from the original trigger point
+		delay: 300, // values from 0 to 3000, with step 50ms
+		duration: 700, // values from 0 to 3000, with step 50ms
+       // once: true,
+		});
+		$(window).on('load', function () {
+            AOS.refresh();
+      });
+
+	  // 팝업존 제어
+		function setCookie( name, value, expiredays )
+		{
+			var todayDate = new Date();
+			todayDate.setDate( todayDate.getDate() + expiredays );
+			document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+		}
+		function getCookie( name )
+		{
+			var nameOfCookie = name + "=";
+			var x = 0;
+			while ( x <= document.cookie.length )
+			{
+				var y = (x+nameOfCookie.length);
+				if ( document.cookie.substring( x, y ) == nameOfCookie ) {
+					if ( (endOfCookie=document.cookie.indexOf( ";", y )) == -1 )
+						endOfCookie = document.cookie.length;
+					return unescape( document.cookie.substring( y, endOfCookie ) );
+				}
+				x = document.cookie.indexOf( " ", x ) + 1;
+				if ( x == 0 )
+					break;
+			}
+			return "";
+		}
+
+		const popupZoneBtnElem = document.querySelector('#popup-zone-btn');
+		const popupZoneElem = document.querySelector('#fixed_popup');
+
+		if (popupZoneBtnElem != null) popupZoneBtnElem.addEventListener('click', chkFixedPopup);
+
+		function chkFixedPopup() {
+			const popCnt = 7			// console.log('t');
+			if (popupZoneElem.classList.contains('off')) {
+				if (popCnt > 0) {
+					popupZoneElem.classList.remove('off');
+					popupZoneElem.classList.add('on');
+				}
+			} else {
+				popupZoneElem.classList.remove('on');
+				popupZoneElem.classList.add('off');
+			}
+			$('.fixed_popup_list').get(0).slick.setPosition();
+		}
+		function closeFixedPopupZoneToday() {
+			//const popupZoneElem = document.querySelector('.fixed_popup');
+			setCookie("fixedPopup", "done", 1);
+			chkFixedPopup();
+		}
+
+		if( getCookie("fixedPopup") != 'done' && popupZoneElem != null) {
+			chkFixedPopup();
+		}
+  </script> 
+
+
 
 

@@ -1,16 +1,4068 @@
+<!DOCTYPE html><html lang="ko"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>MIZMEDI</title>
+	<link rel="shortcut icon" href="/static/resources/user/web/images/layout/favicon.ico" type="image/x-icon">
+	<link type="text/css" rel="stylesheet" href="/static/resources/user/web/css/layout.css">
+	<link type="text/css" rel="stylesheet" href="/static/resources/user/web/css/mizmedi.css"><!-- RN : css 추가 - 강서 강남 공통 -->
+	<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-CGXMRTE1W4&amp;cx=c&amp;gtm=4e59m0h2"></script><script src="https://connect.facebook.net/en_US/sdk.js?hash=032ee57433d11b862cc67830095a9dd0" async="" crossorigin="anonymous"></script><script src="https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.J8aLcn7bYF8.O/m=auth2/exm=client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo-YaQN_2soL6ZNher0ZcTp3d4Q_nw/cb=gapi.loaded_1?le=scs,fedcm_migration_mod" async=""></script><script id="facebook-jssdk" src="https://connect.facebook.net/en_US/sdk.js"></script><script src="https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.J8aLcn7bYF8.O/m=client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo-YaQN_2soL6ZNher0ZcTp3d4Q_nw/cb=gapi.loaded_0?le=scs" async=""></script><script type="text/javascript" src="/static/resources/user/web/js/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript" src="/static/resources/user/web/js/swiper.min.js"></script>
+	<script src="/static/js/com/common.js?ts=1758614260881"></script>
+	<script src="/static/resources/user/web/js/imgLiquid.js"></script><style type="text/css">.imgLiquid img {visibility:hidden}</style>
+	
+	<script src="/static/js/user/intro/popup/doctor.js"></script>
+	<script src="/static/resources/user/web/js/common.js"></script>
+	<script src="/static/js/com/message.js?ts=1758614260881"></script>
+	<style>
+		.intro_doc_pop02 {position:relative;width:100%;min-width:1200px;height:100%;background:#fff;overflow:hidden;}
+		.intro_doc_pop02 #doctorPopupClose {display:block;position:fixed;right:30px;top:15px;width:60px;height:60px;background:url(/static/resources/user/web/images/btn/btn_close03.png) center no-repeat; background-size:30px; text-indent:-9999px;overflow:hidden;z-index:5;transition:all 0.4s;}
+		/** Step01 **/
+		.intro_doc_pop02 #step01 {position:relative;height:960px;overflow:hidden;}
+		.intro_doc_pop02 #step01 .img_bg {position:absolute;left:0;top:0;width:100%;height:897px;overflow:hidden;}
 
-<!-- WRAP -->
-<div id="wrap">
+		/* box_header */
+		.intro_doc_pop02 .box_header {position:relative;height:70px;z-index:3;}
+		.intro_doc_pop02 .box_header h5 {position:absolute;left:43px;top:27px;color:#fff;font-size:28px;}
+		.intro_doc_pop02 .box_header .inner {position:absolute;right:100px;top:27px;}
+		.intro_doc_pop02 .box_header .select_box {margin-right:30px}
+		.intro_doc_pop02 .box_header .select_box ul {left:0}
+		.intro_doc_pop02 .box_header .select_box .design_select {background:transparent;border:none;border-bottom:1px solid #bab9b8;}
+		.intro_doc_pop02 .box_header .select_box .design_select > a {background:url('../images/common/icon_select_01.png') 96% 50% no-repeat;color:#fff;}
+		.intro_doc_pop02 .box_header .select_box .design_select.on {border-bottom:1px solid #bab9b8;}
+		.intro_doc_pop02 .box_header .select_box .design_select ul {background:rgba(255,255,255,0.2);border:none}
+		.intro_doc_pop02 .box_header .select_box .design_select ul li a,
+		.intro_doc_pop02 .box_header .select_box .design_select ul li:first-child a{color:#fff;}
 
-    
-    <div id="doc_profile"><header id="doc_header_wrap"><div class="left_wrap"><span class="list_btn total"><a href="javascript:;" class="m_btn"><em>전체 의료진</em></a> <div class="doc_list total"><div class="list_doc_wrap" style="height: 335px;"><div class="list_office"><ul></ul></div> <div class="list_doc"><strong></strong> </div> <span class="rel_btn"><a href="/page/department/A/undefined/1#ref" class="btn-type03"><em>관련 센터/클리닉</em></a></span> <span class="close_btn"><a href="javascript:;"><em class="blind">닫기</em></a></span></div></div></span> <span class="list_btn office"><a href="javascript:;" class="m_btn"><em>같은 진료과 의료진</em></a> <div class="doc_list same"><div class="list_doc_wrap"><div class="list_doc"><strong></strong> <div><ul></ul></div></div> <span class="rel_btn"><a href="/page/department/A/undefined/1#ref" class="btn-type03"><em>관련 센터/클리닉</em></a></span> <span class="close_btn"><a href="javascript:;"><em class="blind">닫기</em></a></span></div></div></span> <div class="search_doc"><span class="form-text"><label for="searchDrName" class="placeholder">의료진 검색</label> <input type="text" id="searchDrName" autocomplete="off"></span> <button type="button"><em class="blind">검색</em></button></div></div> <div class="right_wrap"><span class="list_btn doc_home_btn"><a href="/page/main"><em>HOME</em></a></span> <span class="list_btn sns_share"><a href="javascript:;"><em>SNS 공유</em></a> <ul><li class="naver"><a href="javascript:;"><em class="blind">네이버 블로그</em></a></li> <li class="facebook"><a href="javascript:;"><em class="blind">페이스북</em></a></li> <li class="talk"><a href="javascript:;"><em class="blind">카카오스토리</em></a></li></ul></span> <span class="favo_heart"><a href="javascript:;"><em>관심 의료진 등록</em></a></span></div></header> <div id="container" class="examination"><div class="doc_profile"><section id="sub_section"><div class="gnb_quick"><ul><li class="reseve"><span><em class="blind">새로운글 있음</em></span> <div><a href="javascript:cmc.util.alert('이 의료진은 온라인 진료예약이 불가능합니다. 콜센터(1661-7575)로 문의해주시기 바랍니다.');"><em>진료예약</em></a></div></li> <li class="profile active"><span><em class="blind">새로운글 있음</em></span> <div><a href="javascript:;"><em>의료진 프로필</em></a></div></li> <!----> <!----> <!----> <!----> <!----> <li class="relation"><span><em class="blind">새로운글 있음</em></span> <div><a href="javascript:layerPopupJs('medical_clinic','medical_clinic_btn');" class="medical_clinic_btn"><em>관련센터/클리닉</em></a></div></li></ul></div> <div class="content"><div class="cont_main"><div class="cont_main_int"><!----> <div class="doc_intro_txt"><div class="doc_name"><em class="ofiice"></em> <strong></strong></div> <div class="doc_int"><p class="imf"></p> <p class="nor"></p></div> <dl><dt><span class="profile_doc_part"><em>진료분야</em></span></dt> <dd><a href="#medical_part_pop" onclick="layerPopupJs('medical_part','medical_part_btn');" class="medical_part_btn"><p></p></a></dd></dl></div> <div class="treat_time normal"><span class="profile_doc_normal"><em>진료시간</em></span> <!----> <div class="ico_type"><span class="ico_pos_dept">과진료</span> <span class="ico_cen_dept">센터진료</span></div> <span class="treat_time_table"><table><caption>의료진 진료시간표</caption> <colgroup><col width="13%"> <col width="*"> <col width="*"> <col width="*"> <col width="*"> <col width="*"> <col width="*"> <col width="*"> <col width="*"></colgroup> <thead><tr><th></th> <th>월</th> <th>화</th> <th>수</th> <th>목</th> <th>금</th> <th>토</th></tr></thead> <tbody><tr><th>오전</th> </tr> <tr><th>오후</th> </tr></tbody></table></span> <span class="add_info"><!----> <a href="/common.hospitalguide.schedule_satur.sp"><p>토요진료는 병원안내 &gt; 토요진료시간표를 확인해주시기 바랍니다.</p></a></span> <span class="reseve_treat denti"><a href="javascript:window.cmc.util.alert('이 의료진은 온라인 진료예약이 불가능합니다. 콜센터(1661-7575)로 문의해주시기 바랍니다.');"><em>진료예약</em></a></span></div></div> <div id="medical_part_pop" class="popup-type01 w-820 medical_part"><div class="popup_wrap"><div class="popup_title"><strong>진료분야</strong></div> <div class="cont_wrap"><div class="medical_part_inner"><strong>진료분야</strong> <p></p></div></div> <div class="popup_close_btn"><a href="javascript:;"><em class="blind">팝업닫기</em></a></div></div></div> <div class="cont_main_profile" style="margin-bottom: 600px;"><div><strong>직위</strong> <ul><li><dl><dt><em>병원</em></dt> <dd><em>
-														<!---->
-													</em></dd></dl></li> <!----> <!----></ul></div> <!----> <!----> <!----> <!----> <!----> <!----></div> <img src="/api/attach/view/doctor/D0000902/profile/1" style="display: none;"> <img src="/api/attach/view/doctor/D0000902/profile/2" style="display: none;"> <span class="icon_mouse"><img src="/ui_common/images/common/icon_scr_dw.png" alt="하단 스크롤 유도 아이콘"></span> <div data-img-1="/api/attach/view/doctor/D0000902/profile/1" data-img-2="/api/attach/view/doctor/D0000902/profile/2" class="cont_bg"><!----></div></div> <div class="cont_detail"><div class="cont_wrap"><!----> <!----> <!----> <!----> <!----></div> <div class="cont_bg"></div></div></div> <div id="select_treat_pop" class="popup-type01 select_treat"><div class="popup_wrap"><div class="popup_title"><strong>선택진료란</strong></div> <div class="cont_wrap"><div><p>제 46조 및 선택진료에 관한 규칙 제 2조에 의거하여 전문의 자격 취득 후 5년 (치과의사는 면허 취득 10년)이<br>경과한 대학병원, 대학부속 치과병원의 조교수 이상인 진료경험이 풍부한 의사를 환자나 그 보호자가 선택하여<br>진료받는 제도를 말합니다.</p> <div class="li-type02"><ul><li><span class="text_color-main">선택진료는 기본진료비 이외에 보건복지부령이 정하는 범위의 추가비용을 본인이 부담해야 합니다.</span></li> <li>진료항목별 상세한 추가비용 산정기준은
-                             <span class="list_btn"><a href="/hospitalguide.selection_care.sp"><em>병원진료</em><em>외래진료안내</em><em>선택진료안내</em></a></span>
-                             에서 확인하실 수 있습니다.</li></ul></div></div></div> <div class="popup_close_btn"><a href="javascript:;"><em class="blind">팝업닫기</em></a></div></div></div> <div id="gallery_list_popup" class="popup-type01 gallery_list_pop"><!----></div></section> <div id="medical_clinic_pop" class="popup-type01 w-820 medical_clinic"><div class="popup_wrap"><div class="popup_title"><strong>관련센터/클리닉</strong></div> <div class="cont_wrap"><div class="medical_part_inner"><strong>관련센터/클리닉</strong> <div class="li-type01"><ul></ul></div></div></div> <div class="popup_close_btn"><a href="javascript:;"><em class="blind">팝업닫기</em></a></div></div></div></div></div></div>
+		/* box_inner_txt */
+		.intro_doc_pop02 .box_inner_txt {position:absolute;left:50%;bottom:198px;width:1200px;margin-left:-600px;z-index:2;}
+		.intro_doc_pop02 .box_inner_txt #title {color:#fff;font-size:40px;line-height:1.2;}
+		.intro_doc_pop02 .box_inner_txt .inner {margin-top:127px;}
+		.intro_doc_pop02 .box_inner_txt .inner * {display:inline-block;vertical-align:middle;}
+		.intro_doc_pop02 .box_inner_txt .s1 {position:relative;min-width:208px;}
+		.intro_doc_pop02 .box_inner_txt .s1 h6 {display:inline-block;padding-top:5px;border-top:4px solid #ceb489;color:#fff;font-size:60px;font-weight:300;line-height:72px;}
+		.intro_doc_pop02 .box_inner_txt .s1 span {position:absolute;left:0;top:-45px;color:#fff;font-size:30px;}
+		.intro_doc_pop02 .box_inner_txt .s2 {position:relative;margin-left:20px}
+		.intro_doc_pop02 .box_inner_txt .s2 dt {color:#fff;font-size:18px;}
+		.intro_doc_pop02 .box_inner_txt .s2 dd {width:415px;margin-left:25px;;color:#fff;font-size:16px;line-height:1.8;}
+		.intro_doc_pop02 .box_inner_txt .s2 dd:after {position:absolute;left:80px;top:8px;bottom:8px;width:1px;background-color:#c8c8c7;content:"";}
+		.intro_doc_pop02 .box_inner_txt .s3 {margin-left:18px;}
+		.intro_doc_pop02 .box_inner_txt .s3 button {width:150px;}
 
+		/* swiper-container2 */
+		.intro_doc_pop02 .swiper-container2 {position:absolute;left:0;bottom:0;width:100%;background:#eaeaea;overflow:hidden;}
+		.intro_doc_pop02 .swiper-container2 .swiper-slide > div {float:left;width:10%;margin-top:10px;color:#000;font-size:18px;}
+		.intro_doc_pop02 .swiper-container2 .swiper-slide > div strong {display:block;height:60px;font-size:60px;font-weight:300;line-height:60px;}
+		.intro_doc_pop02 .swiper-container2 .swiper-slide table {width:90%;height:100%;border:1px solid #dfdfdf;border-top:none;}
+		.intro_doc_pop02 .swiper-container2 .swiper-slide table thead tr th {color:#000;font-size:14px;}
+		.intro_doc_pop02 .swiper-container2 .swiper-slide table thead tr th,
+		.intro_doc_pop02 .swiper-container2 .swiper-slide table tbody tr td {height:36px;border-left:1px solid #dfdfdf}
+		.intro_doc_pop02 .swiper-container2 .swiper-slide table thead tr th:first-child,
+		.intro_doc_pop02 .swiper-container2 .swiper-slide table tbody tr td:first-child {border-left:none;font-size:14px}
+		.intro_doc_pop02 .swiper-container2 .swiper-slide table tbody tr td {position:relative;border-top:1px solid #dfdfdf;text-align:center;}
+		.intro_doc_pop02 .swiper-container2 .swiper-slide table tbody tr.s1 td {color:#000;font-size:13px;height:30px;}
+		.intro_doc_pop02 .swiper-container2 .swiper-slide table tbody tr#doctorPopup_am td {color:#e09a5c}
+		.intro_doc_pop02 .swiper-container2 .swiper-slide table tbody tr#doctorPopup_am td.active:after {display:inline-block;width:6px;height:6px;background-color:#fbba3c;border-radius:3px;text-align:center;content:"";}
+		.intro_doc_pop02 .swiper-container2 .swiper-slide table tbody tr#doctorPopup_pm td {color:#528fa9;}
+		.intro_doc_pop02 .swiper-container2 .swiper-slide table tbody tr#doctorPopup_pm td.active:after {display:inline-block;width:6px;height:6px;background-color:#6ab2d7;border-radius:3px;text-align:center;content:"";}
+		.intro_doc_pop02 .swiper-container2 .swiper-slide table thead tr th.sat,
+		.intro_doc_pop02 .swiper-container2 .swiper-slide table tbody tr td.sat {color:#989898 !important;}
+		.intro_doc_pop02 .swiper-container2 .swiper-slide table thead tr th.sun,
+		.intro_doc_pop02 .swiper-container2 .swiper-slide table tbody tr td.sun {background:rgba(223,223,223,0.8);color:#c00 !important;}
 
+		/** Step02 **/
+		.intro_doc_pop02 #step02 {position:relative;width:1200px;min-height:690px;margin:0 auto;padding:105px 0 60px;}
+		.intro_doc_pop02 #step02 #titleIntroduce {position:relative;color:#000;font-size:34px;line-height:1.5;letter-spacing:-2px;text-align:center;word-wrap:break-word;word-break:keep-all;white-space:normal;}
+		.intro_doc_pop02 #step02 #titleIntroduce:before {display:block;position:absolute;left:50%;top:-25px;width:42px;height:5px;margin-left:-21px;background:#b48cc9;content:"";}
+		.intro_doc_pop02 #step02 .inner {position:relative}
+		.intro_doc_pop02 #step02 .inner img {position:absolute;left:0;top:-45px;z-index:2}
+		.intro_doc_pop02 #step02 .inner div {margin-top:165px;padding-left:635px;}
+		.intro_doc_pop02 #step02 .inner div #contentsOne {font-size:22px;color:#000;line-height:2;letter-spacing:-1.8px}
+		.intro_doc_pop02 #step02 .inner div #contentsTow {margin-top:50px;color:#78511f;font-size:16px;line-height:2;letter-spacing:-1.8px;}
+
+		/** Step03 **/
+		.intro_doc_pop02 #step03 {position:relative;padding:110px 0 150px 0;word-wrap:break-word;word-break:keep-all;white-space:normal;}
+		.intro_doc_pop02 #step03 .img_bg {position:absolute;left:0;top:0;width:100%;height:100%;overflow:hidden;}
+
+		/* inner_top */
+		.intro_doc_pop02 .inner_top {position:relative;width:1200px;height:358px;margin:0 auto 55px auto;font-size:0;z-index:10;}
+		.intro_doc_pop02 .inner_top .list {position:absolute;right:0;top:0;width:585px;padding:40px;background:rgba(0,0,0,0.2);box-sizing:border-box;vertical-align:top;transition:all 0.4s;}
+		.intro_doc_pop02 .inner_top .list:first-child {right:inherit;left:0;}
+		.intro_doc_pop02 .inner_top .list a {display:block;cursor:default;}
+		.intro_doc_pop02 .inner_top h6 {position:relative;margin-bottom:24px;padding-top:23px;color:#fff;font-size:30px;font-weight:300;line-height:30px;}
+		.intro_doc_pop02 .inner_top h6:before {position:absolute;left:0;top:0;;width:42px;height:5px;background:#b48cc9;content:"";}
+		.intro_doc_pop02 .inner_top .inner {position:relative;height:207px;min-height:207px;overflow:hidden;}
+		.intro_doc_pop02 .inner_top li {position:relative;margin-top:13px;color:#fff;font-size:17px;line-height:24px;}
+		.intro_doc_pop02 .inner_top li:first-child {margin-top:0;}
+		.intro_doc_pop02 .inner_top li span {display:inline-block;position:relative;min-width:60px;margin-right:20px;font-weight:300;}
+		.intro_doc_pop02 .inner_top .btn_int_more {display:block;position:absolute;right:35px;top:35px;width:37px;height:37px;text-indent:-9999px;overflow:hidden;transition:all 0.4s;}
+		.intro_doc_pop02 .inner_top .btn_int_more:before {position:absolute;left:5px;top:18px;width:27px;height:1px;background:#fff;content:"";}
+		.intro_doc_pop02 .inner_top .btn_int_more:after {position:absolute;left:18px;top:5px;width:1px;height:27px;background:#fff;content:"";}
+		.intro_doc_pop02 .inner_top .btn_int_more:hover {transform:rotate(180deg);}
+		.intro_doc_pop02 .inner_top .list.on {background:rgba(0,0,0,0.9);}
+		.intro_doc_pop02 .inner_top .list.on .inner {}
+		.intro_doc_pop02 .inner_top .list.on .btn_int_more {transform:rotate(225deg);}
+
+		/* newsqnaList */
+		.intro_doc_pop02 .news_qna_list {position:relative;width:1200px;margin:0 auto;z-index:1;}
+		.intro_doc_pop02 #newsqnaList {position:relative;min-height:636px;margin-top:-40px;overflow:hidden;}
+		.intro_doc_pop02 #newsqnaList li {position:relative;float:left;width:373px;margin:40px 0 0 40px;padding:40px;background:#fff;border:1px solid #e0e0e0;box-sizing:border-box}
+		.intro_doc_pop02 #newsqnaList li:nth-child(3n+1) {margin-left:0;}
+		.intro_doc_pop02 #newsqnaList li a {display:block;}
+		.intro_doc_pop02 #newsqnaList li dl {overflow:hidden;}
+		.intro_doc_pop02 #newsqnaList li dl dt {display:-webkit-box;height:60px;margin-bottom:30px;color:#000;font-size:25px;font-weight:500;line-height:30px;word-wrap:break-word;text-overflow:ellipsis;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+		.intro_doc_pop02 #newsqnaList li dl dd {display:-webkit-box;height:52px;font-size:20px;font-weight:300;line-height:26px;word-wrap:break-word;text-overflow:ellipsis;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+		.intro_doc_pop02 #newsqnaList li a p {position:relative;height:24px;margin-top:30px;font-size:20px;font-weight:300;letter-spacing:0.5px;overflow:hidden;}
+		.intro_doc_pop02 #newsqnaList li a p span {position:absolute;right:0;top:0}
+		.intro_doc_pop02 #newsqnaList li .icon_set {margin-bottom:15px;overflow:hidden;}
+		.intro_doc_pop02 #newsqnaList li .icon_set .icon {padding:0 5px;font-size:16px;font-weight:400;}
+		.intro_doc_pop02 #newsqnaList li .icon_set .icon.class {color:#043546;border:1px solid #043546;}
+
+		/** pagination **/
+		.intro_doc_pop02 .pagination {position:fixed;right:55px;top:50%;width:13px;margin-top:-55px;z-index:50;}
+		.intro_doc_pop02 .pagination a {display:block;position:relative;width:13px;height:13px;margin-top:30px;border:1px solid #fff;border-radius:50%;transition:all 0.4s;}
+		.intro_doc_pop02 .pagination a:first-child {margin-top:0;}
+		.intro_doc_pop02 .pagination a span {display:block;position:absolute;right:33px;top:-7px;color:#fff;opacity:0;transform:translateX(10px);transition:all 0.4s;}
+		.intro_doc_pop02 .pagination a.on {background:#fff;}
+		.intro_doc_pop02 .pagination a.on span {opacity:1;transform:translateX(0);}
+
+		/** Active **/
+		.intro_doc_pop02.ty02 #doctorPopupClose,
+		.intro_doc_pop02.ty03 #doctorPopupClose {background:url(../images/btn/btn_close03_01.png) center no-repeat;}
+		.intro_doc_pop02.ty02 .pagination a {border-color:#c1c1c1;}
+		.intro_doc_pop02.ty02 .pagination a.on {background-color:#c1c1c1;}
+		.intro_doc_pop02.ty02 .pagination a span {color:#c1c1c1;}
+	</style>
+<style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0px;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:400;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{0%{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+
+.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0px;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:lucida grande,tahoma,verdana,arial,sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:400;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{0%{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+
+.fb_dialog{background:#525252b3;position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://connect.facebook.net/rsrc.php/v4/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:700;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://connect.facebook.net/rsrc.php/v4/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://connect.facebook.net/rsrc.php/v4/ya/r/3rhSv5V8j3o.gif) #fff no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:#0006;inset:0;min-height:100%;position:absolute;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba),to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:#fff 0 1px 1px -1px inset;color:#fff;font:700 14px Helvetica,sans-serif;text-overflow:ellipsis;text-shadow:rgba(0,30,84,.296875) 0px -1px 0px;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2),to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:700 12px Helvetica,sans-serif;margin:2px -12px;padding:2px 6px 3px;text-shadow:rgba(0,30,84,.296875) 0px -1px 0px}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:700;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://connect.facebook.net/rsrc.php/v4/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4A4A4A;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4A4A4A;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://connect.facebook.net/rsrc.php/v4/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0)}to{transform:rotate(360deg)}}
+
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+</style></head>
+<body>
+	<!-- loading -->
+	<div id="pageLoading" class="loading">로딩중</div>
+
+	<!-- msg popup -->
+	
+<script>
+var click = true;
+function overClick() {
+     if (click) {
+        console.log("클릭됨");
+        click = !click;
+        
+        // 타이밍 추가
+        setTimeout(function () {
+            click = true;
+        }, 5000)
+        
+     } else {
+         console.log("중복클릭");
+         alertMsg("연속으로 클릭하실 수 없습니다. \n 5초 후 다시 시도해 주시기 바랍니다.");
+     }
+}
+</script>
+<div class="pop_wrap alert_wrap" id="webMsgPopup" style="display: none;">
+	<!-- alert -->
+	<div class="alert" id="alert" style="left:50%; display: none;">
+		<h2>안내</h2>
+		<p id="msgContent"></p>
+		<div class="btn_wrap">
+			<button id="msgBtnAlertOk" class="active tiny">확인</button>
+		</div>
+		<a href="javascript:msgHide()"><img src="/static/resources/user/web/images/btn/pop_btn_close2.png" alt="팝업닫기"></a>
+	</div>
+	
+	<!-- confirm -->
+	<div class="alert" id="confirm" style="left:50%; display: none;">
+		<h2>안내</h2>
+		<p id="msgContent"></p>
+		<div class="btn_wrap">
+			<button id="msgCANCEL" class="default tiny">취소</button>
+			<button id="msgBtnConfirmOk" class="active tiny" onclick="overClick()">확인</button>
+		</div>
+		<a href="javascript:msgHide()"><img src="/static/resources/user/web/images/btn/pop_btn_close2.png" alt="팝업닫기"></a>
+	</div>
+	
+	<!-- A or B -->
+	<div class="alert" id="customizeMsg" style="left:50%; display: none;">
+		<h2>안내</h2>
+		<p id="msgContent"></p>
+		<div class="btn_wrap">
+			<button id="msgBtnA" class="active tiny"></button>
+			<button id="msgBtnB" class="active tiny"></button>
+		</div>
+		<a href="javascript:msgHide()"><img src="/static/resources/user/web/images/btn/pop_btn_close2.png" alt="팝업닫기"></a>
+	</div>
 </div>
-<!--// WRAP -->
+
+<script src="/static/js/user/intro/popup/msg.js?ts=1758614260883"></script>
+
+	<!-- reserve popup -->
+	
 
 
+<div class="pop_wrap" id="webReserve1Popup" style="display: none;">
+	<!-- <input type="hidden" id="hiddenBoardType" value="doctor" /> -->
+	<input type="hidden" id="globalAge" value="">
+
+	<div class="pop_body reserve" style="margin-top:-450px;">
+		<h2>온라인 진료예약/조회</h2>
+		<div class="mCustomScrollbar _mCS_2 mCS_no_scrollbar" style="height:800px"><div id="mCSB_2" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0" style="max-height: 800px;"><div id="mCSB_2_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr"> <!-- 2018-06-15 천혜성 -->			
+			<p>개인정보를 입력하고, 개인정보취급방침에 동의하셔야만 진료예약 및 예약조회가 가능합니다. (고객센터: 1588-2701)</p>
+			<p>(오전)12:30, (오후)17:00 이후 내원 시 진료 또는 검사가 어려울 수 있으니 이전에 방문해주시기 바랍니다.</p>
+			<!--<p style="color:#ff7800;">해외 입국 10일 이후 원내 진료가 가능하오니 진료일을 입국일로부터 10일 경과 후로 예약하여 주시기 바랍니다.</p>-->
+			<h4>실명확인</h4>
+			<div class="table style01">
+				<table>
+					<caption>table title</caption>
+					<colgroup>
+						<col width="260">
+						<col width="940">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>이름</th>
+							<td>
+								<input id="reserve_patName" type="text" maxlength="50/">
+								<em>(외자는 한 칸 띄어쓰기)</em>
+								<em id="reserve_patName_msg" class="sub color1"></em><!--클래스명 color1:오렌지색 , color2:녹색-->
+							</td>
+						</tr>
+						<tr>
+							<th>주민등록번호</th>
+							<td>
+								<input type="text" id="prsnidPre" name="prsnidPre" maxlength="6"><span>-</span><input type="password" id="prsnidPost" name="prsnidPost" maxlength="7">
+								<em id="prsnid_msg" class="sub color1"></em><!--클래스명 color1:오렌지색 , color2:녹색-->
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<h4>개인정보처리방침 동의</h4>
+			<div class="agree_policy terms mCustomScrollbar _mCS_3 mCS_no_scrollbar"><div id="mCSB_3" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0" style="max-height: 178px;"><div id="mCSB_3_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+				
+
+
+<p>
+	미즈메디병원은 정보주체의 자유와 권리 보호를 위해 「개인정보 보호법」 및 관계 법령이 정한 바를 준수하여, 적법하게 개인정보를 처리하고 안전하게 관리하고 있습니다. 이에 「개인정보 보호법」 제30조에 따라 정보주체에게 개인정보 처리에 관한 절차 및 기준을 안내하고, 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리방침을 수립하여 홈페이지(www.mizmedi.com)에 공개합니다.
+</p>
+<p>
+	미즈메디병원의 「개인정보처리방침」은 관련 법률 및 지침의 변경 또는 내부운영방침의 변경에 따라 변경될 수 있으며 변경된 사항을 홈페이지(www.mizmedi.com)을 통하여 공지합니다.
+</p>
+<p>미즈메디병원 개인정보처리방침은 아래와 같은 내용을 담고 있습니다</p>
+<div>
+	<div class="table style02">
+		<table>
+			<tbody>
+				<tr>
+					<td>
+						<p>1. 개인정보의 수집 및 이용목적</p>
+						<p>2. 개인정보의 수집항목 및 방법</p>
+						<p>3. 수집한 개인정보의 이용 및 제3자 제공</p>
+						<p>4. 개인정보처리 업무의 위탁</p>
+						<p>5. 개인정보의 보유 및 이용기간</p>
+						<p>6. 개인정보의 파기절차 및 방법</p>
+						<p>7. 정보주체 및 법정대리인의 권리와 그 행사방법</p>
+						<p>8. 개인정보 보호 책임자의 성명 또는 개인정보 보호업무 및 관련 고충사항을 처리하는 부서의 명칭과 전화번호 등 연락처</p>
+						<p>9. 영상정보처리기기 운영관리 방침</p>
+						<p>10. 개인정보 자동수집장치의 설치/운영 및 거부에 관한 사항</p>
+						<p>11. 개인정보처리방침의 고지 또는 통지방법</p>
+						<p>12. 개인정보의 안전성 확보 조치에 관한 사항</p>
+						<p>13. 아동의 개인정보보호</p>
+						<p>14. 동의철회 / 회원탈퇴방법</p>
+						<p>15. 정책변경에 따른 공지의무</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<style>
+        .table.style03 table.labeling-table tbody tr td {
+            padding: 15px 15px !important;
+        }
+        .table.style03 table.labeling-table tbody tr td:first-child {
+            max-width: 120px;
+        }
+        .labeling-table img {
+            width: 100px;
+        }
+	</style>
+
+	<div class="table style03">
+		<p>&lt;주요 개인정보 처리 표시(라벨링)&gt;</p>
+		<table class="labeling-table">
+			<caption>&lt;주요 개인정보 처리 표시(라벨링)&gt;</caption>
+			<colgroup>
+				<col width="130px">
+				<col width="200px">
+				<col width="">
+			</colgroup>
+			<tbody>
+				<tr>
+					<td>
+						<img src="/static/resources/user/intro/images/privacy_icon1.png" alt="privacy_icon" class="mCS_img_loaded">
+					</td>
+					<td>일반개인정보수집</td>
+					<td>
+						<ul>
+							<li>이름</li>
+							<li>이메일주소</li>
+							<li>핸드폰번호</li>
+							<li>아이디</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="/static/resources/user/intro/images/privacy_icon2.png" alt="privacy_icon" class="mCS_img_loaded">
+					</td>
+					<td>개인정보처리목적</td>
+					<td>
+						<ul>
+							<li>회원가입 및 본인 식별</li>
+							<li>진료/건진예약, 예약조회의 회원제 서비스 제공</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="/static/resources/user/intro/images/privacy_icon3.png" alt="privacy_icon" class="mCS_img_loaded">
+					</td>
+					<td>고충처리부서</td>
+					<td>
+						<ul>
+							<li>처리부서 : 원무팀</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="/static/resources/user/intro/images/privacy_icon4.png" alt="privacy_icon" class="mCS_img_loaded">
+					</td>
+					<td>개인정보 자동수집</td>
+					<td>
+						<ul>
+							<li>쿠키 (Cookie)</li>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+</div>
+<h4>1. 개인정보의 수집 및 이용목적</h4>
+<div>
+	<p>미즈메디병원은 수집된 개인정보를 아래의 목적으로 사용합니다. 수집된 모든 정보는 아래 사용 목적 이외로는 사용되지 않으며 사용목적이 변경되는 경우에는 「개인정보 보호법」 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.</p>
+	<ol>
+		<li>
+			<ul>
+				<li>진료/건진 예약, 예약조회 및 회원제 서비스 이용에 따른 본인 확인 절차에 사용</li>
+				<li>이용자에게 원활한 의료정보 제공을 위한 온라인 및 오프라인에서의 공지기능</li>
+				<li>서비스 품질향상을 목적으로 전화예약 상담 녹취</li>
+				<li>고지사항 전달, 불만처리 등을 위한 원활한 의사소통 경로의 확보, 새로운 서비스 및 행사정보 안내</li>
+				<li>병원 내 진료와 관련된 진료정보서비스 제공: 제증명서 발송, 진료 전/후 정보 제공 등
+					(위 항의 원활한 업무처리를 위하여 개인정보 처리(취급) 업무(DM 등)를 외부 전문업체에 위탁할 수 있으며 해당내용은 홈페이지에 공개)
+				</li>
+				<li>건강검진 관련 서비스 이용</li>
+				<li>진단 및 치료를 위한 진료서비스에 따른 진료비 청구, 수납, 환급 등의 원무 서비스 제공</li>
+				<li>하이패스 (오픈카드 서비스)를 위한 카드정보를 이용한 진료비 결제 승인, 결제금액 안내문자 또는 알림톡 발송</li>
+				<li>교육, 연구, 진료서비스에 필요한 최소한의 분석 자료</li>
+				<li>임상시험심사를 위한 기초 자료</li>
+				<li>차량번호 등록서비스 이용에 따른 본인 확인 절차에 사용</li>
+				<li>병원 홈페이지의 원활한 운영 및 통계분석자료로 활용</li>
+				<li>설문조사, 학술행사 등의 서비스 제공</li>
+				<li>미즈메디병원에서 진행하는 온라인 세미나 및 행사, 건강강좌 관련사항 일체 (사전등록 및 안내메일 발송, 세미나 입장, 세미나 중 질의응답)</li>
+				<li>입사 지원 시 개인정보 수집</li>
+				<li>의무기록 사본발급 온라인 신청</li>
+				<li>외부 영상 CD 등록</li>
+				<li>보안신고 처리 및 결과 회신</li>
+				<li>진료 여정 알림톡 또는 문자 안내</li>
+			</ul>
+		</li>
+	</ol>
+</div>
+<h4>2. 개인정보의 수집항목 및 방법</h4>
+<div>
+	<p>미즈메디병원의 개인정보 수집항목은 아래와 같습니다. 필수항목과 선택항목이 있으며, 선택항목은 입력하지 않더라도 서비스 이용에는 제한이 없습니다.</p>
+	<ol>
+		<li style="font-weight: bold">[만 14세 이상 회원 가입]</li>
+		<li>필수항목: 이름, 생년월일, 성별, 로그인ID, 비밀번호, 휴대폰번호, 이메일</li>
+		<li>선택항목: 병원등록번호, 자택전화번호, 자택주소, 닉네임, 이메일 수신여부</li>
+
+		<li style="font-weight: bold">[만 14세 미만 회원 가입]</li>
+		<li>필수항목: 이름, 생년월일, 성별, 로그인ID, 비밀번호, 휴대폰번호, 이메일, 법정대리인 동의여부 확인</li>
+		<li>선택항목: 병원등록번호, 자택전화번호, 자택주소, 닉네임, 이메일 수신여부</li>
+
+		<li style="font-weight: bold">[예약 신청 및 진료 시]</li>
+		<li>필수항목 : 병원등록번호, 이름, 주민등록번호, 주소, 전화번호, 휴대폰번호, 이메일, 외국인등록번호,보험(건강, 의료급여 등) 자격정보</li>
+		<li>건강정보 : 병력, 가족력 등 진료서비스 제공을 위하여 의료진이 필요하다고 판단되는 개인정보</li>
+
+		<li style="font-weight: bold">[건강검진 예약시]</li>
+		<li>필수항목 : 성명, 성별, 생년월일, 주민등록번호, 이메일, 휴대폰번호, 주소, 검진대상자 자격정보</li>
+		<li>선택항목 : 전화번호, 환자번호</li>
+
+		<li style="font-weight: bold">[전화 예약 상담 녹취]</li>
+		<li>필수항목 : 병원등록번호, 이름, 주민등록번호, 주소, 전화번호, 휴대폰번호</li>
+		<li>건강정보 : 병력, 가족력 등 진료서비스 제공을 위하여 의료진이 필요하다고 판단되는 개인정보</li>
+
+		<li style="font-weight: bold">[진료 일정 알림톡 및 문자 안내]</li>
+		<li>선택항목 : 이름, 등록번호, 전화번호</li>
+
+		<li style="font-weight: bold">[고객 건의함 이용]</li>
+		<li>필수항목 : 이름, 이메일, 전화번호, 방문날짜</li>
+
+		<li style="font-weight: bold">[민원 사무처리 이용]</li>
+		<li>필수항목 : 이름, 휴대전화번호, 환자와의 관계</li>
+
+		<li style="font-weight: bold">[제증명서 발송 시]</li>
+		<li>필수항목 : 팩스번호, 주소, 이름, 생년월일, 휴대폰번호, 가족관계증명서 (대리발급의 경우 필수)</li>
+
+		<li style="font-weight: bold">[건강검진 관련 물품 발송 시]</li>
+		<li>필수항목 : 이름, 주소, 휴대폰번호</li>
+
+		<li style="font-weight: bold">[출산길라잡이, 신생아돌보기 온라인 교육프로그램 신청]</li>
+		<li>필수항목 : 이름, 휴대폰번호</li>
+		<li>선택항목: 병원등록번호</li>
+
+		<li style="font-weight: bold">[진료비 수납 또는 인터넷 결제]</li>
+		<li>필수항목 : 신용카드 결제 시 카드사명, 카드번호 등 결제 승인정보</li>
+
+		<li style="font-weight: bold">[오픈카드]</li>
+		<li>필수항목 : 환자명, 등록번호, 휴대폰번호, 신용카드번호, 카드유효기간 및 생년월일 (단, 생년월일은 오프라인만 해당)</li>
+		<li>선택항목 : 영수증 수령 이메일</li>
+
+		<li style="font-weight: bold">[차량번호 등록]</li>
+		<li>필수항목 : 차량번호, 환자번호</li>
+
+		<li style="font-weight: bold">[의무기록 사본발급 온라인 신청]</li>
+		<li>필수항목 : (신청인 정보) 이름, 로그인ID, 생년월일, 전화번호, 이메일, 신청목적, 환자와의 관계,
+			(환자 정보) 이름, 생년월일, 전화번호
+			(신청정보) 수령희망일, 신청부수, 진료과/의료진, 외래, 입원, 기간, 의무기록서식 종류
+		</li>
+		<li>선택항목 : (환자정보) 병원등록번호</li>
+
+		<li style="font-weight: bold">[건강검진 문진표]</li>
+		<li>필수항목 : 성명, 주민등록번호, 휴대폰번호, 주소, 건강검진 날짜, 결과수령방법, 기재한 문진정보 일체, 선택항목(이메일)</li>
+
+		<li style="font-weight: bold">[외부 영상 CD 등록]</li>
+		<li>필수항목 : 성명, 성별, 환자번호, 생년월일</li>
+
+		<li style="font-weight: bold">[인재채용]</li>
+		<li>인사팀 담당 채용 지원시</li>
+		<li>· 필수항목 : 성명, 생년월일, 성별, 내/외국인, 주소, 휴대전화, 비상연락처, 이메일, 학력사항,병역사항, 자격면허사항, 외국어(테스트명/취득점수/응시일자), 취미/특기, 희망부서</li>
+		<li>· 선택항목 :</li>
+		<li>
+			<ul>
+				<li>개인정보 : 경력사항, 해외연수, 수상경력, 동아리활동, 자기소개서에 지원자가 기재하는 내용, 보훈구분, 보훈번호, 취업지원대상증명서, 가족사항</li>
+				<li>민감정보 : 장애구분, 장애여부, 장애종류, 장애등급, 장애인등록번호, 장애인증명서</li>
+				<li>상시채용 時 : 지원자가 기재하는 모든 항목</li>
+			</ul>
+		</li>
+
+		<li style="font-weight: bold">[개인정보의 수집방법]</li>
+		<li>미즈메디병원은 고객이 진료예약 신청, 개인정보변경 등 서면양식, 미즈메디병원에서 운영하는 홈페이지 회원가입, 전화, 상담게시판, 이메일, 이벤트 응모를 통해 개인정보를 수집합니다.</li>
+	</ol>
+</div>
+<h4>3. 수집한 개인정보의 이용 및 제3자 제공</h4>
+<div>
+	<p>미즈메디병원은 고객의 개인정보를 서비스이용약관 및 개인정보처리방침의 [개인정보의 수집목적 및 이용목적]에서 고지한 범위 또는 서비스이용약관에 명시한 범위 내에서 사용하며, 동범위를 넘어 이용하거나 제3자에게 제공하지 않습니다. 다만 아래의 경우는 예외로 합니다.</p>
+	<ol>
+		<li>
+			<ul>
+				<li>정보주체로부터 별도의 동의를 받는 경우</li>
+				<li>법령의 규정에 의거하거나 수사목적으로 법령에 정해진 절차와 방법에 따라 수사기관의 요구가 있는 경우</li>
+			</ul>
+		</li>
+		<li>
+			<div class="table style03">
+				<table>
+					<caption>수집한 개인정보의 이용 및 제3자 제공</caption>
+					<colgroup>
+						<col width="18%">
+						<col width="23%">
+						<col width="18%">
+						<col width="23%">
+						<col width="18%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>
+								제공받는 기관
+							</th>
+							<th>
+								제공목적
+							</th>
+							<th>
+								제공근거
+							</th>
+							<th>
+								제공하는 개인정보 항목
+							</th>
+							<th>
+								이용기간
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								건강보험심사평가원
+							</td>
+							<td>
+								신의료비급여진료비산정근거마련
+							</td>
+							<td>
+								국민건강보험요양급여의 기준에 관한 규칙 제 10조1항
+							</td>
+							<td>
+								진료비 세부 내역서<br>(환자명, 환자등록번호, 주소일부)
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								건강보험심사평가원
+							</td>
+							<td>
+								환자경험평가대상자
+							</td>
+							<td>
+								의료법 제21조, 국민건강보험법 제96조
+							</td>
+							<td>
+								환자 전화번호
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								건강보험심사평가원
+							</td>
+							<td>
+								난임시술기관 신뢰도점검
+							</td>
+							<td>
+								모자보건법 제11조의3, 제11조의6<br>모자보건법 시행규칙 제12조의5, 제12조의6
+							</td>
+							<td>
+								환자등록번호, 환자명, 생년월일, 성별, 진료기록
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								건강보험심사평가원
+								자치단체(시,군,구청)
+								국민건강보험공단
+							</td>
+							<td>
+								급여비용 청구, 사전승인신청, 사후자료제출, 심사, 지급, 대상여부확인, 적정성평가
+							</td>
+							<td>
+								국민건강보험법 제13조, 제43조, 제56조, 의료급여법 제5조, 제11조, 제33조, 의료법 제21조, 국민건강보험법 제 63조,개인정보보호법 제15조, 제18조, 통계법 제33조
+							</td>
+							<td>
+								성명, 주민등록번호, 진단명, 진료내역
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								국민건강보험공단
+							</td>
+							<td>
+								상병발생경위확인
+							</td>
+							<td>
+								의료법 제21조 제3항 제4호, 국민건강보험법 제96조
+							</td>
+							<td>
+								환자등록번호, 환자명, 생년월일,성별, 진료기록
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								국민건강보험공단
+							</td>
+							<td>
+								결핵 산정특례 대상자 치료종결확인
+							</td>
+							<td>
+								보건복지부 고시 본인일부부담금 산정특례에 관한 기준<br>제7조 제9항, 제10항
+							</td>
+							<td>
+								환자등록번호, 환자명, 생년월일, 성별, 진료기록
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								국민건강보험공단
+							</td>
+							<td>
+								상병발생경위확인
+							</td>
+							<td>
+								국민건강보험법 제96조, 의료법 제21조3항 제4호
+							</td>
+							<td>
+								성명, 주민등록번호, 진단명, 진료내역
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								근로복지공단
+							</td>
+							<td>
+								급여비용 심사 지급 대상여부 확인
+							</td>
+							<td>
+								산업재해보상보험법 제31조
+							</td>
+							<td>
+								성명, 주민등록번호, 진단명, 진료내역
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								근로복지공단
+							</td>
+							<td>
+								요양급여비용신청, 산재보험유족급여 지급
+							</td>
+							<td>
+								의료법 제21조 제3항 제8호, 산업재해보상보험법 제118조
+							</td>
+							<td>
+								환자등록번호, 환자명, 생년월일, 성별, 진료기록
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								자동차보험진료수가분쟁심의회
+							</td>
+							<td>
+								자동차보험 진료비 심사청구사건 심의
+							</td>
+							<td>
+								자동차보험진료수가 심사업무처리에 관한 규정 제33조
+							</td>
+							<td>
+								성명, 주민등록번호, 진단명, 진료내역
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								질병관리본부
+							</td>
+							<td>
+								법정 감염병 보고
+							</td>
+							<td>
+								감염병 예방 및 관리에 관한 법률 제11조
+							</td>
+							<td>
+								[진료기록 정보]<br>성명, 주민등록번호, 진단명, 진료내역 등
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								법원
+							</td>
+							<td>
+								문서제출 명령
+							</td>
+							<td>
+								의료법 제21조 제3항 제7호, 민사소송법 제347조
+							</td>
+							<td>
+								환자등록번호, 환자명, 생년월일, 성별, 진료기록
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								법원
+							</td>
+							<td>
+								압수수색영장, 수사협조의뢰
+							</td>
+							<td>
+								의료법 제21조 제3항 제6호, 형사소송법 제106조, 제215조, 제218조
+							</td>
+							<td>
+								환자등록번호, 환자명, 생년월일, 성별, 진료기록
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								중앙암등록본부
+							</td>
+							<td>
+								국가 암환자 통계 산출
+							</td>
+							<td>
+								암관리법 제14조
+							</td>
+							<td>
+								나이, 주민등록번호, 이름, 성별, 외국인여부(주민등록번호 뒷자리로 자동체크), 직업, 주소(상세주소 제외) 초진연월일, 진단경로, 원발부위, 편측/양측성, 조직학적진단, 분화도, 사망년월일, 사망원인, 진단방법, 치료시행여부, 치료종류, SEER병기, TNM, Stage병기, 전이부위
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								중앙암등록분부
+							</td>
+							<td>
+								암환자의 (통계청)사망여부 확인
+							</td>
+							<td>
+								본원 암환자의 사망정보 처리<br>연 1회 통계청 사망정보 업데이트 후 폐기
+							</td>
+							<td>
+								주민등록번호, 이름(끝자리*마스킹)
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								질병관리청
+							</td>
+							<td>
+								코로나 이상반응
+								법정감염병역학조사
+							</td>
+							<td>
+								의료법 제21조 제3항 제16호<br>감염병의 예방 및 관리에 관한 법률 제18조의4 및 제29조
+							</td>
+							<td>
+								[진료기록 정보]<br>성명, 주민등록번호, 진단명, 진료내역 등
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								보건소
+							</td>
+							<td>
+								수혈감염 역추적조사
+							</td>
+							<td>
+								혈액관리법 제8조의2, 혈액관리법 시행규칙 제2조의2, 제7조 및 별표 1의2, 질병관리요인 채혈금지대상자 범위 지정 고시(보건복지부 고시)
+							</td>
+							<td>
+								환자등록번호, 환자명, 생년월일, 성별, 진료기록, 수혈자 정보
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								보건소
+							</td>
+							<td>
+								미숙아,선천성이상아보고
+							</td>
+							<td>
+								모자보건법 제8조 제4상 및 동법 시행규칙 제7조의2 제1항
+							</td>
+							<td>
+								성명(출생아 모), 생년월일(출생아 모), 주소, 전화번호, 분만기관명, 분만일, 보조생식술 여부, 다태아 여부, 출생 시 아기 체중, 임신기간, 분만시 발견된 선천성이상아 소견
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								한국의약품안전관리원
+							</td>
+							<td>
+								의약품부작용피해조사
+							</td>
+							<td>
+								약사법 제86조의 3 제2항, 제86조의6 제1항 및<br>법제처 법령해석례(15-200) 의거
+							</td>
+							<td>
+								환자등록번호, 환자명, 생년월일, 성별, 진료기록
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								통계청
+							</td>
+							<td>
+								사망원인보완조사
+							</td>
+							<td>
+								통계법 제17조, 제25조, 제41조, 제23조<br>관련모자보건법 제8조 제3항 시행규칙 제7조
+							</td>
+							<td>
+								영아성명, 영아 주민등록번호, 주소, 사망일자, 사망장소, 사망시간, 다태상태, 총 출생순위, 분만방법, 임신주수, 출생 시 체중, 사망원인, 분만시간, 출생시 두위, 출생시 신장, 아프가점수, 산전관리, 직전 임신 결과, 모의 임신·분만기간 중 질환, 모의 임신 중 혈압, 모의 임신 중 체중,<br>모 주민등록번호, 모 신장, 흡연력, 배우자유무, 최종학력, 직업, 국적<br>** 조사항목 중 정확히 확인된 정보만 제공되며, 이외 정보는 공란 처리보고
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								국세청
+							</td>
+							<td>
+								연말정산용 후원금 신고
+							</td>
+							<td>
+								소득세법 제160조의3
+							</td>
+							<td>
+								[후원인 정보]<br>성명, 주민등록번호, 집주소, 집연락처, 핸드폰
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								국민연금공단
+							</td>
+							<td>
+								장애등록심사
+							</td>
+							<td>
+								의료법 제21조 제3항 제15호, 장애인복지법 제32조 제7항
+							</td>
+							<td>
+								환자등록번호, 환자명, 생년월일, 성별, 진료기록
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								국민연금공단
+							</td>
+							<td>
+								국민연금급여(장애, 유족연금) 지급
+							</td>
+							<td>
+								의료법 제21조 제3항 제14호, 국민연금법 제123조
+							</td>
+							<td>
+								환자등록번호, 환자명, 생년월일, 성별, 진료기록
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								병무청
+							</td>
+							<td>
+								병역 의무자 장애진단 확인용
+							</td>
+							<td>
+								의료법 제21조 제3항 제6호, 병역법 제11조의2
+							</td>
+							<td>
+								환자등록번호, 환자명, 생년월일, 성별, 진료기록
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</li>
+	</ol>
+</div>
+<h4>4. 개인정보처리 업무의 위탁</h4>
+<div>
+	<ol>
+		<li>
+			미즈메디병원은 보다 나은 서비스 제공, 고객 편의 제공 등 원활한 업무수행을 위하여 다음과 같이 개인정보처리업무를 외부 전문업체에 위탁하여 운영하고 있습니다.
+			<div class="table style03">
+				<table>
+					<caption>개인정보 파일의 처리목적, 보유기간, 처리하는 개인정보의 항목</caption>
+					<colgroup>
+						<col width="23%">
+						<col width="auto">
+						<col width="auto">
+						<col width="18%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>수탁자</th>
+							<th>위탁하는 업무의 내용</th>
+							<th>위탁하는 정보</th>
+							<th>개인정보 보유기간</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								아워홈
+							</td>
+							<td>
+								급식 업무
+							</td>
+							<td>
+								이름, 환자등록번호, 생년월일, 성별, 국적
+							</td>
+							<td>
+								위탁계약 종료시까지
+							</td>
+						</tr>
+						<tr>
+							<td>
+								KTis
+							</td>
+							<td>
+								전화예약
+							</td>
+							<td>
+								이름, 병원등록번호, 주민번호, 주소, 전화번호
+							</td>
+							<td>
+								위탁계약 종료시까지
+							</td>
+						</tr>
+						<tr>
+							<td>
+								인사이트헬스케어
+							</td>
+							<td>
+								원격 판독업체
+							</td>
+							<td>
+								이름, 생년월일, 성별, 영상정보
+							</td>
+							<td>
+								위탁계약종료시까지
+							</td>
+						</tr>
+						<tr>
+							<td>
+								청라고려의원
+							</td>
+							<td>
+								영상의학판독
+							</td>
+							<td>
+								이름,병원등록번호,생년월일,성별,영상정보
+							</td>
+							<td>
+								위탁계약종료시까지
+							</td>
+						</tr>
+						<tr>
+							<td>
+								삼구아이앤씨
+							</td>
+							<td>
+								주차, 보안 관리업무
+							</td>
+							<td>
+								이름, 전화번호, 차량번호
+							</td>
+							<td>
+								위탁계약 종료시까지
+							</td>
+						</tr>
+						<tr>
+							<td>
+								캔서롭
+							</td>
+							<td>
+								위탁 검체 검사 업무 – 연구
+							</td>
+							<td>
+								이름, 환자등록번호, 생년월일, 성별, 국적
+							</td>
+							<td>
+								위탁계약 종료시까지
+							</td>
+						</tr>
+						<tr>
+							<td>
+								의료법인
+								녹십자의료재단
+							</td>
+							<td>
+								위탁 검체 검사 업무 – 병리검사, 진단의학검사
+							</td>
+							<td>
+								이름, 환자등록번호, 생년월일, 성별, 국적
+							</td>
+							<td>
+								위탁계약 종료시까지
+							</td>
+						</tr>
+						<tr>
+							<td>
+								서울대학교병원
+							</td>
+							<td>
+								위탁검체 검사업무 – 부검
+							</td>
+							<td>
+								이름, 환자등록번호, 생년월일, 성별, 국적
+							</td>
+							<td>
+								위탁계약 종료시까지
+							</td>
+						</tr>
+						<tr>
+							<td>
+								서울의과학
+								연구소
+							</td>
+							<td>
+								위탁 검체 검사 업무 - 진단의학검사
+							</td>
+							<td>
+								이름, 환자등록번호, 생년월일, 성별, 국적
+							</td>
+							<td>
+								위탁계약 종료시까지
+							</td>
+						</tr>
+						<tr>
+							<td>
+								엘에이에스
+							</td>
+							<td>
+								위탁 검체 검사 업무 - 진단의학검사
+							</td>
+							<td>
+								이름, 환자등록번호, 생년월일, 성별, 국적
+							</td>
+							<td>
+								위탁계약 종료시까지
+							</td>
+						</tr>
+						<tr>
+							<td>
+								테라젠지놈케어
+							</td>
+							<td>
+								위탁 검체 검사 업무 – 연구
+							</td>
+							<td>
+								이름, 환자등록번호, 생년월일, 성별, 국적
+							</td>
+							<td>
+								위탁계약 종료시까지
+							</td>
+						</tr>
+						<tr>
+							<td>
+								메디링스
+							</td>
+							<td>
+								모바일 국가검진 문진표 발송, 모바일 검진 결과지 발송
+							</td>
+							<td>
+								이름, 환자등록번호, 생년월일, 성별, 핸드폰번호, 이메일주소
+							</td>
+							<td>
+								계약 종료시까지
+							</td>
+						</tr>
+						<tr>
+							<td>
+								다인소프트
+							</td>
+							<td>
+								국가검진 수검항목 조회 및 수검결과지 발송, 공단청구
+							</td>
+							<td>
+								이름, 주소, 환자등록번호, 주민등록번호, 전화번호, 핸드폰번호, 이메일주소, 보험증번호
+							</td>
+							<td>
+								위탁계약 종료시까지
+							</td>
+						</tr>
+						<tr>
+							<td>
+								봄마루
+							</td>
+							<td>
+								홈페이지 서버유지보수,홈페이지 유지보수
+							</td>
+							<td>
+								이름, 생년월일, 성별, 로그인ID, 비밀번호, 핸드폰번호,<br>이메일, 환자등록번호, 자택 전화번호, 자택 주소
+							</td>
+							<td>
+								위탁계약 종료시까지
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</li>
+	</ol>
+</div>
+
+<h4>5. 개인정보의 보유 및 이용기간</h4>
+<div>
+	<ol>
+		<li>
+			<p>개인정보는 미즈메디병원이 고객에게 서비스를 제공하는 기간 동안에 한하여 보유 및 이용됩니다.</p>
+		</li>
+		<li>
+			<ul>
+				<li>병원 내 진료와 관련된 진료서비스의 제공을 위하여 수집된 경우 의료법 기준에 준합니다. (필요시 연장가능)</li>
+				<li>신용정보의 수집/처리 및 이용 등에 관한 정보의 경우: 신용정보의 이용 및 보호에 관한 법률에 따라 3년간 보존 (보존항목: 카드사명, 카드번호 등 카드결제 승인정보)</li>
+				<li>고객건의함(오프라인) 서비스를 이용하기 위해 수집된 경우: 1년 보관 후 파기</li>
+				<li>차량번호 등록서비스 이용 시: 본인요청에 따라 변경 및 삭제 가능합니다. 수집 목적 또는 제공받는 목적이 달성된 경우에도 기타 관련 법령의 규정에 따라 보존할 필요성이 있는 경우에는 개인정보를 보유할 수 있음</li>
+				<li>홈페이지 회원가입의 경우: 홈페이지/모바일 통합 회원 탈퇴 또는 제명된 즉시 삭제됩니다.</li>
+				<li>입사 지원시 : 수집·이용 목적이 달성될 때 까지, (상시 채용 등록 時) 지원자의 동의 철회시까지</li>
+			</ul>
+		</li>
+		<li>
+			<p>수집목적 또는 제공받는 목적이 달성된 경우에도 상법 등 법령의 규정 또는 진료의 연속성, 연구 및 제증명서 발급을 위하여 보존할 필요성이 있다고 판단되는 경우 법적보관연한 경과 후에도 귀하의 개인정보를 보유할 수 있습니다. 아울러 법적 보관연한이 경과한 기록에 한하여 환자본인이 폐기요청을 하는 경우에는 지체없이 파기합니다.</p>
+		</li>
+	</ol>
+</div>
+
+<h4>6. 개인정보의 파기절차 및 방법</h4>
+<div>
+	<p>미즈메디병원은 수집한 개인정보의 이용목적이 달성된 후에는 보관기관 및 이용기간에 따라 해당정보를 지체없이 파기합니다. 파기절차 및 방법은 다음과 같습니다.</p>
+
+	<ol style="padding-left: 1em">
+		<li>1) 파기절차: 회원님이 회원가입 등을 위해 입력하신 정보는 목적이 달성된 후 내부방침 및 기타 관련 법령에 의한 정보보호 사유에 따라 삭제되거나 파기합니다.</li>
+		<li>2) 파기방법: 전자적 파일 형태의 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다. 종이에 출력된 개인정보는 파쇄 또는 융해하여 파기합니다.</li>
+	</ol>
+</div>
+
+<h4>7. 정보주체 및 법정대리인의 권리와 그 행사방법</h4>
+<div>
+	<p>정보주체는 다음과 같은 권리를 행사할 수 있으며, 만14세 미만 아동의 법정대리인은 그 아동의 개인정보에 대한 열람, 정정, 삭제, 처리정지를 요구할 수 있습니다.</p>
+	<ol>
+		<li>
+			<p>[개인정보 열람 요구]</p>
+			<ol style="padding-left: 1em">
+				<li>1) 병원에서 보유하고 있는 개인정보파일은 개인정보 보호법 제35조(개인정보의 열람)에 따라 본인의 개인정보에 대한 열람을 요구할 수 있습니다.</li>
+				<li>2) 정보주체 본인의 진료정보에 대한 열람/증명 접수 처리시에는 고객의 신분을 나타내는 주민등록증, 여권, 운전면허증 등의 신분증명서를 제출하여 본인 여부를 확인합니다.</li>
+				<li>3) 정보주체의 대리인이 방문하여 진료정보의 열람/증명을 요구하는 경우에는 정보주체의 신분증명서, 대리인의 신분증명서, 가족관계증명서 및 주민등록등 초본, 대리관계를 나타내는 동의서 및 위임장 등의 증표를 제시 받아 진정한 대리인인지 여부를 확인합니다.</li>
+				<li>4) 개인정보의 전부 또는 일부에 대하여 열람/증명 또는 정정을 거절할 이유가 있는 경우에는 고객에게 이를 통지하고 그 이유를 설명합니다.</li>
+			</ol>
+		</li>
+		<li>
+			<p>[개인정보 정정·삭제 요구]</p>
+			<ol style="padding-left: 1em">
+				<li>1) 병원에서 보유하고 있는 개인정보파일은 개인정보 보호법 제36조(개인정보의 정정·삭제)에 따라 정정·삭제를 요구할 수 있습니다. 다만, 다른 법령에서 그 개인정보가 수집 대상으로 명시되어 있는 경우에는 그 삭제를 요구할 수 없습니다.</li>
+			</ol>
+		</li>
+		<li>
+			<p>[개인정보 처리정지 요구]</p>
+			<ol style="padding-left: 1em">
+				<li>1) 병원에서 보유하고 있는 개인정보파일은 개인정보 보호법 제37조(개인정보의 처리정지 등)에 따라 처리정지를 요구할 수 있습니다. 다만, 개인정보 처리정지 요구 시 법 제37조 2항에 의하여 처리정지 요구가 거절 될 수 있습니다.</li>
+				<li>
+					<ul>
+						<li>법률에 특별한 규정이 있거나 법령상 의무를 준수하기 위하여 불가피한 경우</li>
+						<li>다른 사람의 생명, 신체를 해할 우려가 있거나 다른 사람의 재산과 그 밖의 이익을 부당하게 침해할 우려가 있는 경우</li>
+						<li>공공기관이 개인정보를 처리하지 아니하면 다른 법률에서 정하는 소관 업무를 수행할 수 없는 경우</li>
+						<li>개인정보를 처리하지 아니하면 정보주체와 약정한 서비스를 제공하지 못하는 등 계약의 이행이 곤란한 경우로서 정보주체가 그 계약의 해지의사를 명확하게 밝히지 아니한 경우</li>
+					</ul>
+				</li>
+				<li>병원에 대해 위 항에 대한 권리행사는 개인정보 보호법 시행규칙 별지 제8호 서식에 따라 서면, 전자우편, 모사전송(FAX) 등을 통하여 하실 수 있습니다.</li>
+			</ol>
+		</li>
+	</ol>
+</div>
+
+<h4>8. 개인정보 보호 책임자의 성명 또는 개인정보 보호업무 및 관련 고충사항을 처리하는 부서의 명칭과 전화번호 등 연락처</h4>
+<div>
+	<p>병원은 고객의 개인정보를 보호하고 개인정보와 관련한 불만을 처리하기 위하여 아래와 같이 관련 부서 및 개인정보관리책임자를 지정하고 있습니다.</p>
+	<ol>
+		<li>
+			<p>개인정보보호책임자 : 기획조정실장 노영호</p>
+		</li>
+		<li>
+			<p>개인정보실무담당자 : 정보보안실무책임자 – 전산실장 김종암</p>
+			<p style="padding-left: 9em">정보보호실무책임자 – 의무기록실장 최숙희</p>
+			<p style="padding-left: 9em">*의료영상정보 : 영상의학실장 김종승</p>
+			<p style="padding-left: 9em">*홈페이지 : 홍보팀</p>
+			<p style="padding-left: 9em">물리적보안실무책임자 – 건축팀 과장 김도윤</p>
+		</li>
+		<li>
+			<p>[홈페이지 개인정보 열람청구 접수·처리부서]</p>
+			<p>부서명 : 홍보팀</p>
+			<p>연락처 : 02-2007-1238. webmaster@mizmedi.com</p>
+		</li>
+		<li>
+			<p>[진료정보 개인정보 열람청구 접수·처리부서]</p>
+			<p>부서명 : 의무기록실</p>
+			<p>연락처 : 02-2007-1041 , shchoi1964@mizmedi.com</p>
+		</li>
+	</ol>
+</div>
+
+<h4>9. 영상정보처리기기 운영관리 방침</h4>
+<div>
+	<p>병원은 다음과 같이 영상정보처리기기를 운영·관리하고 있습니다.</p>
+	<ol>
+		<li>
+			<p>1. 설치 근거 및 설치 목적</p>
+			<ol style="padding-left: 1em">
+				<li>개인정보보호법 제25조 제1항에 따라 환자 및 시설 안전, 화재예방, 고객의 안전을 위한 범죄 예방, 차량의 도난 및 파손방지 등</li>
+			</ol>
+		</li>
+		<li>
+			<p>2. 설치대수, 설치 위치 및 촬영범위</p>
+			<ol style="padding-left: 1em">
+				<li>설치대수: 250대</li>
+				<li>설치 위치 및 촬영 범위 : 로비, 복도, 주차장, 도로, 승강기 등</li>
+				<li>※ 설치 수량과 위치 등은 효율적인 관리를 위하여 변경 가능</li>
+			</ol>
+		</li>
+		<li>
+			<p>3. 담당부서 및 관리책임자</p>
+			<ul>
+				<li>관리책임자 : 보안팀</li>
+				<li>전화번호 : 02-2007-1102</li>
+				<li>기타 : 기기의 설치 및 유지 등은 전기통신파트 담당</li>
+			</ul>
+		</li>
+		<li>
+			<p>4. 영상정보의 촬영시간, 보관기간, 보관장소 및 처리방법</p>
+			<ul>
+				<li>촬영시간 : 24시간 촬영(모션 감지에 의한 녹화)</li>
+				<li>보관기간 : 촬영일로부터 14일이내 (주차장은 1개월까지 보관, 보관기간 경과 시 자동 삭제)</li>
+				<li>보관장소 : 보안팀</li>
+				<li>처리방법 : 개인영상정보의 목적 외 이용, 제3자 제공, 파기, 열람 등 요구에 관한 사항을 기록·관리하고, 보관기간 만료시 디지털 방식에 의하여 영구 자동 삭제되며, 출력물의 경우에는 파쇄 또는 소각합니다.</li>
+			</ul>
+		</li>
+		<li>
+			<p>5. 개인영상정보의 신청 방법 및 장소에 관한 사항</p>
+			<ul>
+				<li>신청방법 : 사전 연락 후 신청 (사건/사고 등과 관계되었을 경우, 경찰에 의한 열람)</li>
+				<li>신청장소 : 보안팀</li>
+				<li>전화번호 : 02-2007-1102</li>
+			</ul>
+		</li>
+		<li>
+			<p>6. 정보주체의 영상정보 열람 등 요구에 대한 조치</p>
+			<ol style="padding-left: 1em">
+				<li>귀하는 개인영상정보에 관하여 열람 또는 존재확인 등을 원하는 경우 언제든지 영상정보처리기기 운영자에게 요구하실 수 있습니다. 단, 귀하가 촬영된 개인영상정보 및 명백히 정보주체의 급박한 생명, 신체, 재산의 이익을 위하여 필요한 개인영상정보에 한정됩니다. 정보주체의 열람 등 청구에도 불구하고 아래와 같은 경우에는 개인영상정보 열람 등 청구를 거부할 수 있습니다.</li>
+				<ol style="padding-left: 1em">
+					<li>1) 개인영상정보의 보관기간이 경과하여 파기된 경우</li>
+					<li>2) 법률에 따라 열람이 금지되거나 제한되는 경우(개인정보보호법 등)</li>
+					<li>3) 기타정보주체의 열람 등 요구를 거부할 만한 정당한 사유가 존재하는 경우</li>
+				</ol>
+			</ol>
+		</li>
+		<li>
+			<p>7. 영상정보의 보호를 위한 기술적·관리적 및 물리적 조치</p>
+			<ol style="padding-left: 1em">
+				<li>병원에서 처리하는 영상정보는 암호화 조치 등을 통하여 안전하게 관리되고 있습니다. 또한, 병원은 개인영상정보보호를 위한 관리적 대책으로서 개인정보에 대한 접근 권한을 차등 부여하고 있고, 개인영상정보의 위•변조 방지를 위하여 개인영상정보의 생성 일시, 열람 시 열람목적, 열람자 등을 기록하여 관리하고 있습니다. 이외에도 개인영상정보의 안전한 물리적 보관을 위하여 잠금장치를 설치하고 있습니다.</li>
+			</ol>
+		</li>
+	</ol>
+</div>
+
+<h4>10. 개인정보 자동수집장치의 설치/운영 및 거부에 관한 사항</h4>
+<div>
+	<p>병원은 개인화되고 맞춤화된 서비스를 제공하기 위해서 이용자의 정보를 저장하고 수시로 불러오는 '쿠키(cookie)'를 사용합니다. 쿠키란 웹 서버가 웹 브라우저에 보내어 저장했다가 서버의 부가적인 요청이 있을 때 다시 서버로 보내주는 문자열 정보를 말합니다. 고객님께서 웹사이트에 접속을 하시면 고객님의 브라우저에 있는 쿠키의 내용을 읽고, 추가 정보를 찾아 접속에 따른 성명 등의 추가 입력 없이 서비스를 제공할 수 있습니다.</p>
+	<ol>
+		<li>
+			<p>가. 쿠키의 사용 목적</p>
+			<p>이용자들이 방문한 병원의 각 서비스와 웹 사이트들에 대한 방문 및 이용형태, 인기 검색어, 보안접속 여부, 뉴스편집, 이용자 규모 등을 파악하여 이용자에게 최적화된 정보 제공을 위하여 사용합니다.</p>
+		</li>
+		<li>
+			<p>나. 쿠키의 설치/운영 및 거부</p>
+			<p>이용자는 쿠키 설치에 대한 선택권을 가지고 있습니다.</p>
+			<p>웹 브라우저 상단의 “도구&gt; 인터넷옵션&gt; 개인정보&gt; 고급” 에서 모든 쿠키를 다 받아들이거나, 쿠키가 설치될 때 통지를 보내도록 하거나, 아니면 모든 쿠키를 거부할 수 있습니다.</p>
+			<p>만약, 이용자께서 쿠키 설치를 거부하였을 경우 서비스 이용에 불편이 있거나, 서비스 제공에 어려움이 있을 수 있습니다.</p>
+			<p>다만, 쿠키의 저장을 거부할 경우에는 로그인이 필요한 일부 서비스는 이용에 어려움이 있을 수 있습니다.</p>
+		</li>
+	</ol>
+</div>
+
+<h4>11. 개인정보처리방침의 고지 또는 통지방법</h4>
+<div>
+	<p>미즈메디병원이 개인정보 수집 시 고지한 범위 또는 서비스이용약관, 본 개인정보처리방침에 명시한 범위를 넘어 고객의 개인정보를 이용하거나 제3자에게 제공하기 위해 고객의 동의를 얻고자할 때에는 미리 고객에게 개별적으로 서면, 전자우편, 전화 등으로 해당사항을 고지합니다.</p>
+	<p>타인에게 고객의 개인정보의 수집ㆍ처리ㆍ관리 등을 위탁하는 경우에는 가입신청서, 서비스이용약관, 홈페이지의 개인정보처리방침 등을 통하여 그 사실을 고객에게 고지합니다.</p>
+	<p>미즈메디병원이 영업의 전부 또는 일부를 양도하거나 합병ㆍ상속 등으로 그 권리, 의무를 이전하는 경우 서면ㆍ전자우편 등을 통하여 고객에게 개별적으로 통지함과 동시에 홈페이지(www.mizmedi.com)에 공지합니다.</p>
+	<p>14세 미만 아동의 개인정보 수집ㆍ이용 또는 제3자에게 제공하기 위하여 법정대리인의 동의를 구하고 있습니다. 이를 위해 아동으로부터 법정대리인의 성명과 연락처 등 최소한의 정보를 수집하고 있으며, 개인정보 처리방침에서 규정하고 있는 방법에 따라 법정대리인의 동의를 바고 있습니다.</p>
+</div>
+
+<h4>12. 개인정보의 안전성 확보 조치에 관한 사항</h4>
+<div>
+	<p>미즈메디병원은 정보주체의 개인정보를 안전하게 관리하기 위해 개인정보보호법 제29조에 따라 다음과 같이 안전성 확보에 필요한 기술적·관리적 및 물리적 조치를 하고 있습니다.</p>
+	<ol>
+		<li>
+			<p>[정기적인 자체 현장검사 실시]</p>
+			<ul>
+				<li>개인정보 취급 관련 안정성 확보를 위해 정기적으로 년 1회 이상 자체 현장검사를 실시하고 있습니다.</li>
+			</ul>
+		</li>
+		<li>
+			<p>[개인정보 취급 직원의 최소화 및 교육]</p>
+			<ul>
+				<li>개인정보를 취급하는 직원을 지정하고 담당자에 한정시켜 최소화하여 개인정보를 관리하는 대책을 시행하고 정기적인 교육을 시행하고 있습니다.</li>
+			</ul>
+		</li>
+		<li>
+			<p>[내부관리계획의 수립 및 시행]</p>
+			<ul>
+				<li>개인정보의 안전한 처리를 위하여 내부관리계획을 수립하고 시행하고 있습니다.</li>
+			</ul>
+		</li>
+		<li>
+			<p>[해킹 등에 대비한 기술적 대책]</p>
+			<ul>
+				<li>해킹이나 컴퓨터 바이러스 등에 의한 개인정보 유출 및 훼손을 막기 위하여 보안프로그램을 설치하고 주기적인 갱신·점검을 하며 외부로부터 접근이 통제된 구역에 시스템을 설치하고 기술적/물리적으로 감시 및 차단하고 있습니다.</li>
+			</ul>
+		</li>
+		<li>
+			<p>[개인정보의 암호화]</p>
+			<ul>
+				<li>정보주체의 주민등록번호, 비밀번호는 암호화 되어 저장 및 관리되고 있어, 본인만이 알 수 있으며 중요한 데이터는 파일 및 전송 데이터를 암호화 하거나 파일 잠금 기능을 사용하는 등의 별도 보안기능을 사용하고 있습니다.</li>
+			</ul>
+		</li>
+		<li>
+			<p>[접속기록의 보관 및 위변조 방지]</p>
+			<ul>
+				<li>개인정보처리시스템에 접속한 기록을 최소 6개월 이상 보관, 관리하고 있으며, 접속 기록이 위변조 및 도난, 분실되지 않도록 보안기능 사용하고 있습니다.</li>
+			</ul>
+		</li>
+		<li>
+			<p>[개인정보에 대한 접근 제한]</p>
+			<ul>
+				<li>개인정보를 처리하는 데이터베이스시스템에 대한 접근권한의 부여, 변경, 말소를 통하여 개인정보에 대한 접근통제를 위하여 필요한 조치를 하고 있으며 침입차단시스템을 이용하여 외부로부터의 무단 접근을 통제하고 있습니다.</li>
+			</ul>
+		</li>
+		<li>
+			<p>[PC 개인정보보호 솔루션을 통한 개인정보 관리]</p>
+			<ul>
+				<li>파일에 포함된 개인정보(주민등록번호, 휴대폰, 계좌, 이메일주소 등)를 검출하고 해당 파일을 격리·암호화·완전삭제하여 안전하게 관리하고 있습니다.</li>
+			</ul>
+		</li>
+		<li>
+			<p>[비인가자에 대한 출입 통제]</p>
+			<ul>
+				<li>개인정보를 보관하고 있는 물리적 보관 장소를 별도로 두고 이에 대해 출입통제 절차를 수립, 운영하고 있습니다.</li>
+			</ul>
+		</li>
+	</ol>
+</div>
+
+<h4>13. 아동의 개인정보보호</h4>
+<div>
+	<p>미즈메디병원은 만 14세 미만 아동(이하 '아동')이 제공한 개인정보로 인하여 아동 및 법정 대리인이 불이익을 입지 않도록 보호 조치를 취하고 있습니다.</p>
+	<p>미즈메디병원은 아동의 개인정보에 대하여 아래의 행위를 하는 경우에는 해당 아동의 법정대리인의 동의를 얻도록 하고 있습니다.</p>
+	<p>아동의 서비스가입을 위한 개인정보 수집하거나 서비스 가입 시 고지한 범위 또는 서비스이용약관에 명시한 범위를 넘어 아동의 개인정보를 이용하거나 제3자에게 제공하고자 하는 경우
+		아동의 개인정보를 제공받은 자가 개인정보를 제공받은 목적 외의 용도로 이용하거나 제3자에게 제공하는 경우
+		미즈메디병원은 법정대리인의 동의를 얻기 위하여 법정대리인의 성명, 주민번호 등 필요한 최소한의 정보를 요구할 수 있습니다. 이 경우 개인정보의 수집ㆍ이용 또는 제공 목적 및 법정대리인의 동의가 필요하다는 취지를 아동이 쉽게 이해 할 수 있는 평이한 표현으로 아동에게 고지 합니다.
+	</p>
+	<p>법정대리인의 동의를 얻기 위하여 수집한 법정대리인의 개인정보를 해당 법정대리인의 동의 여부를 확인하는 목적 외의 용도로 이를 이용하거나 제3자에게 제공하지 않습니다.</p>
+</div>
+
+<h4>14. 동의철회 / 회원탈퇴방법</h4>
+<div>
+	<p>미즈메디병원은 고객이 회원가입 시 개인정보의 수집ㆍ이용 및 제공에 대해 동의하신 내용을 언제든지 철회하실 수 있습니다.</p>
+	<p>미즈메디병원 회원탈퇴는 병원 홈페이지 ‘개인정보수정’의 "회원탈퇴"를 클릭하여 본인 확인 절차를 거치신 후 직접 회원탈퇴를 하시거나, 콜센터(1588-2007)로 서면, 전화 또는 Fax 등으로 연락하시면 지체없이 고객의 개인 정보를 파기하는 등 필요한 조치를 하겠습니다.</p>
+</div>
+
+<h4>15. 정책변경에 따른 공지의무</h4>
+<div>
+	<ol>
+		<li>이 개인정보 처리 방침은 2023년 2월 1일에 개정되었습니다.</li>
+		<li>이전 개인정보 취급방침 : 2017년 2월 27일부</li>
+		<li>개인정보취급방침 개정 : 2020년 1월 2일부</li>
+		<li><a href="/intro/footer/privacy?ver=20210101" target="_blank" style="text-decoration: underline; color: blue;">개인정보취급방침 개정 : 2021년 1월 1일부</a></li>
+		<li>개인정보취급방침 개정: 2023년 2월1일부</li>
+	</ol>
+</div>
+
+			</div><div id="mCSB_3_scrollbar_vertical" class="mCSB_scrollTools mCSB_3_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_3_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+			<div class="wrap_checkbox">
+				<input type="checkbox" id="reserve_ruleAgree">
+				<label for="reserve_ruleAgree">동의합니다.</label>
+				<em id="reserve_ruleAgree_msg" class="sub color1"></em><!--클래스명 color1:오렌지색 , color2:녹색-->
+			</div>
+			<div class="btn_wrap">
+				<button name="btnGoToReserve4" class="default">예약조회</button>
+				<button name="btnStartReserve" class="active">진료예약</button>
+			</div>
+			<p class="point">  미즈메디 회원인 경우 <strong>My Chart</strong>에서 <strong>예약조회/변경/취소</strong>할 수 있습니다.</p>
+			<p class="box_info">본 병원은 한국신용평가정보㈜의 네임체크 실명확인 서비스를 사용하고 있습니다.<br>
+			실명확인에 실패하신 경우에는 http://www.namecheck.co.kr 에서 인터넷 안전등록을 해주시거나, 실명확인 고객센터(1600-1522)로
+			문의해 주시기 바랍니다.</p>
+		</div><div id="mCSB_2_scrollbar_vertical" class="mCSB_scrollTools mCSB_2_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_2_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+		<a href="javascript:goToClose();"><img src="/static/resources/user/web/images/btn/pop_btn_close.png" alt="팝업닫기"></a>
+	</div>
+</div>
+
+<script src="/static/js/user/intro/other/reserve.js?ts=1758614260886" type="text/javascript"></script>
+
+	
+
+
+<div class="pop_wrap" id="webReserve2Popup" style="display: none;">
+	<div class="pop_body reserve personal online_pop" style="margin-top:-450px;">
+		<h2>온라인 진료예약/조회</h2>
+		<div class="mCustomScrollbar _mCS_4 mCS_no_scrollbar" style="height:800px"><div id="mCSB_4" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0" style="max-height: 800px;"><div id="mCSB_4_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr"> <!-- 2018-06-15 천혜성 -->
+			<div class="table style01">
+				<table>
+					<caption>table title</caption>
+					<colgroup>
+						<col width="17%">
+						<col width="22%">
+						<col width="11%">
+						<col width="17%">
+						<col width="22%">
+						<col width="11%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>이름</th>
+							<td id="reserve2_patName"></td>
+							<td rowspan="2"><button name="btnGoToReserve1">수정</button></td>
+							<th colspan="3" rowspan="2">진료과/의료진,예약일시를 선택하세요.</th>
+						</tr>
+						<tr>
+							<th>주민등록번호</th>
+							<td id="reserve2_prsnid"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>	
+			
+			<ul class="tab style01" id="reserveTypeTab">
+				<li><a href="javascript:void(0);">날짜 선택</a></li>
+				<li class="on"><a href="javascript:void(0);">의료진 선택</a></li>
+			</ul>
+			
+			<h4>진료과/의료진 및 예약일시 선택</h4>
+			<div class="wrap_reserve">
+				<div class="box_select">
+					<div>
+						<div id="deptType" class="select_box" data-form="selectBox"><div class="design_select" style="width: 174px;"><a href="javascript:;" title="열림">진료과</a><ul><li><a href="#dept">진료과</a></li><li><a href="#center">전문센터</a></li></ul></div>
+							<select id="select_deptType" style="width: 154px; display: none;">
+								<option id="dept" value="dept">진료과</option>
+								<option id="center" value="center">전문센터</option>
+							</select>
+						</div>
+						<ul id="deptList" class="box"></ul>
+					</div>
+					<div>
+						<h5>2. 의료진</h5>
+						<div class="box">
+							<div id="reserve2_selectedDoctorDiv" class="thumnail_list" style="display:block"><!--3단계 display:none 시 사라짐-->
+								<ul id="reserve2_selectedDoctor">
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="bx_tit">
+							<h5>3. 예약일시(날짜 선택 후 시간 선택)</h5>
+							<div class="guide">
+								<span>오전</span>
+								<span>오후</span>
+							</div>
+						</div><!--wrap_tit-->
+						<div class="box">
+							<div id="reserve2_calendar" class="wrap_calendar" style="display:none"><!--3단계 display:none 시 사라짐-->
+									<input type="hidden" id="year" value="">
+									<input type="hidden" id="month" value="">
+									<input type="hidden" id="day" value="">
+								<div class="count">
+									<a href="javascript:void(0)" id="prev" style="display:none;'"></a><span id="yyyyMM"></span><a href="javascript:void(0)" id="next"></a>
+								</div>
+								
+								<div class="calendar">
+									<table width="100%" summary="">
+										<caption>월, 화, 수, 목, 금, 토에 대한 테이블입니다.</caption>
+										<colgroup>
+											<col width="33.3333%">
+											<col width="33.3333%">
+											<col width="33.3333%">
+											<col width="33.3333%">
+											<col width="33.3333%">
+											<col width="33.3333%">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col">월</th>
+												<th scope="col">화</th>
+												<th scope="col">수</th>
+												<th scope="col">목</th>
+												<th scope="col">금</th>
+												<th scope="col">토</th>
+											</tr>
+										</thead>
+										<tbody>
+										</tbody>
+									</table>
+								</div><!--//calendar-->
+
+								<div class="wrap_select">
+									<span class="tit">시간선택</span>
+									<div id="reserve2_schedule" class="box_time">
+										<a id="reserve2_timeSelector" class="on" href="javascript:void(0)" hidden="hidden">시간을 선택하세요.</a>
+										<div class="box_set">
+											<ul id="reserve2_sdAmSchedule">
+												<li class="fix">오전</li>
+												
+											</ul>
+											<ul id="reserve2_sdPmSchedule">
+												<li class="fix">오후</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><!--box-->
+					</div>
+				</div><!--box_select-->
+				<!-- Swiper -->
+				<div id="reserve2_swiper" class="swiper-container thumnail_list swiper-container-horizontal" style="display:none"><!--2단계 display:none 시 사라짐-->
+					<!--소아과 popup-->
+					<div class="reserve_pop" id="subCode37" style="display:none;">
+						<div class="inner">
+							<strong>감염예방을 위해</strong>
+							건강한아이, 아픈아이 층을 분리하여 운영하고 있습니다.
+							<span>소아청소년과 예약은  고객센터 (1588-2701)로 예약 문의해 주시기 바랍니다.</span>
+						</div>
+					</div>
+					<!--//소아과 popup-->
+					<!--키즈센터 popup-->
+					<div class="reserve_pop" id="subCode3" style="display:none;">
+						<div class="inner">
+							<strong>감염예방을 위해</strong>
+							건강한아이, 아픈아이 층을 분리하여 운영하고 있습니다.
+							<span>키즈센터 예약은  고객센터 (1588-2701)로 예약 문의해 주시기 바랍니다.</span>
+						</div>
+					</div>
+					<!--//키즈센터 popup-->
+					<ul id="doctorListSwip" class="swiper-wrapper" style="transition-duration: 0ms;">
+					</ul>
+					<!-- Add Arrows -->
+					<a href="javascript:void(0)" class="swiper-button-next"></a>
+					<a id="reserve2_addArrowsPrev" href="javascript:void(0)" class="swiper-button-prev"></a>
+					<!-- Add Scrollbar -->
+					<div id="reserve2_swiper-scrollbar" class="swiper-scrollbar" style="opacity: 0; transition-duration: 400ms;"><div class="swiper-scrollbar-drag"></div></div>
+				</div>
+			</div><!--wrap_reserve-->
+			<div class="btn_wrap">
+				<button name="btnGoToReserve3" class="active">개인정보입력</button>
+			</div>
+			<p class="point">  진료예정일로부터 2일 이내 예약 시 '진료 1일 전 예약확인' 안내가 발송되지 않을 수 있습니다. </p>
+			<!--<p class="point">  온라인 진료예약 취소는 진료일 2일 전까지 가능합니다. <strong> 진료일 2일 이내 취소는 고객센터 (1588-2701)를 통해 하실 수 있습니다.</strong></p>-->
+			<p class="point"> <strong> 수납내역이 있는 진료·검사예약의 변경은 고객센터 (1588-2701)를 통해 하실 수 있습니다.</strong></p>
+			
+			<ul class="box_info">
+				<li>진료예약은 같은 진료과 내에서 중복 예약이 불가능합니다. (예약일의 진료가 완료되어야 다시 진료예약 가능)</li>
+				<!--<li>온라인 진료예약 취소는 진료일 2일 전까지 가능합니다.진료일 2일 이내 취소는 고객센터 (1588-2701)를 통해 하실 수 있습니다.</li>-->
+				
+				<li>온라인 진료예약은 진료 후 이루어지는 검사예약과는 다릅니다.</li>
+				<li>진료에 필요한 각종 검사는 진료 후 전문의의 처방에 따라 다른 검사일에 진행됩니다.</li>
+				<li>온라인으로 예약이 불가능한 일시는 고객센터( 1588-2701 )로 예약 문의해 주시기 바랍니다.</li>
+				
+			</ul>
+		</div><div id="mCSB_4_scrollbar_vertical" class="mCSB_scrollTools mCSB_4_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_4_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+		<a href="javascript:goToClose();"><img src="/static/resources/user/web/images/btn/pop_btn_close.png" alt="팝업닫기"></a>
+	</div>
+</div>
+
+<script>
+	// 이후에 진료과 항목을 클릭해서 생성되는 swiper 이기 때문에 여기서는 삭제해준다.
+	// reserve.js에서 생성하도록 되어있음
+	var reserve2Swiper = new Swiper('.swiper-container', {
+		slidesPerView : 3,
+		spaceBetween : 10,
+		navigation : {
+			nextEl : '.swiper-button-next',
+			prevEl : '.swiper-button-prev',
+		},
+		scrollbar : {
+			el : '.swiper-scrollbar',
+			hide : true,
+		},
+	});
+
+	// 진료과선택
+	$('.reserve.personal ul.box li').on('click', function() {
+		$(this).addClass('on').siblings().removeClass('on');
+	})
+</script>
+
+	
+
+
+<div class="pop_wrap" id="webReserve3Popup" style="display: none;">
+	<div class="pop_body reserve personal" style="margin-top:-450px;">
+		<h2>온라인 진료예약/조회</h2>	
+		<div class="mCustomScrollbar _mCS_5 mCS_no_scrollbar" style="height:800px"><div id="mCSB_5" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0" style="max-height: 800px;"><div id="mCSB_5_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr"> <!-- 2018-06-15 천혜성 -->	
+			<div class="table style01">
+				<table>
+					<caption>table title</caption>
+					<colgroup>
+						<col width="17%">
+						<col width="22%">
+						<col width="11%">
+						<col width="17%">
+						<col width="22%">
+						<col width="11%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>이름</th>
+							<td id="reserve3_patName"></td>
+							<td rowspan="2"><button name="btnGoToReserve1">수정</button></td>
+							<th>진료과/의료진</th>
+							<td id="reserve3_doctorInfo"></td>
+							<td rowspan="2"><button name="btnGoToReserve2">수정</button></td>
+						</tr>
+						<tr>
+							<th>주민등록번호</th>
+							<td id="reserve3_prsnid"></td>
+							<td>예약일시</td>
+							<td id="reserve3_date"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>	
+			<h4>개인정보 입력</h4>
+			<div class="table style01">
+				<table>
+					<caption>table title</caption>
+					<colgroup>
+						<col width="260">
+						<col width="940">
+					</colgroup>
+					<tbody id="reserve3Tbody">
+						<tr>
+							<th>휴대폰</th>
+							<td>
+								<input id="reserve3_hp" type="text" placeholder="-없이 입력하세요." class="hp" maxlength="13">
+								<em id="reserve3_hp_msg" class="sub color1"></em><!--클래스명 color1:오렌지색 , color2:녹색-->
+							</td>
+						</tr>
+						<tr>
+							<th>이메일</th>
+							<td>
+								<input id="reserve3_email" type="text" class="email">
+								<em id="reserve3_email_msg" class="sub color1"></em><!--클래스명 color1:오렌지색 , color2:녹색-->
+							</td>
+						</tr>	
+						<tr>
+							<th>주소</th>
+							<td>
+								<button id="btnSearchZipcode">우편번호 검색</button>
+								<input id="reserve3_add1" type="text" placeholder="" class="add1" style="display:none;">
+								<input id="reserve3_add2" type="text" placeholder="우편번호를 검색하세요." class="add2" style="width:550px;">
+								<em id="reserve3_add_msg" class="sub color1"></em><!--클래스명 color1:오렌지색 , color2:녹색-->
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>				
+			<div class="btn_wrap">
+				<button name="btnDoReserve" class="active">진료예약</button>
+			</div>
+			<p class="point">  진료예정일로부터 2일 이내 예약 시 '진료 1일 전 예약확인' 안내가 발송되지 않을 수 있습니다. </p>
+			<!--<p class="point">  온라인 진료예약 취소는 진료일 2일 전까지 가능합니다. <strong> 진료일 2일 이내 취소는 고객센터 (1588-2701)를 통해 하실 수 있습니다.</strong></p>-->
+			<p class="point"> <strong> 수납내역이 있는 진료·검사예약의 변경은 고객센터 (1588-2701)를 통해 하실 수 있습니다.</strong></p>
+			
+			<ul class="box_info">
+				<li>진료예약은 같은 진료과 내에서 중복 예약이 불가능합니다. (예약일의 진료가 완료되어야 다시 진료예약 가능)</li>
+				<!--<li>온라인 진료예약 취소는 진료일 2일 전까지 가능합니다.진료일 2일 이내 취소는 고객센터 (1588-2701)를 통해 하실 수 있습니다.</li>-->
+				
+				<li>온라인 진료예약은 진료 후 이루어지는 검사예약과는 다릅니다.</li>
+				<li>진료에 필요한 각종 검사는 진료 후 전문의의 처방에 따라 다른 검사일에 진행됩니다.</li>
+				<li>온라인으로 예약이 불가능한 일시는 고객센터( 1588-2701 )로 예약 문의해 주시기 바랍니다.</li>
+				
+			</ul>
+		</div><div id="mCSB_5_scrollbar_vertical" class="mCSB_scrollTools mCSB_5_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_5_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+		<a href="javascript:goToClose();"><img src="/static/resources/user/web/images/btn/pop_btn_close.png" alt="팝업닫기"></a>
+	</div>
+</div>
+
+	
+
+
+<div class="pop_wrap" id="webReserve4Popup" style="display: none;">
+	<div class="pop_body reserve list" style="margin-top:-450px;">
+		<h2>온라인 진료예약/조회</h2>
+		<div class="mCustomScrollbar _mCS_6 mCS_no_scrollbar" style="height:800px"><div id="mCSB_6" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0" style="max-height: 800px;"><div id="mCSB_6_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr"> <!-- 2018-06-15 천혜성 -->
+			<p>예약취소를 하시려면 예약취소를 누르거나, 고객센터(1588-2701)로 전화하시기 바랍니다. </p>
+			<h4>개인정보</h4>
+			<div class="table style01">
+				<table>
+					<caption>table title</caption>
+					<colgroup>
+						<col width="20%">
+						<col width="30%">
+						<col width="20%">
+						<col width="30%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>이름</th>
+							<td id="reserve4_patName"></td>
+							<th>진료번호</th>
+							<td id="reserve4_treatNo"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>				
+			<h4>온라인 예약 현황</h4>
+			<!-- Swiper -->
+			<div id="reserve4_swiper" class="thumnail_list">
+				<ul id="reserve4_reserveList" class="swiper-wrapper">
+				</ul>
+				<!-- Add Arrows -->
+				<a href="javascript:void(0)" class="swiper-button-next"></a>
+				<a href="javascript:void(0)" class="swiper-button-prev"></a>
+				<!-- Add Scrollbar -->
+				<div class="swiper-scrollbar"></div>
+			</div>
+			 
+			<div class="btn_wrap">
+				<button name="btnGoToNewReservation" class="active">진료예약 하기</button>
+			</div>
+			<p class="point">  예약일이 경과하거나, 취소된 현황은 리스트에 나오지 않습니다.</p>
+		</div><div id="mCSB_6_scrollbar_vertical" class="mCSB_scrollTools mCSB_6_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_6_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+		<a href="javascript:goToClose();"><img src="/static/resources/user/web/images/btn/pop_btn_close.png" alt="팝업닫기"></a>
+	</div>
+</div>
+
+<script>
+	// 이후에 진료과 항목을 클릭해서 생성되는 swiper 이기 때문에 여기서는 삭제해준다.
+	// reserve.js에서 생성하도록 되어있음.
+/* 	var swiper = new Swiper('.swiper-container', {
+		slidesPerView : 3,
+		spaceBetween : 20,
+		navigation : {
+			nextEl : '.swiper-button-next',
+			prevEl : '.swiper-button-prev',
+		}
+	}); */
+</script>
+
+	
+
+
+<div class="pop_wrap" id="webReserveJC1Popup" style="display: none;">
+	<input type="hidden" id="globalAge" value="">
+
+	<div class="pop_body reserve" style="margin-top:-450px;">
+		<h2>국민건강검진 예약</h2>
+		<div class="mCustomScrollbar _mCS_7 mCS_no_scrollbar" style="height:800px"><div id="mCSB_7" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0" style="max-height: 800px;"><div id="mCSB_7_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+			<p>개인정보를 입력하고, 개인정보취급방침에 동의하셔야만 검진예약이 가능합니다.</p>
+			<p>국민건강검진 예약은 전문상담원이 전화를 드린 후 예약이 최종 확정됩니다.(고객센터: 1588-2701)</p>
+			<a href="https://m.mizmedi.com/intro/other/reserve1" style="color: #454545;font-size:20px;">진료 · 영유아검진 예약<u>(바로가기)</u></a>
+			<h4>개인정보 입력</h4>
+			<div class="table style01">
+				<table>
+					<caption>table title</caption>
+					<colgroup>
+						<col width="260">
+						<col width="940">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>이름 *</th>
+							<td>
+								<input id="reserveJC1_patName" type="text" maxlength="50" value="">
+								<em>(외자는 한 칸 띄어쓰기)</em>
+								<em id="reserveJC1_patName_msg" class="sub color1"></em><!--클래스명 color1:오렌지색 , color2:녹색-->
+							</td>
+						</tr>
+						<tr>
+							<th>휴대폰 *</th>
+							<td>
+								<input id="reserveJC1_hp" type="text" placeholder="-없이 입력하세요." class="hp" value="" maxlength="13">
+								<em id="reserveJC1_hp_msg" class="sub color1"></em><!--클래스명 color1:오렌지색 , color2:녹색-->
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<h4>개인정보처리방침 동의</h4>
+			<div class="agree_policy terms mCustomScrollbar _mCS_8 mCS_no_scrollbar"><div id="mCSB_8" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0" style="max-height: 178px;"><div id="mCSB_8_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+				
+
+
+<p>
+	미즈메디병원은 정보주체의 자유와 권리 보호를 위해 「개인정보 보호법」 및 관계 법령이 정한 바를 준수하여, 적법하게 개인정보를 처리하고 안전하게 관리하고 있습니다. 이에 「개인정보 보호법」 제30조에 따라 정보주체에게 개인정보 처리에 관한 절차 및 기준을 안내하고, 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리방침을 수립하여 홈페이지(www.mizmedi.com)에 공개합니다.
+</p>
+<p>
+	미즈메디병원의 「개인정보처리방침」은 관련 법률 및 지침의 변경 또는 내부운영방침의 변경에 따라 변경될 수 있으며 변경된 사항을 홈페이지(www.mizmedi.com)을 통하여 공지합니다.
+</p>
+<p>미즈메디병원 개인정보처리방침은 아래와 같은 내용을 담고 있습니다</p>
+<div>
+	<div class="table style02">
+		<table>
+			<tbody>
+				<tr>
+					<td>
+						<p>1. 개인정보의 수집 및 이용목적</p>
+						<p>2. 개인정보의 수집항목 및 방법</p>
+						<p>3. 수집한 개인정보의 이용 및 제3자 제공</p>
+						<p>4. 개인정보처리 업무의 위탁</p>
+						<p>5. 개인정보의 보유 및 이용기간</p>
+						<p>6. 개인정보의 파기절차 및 방법</p>
+						<p>7. 정보주체 및 법정대리인의 권리와 그 행사방법</p>
+						<p>8. 개인정보 보호 책임자의 성명 또는 개인정보 보호업무 및 관련 고충사항을 처리하는 부서의 명칭과 전화번호 등 연락처</p>
+						<p>9. 영상정보처리기기 운영관리 방침</p>
+						<p>10. 개인정보 자동수집장치의 설치/운영 및 거부에 관한 사항</p>
+						<p>11. 개인정보처리방침의 고지 또는 통지방법</p>
+						<p>12. 개인정보의 안전성 확보 조치에 관한 사항</p>
+						<p>13. 아동의 개인정보보호</p>
+						<p>14. 동의철회 / 회원탈퇴방법</p>
+						<p>15. 정책변경에 따른 공지의무</p>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<style>
+        .table.style03 table.labeling-table tbody tr td {
+            padding: 15px 15px !important;
+        }
+        .table.style03 table.labeling-table tbody tr td:first-child {
+            max-width: 120px;
+        }
+        .labeling-table img {
+            width: 100px;
+        }
+	</style>
+
+	<div class="table style03">
+		<p>&lt;주요 개인정보 처리 표시(라벨링)&gt;</p>
+		<table class="labeling-table">
+			<caption>&lt;주요 개인정보 처리 표시(라벨링)&gt;</caption>
+			<colgroup>
+				<col width="130px">
+				<col width="200px">
+				<col width="">
+			</colgroup>
+			<tbody>
+				<tr>
+					<td>
+						<img src="/static/resources/user/intro/images/privacy_icon1.png" alt="privacy_icon" class="mCS_img_loaded">
+					</td>
+					<td>일반개인정보수집</td>
+					<td>
+						<ul>
+							<li>이름</li>
+							<li>이메일주소</li>
+							<li>핸드폰번호</li>
+							<li>아이디</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="/static/resources/user/intro/images/privacy_icon2.png" alt="privacy_icon" class="mCS_img_loaded">
+					</td>
+					<td>개인정보처리목적</td>
+					<td>
+						<ul>
+							<li>회원가입 및 본인 식별</li>
+							<li>진료/건진예약, 예약조회의 회원제 서비스 제공</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="/static/resources/user/intro/images/privacy_icon3.png" alt="privacy_icon" class="mCS_img_loaded">
+					</td>
+					<td>고충처리부서</td>
+					<td>
+						<ul>
+							<li>처리부서 : 원무팀</li>
+						</ul>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="/static/resources/user/intro/images/privacy_icon4.png" alt="privacy_icon" class="mCS_img_loaded">
+					</td>
+					<td>개인정보 자동수집</td>
+					<td>
+						<ul>
+							<li>쿠키 (Cookie)</li>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+</div>
+<h4>1. 개인정보의 수집 및 이용목적</h4>
+<div>
+	<p>미즈메디병원은 수집된 개인정보를 아래의 목적으로 사용합니다. 수집된 모든 정보는 아래 사용 목적 이외로는 사용되지 않으며 사용목적이 변경되는 경우에는 「개인정보 보호법」 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.</p>
+	<ol>
+		<li>
+			<ul>
+				<li>진료/건진 예약, 예약조회 및 회원제 서비스 이용에 따른 본인 확인 절차에 사용</li>
+				<li>이용자에게 원활한 의료정보 제공을 위한 온라인 및 오프라인에서의 공지기능</li>
+				<li>서비스 품질향상을 목적으로 전화예약 상담 녹취</li>
+				<li>고지사항 전달, 불만처리 등을 위한 원활한 의사소통 경로의 확보, 새로운 서비스 및 행사정보 안내</li>
+				<li>병원 내 진료와 관련된 진료정보서비스 제공: 제증명서 발송, 진료 전/후 정보 제공 등
+					(위 항의 원활한 업무처리를 위하여 개인정보 처리(취급) 업무(DM 등)를 외부 전문업체에 위탁할 수 있으며 해당내용은 홈페이지에 공개)
+				</li>
+				<li>건강검진 관련 서비스 이용</li>
+				<li>진단 및 치료를 위한 진료서비스에 따른 진료비 청구, 수납, 환급 등의 원무 서비스 제공</li>
+				<li>하이패스 (오픈카드 서비스)를 위한 카드정보를 이용한 진료비 결제 승인, 결제금액 안내문자 또는 알림톡 발송</li>
+				<li>교육, 연구, 진료서비스에 필요한 최소한의 분석 자료</li>
+				<li>임상시험심사를 위한 기초 자료</li>
+				<li>차량번호 등록서비스 이용에 따른 본인 확인 절차에 사용</li>
+				<li>병원 홈페이지의 원활한 운영 및 통계분석자료로 활용</li>
+				<li>설문조사, 학술행사 등의 서비스 제공</li>
+				<li>미즈메디병원에서 진행하는 온라인 세미나 및 행사, 건강강좌 관련사항 일체 (사전등록 및 안내메일 발송, 세미나 입장, 세미나 중 질의응답)</li>
+				<li>입사 지원 시 개인정보 수집</li>
+				<li>의무기록 사본발급 온라인 신청</li>
+				<li>외부 영상 CD 등록</li>
+				<li>보안신고 처리 및 결과 회신</li>
+				<li>진료 여정 알림톡 또는 문자 안내</li>
+			</ul>
+		</li>
+	</ol>
+</div>
+<h4>2. 개인정보의 수집항목 및 방법</h4>
+<div>
+	<p>미즈메디병원의 개인정보 수집항목은 아래와 같습니다. 필수항목과 선택항목이 있으며, 선택항목은 입력하지 않더라도 서비스 이용에는 제한이 없습니다.</p>
+	<ol>
+		<li style="font-weight: bold">[만 14세 이상 회원 가입]</li>
+		<li>필수항목: 이름, 생년월일, 성별, 로그인ID, 비밀번호, 휴대폰번호, 이메일</li>
+		<li>선택항목: 병원등록번호, 자택전화번호, 자택주소, 닉네임, 이메일 수신여부</li>
+
+		<li style="font-weight: bold">[만 14세 미만 회원 가입]</li>
+		<li>필수항목: 이름, 생년월일, 성별, 로그인ID, 비밀번호, 휴대폰번호, 이메일, 법정대리인 동의여부 확인</li>
+		<li>선택항목: 병원등록번호, 자택전화번호, 자택주소, 닉네임, 이메일 수신여부</li>
+
+		<li style="font-weight: bold">[예약 신청 및 진료 시]</li>
+		<li>필수항목 : 병원등록번호, 이름, 주민등록번호, 주소, 전화번호, 휴대폰번호, 이메일, 외국인등록번호,보험(건강, 의료급여 등) 자격정보</li>
+		<li>건강정보 : 병력, 가족력 등 진료서비스 제공을 위하여 의료진이 필요하다고 판단되는 개인정보</li>
+
+		<li style="font-weight: bold">[건강검진 예약시]</li>
+		<li>필수항목 : 성명, 성별, 생년월일, 주민등록번호, 이메일, 휴대폰번호, 주소, 검진대상자 자격정보</li>
+		<li>선택항목 : 전화번호, 환자번호</li>
+
+		<li style="font-weight: bold">[전화 예약 상담 녹취]</li>
+		<li>필수항목 : 병원등록번호, 이름, 주민등록번호, 주소, 전화번호, 휴대폰번호</li>
+		<li>건강정보 : 병력, 가족력 등 진료서비스 제공을 위하여 의료진이 필요하다고 판단되는 개인정보</li>
+
+		<li style="font-weight: bold">[진료 일정 알림톡 및 문자 안내]</li>
+		<li>선택항목 : 이름, 등록번호, 전화번호</li>
+
+		<li style="font-weight: bold">[고객 건의함 이용]</li>
+		<li>필수항목 : 이름, 이메일, 전화번호, 방문날짜</li>
+
+		<li style="font-weight: bold">[민원 사무처리 이용]</li>
+		<li>필수항목 : 이름, 휴대전화번호, 환자와의 관계</li>
+
+		<li style="font-weight: bold">[제증명서 발송 시]</li>
+		<li>필수항목 : 팩스번호, 주소, 이름, 생년월일, 휴대폰번호, 가족관계증명서 (대리발급의 경우 필수)</li>
+
+		<li style="font-weight: bold">[건강검진 관련 물품 발송 시]</li>
+		<li>필수항목 : 이름, 주소, 휴대폰번호</li>
+
+		<li style="font-weight: bold">[출산길라잡이, 신생아돌보기 온라인 교육프로그램 신청]</li>
+		<li>필수항목 : 이름, 휴대폰번호</li>
+		<li>선택항목: 병원등록번호</li>
+
+		<li style="font-weight: bold">[진료비 수납 또는 인터넷 결제]</li>
+		<li>필수항목 : 신용카드 결제 시 카드사명, 카드번호 등 결제 승인정보</li>
+
+		<li style="font-weight: bold">[오픈카드]</li>
+		<li>필수항목 : 환자명, 등록번호, 휴대폰번호, 신용카드번호, 카드유효기간 및 생년월일 (단, 생년월일은 오프라인만 해당)</li>
+		<li>선택항목 : 영수증 수령 이메일</li>
+
+		<li style="font-weight: bold">[차량번호 등록]</li>
+		<li>필수항목 : 차량번호, 환자번호</li>
+
+		<li style="font-weight: bold">[의무기록 사본발급 온라인 신청]</li>
+		<li>필수항목 : (신청인 정보) 이름, 로그인ID, 생년월일, 전화번호, 이메일, 신청목적, 환자와의 관계,
+			(환자 정보) 이름, 생년월일, 전화번호
+			(신청정보) 수령희망일, 신청부수, 진료과/의료진, 외래, 입원, 기간, 의무기록서식 종류
+		</li>
+		<li>선택항목 : (환자정보) 병원등록번호</li>
+
+		<li style="font-weight: bold">[건강검진 문진표]</li>
+		<li>필수항목 : 성명, 주민등록번호, 휴대폰번호, 주소, 건강검진 날짜, 결과수령방법, 기재한 문진정보 일체, 선택항목(이메일)</li>
+
+		<li style="font-weight: bold">[외부 영상 CD 등록]</li>
+		<li>필수항목 : 성명, 성별, 환자번호, 생년월일</li>
+
+		<li style="font-weight: bold">[인재채용]</li>
+		<li>인사팀 담당 채용 지원시</li>
+		<li>· 필수항목 : 성명, 생년월일, 성별, 내/외국인, 주소, 휴대전화, 비상연락처, 이메일, 학력사항,병역사항, 자격면허사항, 외국어(테스트명/취득점수/응시일자), 취미/특기, 희망부서</li>
+		<li>· 선택항목 :</li>
+		<li>
+			<ul>
+				<li>개인정보 : 경력사항, 해외연수, 수상경력, 동아리활동, 자기소개서에 지원자가 기재하는 내용, 보훈구분, 보훈번호, 취업지원대상증명서, 가족사항</li>
+				<li>민감정보 : 장애구분, 장애여부, 장애종류, 장애등급, 장애인등록번호, 장애인증명서</li>
+				<li>상시채용 時 : 지원자가 기재하는 모든 항목</li>
+			</ul>
+		</li>
+
+		<li style="font-weight: bold">[개인정보의 수집방법]</li>
+		<li>미즈메디병원은 고객이 진료예약 신청, 개인정보변경 등 서면양식, 미즈메디병원에서 운영하는 홈페이지 회원가입, 전화, 상담게시판, 이메일, 이벤트 응모를 통해 개인정보를 수집합니다.</li>
+	</ol>
+</div>
+<h4>3. 수집한 개인정보의 이용 및 제3자 제공</h4>
+<div>
+	<p>미즈메디병원은 고객의 개인정보를 서비스이용약관 및 개인정보처리방침의 [개인정보의 수집목적 및 이용목적]에서 고지한 범위 또는 서비스이용약관에 명시한 범위 내에서 사용하며, 동범위를 넘어 이용하거나 제3자에게 제공하지 않습니다. 다만 아래의 경우는 예외로 합니다.</p>
+	<ol>
+		<li>
+			<ul>
+				<li>정보주체로부터 별도의 동의를 받는 경우</li>
+				<li>법령의 규정에 의거하거나 수사목적으로 법령에 정해진 절차와 방법에 따라 수사기관의 요구가 있는 경우</li>
+			</ul>
+		</li>
+		<li>
+			<div class="table style03">
+				<table>
+					<caption>수집한 개인정보의 이용 및 제3자 제공</caption>
+					<colgroup>
+						<col width="18%">
+						<col width="23%">
+						<col width="18%">
+						<col width="23%">
+						<col width="18%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>
+								제공받는 기관
+							</th>
+							<th>
+								제공목적
+							</th>
+							<th>
+								제공근거
+							</th>
+							<th>
+								제공하는 개인정보 항목
+							</th>
+							<th>
+								이용기간
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								건강보험심사평가원
+							</td>
+							<td>
+								신의료비급여진료비산정근거마련
+							</td>
+							<td>
+								국민건강보험요양급여의 기준에 관한 규칙 제 10조1항
+							</td>
+							<td>
+								진료비 세부 내역서<br>(환자명, 환자등록번호, 주소일부)
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								건강보험심사평가원
+							</td>
+							<td>
+								환자경험평가대상자
+							</td>
+							<td>
+								의료법 제21조, 국민건강보험법 제96조
+							</td>
+							<td>
+								환자 전화번호
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								건강보험심사평가원
+							</td>
+							<td>
+								난임시술기관 신뢰도점검
+							</td>
+							<td>
+								모자보건법 제11조의3, 제11조의6<br>모자보건법 시행규칙 제12조의5, 제12조의6
+							</td>
+							<td>
+								환자등록번호, 환자명, 생년월일, 성별, 진료기록
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								건강보험심사평가원
+								자치단체(시,군,구청)
+								국민건강보험공단
+							</td>
+							<td>
+								급여비용 청구, 사전승인신청, 사후자료제출, 심사, 지급, 대상여부확인, 적정성평가
+							</td>
+							<td>
+								국민건강보험법 제13조, 제43조, 제56조, 의료급여법 제5조, 제11조, 제33조, 의료법 제21조, 국민건강보험법 제 63조,개인정보보호법 제15조, 제18조, 통계법 제33조
+							</td>
+							<td>
+								성명, 주민등록번호, 진단명, 진료내역
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								국민건강보험공단
+							</td>
+							<td>
+								상병발생경위확인
+							</td>
+							<td>
+								의료법 제21조 제3항 제4호, 국민건강보험법 제96조
+							</td>
+							<td>
+								환자등록번호, 환자명, 생년월일,성별, 진료기록
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								국민건강보험공단
+							</td>
+							<td>
+								결핵 산정특례 대상자 치료종결확인
+							</td>
+							<td>
+								보건복지부 고시 본인일부부담금 산정특례에 관한 기준<br>제7조 제9항, 제10항
+							</td>
+							<td>
+								환자등록번호, 환자명, 생년월일, 성별, 진료기록
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								국민건강보험공단
+							</td>
+							<td>
+								상병발생경위확인
+							</td>
+							<td>
+								국민건강보험법 제96조, 의료법 제21조3항 제4호
+							</td>
+							<td>
+								성명, 주민등록번호, 진단명, 진료내역
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								근로복지공단
+							</td>
+							<td>
+								급여비용 심사 지급 대상여부 확인
+							</td>
+							<td>
+								산업재해보상보험법 제31조
+							</td>
+							<td>
+								성명, 주민등록번호, 진단명, 진료내역
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								근로복지공단
+							</td>
+							<td>
+								요양급여비용신청, 산재보험유족급여 지급
+							</td>
+							<td>
+								의료법 제21조 제3항 제8호, 산업재해보상보험법 제118조
+							</td>
+							<td>
+								환자등록번호, 환자명, 생년월일, 성별, 진료기록
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								자동차보험진료수가분쟁심의회
+							</td>
+							<td>
+								자동차보험 진료비 심사청구사건 심의
+							</td>
+							<td>
+								자동차보험진료수가 심사업무처리에 관한 규정 제33조
+							</td>
+							<td>
+								성명, 주민등록번호, 진단명, 진료내역
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								질병관리본부
+							</td>
+							<td>
+								법정 감염병 보고
+							</td>
+							<td>
+								감염병 예방 및 관리에 관한 법률 제11조
+							</td>
+							<td>
+								[진료기록 정보]<br>성명, 주민등록번호, 진단명, 진료내역 등
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								법원
+							</td>
+							<td>
+								문서제출 명령
+							</td>
+							<td>
+								의료법 제21조 제3항 제7호, 민사소송법 제347조
+							</td>
+							<td>
+								환자등록번호, 환자명, 생년월일, 성별, 진료기록
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								법원
+							</td>
+							<td>
+								압수수색영장, 수사협조의뢰
+							</td>
+							<td>
+								의료법 제21조 제3항 제6호, 형사소송법 제106조, 제215조, 제218조
+							</td>
+							<td>
+								환자등록번호, 환자명, 생년월일, 성별, 진료기록
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								중앙암등록본부
+							</td>
+							<td>
+								국가 암환자 통계 산출
+							</td>
+							<td>
+								암관리법 제14조
+							</td>
+							<td>
+								나이, 주민등록번호, 이름, 성별, 외국인여부(주민등록번호 뒷자리로 자동체크), 직업, 주소(상세주소 제외) 초진연월일, 진단경로, 원발부위, 편측/양측성, 조직학적진단, 분화도, 사망년월일, 사망원인, 진단방법, 치료시행여부, 치료종류, SEER병기, TNM, Stage병기, 전이부위
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								중앙암등록분부
+							</td>
+							<td>
+								암환자의 (통계청)사망여부 확인
+							</td>
+							<td>
+								본원 암환자의 사망정보 처리<br>연 1회 통계청 사망정보 업데이트 후 폐기
+							</td>
+							<td>
+								주민등록번호, 이름(끝자리*마스킹)
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								질병관리청
+							</td>
+							<td>
+								코로나 이상반응
+								법정감염병역학조사
+							</td>
+							<td>
+								의료법 제21조 제3항 제16호<br>감염병의 예방 및 관리에 관한 법률 제18조의4 및 제29조
+							</td>
+							<td>
+								[진료기록 정보]<br>성명, 주민등록번호, 진단명, 진료내역 등
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								보건소
+							</td>
+							<td>
+								수혈감염 역추적조사
+							</td>
+							<td>
+								혈액관리법 제8조의2, 혈액관리법 시행규칙 제2조의2, 제7조 및 별표 1의2, 질병관리요인 채혈금지대상자 범위 지정 고시(보건복지부 고시)
+							</td>
+							<td>
+								환자등록번호, 환자명, 생년월일, 성별, 진료기록, 수혈자 정보
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								보건소
+							</td>
+							<td>
+								미숙아,선천성이상아보고
+							</td>
+							<td>
+								모자보건법 제8조 제4상 및 동법 시행규칙 제7조의2 제1항
+							</td>
+							<td>
+								성명(출생아 모), 생년월일(출생아 모), 주소, 전화번호, 분만기관명, 분만일, 보조생식술 여부, 다태아 여부, 출생 시 아기 체중, 임신기간, 분만시 발견된 선천성이상아 소견
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								한국의약품안전관리원
+							</td>
+							<td>
+								의약품부작용피해조사
+							</td>
+							<td>
+								약사법 제86조의 3 제2항, 제86조의6 제1항 및<br>법제처 법령해석례(15-200) 의거
+							</td>
+							<td>
+								환자등록번호, 환자명, 생년월일, 성별, 진료기록
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								통계청
+							</td>
+							<td>
+								사망원인보완조사
+							</td>
+							<td>
+								통계법 제17조, 제25조, 제41조, 제23조<br>관련모자보건법 제8조 제3항 시행규칙 제7조
+							</td>
+							<td>
+								영아성명, 영아 주민등록번호, 주소, 사망일자, 사망장소, 사망시간, 다태상태, 총 출생순위, 분만방법, 임신주수, 출생 시 체중, 사망원인, 분만시간, 출생시 두위, 출생시 신장, 아프가점수, 산전관리, 직전 임신 결과, 모의 임신·분만기간 중 질환, 모의 임신 중 혈압, 모의 임신 중 체중,<br>모 주민등록번호, 모 신장, 흡연력, 배우자유무, 최종학력, 직업, 국적<br>** 조사항목 중 정확히 확인된 정보만 제공되며, 이외 정보는 공란 처리보고
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								국세청
+							</td>
+							<td>
+								연말정산용 후원금 신고
+							</td>
+							<td>
+								소득세법 제160조의3
+							</td>
+							<td>
+								[후원인 정보]<br>성명, 주민등록번호, 집주소, 집연락처, 핸드폰
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								국민연금공단
+							</td>
+							<td>
+								장애등록심사
+							</td>
+							<td>
+								의료법 제21조 제3항 제15호, 장애인복지법 제32조 제7항
+							</td>
+							<td>
+								환자등록번호, 환자명, 생년월일, 성별, 진료기록
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								국민연금공단
+							</td>
+							<td>
+								국민연금급여(장애, 유족연금) 지급
+							</td>
+							<td>
+								의료법 제21조 제3항 제14호, 국민연금법 제123조
+							</td>
+							<td>
+								환자등록번호, 환자명, 생년월일, 성별, 진료기록
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+						<tr>
+							<td>
+								병무청
+							</td>
+							<td>
+								병역 의무자 장애진단 확인용
+							</td>
+							<td>
+								의료법 제21조 제3항 제6호, 병역법 제11조의2
+							</td>
+							<td>
+								환자등록번호, 환자명, 생년월일, 성별, 진료기록
+							</td>
+							<td>
+								제공근거에 따름
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</li>
+	</ol>
+</div>
+<h4>4. 개인정보처리 업무의 위탁</h4>
+<div>
+	<ol>
+		<li>
+			미즈메디병원은 보다 나은 서비스 제공, 고객 편의 제공 등 원활한 업무수행을 위하여 다음과 같이 개인정보처리업무를 외부 전문업체에 위탁하여 운영하고 있습니다.
+			<div class="table style03">
+				<table>
+					<caption>개인정보 파일의 처리목적, 보유기간, 처리하는 개인정보의 항목</caption>
+					<colgroup>
+						<col width="23%">
+						<col width="auto">
+						<col width="auto">
+						<col width="18%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>수탁자</th>
+							<th>위탁하는 업무의 내용</th>
+							<th>위탁하는 정보</th>
+							<th>개인정보 보유기간</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								아워홈
+							</td>
+							<td>
+								급식 업무
+							</td>
+							<td>
+								이름, 환자등록번호, 생년월일, 성별, 국적
+							</td>
+							<td>
+								위탁계약 종료시까지
+							</td>
+						</tr>
+						<tr>
+							<td>
+								KTis
+							</td>
+							<td>
+								전화예약
+							</td>
+							<td>
+								이름, 병원등록번호, 주민번호, 주소, 전화번호
+							</td>
+							<td>
+								위탁계약 종료시까지
+							</td>
+						</tr>
+						<tr>
+							<td>
+								인사이트헬스케어
+							</td>
+							<td>
+								원격 판독업체
+							</td>
+							<td>
+								이름, 생년월일, 성별, 영상정보
+							</td>
+							<td>
+								위탁계약종료시까지
+							</td>
+						</tr>
+						<tr>
+							<td>
+								청라고려의원
+							</td>
+							<td>
+								영상의학판독
+							</td>
+							<td>
+								이름,병원등록번호,생년월일,성별,영상정보
+							</td>
+							<td>
+								위탁계약종료시까지
+							</td>
+						</tr>
+						<tr>
+							<td>
+								삼구아이앤씨
+							</td>
+							<td>
+								주차, 보안 관리업무
+							</td>
+							<td>
+								이름, 전화번호, 차량번호
+							</td>
+							<td>
+								위탁계약 종료시까지
+							</td>
+						</tr>
+						<tr>
+							<td>
+								캔서롭
+							</td>
+							<td>
+								위탁 검체 검사 업무 – 연구
+							</td>
+							<td>
+								이름, 환자등록번호, 생년월일, 성별, 국적
+							</td>
+							<td>
+								위탁계약 종료시까지
+							</td>
+						</tr>
+						<tr>
+							<td>
+								의료법인
+								녹십자의료재단
+							</td>
+							<td>
+								위탁 검체 검사 업무 – 병리검사, 진단의학검사
+							</td>
+							<td>
+								이름, 환자등록번호, 생년월일, 성별, 국적
+							</td>
+							<td>
+								위탁계약 종료시까지
+							</td>
+						</tr>
+						<tr>
+							<td>
+								서울대학교병원
+							</td>
+							<td>
+								위탁검체 검사업무 – 부검
+							</td>
+							<td>
+								이름, 환자등록번호, 생년월일, 성별, 국적
+							</td>
+							<td>
+								위탁계약 종료시까지
+							</td>
+						</tr>
+						<tr>
+							<td>
+								서울의과학
+								연구소
+							</td>
+							<td>
+								위탁 검체 검사 업무 - 진단의학검사
+							</td>
+							<td>
+								이름, 환자등록번호, 생년월일, 성별, 국적
+							</td>
+							<td>
+								위탁계약 종료시까지
+							</td>
+						</tr>
+						<tr>
+							<td>
+								엘에이에스
+							</td>
+							<td>
+								위탁 검체 검사 업무 - 진단의학검사
+							</td>
+							<td>
+								이름, 환자등록번호, 생년월일, 성별, 국적
+							</td>
+							<td>
+								위탁계약 종료시까지
+							</td>
+						</tr>
+						<tr>
+							<td>
+								테라젠지놈케어
+							</td>
+							<td>
+								위탁 검체 검사 업무 – 연구
+							</td>
+							<td>
+								이름, 환자등록번호, 생년월일, 성별, 국적
+							</td>
+							<td>
+								위탁계약 종료시까지
+							</td>
+						</tr>
+						<tr>
+							<td>
+								메디링스
+							</td>
+							<td>
+								모바일 국가검진 문진표 발송, 모바일 검진 결과지 발송
+							</td>
+							<td>
+								이름, 환자등록번호, 생년월일, 성별, 핸드폰번호, 이메일주소
+							</td>
+							<td>
+								계약 종료시까지
+							</td>
+						</tr>
+						<tr>
+							<td>
+								다인소프트
+							</td>
+							<td>
+								국가검진 수검항목 조회 및 수검결과지 발송, 공단청구
+							</td>
+							<td>
+								이름, 주소, 환자등록번호, 주민등록번호, 전화번호, 핸드폰번호, 이메일주소, 보험증번호
+							</td>
+							<td>
+								위탁계약 종료시까지
+							</td>
+						</tr>
+						<tr>
+							<td>
+								봄마루
+							</td>
+							<td>
+								홈페이지 서버유지보수,홈페이지 유지보수
+							</td>
+							<td>
+								이름, 생년월일, 성별, 로그인ID, 비밀번호, 핸드폰번호,<br>이메일, 환자등록번호, 자택 전화번호, 자택 주소
+							</td>
+							<td>
+								위탁계약 종료시까지
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</li>
+	</ol>
+</div>
+
+<h4>5. 개인정보의 보유 및 이용기간</h4>
+<div>
+	<ol>
+		<li>
+			<p>개인정보는 미즈메디병원이 고객에게 서비스를 제공하는 기간 동안에 한하여 보유 및 이용됩니다.</p>
+		</li>
+		<li>
+			<ul>
+				<li>병원 내 진료와 관련된 진료서비스의 제공을 위하여 수집된 경우 의료법 기준에 준합니다. (필요시 연장가능)</li>
+				<li>신용정보의 수집/처리 및 이용 등에 관한 정보의 경우: 신용정보의 이용 및 보호에 관한 법률에 따라 3년간 보존 (보존항목: 카드사명, 카드번호 등 카드결제 승인정보)</li>
+				<li>고객건의함(오프라인) 서비스를 이용하기 위해 수집된 경우: 1년 보관 후 파기</li>
+				<li>차량번호 등록서비스 이용 시: 본인요청에 따라 변경 및 삭제 가능합니다. 수집 목적 또는 제공받는 목적이 달성된 경우에도 기타 관련 법령의 규정에 따라 보존할 필요성이 있는 경우에는 개인정보를 보유할 수 있음</li>
+				<li>홈페이지 회원가입의 경우: 홈페이지/모바일 통합 회원 탈퇴 또는 제명된 즉시 삭제됩니다.</li>
+				<li>입사 지원시 : 수집·이용 목적이 달성될 때 까지, (상시 채용 등록 時) 지원자의 동의 철회시까지</li>
+			</ul>
+		</li>
+		<li>
+			<p>수집목적 또는 제공받는 목적이 달성된 경우에도 상법 등 법령의 규정 또는 진료의 연속성, 연구 및 제증명서 발급을 위하여 보존할 필요성이 있다고 판단되는 경우 법적보관연한 경과 후에도 귀하의 개인정보를 보유할 수 있습니다. 아울러 법적 보관연한이 경과한 기록에 한하여 환자본인이 폐기요청을 하는 경우에는 지체없이 파기합니다.</p>
+		</li>
+	</ol>
+</div>
+
+<h4>6. 개인정보의 파기절차 및 방법</h4>
+<div>
+	<p>미즈메디병원은 수집한 개인정보의 이용목적이 달성된 후에는 보관기관 및 이용기간에 따라 해당정보를 지체없이 파기합니다. 파기절차 및 방법은 다음과 같습니다.</p>
+
+	<ol style="padding-left: 1em">
+		<li>1) 파기절차: 회원님이 회원가입 등을 위해 입력하신 정보는 목적이 달성된 후 내부방침 및 기타 관련 법령에 의한 정보보호 사유에 따라 삭제되거나 파기합니다.</li>
+		<li>2) 파기방법: 전자적 파일 형태의 개인정보는 기록을 재생할 수 없는 기술적 방법을 사용하여 삭제합니다. 종이에 출력된 개인정보는 파쇄 또는 융해하여 파기합니다.</li>
+	</ol>
+</div>
+
+<h4>7. 정보주체 및 법정대리인의 권리와 그 행사방법</h4>
+<div>
+	<p>정보주체는 다음과 같은 권리를 행사할 수 있으며, 만14세 미만 아동의 법정대리인은 그 아동의 개인정보에 대한 열람, 정정, 삭제, 처리정지를 요구할 수 있습니다.</p>
+	<ol>
+		<li>
+			<p>[개인정보 열람 요구]</p>
+			<ol style="padding-left: 1em">
+				<li>1) 병원에서 보유하고 있는 개인정보파일은 개인정보 보호법 제35조(개인정보의 열람)에 따라 본인의 개인정보에 대한 열람을 요구할 수 있습니다.</li>
+				<li>2) 정보주체 본인의 진료정보에 대한 열람/증명 접수 처리시에는 고객의 신분을 나타내는 주민등록증, 여권, 운전면허증 등의 신분증명서를 제출하여 본인 여부를 확인합니다.</li>
+				<li>3) 정보주체의 대리인이 방문하여 진료정보의 열람/증명을 요구하는 경우에는 정보주체의 신분증명서, 대리인의 신분증명서, 가족관계증명서 및 주민등록등 초본, 대리관계를 나타내는 동의서 및 위임장 등의 증표를 제시 받아 진정한 대리인인지 여부를 확인합니다.</li>
+				<li>4) 개인정보의 전부 또는 일부에 대하여 열람/증명 또는 정정을 거절할 이유가 있는 경우에는 고객에게 이를 통지하고 그 이유를 설명합니다.</li>
+			</ol>
+		</li>
+		<li>
+			<p>[개인정보 정정·삭제 요구]</p>
+			<ol style="padding-left: 1em">
+				<li>1) 병원에서 보유하고 있는 개인정보파일은 개인정보 보호법 제36조(개인정보의 정정·삭제)에 따라 정정·삭제를 요구할 수 있습니다. 다만, 다른 법령에서 그 개인정보가 수집 대상으로 명시되어 있는 경우에는 그 삭제를 요구할 수 없습니다.</li>
+			</ol>
+		</li>
+		<li>
+			<p>[개인정보 처리정지 요구]</p>
+			<ol style="padding-left: 1em">
+				<li>1) 병원에서 보유하고 있는 개인정보파일은 개인정보 보호법 제37조(개인정보의 처리정지 등)에 따라 처리정지를 요구할 수 있습니다. 다만, 개인정보 처리정지 요구 시 법 제37조 2항에 의하여 처리정지 요구가 거절 될 수 있습니다.</li>
+				<li>
+					<ul>
+						<li>법률에 특별한 규정이 있거나 법령상 의무를 준수하기 위하여 불가피한 경우</li>
+						<li>다른 사람의 생명, 신체를 해할 우려가 있거나 다른 사람의 재산과 그 밖의 이익을 부당하게 침해할 우려가 있는 경우</li>
+						<li>공공기관이 개인정보를 처리하지 아니하면 다른 법률에서 정하는 소관 업무를 수행할 수 없는 경우</li>
+						<li>개인정보를 처리하지 아니하면 정보주체와 약정한 서비스를 제공하지 못하는 등 계약의 이행이 곤란한 경우로서 정보주체가 그 계약의 해지의사를 명확하게 밝히지 아니한 경우</li>
+					</ul>
+				</li>
+				<li>병원에 대해 위 항에 대한 권리행사는 개인정보 보호법 시행규칙 별지 제8호 서식에 따라 서면, 전자우편, 모사전송(FAX) 등을 통하여 하실 수 있습니다.</li>
+			</ol>
+		</li>
+	</ol>
+</div>
+
+<h4>8. 개인정보 보호 책임자의 성명 또는 개인정보 보호업무 및 관련 고충사항을 처리하는 부서의 명칭과 전화번호 등 연락처</h4>
+<div>
+	<p>병원은 고객의 개인정보를 보호하고 개인정보와 관련한 불만을 처리하기 위하여 아래와 같이 관련 부서 및 개인정보관리책임자를 지정하고 있습니다.</p>
+	<ol>
+		<li>
+			<p>개인정보보호책임자 : 기획조정실장 노영호</p>
+		</li>
+		<li>
+			<p>개인정보실무담당자 : 정보보안실무책임자 – 전산실장 김종암</p>
+			<p style="padding-left: 9em">정보보호실무책임자 – 의무기록실장 최숙희</p>
+			<p style="padding-left: 9em">*의료영상정보 : 영상의학실장 김종승</p>
+			<p style="padding-left: 9em">*홈페이지 : 홍보팀</p>
+			<p style="padding-left: 9em">물리적보안실무책임자 – 건축팀 과장 김도윤</p>
+		</li>
+		<li>
+			<p>[홈페이지 개인정보 열람청구 접수·처리부서]</p>
+			<p>부서명 : 홍보팀</p>
+			<p>연락처 : 02-2007-1238. webmaster@mizmedi.com</p>
+		</li>
+		<li>
+			<p>[진료정보 개인정보 열람청구 접수·처리부서]</p>
+			<p>부서명 : 의무기록실</p>
+			<p>연락처 : 02-2007-1041 , shchoi1964@mizmedi.com</p>
+		</li>
+	</ol>
+</div>
+
+<h4>9. 영상정보처리기기 운영관리 방침</h4>
+<div>
+	<p>병원은 다음과 같이 영상정보처리기기를 운영·관리하고 있습니다.</p>
+	<ol>
+		<li>
+			<p>1. 설치 근거 및 설치 목적</p>
+			<ol style="padding-left: 1em">
+				<li>개인정보보호법 제25조 제1항에 따라 환자 및 시설 안전, 화재예방, 고객의 안전을 위한 범죄 예방, 차량의 도난 및 파손방지 등</li>
+			</ol>
+		</li>
+		<li>
+			<p>2. 설치대수, 설치 위치 및 촬영범위</p>
+			<ol style="padding-left: 1em">
+				<li>설치대수: 250대</li>
+				<li>설치 위치 및 촬영 범위 : 로비, 복도, 주차장, 도로, 승강기 등</li>
+				<li>※ 설치 수량과 위치 등은 효율적인 관리를 위하여 변경 가능</li>
+			</ol>
+		</li>
+		<li>
+			<p>3. 담당부서 및 관리책임자</p>
+			<ul>
+				<li>관리책임자 : 보안팀</li>
+				<li>전화번호 : 02-2007-1102</li>
+				<li>기타 : 기기의 설치 및 유지 등은 전기통신파트 담당</li>
+			</ul>
+		</li>
+		<li>
+			<p>4. 영상정보의 촬영시간, 보관기간, 보관장소 및 처리방법</p>
+			<ul>
+				<li>촬영시간 : 24시간 촬영(모션 감지에 의한 녹화)</li>
+				<li>보관기간 : 촬영일로부터 14일이내 (주차장은 1개월까지 보관, 보관기간 경과 시 자동 삭제)</li>
+				<li>보관장소 : 보안팀</li>
+				<li>처리방법 : 개인영상정보의 목적 외 이용, 제3자 제공, 파기, 열람 등 요구에 관한 사항을 기록·관리하고, 보관기간 만료시 디지털 방식에 의하여 영구 자동 삭제되며, 출력물의 경우에는 파쇄 또는 소각합니다.</li>
+			</ul>
+		</li>
+		<li>
+			<p>5. 개인영상정보의 신청 방법 및 장소에 관한 사항</p>
+			<ul>
+				<li>신청방법 : 사전 연락 후 신청 (사건/사고 등과 관계되었을 경우, 경찰에 의한 열람)</li>
+				<li>신청장소 : 보안팀</li>
+				<li>전화번호 : 02-2007-1102</li>
+			</ul>
+		</li>
+		<li>
+			<p>6. 정보주체의 영상정보 열람 등 요구에 대한 조치</p>
+			<ol style="padding-left: 1em">
+				<li>귀하는 개인영상정보에 관하여 열람 또는 존재확인 등을 원하는 경우 언제든지 영상정보처리기기 운영자에게 요구하실 수 있습니다. 단, 귀하가 촬영된 개인영상정보 및 명백히 정보주체의 급박한 생명, 신체, 재산의 이익을 위하여 필요한 개인영상정보에 한정됩니다. 정보주체의 열람 등 청구에도 불구하고 아래와 같은 경우에는 개인영상정보 열람 등 청구를 거부할 수 있습니다.</li>
+				<ol style="padding-left: 1em">
+					<li>1) 개인영상정보의 보관기간이 경과하여 파기된 경우</li>
+					<li>2) 법률에 따라 열람이 금지되거나 제한되는 경우(개인정보보호법 등)</li>
+					<li>3) 기타정보주체의 열람 등 요구를 거부할 만한 정당한 사유가 존재하는 경우</li>
+				</ol>
+			</ol>
+		</li>
+		<li>
+			<p>7. 영상정보의 보호를 위한 기술적·관리적 및 물리적 조치</p>
+			<ol style="padding-left: 1em">
+				<li>병원에서 처리하는 영상정보는 암호화 조치 등을 통하여 안전하게 관리되고 있습니다. 또한, 병원은 개인영상정보보호를 위한 관리적 대책으로서 개인정보에 대한 접근 권한을 차등 부여하고 있고, 개인영상정보의 위•변조 방지를 위하여 개인영상정보의 생성 일시, 열람 시 열람목적, 열람자 등을 기록하여 관리하고 있습니다. 이외에도 개인영상정보의 안전한 물리적 보관을 위하여 잠금장치를 설치하고 있습니다.</li>
+			</ol>
+		</li>
+	</ol>
+</div>
+
+<h4>10. 개인정보 자동수집장치의 설치/운영 및 거부에 관한 사항</h4>
+<div>
+	<p>병원은 개인화되고 맞춤화된 서비스를 제공하기 위해서 이용자의 정보를 저장하고 수시로 불러오는 '쿠키(cookie)'를 사용합니다. 쿠키란 웹 서버가 웹 브라우저에 보내어 저장했다가 서버의 부가적인 요청이 있을 때 다시 서버로 보내주는 문자열 정보를 말합니다. 고객님께서 웹사이트에 접속을 하시면 고객님의 브라우저에 있는 쿠키의 내용을 읽고, 추가 정보를 찾아 접속에 따른 성명 등의 추가 입력 없이 서비스를 제공할 수 있습니다.</p>
+	<ol>
+		<li>
+			<p>가. 쿠키의 사용 목적</p>
+			<p>이용자들이 방문한 병원의 각 서비스와 웹 사이트들에 대한 방문 및 이용형태, 인기 검색어, 보안접속 여부, 뉴스편집, 이용자 규모 등을 파악하여 이용자에게 최적화된 정보 제공을 위하여 사용합니다.</p>
+		</li>
+		<li>
+			<p>나. 쿠키의 설치/운영 및 거부</p>
+			<p>이용자는 쿠키 설치에 대한 선택권을 가지고 있습니다.</p>
+			<p>웹 브라우저 상단의 “도구&gt; 인터넷옵션&gt; 개인정보&gt; 고급” 에서 모든 쿠키를 다 받아들이거나, 쿠키가 설치될 때 통지를 보내도록 하거나, 아니면 모든 쿠키를 거부할 수 있습니다.</p>
+			<p>만약, 이용자께서 쿠키 설치를 거부하였을 경우 서비스 이용에 불편이 있거나, 서비스 제공에 어려움이 있을 수 있습니다.</p>
+			<p>다만, 쿠키의 저장을 거부할 경우에는 로그인이 필요한 일부 서비스는 이용에 어려움이 있을 수 있습니다.</p>
+		</li>
+	</ol>
+</div>
+
+<h4>11. 개인정보처리방침의 고지 또는 통지방법</h4>
+<div>
+	<p>미즈메디병원이 개인정보 수집 시 고지한 범위 또는 서비스이용약관, 본 개인정보처리방침에 명시한 범위를 넘어 고객의 개인정보를 이용하거나 제3자에게 제공하기 위해 고객의 동의를 얻고자할 때에는 미리 고객에게 개별적으로 서면, 전자우편, 전화 등으로 해당사항을 고지합니다.</p>
+	<p>타인에게 고객의 개인정보의 수집ㆍ처리ㆍ관리 등을 위탁하는 경우에는 가입신청서, 서비스이용약관, 홈페이지의 개인정보처리방침 등을 통하여 그 사실을 고객에게 고지합니다.</p>
+	<p>미즈메디병원이 영업의 전부 또는 일부를 양도하거나 합병ㆍ상속 등으로 그 권리, 의무를 이전하는 경우 서면ㆍ전자우편 등을 통하여 고객에게 개별적으로 통지함과 동시에 홈페이지(www.mizmedi.com)에 공지합니다.</p>
+	<p>14세 미만 아동의 개인정보 수집ㆍ이용 또는 제3자에게 제공하기 위하여 법정대리인의 동의를 구하고 있습니다. 이를 위해 아동으로부터 법정대리인의 성명과 연락처 등 최소한의 정보를 수집하고 있으며, 개인정보 처리방침에서 규정하고 있는 방법에 따라 법정대리인의 동의를 바고 있습니다.</p>
+</div>
+
+<h4>12. 개인정보의 안전성 확보 조치에 관한 사항</h4>
+<div>
+	<p>미즈메디병원은 정보주체의 개인정보를 안전하게 관리하기 위해 개인정보보호법 제29조에 따라 다음과 같이 안전성 확보에 필요한 기술적·관리적 및 물리적 조치를 하고 있습니다.</p>
+	<ol>
+		<li>
+			<p>[정기적인 자체 현장검사 실시]</p>
+			<ul>
+				<li>개인정보 취급 관련 안정성 확보를 위해 정기적으로 년 1회 이상 자체 현장검사를 실시하고 있습니다.</li>
+			</ul>
+		</li>
+		<li>
+			<p>[개인정보 취급 직원의 최소화 및 교육]</p>
+			<ul>
+				<li>개인정보를 취급하는 직원을 지정하고 담당자에 한정시켜 최소화하여 개인정보를 관리하는 대책을 시행하고 정기적인 교육을 시행하고 있습니다.</li>
+			</ul>
+		</li>
+		<li>
+			<p>[내부관리계획의 수립 및 시행]</p>
+			<ul>
+				<li>개인정보의 안전한 처리를 위하여 내부관리계획을 수립하고 시행하고 있습니다.</li>
+			</ul>
+		</li>
+		<li>
+			<p>[해킹 등에 대비한 기술적 대책]</p>
+			<ul>
+				<li>해킹이나 컴퓨터 바이러스 등에 의한 개인정보 유출 및 훼손을 막기 위하여 보안프로그램을 설치하고 주기적인 갱신·점검을 하며 외부로부터 접근이 통제된 구역에 시스템을 설치하고 기술적/물리적으로 감시 및 차단하고 있습니다.</li>
+			</ul>
+		</li>
+		<li>
+			<p>[개인정보의 암호화]</p>
+			<ul>
+				<li>정보주체의 주민등록번호, 비밀번호는 암호화 되어 저장 및 관리되고 있어, 본인만이 알 수 있으며 중요한 데이터는 파일 및 전송 데이터를 암호화 하거나 파일 잠금 기능을 사용하는 등의 별도 보안기능을 사용하고 있습니다.</li>
+			</ul>
+		</li>
+		<li>
+			<p>[접속기록의 보관 및 위변조 방지]</p>
+			<ul>
+				<li>개인정보처리시스템에 접속한 기록을 최소 6개월 이상 보관, 관리하고 있으며, 접속 기록이 위변조 및 도난, 분실되지 않도록 보안기능 사용하고 있습니다.</li>
+			</ul>
+		</li>
+		<li>
+			<p>[개인정보에 대한 접근 제한]</p>
+			<ul>
+				<li>개인정보를 처리하는 데이터베이스시스템에 대한 접근권한의 부여, 변경, 말소를 통하여 개인정보에 대한 접근통제를 위하여 필요한 조치를 하고 있으며 침입차단시스템을 이용하여 외부로부터의 무단 접근을 통제하고 있습니다.</li>
+			</ul>
+		</li>
+		<li>
+			<p>[PC 개인정보보호 솔루션을 통한 개인정보 관리]</p>
+			<ul>
+				<li>파일에 포함된 개인정보(주민등록번호, 휴대폰, 계좌, 이메일주소 등)를 검출하고 해당 파일을 격리·암호화·완전삭제하여 안전하게 관리하고 있습니다.</li>
+			</ul>
+		</li>
+		<li>
+			<p>[비인가자에 대한 출입 통제]</p>
+			<ul>
+				<li>개인정보를 보관하고 있는 물리적 보관 장소를 별도로 두고 이에 대해 출입통제 절차를 수립, 운영하고 있습니다.</li>
+			</ul>
+		</li>
+	</ol>
+</div>
+
+<h4>13. 아동의 개인정보보호</h4>
+<div>
+	<p>미즈메디병원은 만 14세 미만 아동(이하 '아동')이 제공한 개인정보로 인하여 아동 및 법정 대리인이 불이익을 입지 않도록 보호 조치를 취하고 있습니다.</p>
+	<p>미즈메디병원은 아동의 개인정보에 대하여 아래의 행위를 하는 경우에는 해당 아동의 법정대리인의 동의를 얻도록 하고 있습니다.</p>
+	<p>아동의 서비스가입을 위한 개인정보 수집하거나 서비스 가입 시 고지한 범위 또는 서비스이용약관에 명시한 범위를 넘어 아동의 개인정보를 이용하거나 제3자에게 제공하고자 하는 경우
+		아동의 개인정보를 제공받은 자가 개인정보를 제공받은 목적 외의 용도로 이용하거나 제3자에게 제공하는 경우
+		미즈메디병원은 법정대리인의 동의를 얻기 위하여 법정대리인의 성명, 주민번호 등 필요한 최소한의 정보를 요구할 수 있습니다. 이 경우 개인정보의 수집ㆍ이용 또는 제공 목적 및 법정대리인의 동의가 필요하다는 취지를 아동이 쉽게 이해 할 수 있는 평이한 표현으로 아동에게 고지 합니다.
+	</p>
+	<p>법정대리인의 동의를 얻기 위하여 수집한 법정대리인의 개인정보를 해당 법정대리인의 동의 여부를 확인하는 목적 외의 용도로 이를 이용하거나 제3자에게 제공하지 않습니다.</p>
+</div>
+
+<h4>14. 동의철회 / 회원탈퇴방법</h4>
+<div>
+	<p>미즈메디병원은 고객이 회원가입 시 개인정보의 수집ㆍ이용 및 제공에 대해 동의하신 내용을 언제든지 철회하실 수 있습니다.</p>
+	<p>미즈메디병원 회원탈퇴는 병원 홈페이지 ‘개인정보수정’의 "회원탈퇴"를 클릭하여 본인 확인 절차를 거치신 후 직접 회원탈퇴를 하시거나, 콜센터(1588-2007)로 서면, 전화 또는 Fax 등으로 연락하시면 지체없이 고객의 개인 정보를 파기하는 등 필요한 조치를 하겠습니다.</p>
+</div>
+
+<h4>15. 정책변경에 따른 공지의무</h4>
+<div>
+	<ol>
+		<li>이 개인정보 처리 방침은 2023년 2월 1일에 개정되었습니다.</li>
+		<li>이전 개인정보 취급방침 : 2017년 2월 27일부</li>
+		<li>개인정보취급방침 개정 : 2020년 1월 2일부</li>
+		<li><a href="/intro/footer/privacy?ver=20210101" target="_blank" style="text-decoration: underline; color: blue;">개인정보취급방침 개정 : 2021년 1월 1일부</a></li>
+		<li>개인정보취급방침 개정: 2023년 2월1일부</li>
+	</ol>
+</div>
+
+			</div><div id="mCSB_8_scrollbar_vertical" class="mCSB_scrollTools mCSB_8_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_8_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+			<div class="wrap_checkbox">
+				<input type="checkbox" id="reserveJC_ruleAgree">
+				<label for="reserveJC_ruleAgree">동의합니다.</label>
+				<em id="reserveJC_ruleAgree_msg" class="sub color1"></em><!--클래스명 color1:오렌지색 , color2:녹색-->
+			</div>
+			<div class="btn_wrap">
+				<button name="btnGoToreserveJC2" class="active">다음단계</button>
+			</div>
+			<p style="margin-top: 15px;">· 검진예약은 오늘 날짜 기준 14일 뒤 부터 예약가능합니다.</p>
+			<p>· 오늘 날짜 기준 14일 이내 검진을 하시고자 하는 경우에는 고객센터 ( 1588-2701) 로 연락주시기 바랍니다.</p>
+		</div><div id="mCSB_7_scrollbar_vertical" class="mCSB_scrollTools mCSB_7_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_7_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+		<a href="javascript:closeReserveJC();"><img src="/static/resources/user/web/images/btn/pop_btn_close.png" alt="팝업닫기"></a>
+	</div>
+</div>
+
+<script src="/static/js/user/intro/other/reserveJC.js?ts=1758614260894" type="text/javascript"></script>
+
+	
+
+
+<div class="pop_wrap" id="webReserveJC2Popup" style="display: none;">
+	<div class="pop_body reserve personal online_pop" style="margin-top:-450px;">
+		<h2>국민건강검진 예약</h2>
+		<div class="mCustomScrollbar _mCS_9 mCS_no_scrollbar" style="height:800px"><div id="mCSB_9" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0" style="max-height: 800px;"><div id="mCSB_9_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+			<p>개인정보를 입력하고, 개인정보취급방침에 동의하셔야만 검진예약이 가능합니다.</p>
+			<p>국민건강검진 예약은 전문상담원이 전화를 드린 후 예약이 최종 확정됩니다.(고객센터: 1588-2701)</p>
+			<div class="table style01">
+				<table>
+					<caption>table title</caption>
+					<colgroup>
+						<col width="17%">
+						<col width="22%">
+						<col width="11%">
+						<col width="17%">
+						<col width="22%">
+						<col width="11%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>이름</th>
+							<td data="reserveJCPatName"></td>
+							<td rowspan="2">
+								<button name="btnGoToReserveJC1">수정</button>
+							</td>
+							<th>진료과</th>
+							<td colspan="2">국민건강검진</td>
+						</tr>
+						<tr>
+							<th>휴대폰</th>
+							<td data="reserveJCHp"></td>
+							<th>예약일시</th>
+							<td data="reserveJCDate" colspan="2"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="reserveJC2_calendar" class="wrap_calendar" style="display:none"><!--3단계 display:none 시 사라짐-->
+				<input type="hidden" id="yearJC" value="">
+				<input type="hidden" id="monthJC" value="">
+				<input type="hidden" id="dayJC" value="">
+				<div class="count">
+					<a href="javascript:void(0)" id="prevJC" style="display:none;"></a><span id="yyyyMMJC"></span><a href="javascript:void(0)" id="nextJC"></a>
+				</div>
+
+				<div class="calendar">
+					<table width="100%" summary="">
+						<caption>월, 화, 수, 목, 금, 토에 대한 테이블입니다.</caption>
+						<colgroup>
+							<col width="33.3333%">
+							<col width="33.3333%">
+							<col width="33.3333%">
+							<col width="33.3333%">
+							<col width="33.3333%">
+							<col width="33.3333%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th scope="col">월</th>
+								<th scope="col">화</th>
+								<th scope="col">수</th>
+								<th scope="col">목</th>
+								<th scope="col">금</th>
+								<th scope="col">토</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="btn_wrap">
+				<button name="btnDoReserveJC" class="active">다음단계</button>
+			</div>
+			<p style="margin-top: 15px;">· 검진예약은 오늘 날짜 기준 14일 뒤 부터 예약가능합니다.</p>
+			<p>· 오늘 날짜 기준 14일 이내 검진을 하시고자 하는 경우 고객센터 ( 1588-2701) 로 연락주시기 바랍니다.</p>
+		</div><div id="mCSB_9_scrollbar_vertical" class="mCSB_scrollTools mCSB_9_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_9_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+		<a href="javascript:closeReserveJC();"><img src="/static/resources/user/web/images/btn/pop_btn_close.png" alt="팝업닫기"></a>
+	</div>
+</div>
+	
+
+
+<div class="pop_wrap" id="webReserveJC3Popup" style="display: none;">
+	<div class="pop_body reserve personal online_pop" style="margin-top:-450px;">
+		<h2>국민건강검진 예약</h2>
+		<div class="mCustomScrollbar _mCS_10 mCS_no_scrollbar" style="height:800px"><div id="mCSB_10" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0" style="max-height: 800px;"><div id="mCSB_10_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+			<p>개인정보를 입력하고, 개인정보취급방침에 동의하셔야만 검진예약이 가능합니다.</p>
+			<p>국민건강검진 예약은 전문상담원이 전화를 드린 후 예약이 최종 확정됩니다.(고객센터: 1588-2701)</p>
+			<div class="table style01">
+				<table>
+					<caption>table title</caption>
+					<colgroup>
+						<col width="17%">
+						<col width="22%">
+						<col width="11%">
+						<col width="17%">
+						<col width="22%">
+						<col width="11%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>이름</th>
+							<td data="reserveJCPatName"></td>
+							<td rowspan="2">
+							</td>
+							<th>진료과</th>
+							<td>국민건강검진</td>
+							<td rowspan="2">
+							</td>
+						</tr>
+						<tr>
+							<th>휴대폰</th>
+							<td data="reserveJCHp"></td>
+							<td>예약일시</td>
+							<td data="reserveJCDate"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="reserve-jc-complete-lg txt-center">국민건강검진 예약 신청이 완료되었습니다.<br>빠른 시간안에 전문 상담원이 연락드리겠습니다.</div>
+
+			<div class="btn_wrap">
+				<button type="button" onclick="closeReserveJC()" class="active">확인</button>
+			</div>
+		</div><div id="mCSB_10_scrollbar_vertical" class="mCSB_scrollTools mCSB_10_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_10_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+		<a href="javascript:closeReserveJC();"><img src="/static/resources/user/web/images/btn/pop_btn_close.png" alt="팝업닫기"></a>
+	</div>
+</div>
+
+	
+
+
+<div class="pop_wrap" id="webreserveJC4Popup" style="display: none;">
+	<div class="pop_body reserve list" style="margin-top:-450px;">
+		<h2>온라인 진료예약/조회</h2>
+		<div class="mCustomScrollbar _mCS_11 mCS_no_scrollbar" style="height:800px"><div id="mCSB_11" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0" style="max-height: 800px;"><div id="mCSB_11_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr"> <!-- 2018-06-15 천혜성 -->
+			<p>예약취소를 하시려면 예약취소를 누르거나, 고객센터(1588-2701)로 전화하시기 바랍니다. </p>
+			<h4>개인정보</h4>
+			<div class="table style01">
+				<table>
+					<caption>table title</caption>
+					<colgroup>
+						<col width="20%">
+						<col width="30%">
+						<col width="20%">
+						<col width="30%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>이름</th>
+							<td id="reserveJC4_patName"></td>
+							<th>진료번호</th>
+							<td id="reserveJC4_treatNo"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>				
+			<h4>온라인 예약 현황</h4>
+			<!-- Swiper -->
+			<div id="reserveJC4_swiper" class="thumnail_list">
+				<ul id="reserveJC4_reserveJCList" class="swiper-wrapper">
+				</ul>
+				<!-- Add Arrows -->
+				<a href="javascript:void(0)" class="swiper-button-next"></a>
+				<a href="javascript:void(0)" class="swiper-button-prev"></a>
+				<!-- Add Scrollbar -->
+				<div class="swiper-scrollbar"></div>
+			</div>
+			 
+			<div class="btn_wrap">
+				<button name="btnGoToNewReservation" class="active">진료예약 하기</button>
+			</div>
+			<p class="point">  예약일이 경과하거나, 취소된 현황은 리스트에 나오지 않습니다.</p>
+		</div><div id="mCSB_11_scrollbar_vertical" class="mCSB_scrollTools mCSB_11_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_11_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+		<a href="javascript:goToClose();"><img src="/static/resources/user/web/images/btn/pop_btn_close.png" alt="팝업닫기"></a>
+	</div>
+</div>
+
+<script>
+	// 이후에 진료과 항목을 클릭해서 생성되는 swiper 이기 때문에 여기서는 삭제해준다.
+	// reserveJC.js에서 생성하도록 되어있음.
+/* 	var swiper = new Swiper('.swiper-container', {
+		slidesPerView : 3,
+		spaceBetween : 20,
+		navigation : {
+			nextEl : '.swiper-button-next',
+			prevEl : '.swiper-button-prev',
+		}
+	}); */
+</script>
+
+	
+
+
+<div class="pop_wrap" id="webReserveSelectType" style="display:none;">
+	<div class="pop_body reserve personal online" style="margin-top:-450px;">
+		<h2>온라인 진료예약/조회</h2>
+		<div class="mCustomScrollbar _mCS_12 mCS_no_scrollbar" style="height:800px"><div id="mCSB_12" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0" style="max-height: 800px;"><div id="mCSB_12_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+			<div class="table style01">
+				<table>
+					<caption>table title</caption>
+					<colgroup>
+						<col width="17%">
+						<col width="22%">
+						<col width="11%">
+						<col width="17%">
+						<col width="22%">
+						<col width="11%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>이름</th>
+							<td id="reserveSelType_patName"></td>
+							<td rowspan="2"><button name="btnGoToReserveSelType">수정</button></td>
+							<th colspan="3" rowspan="2">진료과/의료진,예약일시를 선택하세요.</th>
+						</tr>
+						<tr>
+							<th>주민등록번호</th>
+							<td id="reserveSelectType_prsnid"></td>
+						</tr>
+						
+					</tbody>
+				</table>
+			</div>
+			<!-- 기본 디폴트 화면 -->
+			<div class="cooperation_hospital_box online">
+				<ul>
+					<li class="li01 li03">
+						<a href="javascript:goToReserveSelectDate2();">
+							<dl>
+								<dt><span>날짜 선택</span></dt>
+								<dd>
+									원하는 날짜를 먼저 선택하고, <br>의료진을 선택할 수 있습니다.
+								</dd>
+							</dl>
+						</a>
+					</li>
+					<li class="li02  li04">
+						<a href="javascript:goToReserve2();">
+							<dl>
+								<dt><span>의료진 선택</span></dt>
+								<dd>
+									원하는 의료진을 먼저 선택하고 <br>날짜를 선택할 수 있습니다.
+								</dd>
+							</dl>
+						</a>
+					</li>
+				</ul>
+			</div><!-- // cooperation_hospital_box-->
+			<!--
+			<p class="point">  당일로부터 1일~2일후 온라인 진료예약은 예약문자가 발송되지 않으며,<strong> 온라인 진료예약취소는 콜센터(1588-2701)에서만 가능합니다.</strong></p>
+			<ul class="box_info">
+				<li>진료예약은 같은 진료과 내에서 중복 예약이 불가능합니다. (예약일의 진료가 완료되어야 다시 진료예약 가능)</li>
+				<li>진료예약 취소는 예약일 2일전까지 가능합니다. 예약취소를 누르시거나 콜센터(1588-2701)로 연락하여 취소하시기 바랍니다.</li>
+				<li>온라인 진료예약은 진료 후 이루어지는 검사예약과는 다릅니다.</li>
+				<li>진료에 필요한 각종 검사는 진료 후 전문의의 처방에 따라 다른 검사일에 진행됩니다.</li>
+				<li>온라인으로 예약이 불가능한 일시는 콜센터(1588-2701)로 예약 문의해 주시기 바랍니다. </li>
+			</ul>-->
+		</div><div id="mCSB_12_scrollbar_vertical" class="mCSB_scrollTools mCSB_12_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_12_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+		<a href="javascript:goToClose();"><img src="/static/resources/user/web/images/btn/pop_btn_close.png" alt="팝업닫기"></a>
+	</div>
+</div>
+
+
+<script>
+	// 이후에 진료과 항목을 클릭해서 생성되는 swiper 이기 때문에 여기서는 삭제해준다.
+	// reserve.js에서 생성하도록 되어있음
+	var reserve2Swiper = new Swiper('.swiper-container', {
+		slidesPerView : 3,
+		spaceBetween : 10,
+		navigation : {
+			nextEl : '.swiper-button-next',
+			prevEl : '.swiper-button-prev',
+		},
+		scrollbar : {
+			el : '.swiper-scrollbar',
+			hide : true,
+		},
+	});
+
+	// 진료과선택
+	$('.reserve.personal ul.box li').on('click', function() {
+		$(this).addClass('on').siblings().removeClass('on');
+	})
+</script>
+
+	
+
+
+<div class="pop_wrap" id="webReserveSelectDate2" style="display:none;">
+	<div class="pop_body reserve personal online_pop" style="margin-top:-450px;">
+		<div class="mCustomScrollbar _mCS_13 mCS_no_scrollbar" style="height:800px"><div id="mCSB_13" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0" style="max-height: 800px;"><div id="mCSB_13_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr"> 
+			<h2>온라인 진료예약</h2>
+			<div class="table style01">
+				<table>
+					<caption>table title</caption>
+					<colgroup>
+						<col width="17%">
+						<col width="22%">
+						<col width="11%">
+						<col width="17%">
+						<col width="22%">
+						<col width="11%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>이름</th>
+							<td id="reserveSelDate2_patName"></td>
+							<td rowspan="2"><button name="btnGoToReserveSelDate2">수정</button></td>
+							<th colspan="3" rowspan="2">진료과/의료진,예약일시를 선택하세요.</th>
+						</tr>
+						<tr>
+							<th>주민등록번호</th>
+							<td id="reserveSelDate2_prsnid"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!--<h4>진료과/의료진 및 예약일시 선택</h4>  삭제 -->
+			<!-- 추가작업 -->
+			
+			<ul class="tab style01" id="reserveTypeTab2">
+				<li class="on"><a href="javascript:void(0);">날짜 선택</a></li>
+				<li><a href="javascript:void(0);">의료진 선택</a></li>
+			</ul>
+			<div class="pop_reserve_calendar_con">
+				<div class="nav_calendar">
+					<input type="hidden" id="calYear">
+					<input type="hidden" id="calMonth">
+					<a href="javascript:void(0);" class="cal_prev"></a>
+					<span>2019년 2월</span>
+					<a href="javascript:void(0);" class="cal_next"></a>
+				</div>
+				<div class="calendar_tbl">
+					<div id="horizontal_scrollbar" class="cal_scroll horizontal mCustomScrollbar _mCS_1"><div id="mCSB_1" class="mCustomScrollBox mCS-light mCSB_horizontal mCSB_inside" style="max-height: 0px;" tabindex="0"><div id="mCSB_1_container" class="mCSB_container" style="position: relative; top: 0px; left: -1px; width: 1px; min-width: 100%; overflow-x: inherit;" dir="ltr"><!--  mCustomScrollbar-->
+						<table>
+						<caption>월 에 대한 테이블입니다.</caption>
+						<thead>
+							<tr id="calenderDate">
+
+							</tr>
+						</thead>			
+						<tbody>
+							<tr id="calenderWeek">
+
+							</tr>
+						</tbody>
+						</table>
+					</div><div id="mCSB_1_scrollbar_horizontal" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_horizontal mCSB_scrollTools_onDrag_expand" style="display: block;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_horizontal" class="mCSB_dragger" style="position: absolute; min-width: 30px; display: block; width: 0px; left: 0px;"><div class="mCSB_dragger_bar"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div><!-- // cal_scroll-->
+				</div><!-- //calendar_tbl -->
+			</div><!--//pop_reserve_calendar_con-->
+			<div class="wrap_reserve">
+				<div class="box_select">
+					<div id="deptListDiv">
+						<div id="deptType2" class="select_box" data-form="selectBox"><div class="design_select" style="width: 174px;"><a href="javascript:;" title="열림">진료과</a><ul><li><a href="#dept">진료과</a></li><li><a href="#center">전문센터</a></li></ul></div>
+							<select style="width: 154px; display: none;" id="select_deptType2">
+								<option id="dept" value="dept">진료과</option>
+								<option id="center" value="center">전문센터</option>
+							</select>
+						</div>
+						<ul id="deptList2" class="box mCustomScrollbar _mCS_14 mCS_no_scrollbar"><div id="mCSB_14" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0" style="max-height: 366px;"><div id="mCSB_14_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr"></div><div id="mCSB_14_scrollbar_vertical" class="mCSB_scrollTools mCSB_14_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_14_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></ul>
+					</div>
+					<div id="doctorListDiv">
+						<h5>2. 의료진</h5>
+						<div class="box left">
+							<div id="reserve2_selectedDoctorDiv2" class="thumnail_list" style="display:none"><!--3단계 display:none 시 사라짐 / display:block 시 나타남-->
+								<ul id="reserve2_selectedDoctor2">
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div id="reserve2_timeSelector2" style="display:none;"><!--3단계 display:none 시 사라짐 / display:block 시 나타남-->
+						<div class="bx_tit">
+							<h5>3. 예약시간 선택<!--일시(날짜 선택 후 시간 선택) --></h5>
+							<!-- 20190410 삭제
+							<div class="guide">
+								<span>오전</span>
+								<span>오후</span>
+							</div> -->
+						</div><!--wrap_tit-->
+						<div class="box">
+							<!-- wrap_time -->
+							<div class="wrap_time">
+								<p class="cal_tit" id="resrveSelectDt">2019년 2월 17일</p>
+								<!-- 20190410 수정 -->
+								<p class="cal_comment">내원/예약문의 : 1588-2701</p>
+								<div class="time_select_box">
+									<div class="time_con  mCustomScrollbar _mCS_15 mCS_no_scrollbar"><div id="mCSB_15" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0" style="max-height: 280px;"><div id="mCSB_15_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+										<div class="in_box">
+											<div class="am_ar" id="amList">
+												<span class="time_tit">오전</span>
+												<div class="on_line_finish">온라인 예약 마감</div>
+											</div>
+											<div class="pm_ar" id="pmList">
+												<span class="time_tit fm">오후</span>
+												<a href="javacript:void(0)">12:00</a>
+												<a href="javacript:void(0)">12:05</a>
+												<a href="javacript:void(0)" class="pm">12:10</a>
+												<a href="javacript:void(0)">12:15</a>
+												<a href="javacript:void(0)">12:20</a>
+												<a href="javacript:void(0)">12:25</a>
+												<a href="javacript:void(0)">12:30</a>
+												<a href="javacript:void(0)">12:40</a>
+											</div>
+											<div id="infoDiv" class="comment_box">
+												<span>
+												온라인 진료예약이 마감되었습니다.<br> 
+												미즈메디 병원 고객센터(1588-2701)로<br>
+												문의하여 주시기바랍니다.
+												</span>
+											</div><!--//comment_box -->
+										</div><!--//in_box -->
+									</div><div id="mCSB_15_scrollbar_vertical" class="mCSB_scrollTools mCSB_15_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_15_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div><!--//time_con -->
+								</div><!--//time_select_box -->
+								<!-- //20190410 수정 -->
+							</div><!-- //wrap_time -->
+						</div><!--//box-->
+					</div>
+					<div>
+						<div class="box">
+							<p class="con_txt1 con_txt2" id="noPickDate" style="display:none;">날짜를 먼저 선택하세요.</p>
+						</div>
+					</div>
+					<p class="con_txt1 con_txt2" id="noDoctor" style="display:none;">선택한 날짜에 진료 가능한 의료진이 없습니다.</p>
+				</div><!--box_select-->
+				<!-- treat_comment_box -->
+				<div class="treat_comment_box" style="display:none;">
+					<!--소아과 popup-->
+					<div class="reserve_pop" id="subCode37_2" style="display:none;">
+						<div class="inner">
+							<strong>감염예방을 위해</strong>
+							건강한아이, 아픈아이 층을 분리하여 운영하고 있습니다.
+							<span>소아청소년과 예약은  고객센터 (1588-2701)로 예약 문의해 주시기 바랍니다.</span>
+						</div>
+					</div>
+					<!--//소아과 popup-->
+					<!--키즈센터 popup-->
+					<div class="reserve_pop" id="subCode3_2" style="display:none;">
+						<div class="inner">
+							<strong>감염예방을 위해</strong>
+							건강한아이, 아픈아이 층을 분리하여 운영하고 있습니다.
+							<span>키즈센터 예약은  고객센터 (1588-2701)로 예약 문의해 주시기 바랍니다.</span>
+						</div>
+					</div>
+					<!--//키즈센터 popup-->
+
+				</div><!-- //treat_comment_box-->
+				<div id="reserve2_swiper2" class="swiper-container thumnail_list swiper-container-horizontal" style="display:none;">
+					<ul class="swiper-wrapper" id="doctorListSwip2" style="transition-duration: 0ms;">
+					</ul>
+					
+					<a href="javacript:void(0)" class="swiper-button-next"></a>
+					<a href="javacript:void(0)" class="swiper-button-prev"></a>
+					
+					<div class="swiper-scrollbar" style="opacity: 0; transition-duration: 400ms;"><div class="swiper-scrollbar-drag"></div></div>
+				</div>
+			</div><!--wrap_reserve-->
+			<div class="btn_wrap">
+				<button name="btnGoToReserve3_2" class="active">개인정보입력</button>
+			</div>
+			<p class="point">  진료예정일로부터 2일 이내 예약 시 '진료 1일 전 예약확인' 안내가 발송되지 않을 수 있습니다. </p>
+			<p class="point">  온라인 진료예약 취소는 진료일 2일 전까지 가능합니다. <strong> 진료일 2일 이내 취소는 고객센터 (1588-2701)를 통해 하실 수 있습니다.</strong></p>
+			
+			<ul class="box_info">
+				<li>진료예약은 같은 진료과 내에서 중복 예약이 불가능합니다. (예약일의 진료가 완료되어야 다시 진료예약 가능)</li>
+				<li>온라인 진료예약 취소는 진료일 2일 전까지 가능합니다.진료일 2일 이내 취소는 고객센터 (1588-2701)를 통해 하실 수 있습니다.</li>
+				
+				<li>온라인 진료예약은 진료 후 이루어지는 검사예약과는 다릅니다.</li>
+				<li>진료에 필요한 각종 검사는 진료 후 전문의의 처방에 따라 다른 검사일에 진행됩니다.</li>
+				<li>온라인으로 예약이 불가능한 일시는 고객센터( 1588-2701 )로 예약 문의해 주시기 바랍니다.</li>
+				
+			</ul>
+		</div><div id="mCSB_13_scrollbar_vertical" class="mCSB_scrollTools mCSB_13_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_13_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+		<a href="javascript:goToClose();"><img src="/static/resources/user/web/images/btn/pop_btn_close.png" alt="팝업닫기"></a>
+	</div>
+</div>
+<script type="text/javascript" src="/static/resources/user/web/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+	var reserve2Swiper2 = new Swiper('#webReserveSelectDate2 .swiper-container', {
+		slidesPerView : 3,
+		spaceBetween : 10,
+		navigation : {
+			nextEl : '.swiper-button-next',
+			prevEl : '.swiper-button-prev',
+		},
+		scrollbar : {
+			el : '.swiper-scrollbar',
+			hide : true,
+		},
+	});
+
+	// 진료과선택
+	$('.reserve.personal ul.box li').on('click', function(){
+		$(this).addClass('on').siblings().removeClass('on');
+	})
+</script>
+<script>	
+	$(document).ready(function() {
+		$("#horizontal_scrollbar").mCustomScrollbar({
+			axis:"x",
+			autoExpandScrollbar:true,
+			advanced:{autoExpandHorizontalScroll:true}
+		});
+	});
+</script>
+	<!-- 의료진소개 팝업 -->
+	<div class="intro_doc_pop02" style="display:none;">
+		<input type="hidden" id="doctorPopupDoctorId">
+		<input type="hidden" id="goBackUrl" value="/wweb/alldoctors">
+		
+		<!-- intro_doc_body -->
+		<div class="intro_doc_body">
+			<!-- Step01 -->
+			<div id="step01">
+				<!-- box_header -->
+				<div class="box_header">
+					<h5>의료진 소개</h5>
+					<!-- inner -->
+					<div class="inner">
+						<div class="select_box" data-form="selectBox" id="pd_cdDeptType"><div class="design_select" style="width: 183px;"><a href="javascript:;" title="열림">진료과</a><ul style=""><li><a href="#dept" title="선택됨">진료과</a></li><li><a href="#center">전문센터</a></li><li><a href="#clinic">클리닉</a></li></ul></div>
+							<select style="width: 163px; display: none;" id="select_pd_cdDeptType">
+								<option id="dept" value="dept" selected="selected">진료과</option>
+								<option id="center" value="center">전문센터</option>
+								<option id="clinic" value="clinic">클리닉</option>
+							</select>
+						</div>
+						<div class="select_box" data-form="selectBox" id="pd_cdSubDeptPkId"><div class="design_select" style="width: 270px;"><a href="javascript:;" title="열림">선택</a><ul><li><a href="#">선택</a></li></ul></div>
+							
+						<select id="select_pd_cdSubDeptPkId" style="width: 250px; display: none;" urlcode="dept"><option value="">선택</option></select></div>
+						<div class="select_box" data-form="selectBox" id="pd_doctorList"><div class="design_select" style="width: 270px;"><a href="javascript:;" title="열림">선택</a><ul><li><a href="#">선택</a></li><li><a href="#">목록이 없습니다.</a></li></ul></div>
+							
+						<select id="select_pd_doctorList" style="width: 250px; display: none;" urlcode="undefined" onchange="getDoctorPopupSelectChange()"><option value="">선택</option><option value="">목록이 없습니다.</option></select></div>
+					</div>
+					<!-- //inner -->
+				</div>
+				<!-- //box_header -->
+
+				<!-- box_inner_txt -->
+				<div class="box_inner_txt">
+					<p id="title"></p>
+					<!-- inner -->
+					<div class="inner">
+						<div class="s1">
+							<span id="deptPkIdExp"></span>
+							<h6 id="doctorName"></h6>
+						</div>
+						<dl class="s2">
+							<dt>전문분야</dt>
+							<dd id="specialCategory"></dd>
+						</dl>
+						<div class="s3">
+							<button id="dp_counsel" class="sub special" onclick="doctorPopupCounsel();">진료상담</button>
+							<button id="dp_reserve" class="active special" onclick="doctorPopupReserve();">진료예약</button>
+						</div>
+					</div>
+					<!-- //inner -->
+				</div>
+				<!-- //box_inner_txt -->
+
+				<!-- bg -->
+				<div class="img_bg" style="background-color: black;">
+					<img src="" id="topPicture" alt="">
+				</div>
+
+				<!-- Swiper -->
+				 <div class="swiper-container2 swiper-container-horizontal">
+					 <div id="doctorPopupCalendarWrap" class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
+
+					 <div class="swiper-slide swiper-slide-active" style="width: 1280px;"><div class="treat_scheduled"><div class="scheduled_box"><span class="scheduled_name">진료일정</span><strong><span id="doctorPopup_momth_0">09</span><input type="hidden" id="doctorPopup_year_0" value="2025"></strong></div></div><table id="doctorPopupCalendar_0"><thead><tr><th>날짜</th><th>01</th><th>02</th><th>03</th><th>04</th><th>05</th><th class="sat">06</th><th class="sun">07</th><th>08</th><th>09</th><th>10</th><th>11</th><th>12</th><th class="sat">13</th><th class="sun">14</th><th>15</th><th>16</th><th>17</th><th>18</th><th>19</th><th class="sat">20</th><th class="sun">21</th><th>22</th><th>23</th><th>24</th><th>25</th><th>26</th><th class="sat">27</th><th class="sun">28</th><th>29</th><th>30</th></tr></thead><tbody><tr><td>요일</td><td>월</td><td>화</td><td>수</td><td>목</td><td>금</td><td>토</td><td class="sun">일</td><td>월</td><td>화</td><td>수</td><td>목</td><td>금</td><td>토</td><td class="sun">일</td><td>월</td><td>화</td><td>수</td><td>목</td><td>금</td><td>토</td><td class="sun">일</td><td>월</td><td>화</td><td>수</td><td>목</td><td>금</td><td>토</td><td class="sun">일</td><td>월</td><td>화</td></tr></tbody><tbody><tr id="doctorPopup_am"><td>오전</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="sun"></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="sun"></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="sun"></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="sun"></td><td></td><td></td></tr><tr id="doctorPopup_pm"><td>오후</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="sun"></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="sun"></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="sun"></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="sun"></td><td></td><td></td></tr></tbody></table></div><div class="swiper-slide swiper-slide-next" style="width: 1280px;"><div class="treat_scheduled"><div class="scheduled_box"><span class="scheduled_name">진료일정</span><strong><span id="doctorPopup_momth_1">10</span><input type="hidden" id="doctorPopup_year_1" value="2025"></strong></div></div><table id="doctorPopupCalendar_1"><thead><tr><th>날짜</th><th>01</th><th>02</th><th>03</th><th class="sat">04</th><th class="sun">05</th><th>06</th><th>07</th><th>08</th><th>09</th><th>10</th><th class="sat">11</th><th class="sun">12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th class="sat">18</th><th class="sun">19</th><th>20</th><th>21</th><th>22</th><th>23</th><th>24</th><th class="sat">25</th><th class="sun">26</th><th>27</th><th>28</th><th>29</th><th>30</th><th>31</th></tr></thead><tbody><tr><td>요일</td><td>수</td><td>목</td><td>금</td><td>토</td><td class="sun">일</td><td>월</td><td>화</td><td>수</td><td>목</td><td>금</td><td>토</td><td class="sun">일</td><td>월</td><td>화</td><td>수</td><td>목</td><td>금</td><td>토</td><td class="sun">일</td><td>월</td><td>화</td><td>수</td><td>목</td><td>금</td><td>토</td><td class="sun">일</td><td>월</td><td>화</td><td>수</td><td>목</td><td>금</td></tr></tbody><tbody><tr id="doctorPopup_am"><td>오전</td><td></td><td></td><td></td><td></td><td class="sun"></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="sun"></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="sun"></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="sun"></td><td></td><td></td><td></td><td></td><td></td></tr><tr id="doctorPopup_pm"><td>오후</td><td></td><td></td><td></td><td></td><td class="sun"></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="sun"></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="sun"></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="sun"></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div></div>
+					 <!-- Add Arrows -->
+					 <div class="swiper-button-prev fix swiper-button-disabled"></div>
+					 <div class="swiper-button-next fix"></div>
+				 </div>
+				<!-- //Swiper -->
+			</div>
+			<!-- //Step01 -->
+
+			<!-- Step02 -->
+			<div id="step02">
+				<p id="titleIntroduce"></p>
+				<!-- innner -->
+				<div class="inner">
+					<img src="" id="centerPicture" alt="">
+					<div>
+						<p id="contentsOne"></p>
+						<span id="doctorNameEng" class="drName">
+							<em></em>
+							<span class="blog_btn"><a href="javascript:void(0);" id="blogAddr" target="_blank">블로그 바로가기</a></span>
+						</span>
+						<p id="contentsTow"></p>
+					</div>
+				</div>
+				<!-- //innner -->
+			</div>
+			<!-- //Step02 -->
+
+			<!-- Step03 -->
+			<div id="step03">
+				<!-- top -->
+				<div class="inner_top">
+					<!-- 학력 및 경력 -->
+					<div class="list">
+						<a href="#briefHistory">
+							<h6>학력 및 경력</h6>
+							<!-- inner -->
+							<div class="inner">
+								<ul id="briefHistory">
+									<!-- ajax -->
+									<!-- //ajax -->
+								</ul>
+							</div>
+							<!-- //inner -->
+							<span class="btn_int_more"></span>
+						</a>
+					</div>
+					<!-- //학력 및 경력 -->
+					<!-- 학회 및 학술활동 -->
+					<div class="list">
+						<a href="#society">
+							<h6>학회 및 학술활동</h6>
+							<!-- inner -->
+							<div class="inner">
+								<ul id="society">
+									<!-- ajax -->
+									<!-- //ajax -->
+								</ul>
+							</div>
+							<!-- //inner -->
+							<span class="btn_int_more"></span>
+						</a>
+					</div>
+					<!-- //학회 및 학술활동 -->
+				</div>
+				<!-- //top -->
+
+				<!-- bg -->
+				<div class="img_bg">
+					<img src="" id="bottomPicture" alt="">
+				</div>
+				<!-- //bg -->
+
+				<!-- newsqnaList -->
+				<div class="news_qna_list">
+					<ul id="newsqnaList">
+						<!-- ajax -->
+						<!-- //ajax -->
+					</ul>
+					<span class="btn_alldoct_prev"><span><a id="sidePrev" href="javascript:void(0)" onclick="pagingClick(this);return false;">이전</a></span></span>
+					<span class="btn_alldoct_next"><span><a id="sideNext" href="javascript:void(0)" onclick="pagingClick(this);return false;">다음</a></span></span>
+				</div>
+				<!-- //newsqnaList -->
+				<p class="btn_paging_area" id="doctorPagination">
+
+				</p>
+			</div>
+			<!-- Step03 -->
+		</div>
+		<!-- //intro_doc_body -->
+
+		<!-- pagination -->
+		<div class="pagination">
+			<a href="#step01" class="on"><span>lnfo</span></a>
+			<a href="#step02"><span>Story</span></a>
+			<a href="#step03"><span>Career</span></a>
+		</div>
+		<!-- //pagination -->
+		<a href="javascript:goBack();" id="doctorPopupClose">이전화면으로 돌아가기</a>
+	</div>
+	<!-- //의료진소개 -->
+
+	<!-- RN : js 추가 수정 -->
+	<!-- //RN : js 추가 수정 -->
+	<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+	<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-120094899-2" id="webAnalytics"></script>
+	<script type="text/javascript">
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-120094899-2');
+
+		window.onload = function () {
+			doctorPopupOpenPrev('709', '3');
+		}
+	</script>
+	<script type="text/javascript" src="/static/resources/user/web/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="/static/js/user/com/menu.js?ts=1758614260903"></script>
+	<script src="/static/js/user/com/header.js?ts=1758614260903"></script>
+	
+
+	
+	
+
+	
+<div id="zipCodePopup" class="pop_wrap" style="display:none;">
+	<form name="form" id="form" method="post" onsubmit="return false;">
+		<input type="hidden" name="currentPage" id="currentPage" value="1"> <!-- 요청 변수 설정 (현재 페이지. currentPage : n > 0) -->
+		<input type="hidden" name="countPerPage" id="countPerPage" value="5"><!-- 요청 변수 설정 (페이지당 출력 개수. countPerPage 범위 : 0 < n <= 100) -->
+		<input type="hidden" name="resultType" id="resultType" value="json"> <!-- 요청 변수 설정 (검색결과형식 설정, json) --> 
+		<input type="hidden" name="confmKey" id="confmKey" value="U01TX0FVVEgyMDE4MDIxOTExMzAzNzEwNzY4MTA="><!-- 요청 변수 설정 (승인키) -->
+		<input type="hidden" name="keyword" id="keyword" value=""><!-- 요청 변수 설정 (키워드) -->
+		<!-- <input type="text" class="inp_txt wd265 disabled" id="serchZip" name="serchZip"/> -->
+		<a href="#" id="popupBtnRegist" onclick="getAddr();" class="btn sm">우편번호 검색</a>
+	</form>
+					
+	<div class="pop_body searching" style="margin-top:-450px;">
+		<h2>우편번호 검색</h2>
+		<div class="mCustomScrollbar _mCS_16 mCS_no_scrollbar" style="height:611px"><div id="mCSB_16" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0" style="max-height: 611px;"><div id="mCSB_16_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+			<div class="table style01">
+				<table>
+					<caption>table title</caption>
+					<colgroup>
+						<col width="30%">
+						<col width="auto">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>지번/도로명</th>
+							<td>
+								<input type="text" id="zipCodeSearchVal1" style="width:300px"><button id="btnZipCodeSearch1">검색</button>
+								<em id="zipCodeSearchVal1_msg" class="sub color1"></em><!--클래스명 color1:오렌지색 , color2:녹색-->
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<p class="point01">지번주소 : 동/읍/면/리 이름을 입력하세요. 예)역삼동, 화도읍, 장유면</p>
+			<p class="point01">도로명주소(새주소) : 도로명을 입력하세요. 예)중앙로, 불정로432번길</p>
+			<h4 class="ct">주소 검색 결과(<strong><span id="zipCodeTotal">0</span>건</strong>)</h4>
+			<div class="table style01">
+				<table>
+					<caption>table title</caption>
+					<colgroup>
+						<col width="auto">
+						<col width="20%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>도로명주소</th>
+							<th>우편번호</th>
+						</tr>
+					</thead>
+					<tbody id="zipCodeSearchTbody">
+						<tr>
+							<td colspan="2">검색결과가 없습니다.</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id="pagination" class="paging">
+			</div>
+		</div><div id="mCSB_16_scrollbar_vertical" class="mCSB_scrollTools mCSB_16_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_16_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+		<a href="javascript:zipCodePopupHide()"><img src="/static/resources/user/web/images/btn/pop_btn_close.png" alt="팝업닫기"></a>
+	</div>
+</div>
+
+<div id="zipCodeDetailPopup" class="pop_wrap" style="display:none;">
+	<div class="pop_body searching" style="margin-top:-450px;">
+		<h2>우편번호 검색</h2>
+		<div class="mCustomScrollbar _mCS_17 mCS_no_scrollbar" style="height:560px"><div id="mCSB_17" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0" style="max-height: 560px;"><div id="mCSB_17_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
+			<div class="table style01">
+				<table>
+					<caption>table title</caption>
+					<colgroup>
+						<col width="30%">
+						<col width="auto">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>지번/도로명</th>
+							<td>
+								<input type="text" id="zipCodeSearchVal2" style="width:300px"><button id="btnZipCodeSearch2">검색</button>
+								<em id="zipCodeSearchVal2_msg" class="sub color1"></em><!--클래스명 color1:오렌지색 , color2:녹색-->
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<p class="point01">지번주소 : 동/읍/면/리 이름을 입력하세요. 예)역삼동, 화도읍, 장유면</p>
+			<p class="point01">도로명주소(새주소) : 도로명을 입력하세요. 예)중앙로, 불정로432번길</p>
+			<h4>상세주소 입력</h4>
+			<div class="table style01">
+				<table>
+					<caption>table title</caption>
+					<colgroup>
+						<col width="30%">
+						<col width="auto">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>도로명주소</th>
+							<td>
+								<input type="hidden" id="zipPopup_zipCode" value="" style="width:100%" class="hidden" disabled="">
+								<input type="text" id="zipPopup_address1" value="" style="width:100%" class="hidden" disabled="">
+							</td>
+						</tr>
+						<tr>
+							<th>상세주소입력</th>
+							<td>
+								<input type="text" id="zipPopup_address2" style="width:240px"><span>예) OO아파트 101동 101호</span>
+								<em id="address2_msg" class="sub color1"></em><!--클래스명 color1:오렌지색 , color2:녹색-->
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="btn_wrap">
+				<button id="btnSaveZipCode" class="active">주소입력</button>
+			</div>				
+		</div><div id="mCSB_17_scrollbar_vertical" class="mCSB_scrollTools mCSB_17_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: none;"><div class="mCSB_draggerContainer"><div id="mCSB_17_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; top: 0px;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></div>
+		<a href="javascript:zipCodePopupHide()"><img src="/static/resources/user/web/images/btn/pop_btn_close.png" alt="팝업닫기"></a>
+	</div>
+</div>
+
+<script type="text/javascript" src="/static/resources/user/web/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="/static/js/user/com/userPaging.js"></script>
+<script src="/static/js/user/intro/popup/zipCode.js" type="text/javascript"></script>
+
+
+	<!-- login popup -->
+	
+
+<!-- 카카오톡 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+
+<!-- 네이버 -->
+<!-- <script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js" charset="utf-8"></script> -->
+<script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.2.js" charset="utf-8"></script>
+<!-- 지메일 -->
+<meta name="google-signin-scope" content="profile email">
+<meta name="google-signin-client_id" content="357866374028-h233kp7akku1unbocb8vnftg98e9v079.apps.googleusercontent.com">
+
+<!-- <script src="https://apis.google.com/js/platform.js" async defer></script> -->
+<script type="text/javascript" src="https://apis.google.com/js/api:client.js" gapi_processed="true"></script>
+<!-- <script type="text/javascript" src="/asset/js/sns_login_google.js"></script> -->
+<script src="/static/resources/admin/js/lib/validator.min.js"></script>
+
+<div class="pop_wrap" id="webUserLoginPopup" style="display: none;">
+	<div class="pop_body login" style="margin-top:-450px;">
+		<div>
+			<h2>로그인</h2>
+			<p>홈페이지의 개인 맞춤서비스(예약/상담/진료정보 등)를 편리하게 이용하세요. </p>
+			<fieldset>
+				
+				<form id="login-form" name="login-form">
+					<input type="text" id="username" name="username" placeholder="아이디">
+					<p id="username_msg"></p>
+					<input type="password" id="password" name="password" placeholder="비밀번호">
+					<p id="password_msg"></p>
+					<!-- <button id="btnUserLogin" class="active wide" type="button">로그인</button> -->
+					<button id="btnUserLogin" class="active wide" type="button">로그인</button>
+				</form>
+				<div>
+					<div>
+						<input type="checkbox" id="id_check">
+						<label for="id_check">아이디저장</label>
+						<!-- 
+						<input type="checkbox" id="pw_check" />
+						<label for="pw_check">로그인유지</label>
+						 -->
+					</div>
+					<div>
+						 <a href="#" onclick="javascript:void(0);return false;" id="btnUserLoginFind">아이디 / 비밀번호 찾기</a>
+					</div>
+				</div>
+			</fieldset>
+			<h3>SNS 로그인</h3>
+			<ul>
+				<li>
+					<a href="javascript:loginFacebook();" class="facebook">페이스북</a>
+				</li>
+				<li>
+					<a href="#" class="kakao" onclick="loginKakao();return false;">카카오</a>
+				</li>
+				<li>
+					<!-- <a href="#" class="naver" onclick="loginNaver()">네이버</a> -->
+					<!-- <div id="naverIdLogin"></div> -->
+					<div id="naver_id_login" style="text-align:center" onclick="loginNaverLogin();return false;">
+						<a href="#" class="naver">네이버</a>
+					</div>
+				</li>
+				<li>
+					<a href="#" class="google" id="google_join_btn" onclick="loginGmailInit();return false;">구글</a>
+				</li>
+			</ul>
+			<div>
+				<button name="btnMemberView">회원가입</button>
+				<!-- <p class="point01">강서미즈메디/강남미즈메디는 동일한 아이디로 이용 가능합니다.<br />(개인화서비스는 사이트별로 별도 관리되며, 진료번호가 있는 경우 조회 가능)</p> -->
+			</div>
+		</div>
+		<a href="javascript:userLoginHide();"><img src="/static/resources/user/web/images/btn/pop_btn_close.png" alt="팝업닫기"></a>
+	</div>
+</div>
+
+<!-- 아이디/비번찾기 -->
+<div class="pop_wrap" id="webUserLoginFindPopup" style="display: none;">
+	
+	<form name="form_chk_loginfind" id="form_chk_loginfind" method="post" target="popupChk">
+	 <!-- <form name="form_chk" id="form_chk" method="post" action="https://nice.checkplus.co.kr/CheckPlusSafeModel/checkplus.cb" target="popupChk"> -->
+		<input type="hidden" name="m" value="checkplusSerivce">						<!-- 필수 데이타로, 누락하시면 안됩니다. -->
+		<input type="hidden" id="encodeDataLoginFind" name="EncodeData" value="">	
+	</form>
+	
+	<form name="form_ipin_loginfind" id="form_ipin_loginfind" method="post">
+		<input type="hidden" name="m" value="pubmain">						<!-- 필수 데이타로, 누락하시면 안됩니다. -->
+	    <input type="hidden" id="encodeDataIpinLoginFind" name="enc_data" value="">		<!-- 위에서 업체정보를 암호화 한 데이타입니다. -->
+	</form>
+	
+	<!-- 가상주민번호 서비스 팝업 페이지에서 사용자가 인증을 받으면 암호화된 사용자 정보는 해당 팝업창으로 받게됩니다.
+			 따라서 부모 페이지로 이동하기 위해서는 다음과 같은 form이 필요합니다. -->
+	<form name="vnoform_loginfind" method="post">
+		<input type="hidden" name="enc_data">								<!-- 인증받은 사용자 정보 암호화 데이타입니다. -->
+		
+		<!-- 업체에서 응답받기 원하는 데이타를 설정하기 위해 사용할 수 있으며, 인증결과 응답시 해당 값을 그대로 송신합니다.
+	    	 해당 파라미터는 추가하실 수 없습니다. -->
+	    <input type="hidden" name="param_r1" value="">
+	    <input type="hidden" name="param_r2" value="">
+	    <input type="hidden" name="param_r3" value="">
+	</form>
+ 	
+	<div class="pop_body id_confirm" style="margin-top:-450px;">
+		<div>
+			<h2>아이디/비밀번호 찾기</h2>
+			<ul class="tab style03" id="loginFindType">
+                <li class="on"><a href="javascript:void(0);">아이디 찾기</a></li>
+                <li class=""><a href="javascript:void(0);">비밀번호 찾기</a></li>
+            </ul>
+			<p>본인인증을 하시면 아이디와 임시비밀번호를 알려드립니다.</p>
+			<div class="terms_select">
+				<a href="javascript:cpPopLoginFind('M');">
+					<img src="/static/resources/user/web/images/layout/join_select_icon03_off.png" alt="">
+					<img src="/static/resources/user/web/images/layout/join_select_icon03.png" alt="">
+					<strong>휴대폰 인증</strong>
+				</a>
+				<a href="javascript:cpPopLoginFind('X');;">
+					<img src="/static/resources/user/web/images/layout/join_select_icon04_off.png" alt="">
+					<img src="/static/resources/user/web/images/layout/join_select_icon04.png" alt="">
+					<strong>공인인증서 인증</strong>
+				</a>
+				<a href="javascript:ipinPopLoginFind();">
+					<img src="/static/resources/user/web/images/layout/join_select_icon05_off.png" alt="">
+					<img src="/static/resources/user/web/images/layout/join_select_icon05.png" alt="">
+					<strong>아이핀 인증</strong>
+				</a>
+			</div>
+			<div class="btn_wrap">
+				<button class="default" onclick="webUserLoginFindPopupHide();">취소</button>
+				<button name="btnMemberView" class="active">회원가입</button>
+			</div>
+		</div>
+		<a href="javascript:webUserLoginFindPopupHide();"><img src="/static/resources/user/web/images/btn/pop_btn_close.png" alt="팝업닫기"></a>
+	</div>
+</div>
+
+
+<!-- 아이디/비번찾기 확인 -->
+<div class="pop_wrap" id="webUserLoginFindSuccess" style="display: none;">
+	
+	<input type="hidden" id="loginfindcdSnsType" value="">
+	<input type="hidden" id="loginfindRegDt" value="">
+	<input type="hidden" id="loginfindType" value="">
+	<input type="hidden" id="loginfindCustHp" value="">
+	<input type="hidden" id="loginfindCustKey" value="">
+	
+	<div class="pop_body id_confirm" style="margin-top:-450px;">
+		<div>
+			<h2>아이디/비밀번호 찾기</h2>
+			<div class="confirm_text" id="webLoginfindCustomer">
+				<p>회원님의 아이디/비밀번호 찾기 결과 입니다.<br><span>개인정보 보호를 위해 아이디 뒤 2자리는 * 로 표시됩니다. </span></p>
+			</div>
+			<!-- 
+			<dl id="webLoginfindcdSnsTypeView">
+				<dd id='webLoginfindcdSnsType'></dd>
+			</dl>
+			 -->
+			<!-- 
+			<dl id="webLoginfindCustomerIdView">
+				<dt>아이디</dt>
+				<dd id='webLoginfindCustomerId'></dd>
+			</dl>
+			 -->
+			<!-- 
+			<dl id="webLoginfindCustomerPasswordView">
+				<dt>비밀번호</dt>
+				<dd id='webLoginfindCustomerPassword'></dd>
+			</dl>
+			 -->
+			<div class="btn_wrap">
+				<button class="active" id="bntWebUserLoginFind">확인</button>
+				<!-- 
+				<button class="active" id="bntWebUserLoginFindSns">로그인</button>
+				 -->
+			</div>
+			<div class="confirm_text" id="webLoginfindCustomer">
+                <p>
+                    <br>
+                    <span>아이디/ 비밀번호는 가입 시 등록한 휴대폰 번호로 알려드립니다.<br>휴대폰번호가 변경 된 경우 평일 09:00 ~ 17:00 사이에 고객센터(1588-2701)로 연락 주시기 바랍니다.
+</span>
+                </p>
+            </div>
+		</div>
+		<a href="javascript:webUserLoginFindGoUrlCancle();"><img src="/static/resources/user/web/images/btn/pop_btn_close.png" alt="팝업닫기"></a>
+	</div>
+</div>
+
+
+<script src="/static/js/user/intro/login/login.js"></script> 
+<script src="/static/js/user/intro/login/loginSns.js"></script>
+
+<script type="text/javascript">
+	$(function(){
+		$('.terms_select').on('click', 'a', function(){				
+			$(this).addClass('on').siblings().removeClass('on');
+		});
+	})
+</script>
+
+
+
+
+<iframe id="ssIFrame_google" sandbox="allow-scripts allow-same-origin allow-storage-access-by-user-activation" allow="identity-credentials-get" aria-hidden="true" frame-border="0" src="https://accounts.google.com/o/oauth2/iframe#origin=https%3A%2F%2Fwww.mizmedi.com&amp;rpcToken=541471433.7547134&amp;clearCache=1&amp;supportBlocked3PCookies=1" style="position: absolute; width: 1px; height: 1px; inset: -9999px; display: none;"></iframe><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div></body><!-- zipcode popup --></html>
