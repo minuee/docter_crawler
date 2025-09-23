@@ -1,89 +1,96 @@
 
 const { chromium } = require('playwright');
-const cheerio = require('cheerio');
+const fs = require('fs');
+const path = require('path');
 
-const doctorName = process.argv[2];
-const deptName = process.argv[3];
-const url = process.argv[4];
-
-if (!doctorName || !deptName || !url) {
-  console.error('Please provide doctor name, department name, and URL as command-line arguments.');
+const jsonFilePath = process.argv[2];
+if (!jsonFilePath) {
+  console.error('Error: JSON file path is required.');
   process.exit(1);
 }
 
 (async () => {
-  const browser = await chromium.launch({ headless: true });
-  const page = await browser.newPage();
+  let browser;
+  let originalData;
 
   try {
-    const responsePromise = page.waitForResponse(res => res.url().includes('proc/doctor_info.php') && res.status() === 200);
+    originalData = JSON.parse(fs.readFileSync(jsonFilePath, 'utf-8'));
+    const { hospital_site: url, bedoc_doctorname: doctorName } = originalData;
 
+    browser = await chromium.launch({ headless: true });
+    const page = await browser.newPage();
     await page.goto(url, { waitUntil: 'networkidle' });
 
-    // Click the 'Medical Staff' tab to make the list visible
-    await page.click('.tab2[data-id="sec2"]');
-    await page.waitForSelector('span.prd.sec2.on', { timeout: 5000 }); // Wait for tab content to be visible
-
-    // Use a robust XPath to find the button relative to the doctor's name
-    const buttonXPath = `//span[@class="doct_name_bold" and contains(text(), "${doctorName}")]/ancestor::tr[1]/following-sibling::tr[1]//input[@value="의료진 소개"]`;
-    const detailButton = await page.locator(buttonXPath);
+    const buttonXPath = `//span[contains(text(), "${doctorName}")]/ancestor::tr/following-sibling::tr[1]//input[@value="의료진 소개"]`;
+    const detailButton = page.locator(buttonXPath);
 
     if (await detailButton.count() === 0) {
-        throw new Error(`Could not find the details button for doctor ${doctorName} using XPath.`);
+      throw new Error(`Could not find the details button for doctor ${doctorName}.`);
     }
 
     await detailButton.click();
 
-    const response = await responsePromise;
-    const data = await response.json();
+    const popupSelector = '.doc_pop_wrap';
+    await page.waitForSelector(popupSelector, { state: 'visible', timeout: 10000 });
 
-    const extractedData = {};
+    const extractedData = await page.evaluate((popupSel) => {
+      const popup = document.querySelector(popupSel);
+      if (!popup) return {};
 
-    if (data.drphoto) {
-        extractedData.profileUrl = new URL(data.drphoto, url).href;
-    }
-    if (data.drspec) {
-        extractedData.specialty = data.drspec;
-    }
+      const data = {};
 
-    const parseTextToArray = (text) => {
-        if (!text) return [];
-        return text.split(/\r\n|\n/).filter(line => line.trim() !== '').map(line => ({ content: line.trim() }));
-    };
-    
-    const parsePapersToArray = (text) => {
-        if (!text) return [];
-        return text.split(/\r\n|\n/).filter(line => line.trim() !== '');
-    };
+      const getTextById = (id) => popup.querySelector(`#${id}`)?.innerText.trim() || null;
+      const getHtmlById = (id) => popup.querySelector(`#${id}`)?.innerHTML || '';
 
-    extractedData.학력 = parseTextToArray(data.drtxt1);
-    extractedData.경력 = parseTextToArray(data.drtxt2);
-    extractedData.학술 = parseTextToArray(data.drtxt3);
-    extractedData.논문 = parsePapersToArray(data.drtxt5);
+      const splitBr = (html) => html.split(/<br\s*\/?>/i).map(s => s.trim()).filter(Boolean);
 
-    if (data.board && data.board.length > 0) {
-        extractedData.언론 = data.board.map(item => ({
-            targetDate: item.date,
-            type: '기사', // Assuming type is 'article'
-            text: item.title,
-            url: item.url
-        }));
-    }
-    
-    // Remove empty arrays
-    for (const key in extractedData) {
-        if (Array.isArray(extractedData[key]) && extractedData[key].length === 0) {
-            delete extractedData[key];
+      data.profileUrl = popup.querySelector('#pop_drimg')?.src || null;
+      data.specialty = getTextById('pop_drmajor');
+
+      data.학력 = splitBr(getHtmlById('pop_drtxt1')).map(content => ({ date: null, content }));
+      data.경력 = splitBr(getHtmlById('pop_drtxt2')).map(content => ({ date: null, content }));
+      data.학술 = splitBr(getHtmlById('pop_drtxt3')).map(content => ({ date: null, content }));
+      data.수상 = splitBr(getHtmlById('pop_drtxt4')).map(content => ({ date: null, content }));
+      data.논문 = splitBr(getHtmlById('pop_drtxt5'));
+
+      data.언론 = Array.from(popup.querySelectorAll('.doc_pop_con_wrap.c3 .news')).map(el => {
+        const onclickAttr = el.getAttribute('onclick');
+        const urlMatch = onclickAttr ? onclickAttr.match(/window\.open\('(.*?)'\)/) : null;
+        const url = urlMatch ? urlMatch[1] : null;
+        const textContent = el.innerText.trim();
+        const dateMatch = textContent.match(/^(\d{4}-\d{2}-\d{2})/);
+        const date = dateMatch ? dateMatch[1] : null;
+        const text = date ? textContent.replace(date, '').trim() : textContent;
+
+        return { targetDate: date, type: '기사', text, url, issuer: null };
+      });
+
+      // Remove empty arrays
+      for (const key in data) {
+        if (Array.isArray(data[key]) && data[key].length === 0) {
+          delete data[key];
         }
-    }
+      }
 
-    console.log(JSON.stringify(extractedData, null, 2));
+      return data;
+    }, popupSelector);
 
+    const finalData = { ...originalData, ...extractedData, isExist: true, isSearchType: 'html_playwright', error: null };
+
+    fs.writeFileSync(jsonFilePath, JSON.stringify(finalData, null, 2), 'utf-8');
+    console.log(`Successfully processed and updated: ${path.basename(jsonFilePath)}`);
 
   } catch (error) {
-    console.error('An error occurred during parsing:', error);
-    console.log(JSON.stringify({ error: error.message }));
+    console.error(`Error during playwright execution for ${path.basename(jsonFilePath)}:`, error.message);
+    if (originalData) {
+        originalData.isSearchType = 'html_playwright_failed';
+        originalData.error = error.message;
+        fs.writeFileSync(jsonFilePath, JSON.stringify(originalData, null, 2), 'utf-8');
+    }
+    process.exit(1);
   } finally {
-    await browser.close();
+    if (browser) {
+      await browser.close();
+    }
   }
 })();

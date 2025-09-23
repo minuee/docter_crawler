@@ -1,0 +1,60 @@
+{
+  "hospital_cid": 50,
+  "bedoc_id": "A5592",
+  "bedoc_hospitalsite": "http://www.hamchoon.co.kr",
+  "bedoc_doctorname": "김기철",
+  "bedoc_deptname": "산부인과",
+  "bedoc_hospitalname": "함춘여성의원",
+  "hospital_name": "함춘여성클리닉",
+  "aiga_hid": "H31KR-11010047",
+  "hospital_site": "http://www.hamchoon.co.kr/?c=01/013/0131/01311",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 서초구 서초중앙로8길 10, 지하~5층 (서초동)",
+  "isExist": true,
+  "isSearchType": "html_ocr",
+  "error": null,
+  "specialty": "불임(인공수정), 불임(시험관아기),반복착상실패,여성내분비",
+  "학력": [
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 의학과 졸업"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 대학원 (산부인과 전공) 석사, 박사과정 졸업"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "서울대학교 병원 산부인과 생식 및 불임 전임의"
+    },
+    {
+      "date": null,
+      "content": "현 함춘여성크리닉 및 함춘 불임, 유전연구소 공동원장"
+    },
+    {
+      "date": null,
+      "content": "삼성서울병원 산부인과 외래교수"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "미국불임학회(ASRM) 정회원"
+    },
+    {
+      "date": null,
+      "content": "유럽불임학회(ESHRE) 정회원"
+    },
+    {
+      "date": null,
+      "content": "세계체외수정학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 병원 산부인과 자문의"
+    }
+  ],
+  "isAttend": true
+}
