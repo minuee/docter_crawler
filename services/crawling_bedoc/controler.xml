@@ -19,9 +19,8 @@
             hospital_bedoc_list as a left join hospital h on a.new_hospital_hid = h.hid
         WHERE
             1=1 and is_getdetail_done = false and  new_doctor_url != '' and  new_doctor_url is not null and a.new_hospital_hid is not null
-            and a.bedoc_doctorname in ( '전대근','이승신','양재혁', '이무용' ,'이규원')
         ORDER BY a.hospital_cid ASC
-        LIMIT 20
+        LIMIT 5 OFFSET 20
     </select>
 
     <select id="select_bedoc_hospital_old">

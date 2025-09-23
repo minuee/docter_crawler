@@ -2,12 +2,17 @@ const { chromium } = require('playwright');
 const fs = require('fs');
 
 (async () => {
-    const url = 'http://yubang.kr/?page_id=1386';
-    const browser = await chromium.launch({ headless: true });
+    const url = process.argv[2];
+    if (!url) {
+        console.error('Please provide a URL as an argument.');
+        process.exit(1);
+    }
+
+    const browser = await chromium.launch();
     const page = await browser.newPage();
-    await page.goto(url, { waitUntil: 'networkidle' });
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
     const bodyHtml = await page.evaluate(() => document.body.innerHTML);
-    fs.writeFileSync('/Users/kormedi/Documents/WorkPlace/bitbucket/docter_crawler/temp_yubang_body.html', bodyHtml);
+    fs.writeFileSync('get_html_output.html', bodyHtml);
     await browser.close();
-    console.log('HTML saved to temp_yubang_body.html');
+    console.log('HTML content saved to get_html_output.html');
 })();

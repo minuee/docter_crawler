@@ -1,0 +1,48 @@
+{
+  "hospital_cid": 604,
+  "bedoc_id": "A5404",
+  "bedoc_hospitalsite": "http://www.cmcep.or.kr/",
+  "bedoc_doctorname": "최범순",
+  "bedoc_deptname": "신장내과",
+  "bedoc_hospitalname": "은평성모병원",
+  "hospital_name": "가톨릭대학교 은평성모병원",
+  "aiga_hid": "H11KR-11000002",
+  "hospital_site": "https://www.cmcep.or.kr/page/doctor/1271/D0000910",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 은평구 통일로 1021, (진관동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "doctorDetailUrl":"https://www.cmcep.or.kr/page/doctor/1271/D0000910",
+  "profileUrl": "https://www.cmcep.or.kr/api/attach/view/doctor/D0000910/profile/1",
+  "specialty": "혈뇨/단백뇨, 부종, 고혈압, 사구체 신염, 만성신부전, 투석, 신장이식",
+  "학력": [
+    { "date": "1987~1993", "content": "가톨릭대학교 의학 학사" },
+    { "date": "1996~2003", "content": "가톨릭대학교 내과학 석사" },
+    { "date": "2003~2006", "content": "가톨릭대학교 내과학 박사" }
+  ],
+  "경력": [
+    { "date": "2019~현재", "content": "가톨릭대학교 은평성모병원 교수" },
+    { "date": "2018~2019", "content": "가톨릭대학교 성바오로병원 교수" },
+    { "date": "2013~2018", "content": "가톨릭대학교 서울성모병원 교수" },
+    { "date": "2008~2013", "content": "가톨릭대학교 서울성모병원 부교수" }
+  ],
+  "수상": [],
+  "학술": [],
+  "논문": [
+    "Placental growth factor deficiency initiates obesity- and aging-associated metabolic syndrome (METABOLISM-CLINICAL AND EXPERIMENTAL, 2024년 12월, 공동저자)",
+    "Phosphodiesterase inhibitor ameliorates senescent changes of renal interstitial pericytes in aging kidney (AGING CELL, 2024년 03월, 교신저자)",
+    "Safety and durable patency of tunneled hemodialysis catheter inserted without fluoroscopy (KIDNEY RESEARCH AND CLINICAL PRACTICE (舊.THE KOREAN JOURNAL OF NEPHROLOGY (대한신장학회지)), 2023년 11월, 공동저자)",
+    "Clinical significance of neutrophil-to-lymphocyte ratio on the risk of abdominal aortic calcification and decreased bone mineral density in patients with end-stage kidney disease (PLOS ONE, 2023년 10월, 공동저자)",
+    "Case 3: A 81-Year-Old Man Presented With Abnormal Serum Creatinine Levels (JOURNAL OF KOREAN MEDICAL SCIENCE, 2022년 10월, 공동저자)"
+  ],
+  "저서": [
+    { "date": null, "content": "신장이식 진료지침서 (닥터스북 단독)", "issuer": null },
+    { "date": null, "content": "The Essentials of clinical dialysis (Springer 단독)", "issuer": null },
+    { "date": null, "content": "임상신장학 (군자출판사 공동)", "issuer": null },
+    { "date": null, "content": "Harrison's 내과학 (도서출판 MIP 공동(대표저자))", "issuer": null },
+    { "date": null, "content": "신장이식 진료지침서 (대한의학서적 공동)", "issuer": null }
+  ],
+  "언론": [],
+  "isAttend": true
+}

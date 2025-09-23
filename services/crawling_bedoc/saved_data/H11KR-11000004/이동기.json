@@ -1,0 +1,50 @@
+{
+  "hospital_cid": 388,
+  "bedoc_id": "A5914",
+  "bedoc_hospitalsite": "http://www.khnmc.or.kr",
+  "bedoc_doctorname": "이동기",
+  "bedoc_deptname": "소아 비뇨기과",
+  "bedoc_hospitalname": "강동경희대병원",
+  "hospital_name": "강동경희대학교의대병원",
+  "aiga_hid": "H11KR-11000004",
+  "hospital_site": "https://www.khnmc.or.kr/kr/treatment/doctor/1890/profile.do",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 강동구 동남로 892, (상일동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "doctorDetailUrl":"https://www.khnmc.or.kr/kr/treatment/doctor/1890/profile.do",
+  "specialty": "소아비뇨기질환,전립선질환,요로결석,배뇨장애,복강경수술,로봇수술",
+  "학력": [
+    { "date": "2007~ 2013", "content": "경희대학교 의과대학 의학박사" },
+    { "date": "2004~ 2006", "content": "경희대학교 의과대학 의학석사" },
+    { "date": "1996~ 2002", "content": "경희대학교 의과대학 의학사" }
+  ],
+  "경력": [
+    { "date": "2024~ 현재", "content": "강동경희대학교의대병원 비뇨의학과장" },
+    { "date": "2023~ 2024", "content": "강동경희대학교병원 의료협력부실장" },
+    { "date": "2025~ 현재", "content": "강동경희대학교병원 비뇨의학과 교수" },
+    { "date": "2020~ 2025", "content": "강동경희대학교의대병원 비뇨의학과 부교수" },
+    { "date": "2012~ 2020", "content": "강동경희대학교의대병원 비뇨의학과 임상조교수, 조교수" }
+  ],
+  "학술": [
+    { "date": "2020~ 2021", "content": "Visiting Scholar, Texas Children’s Hospital, Baylor College of Medicine" },
+    { "date": "2021~ 현재", "content": "대한소아비뇨의학회 연구이사" },
+    { "date": "2017~ 현재", "content": "대한소아배뇨장애야뇨증학회 간행이사" },
+    { "date": "2018~ 현재", "content": "대한비뇨기종양학술지 (KJUO) 부편집위원장" },
+    { "date": "2016~ 2000", "content": "대한배뇨장애와 요실금학회 정회원 및 보험간사" }
+  ],
+  "수상": [
+    { "date": "2015", "content": "대한소아뇨기과학회 우수논문상" },
+    { "date": "2019", "content": "대한비뇨기종양학회 학술상 (기초분야)" },
+    { "date": "2018", "content": "대한비뇨기종양학회 학술상 (기초분야)" }
+  ],
+  "언론": [
+    { "targetDate": "2022-11-27", "type": "기사", "text": "[한국일보] 복통이 극심해 병원 찾은 사춘기 아들의 병명이…", "url": "javascript:;", "issuer": "한국일보" },
+    { "targetDate": "2021-11-18", "type": "기사", "text": "[한국일보] 극심한 복통으로 병원 찾은 사춘기 아들의 병명이…", "url": "javascript:;", "issuer": "한국일보" },
+    { "targetDate": "2019-02-14", "type": "기사", "text": "[스포츠조선] [헬스가이드-포경수술] '고래' 잡아? 말아? …실보다 득이 많다", "url": "javascript:;", "issuer": "스포츠조선" },
+    { "targetDate": "2018-11-24", "type": "기사", "text": "[한국일보] 겨울만 되면 자주 화장실 가는 중년남성, 왜?", "url": "javascript:;", "issuer": "한국일보" },
+    { "targetDate": "2015-12-22", "type": "기사", "text": "[서울신문] 비뇨기과 교수들 포경수술 “시기는?”", "url": "javascript:;", "issuer": "서울신문" }
+  ],
+  "저서": []
+}
