@@ -7,67 +7,91 @@ const cleanText = (text) => {
     return text ? text.replace(/\s\s+/g, ' ').trim() : '';
 };
 
-// 학력/경력 분류 함수
-const parseHistory = (items) => {
-    const education = [];
-    const experience = [];
-    const eduKeywords = ['석사', '박사', '학사'];
-
-    items.forEach(item => {
-        if (eduKeywords.some(keyword => item.content.includes(keyword))) {
-            education.push(item);
-        } else {
-            experience.push(item);
-        }
-    });
-    return { education, experience };
-};
-
-
 // 파싱 메인 함수
 async function parseDoctorProfile(doctorData) {
     const browser = await chromium.launch({ headless: true });
-    const page = await browser.newPage();
-    const synthesizedData = { 학력: [], 경력: [], 학술: [], 수상: [], specialty: null, profileUrl: null };
+    const context = await browser.newContext({ ignoreHTTPSErrors: true });
+    const page = await context.newPage();
+    const synthesizedData = { 학력: [], 경력: [], 학술: [], 수상: [], 논문: [], 저서: [], specialty: null, profileUrl: null };
     let error = null;
     let isAttend = false;
 
     try {
+        // 1. 메인 페이지 파싱
         await page.goto(doctorData.hospital_site, { waitUntil: 'networkidle' });
-        const html = await page.content();
-        const $ = cheerio.load(html);
+        let html = await page.content();
+        let $ = cheerio.load(html);
 
         if ($('body').text().includes(doctorData.bedoc_doctorname)) {
             isAttend = true;
         }
 
-        const profileSrc = $('p.pic img').attr('src');
+        const profileSrc = $('p.doctor_img img').attr('src');
         if (profileSrc) {
             synthesizedData.profileUrl = new URL(profileSrc, doctorData.hospital_site).href;
         }
 
-        const specialties = [];
-        $('h4.tit:contains("연구, 관심분야")').nextUntil('h4').filter('ul.list').find('li').each((i, el) => {
-            specialties.push($(el).text().trim());
+        synthesizedData.specialty = cleanText($('div.speci p:last-child').text());
+
+        const historyItems = [];
+        $('h4.tit.h4_t:contains("학력/경력")').next('.history').find('dl').each((i, el) => {
+            const date = $(el).find('dt').text().trim();
+            const content = $(el).find('dd li').text().trim();
+            if (content) historyItems.push({ date: date || null, content });
         });
-        synthesizedData.specialty = specialties.join(', ');
-
-        const parseTable = (title) => {
-            const items = [];
-            $('h4.tit').filter((i, el) => $(el).text().trim() === title)
-                .next('table.table1').find('tbody tr').each((i, tr) => {
-                    const date = $(tr).find('th').text().trim();
-                    const content = $(tr).find('td').text().trim();
-                    if (content) {
-                        items.push({ date: date || null, content });
-                    }
+        
+        const { education, experience } = (() => {
+            const edu = [];
+            const exp = [];
+            const eduKeywords = ['석사', '박사', '학사'];
+            historyItems.forEach(item => {
+                if (eduKeywords.some(keyword => item.content.includes(keyword))) edu.push(item);
+                else exp.push(item);
             });
-            return items;
-        };
+            return { education: edu, experience: exp };
+        })();
+        synthesizedData.학력 = education;
+        synthesizedData.경력 = experience;
 
-        synthesizedData.학력 = parseTable('학력');
-        synthesizedData.경력 = parseTable('경력');
-        synthesizedData.학술 = parseTable('학회활동');
+        const academicActivities = [];
+        $('h4.tit.h4_t:contains("학회활동")').next('.history').find('dl').each((i, el) => {
+            const date = $(el).find('dt').text().trim();
+            const content = $(el).find('dd li').text().trim();
+            if (content) academicActivities.push({ date: date || null, content });
+        });
+        synthesizedData.학술 = academicActivities;
+
+        const awards = [];
+        $('h4.tit.h4_t:contains("수상")').next('.history').find('dl').each((i, el) => {
+            const date = $(el).find('dt').text().trim();
+            const content = $(el).find('dd li').text().trim();
+            if (content) awards.push({ date: date || null, content });
+        });
+        synthesizedData.수상 = awards;
+
+        // 2. 논문 페이지 파싱
+        const paperUrl = $('div.con_tab li a:contains("논문")').attr('href');
+        if (paperUrl) {
+            await page.goto(new URL(paperUrl, doctorData.hospital_site).href, { waitUntil: 'networkidle' });
+            html = await page.content();
+            $ = cheerio.load(html);
+            $('table.table1.mt30').each((i, table) => {
+                const title = $(table).find('th:contains("제목")').next('td').text().trim();
+                if (title) synthesizedData.논문.push(title);
+            });
+        }
+
+        // 3. 저서 페이지 파싱
+        const bookUrl = $('div.con_tab li a:contains("저서")').attr('href');
+        if (bookUrl) {
+            await page.goto(new URL(bookUrl, doctorData.hospital_site).href, { waitUntil: 'networkidle' });
+            html = await page.content();
+            $ = cheerio.load(html);
+            $('table.table1.mt30').each((i, table) => {
+                const title = $(table).find('th:contains("저서명")').next('td').text().trim();
+                if (title) synthesizedData.저서.push({ content: title });
+            });
+        }
 
     } catch (e) {
         error = `Playwright execution failed: ${e.message}`;

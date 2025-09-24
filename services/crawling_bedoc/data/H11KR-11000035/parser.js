@@ -12,7 +12,7 @@ const cheerio = require('cheerio');
     const page = await browser.newPage();
 
     try {
-        await page.goto(url, { waitUntil: 'networkidle' });
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         const html = await page.content();
         const $ = cheerio.load(html);
 

@@ -14,52 +14,42 @@ const cheerio = require('cheerio');
     const context = await browser.newContext();
     const page = await context.newPage();
 
-    let synthesizedData = { 학력: [], 경력: [], 논문: [], 학술: [] };
+    let synthesizedData = { 학력: [], 경력: [], 논문: [], 학술: [], 저서: [] };
     let isAttend = false;
 
     try {
         await page.goto(doctorData.hospital_site, { waitUntil: 'domcontentloaded' });
+        const html = await page.content();
+        const $ = cheerio.load(html);
 
-        const doctorElement = await page.locator(`//p[@class='dcname' and strong/text()='${doctorData.bedoc_doctorname}']`).first();
-        if (!doctorElement) {
-            throw new Error(`Doctor ${doctorData.bedoc_doctorname} not found on the list page.`);
-        }
-
-        const profileButton = await doctorElement.locator(`//ancestor::div[@class='doctor-profile']/following-sibling::div[@class='doctor-btnarea']//a[contains(span, '의료진 소개')]`).first();
-        if (!profileButton) {
-            throw new Error(`Profile button for doctor ${doctorData.bedoc_doctorname} not found.`);
-        }
-
-        const [popup] = await Promise.all([
-            context.waitForEvent('page'),
-            profileButton.click(),
-        ]);
-
-        await popup.waitForLoadState('domcontentloaded');
-        const popupHtml = await popup.evaluate(() => document.body.innerHTML);
-        const $ = cheerio.load(popupHtml);
-
-        if (popupHtml.includes(doctorData.bedoc_doctorname)) {
+        if (html.includes(doctorData.bedoc_doctorname)) {
             isAttend = true;
         }
 
         synthesizedData.profileUrl = new URL($('p.dcpop_img img').attr('src'), doctorData.bedoc_hospitalsite).href;
         synthesizedData.specialty = $('dl.dcpop_case dd').text().trim();
 
+        // Tab 1: Education and Experience
         $('#dcpop_tab01 ul.dcpop_list li').each((i, el) => {
             const text = $(el).text().trim();
-            if (text.includes('졸업') || text.includes('석사') || text.includes('박사') || text.includes('연수')) {
+            if (text.includes('졸업') || text.includes('석사') || text.includes('박사') || text.includes('연수원')) {
                 synthesizedData.학력.push({ date: null, content: text });
             } else {
                 synthesizedData.경력.push({ date: null, content: text });
             }
         });
 
+        // Tab 2: Papers and Books
         $('#dcpop_tab02 ul.dcpop_list li').each((i, el) => {
             const text = $(el).text().trim();
-            if(text) synthesizedData.논문.push(text);
+            if (text.includes('(역서)') || text.includes('일조각') || text.includes('효문사') || text.includes('최신의학사')) {
+                 synthesizedData.저서.push({ date: null, content: text, issuer: null });
+            } else if (text) {
+                synthesizedData.논문.push(text);
+            }
         });
 
+        // Tab 3: Academic Societies
         $('#dcpop_tab03 ul.dcpop_list li').each((i, el) => {
             const text = $(el).text().trim();
             if(text) synthesizedData.학술.push({ date: null, content: text });

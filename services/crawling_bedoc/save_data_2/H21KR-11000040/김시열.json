@@ -1,0 +1,76 @@
+{
+  "hospital_cid": 102,
+  "bedoc_id": "A5193",
+  "bedoc_hospitalsite": "http://noon.co.kr",
+  "bedoc_doctorname": "김시열",
+  "bedoc_deptname": "안과",
+  "bedoc_hospitalname": "대구누네안과병원",
+  "hospital_name": "누네안과병원",
+  "aiga_hid": "H21KR-11000040",
+  "hospital_site": "https://www.noon.co.kr/about/doctor_view/1/9?sch_key=&sch_branch_code_key=2&sch_center_code_no=&sch_text=%EA%B9%80%EC%8B%9C%EC%97%B4",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 강남구 테헤란로 408, 대치빌딩 지상9층~지상17층 (대치동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "specialty": "망막, 포도막, 백내장",
+  "profileUrl": "https://www.noon.co.kr/upload/doctor/20220123205125.png",
+  "학력": [
+    {
+      "date": null,
+      "content": "경북대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "일본 교토대학 망막연수"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "경북대학교 의과대학 명예교수"
+    },
+    {
+      "date": null,
+      "content": "대한민국 의학한림원 회원"
+    },
+    {
+      "date": null,
+      "content": "대한안과학회 평의원"
+    },
+    {
+      "date": null,
+      "content": "한국망막학회 회원"
+    },
+    {
+      "date": null,
+      "content": "일본안과학회 회원"
+    },
+    {
+      "date": null,
+      "content": "미국안과학회 회원"
+    },
+    {
+      "date": null,
+      "content": "유럽망막학회 회원"
+    },
+    {
+      "date": null,
+      "content": "한국망막학회 회장"
+    },
+    {
+      "date": null,
+      "content": "대한안과학회 15대 이사장"
+    },
+    {
+      "date": null,
+      "content": "한국 임상시각전기생리학회 회장"
+    },
+    {
+      "date": null,
+      "content": "경북대학교병원 안과 과장 및 주임교수"
+    }
+  ],
+  "학술": []
+}

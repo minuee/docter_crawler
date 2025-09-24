@@ -1,4 +1,3 @@
-
 const { chromium } = require('playwright');
 const cheerio = require('cheerio');
 
@@ -84,11 +83,24 @@ async function main() {
                 processedLists.add(listHtml);
             } else if (title.includes('경력') && !title.includes('연수')) {
                 list.find('li').each((j, item) => {
-                    const text = cleanText($history(item).text());
-                    const dateMatch = text.match(/^\d{4}\s*-\s*\d{4}/) || text.match(/^\d{4}/);
-                    const date = dateMatch ? dateMatch[0] : null;
-                    const content = text.replace(date, '').trim();
-                    if (content) synthesizedData.경력.push({ date, content });
+                    const rawText = cleanText($history(item).text());
+                    // Split the text by date-like patterns (e.g., "1989. 3.") that indicate a new entry
+                    const entries = rawText.split(/(?=\d{4}\. \d{1,2}\.)/).filter(entry => entry.trim());
+                    
+                    if (entries.length > 1) {
+                        entries.forEach(entryText => {
+                            const dateMatch = entryText.match(/^\d{4}\s*-\s*\d{4}/) || entryText.match(/^\d{4}/);
+                            const date = dateMatch ? dateMatch[0] : null;
+                            const content = entryText.replace(date, '').trim();
+                            if (content) synthesizedData.경력.push({ date, content });
+                        });
+                    } else {
+                        // Handle as a single entry if no splits occurred
+                        const dateMatch = rawText.match(/^\d{4}\s*-\s*\d{4}/) || rawText.match(/^\d{4}/);
+                        const date = dateMatch ? dateMatch[0] : null;
+                        const content = rawText.replace(date, '').trim();
+                        if (content) synthesizedData.경력.push({ date, content });
+                    }
                 });
                 processedLists.add(listHtml);
             }

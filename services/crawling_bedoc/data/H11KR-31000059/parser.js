@@ -13,6 +13,7 @@ async function parseDoctorProfile(doctorData) {
         throw new Error("Invalid doctor data or missing hospital site URL.");
     }
 
+    const startTime = Date.now();
     const browser = await chromium.launch({ headless: true });
     const page = await browser.newPage();
 
@@ -78,6 +79,10 @@ async function parseDoctorProfile(doctorData) {
 
         let thesisMoreButtonVisible = true;
         while (thesisMoreButtonVisible) {
+            if (Date.now() - startTime > 600000) { // 10 minutes timeout
+                console.log('Timeout reached while fetching theses. Proceeding with partial data.');
+                break;
+            }
             const button = await page.$('.thesisBtn');
             if (button && await button.isVisible()) {
                 await button.click();
@@ -101,6 +106,10 @@ async function parseDoctorProfile(doctorData) {
 
         let articleMoreButtonVisible = true;
         while (articleMoreButtonVisible) {
+            if (Date.now() - startTime > 600000) { // 10 minutes timeout
+                console.log('Timeout reached while fetching articles. Proceeding with partial data.');
+                break;
+            }
             const button = await page.$('.boardBtn');
             if (button && await button.isVisible()) {
                 await button.click();

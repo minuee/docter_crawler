@@ -1,4 +1,39 @@
 {
-  "nodeError": "page.waitForSelector: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.doc_intro_tx') to be visible\u001b[22m\n",
-  "isSearchType": "html_playwright_failed"
+  "isAttend": true,
+  "specialty": "망막, 포도막, 백내장",
+  "profileUrl": "https://www.noon.co.kr/upload/doctor/20220112133626.png",
+  "학력": [
+    {
+      "date": null,
+      "content": "연세대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 대학원 의학박사"
+    },
+    {
+      "date": null,
+      "content": "미국 오하이오 주립대학교 안과 연수"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "연세대학교 의과대학 안과학교실 교수"
+    },
+    {
+      "date": null,
+      "content": "건양대학교 의과대학 안과학교실 교수"
+    },
+    {
+      "date": null,
+      "content": "건양대학교 김안과병원 병원장"
+    },
+    {
+      "date": null,
+      "content": "한국망막학회 회장"
+    }
+  ],
+  "학술": [],
+  "error": null
 }

@@ -1,14 +1,12 @@
 const { chromium } = require('playwright');
 const cheerio = require('cheerio');
+const fs = require('fs');
 
 (async () => {
     const hospitalSite = process.argv[2];
     const doctorName = process.argv[3];
 
-    const browser = await chromium.launch({ headless: true });
-    const context = await browser.newContext();
-    const page = await context.newPage();
-
+    let browser;
     let result = {
         isAttend: false,
         specialty: null,
@@ -20,6 +18,10 @@ const cheerio = require('cheerio');
     };
 
     try {
+        browser = await chromium.launch({ headless: true });
+        const context = await browser.newContext();
+        const page = await context.newPage();
+
         await page.goto(hospitalSite, { waitUntil: 'domcontentloaded', timeout: 60000 });
         
         const html = await page.content();
@@ -31,51 +33,42 @@ const cheerio = require('cheerio');
 
         const cleanContent = (htmlContent) => {
             if (!htmlContent) return [];
-            // Replace <br> with a unique separator, remove all other HTML tags, then split.
             return htmlContent.replace(/<br\s*\/?>/gi, '|||')
                               .replace(/<[^>]+>/g, '')
                               .split('|||')
-                              .map(item => item.replace(/\s+/g, ' ').replace(/-/g, '').replace(/"/g, '').trim())
+                              .map(item => item.replace(/\s+/g, ' ').replace(/·/g, '').replace(/"/g, '').trim())
                               .filter(Boolean);
         };
 
         // Profile URL
-        const profileImgSrc = $('div.profile-img img').attr('src');
+        const profileImgSrc = $('div.profile__img img').attr('src');
         if (profileImgSrc) {
             result.profileUrl = new URL(profileImgSrc, hospitalSite).href;
         }
 
         // Specialty
-        result.specialty = $('p.detail').text().trim().replace(/"/g, '');
+        result.specialty = $('p.profile__department').text().trim().replace(/"/g, '');
 
         // Education
-        const educationHtml = $('div.education').html();
+        const educationHtml = $('div.profile__education').html();
         result.학력 = cleanContent(educationHtml).map(content => ({ date: null, content }));
 
-        // Career (is in the first visible tab)
-        const careerHtml = $('.profile__tab__cont > div:nth-child(1) > .career').html();
+        // Career
+        const careerHtml = $('div#career').html();
         result.경력 = cleanContent(careerHtml).map(content => ({ date: null, content }));
         
-        // Click the "Academic Activities" tab
-        await page.click('ul.profile__tab__btn li:nth-child(2)');
-        await page.waitForTimeout(500); // Wait for tab content to potentially load
-
-        // Get content after click
-        const academicHtml = await page.evaluate(() => {
-            const academicTabPanel = document.querySelector('.profile__tab__cont > div:nth-child(2)');
-            return academicTabPanel ? academicTabPanel.innerHTML : '';
-        });
-        
-        const $academic = cheerio.load(academicHtml);
-        const academicContentHtml = $academic('.career').html();
-        result.학술 = cleanContent(academicContentHtml).map(content => ({ date: null, content }));
-
+        // Academic Activities
+        const academicHtml = $('div#schoolship').html();
+        result.학술 = cleanContent(academicHtml).map(content => ({ date: null, content }));
 
     } catch (e) {
         result.error = `Error during Playwright execution: ${e.message}`;
     } finally {
-        await browser.close();
+        if (browser) {
+            await browser.close();
+        }
     }
 
-    console.log(JSON.stringify(result, null, 2));
+    fs.writeFileSync('parser_output.json', JSON.stringify(result, null, 2));
+    fs.writeFileSync('parser_status.txt', 'done');
 })();

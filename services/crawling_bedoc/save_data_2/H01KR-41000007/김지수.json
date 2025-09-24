@@ -1,0 +1,767 @@
+{
+  "hospital_cid": 131,
+  "bedoc_id": "A8257",
+  "bedoc_hospitalsite": "http://www.cmcep.or.kr/",
+  "bedoc_doctorname": "김지수",
+  "bedoc_deptname": "신경과",
+  "bedoc_hospitalname": "분당서울대병원",
+  "hospital_name": "분당서울대학교병원",
+  "aiga_hid": "H01KR-41000007",
+  "hospital_site": "https://www.snubh.org/medical/drIntroduce.do?DP_TP=&DP_CD=NR&sDpCdDtl=NR&sDrSid=1000245&sDrStfNo=00818&sDpTp=",
+  "site_type": "single",
+  "hospital_addr": "경기도 성남시 분당구 구미로173번길 82, (구미동, 분당서울대학교병원)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "profileUrl": "https://www.snubh.org/upload/newdoctors/1000245/1000245_p1.png",
+  "specialty": "어지럼증,눈운동질환,복시, 어지럼증, 눈운동질환, 복시",
+  "isAttend": true,
+  "학력": [
+    {
+      "content": "1992 서울대학교 의과대학 학사"
+    },
+    {
+      "content": "1997 서울대학교 의과대학 석사"
+    },
+    {
+      "content": "2003 서울대학교 의과대학 박사"
+    }
+  ],
+  "경력": [
+    {
+      "content": "1992 - 1993 분당서울대학교병원 인턴"
+    },
+    {
+      "content": "1993 - 1997 분당서울대학교병원 신경과 전공의"
+    },
+    {
+      "content": "2003 - 2004 분당서울대학교병원 신경과 전임의"
+    },
+    {
+      "content": "2004 - 2008 분당서울대학교병원 신경과 조교수"
+    },
+    {
+      "content": "2008 - 2013 분당서울대학교병원 신경과 부교수"
+    },
+    {
+      "content": "2013 - 2020 분당서울대학교병원 신경과 교수"
+    }
+  ],
+  "학술": [
+    {
+      "content": "2000 민주화 운동 관련 상이자 검진 전문의"
+    },
+    {
+      "content": "2001 대한평형의학회 무임소이사"
+    },
+    {
+      "content": "2003 Planning Board, Korean Balance Society"
+    },
+    {
+      "content": "2003 Educational Committee, Korean Neurological Association"
+    },
+    {
+      "content": "2003 Secretary, Korean Society for Clinical Neurophysiology"
+    },
+    {
+      "content": "2004 Editorial Board, Journal of Korean Neurological Association"
+    },
+    {
+      "content": "2004 Editorial Board, Journal of Korean Society for Clinical Neurophysiology"
+    },
+    {
+      "content": "2005 Secretary General, Korean Balance Society"
+    },
+    {
+      "content": "2006 Reviewer, J Neurol Sci"
+    },
+    {
+      "content": "2006 Reviewer, European Journal of Neurology"
+    },
+    {
+      "content": "2006 Reviewer, Cerebrovascular Diseases"
+    },
+    {
+      "content": "2006 Planning Board, Korean Society for Clinical Neurophysiology"
+    },
+    {
+      "content": "2007 신경과 전문의 고시 2차 문제 선택위원"
+    },
+    {
+      "content": "2007 Scientific Program Committee Chairman, Korean Balance Society"
+    },
+    {
+      "content": "2007 Treasurer, AOCCN 2009"
+    },
+    {
+      "content": "2008 Editor, Journal of Korean Neurological Association"
+    },
+    {
+      "content": "2008 Treasurer, Korean Neurological Association"
+    },
+    {
+      "content": "2008 대한의학학술지편집인위원회 기획평가위원"
+    },
+    {
+      "content": "2008 중앙약사심의의원회 전문위원"
+    },
+    {
+      "content": "2010 Planning Board, Korean Society of Neuro-ophthalmology"
+    },
+    {
+      "content": "2012 대한신경과학회 학술이사 (2012~2014)"
+    },
+    {
+      "content": "2014 중앙약사심의위원회 전문가 (2014~2016)"
+    },
+    {
+      "content": "2013 대한평형의학회 부회장 (2013~2015)"
+    },
+    {
+      "content": "2013 대한안신경의학회 기획이사 (2013~2015)"
+    },
+    {
+      "content": "2015 대한평형의학회 회장 (2015~2017)"
+    },
+    {
+      "content": "2015 대한안신경의학회 감사 (2015~2017)"
+    },
+    {
+      "content": "2017 대한안신경의학회 부회장(2017~2019)"
+    },
+    {
+      "content": "2019 대한안신경의학회 회장 (2019~2021)"
+    }
+  ],
+  "수상": [
+    {
+      "content": "1998 Barford Fellowship Award - University of Toronto"
+    },
+    {
+      "content": "1999 Barford Fellowship Award - University of Toronto"
+    },
+    {
+      "content": "2004 분당서울대학교병원 공로상 - 분당서울대학교병원"
+    },
+    {
+      "content": "2004 SCI I.F상 우수상 - 분당서울대학교병원"
+    },
+    {
+      "content": "2005 SCI I.F상 장려상 - 분당서울대학교병원"
+    },
+    {
+      "content": "2006 Marquis Who’s in Who in the Word"
+    },
+    {
+      "content": "2006 Marquis Who’s in Who in Asia"
+    },
+    {
+      "content": "2006 Marquis Who’s in Who in Science and Engineering"
+    },
+    {
+      "content": "2006 2000 Outstanding Intellectuals of the 21st Century - International Biographical Center (IBC), Cambridge, England"
+    },
+    {
+      "content": "2006 Universal Award of Accomplishment - American Biographical Institute"
+    },
+    {
+      "content": "2006 Young Scientist Award - 24th Barany Society, 2006, Uppsala, Sweden"
+    },
+    {
+      "content": "2006 Best Investigator Award - 대한평형의학회"
+    },
+    {
+      "content": "2006 Best Poster Presentation Award - 27th World Congress of Biomedical Laboratory Science"
+    },
+    {
+      "content": "2006 우수발표상 - 대한평형의학회"
+    },
+    {
+      "content": "2007 우수발표상 - 대한평형의학회 추계학술대회"
+    },
+    {
+      "content": "2007 2007 우수연구상 - 서울대학교"
+    },
+    {
+      "content": "2008 2007 우수 업적교수(연구부문) - 서울의대"
+    },
+    {
+      "content": "2008 최우수 포스터상 - 제4차 아시아 신경안과학회"
+    },
+    {
+      "content": "2008 2008 우수연구상(누적 IF 최우수상) - 분당서울대학교병원"
+    },
+    {
+      "content": "2008 우수발표상 - 2008년 대한평형의학회 추계학술대회"
+    },
+    {
+      "content": "2008 제12회 함춘의학상(연구업적부문) - 서울대학교 의과대학 동창회"
+    },
+    {
+      "content": "2010 불곡의학상 최우수상 - 분당서울대학교병원"
+    },
+    {
+      "content": "2011 불곡의학상 장려상 - 분당서울대학교병원"
+    },
+    {
+      "content": "2012 2012 보건산업기술진흥 유공자 - 보건복지부"
+    },
+    {
+      "content": "2012 불곡의학상 장려상 - 분당서울대학교병원"
+    },
+    {
+      "content": "2012 유당학술상 - 유당명호진선생기념사업회"
+    },
+    {
+      "content": "2013 우수포스터상 - Nuti Meeting"
+    },
+    {
+      "content": "2014 Hallpike-Nylen Prize - Barany Society"
+    },
+    {
+      "content": "2015 서울대학교 학술연구상 - 서울대학교"
+    },
+    {
+      "content": "2015 불곡창의논문상 - 서울의대/분당서울대학교병원"
+    },
+    {
+      "content": "2015 의료경영고위과정(AHP) 공로상 - 서울대학교병원/대한의사협회"
+    },
+    {
+      "content": "2015 의료경영고위과정(AHP) 연구과제상 우수상 - 서울대학교병원/대한의사협회"
+    },
+    {
+      "content": "2015 2015 보건의료기술진흥 유공자 - 보건복지부"
+    },
+    {
+      "content": "2016 과학기술훈장 진보장 - 대한민국"
+    },
+    {
+      "content": "2017 불곡의학상 장려상 - 서울의대/분당서울대학교병원"
+    },
+    {
+      "content": "2018 공로상 - 대한뇌졸중학회"
+    },
+    {
+      "content": "2018 불곡의학상 우수상 - 서울의대/분당서울대학교병원"
+    },
+    {
+      "content": "2019 이원상 평형의학상 - 대한평형의학회"
+    },
+    {
+      "content": "2019 연구업적 우수교원 - 서울의대"
+    },
+    {
+      "content": "2019 뉴로프런티어 학술상 - 대한신경과학회"
+    },
+    {
+      "content": "2019 불곡의학상 장려상 - 서울의대/분당서울대학교병원"
+    }
+  ],
+  "논문": [
+    "The Vestibulo-Ocular Reflex is Associated With Visuospatial Dysfunction in Patients With Parkinson&apos;s Disease. (Brain Behav, 2025 ;15 (4) :e70453 -e70453)",
+    "Steroid-Responsive Progressive Subacute Cerebellar Ataxia: An Unrecognized Subtype of Immune-Mediated Ataxia. (Cerebellum, 2025 ;24 (3) :80 -80)",
+    "Conversion into short-arm canalithiasis as a cause of residual dizziness after repositioning maneuvers for BPPV. (J Neurol, 2025 ;272 (4) :284 -284)",
+    "Spontaneous Nystagmus Violating the Alexander&apos;s Law: Neural Substrates and Mechanisms. (Cerebellum, 2025 ;24 (2) :34 -34)",
+    "Latent antiganglioside antibodies-related ophthalmoplegia revealed by head impulse test: a new role for an old sign. (J Neurol, 2025 ;272 (3) :187 -187)",
+    "Concomitant long-arm cupulolithiasis and short-arm canalithiasis involving the posterior canal. (J Neurol, 2025 ;272 (2) :117 -117)",
+    "Optic neuropathy as an early manifestation of granulomatosis with polyangiitis: a case report and literature review. (Front Med (Lausanne), 2025 ;12 :1515622 -1515622)",
+    "Cogan Syndrome in a Patient With Melanoma Treated With Targeted Chemotherapy. (J Clin Neurol, 2025 ;21 (1) :89 -91)",
+    "Association between antibiotics use and osteoporotic fracture risk: a nationally representative retrospective cohort study. (Arch Osteoporos, 2024 ;19 (1) :81 -81)",
+    "The semicircular canal function is preserved with little impact on falls in patients with mild Parkinson&apos;s disease. (Parkinsonism Relat Disord, 2024 ;118 :105933 -105933)",
+    "Ocular Vestibular-Evoked Myogenic Potential Assists in the Differentiation of Multiple System Atrophy From Parkinson&apos;s Disease. (J Mov Disord, 2024 ;17 (4) :398 -407)",
+    "Labyrinthine Infarction Documented on Magnetic Resonance Imaging. (Stroke, 2024 ;55 (10) :e277 -e280)",
+    "Cupulolithiatic BPPV involving both posterior semicircular canals: implications for set-point adaptation. (J Neurol, 2024 ;271 (11) :7325 -7329)",
+    "Cerebellar Ataxia, Neuropathy, and Vestibular Areflexia Syndrome: The First Genetically Confirmed Case in South Korea. (J Clin Neurol, 2024 ;20 (6) :630 -633)",
+    "Bilateral Superior Ophthalmic Vein Thrombosis as the Sole Manifestation of Protein S Deficiency. (J Neuroophthalmol, 2024 ;44 (4) :e597 -e598)",
+    "Selective otolithic dysfunction in patients presenting with acute spontaneous vertigo: consideration based on MRI. (Front Neurol, 2024 ;15 :1517112 -1517112)",
+    "Blood Pressure Variability and Ocular Vestibular-Evoked Myogenic Potentials Are Independently Associated With Orthostatic Hypotension. (J Clin Neurol, 2024 ;20 (6) :571 -579)",
+    "Effects of Baclofen on Central Paroxysmal Positional Downbeat Nystagmus. (Cerebellum, 2024 ;23 (5) :1892 -1898)",
+    "Neck rigidity: a pitfall for video head-impulse tests in Parkinson&apos;s disease. (J Neurol, 2024 ;271 (8) :5223 -5232)",
+    "Intellectual Disability in Episodic Ataxia Type 2: Beyond Paroxysmal Vertigo and Ataxia. (J Clin Neurol, 2024 ;20 (6) :563 -570)",
+    "Ocular Flutter Evoked by Vestibular Stimulation in Multiple System Atrophy with Predominant Cerebellar Ataxia. (Cerebellum, 2024 ;23 (5) :2214 -2216)",
+    "Disrupted Rotational Perception During Simultaneous Stimulation of Rotation and Inertia. (Cerebellum, 2024 ;23 (5) :2003 -2011)",
+    "Torsional saccadic palsy in episodic ataxia type 2. (J Neurol, 2024 ;271 (10) :7039 -7041)",
+    "Bilaterally positive head-impulse tests can differentiate AICA infarction from labyrinthitis. (Front Neurol, 2024 ;15 :1448989 -1448989)",
+    "Four-hour-delayed 3D-FLAIR MRIs in patients with acute unilateral peripheral vestibulopathy. (Ann Clin Transl Neurol, 2024 ;11 (8) :2030 -2039)",
+    "Scale for Ocular Motor Disorders in Ataxia (SODA) in Patients with Multiple System Atrophy. (Cerebellum, 2024 ;23 (4) :1369 -1376)",
+    "Healthcare Costs due to Dizziness/Vertigo in Korea: Analyses Using the Public Data of Health Insurance Review & Assessment Service. (J Korean Med Sci, 2024 ;39 (29) :e214 -e214)",
+    "Abnormal vestibular-evoked myogenic potentials as a risk factor for unpredicted falls in spinocerebellar ataxia: a preliminary study. (J Neurol, 2024 ;271 (5) :2539 -2546)",
+    "James Sharpe&apos;s Contributions to Neurology and Neuro-ophthalmology: A Posthumous Tribute 10 Years On. (Can J Neurol Sci, 2024 ;51 (1) :117 -121)",
+    "Subjective BPPV revisited: identification of positional nystagmus with a new maneuver. (J Neurol, 2024 ;271 (7) :4640 -4643)",
+    "Expanding Clinical Spectrum of Anti-GQ1b Antibody Syndrome: A Review. (JAMA Neurol, 2024 ;81 (7) :762 -770)",
+    "Cavernous malformation in the fourth ventricle: trivial findings but grave prognosis. (Acta Neurol Belg, 2024 ;124 (3) :1085 -1087)",
+    "Central paroxysmal positional nystagmus mimicking posterior canal benign paroxysmal positional vertigo in pontine infarction: a case report and literature review. (J Neurol, 2024 ;271 (6) :3672 -3677)",
+    "The associations of adherence to the Mediterranean diet with chronic dizziness and imbalance in community-dwelling adults: KNHANES 2019-2021. (J Transl Med, 2024 ;22 (1) :522 -522)",
+    "Etiological distribution of isolated oculomotor nerve palsy: analysis of 633 patients and literature review. (Eur J Neurol, 2024 ;31 (6) :e16261 -e16261)",
+    "Atypical Benign Paroxysmal Positional Vertigo: Concomitant Cupulolithiasis and Short-Arm Canalolithiasis Involving the Posterior Canal? (J Clin Neurol, 2024 ;20 (3) :336 -338)",
+    "Ocular motor and vestibular dysfunction in central nervous system lymphoma. (Eur J Neurol, 2024 ;31 (5) :e16242 -e16242)",
+    "Teaching Video NeuroImage: Torsional Saccadic Palsy in Bilateral Thalamic Infarctions. (Neurology, 2024 ;102 (5) :e209184 -e209184)",
+    "Ocular Flutter Evoked by Vestibular Stimulation. (Cerebellum, 2024 ;23 (2) :872 -874)",
+    "Opsoclonus Induced by Head-Shaking in Vestibular Migraine. (Cerebellum, 2024 ;23 (2) :856 -860)",
+    "The vestibulospinal dysfunction has little impact on falls in patients with mild Parkinson&apos;s disease. (Parkinsonism Relat Disord, 2024 ;122 :106081 -106081)",
+    "Efficacy of vestibular rehabilitation and its facilitating and hindering factors from real-world clinical data. (Front Neurol, 2024 ;15 :1329418 -1329418)",
+    "Muscle mass and chronic dizziness: a cross-sectional study of a Korean population. (J Neurol, 2024 ;271 (3) :1213 -1223)",
+    "Recurrence and long-term outcomes of Tolosa-Hunt syndrome. (J Neurol, 2024 ;271 (2) :935 -943)",
+    "Effects of pupil size in video head-impulse tests. (J Neurol, 2024 ;271 (2) :819 -825)",
+    "Evolution of Vestibular Findings During and Between the Attacks of Meniere Disease: Update. (Neurol Clin Pract, 2024 ;14 (2) :e200235 -e200235)",
+    "Vestibular syncope. (Curr Opin Neurol, 2024 ;37 (1) :66 -73)",
+    "Conjugate torsional pendular nystagmus and palatal tremor after unilateral internuclear ophthalmoplegia. (J Neurol, 2024 ;271 (1) :580 -583)",
+    "Upbeat and Direction-Changing Torsional Nystagmus While Straight Head Hanging: A New Sign of Benign Paroxysmal Positional Vertigo Involving Bilateral Posterior Semicircular Canals. (J Clin Neurol, 2024 ;20 (1) :100 -102)",
+    "The Location of the Abducens Nucleus and Facial Nerve Fascicle: Letter to the Editor Regarding the Article Association Between Multiple Sclerosis and the Symptoms of Vertigo and Facial Nerve Palsy. (Ear Nose Throat J, 2023 :1455613231184149 -1455613231184149)",
+    "Contraversive Ocular Tilt Reaction, Body Lateropulsion and Gaze-Evoked Nystagmus After Inferior Cerebellar Peduncle and Dentate Nucleus Stroke. (J Neuroophthalmol, 2023 ;43 (4) :e322 -e324)",
+    "Triquarter Visual Field Defect Due to Internal Carotid Artery Giant Aneurysm. (J Neuroophthalmol, 2023 ;43 (4) :e280 -e282)",
+    "Ocular Motor Findings Aid in Differentiation of Spinocerebellar Ataxia Type 17 from Huntington&apos;s Disease. (Cerebellum, 2023 ;22 (1) :1 -13)",
+    "Acute comitant strabismus in anti-GQ1b antibody syndrome. (J Neurol, 2023 ;270 (1) :486 -492)",
+    "Diplopia: characteristics and etiologic distribution in a referral-based university hospital. (J Neurol, 2023 ;270 (2) :1067 -1075)",
+    "Loss of torsional quick eye movements during head roll in progressive supranuclear palsy: a?new diagnostic marker. (J Neurol, 2023 ;270 (4) :2230 -2236)",
+    "Otoconial Degeneration After Transient Ischemia Induced by Four-Vessel Occlusion in Rats. (J Clin Neurol, 2023 ;19 (5) :478 -482)",
+    "Saw-tooth vertical saccades in progressive supranuclear palsy. (J Neurol, 2023 ;270 (7) :3644 -3646)",
+    "Augmented ocular vestibular-evoked myogenic potentials in postural orthostatic tachycardia syndrome. (Clin Auton Res, 2023 ;33 (4) :479 -489)",
+    "Etiologic distribution of isolated abducens nerve palsy: Analysis of 807 patients and literature review. (Eur J Neurol, 2023 ;30 (8) :2471 -2480)",
+    "Analyses of Head-Impulse Tests in Patients With Posterior Circulation Stroke and Vestibular Neuritis. (Neurology, 2023 ;100 (23) :e2374 -e2385)",
+    "Clinical Features and Neurotologic Findings in Patients With Acute Unilateral Peripheral Vestibulopathy Associated With Antiganglioside Antibody. (Neurology, 2023 ;101 (19) :e1913 -e1921)",
+    "Effect of Self-treatment of Recurrent Benign Paroxysmal Positional Vertigo: A Randomized Clinical Trial. (JAMA Neurol, 2023 ;80 (3) :244 -250)",
+    "Isolated Inferior Rectus Palsy due to Oculomotor Dorsal Subnucleus Infarction. (Ophthalmology, 2023 ;130 (7) :714 -714)",
+    "Pearls & Oy-sters: Vibration-Induced Downbeat Nystagmus: A New Cerebellar Sign Observed in Paraneoplastic Syndrome. (Neurology, 2023 ;100 (1) :43 -46)",
+    "Risk of future stroke in patients with a diagnosis of peripheral vertigo in the emergency department. (Eur J Neurol, 2023 ;30 (7) :2062 -2069)",
+    "Spontaneous nystagmus with an upbeat component: Central or peripheral vestibular disorders? (Front Neurol, 2023 ;14 (0) :1106084 -1106084)",
+    "Gene expression analysis in recurrent benign paroxysmal positional vertigo: a preliminary study. (Front Neurol, 2023 ;14 (0) :1223996 -1223996)",
+    "Visuospatial cognition in acute unilateral peripheral vestibulopathy. (Front Neurol, 2023 ;14 (0) :1230495 -1230495)",
+    "Incidence, characteristics, and neuroanatomical substrates of vestibular symptoms in supratentorial stroke. (J Neurol, 2023 ;270 (4) :2174 -2183)",
+    "Functional and anatomical alterations in bilateral vestibulopathy: A multimodal neuroimaging study and clinical correlation. (Front Neurol, 2023 ;14 (0) :1157931 -1157931)",
+    "Effect of a False Inertial Cue in the Velocity-Storage Circuit on Head Posture and Inertia Perception. (J Neurosci, 2023 ;43 (9) :1530 -1539)",
+    "Oculomotor fatigability with decrements of saccade and smooth pursuit for diagnosis of myasthenia gravis. (J Neurol, 2023 ;270 (5) :2743 -2755)",
+    "Editorial: Nystagmus in vestibular and cerebellar disorders. (Front Neurol, 2023 ;14 (0) :1289354 -1289354)",
+    "Isolated Bilateral Superior Cerebellar Peduncular Lesion Presenting Square-Wave Jerks and Ataxia. (J Clin Neurol, 2023 ;19 (1) :93 -95)",
+    "Pseudo-pupil sparing oculomotor nerve palsy in cavernous-carotid fistula. (J Neurol, 2023 ;270 (1) :552 -554)",
+    "Metronidazole-induced cerebellar dysfunction preferentially involving the saccadic system. (J Neurol, 2023 ;270 (12) :6166 -6169)",
+    "Cerebellopontine angle tumor presenting as vertical strabismus: differentiation of trochlear nerve palsy and skew deviation. (J Neurol, 2023 ;270 (3) :1784 -1786)",
+    "Alternating adduction hypertropia as a rare presentation of midbrain hemorrhage. (J Neurol, 2023 ;270 (3) :1781 -1783)",
+    "Periodic vertigo and downbeat nystagmus while supine: Dysfunction of Purkinje cells coding gravity. (Ann Clin Transl Neurol, 2023 ;10 (10) :1931 -1936)",
+    "Bilateral Internuclear Ophthalmoplegia as a Manifestation of Varicella Zoster Encephalitis. (J Neuroophthalmol, 2023 ;43 (3) :e79 -e81)",
+    "Correction to: Nystagmus only with fixation in the light: a rare central sign due to cerebellar malfunction. (J Neurol, 2022 ;269 (7) :3891 -3891)",
+    "Efficacy of nilotinib in monozygotic twins with spinocerebellar ataxia type 6. (J Neurol, 2022 ;269 (5) :2769 -2773)",
+    "Head-impulse tests aid in differentiation of multiple system atrophy from Parkinson&apos;s disease. (J Neurol, 2022 ;269 (6) :2972 -2979)",
+    "Clinical Reasoning: A 48-Year-Old Woman Presenting With Vertigo, Ptosis, and Red Eyes. (Neurology, 2022 ;98 (16) :678 -683)",
+    "Update on the medial longitudinal fasciculus syndrome. (Neurol Sci, 2022 ;43 (6) :3533 -3540)",
+    "Vascular vertigo and dizziness: Diagnostic criteria. (J Vestib Res, 2022 ;32 (3) :205 -222)",
+    "Scale for Ocular motor Disorders in Ataxia (SODA). (J Neurol Sci, 2022 ;443 (0) :120472 -120472)",
+    "Less talked variants of benign paroxysmal positional vertigo. (J Neurol Sci, 2022 ;442 (0) :120440 -120440)",
+    "Vestibular impairments in episodic ataxia type 2. (J Neurol, 2022 ;269 (5) :2687 -2695)",
+    "Punctuate hippocampal lesions presenting with acute vestibular syndrome. (J Neurol, 2022 ;269 (4) :2210 -2213)",
+    "Pseudo-reversed catch-up saccades during head impulses: a new cerebellar sign. (J Neurol, 2022 ;269 (10) :5651 -5654)",
+    "Nystagmus only with fixation in the light: a rare central sign due to cerebellar malfunction. (J Neurol, 2022 ;269 (7) :3879 -3890)",
+    "Hyperactive and cross-coupled head impulse signs in recurrent strokes: clinical signs of global cerebellar dysfunction. (J Neurol, 2022 ;269 (3) :1698 -1700)",
+    "Discordant horizontal-torsional nystagmus: a sign of posterior semicircular canal dysfunction. (J Neurol, 2022 ;269 (9) :5038 -5046)",
+    "Recurrent Abducens Nerve Palsy Due to Hidden Clival Meningioma in Dorello&apos;s Canal. (J Clin Neurol, 2022 ;18 (3) :370 -372)",
+    "The diagnostic value of the ocular tilt reaction plus head tilt subjective visual vertical (±45°) in patients with acute central vascular vertigo. (Front Neurol, 2022 ;13 (0) :1022362 -1022362)",
+    "Correlation of clinical parameters with endolymphatic hydrops on MRI in Meniere&apos;s disease. (Front Neurol, 2022 ;13 :937703 -937703)",
+    "Commentary: Is There an Acquired Idiopathic Head-Shaking Nystagmus?: A Discussion of Mechanisms and Clinical Implications Based on a Case Report. (Front Neurol, 2022 ;13 (0) :955081 -955081)",
+    "Bechterew&apos;s Phenomenon in Bilateral Sequential Vestibular Neuritis: A Report of Two Cases. (Front Neurol, 2022 ;13 (0) :844676 -844676)",
+    "A preliminary trial of botulinum toxin type A in patients with vestibular migraine: A longitudinal fMRI study. (Front Neurol, 2022 ;13 (0) :955158 -955158)",
+    "Impaired Duration Perception in Patients With Unilateral Vestibulopathy During Whole-Body Rotation. (Front Integr Neurosci, 2022 ;16 :818775 -818775)",
+    "Etiologic distribution of isolated trochlear palsy: Analysis of 1020 patients and literature review. (Eur J Neurol, 2022 ;29 (12) :3658 -3665)",
+    "Bilateral vestibulopathy: the causes, diagnosis, and treatments. (Curr Opin Neurol, 2022 ;35 (1) :98 -106)",
+    "Utricular dysfunction in patients with orthostatic hypotension. (Clin Auton Res, 2022 ;32 (6) :431 -444)",
+    "Can Dyssynergia of Vestibulosympathetic and Baroreflexes Cause Vestibular Syncope? The Hypothesis Based on the Velocity-Storage Function. (Cerebellum, 2022 ;21 (2) :244 -252)",
+    "Objective measurement of HINTS (Head Impulse, Nystagmus, Test of Skew) in peripheral vestibulopathy. (Auris Nasus Larynx, 2022 ;49 (6) :938 -949)",
+    "Vestibular syncope: clinical characteristics and mechanism. (Ann Clin Transl Neurol, 2022 ;9 (10) :1616 -1625)",
+    "Evolution of caloric responses during and between the attacks of Meniere&apos;s disease. (J Neurol, 2021 ;268 (8) :2913 -2921)",
+    "Update on benign paroxysmal positional vertigo. (J Neurol, 2021 ;268 (5) :1995 -2000)",
+    "Acute Acquired Concomitant Esotropia in Anti-GQ1b-Antibody Syndrome. (J Clin Neurol, 2021 ;17 (2) :322 -324)",
+    "Update on Nystagmus and Other Ocular Oscillations. (J Clin Neurol, 2021 ;17 (3) :337 -343)",
+    "Vestibular Perception in Time and Space During Whole-Body Rotation in Humans. (Cerebellum, 2021 ;20 (4) :509 -517)",
+    "Linear Vertigo in Benign Paroxysmal Positional Vertigo: Prevalence and Mechanism. (Cerebellum, 2021 ;20 (2) :160 -168)",
+    "Opsoclonus Following Downbeat Nystagmus in Absence of Visual Fixation in Multiple System Atrophy: Modulation and Mechanisms. (Cerebellum, 2021 ;20 (5) :724 -733)",
+    "Protective Effects of Deferoxamine on Vestibulotoxicity in Gentamicin-Induced Bilateral Vestibulopathy Rat Model. (Front Neurol, 2021 ;12 (0) :650752 -650752)",
+    "Tinnitus Update. (J Clin Neurol, 2021 ;17 (1) :1 -10)",
+    "Vestibular Migraine of Childhood and Recurrent Vertigo of Childhood: Diagnostic criteria Consensus document of the Committee for the Classification of Vestibular Disorders of the Barany Society and the International Headache Society. (J Vestib Res, 2021 ;31 (1) :1 -9)",
+    "The Differential Effects of Acute Right- vs. Left-Sided Vestibular Deafferentation on Spatial Cognition in Unilateral Labyrinthectomized Mice. (Front Neurol, 2021 ;12 (0) :789487 -789487)",
+    "Galvanic Vestibular Stimulation Improves Spatial Cognition After Unilateral Labyrinthectomy in Mice. (Front Neurol, 2021 ;12 (0) :716795 -716795)",
+    "Gait in Benign Paroxysmal Positional Vertigo. (Front Neurol, 2021 ;12 (0) :633393 -633393)",
+    "Primary ventriculitis presenting with isolated vestibular syndrome. (J Neurol, 2021 ;268 (12) :4891 -4893)",
+    "Optic disc edema as a sole manifestation of anti-GQ1b antibody syndrome. (J Neurol, 2021 ;268 (6) :2263 -2266)",
+    "Bilateral sequential sudden sensorineural hearing loss in protein S deficiency. (J Neurol, 2021 ;268 (3) :1110 -1113)",
+    "Vestibular paroxysmia associated with typewriter tinnitus: a case report and literature review. (J Neurol, 2021 ;268 (6) :2267 -2272)",
+    "Predictors of treatment response to pharmacotherapy in patients with persistent postural-perceptual dizziness. (J Neurol, 2021 ;268 (7) :2523 -2532)",
+    "Parameters of Off-Vertical Axis Rotation in Unilateral and Bilateral Vestibulopathy and Their Correlation with Vestibular Evoked Myogenic Potentials. (J Clin Med, 2021 ;10 (4))",
+    "Pearls & Oy-sters: Labyrinthine Infarction Mimicking Vestibular Neuritis. (Neurology, 2021 ;97 (16) :787 -790)",
+    "Pearls & Oy-sters: Divergence Nystagmus. (Neurology, 2021 ;96 (6) :290 -293)",
+    "An alternative mechanism of crossed vertical gaze palsy in unilateral mesodiencephalic infarction. (Med Hypotheses, 2021 ;146 :110372 -110372)",
+    "Diagnostic assessment of magnetic resonance imaging for patients with intralabyrinthine schwannoma: A systematic review. (J Neuroradiol, 2021)",
+    "Prevention of recurrent benign paroxysmal positional vertigo with vitamin D supplementation: a meta-analysis. (J Neurol, 2021)",
+    "Hyperventilation Increases the Randomness of Ocular Palatal Tremor Waveforms. (Cerebellum, 2021)",
+    "통증성 안근마비로 발현한 침윤성 부비동 진균감염의 뇌혈관 합병증 (대한안신경의학회지, 2020 ;10 (2) :40 -43)",
+    "Positional Hemiseesaw Nystagmus in Ataxia with Oculomotor Apraxia Type 2 due to a Novel Senataxin Gene Mutation: A New Phenotype (Research in Vestibular Science, 2020 ;19 (1) :12 -15)",
+    "Diagnostic Criteria and Differential Diagnosis of Hemodynamic Orthostatic Dizziness/Vertigo (Research in Vestibular Science, 2020 ;19 (2) :35 -41)",
+    "기립어지럼/현훈의 진단 기준과 감별 진단 (대한평형의학회, 2020 ;19 (2) :35 -41)",
+    "새로운 Senataxin 유전변이로 인한 눈돌림실행증동반실조 2형에서 나타난 체위반쪽시소안진 (대한평형의학회지, 2020 ;19 (1) :12 -15)",
+    "통증성 안근마비로 발현한 침윤성 부비동 진균감염의 뇌혈관 합병증 (대한안신경학회, 2020 ;10 (2) :40 -43)",
+    "Compression of both vertebral arteries during neck extension: a new type of vertebral artery compression syndrome. (J Neurol, 2020 ;267 (1) :276 -278)",
+    "Combined Jerky and Pendular Nystagmus in Medullary Hemorrhage. (J Clin Neurol, 2020 ;16 (3) :491 -493)",
+    "Clinical Reasoning: Sudden hearing loss with vertigo in a 42-year-old woman. (Neurology, 2020 ;94 (23) :1042 -1047)",
+    "Clinical implications of head-shaking nystagmus in central and peripheral vestibular disorders: is perverted head-shaking nystagmus specific for central vestibular pathology? (Eur J Neurol, 2020 ;27 (7) :1296 -1303)",
+    "Bilateral vestibulopathy as an early manifestation of systemic lupus erythematosus. (J Neurol, 2020 ;267 (6) :1855 -1858)",
+    "Bilateral Vestibular Dysfunction. (Semin Neurol, 2020 ;40 (1) :40 -48)",
+    "Association between Bone Metabolism and Vestibular Problems in the Modified Romberg Test: Data from the 2009-2010 Korean National Health and Nutrition Examination Survey. (J Clin Med, 2020 ;9 (8))",
+    "Implication of the Association of Fibrinogen Citrullination and Osteoclastogenesis in Bone Destruction in Rheumatoid Arthritis (Cells, 2020)",
+    "Positioning Velocity Matters in Central Paroxysmal Positional Vertigo: Implication for the Mechanism. (Front Neurol, 2020 ;11 :591602 -591602)",
+    "Inferior Divisional Oculomotor Nerve Palsy Due to Orbital Lymphoma. (J Clin Neurol, 2020 ;16 (4) :711 -713)",
+    "Tacrolimus for Treating Orbital and Cranial Form of Idiopathic Inflammatory Pseudotumors. (J Clin Neurol, 2020 ;16 (4) :674 -680)",
+    "Neuro-ophthalmologic Findings in Visual Snow Syndrome. (J Clin Neurol, 2020 ;16 (4) :646 -652)",
+    "Transient Homonymous Superior Quadrantanopsia in Nonketotic Hyperglycemia: A Case Report and Systematic Review. (J Clin Neurol, 2020 ;16 (4) :599 -604)",
+    "Diagnostic assessment of magnetic resonance imaging for patients with intralabyrinthine schwannoma: A systematic review. (J Neuroradiol, 2020)",
+    "Ictal downbeat nystagmus in Meniere disease: A cross-sectional study. (Neurology, 2020 ;95 (17) :e2409 -e2417)",
+    "Prevention of recurrent benign paroxysmal positional vertigo with vitamin D supplementation: a meta-analysis. (J Neurol, 2020)",
+    "Prevention of benign paroxysmal positional vertigo with vitamin D supplementation: A randomized trial. (Neurology, 2020 ;95 (9) :e1117 -e1125)",
+    "Hyperventilation Increases the Randomness of Ocular Palatal Tremor Waveforms (Cerebellum, 2020)",
+    "Neural Correlates of Transient Mal de Debarquement Syndrome: Activation of Prefrontal and Deactivation of Cerebellar Networks Correlate With Neuropsychological Assessment. (Front Neurol, 2020 ;11 :585 -585)",
+    "Neuro-Behcet&apos;s Disease Presenting as Isolated Vestibular Syndrome. (J Clin Neurol, 2020 ;16 (3) :499 -501)",
+    "Evolution in the Findings of Head-Impulse Tests During the Attacks of Meniere&apos;s Disease. (Otol Neurotol, 2020 ;41 (6) :e744 -e750)",
+    "Persistent Nystagmus in Chronic Phase of Lateral Medullary Infarction. (J Clin Neurol, 2020 ;16 (2) :285 -291)",
+    "Dissociated Results between Caloric and Video Head Impulse Tests in Dizziness: Prevalence, Pattern, Lesion Location, and Etiology. (J Clin Neurol, 2020 ;16 (2) :277 -284)",
+    "Etiologic distribution of dizziness and vertigo in a referral-based dizziness clinic in South Korea. (J Neurol, 2020 ;267 (8) :2252 -2259)",
+    "When the Room Is Spinning: Experience of Vestibular Neuritis by a Neurotologist. (Front Neurol, 2020 ;11 :157 -157)",
+    "Teaching Video NeuroImages: Intralabyrinthine schwannoma masquerading as Meniere disease. (Neurology, 2020 ;94 (11) :e1227 -e1228)",
+    "Determinants for bedside lateralization of benign paroxysmal positional vertigo involving the horizontal semicircular canal. (J Neurol, 2020 ;267 (6) :1709 -1714)",
+    "Evolution of the vestibular function during head impulses in spinocerebellar ataxia type 6. (J Neurol, 2020 ;267 (6) :1672 -1678)",
+    "Eye Movements and Vestibulo-Ocular Reflex in Periventricular Leukomalacia. (J Clin Neurol, 2020 ;16 (1) :172 -174)",
+    "Vertigo Due to Vascular Mechanisms. (Semin Neurol, 2020 ;40 (1) :67 -75)",
+    "Questionnaire-based diagnosis of benign paroxysmal positional vertigo. (Neurology, 2020 ;94 (9) :e942 -e949)",
+    "Differential diagnosis of acute vascular vertigo. (Curr Opin Neurol, 2020 ;33 (1) :142 -149)",
+    "Alternating monocular adducting saccadic pulses and dissociated adducting nystagmus during lateral gazes in spinocerebellar ataxia type 3. (J Neurol, 2020 ;267 (1) :279 -281)",
+    "Abnormal Eye Movements in Parkinsonism and Movement Disorders (J Mov Disord, 2019 ;12 (1) :1 -13)",
+    "Altered Resting-State Functional Connectivity in Wernicke's Encephalopathy With Vestibular Impairment (FRONT NEUROL, 2019 ;10)",
+    "Acute vestibular syndrome associated with anti-GQ1b antibody (NEUROLOGY, 2019 ;93 (11) :e1085 -e1092)",
+    "Intralabyrinthine Schwannoma: Distinct Features for Differential Diagnosis (FRONT NEUROL, 2019 ;10)",
+    "Modulation of acquired monocular pendular nystagmus in multiple sclerosis: A modeling approach (PROG BRAIN RES, 2019 ;249 :227 -234)",
+    "Central positional nystagmus: Characteristics and model-based explanations (PROG BRAIN RES, 2019 ;249 :211 -225)",
+    "Cerebellar tuberculous granuloma mimicking benign paroxysmal positional vertigo: progression after initial misdiagnosis (J NEUROL, 2019 ;266 (10) :2581 -2583)",
+    "Impaired Smooth Pursuit During Transient Global Amnesia (J CLIN NEUROL, 2019 ;15 (3) :301 -307)",
+    "Pearls & Oy-sters: Cogan syndrome: A potentially grave disorder of audiovestibulopathy with many faces (NEUROLOGY, 2019 ;93 (1) :39 -41)",
+    "Classification of vestibular signs and examination techniques: Nystagmus and nystagmus-like movements (J VESTIBUL RES-EQUIL, 2019 ;29 (2-3) :57 -87)",
+    "Natural Course of Ophthalmoplegia after Iatrogenic Ophthalmic Artery Occlusion Caused by Cosmetic Filler Injections (PLAST RECONSTR SURG, 2019 ;144 (1) :28e -34e)",
+    "Vestibular Hyperreflexia and Opsoclonus in Acute Hepatitis A Virus Infection (CEREBELLUM, 2019 ;18 (6) :1151 -1153)",
+    "Aperiodic Alternating Nystagmus in Lateral Medullary Strokes (CAN J NEUROL SCI, 2019 ;46 (4) :486 -488)",
+    "Diagnosis strategy and Yacovino maneuver for anterior canal-benign paroxysmal positional vertigo (J NEUROL, 2019 ;266 (7) :1674 -1684)",
+    "Acquired Ocular Motor Nerve Palsy in Neurology Clinics: A Prospective Multicenter Study (J CLIN NEUROL, 2019 ;15 (2) :221 -227)",
+    "Impaired Calcium Metabolism in Benign Paroxysmal Positional Vertigo: A Topical Review (J NEUROL PHYS THER, 2019 ;43 Suppl 2 :S37 -S41)",
+    "Hemodynamic orthostatic dizziness/vertigo: Diagnostic criteria (J VESTIBUL RES-EQUIL, 2019 ;29 (2-3) :45 -56)",
+    "Comparison of Ocular Motor Findings Between Neuromyelitis Optica Spectrum Disorder and Multiple Sclerosis Involving the Brainstem and Cerebellum (CEREBELLUM, 2019 ;18 (3) :511 -518)",
+    "Age-related deterioration of saccule-related neural function is associated with decreased estimated glomerular filtration rate and increased free thyroxine (CLIN NEUROPHYSIOL, 2019 ;130 (5) :795 -801)",
+    "Vertigo Induced During Coitus (FRONT NEUROL, 2019 ;9)",
+    "Perverted Downward Corrective Saccades During Horizontal Head Impulses in Chiari Malformation (CEREBELLUM, 2019 ;18 (3) :333 -339)",
+    "Characteristics of single ocular motor nerve palsy associated with anti-GQ1b antibody (J NEUROL, 2019 ;266 (2) :476 -479)",
+    "Update on opsoclonus-myoclonus syndrome in adults (J NEUROL, 2019 ;266 (6) :1541 -1548)",
+    "Anti-ganglioside antibody-associated acute unilateral peripheral vestibulopathy (J NEUROL, 2019 ;266 (1) :250 -252)",
+    "Vascular vertigo: updates (J NEUROL, 2019 ;266 (8) :1835 -1843)",
+    "Visual and Positional Modulation of Pendular Seesaw Nystagmus: Implications for the Mechanism (J NEURO-OPHTHALMOL, 2019 ;39 (2) :181 -185)",
+    "Eye movement abnormalities in middle cerebellar peduncle strokes (ACTA NEUROL BELG, 2019 ;119 (1) :37 -45)",
+    "Clinical approach to patients with dizziness (J KOREAN MED ASSOC, 2018)",
+    "Pearls & Oy-sters: Windmill nystagmus in paraneoplastic cerebellar degeneration (NEUROLOGY, 2018 ;91 (19) :e1831 -e1833)",
+    "Reader response: Teaching Video NeuroImages: Pulsatile proptosis and wall-eyed bilateral internuclear ophthalmoplegia (NEUROLOGY, 2018 ;91 (19) :896 -897)",
+    "Early MRI-negative posterior circulation stroke presenting as acute dizziness (J NEUROL, 2018 ;265 (12) :2993 -3000)",
+    "Vertigo and impaired pursuit eye movements in a small medial superior temporal infarction (J NEUROL, 2018 ;265 (11) :2740 -2742)",
+    "Windmill nystagmus in a patient with subacute visual loss (J NEUROL, 2018 ;265 (11) :2737 -2739)",
+    "Mobius syndrome: clinico-radiologic correlation (GRAEF ARCH CLIN EXP, 2018 ;256 (11) :2219 -2223)",
+    "Clinical Heterogeneity of Anti-GM2-Ganglioside-Antibody Syndrome (J CLIN NEUROL, 2018 ;14 (3) :401 -406)",
+    "Isolated acute vestibular syndrome due to presumed primary central nervous system lymphoma involving the dorsal medulla (J NEUROL, 2018 ;265 (8) :1937 -1939)",
+    "Postural Instability Induced by Visual Motion Stimuli in Patients With Vestibular Migraine (FRONT NEUROL, 2018 ;9)",
+    "Bilateral Vestibulopathy in Superficial Siderosis (FRONT NEUROL, 2018 ;9)",
+    "Efficacy of Gaze Photographs in Diagnosing Ocular Myasthenia Gravis (J CLIN NEUROL, 2018 ;14 (3) :333 -338)",
+    "Recurrent spontaneous vertigo with interictal headshaking nystagmus (NEUROLOGY, 2018 ;90 (24) :e2135 -e2145)",
+    "Acute Unilateral Audiovestibulopathy due to Embolic Labyrinthine Infarction (FRONT NEUROL, 2018 ;9)",
+    "Author response: Teaching Video NeuroImages: Palsy of conjugate horizontal gaze and face due to isolated abducens nuclear infarction (NEUROLOGY, 2018 ;90 (20))",
+    "Lower brainstem melanocytoma masquerading as vestibular paroxysmia (J NEUROL, 2018 ;265 (5) :1222 -1225)",
+    "Vestibular Manifestations in Subjects With Enlarged Vestibular Aqueduct (OTOL NEUROTOL, 2018 ;39 (6) :e461 -e467)",
+    "Altered brain function in persistent postural perceptual dizziness: A study on resting state functional connectivity (HUM BRAIN MAPP, 2018 ;39 (8) :3340 -3353)",
+    "Central Trochlear Palsy as an Isolated Finding with Metastatic Tumor (J CLIN NEUROL, 2018 ;14 (2) :254 -256)",
+    "Recent advances in head impulse test findings in central vestibular disorders (NEUROLOGY, 2018 ;90 (13) :602 -612)",
+    "Effects of Head Position on Perception of Gravity in Vestibular Neuritis and Lateral Medullary Infarction (FRONT NEUROL, 2018 ;9)",
+    "Characteristics and mechanism of apogeotropic central positional nystagmus (BRAIN, 2018 ;141 (3) :762 -775)",
+    "Simultaneous recording of cervical and ocular vestibular-evoked myogenic potentials (NEUROLOGY, 2018 ;90 (3) :e230 -e238)",
+    "Effect of Prophylactic Medication on Associated Dizziness and Motion Sickness in Migraine (OTOL NEUROTOL, 2018 ;39 (1) :e45 -e51)",
+    "Rapid Progression of Bilateral Vestibulopathy Due to Metastatic Lung Cancer (J CLIN NEUROL, 2018 ;14 (1) :104 -106)",
+    "Ocular Motor Dysfunction Due to Brainstem Disorders (J NEURO-OPHTHALMOL, 2018 ;38 (3) :393 -412)",
+    "Central vertigo (CURR OPIN NEUROL, 2018 ;31 (1) :81 -89)",
+    "The direction of nystagmus: Letter to the Editor regarding the manuscript Downbeat nystagmus due to ranitidine in a pediatric patient. by Butragueno Laiseca et？al. Eur J Paediatr Neurol. 2017 Jul;21(4):682-684 (EUR J PAEDIATR NEURO, 2018 ;22 (1))",
+    "The Patterns of Recurrences in Idiopathic Benign Paroxysmal Positional Vertigo and Self-treatment Evaluation (FRONT NEUROL, 2017 ;8)",
+    "Patterns and modulations of Pendular nystagmus in a family with hereditary spastic paraplegia (J NEUROL SCI, 2017 ;383 :169 -173)",
+    "Anti-NMDA-receptor optic neuritis in a patient with a history of encephalitis (CAN J OPHTHALMOL, 2017 ;52 (6) :e216 -e218)",
+    "Impaired vestibular responses in internuclear ophthalmoplegia: Association and dissociation (NEUROLOGY, 2017 ;89 (24) :2476 -2480)",
+    "Fluctuating ataxia and nystagmus in association with anti-GQ1b antibody in HIV infection (J NEUROL SCI, 2017 ;382 :123 -125)",
+    "Bilateral vestibulopathy: Diagnostic criteria Consensus document of the Classification Committee of the Barany Society (J VESTIBUL RES-EQUIL, 2017 ;27 (4) :177 -189)",
+    "Genetic Variants Associated with Episodic Ataxia in Korea (SCI REP-UK, 2017 ;7 (1))",
+    "Cerebellar dysembryoplastic neuroepithelial tumor: report of a case and review of the literature (J NEUROL, 2017 ;264 (11) :2318 -2321)",
+    "Teaching Video NeuroImages: Palsy of conjugate horizontal gaze and face due to isolated abducens nuclear infarction (NEUROLOGY, 2017 ;89 (14) :e180 -e181)",
+    "Abnormal Cervical Vestibular-Evoked Myogenic Potentials Predict Evolution of Isolated Recurrent Vertigo into Meniere's Disease (FRONT NEUROL, 2017 ;8)",
+    "Combined Brown syndrome and superior oblique palsy without a trochlear nerve: case report (BMC OPHTHALMOL, 2017 ;17 (1))",
+    "Isolated Trochlear Palsy Due to Pilocytic Astrocytoma Involving the Pineal Gland (J CLIN NEUROL, 2017 ;13 (4) :429 -431)",
+    "Ictal downbeat nystagmus in bilateral Meniere's disease (J NEUROL, 2017 ;264 (9) :2024 -2026)",
+    "Bruns' Nystagmus and Positive Head Impulse Tests in Platybasia (CAN J NEUROL SCI, 2017 ;44 (4) :455 -457)",
+    "Switch to Semont maneuver is no better than repetition of Epley maneuver in treating refractory BPPV (J NEUROL, 2017 ;264 (9) :1892 -1898)",
+    "Persistent geotropic positional nystagmus after meningitis: Evidence for light cupula (J NEUROL SCI, 2017 ;379 :279 -280)",
+    "Abnormal vestibular-evoked myogenic potentials as an isolated finding of probable transient labyrinthine ischemia (J NEUROL, 2017 ;264 (7) :1523 -1525)",
+    "Clomiphene Citrate Associated With Palinopsia (J NEURO-OPHTHALMOL, 2017 ;37 (2) :220 -221)",
+    "Evolution and Persistence of Torsional Downbeat Nystagmus in Lateral Medullary Infarction (CAN J NEUROL SCI, 2017 ;44 (5) :615 -617)",
+    "Vertical Head Thrusting in Acquired Supranuclear Vertical Ophthalmoplegia (J NEURO-OPHTHALMOL, 2017 ;37 (4) :386 -389)",
+    "Isolated vestibular syndromes due to brainstem and cerebellar lesions (J NEUROL, 2017 ;264 (Suppl 1) :63 -69)",
+    "Isolated Medullary Hemorrhage: Clinical Features in Eleven Consecutive Patients (J STROKE, 2017 ;19 (1) :111 -114)",
+    "Isolated cerebellar atrophy due to rodenticide (β-fluoroethyl acetate) intoxication (J NEUROL SCI, 2017 ;373 :208 -209)",
+    "Acute Transient Vestibular Syndrome: Prevalence of Stroke and Efficacy of Bedside Evaluation (STROKE, 2017 ;48 (3) :556 -562)",
+    "Teaching Video NeuroImages: Alternating horizontal single saccadic pulses in progressive supranuclear palsy (NEUROLOGY, 2017 ;88 (3) :e32 -e33)",
+    "Role of video-head impulse test in lateralization of vestibulopathy: Comparative study with caloric test (AURIS NASUS LARYNX, 2017 ;44 (6) :648 -654)",
+    "Longitudinal multi-modal neuroimaging in opsoclonus-myoclonus syndrome (J NEUROL, 2017 ;264 (3) :512 -519)",
+    "Nystagmus and central vestibular disorders (CURR OPIN NEUROL, 2017 ;30 (1) :98 -106)",
+    "Late-onset episodic ataxia associated with SLC1A3 mutation (J HUM GENET, 2017 ;62 (3) :443 -446)",
+    "Delayed vestibulopathy after heat exposure (J NEUROL, 2017 ;264 (1) :49 -53)",
+    "Comparison of caloric and head-impulse tests during the attacks of Meniere's disease (LARYNGOSCOPE, 2017 ;127 (3) :702 -708)",
+    "Impaired Tilt Suppression of Post-Rotatory Nystagmus and Cross-Coupled Head-Shaking Nystagmus in Cerebellar Lesions: Image Mapping Study (CEREBELLUM, 2017 ;16 (1) :95 -102)",
+    "한국인 자발 하방안진의 임상 특성:218예의 분석 (대한신경과학회지, 2016 ;24 (1) :27 -32)",
+    "고립성 소뇌전엽 충부 경색 (대한평형의학회, 2016 ;15 (4) :147 -150)",
+    "Vestibular paroxysmia: Diagnostic criteria (J VESTIBUL RES-EQUIL, 2016 ;26 (5-6) :409 -415)",
+    "Chasing dizzy chimera: Diagnosis of combined peripheral and central vestibulopathy (J NEUROL SCI, 2016 ;371 :69 -78)",
+    "Central Trochlear Palsy: Report of Two Patients With Ipsilesional Palsy and Review of the Literature (J NEURO-OPHTHALMOL, 2016 ;36 (4) :377 -382)",
+    "Direction and magnitude of head tilt alter postrotatory nystagmus (J NEUROPHYSIOL, 2016 ;116 (4))",
+    "Nucleus prepositus hypoglossi lesions produce a unique ocular motor syndrome (NEUROLOGY, 2016 ;87 (19) :2026 -2033)",
+    "Altered processing of otolithic information in isolated lateral medullary infarction (J NEUROL, 2016 ;263 (12) :2424 -2429)",
+    "Leber's 'Plus' in a Korean Patient with 14484/ND6 Mutation (J CLIN NEUROL, 2016 ;12 (4) :512 -514)",
+    "Characteristics and mechanism of perverted head-shaking nystagmus in central lesions: Video-oculography analysis (CLIN NEUROPHYSIOL, 2016 ;127 (9) :2973 -2978)",
+    "Cerebral macrokinetopsia: Exaggerated perception of retinal image motion (J NEUROL SCI, 2016 ;367 :128 -130)",
+    "Metronidazole-induced combined peripheral and central vestibulopathy (J NEUROL SCI, 2016 ;365 :31 -33)",
+    "Variants of windmill nystagmus (J NEUROL, 2016 ;263 (7) :1375 -1381)",
+    "Resolution of periodic alternating nystagmus with amantadine (J NEUROL SCI, 2016 ;364 :65 -67)",
+    "Eye movement and vestibular dysfunction in mitochondrial A3243G mutation (NEUROL SCI, 2016 ;37 (7) :1159 -1162)",
+    "Internuclear ophthalmoplegia plus ataxia indicates a dorsomedial tegmental lesion at the pontomesencephalic junction (J NEUROL, 2016 ;263 (5) :973 -980)",
+    "Normal Caloric Responses during Acute Phase of Vestibular Neuritis (J CLIN NEUROL, 2016 ;12 (3) :301 -307)",
+    "Modulation of central nystagmus by vision, proprioception, and efference copy signals: a systematic evaluation (J NEUROL, 2016 ;263 (4) :735 -742)",
+    "In response to Inferior peduncle lesion presenting with bilaterally impaired vestibular responses to horizontal and posterior head impulses (LARYNGOSCOPE, 2016 ;126 (12))",
+    "Cerebellopontine angle meningioma mimicking vestibular paroxysmia (J NEUROL, 2016 ;263 (1) :168 -170)",
+    "Immunoglobulin G4-Related Hypertrophic Pachymeningitis Mimicking Chiari Malformation (J CLIN NEUROL, 2016 ;12 (2) :238 -240)",
+    "Ophthalmoplegia as a complication of cosmetic facial filler injection (ACTA OPHTHALMOL, 2016 ;94 (5) :e377 -e379)",
+    "Vestibular-evoked myogenic potentials in central vestibular disorders (J NEUROL, 2016 ;263 (2) :210 -220)",
+    "Bilaterally Abnormal Head Impulse Tests Indicate a Large Cerebellopontine Angle Tumor (J CLIN NEUROL, 2016 ;12 (1) :65 -74)",
+    "Perverted Head-Shaking and Positional Downbeat Nystagmus in Essential Tremor (CEREBELLUM, 2016 ;15 (2) :152 -158)",
+    "복시의 진단에서는 마비 양상에 따라 병변 부위를 결정하는 것이 가장 중요 (Clinic Medicine, 2015 ;13 (4) :74 -81)",
+    "A case of giant cell arteritis presenting severe headache and jaw claudication (대한두통학회지, 2015 ;16 (1) :29 -33)",
+    "어지럼환자의 진단적 접근 (Clinic Medicine, 2015 ;13 (4) :34 -43)",
+    "Internuclear ophthalmoplegia and concomitant skew deviation mimicking trochlear nerve palsy (Clin Neuro-ophthalmol, 2015 ;5 (1) :51 -52)",
+    "Upbeat nystagmus during head rotation in rotational vertebral artery occlusion (대한안신경의학회지, 2015 ;5 (1) :47 -50)",
+    "노년기 어지럼 (J Korean Neurol Assoc, 2015 ;13 (4) :34 -43)",
+    "Reduced Ischemia in the Vestibular Nucleus after Premedication of Cilostazol and Ginkgo Biloba Extract in Global Hypoperfusion Rat (J Neurol Neurol Disord, 2015 ;2 (2) :1 -5)",
+    "Oculomotor nerve tumors masquerading as recurrent painful ophthalmoplegic neuropathy: report of two cases and review of the literature (CEPHALALGIA, 2015 ;35 (9) :825 -830)",
+    "Approach to dizziness in emergency department. (Clin Exp Emerg Med, 2015 ;2 (2) :45 -88)",
+    "Imaging demonstration of trochlear nerve agenesis in superior oblique palsy emerging during the later life (CLIN NEUROL NEUROSUR, 2015 ;139 :269 -271)",
+    "Dorsal Medullary Infarction: Distinct Syndrome of Isolated Central Vestibulopathy (STROKE, 2015 ;46 (11) :3081 -3087)",
+    "Contraversive Ocular Tilt Reaction in Pontomedullary Infarction (NEUROLOGIST, 2015 ;20 (3))",
+    "Persistent otolith dysfunction even after successful repositioning in benign paroxysmal positional vertigo (J NEUROL SCI, 2015 ;358 (1-2) :287 -293)",
+    "Acute Diagnosis and Management of Stroke Presenting Dizziness or Vertigo (NEUROL CLIN, 2015 ;33 (3) :687 -98,)",
+    "Audiovestibular impairments associated with intracranial hypotension (J NEUROL SCI, 2015 ;357 (1-2) :96 -100)",
+    "Teaching NeuroImages: Superior divisional oculomotor nerve palsy due to orbital lymphoma (NEUROLOGY, 2015 ;85 (1) :e3 -e4)",
+    "Thickness of the bony otic capsule: etiopathogenetic perspectives on superior canal dehiscence syndrome (AUDIOL NEURO-OTOL, 2015 ;20 (4) :243 -250)",
+    "Central paroxysmal positional nystagmus: Characteristics and possible mechanisms (NEUROLOGY, 2015 ;84 (22) :2238 -2246)",
+    "Inferior cerebellar peduncular lesion causes a distinct vestibular syndrome (EUR J NEUROL, 2015 ;22 (7) :1062 -1067)",
+    "Head-shaking and Vibration-induced Nystagmus During and Between the Attacks of Unilateral Meniere's Disease (OTOL NEUROTOL, 2015 ;36 (5) :865 -872)",
+    "Delayed diagnosis of vestibular epilepsy due to temporal cavernous malformation (J NEUROL SCI, 2015 ;352 (1-2) :112 -114)",
+    "Vestibulocochlear nerve infarction documented with diffusion-weighted MRI (J NEUROL, 2015 ;262 (5) :1363 -1365)",
+    "Exercise-induced downbeat nystagmus in a Korean family with a nonsense mutation in CACNA1A (NEUROL SCI, 2015 ;36 (8) :1393 -1396)",
+    "Abnormal Head Impulse Test in a Unilateral Cerebellar Lesion (J CLIN NEUROL, 2015 ;11 (3) :279 -282)",
+    "Isolated central vestibular syndrome (ANN NY ACAD SCI, 2015 ;1343 :80 -89)",
+    "Vertigo and nystagmus in orthostatic hypotension (EUR J NEUROL, 2015 ;22 (4) :648 -655)",
+    "Vestibular Performance During High-Acceleration Stimuli Correlates with Clinical Decline in SCA6 (CEREBELLUM, 2015 ;14 (3) :284 -291)",
+    "Bilateral sixth nerve palsies in anti-aquaporin 4 antibody syndrome (J NEURO-OPHTHALMOL, 2015 ;35 (1) :102 -105)",
+    "Ipsilesional limb ataxia and truncal ipsipulsion in isolated infarction of the superior cerebellar peduncle (J NEUROL SCI, 2015 ;349 (1-2) :251 -253)",
+    "Clinical efficacy of the Romberg test using a foam pad to identify balance problems: a comparative study with the sensory organization test (EUR ARCH OTO-RHINO-L, 2015 ;272 (10) :2741 -2747)",
+    "Culprit of diffusion-weighted image in acute vestibular syndrome (NEUROL SCI, 2015 ;36 (5) :805 -806)",
+    "Anti-aquaporin-4 antibody-positive dorsal midbrain syndrome (MULT SCLER J, 2015 ;21 (4) :477 -480)",
+    "Clinical implication of ocular torsion in peripheral vestibulopathy (EUR ARCH OTO-RHINO-L, 2015 ;272 (7) :1613 -1617)",
+    "하방안진에 대한 4-Aminopyridine의 억제효과 (대한안신경과학회지, 2014 ;4 (1) :33 -35)",
+    "Isolated vestibular syndrome in posterior circulation stroke: Frequency and involved structures (Neurol Clin Pract, 2014 ;4 (5) :410 -418)",
+    "Sustained downgaze as the only remained sign after regaining consciousness in hepatic encephalopathy (NEUROL ASIA, 2014 ;19 (1) :105 -106)",
+    "Vestibular hemispatial neglect: patterns and possible mechanism (NEUROL SCI, 2014 ;35 (3) :341 -347)",
+    "Upbeat nystagmus during head rotation in rotational vertebral artery occlusion (J NEUROL, 2014 ;261 (6) :1213 -1215)",
+    "The 6th congress of the Korean Society of Neuro-Ophthalmology, Seoul, Korea (J NEURO-OPHTHALMOL, 2014 ;34 (1))",
+    "Swallowing-induced vertigo and downbeat nystagmus (J NEUROL, 2014 ;261 (12) :2457 -2459)",
+    "Saccadic Palsy after Cardiac Surgery: Serial Neuroimaging Findings during a 6-Year Follow-Up (J CLIN NEUROL, 2014 ;10 (4) :367 -370)",
+    "Reversed corrective saccades during head impulse test in acute cerebellar dysfunction (CEREBELLUM, 2014 ;13 (2) :243 -247)",
+    "Rebound upbeat nystagmus after lateral gaze in episodic ataxia type 2 (CEREBELLUM, 2014 ;13 (3) :411 -413)",
+    "Prevalence of anti-ganglioside antibodies and their clinical correlates with guillain-barre syndrome in Korea: a nationwide multicenter study (J CLIN NEUROL, 2014 ;10 (2) :94 -100)",
+    "Positional suppression of periodic alternating nystagmus (J NEURO-OPHTHALMOL, 2014 ;34 (2) :162 -164)",
+    "Paraneoplastic downbeat nystagmus associated with cerebellar hypermetabolism especially in the nodulus (J NEUROL SCI, 2014 ;343 (1-2) :187 -191)",
+    "Optic neuritis following Varicella zoster vaccination: report of two cases (VACCINE, 2014 ;32 (39) :4881 -4884)",
+    "Ocular vestibular evoked myogenic potentials to head tap and cervical vestibular evoked myogenic potentials to air-conducted sounds in isolated internuclear ophthalmoplegia (CLIN NEUROPHYSIOL, 2014 ;125 (5) :1042 -1047)",
+    "Mystery Case: pendular see-saw nystagmus as a delayed complication of traumatic brain injury (NEUROLOGY, 2014 ;82 (17) :e147 -e148)",
+    "Isolated unilateral infarction of the cerebellar tonsil: ocular motor findings (ANN NEUROL, 2014 ;75 (3) :429 -434)",
+    "Impaired modulation of the otolithic function in acute unilateral cerebellar infarction (CEREBELLUM, 2014 ;13 (3) :362 -371)",
+    "Epileptic nystagmus: A case report and systematic review (Epilepsy Behav Case Rep, 2014 ;2 :156 -160)",
+    "Costimulation of the horizontal semicircular canal during skull vibrations in superior canal Dehiscence syndrome (AUDIOL NEURO-OTOL, 2014 ;19 (3) :175 -183)",
+    "Contralesional spasticity of conjugate gaze in striatocapsular infarction (CAN J NEUROL SCI, 2014 ;41 (2) :270 -271)",
+    "Combined peripheral and central vestibulopathy (J VESTIBUL RES-EQUIL, 2014 ;24 (5-6) :443 -451)",
+    "Changes in choroidal thickness after systemic administration of high-dose corticosteroids: a pilot study (INVEST OPHTH VIS SCI, 2014 ;55 (1) :440 -445)",
+    "Bilateral disc edema in a patient with Vogt-Koyanagi-Harada disease (CAN J OPHTHALMOL, 2014 ;49 (2) :e54 -e56)",
+    "An objective photographic analysis of ocular oblique muscle dysfunction (AM J OPHTHALMOL, 2014 ;158 (5) :924 -931)",
+    "Altered brain metabolism in vestibular migraine: comparison of interictal and ictal findings (CEPHALALGIA, 2014 ;34 (1) :58 -67)",
+    "Absent trochlear nerve with transient diplopia (NEUROL SCI, 2014 ;35 (6) :935 -937)",
+    "Clinical practice. Benign paroxysmal positional vertigo (NEW ENGL J MED, 2014 ;370 (12) :1138 -1147)",
+    "Evolution of torsional-upbeat into hemi-seesaw nystagmus in medial medullary infarction (CLIN NEUROL NEUROSUR, 2014 ;118 :80 -82)",
+    "Pseudo-spontaneous and head-shaking nystagmus in horizontal canal benign paroxysmal positional vertigo (OTOL NEUROTOL, 2014 ;35 (3) :495 -500)",
+    "Mastication-induced vertigo and nystagmus (J NEUROL, 2014 ;261 (3) :480 -489)",
+    "Isolated vestibular nuclear infarction: report of two cases and review of the literature (J NEUROL, 2014 ;261 (1) :121 -129)",
+    "Vulnerability of the vestibular organs to transient ischemia: implications for isolated vascular vertigo (NEUROSCI LETT, 2014 ;558 :180 -185)",
+    "전정계 질환의 국제분류: 전정계 증상의 분류 (대한평형의학회지, 2013 ;12 (suppl 1) :S49 -S52)",
+    "Head-shaking aids in the diagnosis of acute audiovestibular loss due to anterior inferior cerebellar artery infarction (AUDIOL NEURO-OTOL, 2013 ;18 (2) :114 -124)",
+    "Contralateral suppression of distortion-product otoacoustic emissions: a potential diagnostic tool to evaluate the vestibular nerve (MED HYPOTHESES, 2013 ;81 (5) :830 -833)",
+    "Bedside evaluation of dizzy patients (J CLIN NEUROL, 2013 ;9 (4) :203 -213)",
+    "외상 후 돌발성 난청과 어지럼증으로 나타난 상반고리관피열증후군 (Res Vestib Sci, 2013 ;12 (4) :132 -135)",
+    "Horner's syndrome and contralateral abducens nerve palsy associated with zoster meningitis (Korean J Ophthalmol, 2013 ;27 (6) :474 -477)",
+    "Vestibular neuritis (SEMIN NEUROL, 2013 ;33 (3) :185 -194)",
+    "Recurrent transient monocular blindness from stenotic central retinal artery (J CLIN NEUROSCI, 2013 ;20 (11) :1603 -1605)",
+    "핵상 및 핵간안근마비 (대한안신경의학회지, 2013 ;3 (1) :27 -36)",
+    "아미노글리코사이드 전신투여 환자에서 나타난 비대칭적 청각전정장애 (대한평형의학회지, 2013 ;12 (2) :62 -66)",
+    "시신경염으로 발현한 안구 개회충증 (대한안신경의학회지, 2013 ;3 (1) :49 -51)",
+    "복시 환자의 병력 청취와 검진 (대한안신경의학회지, 2013 ;3 (2) :61 -65)",
+    "뇌외상 후 지연성으로 발생한 진동시각 (대한안신경의학회지, 2013 ;3 (2) :110 -112)",
+    "가돌리늄 조영증강을 보인 외상성 동안신경마비 (대한안신경의학회지, 2013 ;3 (2) :125 -128)",
+    "Gentamicin-induced bilateral vestibulopathy in rabbits: vestibular dysfunction and histopathology (LARYNGOSCOPE, 2013 ;123 (11) :E51 -E58)",
+    "Ocular motor characteristics of different subtypes of spinocerebellar ataxia: distinguishing features (MOVEMENT DISORD, 2013 ;28 (9) :1271 -1277)",
+    "Perverted head impulse test in cerebellar ataxia (CEREBELLUM, 2013 ;12 (5) :773 -775)",
+    "Possible anticipation associated with a novel splice site mutation in episodic ataxia type 2 (NEUROL SCI, 2013 ;34 (9) :1629 -1632)",
+    "Vertigo due to posterior circulation stroke (SEMIN NEUROL, 2013 ;33 (3) :179 -184)",
+    "Benign paroxysmal positional vertigo after surgical drilling of the temporal bone (OTOL NEUROTOL, 2013 ;34 (8) :1448 -1455)",
+    "Evolution of symmetric upbeat into dissociated torsional-upbeat nystagmus in internuclear ophthalmoplegia (CLIN NEUROL NEUROSUR, 2013 ;115 (9) :1882 -1884)",
+    "Cervical and ocular vestibular-evoked myogenic potentials in vestibular neuritis: comparison between air- and bone-conducted stimulation (J NEUROL, 2013 ;260 (8) :2102 -2109)",
+    "Rotational vertebral artery occlusion: mechanisms and long-term outcome (STROKE, 2013 ;44 (7) :1817 -1824)",
+    "Isolated floccular infarction: impaired vestibular responses to horizontal head impulse (J NEUROL, 2013 ;260 (6) :1576 -1582)",
+    "Neuro-ophthalmology in Korea (J NEURO-OPHTHALMOL, 2013 ;33 (2) :e8 -e10)",
+    "Upbeat nystagmus due to a giant vertebral artery aneurysm (NEUROL SCI, 2013 ;34 (5) :805 -807)",
+    "Mystery case: superior oblique myokymia due to vascular compression of the trochlear nerve (NEUROLOGY, 2013 ;80 (13) :e134 -e135)",
+    "Ocular vestibular evoked myogenic potentials induced by air-conducted sound in patients with acute brainstem lesions (CLIN NEUROPHYSIOL, 2013 ;124 (4) :770 -778)",
+    "Decreased serum vitamin D in idiopathic benign paroxysmal positional vertigo (J NEUROL, 2013 ;260 (3) :832 -838)",
+    "Fourth nerve palsy presenting with trochleodynia (J NEUROL, 2013 ;260 (2) :677 -679)",
+    "Vertigo in brainstem and cerebellar strokes (CURR OPIN NEUROL, 2013 ;26 (1) :90 -95)",
+    "Inferior rectus palsy as an isolated ocular motor sign: acquired etiologies and outcome (J NEUROL, 2013 ;260 (1) :47 -54)",
+    "Selective slowing of downward saccades in Wilson's disease (PARKINSONISM RELAT D, 2013 ;19 (1) :134 -135)",
+    "Inferior vestibular neuritis (J NEUROL, 2012 ;259 (8) :1553 -1560)",
+    "아스페르길루스 감염으로 인한 안와꼭지증 (대한안신경의학회지, 2012 ;2 (2) :111 -113)",
+    "수직하나반증후군 (대한안신경의학회지, 2012 ;2 (2) :96 -98)",
+    "안구운동검사:신속안구운동, 원활추종운동,시운동성계 (대한안신경의학회지, 2012 ;2 (2) :86 -95)",
+    "원지성 중추성 체위 안진 (대한안신경의학회지, 2012 ;2 (1) :65 -67)",
+    "단안의 시계추 안진을 보이는 구개 진전을 동반한 진행성 보행실조 증후군 (대한안신경의학회지, 2012 ;2 (1) :62 -64)",
+    "불수의적 안구운동 (대한안신경의학회지, 2012 ;2 (1) :27 -42)",
+    "Reliability of air caloric response in healthy volunteers and patients with chronic otitis media (대한평형의학회지, 2012 ;11 (1) :29 -36)",
+    "Can nitroglycerin differentiate benign recurrent vertigo from vestibular migraine? A preliminary study (대한평형의학회지, 2012 ;11 (1) :8 -13)",
+    "Randomized clinical trial for geotropic horizontal canal benign paroxysmal positional vertigo (NEUROLOGY, 2012 ;79 (7) :700 -707)",
+    "Medial temporal activation in mal de debarquement syndrome revealed by standardized low-resolution brain electromagnetic tomography (J CLIN NEUROL, 2012 ;8 (3) :238 -240)",
+    "Evolution of abnormal eye movements in Wernicke's encephalopathy: correlation with serial MRI findings (J NEUROL SCI, 2012 ;323 (1-2) :77 -79)",
+    "In reply: Anxiolytics can be of help to some patients with benign paroxysmal positional vertigo (ACTA OTO-LARYNGOL, 2012 ;132 (8) :904 -905)",
+    "Paroxysmal alternating nystagmus (J NEUROL SCI, 2012 ;318 (1-2) :181 -184)",
+    "Enlarged vestibular aqueduct may precipitate benign paroxysmal positional vertigo in children (ACTA OTO-LARYNGOL, 2012 ;132 :109 -117)",
+    "Pure upbeat nystagmus in association with bilateral internuclear ophthalmoplegia (J NEUROL SCI, 2012 ;317 (1-2) :148 -150)",
+    "Anxiolytics reduce residual dizziness after successful canalith repositioning maneuvers in benign paroxysmal positional vertigo (ACTA OTO-LARYNGOL, 2012 ;132 :277 -284)",
+    "Comorbid benign paroxysmal positional vertigo in idiopathic sudden sensorineural hearing loss: an ominous sign for hearing recovery (OTOL NEUROTOL, 2012 ;33 (2) :137 -141)",
+    "Cortical oscillopsia without nystagmus, an isolated symptom of neuromyelitis optica spectrum disorder with anti-aquaporin 4 antibody (MULT SCLER J, 2012 ;18 (2) :244 -247)",
+    "Pursuit-paretic and epileptic nystagmus in MELAS (J NEURO-OPHTHALMOL, 2012 ;32 (2) :135 -138)",
+    "Randomized clinical trial for apogeotropic horizontal canal benign paroxysmal positional vertigo (NEUROLOGY, 2012 ;78 (3) :159 -166)",
+    "Oculomotor nerve palsy as an initial manifestation of polycythemia vera (J CLIN NEUROSCI, 2012 ;19 (2) :328 -330)",
+    "Controversy on the sensory origin of oVEMP to air-conducted sound: A reply to Ocular vestibular evoked myogenic potential(oVEMP)responses in acute vestibular neuritis (CLIN NEUROPHYSIOL, 2012 ;123 (5) :1055 -1056)",
+    "Cervical and ocular vestibular-evoked myogenic potentials in acute vestibular neuritis (CLIN NEUROPHYSIOL, 2012 ;123 (2) :369 -375)",
+    "Vestibular rehabilitation therapy: review of indications, mechanisms, and key exercises (J CLIN NEUROL, 2011 ;7 :184 -196)",
+    "Impaired sacculocollic reflex in lateral medullary infarction (FRONT NEUR, 2011 ;2 (8) :1 -5)",
+    "급성 뇌졸중에서의 신경안과적 이상 (대한안신경의학회, 2011 ;1 (1) :541 -641)",
+    "Patterns of spontaneous and head-shaking nystagmus in cerebellar infarction: imaging correlations (BRAIN, 2011 ;134 (12) :3659 -3668)",
+    "이상운동질환에서의 안구운동장애 (대한임상신경생리학회, 2011 ;13 (1) :13 -20)",
+    "메니에르병 유사 증상으로 발현한 후두개와 경막종 (대한이비인후과학회지-두경부외과학, 2011 ;54 (10) :722 -726)",
+    "Nystagmus and ataxia associated with antiganglioside antibodies. (J NEURO-OPHTHALMOL, 2011 ;31 (4) :326 -330)",
+    "Pupil-sparing inferior divisional palsy of the third cranial (oculomotor) nerve in Tolosa-Hunt syndrome (NEURO-OPHTHALMOLOGY, 2011 ;35 (3) :153 -155)",
+    "Bilateral Vestibulopathy: Clinical Characteristics and Diagnostic Criteria (OTOL NEUROTOL, 2011 ;32 (5) :812 -817)",
+    "Dominant vertebral artery occlusion during ipsilateral head tilt. (NEUROLOGY, 2011 ;76 (19) :1679 -1679)",
+    "Vibration-Induced Nystagmus After Acute Peripheral Vestibular Loss: Comparative Study With Other Vestibule-Ocular Reflex Tests in the Yaw Plane (OTOL NEUROTOL, 2011 ;32 (3) :466 -471)",
+    "Perverted head-shaking nystagmus in focal dorsal pontine infarction (J NEUROL SCI, 2011 ;301 (1-2) :93 -95)",
+    "Rotational vertebral artery syndrome due to compression of nondominant vertebral artery terminating in posterior inferior cerebellar artery. (J NEUROL, 2011 ;258 (10) :1775 -1780)",
+    "Patterns of dissociate torsional.vertical nystagmus in internuclear ophthalmoplegia (ANN NY ACAD SCI, 2011 ;1233 (1) :271 -8)",
+    "Painful oculomotor nerve palsy due to lymphocytic hypophysitis (NEUROLOGY, 2011 ;76 (1) :104 -104)",
+    "Isolated Recurrent Vertigo From Stenotic Posterior Inferior Cerebellar Artery (OTOL NEUROTOL, 2011 ;32 :180 -182)",
+    "어지럼증의 진단과 치료 (CLINIC JOURNAL, 2010 ;26 (11) :14 -24)",
+    "Diplopia (PRACTICAL NEUROLOGY GRAND ROUND, 2010 ;1 (2) :28 -42)",
+    "Neuro-ophthalmologic findings in acute stroke (JOURNAL OF NEUROCRITICAL CARE, 2010 ;3 (suppl 2) :s96 -s107)",
+    "ICTAL DOWNBEAT NYSTAGMUS IN CARDIOGENIC VERTIGO (NEUROLOGY, 2010 :2129 -2131)",
+    "Upbeat nystagmus changes to downbeat nystagmus with upward gaze in a patient with Wernicke's encephalopathy (J NEUROL SCI, 2010 ;298 :145 -147)",
+    "Tinnitus in Fourth Nerve Palsy: An Indicator for an Intra-Axial Lesion (J NEURO-OPHTHALMOL, 2010)",
+    "Complete visual recovery after mycotic aneurysm embolization complicated by cavernous sinus thrombophlebitis (KOREAN J OPHTHALMOL, 2010 ;24 (5) :322 -324)",
+    "Benign Paroxysmal Positional Vertigo (JOURNAL OF CLINICAL NEUROLOGY, 2010 ;6 (2) :51 -63)",
+    "Vestibular dysfunction in migraine: effects of associated vertigo and motion sickness (J NEUROL, 2010 ;257 :905 -912)",
+    "Medial vestibulospinal tract lesions impair sacculo-collic reflexes (J NEUROL, 2010 ;257 (5) :825 -832)",
+    "Superior semicircular canal dehiscence syndrome by the superior petrosal sinus (J NEUROL NEUROSUR PS, 2010 ;81 (4) :465 -467)",
+    "CLINICAL REASONING: A 22-YEAR-OLD WOMAN WITH HEADACHE AND DIPLOPIA Reply (NEUROLOGY, 2010 ;74 (11) :936 -936)",
+    "Isolated trochlear palsy due to midbrain stroke (CLIN NEUROL NEUROSUR, 2010 ;112 :68 -71)",
+    "전신성홍반성루푸스의 첫 증상으로 양측 시신경염이 발생한 시신경척수염 (대한신경과학회지, 2010 ;28 (4) :323 -325)",
+    "양성돌발성체위성현훈 발생에 대한 혈중 요산의 영향 (대한평형의학회지, 2010 ;9 (1) :27 -31)",
+    "2형 신경섬유종증에서 양측 소뇌다리뇌각종양으로 인한 양측 전정병증 (대한신경과학회지, 2010 ;28 (1) :36 -39)",
+    "선천성 눈운동행위상실증: 임상-영상의학적 분석 (대한신경과학회지, 2010 ;28 (1) :27 -32)",
+    "전정유발근전위: 측정방법과 임상적용 (대한신경과학회지, 2010 ;28 (1) :1 -12)",
+    "Superior divisional vestibular paresis in anterior inferior cerebellar artery infarction. (J NEUROL SCI, 2009 ;285 (0) :250 -253)",
+    "Co-occurrence of periodic alternating and pendular seesaw nystagmus in blindness. (J NEUROL SCI, 2009 ;285 (0) :257 -258)",
+    "Ageotropic central positional nystagmus in nodular infarction. (NEUROLOGY, 2009)",
+    "Infarction in the territory of anterior inferior cerebellar artery.Spectrum of audiovestibular loss. (STROKE, 2009)",
+    "Inner ear dysfunction due to vertebrobasilar ischemic stroke. (SEMIN NEUROL, 2009)",
+    "Treatment of apogeotropic benign positional vertigo: Comparison of therapeutic head-shaking and modified Semont maneuver. (J NEUROL, 2009)",
+    "Perverted head-shaking and positional downbeat nystagmus in patients with multiple system atrophy. (MOVEMENT DISORD, 2009)",
+    "Clinical reasoning: a 22-year-old woman with headache and diplopia. (NEUROLOGY, 2009)",
+    "Ipsilateral wallerian degeneration of the distal optic radiations after infarction at their root. (J NEURO-OPHTHALMOL, 2009)",
+    "Abnormal vestibular evoked myogenic potentials in medial medullary infarction. (J Clin Neurol., 2009)",
+    "Cerebellar hypoperfusion during transient global amnesia: An MRI and oculographic study. (J Clin Neurol, 2009)",
+    "Cerebral glucose metabolism in Fisher Syndrome. (J NEUROL NEUROSUR PS, 2009)",
+    "Superior divisional oculomotor paresis due to intracavernous internal carotid aneurysm. (NEUROLOGY, 2009)",
+    "Reversal of initial positioning nystagmus in benign paroxysmal positional vertigo involving the horizontal canal. (ANN NY ACAD SCI, 2009 ;116 (0) :406 -408)",
+    "Osteoporosis and osteopenia in idiopathic benign positional vertigo. (NEUROLOGY, 2009)",
+    "Head-shaking nystagmus in central vestibulopathies. (ANN NY ACAD SCI, 2009 ;116 (0) :338 -343)",
+    "Prodromal dizziness in vestibular neuritis: frequency and clinical implication. (J NEUROL NEUROSUR PS, 2009)",
+    "Influence of blood pressure manometer feedback on the parameters of vestibular evoked myogenic potential test. (ANN OTO RHINOL LARYN, 2009)",
+    "Isolated nodular infarction. (STROKE, 2009)",
+    "Isolated labyrinthine infarction as a harbinger of anterior inferior cerebellar artery territory infarction with normal diffusion-weighted brain MRI. (J NEUROL SCI, 2009 ;278 (0) :82 -84)",
+    "Paroxysmal ocular tilt reaction: Clinico-anatomic correlations. (J NEUROL SCI, 2009 ;277 (0) :98 -102)",
+    "Progression of acute cochleovestibulopathy into anterior inferior cerebellar artery infarction. (J NEUROL SCI, 2009 ;278 (0) :119 -122)",
+    "Rotational vertebral artery syndrome: Oculographic analysis of nystagmus (Neurology, 2005 ;65 (0) :1287 -1290)",
+    "Ptosis associated with anterior thalamic infarction. (Cerebrovascular Diseases, 2005 ;20 (0) :410 -411)",
+    "Periodic alternating nystagmus from focal cerebellar lesion. (대한신경과학회지, 2005 ;23 (6) :827 -829)",
+    "Multiple germ cell tumors manifesting as anterior hypothalamic and pretectal syndrome. (대한신경과학회지, 2005 ;23 (2) :264 -267)",
+    "medial medullary infarction:Abnormal ocular motor findings. (Neurology, 2005)",
+    "Medial medullary infarction: Abnormal ocular motor findings (Neurology, 2005 ;65 (0) :1294 -1298)",
+    "Jerky seesaw nystagmus in isolated internuclear ophthalmoplegia. (대한평형의학회지, 2005 ;4 (1) :49 -52)",
+    "Jerky seesaw nystagmus in isolated internuclear ophthalmoplegia from focal pontine lesion (Neurology, 2005 ;64 (0) :1313 -1314)",
+    "Isolated vertical diplopia as the initial manifestation of presumed pretectal and anterior hypothalamic germinomas (Journal of Clinical Neuro-Ophthalmology, 2005 ;25 (0) :105 -108)",
+    "Isolated perverted head shaking nystagmus in focal cerebellar infarction. (Neurology, 2005)",
+    "Isolated perverted head shaking nystagmus in focal cerebellar infarction (Neurology, 2005 ;64 (0) :575 -576)",
+    "Ipsilateral Ptosis associated with anterior thalamic infarction. (Cerebrovascular Disease, 2005)",
+    "Hyperventilation-induced nystagmus in vestibular schwannoma. (Neurology, 2005 ;64 (0) :2062 -2062)",
+    "Harlequin syndrome with crossed sympathetic deficit of the face and arm. (Journal of Korean Medical Sciences, 2005 ;20 (2) :329 -330)",
+    "Convergence-retraction nystagmus: Analysis with 3-dimensional oculography. (대한평형의학회지, 2005 ;4 (1) :5 -12)",
+    "Contralateral abducens palsy in a case of zoster polyradiculitis. (대한신경과학회지, 2005 ;23 (0) :121 -123)",
+    "Congenital pendular seesaw nystagmus. (대한신경과학회지, 2005 ;23 (4) :547 -550)",
+    "Chorea triggered by hyperglycemia in a maternally inherited diabetes an deafness (MIDD) patient with the A3243G Mutation of Mitochondrail DNA and basal ganglia calcification (Journal of Neurology, 2005)",
+    "Chorea triggerded by hyperglycemia in a maternally inherited diabetes an deafness(MIDD) patient with the A3243G mutation of mitochondrial DNA and basal ganglia calcification (Journal of Neurology, 2005 ;252 (0) :103 -105)",
+    "Central positional vertigo. (대한평형의학회지, 2005 ;4 (2) :325 -332)",
+    "Bell’s palsy associated with acute vestibulopathy. (대한평형의학회지, 2005 ;4 (2) :259 -263)",
+    "Bedside examination of dizzy patients. (대한평형의학회지, 2005 ;4 (1) :74 -78)",
+    "Analysis of parameters of vestibular-evoked myogenic potentials in sudden sensorineural hearing loss without vertigo. (대한평형의학회지, 2005 ;4 (2) :206 -211)",
+    "Abnormal eye movements in brainstem cavernous malformations. (대한신경과학회지, 2005 ;23 (2) :222 -226)",
+    "A case of contralateral benign paroxysmal positional vertigo after mastoidectomy. (대한평형의학회지, 2005 ;4 (1) :45 -48)",
+    "Specificity of ‘peering at the tip of the nose’for a diagnosis of thalamic hemorrhage. (Archives of Neurology, 2004 ;61 (3) :417 -422)",
+    "Left atrial myxoma manifesting as acute isolated vertigo (Journal of Laryngology and Otology, 2004 ;118 (4) :319 -320)",
+    "Effect of aging on visual shape distortion (Gerontology, 2004 ;50 (3) :142 -151)",
+    "Bowtie and upbeat nystagmus evolving into hemiseesaw nystagmus in medial medullary infarction:possible anatomic mechanism (Neurology, 2004 ;62 (0) :663 -665)",
+    "Ocular lateropulsion in Wallenberg syndrome. (Neurology, 2004 ;62 (0) :2287 -2287)",
+    "Ocular contrapulsion in rostral medial medullary infarction. (Neurology, 2004 ;63 (0) :1325 -1327)",
+    "Oculomotor palsy from midbrain neurocysticercosis: Repeated aggravation upon tapering steroids. (Journal of Clinical Neuro-Ophthalmology, 2004 ;24 (3) :217 -220)",
+    "Third cranial nerve palsy from midbrain neurocysticercosis: Repeated exacerbation on tapering corticosteroids (Journal of Clinical Neuro-Ophthalmology, 2004 ;24 (0) :217 -220)",
+    "Spasmus nutans and congenital ocular motor apraxia with cerebellar vermian hypoplasia. (Archives of Neurology, 2003 ;60 (0) :1621 -1624)",
+    "Oculopalatal tremor after pontine hemorrhage. (Neurology, 2003 ;61 (11) :1621 -1621)",
+    "(, )",
+    "(, )",
+    "(, )",
+    "(, )",
+    "(, )",
+    "(, )",
+    "(, )"
+  ]
+}

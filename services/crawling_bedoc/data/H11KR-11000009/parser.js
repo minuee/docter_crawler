@@ -24,47 +24,55 @@ const fs = require('fs');
 
         const getFullUrl = (path) => new URL(path, hospitalSite).href;
 
-        const bioUrl = getFullUrl(await page.locator('a:has-text("약력")').getAttribute('href'));
-        const mediaUrl = getFullUrl(await page.locator('a:has-text("언론보도")').getAttribute('href'));
-        const researchUrl = getFullUrl(await page.locator('a:has-text("연구")').getAttribute('href'));
+        // Biography Page (Optional)
+        const bioLocator = page.locator('a:has-text("약력")');
+        if (await bioLocator.count() > 0) {
+            const bioUrl = getFullUrl(await bioLocator.getAttribute('href'));
+            await page.goto(bioUrl, { waitUntil: 'domcontentloaded' });
+            synthesizedData.학력 = await page.locator('h4:has-text("학력") + ul > li').allTextContents().then(items => items.map(item => ({ date: null, content: item.trim() })));
+            synthesizedData.경력 = await page.locator('h4:has-text("경력") + ul > li').allTextContents().then(items => items.map(item => ({ date: null, content: item.trim().replace(/\n/g, ' ') })));
+            synthesizedData.학술 = await page.locator('h4:has-text("학회") + ul > li').allTextContents().then(items => items.map(item => ({ date: null, content: item.trim().replace(/\n/g, ' ') })));
+        }
 
-        // Biography Page
-        await page.goto(bioUrl, { waitUntil: 'domcontentloaded' });
-        synthesizedData.학력 = await page.locator('h4:has-text("학력") + ul > li').allTextContents().then(items => items.map(item => ({ date: null, content: item.trim() })));
-        synthesizedData.경력 = await page.locator('h4:has-text("경력") + ul > li').allTextContents().then(items => items.map(item => ({ date: null, content: item.trim().replace(/\n/g, ' ') })));
-        synthesizedData.학술 = await page.locator('h4:has-text("학회") + ul > li').allTextContents().then(items => items.map(item => ({ date: null, content: item.trim().replace(/\n/g, ' ') })));
+        // Media Page (Optional)
+        const mediaLocator = page.locator('a:has-text("언론보도")');
+        if (await mediaLocator.count() > 0) {
+            const mediaUrl = getFullUrl(await mediaLocator.getAttribute('href'));
+            await page.goto(mediaUrl, { waitUntil: 'domcontentloaded' });
+            let currentPage = 1;
+            while (true) {
+                const articles = await page.locator('div.medi_list03 > ul > li').all();
+                for (const article of articles) {
+                    const rawText = await article.textContent();
+                    const typeMatch = rawText.match(/.*\[(.*?)\].*/);
+                    const type = typeMatch ? typeMatch[1] : null;
+                    const text = await article.locator('a').textContent();
+                    const urlScript = await article.locator('a').getAttribute('href');
+                    const urlMatch = urlScript.match(/goUrl\('(.*?)'\)/);
+                    const url = urlMatch ? urlMatch[1] : null;
+                    const issuer = await article.locator('span').textContent();
+                    synthesizedData.언론.push({ targetDate: null, type, text: text.trim(), url, issuer: issuer.trim() });
+                }
 
-        // Media Page (with pagination)
-        await page.goto(mediaUrl, { waitUntil: 'domcontentloaded' });
-        let currentPage = 1;
-        while (true) {
-            const articles = await page.locator('div.medi_list03 > ul > li').all();
-            for (const article of articles) {
-                const rawText = await article.textContent();
-                const typeMatch = rawText.match(/.*\[(.*?)\].*/);
-                const type = typeMatch ? typeMatch[1] : null;
-                const text = await article.locator('a').textContent();
-                const urlScript = await article.locator('a').getAttribute('href');
-                const urlMatch = urlScript.match(/goUrl\('(.*?)'\)/);
-                const url = urlMatch ? urlMatch[1] : null;
-                const issuer = await article.locator('span').textContent();
-                synthesizedData.언론.push({ targetDate: null, type, text: text.trim(), url, issuer: issuer.trim() });
-            }
-
-            const nextButton = page.locator(`.nav_page a:text("${currentPage + 1}")`);
-            if (await nextButton.count() > 0) {
-                await nextButton.click();
-                await page.waitForURL(/.*/, { waitUntil: 'domcontentloaded' });
-                currentPage++;
-            } else {
-                break;
+                const nextButton = page.locator(`.nav_page a:text("${currentPage + 1}")`);
+                if (await nextButton.count() > 0) {
+                    await nextButton.click();
+                    await page.waitForURL(/.*/, { waitUntil: 'domcontentloaded' });
+                    currentPage++;
+                } else {
+                    break;
+                }
             }
         }
 
-        // Research Page (Corrected)
-        await page.goto(researchUrl, { waitUntil: 'domcontentloaded' });
-        const thesisText = await page.locator('ul.desc1 > li.text_en').innerHTML();
-        synthesizedData.논문 = thesisText.split('<br>').map(item => item.replace(/■/g, '').trim()).filter(Boolean);
+        // Research Page (Optional)
+        const researchLocator = page.locator('a:has-text("연구")');
+        if (await researchLocator.count() > 0) {
+            const researchUrl = getFullUrl(await researchLocator.getAttribute('href'));
+            await page.goto(researchUrl, { waitUntil: 'domcontentloaded' });
+            const thesisText = await page.locator('ul.desc1 > li.text_en').innerHTML();
+            synthesizedData.논문 = thesisText.split('<br>').map(item => item.replace(/■/g, '').trim()).filter(Boolean);
+        }
 
         console.log(JSON.stringify(synthesizedData, null, 2));
 
