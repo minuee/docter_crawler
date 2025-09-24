@@ -1,0 +1,44 @@
+{
+  "hospital_cid": 83,
+  "bedoc_id": "A5413",
+  "bedoc_hospitalsite": "http://www.paik.ac.kr/sanggye",
+  "bedoc_doctorname": "김상현",
+  "bedoc_deptname": "신장내과",
+  "bedoc_hospitalname": "상계백병원",
+  "hospital_name": "인제대학교상계백병원",
+  "aiga_hid": "H11KR-11000035",
+  "hospital_site": "https://www.paik.ac.kr/sanggye/user/doctor/view.do?doctorId=412",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 노원구 동일로 1342, 상계백병원 (상계동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "https://www.paik.ac.kr/cmmn/file/imageSrc.do?atchFileId=04f541703dc14410bbf684abfce25670&fileSn=2",
+  "specialty": "당뇨성·고혈압성 신장병, 사구체신염, 만성콩팥병, 급성콩팥손상, 혈액투석, 복막투석",
+  "학력": [
+    {
+      "date": null,
+      "content": "인제의대졸업"
+    },
+    {
+      "date": null,
+      "content": "의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "서울아산병원 신장내과 전임의"
+    },
+    {
+      "date": null,
+      "content": "상계백병원 신장내과 부교수 재직중"
+    }
+  ],
+  "수상": [],
+  "논문": [],
+  "학술": [],
+  "저서": [],
+  "언론": []
+}

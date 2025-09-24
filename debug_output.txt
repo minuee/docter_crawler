@@ -1,0 +1,12 @@
+[2025-09-24T00:15:09.936Z] Script starting...
+[2025-09-24T00:15:09.937Z] Arguments received: doctorName=김병건, hospitalSite=https://m.eulji.or.kr/dept/dept_pg01_03.jsp?doct=984015
+[2025-09-24T00:15:09.937Z] Launching browser...
+[2025-09-24T00:15:10.021Z] Browser launched.
+[2025-09-24T00:15:10.049Z] New page created.
+[2025-09-24T00:15:10.049Z] Navigating to initial page: https://m.eulji.or.kr/dept/dept_pg01_03.jsp?doct=984015
+[2025-09-24T00:15:10.487Z] Initial page loaded.
+[2025-09-24T00:15:40.491Z] Error during parsing for https://m.eulji.or.kr/dept/dept_pg01_03.jsp?doct=984015: locator.getAttribute: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('div#doctor img').first()[22m
+
+    at /Users/kormedi/Documents/WorkPlace/bitbucket/docter_crawler/services/crawling_bedoc/data/H11KR-11000009/parser_debug.js:33:91
