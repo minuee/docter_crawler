@@ -19,7 +19,7 @@ if (!jsonFilePath) {
 
     browser = await chromium.launch({ headless: true });
     const page = await browser.newPage();
-    await page.goto(url, { waitUntil: 'networkidle' });
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     const buttonXPath = `//span[contains(text(), "${doctorName}")]/ancestor::tr/following-sibling::tr[1]//input[@value="의료진 소개"]`;
     const detailButton = page.locator(buttonXPath);
@@ -28,6 +28,7 @@ if (!jsonFilePath) {
       throw new Error(`Could not find the details button for doctor ${doctorName}.`);
     }
 
+    await detailButton.scrollIntoViewIfNeeded();
     await detailButton.click();
 
     const popupSelector = '.doc_pop_wrap';

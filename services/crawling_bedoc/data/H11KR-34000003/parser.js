@@ -20,7 +20,7 @@ const { chromium } = require('playwright');
     };
 
     try {
-        await page.goto(hospitalSite, { waitUntil: 'networkidle', timeout: 60000 });
+        await page.goto(hospitalSite, { waitUntil: 'domcontentloaded', timeout: 60000 });
 
         if ((await page.content()).includes(doctorName)) {
             result.isAttend = true;

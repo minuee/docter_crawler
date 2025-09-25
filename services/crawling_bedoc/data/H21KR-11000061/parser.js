@@ -11,12 +11,20 @@ async function parse() {
     try {
         await page.goto(hospital_site, { waitUntil: 'networkidle', timeout: 60000 });
 
-        // Find the doctor's list item and click the 'details' button
+        // Find the doctor's list item
         const doctorListItem = page.locator('ul.intro_doctors_list > li', { has: page.locator(`h5:has-text("${bedoc_doctorname}")`) });
-        await doctorListItem.locator('.btn_more_doctors').click();
         
-        // Wait for the popup to be visible
-        const popup = page.locator('div.layers li.profilepopup_profile1');
+        // Get the doctor's number and click the 'details' button
+        const moreButton = doctorListItem.locator('.btn_more_doctors');
+        const doctorNum = await moreButton.getAttribute('data-num');
+        if (!doctorNum) {
+            throw new Error(`Could not find data-num for doctor ${bedoc_doctorname}`);
+        }
+        await moreButton.click();
+        
+        // Wait for the dynamic popup to be visible
+        const popupSelector = `div.layers li[data-n="${doctorNum}"]`;
+        const popup = page.locator(popupSelector);
         await popup.waitFor({ state: 'visible', timeout: 5000 });
 
         const specialty = await popup.locator('p.profilepopup_02_02_01').textContent();

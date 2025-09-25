@@ -1,0 +1,54 @@
+{
+  "hospital_cid": 231,
+  "bedoc_id": "A8085",
+  "bedoc_hospitalsite": "https://gh.cauhs.or.kr/",
+  "bedoc_doctorname": "박인원",
+  "bedoc_deptname": "호흡기알레르기내과",
+  "bedoc_hospitalname": "중앙대학교광명병원",
+  "hospital_name": "중앙보훈병원",
+  "aiga_hid": "H11KR-11000038",
+  "hospital_site": "https://seoul.bohun.or.kr/popup/040_01_body_01_01.php?idx=1875",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 강동구 진황도로61길 53, (둔촌동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "profileUrl": "https://seoul.bohun.or.kr/common/ImgView.php?bd=bh_part_detail&idx=1875",
+  "specialty": "COPD, 천식, 폐렴, 기타폐질환",
+  "학력": [
+    {
+      "date": null,
+      "content": "중앙대학교 의학과(`83.02)"
+    },
+    {
+      "date": null,
+      "content": "중앙대학교 내과학과 박사(`93.08)"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "중앙대병원 내과 전공의(`87.03 ~ `90.02)"
+    },
+    {
+      "date": null,
+      "content": "서울대학교병원 호흡기내과 전임의(`90.03 ~ `91.02)"
+    },
+    {
+      "date": null,
+      "content": "중앙대병원 호흡기내과 임상강사, 조교수, 부교수(`91.03 ~ `98.02)"
+    },
+    {
+      "date": null,
+      "content": "중앙대병원 호흡기내과 교수(`98.03 ~ `22.02)"
+    },
+    {
+      "date": null,
+      "content": "중앙대학교 광명병원 호흡기내과 명예교수(`02.03 ~ `25.02)"
+    },
+    {
+      "date": null,
+      "content": "중앙보훈병원 호흡기알레르기내과 전문의(`25.05 ~ 현재)"
+    }
+  ]
+}
