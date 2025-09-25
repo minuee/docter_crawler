@@ -18,7 +18,7 @@ const { chromium } = require('playwright');
       process.exit(1);
     }
 
-    await page.goto(url, { waitUntil: 'networkidle' });
+    await page.goto(url, { waitUntil: 'domcontentloaded' });
 
     // 1. Locate the specific doctor's information block.
     const doctorContainer = page.locator(`.docInfo:has(p.name > b:text-is("${doctorName}"))`);

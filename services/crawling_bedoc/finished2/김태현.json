@@ -1,0 +1,51 @@
+{
+  "hospital_cid": 146,
+  "bedoc_id": "A0761",
+  "bedoc_hospitalsite": "http://www.ncc.re.kr",
+  "bedoc_doctorname": "김태현",
+  "bedoc_deptname": "방사선종양학과",
+  "bedoc_hospitalname": "국립암센터",
+  "hospital_name": "국립암센터",
+  "aiga_hid": "H11KR-31000013",
+  "hospital_site": "https://www.ncc.re.kr/ncc_about03_param.ncc?searchKey=&searchValue=&dept=TR",
+  "site_type": "list",
+  "hospital_addr": "경기도 고양시 일산동구 일산로 323, (마두동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "isAttend": true,
+  "profileUrl": "https://www.ncc.re.kr/images/no-image.gif",
+  "specialty": "엑스선 및 양성자선을 이용한 치료 연구",
+  "학력": [
+    { "date": "1990-03 ~ 1996-02", "content": "고려대학교 의과대학교 의학과 대졸(의대)" },
+    { "date": "1998-03 ~ 2000-02", "content": "고려대학교 대학원 의학과 대학원졸(석사)" },
+    { "date": "2000-09 ~ 2006-02", "content": "고려대학교 대학원 의학과 대학원졸(박사)" }
+  ],
+  "경력": [
+    { "date": "1996-03 ~ 2001-02", "content": "고려대학교 안암병원 전공의" },
+    { "date": "2001-04 ~ 2002-04", "content": "포천군 영중보건지소 공보의" },
+    { "date": "2002-04 ~ 2004-04", "content": "국립암센터 공보의" },
+    { "date": "2004-05 ~ 2005-02", "content": "국립암센터 양성자치료센터 전임의" },
+    { "date": "2005-03 ~ 2019-01", "content": "국립암센터 간암센터 겸임" },
+    { "date": "2007-12 ~ 2014-02", "content": "국립암센터 방사선의학연구과 선임연구원" },
+    { "date": "2008-04 ~ 2009-03", "content": "Univ. of Michigan Visiting Scientist" },
+    { "date": "2009-09 ~ 2019-01", "content": "국립암센터 갑상선암센터 겸임" },
+    { "date": "2014-03 ~ 2017-02", "content": "국립암센터 방사선의학연구과 책임연구원" },
+    { "date": "2015-03 ~ 2019-01", "content": "국립암센터 유방암센터 겸임" },
+    { "date": "2016-09 ~ 현재", "content": "국립암센터 양성자치료센터 센터장" },
+    { "date": "2017-03 ~ 2023-03", "content": "국립암센터 방사선종양학과 과장" },
+    { "date": "2017-03 ~ 2019-01", "content": "국립암센터 입자치료연구과 책임연구원" },
+    { "date": "2019-02 ~ 2021-08", "content": "국립암센터 융합기술연구부 수석연구원" },
+    { "date": "2021-09 ~ 2022-08", "content": "국립암센터 방사선의학연구과 과장, 수석연구원" },
+    { "date": "2022-09 ~ 2025-02", "content": "국립암센터 방사선의학연구과 과장, 영년제 석연구원" },
+    { "date": "2023-03 ~ 현재", "content": "국립암센터 방사선종양학과 과장, 임상교수" },
+    { "date": "2025-03 ~ 현재", "content": "국립암센터 방사선의학연구과 영년제 수석연구원" }
+  ],
+  "논문": [
+    "Optimization of electrode position in electric field treatment for pancreatic cancer: BMC GASTROENTEROLOGY. 25:222~ (2.6)",
+    "Mutant KRAS and GATA6 Stratify Survival in Patients Treated with Chemotherapy for Pancreatic Adenocarcinoma: A Prospective Cohort Study: CANCERS. 17(5):896~ (4.4)",
+    "Inhibition of mTOR attenuates the initiation and progression of BRCA1-associated mammary tumors: CANCER COMMUNICATIONS. 45(4):486~490 (24.9)"
+  ],
+  "저서": [],
+  "수상": [],
+  "언론": []
+}

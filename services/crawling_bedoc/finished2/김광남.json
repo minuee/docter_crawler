@@ -1,0 +1,48 @@
+{
+  "hospital_cid": 43,
+  "bedoc_id": "A5810",
+  "bedoc_hospitalsite": "https://mjh.or.kr",
+  "bedoc_doctorname": "김광남",
+  "bedoc_deptname": "소아청소년과",
+  "bedoc_hospitalname": "명지병원",
+  "hospital_name": "명지병원",
+  "aiga_hid": "H11KR-31000048",
+  "hospital_site": "https://mjh.or.kr/main/doctor/view.do?doctor_code=PE026&md_idx=30&mp_idx&part_code=PE&utm_source=chatgpt.com",
+  "site_type": "single",
+  "hospital_addr": "경기도 고양시 덕양구 화수로14번길 55, (화정동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "isAttend": true,
+  "profileUrl": "https://mjh.or.kr/data/doctor/PE026_2.png",
+  "specialty": "소아류마티스",
+  "학력": [
+    { "date": null, "content": "한양대학교 의과대학 미생물학 박사" },
+    { "date": null, "content": "한양대학교 의과대학 소아과 석사" },
+    { "date": null, "content": "한양대학교 의과대학 졸업" }
+  ],
+  "경력": [
+    { "date": null, "content": "명지의료재단 명지병원 류마티스센터장 (현)" },
+    { "date": null, "content": "명지의료재단 명지병원 소아청소년과장 (전)" },
+    { "date": null, "content": "한양대학병원 레지던트" }
+  ],
+  "학술": [
+    { "date": null, "content": "대한소아감염학회 교육연수 위원장 (전)" },
+    { "date": null, "content": "대한소아 임상면역학회 학술 위원장 (전)" },
+    { "date": null, "content": "대한 소아과학회 교육위원 (전)" },
+    { "date": null, "content": "대한 류마티스학회 이사 (전)" },
+    { "date": null, "content": "대한소아감염학회 평의원" },
+    { "date": null, "content": "대한백신학회 평의원" }
+  ],
+  "수상": [],
+  "저서": [],
+  "논문": [
+    "- Long term safety and efficacy of Etanercept in JIA in a single center - 2019.07",
+    "- Catastrophic Antiphospholipid Syndrome associated with SLE sucessfully treated with Rituximab - 2019.01",
+    "- Prevalence of low BMD and its associated factors in Korean children and adolecents with JIA - 2018.10",
+    "- Prevalence, Risk Factors and Expression of HLA DRB1 in JIA associated uveitis - 2018.01",
+    "- New Provisional Classification of JIA applying RF and ANA - 2018.01",
+    "- 소아청소년의 급성충수염 : 천공과 관련된 인자 및 원인균 - 2018",
+    "- 계절 인플루엔자 진단에서 신속항원검사의 유용성 - 2017",
+    "- HLA B27 and JIA and Classification of JAS by the ASAS criteria - 2016.08"
+  ]
+}

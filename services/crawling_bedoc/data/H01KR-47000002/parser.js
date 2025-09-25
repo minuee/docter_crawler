@@ -18,7 +18,7 @@ async function parseDoctorProfile(doctorData) {
 
     try {
         // 1. 메인 페이지 파싱
-        await page.goto(doctorData.hospital_site, { waitUntil: 'networkidle' });
+        await page.goto(doctorData.hospital_site, { waitUntil: 'domcontentloaded' });
         let html = await page.content();
         let $ = cheerio.load(html);
 
@@ -72,7 +72,7 @@ async function parseDoctorProfile(doctorData) {
         // 2. 논문 페이지 파싱
         const paperUrl = $('div.con_tab li a:contains("논문")').attr('href');
         if (paperUrl) {
-            await page.goto(new URL(paperUrl, doctorData.hospital_site).href, { waitUntil: 'networkidle' });
+            await page.goto(new URL(paperUrl, doctorData.hospital_site).href, { waitUntil: 'domcontentloaded' });
             html = await page.content();
             $ = cheerio.load(html);
             $('table.table1.mt30').each((i, table) => {
@@ -84,7 +84,7 @@ async function parseDoctorProfile(doctorData) {
         // 3. 저서 페이지 파싱
         const bookUrl = $('div.con_tab li a:contains("저서")').attr('href');
         if (bookUrl) {
-            await page.goto(new URL(bookUrl, doctorData.hospital_site).href, { waitUntil: 'networkidle' });
+            await page.goto(new URL(bookUrl, doctorData.hospital_site).href, { waitUntil: 'domcontentloaded' });
             html = await page.content();
             $ = cheerio.load(html);
             $('table.table1.mt30').each((i, table) => {

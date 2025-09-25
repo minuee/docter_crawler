@@ -1,0 +1,75 @@
+{
+  "hospital_cid": 69,
+  "bedoc_id": "A0004",
+  "bedoc_hospitalsite": "http://www.cmcep.or.kr/",
+  "bedoc_doctorname": "김만수",
+  "bedoc_deptname": "안과",
+  "bedoc_hospitalname": "은평성모병원",
+  "hospital_name": "강남성모원안과",
+  "aiga_hid": "H31KR-11000243",
+  "hospital_site": "https://www.stmaryone.com/html/about/doctor.php",
+  "site_type": "list",
+  "hospital_addr": "서울특별시 서초구 강남대로85길 5, 대유빌딩 2층 (반포동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "profileUrl": "https://www.stmaryone.com/theme/hospital/images/doctor_bg1_1.jpg",
+  "specialty": "각막이식, 각막질환, 백내장, 노안",
+  "학력": [
+    {
+      "date": null,
+      "content": "가톨릭대학교 의학과 안과학 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "現 강남성모원안과의원 대표원장"
+    },
+    {
+      "date": null,
+      "content": "前 가톨릭대학교 서울성모병원 안과 과장, 주임교수, 안은행장"
+    },
+    {
+      "date": null,
+      "content": "前 가톨릭대학교 은평성모병원 안과 명예교수"
+    },
+    {
+      "date": null,
+      "content": "前 미국 미네소타대학교 안과 교환교수"
+    },
+    {
+      "date": null,
+      "content": "前 가톨릭대학교 강남성모병원 임상의학연구소장"
+    },
+    {
+      "date": null,
+      "content": "대한안과학회 제 19대 이사장"
+    },
+    {
+      "date": null,
+      "content": "MBC TV 느낌표 ‹눈을 떠요› 출연"
+    },
+    {
+      "date": null,
+      "content": "대한안과학회 각막기증활성화위원회 위원장"
+    },
+    {
+      "date": null,
+      "content": "한국실명예방재단 이사 역임"
+    },
+    {
+      "date": null,
+      "content": "한국 콘택트렌즈학회 회장 역임"
+    },
+    {
+      "date": null,
+      "content": "한국 외안부학회 회장 역임"
+    },
+    {
+      "date": null,
+      "content": "대한민국 의학한림원 정회원"
+    }
+  ],
+  "isAttend": true
+}

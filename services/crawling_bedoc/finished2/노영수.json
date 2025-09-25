@@ -1,0 +1,32 @@
+{
+  "hospital_cid": 181,
+  "bedoc_id": "A0569",
+  "bedoc_hospitalsite": "http://www.dainent.co.kr",
+  "bedoc_doctorname": "노영수",
+  "bedoc_deptname": "이비인후과",
+  "bedoc_hospitalname": "다인이비인후과전문병원",
+  "hospital_name": "노영수이비인후과의원",
+  "aiga_hid": "H31KR-11001416",
+  "hospital_site": "https://www.rhoyoungsoo.com/about",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 강동구 성안로 156, 우주빌딩 2층 201,202호 (길동)",
+  "isExist": true,
+  "isSearchType": "html_ocr",
+  "specialty": "이비인후과 전문의, 의학박사",
+  "학력": [
+    { "date": null, "content": "한양대학교 의과대학 졸업" },
+    { "date": null, "content": "한양대학교 의과대학 의학석사" },
+    { "date": null, "content": "한양대학교 의과대학 의학박사" }
+  ],
+  "경력": [
+    { "date": null, "content": "한양대학교병원 이비인후과 전공의 수료" },
+    { "date": null, "content": "전) 국군수도통합병원 이비인후과 과장" },
+    { "date": null, "content": "전) 하나이비인후과병원 원장" },
+    { "date": null, "content": "미국 하버드의대 부속병원 연수" },
+    { "date": null, "content": "독일 베를린 Unfallkrankenhaus Marzahn 연수" },
+    { "date": null, "content": "한양대학교 의과대학 이비인후과 외래교수" },
+    { "date": null, "content": "이비인후과 전문의 자격 취득" },
+    { "date": null, "content": "의사 면허 취득" }
+  ],
+  "isAttend": true
+}

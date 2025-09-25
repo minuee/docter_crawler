@@ -1,0 +1,158 @@
+{
+  "hospital_cid": 127,
+  "bedoc_id": "A5191",
+  "bedoc_hospitalsite": "http://www.kimeye.com/kimeye/",
+  "bedoc_doctorname": "김종우",
+  "bedoc_deptname": "안과",
+  "bedoc_hospitalname": "김안과병원",
+  "hospital_name": "김안과병원",
+  "aiga_hid": "H21KR-11000027",
+  "hospital_site": "https://www.kimeye.com/goods/goods_view_pop.php?g_id=63&gc_id=4",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 영등포구 영신로 136, (영등포동4가)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": "Cheerio parser could not extract education or experience.",
+  "profileUrl": "https://www.kimeye.com/data/goods/append/120",
+  "specialty": "",
+  "학력": [
+    {
+      "date": "1977",
+      "content": "서울대학교 의과대학 졸"
+    },
+    {
+      "date": "1992",
+      "content": "서울대학교 의과대학 의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1977",
+      "content": "서울대학교 의과대학 졸"
+    },
+    {
+      "date": "1978",
+      "content": "서울대학교병원 인턴 수료"
+    },
+    {
+      "date": "1982",
+      "content": "서울대학교병원 레지던트 수료"
+    },
+    {
+      "date": "1985",
+      "content": "국군 서울지구 병원 안과과장"
+    },
+    {
+      "date": null,
+      "content": "김안과병원 입사"
+    },
+    {
+      "date": "1986",
+      "content": "서울대학병원 안과 망막 전임의"
+    },
+    {
+      "date": "1992",
+      "content": "서울대학교 의과대학 의학박사"
+    },
+    {
+      "date": "1994",
+      "content": "김안과병원 수련부장 역임"
+    },
+    {
+      "date": "1995",
+      "content": "김안과병원 부원장 역임"
+    },
+    {
+      "date": "2002",
+      "content": "김안과병원 원장 역임"
+    },
+    {
+      "date": "2008",
+      "content": "건양대학교의료원장 겸 건양대학교병원장 역임"
+    },
+    {
+      "date": "現",
+      "content": "김안과병원 망막병원 전문의"
+    },
+    {
+      "date": null,
+      "content": "포브스 선정 대한민국 100대 명의(안과질환¸2009)"
+    }
+  ],
+  "학술": [],
+  "언론": [
+    {
+      "targetDate": "2021-02-17",
+      "type": "기사",
+      "text": "망막 치료·연구에 13년… '망막 명의' 19명이 펼치는 '첨단 인술'",
+      "url": "https://www.kimeye.com/bbs/link.php?bo_table=report&wr_id=1487&no=1",
+      "issuer": null
+    },
+    {
+      "targetDate": "2018-08-20",
+      "type": "기사",
+      "text": "김안과병원 ‘망막질환’ 심포지엄 성료",
+      "url": "https://www.kimeye.com/bbs/link.php?bo_table=report&wr_id=989&no=1",
+      "issuer": null
+    },
+    {
+      "targetDate": "2018-08-10",
+      "type": "기사",
+      "text": "김안과병원 김종우망막병원장 인터뷰/ 집에서 달력보며 수시로 '시력 체크'… 실명 부르는 망막 질환 예방 지름길",
+      "url": "https://www.kimeye.com/bbs/link.php?bo_table=report&wr_id=882&no=1",
+      "issuer": null
+    },
+    {
+      "targetDate": "2018-08-09",
+      "type": "기사",
+      "text": "국가대표 안과병원 김안과, ‘망막’ 새 역사",
+      "url": "https://www.kimeye.com/bbs/link.php?bo_table=report&wr_id=1114&no=1",
+      "issuer": null
+    },
+    {
+      "targetDate": "2018-08-08",
+      "type": "기사",
+      "text": "김안과병원 “국내서 가장 많이 증가한 망막질환은 '황반변성'”",
+      "url": "https://www.kimeye.com/bbs/link.php?bo_table=report&wr_id=990&no=1",
+      "issuer": null
+    },
+    {
+      "targetDate": "2018-08-08",
+      "type": "기사",
+      "text": "지난 10년간 황반변성 환자 89%로 급증",
+      "url": "https://www.kimeye.com/bbs/link.php?bo_table=report&wr_id=996&no=1",
+      "issuer": null
+    },
+    {
+      "targetDate": "2016-01-24",
+      "type": "기사",
+      "text": "안과치료 어떻게 변화했나, 1988년부터 오늘날까지 안과치료 역사",
+      "url": "https://www.kimeye.com/bbs/link.php?bo_table=report&wr_id=970&no=1",
+      "issuer": null
+    },
+    {
+      "targetDate": "2016-01-21",
+      "type": "기사",
+      "text": "라식이 뭐야? ‘응답하라 1988’, 안과치료는 어떻게 변했을까?",
+      "url": "https://www.kimeye.com/bbs/link.php?bo_table=report&wr_id=844&no=1",
+      "issuer": null
+    },
+    {
+      "targetDate": "2016-01-12",
+      "type": "기사",
+      "text": "겨울철 눈 건강 주의하세요… 한파·건조한 날씨에 고혈압망막증·눈 중풍 빨간불",
+      "url": "https://www.kimeye.com/bbs/link.php?bo_table=report&wr_id=992&no=1",
+      "issuer": null
+    },
+    {
+      "targetDate": "2015-04-07",
+      "type": "기사",
+      "text": "[명의&인의를 찾아서-⑧ 건양대 김안과 망막병원 김종우 교수팀] 희망 찾아주는 ‘최첨단 캠프’",
+      "url": "https://www.kimeye.com/bbs/link.php?bo_table=report&wr_id=991&no=1",
+      "issuer": null
+    }
+  ],
+  "수상": [],
+  "논문": [],
+  "저서": []
+}

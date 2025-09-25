@@ -1,45 +1,51 @@
-
 const { chromium } = require('playwright');
 const fs = require('fs');
 
 (async () => {
-    const url = process.argv[2];
-    if (!url) {
-        console.error('Usage: node debug_script.js <URL>');
-        process.exit(1);
+  const browser = await chromium.launch({ headless: true });
+  const page = await browser.newPage();
+  try {
+    await page.goto('https://www.vievisnamuh.com/user/hpm/smt/SMTPage.do', { waitUntil: 'domcontentloaded' });
+    await page.waitForSelector('.staff_list');
+
+    const doctorElements = await page.$$('.staff_list > div');
+    let targetDoctorElement = null;
+
+    for (const element of doctorElements) {
+      const nameElement = await element.$('strong#drName');
+      if (nameElement) {
+        const nameText = await nameElement.innerText();
+        if (nameText.includes('민영일')) {
+          targetDoctorElement = element;
+          break;
+        }
+      }
     }
 
-    const browser = await chromium.launch({ headless: true });
-    const page = await browser.newPage();
+    if (targetDoctorElement) {
+      const moreButton = await targetDoctorElement.$('a.more');
+      if (moreButton) {
+        await moreButton.click();
+        // Wait for the popup to appear. Let's assume it's a modal and wait for a selector.
+        // Since we don't know the selector, we'll just wait for a fixed time.
+        await page.waitForTimeout(5000);
 
-    try {
-        console.log(`Navigating to ${url}...`);
-        await page.goto(url, { waitUntil: 'networkidle', timeout: 60000 });
+        const bodyHtml = await page.evaluate(() => document.body.innerHTML);
+        fs.writeFileSync('debug_page.html', bodyHtml);
 
-        console.log('Hovering over doctor element...');
-        const doctorElement = page.locator('ul.doctors li', { has: page.locator('p:has-text("김성재")') });
-        await doctorElement.hover();
-
-        console.log('Clicking details button...');
-        const hoverElement = doctorElement.locator('.hover');
-        await hoverElement.click();
-
-        // Wait for AJAX to complete
-        console.log('Waiting for content to load...');
-        await page.waitForTimeout(3000);
-
-        console.log('Taking screenshot to debug_screenshot.png...');
         await page.screenshot({ path: 'debug_screenshot.png', fullPage: true });
 
-        console.log('Saving page HTML to debug_page.html...');
-        const html = await page.content();
-        fs.writeFileSync('debug_page.html', html);
+        console.log('Debug files (debug_page.html, debug_screenshot.png) saved.');
 
-        console.log('Debugging files have been saved.');
-
-    } catch (e) {
-        console.error(`An error occurred during debugging: ${e.message}`);
-    } finally {
-        await browser.close();
+      } else {
+        throw new Error('More button not found for doctor 민영일');
+      }
+    } else {
+      throw new Error('Doctor 민영일 not found on the page.');
     }
+  } catch (error) {
+    console.error('Error during debug script execution:', error);
+  } finally {
+    await browser.close();
+  }
 })();
