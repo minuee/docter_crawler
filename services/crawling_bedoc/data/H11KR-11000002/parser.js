@@ -13,7 +13,7 @@ const cheerio = require('cheerio');
     let error = null;
 
     try {
-        await page.goto(hospitalSite, { waitUntil: 'networkidle', timeout: 60000 });
+        await page.goto(hospitalSite, { waitUntil: 'load', timeout: 60000 });
 
         const moreButtonSelectors = [
             'div.cont_main_profile > div:has(> strong:contains("경력")) + .profile_view_more a',
@@ -24,33 +24,21 @@ const cheerio = require('cheerio');
             'div.news_list + .more_btn a'
         ];
 
-        console.log("--- [DEBUG] '더보기' 버튼 클릭 시작 ---");
         for (const selector of moreButtonSelectors) {
-            let clickCount = 0;
             while (true) {
                 const moreButton = page.locator(selector).first();
                 if (await moreButton.count() === 0 || !await moreButton.isVisible()) {
-                    if (clickCount > 0) {
-                        console.log(`[DEBUG] 선택자 '${selector}'의 버튼이 ${clickCount}번 클릭 후 더 이상 보이지 않습니다.`);
-                    } else {
-                        // console.log(`[DEBUG] 선택자 '${selector}'에 해당하는 버튼을 찾을 수 없거나 보이지 않습니다.`);
-                    }
                     break;
                 }
                 
-                console.log(`[DEBUG] 클릭 시도: '${selector}'`);
                 let res = await moreButton.click({ force: true, timeout: 2000 }).catch((e) => {
-                    console.log(`[DEBUG] 클릭 중 오류 발생 (버튼 사라짐 추정), 루프 중단. 오류: ${e.message}`);
                     return 'break';
                 });
 
                 if (res === 'break') break;
-                clickCount++;
-                console.log(`[DEBUG] 클릭 ${clickCount}회 성공.`);
                 await page.waitForTimeout(1000); // 컨텐츠 로딩 대기
             }
         }
-        console.log("--- [DEBUG] '더보기' 버튼 클릭 완료 ---");
 
         const html = await page.content();
         const $ = cheerio.load(html);

@@ -21,7 +21,7 @@ async function main() {
     let error = null;
 
     try {
-        await page.goto(hospital_site, { waitUntil: 'networkidle', timeout: 60000 });
+        await page.goto(hospital_site, { waitUntil: 'load', timeout: 60000 });
 
         // Locator based on user's previous hint
         const doctorLocator = page.locator(`a[onclick*="viewDetail"]:has-text("${bedoc_doctorname}")`);

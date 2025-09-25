@@ -14,7 +14,7 @@ async function parseDoctorProfile(doctorData) {
 
     try {
         console.log(`[Playwright] Navigating to ${hospital_site} for ${bedoc_doctorname}...`);
-        await page.goto(hospital_site, { waitUntil: 'networkidle', timeout: 600000 }); // 10분 타임아웃
+        await page.goto(hospital_site, { waitUntil: 'domcontentloaded', timeout: 600000 }); // 10분 타임아웃
 
         const htmlContent = await page.content();
         const $ = cheerio.load(htmlContent);

@@ -15,7 +15,7 @@ async function parseDoctorProfile(doctorData) {
     let isAttend = false;
 
     try {
-        await page.goto(doctorData.hospital_site, { waitUntil: 'networkidle', timeout: 60000 });
+        await page.goto(doctorData.hospital_site, { waitUntil: 'load', timeout: 60000 });
         const content = await page.content();
         const $ = cheerio.load(content);
 
