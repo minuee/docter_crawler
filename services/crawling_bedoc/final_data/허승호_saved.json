@@ -1,0 +1,91 @@
+{
+  "hospital_cid": 651,
+  "bedoc_id": "A8172",
+  "bedoc_hospitalsite": "https://daegu.dsmc.or.kr:49880/",
+  "bedoc_doctorname": "허승호",
+  "bedoc_deptname": "심장내과",
+  "bedoc_hospitalname": "계명대동산병원",
+  "hospital_name": "계명대동산병원",
+  "aiga_hid": "H01KR-47000002",
+  "hospital_site": "https://kmu-med.ac.kr/content/04class/teacher.php?doctor=83",
+  "site_type": "single",
+  "hospital_addr": "대구광역시 달서구 달구벌대로 1035, (신당동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://kmu-med.ac.kr/content/04class/teacher.php?doctor=83&doctorName=%ED%97%88%EC%8A%B9%ED%98%B8&depthName=%EC%8B%AC%EC%9E%A5%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "doctorSiteUrl": "https://kmu-med.ac.kr/content/04class/teacher.php?doctor=83",
+  "profileUrl": "https://kmu-med.ac.kr/data/doctor/%ED%97%88%EC%8A%B9%ED%98%B8%20%EA%B5%90%EC%88%982.jpg",
+  "specialty": "관상동맥 중재적 시술분야, 혈관내 심초음파, 허혈성 심질환 병태생리",
+  "isAttend": true,
+  "학력": [
+    {
+      "date": "1990년 02월",
+      "content": "계명대학교 의과대학 의학사"
+    },
+    {
+      "date": "1994년 02월",
+      "content": "계명대학교 대학원 의학석사"
+    },
+    {
+      "date": "1997년 02월",
+      "content": "계명대학교 대학원 의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1991년 03월 ~ 1995년 02월",
+      "content": "계명대학교 의과대학 내과학교실 심장내과 전공의"
+    },
+    {
+      "date": "1995년 03월 ~ 1997년 02월",
+      "content": "계명대학교 의과대학 내과학교실 심장내과 전임의"
+    },
+    {
+      "date": "1997년 03월 ~ 2000년 04월",
+      "content": "군복무(육군)"
+    },
+    {
+      "date": "2000년 05월 ~ 2001년 02월",
+      "content": "미국 스탠포드대학 연수"
+    },
+    {
+      "date": "2001년 03월 ~ 2003년 02월",
+      "content": "계명대학교 의과대학 내과학교실 심장내과 전임강사"
+    },
+    {
+      "date": "2003년 03월 ~ 2008년 02월",
+      "content": "계명대학교 의과대학 내과학교실 심장내과 조교수"
+    },
+    {
+      "date": "2008년 03월 ~ 2013년 02월",
+      "content": "계명대학교 의과대학 내과학교실 심장내과 부교수"
+    },
+    {
+      "date": "2013년 03월 ~ 현재",
+      "content": "계명대학교 의과대학 내과학교실 심장내과 교수"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한내과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한순환기학회 회원"
+    },
+    {
+      "date": null,
+      "content": "대한고혈압학회 회원"
+    },
+    {
+      "date": null,
+      "content": "대한심초음파학회 회원"
+    }
+  ],
+  "논문": [
+    "Huh S, et al. Clinical and Angiographic Outcomes of Everolimus-Eluting Stents in Real-World Practice. Korean Circ J. 2023;53(1):45-57."
+  ]
+}

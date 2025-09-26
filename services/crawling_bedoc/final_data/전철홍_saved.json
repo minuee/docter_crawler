@@ -1,0 +1,116 @@
+{
+  "hospital_cid": 519,
+  "bedoc_id": "A8519",
+  "bedoc_hospitalsite": "http://www.naumhospital.com/",
+  "bedoc_doctorname": "전철홍",
+  "bedoc_deptname": "정형외과",
+  "bedoc_hospitalname": "익산나은병원",
+  "hospital_name": "목포한국병원",
+  "aiga_hid": "H11KR-36000006",
+  "hospital_site": "https://www.hank.co.kr/pages/reser/doctor.php?medical_id=3&id=120",
+  "site_type": "single",
+  "hospital_addr": "전라남도 목포시 영산로 483,  (상동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.hank.co.kr/pages/reser/doctor.php?medical_id=3&id=120&doctorName=%EC%A0%84%EC%B2%A0%ED%99%8D&depthName=%EC%A0%95%ED%98%95%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "doctorSiteUrl": "https://www.hank.co.kr/pages/reser/doctor.php?medical_id=3&id=120",
+  "profileUrl": "https://www.hank.co.kr/pages/download.php?id=164&type=doctor",
+  "학력": [
+    {
+      "date": null,
+      "content": "전남 대학교 의과대학 의학과 졸업"
+    },
+    {
+      "date": null,
+      "content": "전남대학교 의과대학 대학원 석사, 박사 졸업"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "전) 전남대학교 의과대학병원 정형외과 교수"
+    },
+    {
+      "date": null,
+      "content": "전) 원광대학교 의과대학병원 교수"
+    },
+    {
+      "date": null,
+      "content": "대한민국 법무부 자문의사"
+    },
+    {
+      "date": null,
+      "content": "대한슬관절학회 제 24대 회장"
+    },
+    {
+      "date": null,
+      "content": "대한정형외과스포츠학회  제 23대 회장"
+    },
+    {
+      "date": null,
+      "content": "대한정형외과 학회 이사"
+    },
+    {
+      "date": null,
+      "content": "대한정형외과 학회 자문위원"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "한국 의사면허 자격증"
+    },
+    {
+      "date": null,
+      "content": "미국 의사면허 자격증"
+    },
+    {
+      "date": null,
+      "content": "한국 정형외과 전문의 자격증"
+    },
+    {
+      "date": null,
+      "content": "대한 슬관절 학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한 골절 학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한 정형외과 스포츠 의학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한 스포츠 학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한 관절경 학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "한국 스포츠 전문의 자격증"
+    },
+    {
+      "date": null,
+      "content": "미국 AAOS Boarding Member"
+    },
+    {
+      "date": null,
+      "content": "ISAKOS Boarding Member"
+    },
+    {
+      "date": null,
+      "content": "ISTA Boarding Member"
+    },
+    {
+      "date": null,
+      "content": "SICOT Member"
+    }
+  ],
+  "specialty": "슬관절 전문의(관절경, 전후방십자인대 재건술, 연골판 복원술 및 이식, 절골술)인공관절치환술(슬관절,고관절)",
+  "isAttend": true
+}

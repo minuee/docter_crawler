@@ -1,0 +1,224 @@
+{
+  "hospital_cid": 428,
+  "bedoc_id": "A8268",
+  "bedoc_hospitalsite": "http://www.khnmc.or.kr",
+  "bedoc_doctorname": "이영찬",
+  "bedoc_deptname": "이비인후과",
+  "bedoc_hospitalname": "강동경희대병원",
+  "hospital_name": "강동경희대학교병원",
+  "aiga_hid": "H11KR-11000004",
+  "hospital_site": "https://www.khnmc.or.kr/kr/treatment/doctor/2247/profile.do",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 강동구 동남로 892, (상일동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.khnmc.or.kr/kr/treatment/doctor/2247/profile.do?doctorName=%EC%9D%B4%EC%98%81%EC%B0%AC&depthName=%EC%9D%B4%EB%B9%84%EC%9D%B8%ED%9B%84%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "specialty": "두경부종양, 로봇수술, 경구강내시경, 갑상선암수술, 구강질환,음성장애,편도수술(코블레이터),",
+  "isAttend": true,
+  "학력": [
+    {
+      "date": "2012~ 2014",
+      "content": "경희대학교 의과대학 박사"
+    },
+    {
+      "date": "2006~ 2008",
+      "content": "경희대학교 의과대학 석사"
+    },
+    {
+      "date": "1998~ 2004",
+      "content": "경희대학교 의과대학 졸업"
+    }
+  ],
+  "경력": [
+    {
+      "date": "2023~ 현재",
+      "content": "강동경희대학교병원 임상의학연구소 의료빅데이터센터 센터장"
+    },
+    {
+      "date": "2025~ 현재",
+      "content": "강동경희대학교병원 이비인후과 교수"
+    },
+    {
+      "date": "2020~ 2025",
+      "content": "강동경희대학교병원 이비인후과 부교수"
+    },
+    {
+      "date": "2022~ 2023",
+      "content": "University of Pennsylvania, Department of Biostatatic, Epidemiology and Informatics, Visiting Associate Professor"
+    },
+    {
+      "date": "2014~ 2020",
+      "content": "강동경희대학교병원 이비인후과 조교수"
+    }
+  ],
+  "학술": [
+    {
+      "date": "2009~ 현재",
+      "content": "대한 이비인후과학회 정회원"
+    },
+    {
+      "date": "2012~ 현재",
+      "content": "대한 갑상선두경부외과학회 정회원"
+    },
+    {
+      "date": "2012~ 현재",
+      "content": "대한 후두음성언어의학회 정회원"
+    },
+    {
+      "date": "2012~ 현재",
+      "content": "대한 연하장애학회 정회원"
+    },
+    {
+      "date": "2019~ 현재",
+      "content": "대한 갑상선학회지 논문 심사위원"
+    }
+  ],
+  "수상": [
+    {
+      "date": "2022",
+      "content": "대한두경부외과학회 려산학술상 수상"
+    },
+    {
+      "date": "2018",
+      "content": "대한 후두음성언어의학회 춘계 학술대회 우수구연상"
+    }
+  ],
+  "논문": [
+    "Effect of Proton Pump Inhibitor on the Outcome of Laryngeal Microsurgery in Patients With Vocal Fold Mucosal Disease With Reflux Symptoms (JOURNAL OF VOICE. 2024;38(4):931-935)",
+    "Cell Death Induced by the Combination of Ephedra sinica Extract and Radiation in HNSCC is Positively Related to BAX and p-MLKL Expression (Anti-Cancer Agents in Medicinal Chemistry. 2024;24(1):50-57)",
+    "Translation and validation of the Korean Version of the Reflux Symptom Score (Journal of Voice. 2024;38(2):545.e1-545.e8)",
+    "Utilizing the AJCC 8th Staging to Discriminate Survival Outcomes in HPV-associated Oropharyngeal Squamous Cell Carcinoma (Anticancer Research. 2024;44(4):1703-1710)",
+    "Polygenic risk score-based phenome-wide association study of head and neck cancer across two large biobanks (BMC Medicine. 2024;22(1):120-120)",
+    "Association between genetic risk and adherence to healthy lifestyle for developing age-related hearing loss (BMC Medicine. 2024;22(1):141-141)",
+    "인공지능을 통한 두경부암 병리 이미지 분석의 최신 연구 (Korean Journal of Otorhinolaryngology Head and Neck Surgery. 2024;67(9):475-481)",
+    "Voice Outcome After Cold Knife Surgery According to the Characteristics of Vocal Fold Polyp (Journal of Voice. 2024;38(3):780-787)",
+    "A SEER-based analysis of trends in HPV-associated oropharyngeal squamous cell carcinoma (INFECTIOUS AGENTS AND CANCER. 2024;19(1):29-38)",
+    "Prognostic significance of senescence-related tumor microenvironment genes in head and neck squamous cell carcinoma (Aging. 2024;16(2):985-1001)",
+    "Gene signature predicting recurrence in oral squamous cell carcinoma is characterized by increased oxidative phosphorylation (MOLECULAR ONCOLOGY. 2023;17(1):134-149)",
+    "Guideline for the Surgical Management of Locally Invasive Differentiated Thyroid Cancer From the Korean Society of Head and Neck Surgery (Clinical and Experimental Otorhinolaryngology. 2023;16(1):1-19)",
+    "The key timing of pharyngeal reflux in patients with laryngopharyngeal reflux (Auris Nasus Larynx. 2023;50(4):565-570)",
+    "Association between Metabolic Syndrome and Risk of Hypopharyngeal Cancer: A Nationwide Cohort Study from Korea (Cancers. 2023;15(18):0-0)",
+    "Association between oral cavity cancer and metabolic syndrome (Journal of Cancer Research and Clinical Oncology. 2023;149(7):4005-4013)",
+    "Association Between the Language Development and Behavioral-Emotional Problems in Children With Ankyloglossia (Korean Journal of Otorhinolaryngology-Head and Neck Surgery. 2023;66(7):462-468)",
+    "설소대 단축증 환아에서 언어발달과 행동-정서적 문제와의 상관관계 분석 (대한이비인후-두경부외과학회지. 2023;66(7):462-468)",
+    "후두내시경을 이용한 후두 병변 진단의 인공지능 적용 (대한후두음성언어의학회지. 2023;34(3):71-78)",
+    "Seasonality and Association With Climate Factors of Epiglottitis in South Korea: A Nationwide Population-Based Study (대한후두음성언어의학회지. 2023;34(3):95-100)",
+    "Somatic anxiety in patients with laryngopharyngeal reflux (Laryngoscope Investigative Otolaryngology. 2023;8(5):1288-1293)",
+    "Malignant Transformation of Warthin Tumor in the Cervical Lymph Node (Clinical Nuclear Medicine. 2023;48(4):342-344)",
+    "Concurrent FDG-Avid and Non-FDG-Avid Pleomorphic Adenomas in the Submandibular Gland and Parapharyngeal Space (Clinical Nuclear Medicine. 2023;48(3):E138-E140)",
+    "Clinical significance of FAT1 gene mutation and mRNA expression in patients with head and neck squamous cell carcinoma (MOLECULAR ONCOLOGY. 2022;16(8):1661-1679)",
+    "Prognostic Significance of the BIRC2-BIRC3 Gene Signature in Head and Neck Squamous Cell Carcinoma (CANCER GENOMICS & PROTEOMICS. 2022;19(5):591-605)",
+    "Association between cancer stem cell gene expression signatures and prognosis in head and neck squamous cell carcinoma (BMC Cancer. 2022;22(1):1-13)",
+    "Modified Transoral Endoscopic Thyroidectomy Technique Using Trapdoor Suspension Sutures (Clinical and Experimental Otorhinolaryngology. 2022;15(1):119-121)",
+    "Care and Management of Voice Change in Thyroid Surgery: Korean Society of Laryngology, Phoniatrics and Logopedics Clinical Practice Guideline (CLINICAL AND EXPERIMENTAL OTORHINOLARYNGOLOGY. 2022;15(1):24-48)",
+    "Comparison Between Manual and Automated Analyses in Multichannel Intraluminal Impedance: pH Monitoring for Laryngopharyngeal Reflux (OTOLARYNGOLOGY-HEAD AND NECK SURGERY. 2022;166(1):128-132)",
+    "The association between laryngopharyngeal reflux and insomnia (EUROPEAN ARCHIVES OF OTO-RHINO-LARYNGOLOGY. 2022;279(7):3535-3541)",
+    "Metabolic Diseases and Risk of Head and Neck Cancer: A Cohort Study Analyzing Nationwide Population-Based Data (CANCERS. 2022;14(13):0-0)",
+    "24-Hour Multichannel Intraluminal Impedance?pH in Proton Pump Inhibitor Nonresponders vs Responders in Patients With Laryngopharyngeal Reflux (Otolaryngology - Head and Neck Surgery (United States). 2022;166(5):910-916)",
+    "Prediction of survival in oropharyngeal squamous cell carcinoma using machine learning algorithms: A study based on the surveillance, epidemiology, and end results database (FRONTIERS IN ONCOLOGY. 2022;12(1):0-0)",
+    "A machine learning based survival prediction model for advanced parotid gland mucoepidermoid carcinoma (Oral Oncology. 2022;124(1):111-112)",
+    "Pharyngeal reflux episodes in patients with suspected laryngopharyngeal reflux versus healthy subjects: a prospective cohort study (European Archives of Oto-Rhino-Laryngology. 2021;278(9):3387-3392)",
+    "SOD2-and NRF2-associated Gene Signature to Predict Radioresistance in Head and Neck Cancer (CANCER GENOMICS & PROTEOMICS. 2021;18(5):675-684)",
+    "Diagnostic Value of Salivary miRNA in Head and Neck Squamous Cell Cancer: Systematic Review and Meta-Analysis (INTERNATIONAL JOURNAL OF MOLECULAR SCIENCES. 2021;22(13):1-11)",
+    "Benefit of postoperative radiotherapy in patients with oropharyngeal squamous cell carcinoma in human papillomavirus (HPV) era: A Surveillance, Epidemiology, and End Results (SEER) database analysis (SURGERY. 2021;170(2):541-549)",
+    "Oral microbiome associated with lymph node metastasis in oral squamous cell carcinoma (SCIENTIFIC REPORTS. 2021;11(1):23176-23176)",
+    "Risk of cancer in patients with recurrent aphthous stomatitis in Korea: A nationwide population-based study (Medicine. 2021;100(16):e25628-3)",
+    "A nationwide population-based study in South Korea on a relationship between height and anosmia (Scientific Reports. 2021;11(1):86091-86098)",
+    "Risk of autoimmune diseases in recurrent aphthous ulcer patients: A nationwide population study (Oral Diseases. 2021;27(6):1443-1450)",
+    "Development of a machine learning model for the prediction of nodal metastasis in early T classification oral squamous cell carcinoma: SEER-based population study (Head and Neck. 2021;43(8):2316-2324)",
+    "Seasonality of allergic diseases: Real-world evidence from a nationwide population-based study (IMMUNITY INFLAMMATION AND DISEASE. 2020;8(3):360-362)",
+    "Comparison of simple frenotomy with 4-flap Z-frenuloplasty in treatment for ankyloglossia with articulation difficulty: A prospective randomized study (International Journal of Pediatric Otorhinolaryngology. 2020;136(110146):1-6)",
+    "Circulating Tumor DNA in Saliva in an Orthotopic Head and Neck Cancer Mouse Model (ANTICANCER RESEARCH. 2020;40(1):191-199)",
+    "Epidemiology of Anosmia in South Korea: A Nationwide Population-Based Study (Scientific Reports. 2020;10(1):0-0)",
+    "Computer-Assisted Preoperative Simulations and 3D Printed Surgical Guides Enable Safe and Less-Invasive Mandibular Segmental Resection: Tailor-Made Mandibular Resection (APPLIED SCIENCES-BASEL. 2020;10(4):1325-1325)",
+    "Correlation of Nasal Fluid Biomarkers and Symptoms in Patients with Persistent Allergic Rhinitis (ANNALS OF OTOLOGY RHINOLOGY AND LARYNGOLOGY. 2020;129(6):542-547)",
+    "Seasonal variation in chronic skin diseases: real-world evidence from a nationwide population-based study in Korea (JOURNAL OF THE EUROPEAN ACADEMY OF DERMATOLOGY AND VENEREOLOGY. 2020;34(12):793-795)",
+    "Epithelial-mesenchymal transition gene signature is associated with prognosis and tumor microenvironment in head and neck squamous cell carcinoma (Scientific Reports. 2020;10(1):0-0)",
+    "Changes in Pharyngeal Baseline Impedance in Patients With Laryngopharyngeal Reflux (OTOLARYNGOLOGY-HEAD AND NECK SURGERY. 2020;163(3):563-568)",
+    "Guidelines for tracheostomy from the Korean bronchoesophagological society (Clinical and Experimental Otorhinolaryngology. 2020;13(4):361-375)",
+    "Herpes zoster involving the abducens and vagus nerves without typical skin rash: A case report and literature review (Medicine. 2019;98(19):e15619-15619)",
+    "Comparison of Computed Tomography, Magnetic Resonance Imaging, and Positron Emission Tomography and Computed Tomography for the Evaluation Bone Invasion in Upper and Lower Gingival Cancers (JOURNAL OF ORAL AND MAXILLOFACIAL SURGERY. 2019;77(4):00-11)",
+    "The effect of baclofen combined with a proton pump inhibitor in patients with refractory laryngopharyngeal reflux: A prospective, open-label study in thirty-two patients (Clinical Otolaryngology. 2019;44(3):431-434)",
+    "Change in gray matter volume and cerebral blood flow in patients with burning mouth syndrome (Journal of Oral Pathology and Medicine. 2019;48(1):335-342)",
+    "Association Between Pepsin in the Saliva and the Subjective Symptoms in Patients With Laryngopharyngeal Reflux (JOURNAL OF VOICE. 2019;33(2):150-154)",
+    "Prevalence and Predictors of Sjogren's Syndrome in Patients with Burning Mouth Symptoms (JOURNAL OF ORAL FACIAL PAIN AND HEADACHE. 2018;32(1):91-96)",
+    "SOX2 activation predicts prognosis in patients with head and neck squamous cell carcinoma (SCIENTIFIC REPORTS. 2018;8(1):1677-1680)",
+    "Risk Factors for Complications of Intraoral Removal of Submandibular Sialoliths (JOURNAL OF ORAL AND MAXILLOFACIAL SURGERY. 2018;76(4):793-798)",
+    "Clinical Significance of CUB and Sushi Multiple Domains 1 Inactivation in Head and Neck Squamous Cell Carcinoma (International journal of molecular sciences. 2018;19(12):3996-3996)",
+    "Comparison of Characteristics According to Reflux Type in Patients With Laryngopharyngeal Reflux (CLINICAL AND EXPERIMENTAL OTORHINOLARYNGOLOGY. 2018;11(2):141-145)",
+    "Do laryngoscopic findings reflect the characteristics of reflux in patients with laryngopharyngeal reflux? (CLINICAL OTOLARYNGOLOGY. 2018;43(1):137-143)",
+    "Factors Affecting the Result of Intralesional Corticosteroid Injection in Patients With Oral Lichen Planus (CLINICAL AND EXPERIMENTAL OTORHINOLARYNGOLOGY. 2018;11(3):205-209)",
+    "Ultrasonographic features associated with false-negative and false-positive results of extrathyroidal extensions in papillary thyroid microcarcinoma (European Archives of Oto-Rhino-Laryngology. 2018;275(11):2817-2822)",
+    "Carbonyl reductase 1 is a new target to improve the effect of radiotherapy on head and neck squamous cell carcinoma (Journal of experimental & clinical cancer research : CR. 2018;37(1):264-264)",
+    "Risk factors for transcervical incision and drainage of pediatric deep neck infections (JOURNAL OF PEDIATRIC SURGERY. 2018;53(4):666-670)",
+    "Association between 24-hour combined multichannel intraluminal impedance-pH monitoring and symptoms or quality of life in patients with laryngopharyngeal reflux (CLINICAL OTOLARYNGOLOGY. 2017;42(3):584-591)",
+    "Occult lymph node metastasis and risk of regional recurrence in papillary thyroid cancer after bilateral prophylactic central neck dissection: A multi-institutional study (SURGERY. 2017;161(2):465-471)",
+    "Clinical significance of YAP1 activation in head and neck squamous cell carcinoma (ONCOTARGET. 2017;8(67):111130-111143)",
+    "Re: Segmental mandibulectomies made easier: a simple drill guide (British Journal of Oral and Maxillofacial Surgery. 2017;55(7):744-744)",
+    "Dysphagia due to Upper Esophageal Sphincter Disorder after Suicide Attempts (Journal of Korean Medical Science. 2017;32(8):1217-1219)",
+    "Clinicopathologic characteristics and pattern of central lymph node metastasis in papillary thyroid cancer located in the isthmus. (LARYNGOSCOPE. 2016;126(10):2419-2421)",
+    "Effect of postoperative proton pump inhibitor therapy on voiceoutcome s following phonomicrosurge ry for vocal fold polyp: arandomized cont rolled study (CLINICAL OTOLARYNGOLOGY. 2016;41(0):730-736)",
+    "Prevalence and risk factors of sialocele formation after partial superficial parotidectomy: A multi-institutional analysis of 357 consecutive patients (HEAD AND NECK-JOURNAL FOR THE SCIENCES AND SPECIALTIES OF THE HEAD AND NECK. 2016;38(0):941-944)",
+    "Optimal Timing of Saliva Collection to Detect Pepsin in PatientsWith Laryngopharyngeal Reflux (LARYNGOSCOPE. 2016;126(12):2770-2773)",
+    "Investigation of nanostructural changes following acute injury using atomic force microscopy in rabbit vocal folds (MICROSCOPY RESEARCH AND TECHNIQUE. 2015;78(7):569-576)",
+    "Predictive Factors for Occult Contralateral Carcinoma in Patients with Unilateral Papillary Thyroid Microcarcinoma by Preoperative Ultrasonographic and Pathological Features (WORLD JOURNAL OF SURGERY. 2015;39(7):1736-1741)",
+    "Association between interleukin 17/interleukin 17 receptor gene polymorphisms and papillary thyroid cancer in Korean population (CYTOKINE. 2015;71(2):283-288)",
+    "Evaluation of salivary function in patients with burning mouth syndrome (ORAL DISEASES. 2015;21(3):308-313)",
+    "Efficacy of Spinal Needle Aspiration in Patients with Epiglottic Abscess: A Prospective, Randomized, Controlled Study (OTOLARYNGOLOGY-HEAD AND NECK SURGERY. 2015;153(1):48-53)",
+    "Single nucleotide polymorphisms of the Fas gene are associated with papillary thyroid cancer (AURIS NASUS LARYNX. 2015;42(4):326-331)",
+    "Comparison of Complications in Stroke Subjects Undergoing Early Versus Standard Tracheostomy (RESPIRATORY CARE. 2015;60(5):651-657)",
+    "Predictive Factors of Contralateral Paratracheal Lymph Node Metastasis in Papillary Thyroid Cancer: Prospective Multicenter Study (OTOLARYNGOLOGY-HEAD AND NECK SURGERY. 2014;150(2):210-215)",
+    "Change in position dependency in non-responders after multilevel surgery for obstructive sleep apnea: analysis of polysomnographic parameters (EUROPEAN ARCHIVES OF OTO-RHINO-LARYNGOLOGY. 2014;271(5):1081-1085)",
+    "Risk factors for recurrence of peritonsillar abscess (JOURNAL OF LARYNGOLOGY AND OTOLOGY. 2014;128(12):1084-1088)",
+    "Analysis of Mandibular Structure Using 3D Facial Computed Tomography (OTOLARYNGOLOGY-HEAD AND NECK SURGERY. 2014;151(5):760-764)",
+    "A Fas-Associated via Death Domain Promoter Polymorphism (rs10898853,-16C/T) as a Risk Factor for Papillary Thyroid Cancer (EUROPEAN SURGICAL RESEARCH. 2014;52(1-2):1-7)",
+    "Changes in the Quality of Life of Patients With Laryngopharyngeal Reflux After Treatment (JOURNAL OF VOICE. 2014;28(4):487-491)",
+    "Influence of Age on Treatment With Proton Pump Inhibitors in Patients With Laryngopharyngeal Reflux Disease A Prospective Multicenter Study (JAMA OTOLARYNGOLOGY-HEAD & NECK SURGERY. 2013;139(12):1291-1295)",
+    "Prevalence of Snoring and High Risk of Obstructive Sleep Apnea Syndrome in Young Male Soldiers in Korea (JOURNAL OF KOREAN MEDICAL SCIENCE. 2013;28(9):1373-1377)",
+    "Incidence and clinical characteristics of prelaryngeal lymph node metastasis in papillary thyroid cancer (EUROPEAN ARCHIVES OF OTO-RHINO-LARYNGOLOGY. 2013;270(9):2547-2550)",
+    "Interleukin 22 polymorphisms and papillary thyroid cancer (JOURNAL OF ENDOCRINOLOGICAL INVESTIGATION. 2013;36(8):584-587)",
+    "Routine computerised tomography in patients with acute supraglottitis for the diagnosis of epiglottic abscess: is it necessary? - a prospective, multicentre study (CLINICAL OTOLARYNGOLOGY. 2013;38(2):142-147)",
+    "Intralesional Injection versus Mouth Rinse of Triamcinolone Acetonide in Oral Lichen Planus: A Randomized Controlled Study (OTOLARYNGOLOGY-HEAD AND NECK SURGERY. 2013;148(3):443-449)",
+    "Association Study of Chemokine (C-C motif) Ligand 5 Gene Polymorphism and Papillary Thyroid Cancer (JOURNAL OF INVESTIGATIVE SURGERY. 2013;26(6):319-324)"
+  ],
+  "언론": [
+    {
+      "targetDate": "2025-08-26",
+      "type": null,
+      "text": "[병원신문] 노원을지대병원 9월 13일, 이비인후과 연수강좌에서  '외래에서 자주 보게 되는 구강 내 질환의 진단과 치료' 강연 예정",
+      "url": "javascript:;",
+      "issuer": null
+    },
+    {
+      "targetDate": "2024-12-23",
+      "type": null,
+      "text": "[중앙일보] 먹고 말하고 숨쉬기까지 힘들어져…흡연자는 발병 위험 2배",
+      "url": "javascript:;",
+      "issuer": null
+    },
+    {
+      "targetDate": "2024-06-22",
+      "type": null,
+      "text": "[세계일보] 구역질 중 목에서 나온 지독한 ‘알갱이’… 입냄새의 ‘주범’ 편도결석",
+      "url": "javascript:;",
+      "issuer": null
+    },
+    {
+      "targetDate": "2024-04-15",
+      "type": null,
+      "text": "[한국일보] 두경부암, 담배·술·인유두종바이러스(HPV) 감염 때문에 발생",
+      "url": "javascript:;",
+      "issuer": null
+    },
+    {
+      "targetDate": "2024-01-29",
+      "type": null,
+      "text": "[중앙일보헬스미디어] 두경부암, 수술 후 삶의 질까지 고려한 치료법 선택해야",
+      "url": "javascript:;",
+      "issuer": null
+    }
+  ]
+}

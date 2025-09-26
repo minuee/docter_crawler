@@ -1,0 +1,63 @@
+{
+  "hospital_cid": 438,
+  "bedoc_id": "A8243",
+  "bedoc_hospitalsite": "http://www.noon.co.kr",
+  "bedoc_doctorname": "이원기",
+  "bedoc_deptname": "안과",
+  "bedoc_hospitalname": "누네안과병원",
+  "hospital_name": "누네안과병원",
+  "aiga_hid": "H21KR-11000040",
+  "hospital_site": "https://www.noon.co.kr/about/doctor_view/1/4?sch_key=&sch_branch_code_key=1&sch_center_code_no=&sch_text=",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 강남구 테헤란로 408, 대치빌딩 지상9층~지상17층 (대치동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.noon.co.kr/about/doctor_view/1/4?sch_key=&sch_branch_code_key=1&sch_center_code_no=&sch_text=&doctorName=%EC%9D%B4%EC%9B%90%EA%B8%B0&depthName=%EC%95%88%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "https://www.noon.co.kr/upload/doctor/20220112133846.png",
+  "specialty": "망막, 포도막",
+  "학력": [
+    {
+      "date": null,
+      "content": "· 서울대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "· 한양대학교 안과학 석사"
+    },
+    {
+      "date": null,
+      "content": "· 한양대학교 안과학 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "· 미국황반학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "· 대한안과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "· 한국망막학회 회장"
+    },
+    {
+      "date": null,
+      "content": "· 오사카 시립대학교 Visiting Researcher"
+    },
+    {
+      "date": null,
+      "content": "· 가톨릭대학교 의과대학 안과 교수"
+    }
+  ],
+  "학술": [],
+  "수상": [],
+  "논문": [],
+  "저서": [],
+  "언론": []
+}

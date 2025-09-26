@@ -1,9 +1,23 @@
 const { chromium } = require('playwright');
 const cheerio = require('cheerio');
+const fs = require('fs');
 
 (async () => {
-    const doctorData = JSON.parse(process.argv[2]);
-    const { hospital_site, bedoc_doctorname, site_type, bedoc_hospitalsite } = doctorData;
+    const jsonPath = process.argv[2];
+    if (!jsonPath) {
+        console.error('Please provide a path to the JSON file as an argument.');
+        process.exit(1);
+    }
+
+    let doctorData;
+    try {
+        doctorData = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
+    } catch (e) {
+        console.error('Failed to read or parse the JSON file.');
+        process.exit(1);
+    }
+
+    const { hospital_site, bedoc_doctorname } = doctorData;
 
     const browser = await chromium.launch({ headless: true });
     const context = await browser.newContext({
@@ -11,7 +25,6 @@ const cheerio = require('cheerio');
     });
     let page = await context.newPage();
 
-    let extractedHtml = null;
     let isAttend = false;
     let error = null;
     let parsedDetails = {};
@@ -19,41 +32,10 @@ const cheerio = require('cheerio');
     try {
         await page.goto(hospital_site, { waitUntil: 'domcontentloaded', timeout: 120000 });
 
-        const clickMoreButtons = async (currentPage) => {
-            const maxClicks = 10;
-            let clickedCount = 0;
-            let buttonFound = true;
-
-            while (buttonFound && clickedCount < maxClicks) {
-                buttonFound = false;
-                const moreButton = await currentPage.$('button:has-text("더보기")') ||
-                                   await currentPage.$('a:has-text("더보기")') ||
-                                   await currentPage.$('button:has-text("더보기 +")') ||
-                                   await currentPage.$('a:has-text("더보기 +")');
-
-                if (moreButton) {
-                    try {
-                        await moreButton.click();
-                        await currentPage.waitForTimeout(1000);
-                        clickedCount++;
-                        buttonFound = true;
-                    } catch (clickError) {
-                        console.log(`Could not click more button: ${clickError.message}`);
-                        buttonFound = false;
-                    }
-                }
-            }
-        };
-
-        await clickMoreButtons(page);
-
         let rawHtml = await page.content();
         let $ = cheerio.load(rawHtml);
 
-        $('script, style, nav, header, footer, iframe, noscript').remove();
-        extractedHtml = $('body').html();
-
-        if (extractedHtml && extractedHtml.includes(bedoc_doctorname)) {
+        if (rawHtml.includes(bedoc_doctorname)) {
             isAttend = true;
         }
 
@@ -118,53 +100,68 @@ const cheerio = require('cheerio');
 
         parsedDetails.논문 = [];
         parsedDetails.저서 = [];
-        try {
-            const thesisTab = await page.$('a[href="#tab_con02"]');
-            if (thesisTab) {
-                await thesisTab.click();
-                await page.waitForSelector('#tab_con02.active', { state: 'visible', timeout: 10000 });
-                await page.waitForTimeout(1000);
-
-                const thesisContainer = await page.$('#tab_con02');
-                if (thesisContainer) {
-                    const thesisList = await thesisContainer.$('div.thesis_list');
-                    if (thesisList) {
-                        const thesisContentHtml = await thesisList.innerHTML();
-                        const $thesis = cheerio.load(thesisContentHtml);
-                        $thesis('br').replaceWith('\n');
-                        const thesisText = $thesis.text().trim();
-
-                        if (thesisText) {
-                            const lines = thesisText.split('\n').map(line => line.trim()).filter(Boolean);
-                            let currentSection = null;
-                            lines.forEach(line => {
-                                if (line === '저서') {
-                                    currentSection = 'books';
-                                } else if (line === '논문') {
-                                    currentSection = 'papers';
-                                } else if (line === '특허') {
-                                    currentSection = 'patents'; 
-                                } else if (currentSection === 'books') {
-                                    const yearMatch = line.match(/^(\d{4}년)/);
-                                    const date = yearMatch ? yearMatch[1] : null;
-                                    const content = line.replace(/^\d{4}년,?\s*/, '');
-                                    parsedDetails.저서.push({ date: date, content: content.replace(/"/g, ''), issuer: null });
-                                } else if (currentSection === 'papers') {
-                                    if (line !== '그 외 다수.') {
-                                        parsedDetails.논문.push(line.replace(/^\d+\.\s*/, '').replace(/"/g, ''));
-                                    }
-                                }
-                            });
-
-                        }
+        const thesisTabHtml = $('#tab_con02').html();
+        if (thesisTabHtml) {
+            const $thesis = cheerio.load(thesisTabHtml);
+            $thesis('h3').each((i, el) => {
+                const title = $(el).text().trim();
+                if (title === '논문') {
+                    const thesisListHtml = $(el).next('.thesis_list').html();
+                    if (thesisListHtml) {
+                        parsedDetails.논문 = thesisListHtml.split('<br>').map(item => item.trim().replace(/"/g, '')).filter(item => item);
+                    }
+                } else if (title === '저서') {
+                    const bookListHtml = $(el).next('.thesis_list').html(); // Assuming same structure
+                    if (bookListHtml) {
+                        parsedDetails.저서 = bookListHtml.split('<br>').map(item => {
+                            const yearMatch = item.match(/^(\d{4}년)/);
+                            const date = yearMatch ? yearMatch[1] : null;
+                            const content = item.replace(/^\d{4}년,?\s*/, '').trim();
+                            return { date: date, content: content.replace(/"/g, ''), issuer: null };
+                        }).filter(item => item.content);
                     }
                 }
-            }
-        } catch (tabError) {
-            console.log(`Error handling thesis tab: ${tabError.message}`);
+            });
         }
 
         parsedDetails.언론 = [];
+        try {
+            const mediaTab = await page.$('a[href="#tab_con03"]');
+            if (mediaTab) {
+                await mediaTab.click();
+                await page.waitForSelector('#boardContents p', { state: 'visible', timeout: 10000 });
+                const mediaHtml = await page.innerHTML('#boardContents');
+                const $media = cheerio.load(mediaHtml);
+                $media('p').each((i, el) => {
+                    const aTag = $(el).find('a');
+                    const title = aTag.text().trim().replace(/"/g, '');
+                    if (title) {
+                        const href = aTag.attr('href');
+                        let url = null;
+                        if (href && href.includes('goNews')) {
+                            const urlMatch = href.match( /\'([^']+)\'/ );
+                            if (urlMatch) {
+                                url = urlMatch[1];
+                            }
+                        }
+                        const date = $(el).find('span').text().trim();
+                        const fullText = $(el).text().trim();
+                        const issuerMatch = fullText.match(/ \s*(.*)/);
+                        const issuer = issuerMatch ? issuerMatch[1].trim() : null;
+
+                        parsedDetails.언론.push({
+                            targetDate: date,
+                            type: '기사',
+                            text: title,
+                            url: url,
+                            issuer: issuer
+                        });
+                    }
+                });
+            }
+        } catch (tabError) {
+            console.log(`Error handling media tab: ${tabError.message}`);
+        }
 
     } catch (e) {
         error = `Error during Playwright execution: ${e.message}`; 
@@ -174,9 +171,16 @@ const cheerio = require('cheerio');
         }
     }
 
-    console.log(JSON.stringify({
-        isAttend: isAttend,
-        error: error,
-        ...parsedDetails
-    }));
+    const finalData = { ...doctorData, ...parsedDetails, isAttend, error };
+    if (!error && (finalData.학력.length > 0 || finalData.경력.length > 0)) {
+        finalData.isExist = true;
+        finalData.isSearchType = 'html_playwright';
+        finalData.error = null;
+    } else {
+        finalData.isExist = false;
+        finalData.isSearchType = 'html_playwright_failed';
+    }
+
+    fs.writeFileSync(jsonPath, JSON.stringify(finalData, null, 2));
+
 })();

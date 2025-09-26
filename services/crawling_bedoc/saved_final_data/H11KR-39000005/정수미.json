@@ -1,0 +1,96 @@
+{
+  "hospital_cid": 530,
+  "bedoc_id": "A0780",
+  "bedoc_hospitalsite": "http://www.cmcujb.or.kr/",
+  "bedoc_doctorname": "정수미",
+  "bedoc_deptname": "방사선종양학과",
+  "bedoc_hospitalname": "여의도성모병원",
+  "hospital_name": "제주한라병원",
+  "aiga_hid": "H11KR-39000005",
+  "hospital_site": "https://www.hallahosp.co.kr/department.php?d_code=RO",
+  "site_type": "list",
+  "hospital_addr": "제주특별자치도 제주시 도령로 65,  (연동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "specialty": "유방암",
+  "profileUrl": "https://www.hallahosp.co.kr/data/file/medical_doctor/thumb/thumb-%EB%B0%A9%EC%82%AC%EC%84%A0%EC%A2%85%EC%96%91%ED%95%99%EA%B3%BC%20%EC%A0%95%EC%88%98%EB%AF%B8%20%EA%B3%BC%EC%9E%A5_200x.jpg",
+  "isAttend": true,
+  "학력": [
+    {
+      "date": null,
+      "content": "가톨릭대학교 의과대학"
+    },
+    {
+      "date": null,
+      "content": "가톨릭대학교 의과대학원 석사"
+    },
+    {
+      "date": null,
+      "content": "가톨릭대학교 의과대학원 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "가톨릭대학교 여의도성모병원 인턴"
+    },
+    {
+      "date": null,
+      "content": "가톨릭대학교 서울성모병원 레지던트"
+    },
+    {
+      "date": null,
+      "content": "가톨릭대학교 여의도성모병원 임상강사"
+    },
+    {
+      "date": null,
+      "content": "가톨릭대학교 서울성모병원 전임강사"
+    },
+    {
+      "date": null,
+      "content": "가톨릭대학교 서울성모병원 조교수"
+    },
+    {
+      "date": null,
+      "content": "The University of Chicago Radiation and Cellular Oncology Research Fellow"
+    },
+    {
+      "date": null,
+      "content": "가톨릭대학교 서울성모병원 부교수"
+    },
+    {
+      "date": null,
+      "content": "가톨릭대학교 서울성모병원 임상과장"
+    },
+    {
+      "date": null,
+      "content": "가톨릭대학교 서울성모병원 교수"
+    },
+    {
+      "date": null,
+      "content": "가톨릭대학교 여의도성모병원 임상과장"
+    },
+    {
+      "date": null,
+      "content": "가톨릭대학교 의과대학 명예교수"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "한국 유방암학회 진료권고안위원회 위원 역임"
+    },
+    {
+      "date": null,
+      "content": "한국 유방암학회 편집위원 역임"
+    },
+    {
+      "date": null,
+      "content": "대한 암학회 편집위원 역임"
+    },
+    {
+      "date": null,
+      "content": "대한 방사선종양학회 편집위원 역임"
+    }
+  ]
+}

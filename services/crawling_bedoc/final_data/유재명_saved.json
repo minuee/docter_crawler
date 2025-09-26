@@ -1,0 +1,132 @@
+{
+  "hospital_cid": 360,
+  "bedoc_id": "A0177",
+  "bedoc_hospitalsite": "http://kangnam.hallym.or.kr",
+  "bedoc_doctorname": "유재명",
+  "bedoc_deptname": "내분비내과",
+  "bedoc_hospitalname": "강남성심병원",
+  "hospital_name": "강남성심병원",
+  "aiga_hid": "H11KR-11000040",
+  "hospital_site": "https://kangnam.hallym.or.kr/ptm207.asp?Doctor_Id=259",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 영등포구 신길로 1, (대림동, 강남성심병원)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://kangnam.hallym.or.kr/ptm207.asp?Doctor_Id=259&doctorName=%EC%9C%A0%EC%9E%AC%EB%AA%85&depthName=%EB%82%B4%EB%B6%84%EB%B9%84%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "profileUrl": "https://kangnam.hallym.or.kr/CHPFile/treatment/B_20210811_12102105_b_1.png",
+  "specialty": "내분비 및 대사질환, 당뇨병, 갑상선질환, 골다공증, 골대사질환 및 부갑상선질환, 고지혈증 , 부신질환 , 2차성고혈압, 뇌하수체 질환, 기타 호르몬이상질환",
+  "학력": [
+    {
+      "date": "1978.03 ~ 1984.02",
+      "content": "고려대학교 의과대학"
+    },
+    {
+      "date": "1985.09 ~ 1987.08",
+      "content": "고려대학교 의과대학원 석사"
+    },
+    {
+      "date": "1991.09 ~ 1994.02",
+      "content": "고려대학교 의과대학원 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1985.03 ~ 1988.02",
+      "content": "고려대의료원 내과 전공의"
+    },
+    {
+      "date": "2000.03 ~ 2001.02",
+      "content": "미국 UCSD 교환교수"
+    },
+    {
+      "date": "2010.09 ~ 2012.08",
+      "content": "한림대학교강남성심병원 기획실장"
+    },
+    {
+      "date": "2012.09 ~ 2016.02",
+      "content": "한림대학교강남성심병원 진료부원장"
+    },
+    {
+      "date": "2005.10 ~ 2019.10",
+      "content": "한림대학교강남성심병원 내분비내과 분과장"
+    },
+    {
+      "date": "2007.03 ~ 2019.10",
+      "content": "한림대학교강남성심병원 내과 임상과장"
+    },
+    {
+      "date": "1994.03 ~ 2025.02",
+      "content": "한림대학교강남성심병원 내분비내과 교수"
+    },
+    {
+      "date": "2025.03 ~ ",
+      "content": "現 한림대학교강남성심병원 내분비내과 객원교수"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한내과학회"
+    },
+    {
+      "date": null,
+      "content": "대한당뇨병학회 : 캠프이사"
+    },
+    {
+      "date": null,
+      "content": "대한내분비학회"
+    },
+    {
+      "date": null,
+      "content": "2015년 대한당뇨병학회 부회장"
+    }
+  ],
+  "언론": [
+    {
+      "targetDate": "2023-10-10",
+      "type": "언론",
+      "text": "당뇨병 환자,‘이것’없으면 심혈관질환 사망률 2배",
+      "url": "https://health.chosun.com/site/data/html_dir/2023/10/06/2023100602641.html",
+      "issuer": "헬스조선"
+    },
+    {
+      "targetDate": "2023-10-09",
+      "type": "언론",
+      "text": "근육량 적은 당뇨환자, 심혈관질환 사망위험 2배",
+      "url": "https://www.dailymedi.com/news/news_view.php?wr_id=903092",
+      "issuer": "데일리메디"
+    },
+    {
+      "targetDate": "2016-04-08",
+      "type": "언론",
+      "text": "'설탕 줄이기' 대책 나왔지만…중독성 이길 수 있을까",
+      "url": "http://news.jtbc.joins.com/html/755/NB11209755.html",
+      "issuer": "JTBC"
+    },
+    {
+      "targetDate": "2016-04-07",
+      "type": "언론",
+      "text": "정부, '설탕과 전쟁' 선포…권고·유도로 이길 수 있나?",
+      "url": "http://news.jtbc.joins.com/html/409/NB11209409.html",
+      "issuer": "JTBC"
+    },
+    {
+      "targetDate": "2015-12-29",
+      "type": "언론",
+      "text": "한림대강남성심병원 당뇨내분비센터는...",
+      "url": "http://news.kmib.co.kr/article/view.asp?arcid=0923372419",
+      "issuer": "국민일보"
+    }
+  ],
+  "저서": [],
+  "논문": [],
+  "수상": [
+    {
+      "date": "1995",
+      "content": "대한당뇨병학회 학술상 수상"
+    }
+  ]
+}

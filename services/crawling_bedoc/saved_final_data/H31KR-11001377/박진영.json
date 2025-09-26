@@ -1,0 +1,49 @@
+{
+  "hospital_cid": 240,
+  "bedoc_id": "A1138",
+  "bedoc_hospitalsite": "http://www.neon.or.kr/",
+  "bedoc_doctorname": "박진영",
+  "bedoc_deptname": "정형외과",
+  "bedoc_hospitalname": "박진영네온정형외과의원",
+  "hospital_name": "네온정형외과",
+  "aiga_hid": "H31KR-11001377",
+  "hospital_site": "http://www.neon.or.kr/bbs/board.php?bo_table=board0103",
+  "site_type": "list",
+  "hospital_addr": "서울특별시 강남구 선릉로131길 8, 노벨빌딩 (논현동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "http://www.neon.or.kr/img/board0103.jpg",
+  "specialty": null,
+  "학력": [
+    { "date": null, "content": "서울대학교 의과대학 졸업" },
+    { "date": null, "content": "서울대학교 의과대학원 박사취득" }
+  ],
+  "경력": [
+    { "date": null, "content": "서울대학교 정형외과 전공의 수료" },
+    { "date": null, "content": "단국대학교 의과대학 부교수" },
+    { "date": null, "content": "건국대학교 의학전문대학원 교수" },
+    { "date": null, "content": "건국대학교병원,정형외과과장,어깨팔꿈치센터장" },
+    { "date": null, "content": "(현)박진영 네온 정형외과 원장" },
+    { "date": null, "content": "미국 뉴욕 컬럼비아 대학원 병원 어깨,팔꿈치,스포츠센터 임상강사" },
+    { "date": null, "content": "미국 메이어 클리닉,정형외과 연수" },
+    { "date": null, "content": "대한견-주관절학회 선정:미국,일본,유럽 traveling fellow 수상" },
+    { "date": null, "content": "제마스포츠의학상,대한선수트레이너협회 Best MD상 수상" },
+    { "date": null, "content": "동아일보 ‘메디칼 프론티어; 관절질환 및 스포츠외상 베스트 의사’ 선정" },
+    { "date": null, "content": "동아일보 ‘신베스트닥터의 건강학: 관절수술분야 명의들’ 선정" },
+    { "date": null, "content": "네이버 케스트 ‘한국의 명의 100인’ 선정" },
+    { "date": null, "content": "EBS ‘명의’ 200인 선정" },
+    { "date": null, "content": "2008년 베이징 올림픽, 대한민국 선수단 팀닥터" },
+    { "date": null, "content": "MBC ESPN 날려라 홈런왕 팀닥터 (역임)" }
+  ],
+  "학술": [
+    { "date": null, "content": "대한올림픽위원회(Korean Olympic Committee) 의무위원" },
+    { "date": null, "content": "대한야구협회(Korea Baseball Organization) 실행위원" },
+    { "date": null, "content": "제 4차 아시아 견관절학회 조직위원회 학술위원장 (역임)" },
+    { "date": null, "content": "제 13차 세계 견-주관절학회 조직위원회, 조직위원장" },
+    { "date": null, "content": "대한견-주관절학회, 회장 (역임)" },
+    { "date": null, "content": "대한스포츠학회, 대한정형외과초음파학회, 상근부회장" },
+    { "date": null, "content": "미국 견-주관절학회, 국제회원" }
+  ]
+}

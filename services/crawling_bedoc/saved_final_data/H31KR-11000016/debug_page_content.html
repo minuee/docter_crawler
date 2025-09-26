@@ -1,0 +1,1758 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="description" content="차 여성의학연구소 서울역"><meta property="og:image" content="/asset/img/og_image.jpg"><meta property="og:type" content="website"><meta property="og:title" content="차 여성의학연구소 서울역"><meta property="og:description" content="차 여성의학연구소 서울역"><title>
+	윤태기 교수 홈페이지 | 차 여성의학연구소 서울역
+</title><link rel="stylesheet" type="text/css" href="/asset/font/font.css"><link rel="stylesheet" type="text/css" href="/asset/css/common.css"><link rel="stylesheet" type="text/css" href="/asset/css/jquery-ui.css"><link rel="stylesheet" type="text/css" href="/asset/css/jquery.bxslider.css"><link rel="stylesheet" type="text/css" href="/asset/css/layout.css"><link rel="stylesheet" type="text/css" href="/asset/css/swiper.min.css"><link rel="stylesheet" type="text/css" href="/asset/css/slick.css">
+
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-1L4SYRWV13&amp;cx=c&amp;gtm=4e59c1h1"></script><script type="text/javascript" src="/asset/js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="/asset/js/ui.js"></script>
+    <script type="text/javascript" src="/asset/js/script.js"></script>
+    <script type="text/javascript" src="/asset/js/program.js"></script>
+    <script type="text/javascript" src="/asset/js/index.js"></script>
+    <script type="text/javascript" src="/asset/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="/asset/js/datepicker.js"></script>
+    <script type="text/javascript" src="/asset/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="/asset/js/jquery.placeholder.min.js"></script>
+    <script type="text/javascript" src="/asset/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="/asset/js/jquery.wookmark.js"></script>
+    <script type="text/javascript" src="/asset/js/slick.js"></script>
+    <script type="text/javascript" src="/asset/js/scroll.js"></script>
+    <script type="text/javascript" src="/asset/js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="/asset/js/getComputedStyle.js"></script>
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/asset/css/ie8.css" />
+    <script type='text/javascript' src="/asset/js/poly-checked.min.js"></script>
+    <![endif]-->
+
+    <script>
+        $(document).ready(function(){
+            if( $(".special .explain_text").innerHeight() > 87 ){
+                $(".special .explain_text").mCustomScrollbar();
+            }
+        });
+    </script>
+
+    
+    <script type="text/javascript">
+        // $(document).ready(function(){
+        //     if( $(".special .explain_text").innerHeight() > 87 ){
+        //         $(".special .explain_text").mCustomScrollbar();
+        //     }
+        // });
+
+        $(window).load(function () {
+            $(".thesisList > li").each(function () {
+                if ($(this).index() > 9) {
+                    $(this).addClass('none').hide();
+                }
+            });
+            hideThesisBtn();
+        });
+
+        function showthesis() {
+            var cntShow = $(".thesisList > li:visible").length + 10;
+
+            $(".thesisList > li:hidden").each(function () {
+                if ($(this).index() < cntShow) {
+                    $(this).show();
+                }
+            });
+            hideThesisBtn();
+        }
+
+        function hideThesisBtn() {
+            if ($(".thesisList .none").length == 0) {
+                $('.thesisBtn').hide();
+            }
+
+            if ($(".thesisList > li:hidden").length == 0) {
+                $('.thesisBtn').hide();
+            }
+        }
+
+        // 논문 - 목차 넘버링(감소)
+        $(window).load(function () {
+            var NumList = $('.color_number_list li');
+
+            NumList.prepend( '<span class="num">num</span>' );
+            NumList.each(function (index, item) { 
+                var total = NumList.length;
+                var value= total - index;
+            
+                if( value >= 10 ){
+                    $(this).find('.num').text( value );
+                }else{
+                    $(this).find('.num').text('0' + value);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="./professor.cha?idx=257" id="aspnetForm" autocomplete="off">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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7YSwZAIBDxYCHwIC/////w9kAgIPFQEAZAIHD2QWBmYPFQIZaHR0cHM6Ly9uZXdzLmNoYW1jLmNvLmtyLxPssKjrs5Hsm5Ag64m07Iqk66O4ZAIBDxYCHwIC/////w9kAgIPFQEAZAICDxUCAABkAgsPFgIfAWhkAg0PFgIfAgIGFgxmD2QWCGYPFQEBMWQCAQ8PFgYeCEltYWdlVXJsBT5odHRwczovL3dtYW5hZ2VyLmNoYW1jLmNvLmtyL2ZpbGUvcG9wdXAvZ25iX2JhbmVyXzIyMDUwMi0xLmpwZx4LTmF2aWdhdGVVcmwFLmh0dHBzOi8vc2VvdWwuY2hhbWMuY28ua3IvY29tbXVuaXR5L25vdGljZS5jaGEeBlRhcmdldAUGX2JsYW5rZGQCAw8WAh8CAgMWBmYPZBYCZg8VAxkvYXBwb2ludG1lbnQvc2NoZWR1bGUuY2hhBV9zZWxmFuydmOujjOynhC/sp4Tro4zsnbzsoJVkAgEPZBYCZg8VAxgvYXBwb2ludG1lbnQvcmVzZXJ2ZS5jaGEFX3NlbGYM7KeE66OM7JiI7JW9ZAICD2QWAmYPFQMYL2FwcG9pbnRtZW50L2NvbnN1bHQuY2hhBV9zZWxmDTE6MSDsg4Hri7Tsi6RkAgUPFgIfAgL/////D2QCAQ9kFghmDxUBATJkAgEPDxYGHwMFPmh0dHBzOi8vd21hbmFnZXIuY2hhbWMuY28ua3IvZmlsZS9wb3B1cC9nbmJfYmFuZXJfMjIwNTAyLTIuanBnHwQFGy9ndWlkZS9pbnRyb2R1Y3Rpb25fcHJlLmNoYR8FBQZfYmxhbmtkZAIDDxYCHwICCRYSZg9kFgJmDxUDFy9ndWlkZS9pbnRyb2R1Y3Rpb24uY2hhBV9zZWxmEuyymOydjOyYpOyLnOuKlOu2hGQCAQ9kFgJmDxUDFC9ndWlkZS90cmVhdG1lbnQuY2hhBV9zZWxmDOyZuOuemOynhOujjGQCAg9kFgJmDxUDEi9ndWlkZS9zdXJnZXJ5LmNoYQVfc2VsZg3siJjsiKAg7JWI64K0ZAIDD2QWAmYPFQMQL2d1aWRlL3Bob25lLmNoYQVfc2VsZhLso7zsmpTsoITtmZTrsojtmLhkAgQPZBYCZg8VAxMvZ3VpZGUvbG9jYXRpb24uY2hhBV9zZWxmGeyYpOyLnOuK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PGxpIGNsYXNzPSJwYXJ0Ij7tlZntmow8L2xpPg0KPGxpPgnrjIDtlZzrtojsnoTtlZntmowg7ZWZ7Iig7JyE7JuQ7J6lCTwvbGk+DQo8bGk+CeuMgO2VnOyCsOu2gOyduOqzvO2Vme2ajCDsnbjqs7XsiJjtg5zsi6zsgqzshozsnITsm5DtmowoQVJUKSDsnITsm5DsnqUJPC9saT4NCjxsaT4J7ZWc6rWt67Cp7Iah6rO17IKsKEtCUykg7J2Y66OM7J6Q66y47JyE7JuQCTwvbGk+DQo8bGk+Ceq1reqwgOyDneuqheycpOumrOyLrOydmOychOybkO2ajCDsnbjqs7XsiJjsoJXsoITrrLjsnITsm5Dtmowg7JyE7JuQ7J6lCTwvbGk+DQo8bGk+CeyVhOyEuOyVhOyYpOyEuOyVhOuLiOyVhCDsgrDrtoDsnbjqs7ztlZntmowoQU9DT0cpIFJlcHJvZHVjdGl2ZSBDb21taXR0ZWUg7JyE7JuQCTwvbGk+DQo8bGk+CeuMgO2VnOuztOyhsOyDneyLne2Vme2ajCDtmozsnqUJPC9saT4NCjxsaT4J67O06rG067O17KeA67aAIOu2iOyehOu2gOu2gCDsp4Dsm5Dsgqzsl4Ug7KSR7JWZ7Ius7J2Y7JyE7JuQ7ZqMIOu2gOychOybkOyepQk8L2xpPg0KPGxpPgnrjIDtlZzsgrDrtoDsnbjqs7wg64K07Iuc6rK97ZWZ7ZqMIOycpOumrOychOybkO2ajCDsnITsm5DsnqUJPC9saT4NCjxsaT4J64yA7ZWc66+86rWtIOq1reqwgOyDneuqheycpOumrOyLrOydmOychOybkO2ajCDsnITsm5AJPC9saT4NCjxsaT4J64yA7ZWc67OR7JuQ7ZiR7ZqMIO2VmeyIoOydtOyCrAk8L2xpPg0KPGxpPgnsnbjqtazrs7TqsbTtmJHtmowg64Kc7J6E7IOB64u07IS87YSwIOyDgeuLtOychOybkAk8L2xpPg0KPGxpPgnrjIDtlZzsg53si53snZjtlZntmowg7ZqM7J6lCTwvbGk+DQo8bGk+CeuMgO2VnOuvvOq1rSDsnZjtlZntlZzrprzsm5Ag7KKF7Iug7ZqM7JuQCTwvbGk+DQo8YnI+DQo8bGkgY2xhc3M9InBhcnQiPlBvc3Rkb2N0b3JpYWwgIEZlbGxvd3NoaXA8L2xpPg0KPGxpPuuvuOq1rSBZYWxlIOuMgO2VmSDsgrDrtoDsnbjqs7wg7IOd7Iud64K067aE67mE7ZWZPC9saT4NCjxicj4NCjxsaSBjbGFzcz0icGFydCI+7IiY7IOB6rK966ClPC9saT4NCjxsaT4JMTk4OeuFhCDsoJw0NeywqCBBbm51YWwgTWVldGluZyBvZiB0aGUgQW1lcmljYW4gRmVydGlsaXR5IFNvY2lldHkg7LWc7Jqw7IiYIOuFvOusuOyDgQk8L2xpPg0KPGxpPgkxOTk364WEIOygnDfssKgg7ZWc6rWt6rO87ZWZ6riw7Iig7J247ZiR7ZqMIOy1nOyasOyImCDrhbzrrLjsg4EJPC9saT4NCjxsaT4JMTk5OOuFhCDsoJw1NOywqCBBbWVyaWNhbiBTb2NpZXR5IGZvciBSZXJwcm9kdWN0aXZlIE1lZGljaW5lIOy1nOyasOyImCDrhbzrrLjsg4EJPC9saT4NCjxsaT4JMjAwMuuFhCDsoJwz7LCoIFBhY2lmaWMgUmltIFNvY2lldHkgRm9yIEZlcnRpbGl0eSBhbmQgU3RlcmlsaXR5IOy1nOyasOyImCDtj6zsiqTthLDsg4EJPC9saT4NCjxsaT4JMjAwM+uFhCDsoJw1OeywqCBUaGUgU29jaWV0eSBmb3IgTWFsZSBSZXJwb2R1Y3Rpb24gYW5kIFVyb2xvZ3kg7Jqw7IiYIOuFvOusuOyDgQk8L2xpPg0KPGxpPgkyMDA164WEIENvbmpvaW4gQW5udWFsIE1lZXRpbmcgQW1lcmljYW4gU29jaWV0eSBmb3IgUmVycHJvZHVjdGl2ZSBNZWRpY2luZSDigJMgQ2FuYWRpYW4gRmVydGlsaXR5JkFuZHJvbG9neSBTb2NpZXR5IOyYgeyDgeu2gOusuCDstZzsmrDsiJgg64W866y47IOBCTwvbGk+DQo8bGk+CTIwMDfrhYQg7KCcNjPssKggQW1lcmljYW4gU29jaWV0eSBmb3IgUmVycHJvZHVjdGl2ZSBNZWRpY2luZSBTTVJVIFRyYXZlbGluZyBTY2hvbGFycyBBd2FyZAk8L2xpPg0KPGxpPgkyMDA464WEIOygnDU07LCoIOuMgO2VnOyDneyLneydmO2Vme2ajCDsmrDsiJgg7Y+s7Iqk7YSw7IOBCTwvbGk+DQo8bGk+CTIwMTTrhYQg7KCcOe2ajCDsnoTsgrDrtoDsnZgg64KgIOq1reustOy0neumrOyDgSDtkZzssL0JPC9saT4NCjxsaT4JMjAyMOuFhCDquIDroZzrsowg7Zes7Iqk7LyA7Ja0IOycoOqzte2PrOyDgSDrs7TqsbTrs7Xsp4DrtoDsnqXqtIDsg4Eg7ZGc7LC9CTwvbGk+DQoNCmQCHg8WAh8BZxYCAgEPFgIfAWcWAgIBDxYCHwYF/Ak8bGk+ICAgIExvbmctdGVybSBsaXF1aWQgbml0cm9nZW4gdmFwb3Igc3RvcmFnZSBvZiBtb3VzZSBlbWJyeW9zIGNyeW9wcmVzZXJ2ZWQgdXNpbmcgdml0cmlmaWNhdGlvbiBvciBzbG93IGNvb2xpbmcuIEZlcnRpbCBTdGVyaWwuIDIwMDkgTWF5OzkxKDUpOjE5MjgtMzIuICA8L2xpPg0KPGxpPiAgICBFZmZlY3Qgb2YgdXNpbmcgc2x1c2ggbml0cm9nZW4gKFNOMikgb24gZGV2ZWxvcG1lbnQgb2YgbWljcm9zdXJnaWNhbGx5IG1hbmlwdWxhdGVkIHZpdHJpZmllZC93YXJtZWQgbW91c2UgZW1icnlvcy4gSHVtIFJlcHJvZC4gMjAwNyBTZXA7MjIoOSk6MjUwOS0xNC4gIDwvbGk+DQo8bGk+ICAgIFN1cnZpdmFsIHJhdGUgb2YgaHVtYW4gb29jeXRlcyBhbmQgcHJlZ25hbmN5IG91dGNvbWUgYWZ0ZXIgdml0cmlmaWNhdGlvbiB1c2luZyBzbHVzaCBuaXRyb2dlbiBpbiBhc3Npc3RlZCByZXByb2R1Y3RpdmUgdGVjaG5vbG9naWVzLiBGZXJ0aWwgU3RlcmlsLiAyMDA3IE9jdDs4OCg0KTo5NTItNi4gICA8L2xpPg0KPGxpPiAgICBJbiB2aXRybyBtYXR1cmF0aW9uIG9mIGltbWF0dXJlIG9vY3l0ZXMgYW5kIElWRi9JQ1NJIGluIFBDT1MgcGF0aWVudHMuIEogSW5kaWFuIE1lZCBBc3NvYy4gMjAwNiBBdWc7MTA0KDgpOjQ0NiwgNDQ4LCA0NzMuICAgPC9saT4NCjxsaT4gICAgQ3J5b3ByZXNlcnZhdGlvbiBvZiB0aGUgSHVtYW4gQWR1bHQgT3ZhcmlhbiBDb3J0aWNhbCBUaXNzdWVzIGJ5IFZpdHJpZmljYXRpb24uIEtvciBKIEZlcnRpbCBTdGVyaWwgMTk5OTsgMjYoMik6MjUxLTI2My4gPC9saT4NCjxsaT4gICAgSW1wcm92ZWQgaHVtYW4gb29jeXRlIGRldmVsb3BtZW50IGFmdGVyIHZpdHJpZmljYXRpb246IGEgY29tcGFyaXNvbiBvZiB0aGF3aW5nIG1ldGhvZHMuIEZlcnRpbCBTdGVyaWwuIDE5OTk7IDcyKDEpOjE0Mi02ICAgIDwvbGk+DQo8bGk+ICAgIExhcGFyb3Njb3BpYyB0dWJhbCBhbmFzdG9tb3NpczogZmVydGlsaXR5IG91dGNvbWUgaW4gMjAyIGNhc2VzLiBGZXJ0aWwgU3RlcmlsLiAxOTk5IERlYzs3Mig2KToxMTIxLTYuICAgPC9saT4NCjxsaT4gICAgUHJlZ25hbmN5IGFmdGVyIGluIHZpdHJvIGZlcnRpbGl6YXRpb24gb2YgaHVtYW4gZm9sbGljdWxhciBvb2N5dGVzIGNvbGxlY3RlZCBmcm9tIG5vbnN0aW11bGF0ZWQgY3ljbGVzLCB0aGVpciBjdWx0dXJlIGluIHZpdHJvIGFuZCB0aGVpciB0cmFuc2ZlciBpbiBhIGRvbm9yIG9vY3l0ZSBwcm9ncmFtLiBGZXJ0aWwgU3RlcmlsLiAxOTkxIEphbjs1NSgxKToxMDktMTMuICA8L2xpPg0KZGTFE0GKiCl3hfUZhb3hrLF3AanUZiVtn6GuRv18ysjG+g==">
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="DEC4E8D3">
+</div>
+        <div class="wrap">
+            <!-- header -->
+            
+
+<div class="background_motion bg_motion01" style="margin-top: 0px;"><img src="/asset/img/bg_motion01.png" alt=""></div>
+<div class="background_motion bg_motion02" style="margin-top: 0px;"><img src="/asset/img/bg_motion02.png" alt=""></div>
+<div class="background_motion bg_motion03" style="margin-top: 0px;"><img src="/asset/img/bg_motion03.png" alt=""></div>
+<div class="background_motion bg_motion04" style="margin-top: 0px;"><img src="/asset/img/bg_motion04.png" alt=""></div>
+<div class="background_motion bg_motion05" style="margin-top: 0px;"><img src="/asset/img/bg_motion05.png" alt=""></div>
+<div class="background_motion bg_motion06" style="margin-top: 0px;"><img src="/asset/img/bg_motion06.png" alt=""></div>
+<div class="background_motion bg_motion07" style="margin-top: 0px;"><img src="/asset/img/bg_motion07.png" alt=""></div>
+<div class="background_motion bg_motion08" style="margin-top: 0px;"><img src="/asset/img/bg_motion08.png" alt=""></div>
+
+<div class="header_wrap">
+    <div class="header_area">
+        <h1>
+            <a href="/default.cha">
+                <img src="/asset/img/header_logo_pc_01.png" alt="차 여성의학연구소 서울역 로고" class="logo_en">
+                <img src="/asset/img/header_logo_pc_02.png" alt="차 여성의학연구소 서울역 로고" class="logo_ko">
+            </a>
+        </h1>
+
+        <div class="header_sns">
+            <ul>
+                <li class="ytb"><a href="https://www.youtube.com/c/chahospital/featured" target="_blank">유튜브 바로가기</a></li>
+                <li class="blog"><a href="https://blog.naver.com/cha_seoul" target="_blank">블로그 바로가기</a></li>
+                <li class="kakao"><a href="https://pf.kakao.com/_JuZnM" target="_blank">카카오 바로가기</a></li>
+                
+            </ul>
+        </div>
+
+        <div class="gnb_area">
+            <ul class="gnb_list">
+                
+                <li><a href="javascript:fnPopupLayerOpen('/member/logIn.cha');" class="gnb_login">로그인</a></li>
+                <li><a href="javascript:fnPopupLayerOpen('/member/join.cha');">회원가입</a></li>
+                
+                
+            </ul>
+
+            <div class="select_box">
+                <h3><span>LANGUAGE</span></h3>
+                <ul class="select_language" style="display: none;">
+                    <li>
+                        <a href="/default.cha" target="_blank">
+                            <img src="/asset/img/icon_korea.png" alt="">
+                            <span>KOR</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/en/" target="_blank">
+                            <img src="/asset/img/icon_usa.png" alt=""> 
+                            <span>ENG</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/cn/" target="_blank">
+                            <img src="/asset/img/icon_chn.png" alt=""> 
+                            <span>CHN</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/mn/" target="_blank">
+                            <img src="/asset/img/icon_mongo.png" alt=""> 
+                            <span>MNG</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/jp/" target="_blank">
+                            <img src="/asset/img/icon_japan.png" alt=""> 
+                            <span>JPN</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/ru/" target="_blank">
+                            <img src="/asset/img/icon_russia.png" alt=""> 
+                            <span>RUS</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="lnb_wrap">
+        <div class="lnb_area">
+            <ul class="lnb_list">
+                
+                        <li><a href="/appointment/index.cha" target="_self">진료일정ㆍ예약</a></li>
+                    
+                        <li><a href="/guide/index.cha" target="_self">이용안내</a></li>
+                    
+                        <li><a href="/clinic/index.cha" target="_self">난임클리닉</a></li>
+                    
+                        <li><a href="/fecundity/index.cha" target="_self">가임력 Check-upㆍ보존</a></li>
+                    
+                        <li><a href="/community/index.cha" target="_self">소통채널</a></li>
+                    
+                        <li><a href="/hospital/index.cha" target="_self">병원소개</a></li>
+                    
+            </ul>
+            <div class="btn_allMenu"><a href="javascript:void(0);"></a></div>
+        </div>
+    </div>
+</div>
+
+<div class="headAllMenu">
+    <div class="bg_dim"></div>
+    <div class="allMenuArea">
+        <a href="javascript:" class="btnLyClose"><img src="/asset/img/all_menu_close.jpg" alt="전체메뉴 닫기"></a>
+        <div class="cntbox allMenu_top">
+            
+                    
+                    
+
+                    <dl>
+                        <dt>진료일정ㆍ예약</dt>
+                        
+                                <dd>
+                                    <a href="/appointment/schedule.cha">의료진/진료일정</a>
+                                    
+                                            <p><a href="/appointment/schedule/ivf.cha">산부인과</a></p>
+                                        
+                                            <p><a href="/appointment/schedule/urology.cha">비뇨의학과</a></p>
+                                        
+                                            <p><a href="/appointment/schedule/internal.cha">내과</a></p>
+                                        
+                                            <p><a href="/appointment/schedule/anesthesiology.cha">마취통증의학과</a></p>
+                                        
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="/appointment/reserve.cha">진료예약</a>
+                                    
+                                            <p><a href="/appointment/reserve/guide.cha">진료예약안내</a></p>
+                                        
+                                            <p><a href="/appointment/reserve/phone.cha">전화예약</a></p>
+                                        
+                                            <p><a href="/appointment/reserve/check.cha">예약조회/취소</a></p>
+                                        
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="/appointment/consult.cha">1:1 상담실</a>
+                                    
+                                            <p><a href="/appointment/consult/online.cha">1:1전문의상담</a></p>
+                                        
+                                            <p><a href="/appointment/consult/faq.cha">1:1 상담실 FAQ</a></p>
+                                        
+                                </dd>
+
+                                
+
+
+                            
+                    </dl>
+                    
+                    
+                    
+                    
+                
+                    
+                    
+
+                    <dl>
+                        <dt>이용안내</dt>
+                        
+                                <dd>
+                                    <a href="/guide/introduction.cha">처음오시는분</a>
+                                    
+                                            <p><a href="/guide/introduction_pre.cha">준비사항 및 순서</a></p>
+                                        
+                                            <p><a href="/guide/introduction_intro.cha">처음오시나요?</a></p>
+                                        
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="/guide/treatment.cha">외래진료</a>
+                                    
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="/guide/surgery.cha">수술 안내</a>
+                                    
+                                            <p><a href="/guide/surgery/guide.cha">수술 안내</a></p>
+                                        
+                                            <p><a href="/guide/surgery/precautions.cha">시술 후 주의사항</a></p>
+                                        
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="/guide/phone.cha">주요전화번호</a>
+                                    
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="/guide/location.cha">오시는길/주차안내</a>
+                                    
+                                            <p><a href="/guide/location/traffic.cha">찾아오시는길</a></p>
+                                        
+                                            <p><a href="/guide/location/parking.cha">주차안내</a></p>
+                                        
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="/guide/support.cha">난임시술비 지원사업</a>
+                                    
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="/guide/certi.cha">증명서발급</a>
+                                    
+                                            <p><a href="/guide/certi/guide.cha">제증명발급안내</a></p>
+                                        
+                                            <p><a href="https://clinic.mycerti.com/?hospitalCode=HOS00093">온라인신청</a></p>
+                                        
+                                            <p><a href="/guide/certi/deduction.cha">소득공제신청</a></p>
+                                        
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="/guide/faq.cha">자주하는질문</a>
+                                    
+                                            <p><a href="/guide/faq_ambulatory.cha">외래진료</a></p>
+                                        
+                                            <p><a href="/guide/faq_letra.cha">난자 채취 및 배아 이식</a></p>
+                                        
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="/guide/sub.cha">대리진료 안내</a>
+                                    
+                                </dd>
+
+                                
+
+
+                            
+                    </dl>
+                    
+                    
+                    
+                    
+                
+                    <div class="w_two">
+                    
+
+                    <dl>
+                        <dt>난임클리닉</dt>
+                        
+                                <dd>
+                                    <a href="/clinic/Initial.cha">난임검사</a>
+                                    
+                                            <p><a href="/clinic/Initial/basic.cha">기본적인 난임검사</a></p>
+                                        
+                                            <p><a href="/clinic/Initial/special.cha">추가적인 난임검사</a></p>
+                                        
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="/clinic/Initial/treatment.cha">배란검사 및 치료</a>
+                                    
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="/clinic/ivf/insemi.cha">인공수정</a>
+                                    
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="/clinic/test-tube.cha">시험관아기 시술</a>
+                                    
+                                            <p><a href="/clinic/test-tube/intro.cha">클리닉 소개</a></p>
+                                        
+                                            <p><a href="/clinic/test-tube/process.cha">시술과정</a></p>
+                                        
+                                            <p><a href="/clinic/test-tube/faq.cha">시험관 아기 FAQ</a></p>
+                                        
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="/clinic/genetics.cha">착상전 유전검사</a>
+                                    
+                                            <p><a href="/clinic/genetics/exam.cha">착상전 유전검사</a></p>
+                                        
+                                            <p><a href="/clinic/genetics/faq.cha">FAQ</a></p>
+                                        
+                                </dd>
+
+                                </dl><dl>
+
+
+                            
+                                <dd>
+                                    <a href="/clinic/habitual.cha">습관성유산</a>
+                                    
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="/clinic/repetic.cha">반복착상실패</a>
+                                    
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="/clinic/polycystic.cha">다낭성 난소증후군</a>
+                                    
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="/clinic/celoscope.cha">자궁경/복강경</a>
+                                    
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="/clinic/male.cha">남성난임</a>
+                                    
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="/clinic/info.cha">난임바로알기</a>
+                                    
+                                            <p><a href="/clinic/info/process.cha">임신과정</a></p>
+                                        
+                                            <p><a href="/clinic/info/cause.cha">난임요인</a></p>
+                                        
+                                            <p><a href="/clinic/info/exam.cha">난임검사</a></p>
+                                        
+                                            <p><a href="/clinic/info/treat.cha">원인분석과치료과정</a></p>
+                                        
+                                            <p><a href="/clinic/info/disease.cha">관련질환</a></p>
+                                        
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="/clinic/inj.cha">주사안내</a>
+                                    
+                                            <p><a href="/clinic/inj/method.cha">배란주사 맞는법</a></p>
+                                        
+                                            <p><a href="/clinic/inj/faq.cha">배란주사 FAQ</a></p>
+                                        
+                                            <p><a href="/clinic/inj/etc.cha">기타주사안내</a></p>
+                                        
+                                </dd>
+
+                                
+
+
+                            
+                    </dl>
+                    
+                    </div>
+                    
+                    
+                
+                    
+                    <div class="two">
+
+                    <dl>
+                        <dt>가임력 Check-upㆍ보존</dt>
+                        
+                                <dd>
+                                    <a href="/fecundity/checkup.cha">가임력 Check-up</a>
+                                    
+                                            <p><a href="/fecundity/checkup/intro.cha">가임력 Check-up 소개</a></p>
+                                        
+                                            <p><a href="/fecundity/checkup/program.cha">프로그램</a></p>
+                                        
+                                            <p><a href="/fecundity/checkup/reserve.cha">예약</a></p>
+                                        
+                                            <p><a href="/fecundity/checkup/reserve/check.cha">예약조회/취소</a></p>
+                                        
+                                            <p><a href="/fecundity/checkup/quick.cha">빠른 상담</a></p>
+                                        
+                                            <p><a href="/fecundity/checkup/faq.cha">FAQ</a></p>
+                                        
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="/fecundity/social.cha">소셜 바이오 뱅킹</a>
+                                    
+                                            <p><a href="/fecundity/social/37bank.cha">30난자은행</a></p>
+                                        
+                                            <p><a href="/fecundity/social/sperm.cha">정자은행</a></p>
+                                        
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="/fecundity/preservation.cha">가임력 보존</a>
+                                    
+                                </dd>
+
+                                
+
+
+                            
+                    </dl>
+                    
+                    
+                    
+                    
+                
+                    
+                    
+
+                    <dl>
+                        <dt>소통채널</dt>
+                        
+                                <dd>
+                                    <a href="/community/notice.cha">공지사항</a>
+                                    
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="/community/pregnancy.cha">임신축하합니다</a>
+                                    
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="/community/thanks.cha">고마워요차병원</a>
+                                    
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="/community/service.cha">고객의소리</a>
+                                    
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="/community/news.cha">서울역차 소식</a>
+                                    
+                                </dd>
+
+                                
+
+
+                            
+                    </dl>
+                    
+                    
+                    </div>
+                    
+                
+                    
+                    
+
+                    <dl>
+                        <dt>병원소개</dt>
+                        
+                                <dd>
+                                    <a href="/hospital/chamc.cha">차 여성의학연구소 서울역</a>
+                                    
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="/hospital/intro.cha">병원장 인사말</a>
+                                    
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="/hospital/chamcGroup.cha">의료그룹 차병원</a>
+                                    
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="/hospital/outcome.cha">차병원 난임연구성과</a>
+                                    
+                                            <p><a href="/hospital/outcome/history.cha">난임센터주요연혁</a></p>
+                                        
+                                            <p><a href="/hospital/outcome/society.cha">국제학회수상경력</a></p>
+                                        
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="/hospital/ivf-lab.cha">난임의학연구실</a>
+                                    
+                                            <p><a href="/hospital/ivf-lab/intro.cha">소개</a></p>
+                                        
+                                            <p><a href="/hospital/ivf-lab/technology.cha">최신난임보조생식술</a></p>
+                                        
+                                            <p><a href="/hospital/ivf-lab/system.cha">최첨단 난임시스템</a></p>
+                                        
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="/hospital/network.cha">글로벌 네트워크</a>
+                                    
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="https://gcea.chamc.co.kr/">난임트레이닝센터</a>
+                                    
+                                </dd>
+
+                                
+
+
+                            
+                                <dd>
+                                    <a href="https://news.chamc.co.kr/">차병원 뉴스룸</a>
+                                    
+                                </dd>
+
+                                
+
+
+                            
+                    </dl>
+                    
+                    
+                    
+                    
+                
+        </div>
+
+
+
+        <div class="cntbox allMenu_btm">
+            <div id="ctl00_header_divlogin" class="w_two">
+                <dl>
+                    <dt></dt>
+                    <dd><a href="javascript:$('.btnLyClose').click();fnPopupLayerOpen('/member/logIn.cha');">로그인</a></dd>
+                    <dd>
+                        <a href="javascript:$('.btnLyClose').click();fnPopupLayerOpen('/member/join.cha');">회원가입</a>
+                    </dd>
+                </dl>
+                <dl>
+                    <dd>
+                        <a href="javascript:$('.btnLyClose').click();fnPopupLayerOpen('/member/idFind.cha');">아이디찾기</a>
+                    </dd>
+                    <dd>
+                        <a href="javascript:$('.btnLyClose').click();fnPopupLayerOpen('/member/passwordFind.cha');">비밀번호찾기</a>
+                    </dd>
+                </dl>
+            </div>
+
+            
+
+
+            <div class="w_two">
+                <dl>
+                    <dt></dt>
+                    <dd><a href="javascript:$('.btnLyClose').click();fnPopupLayerOpen('/common/patientRights.cha');">환자권리장전</a></dd>
+                    <dd><a href="javascript:$('.btnLyClose').click();fnPopupLayerOpen('/common/termsOfUse.cha');">이용약관</a></dd>
+                    <dd><a href="javascript:$('.btnLyClose').click();fnPopupLayerOpen('/common/information.cha');">개인정보처리방침</a></dd>
+                </dl>
+                <dl>
+                    <dd><a href="javascript:$('.btnLyClose').click();fnPopupLayerOpen('/common/collection.cha');">이메일무단수집거부</a></dd>
+                    <dd><a href="/common/charges.cha">비급여수가안내</a></dd>
+                    
+                </dl>
+            </div>
+            <dl>
+                <dt>병원소개</dt>
+                <dd><a href="/hospital/chamc.cha">차 여성의학연구소 서울역</a></dd>
+                <dd><a href="/hospital/intro.cha">병원장 인사말</a></dd>
+                <dd><a href="/hospital/chamcGroup.cha">의료그룹 차병원</a></dd>
+                <dd>
+                    <a href="/hospital/outcome.cha">차병원 난임연구성과</a>
+                    <p><a href="/hospital/outcome/history.cha">난임센터주요연혁</a></p>
+                    <p><a href="/hospital/outcome/society.cha">국제학회수상경력</a></p>
+                </dd>
+                <dd><a href="/hospital/ivf-lab.cha">난임의학연구실</a></dd>
+                <dd><a href="/hospital/network.cha">글로벌 네트워크</a></dd>
+            </dl>
+        </div>
+
+
+    </div>
+</div>
+
+<!-- drop menu -->
+<div class="lnb_drop_wrap">
+    <div class="drop_area">
+        <div class="lnb_top_menu">
+
+            
+                    
+                    <div class="menu_area mn01">
+                        <div class="banner_area">
+                            <a id="ctl00_header_rptMenu_ctl00_hlBanner" class="banner_link" href="https://seoul.chamc.co.kr/community/notice.cha" target="_blank"><img src="https://wmanager.chamc.co.kr/file/popup/gnb_baner_220502-1.jpg" alt="" style="border-width:0px;"></a>
+                        </div>
+                        <div class="menubox">
+                            <div class="menu">
+                                
+                                        <ul>
+                                            <li>
+                                                <a href="/appointment/schedule.cha" target="_self">
+                                                    의료진/진료일정
+                                                </a>
+                                            </li>
+                                        </ul>                                        
+                                    
+                                        <ul>
+                                            <li>
+                                                <a href="/appointment/reserve.cha" target="_self">
+                                                    진료예약
+                                                </a>
+                                            </li>
+                                        </ul>                                        
+                                    
+                                        <ul>
+                                            <li>
+                                                <a href="/appointment/consult.cha" target="_self">
+                                                    1:1 상담실
+                                                </a>
+                                            </li>
+                                        </ul>                                        
+                                    
+
+                                
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                
+                    
+                    <div class="menu_area mn02">
+                        <div class="banner_area">
+                            <a id="ctl00_header_rptMenu_ctl01_hlBanner" class="banner_link" href="/guide/introduction_pre.cha" target="_blank"><img src="https://wmanager.chamc.co.kr/file/popup/gnb_baner_220502-2.jpg" alt="" style="border-width:0px;"></a>
+                        </div>
+                        <div class="menubox">
+                            <div class="menu">
+                                
+                                        <ul>
+                                            <li>
+                                                <a href="/guide/introduction.cha" target="_self">
+                                                    처음오시는분
+                                                </a>
+                                            </li>
+                                        </ul>                                        
+                                    
+                                        <ul>
+                                            <li>
+                                                <a href="/guide/treatment.cha" target="_self">
+                                                    외래진료
+                                                </a>
+                                            </li>
+                                        </ul>                                        
+                                    
+                                        <ul>
+                                            <li>
+                                                <a href="/guide/surgery.cha" target="_self">
+                                                    수술 안내
+                                                </a>
+                                            </li>
+                                        </ul>                                        
+                                    
+                                        <ul>
+                                            <li>
+                                                <a href="/guide/phone.cha" target="_self">
+                                                    주요전화번호
+                                                </a>
+                                            </li>
+                                        </ul>                                        
+                                    
+                                        <ul>
+                                            <li>
+                                                <a href="/guide/location.cha" target="_self">
+                                                    오시는길/주차안내
+                                                </a>
+                                            </li>
+                                        </ul>                                        
+                                    
+                                        <ul>
+                                            <li>
+                                                <a href="/guide/support.cha" target="_self">
+                                                    난임시술비 지원사업
+                                                </a>
+                                            </li>
+                                        </ul>                                        
+                                    
+                                        <ul>
+                                            <li>
+                                                <a href="/guide/certi.cha" target="_self">
+                                                    증명서발급
+                                                </a>
+                                            </li>
+                                        </ul>                                        
+                                    
+                                        <ul>
+                                            <li>
+                                                <a href="/guide/faq.cha" target="_self">
+                                                    자주하는질문
+                                                </a>
+                                            </li>
+                                        </ul>                                        
+                                    
+                                        <ul>
+                                            <li>
+                                                <a href="/guide/sub.cha" target="_self">
+                                                    대리진료 안내
+                                                </a>
+                                            </li>
+                                        </ul>                                        
+                                    
+
+                                
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                
+                    
+                    <div class="menu_area mn03">
+                        <div class="banner_area">
+                            <a id="ctl00_header_rptMenu_ctl02_hlBanner" class="banner_link" href="/guide/support.cha" target="_blank"><img src="https://wmanager.chamc.co.kr/file/popup/gnb_baner_241231.jpg" alt="" style="border-width:0px;"></a>
+                        </div>
+                        <div class="menubox">
+                            <div class="menu">
+                                
+
+                                
+                                        <ul>
+                                    
+                                        <li><a href="javascript:">난임검사 및 <br>초기치료</a></li>
+
+
+                                        <li>
+                                            <a href="/clinic/Initial.cha" target="_self">
+                                                난임검사
+                                            </a>
+                                        </li>
+                                        
+                                        
+                                        
+
+
+                                    
+                                        
+
+
+                                        <li>
+                                            <a href="/clinic/Initial/treatment.cha" target="_self">
+                                                배란검사 및 치료
+                                            </a>
+                                        </li>
+                                        </ul><ul><li><a href="javascript:">인공수정 /<br>시험관아기 시술</a></li>
+                                        
+                                        
+
+
+                                    
+                                        
+
+
+                                        <li>
+                                            <a href="/clinic/ivf/insemi.cha" target="_self">
+                                                인공수정
+                                            </a>
+                                        </li>
+                                        
+                                        
+                                        
+
+
+                                    
+                                        
+
+
+                                        <li>
+                                            <a href="/clinic/test-tube.cha" target="_self">
+                                                시험관아기 시술
+                                            </a>
+                                        </li>
+                                        
+                                        </ul><ul class="wide"><li><a href="javascript:">특화클리닉</a></li>
+                                        
+
+
+                                    
+                                        
+
+
+                                        <li>
+                                            <a href="/clinic/genetics.cha" target="_self">
+                                                착상전 유전검사
+                                            </a>
+                                        </li>
+                                        
+                                        
+                                        
+
+
+                                    
+                                        
+
+
+                                        <li>
+                                            <a href="/clinic/habitual.cha" target="_self">
+                                                습관성유산
+                                            </a>
+                                        </li>
+                                        
+                                        
+                                        
+
+
+                                    
+                                        
+
+
+                                        <li>
+                                            <a href="/clinic/repetic.cha" target="_self">
+                                                반복착상실패
+                                            </a>
+                                        </li>
+                                        
+                                        
+                                        
+
+
+                                    
+                                        
+
+
+                                        <li>
+                                            <a href="/clinic/polycystic.cha" target="_self">
+                                                다낭성 난소증후군
+                                            </a>
+                                        </li>
+                                        
+                                        
+                                        
+
+
+                                    
+                                        
+
+
+                                        <li>
+                                            <a href="/clinic/celoscope.cha" target="_self">
+                                                자궁경/복강경
+                                            </a>
+                                        </li>
+                                        
+                                        
+                                        
+
+
+                                    
+                                        
+
+
+                                        <li>
+                                            <a href="/clinic/male.cha" target="_self">
+                                                남성난임
+                                            </a>
+                                        </li>
+                                        
+                                        
+                                        </ul><ul><li><a href="javascript:">난임교실</a></li>
+
+
+                                    
+                                        
+
+
+                                        <li>
+                                            <a href="/clinic/info.cha" target="_self">
+                                                난임바로알기
+                                            </a>
+                                        </li>
+                                        
+                                        
+                                        
+
+
+                                    
+                                        
+
+
+                                        <li>
+                                            <a href="/clinic/inj.cha" target="_self">
+                                                주사안내
+                                            </a>
+                                        </li>
+                                        
+                                        
+                                        
+
+
+                                    
+                                        </ul>
+                                    
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                
+                    
+                    <div class="menu_area mn04">
+                        <div class="banner_area">
+                            <a id="ctl00_header_rptMenu_ctl03_hlBanner" class="banner_link" href="/fecundity/checkup/program.cha" target="_blank"><img src="https://wmanager.chamc.co.kr/file/popup/gnb_baner_230410.jpg" alt="" style="border-width:0px;"></a>
+                        </div>
+                        <div class="menubox">
+                            <div class="menu">
+                                
+                                        <ul>
+                                            <li>
+                                                <a href="/fecundity/checkup.cha" target="_self">
+                                                    가임력 Check-up
+                                                </a>
+                                            </li>
+                                        </ul>                                        
+                                    
+                                        <ul>
+                                            <li>
+                                                <a href="/fecundity/social.cha" target="_self">
+                                                    소셜 바이오 뱅킹
+                                                </a>
+                                            </li>
+                                        </ul>                                        
+                                    
+                                        <ul>
+                                            <li>
+                                                <a href="/fecundity/preservation.cha" target="_self">
+                                                    가임력 보존
+                                                </a>
+                                            </li>
+                                        </ul>                                        
+                                    
+
+                                
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                
+                    
+                    <div class="menu_area mn05">
+                        <div class="banner_area">
+                            <a id="ctl00_header_rptMenu_ctl04_hlBanner" class="banner_link" href="/community/thanks.cha" target="_blank"><img src="https://wmanager.chamc.co.kr/file/popup/gnb_baner_220502-5.jpg" alt="" style="border-width:0px;"></a>
+                        </div>
+                        <div class="menubox">
+                            <div class="menu">
+                                
+                                        <ul>
+                                            <li>
+                                                <a href="/community/notice.cha" target="_self">
+                                                    공지사항
+                                                </a>
+                                            </li>
+                                        </ul>                                        
+                                    
+                                        <ul>
+                                            <li>
+                                                <a href="/community/pregnancy.cha" target="_self">
+                                                    임신축하합니다
+                                                </a>
+                                            </li>
+                                        </ul>                                        
+                                    
+                                        <ul>
+                                            <li>
+                                                <a href="/community/thanks.cha" target="_self">
+                                                    고마워요차병원
+                                                </a>
+                                            </li>
+                                        </ul>                                        
+                                    
+                                        <ul>
+                                            <li>
+                                                <a href="/community/service.cha" target="_self">
+                                                    고객의소리
+                                                </a>
+                                            </li>
+                                        </ul>                                        
+                                    
+                                        <ul>
+                                            <li>
+                                                <a href="/community/news.cha" target="_self">
+                                                    서울역차 소식
+                                                </a>
+                                            </li>
+                                        </ul>                                        
+                                    
+
+                                
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                
+                    
+                    <div class="menu_area mn06">
+                        <div class="banner_area">
+                            <a id="ctl00_header_rptMenu_ctl05_hlBanner" class="banner_link" href="/community/newsView.cha?idx=5245&amp;menuCode=9135&amp;newstype=" target="_blank"><img src="https://wmanager.chamc.co.kr/file/popup/gnb_baner_241004-2.jpg" alt="" style="border-width:0px;"></a>
+                        </div>
+                        <div class="menubox">
+                            <div class="menu">
+                                
+                                        <ul>
+                                            <li>
+                                                <a href="/hospital/chamc.cha" target="_self">
+                                                    차 여성의학연구소 서울역
+                                                </a>
+                                            </li>
+                                        </ul>                                        
+                                    
+                                        <ul>
+                                            <li>
+                                                <a href="/hospital/intro.cha" target="_self">
+                                                    병원장 인사말
+                                                </a>
+                                            </li>
+                                        </ul>                                        
+                                    
+                                        <ul>
+                                            <li>
+                                                <a href="/hospital/chamcGroup.cha" target="_self">
+                                                    의료그룹 차병원
+                                                </a>
+                                            </li>
+                                        </ul>                                        
+                                    
+                                        <ul>
+                                            <li>
+                                                <a href="/hospital/outcome.cha" target="_self">
+                                                    차병원 난임연구성과
+                                                </a>
+                                            </li>
+                                        </ul>                                        
+                                    
+                                        <ul>
+                                            <li>
+                                                <a href="/hospital/ivf-lab.cha" target="_self">
+                                                    난임의학연구실
+                                                </a>
+                                            </li>
+                                        </ul>                                        
+                                    
+                                        <ul>
+                                            <li>
+                                                <a href="/hospital/network.cha" target="_self">
+                                                    글로벌 네트워크
+                                                </a>
+                                            </li>
+                                        </ul>                                        
+                                    
+                                        <ul>
+                                            <li>
+                                                <a href="https://gcea.chamc.co.kr/" target="_blank">
+                                                    난임트레이닝센터
+                                                </a>
+                                            </li>
+                                        </ul>                                        
+                                    
+                                        <ul>
+                                            <li>
+                                                <a href="https://news.chamc.co.kr/" target="_blank">
+                                                    차병원 뉴스룸
+                                                </a>
+                                            </li>
+                                        </ul>                                        
+                                    
+
+                                
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                
+
+
+        </div>
+        <div class="lnb_time">
+            <div class="top">
+                <h4>외래진료시간</h4>
+                <ul class="first">
+                    <li>평<span>일</span></li>
+                    <li>08:30~17:30</li>
+                </ul>
+                <ul class="second">
+                    <li>토&nbsp;&nbsp;요&nbsp;&nbsp;일</li>
+                    <li>08:30~12:30</li>
+                </ul>
+                <ul class="third">
+                    <li>조기진료</li>
+                    <li>평일아침 07:30</li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <h4>전화예약</h4>
+                <strong class="num">1577-4488</strong>
+            </div>
+        </div>
+        <div class="lnb_bot_quick">
+            <ul class="quick">
+                <li>
+                    <a href="/appointment/schedule.cha">
+                        <img src="/asset/img/icon_lnb_img01.png">
+                        <span>의료진·진료일정</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/appointment/reserve.cha">
+                        <img src="/asset/img/icon_lnb_img02.png">
+                        <span>온라인예약</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/appointment/consult.cha">
+                        <img src="/asset/img/icon_lnb_img03.png">
+                        <span>1:1 상담실</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/guide/location.cha">
+                        <img src="/asset/img/icon_lnb_img04.png">
+                        <span>찾아오시는길</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- //drop menu -->
+
+
+
+
+
+
+<!-- //drop menu -->
+
+            <!-- //header -->
+
+            <!-- contents wrap -->
+            <div class="contents_wrap">
+                <!-- contents -->
+                
+    <div class="contents_area professor_wrap">
+        <div class="visual_wrap">
+            <div class="viaual_area">
+                <div class="visual_txt">
+                    <h3 class="title">
+                        고귀한 새 생명의 <br> 탄생을 위해 <br>최선을 다하겠습니다.
+                    </h3>
+                    <div class="doctor_txt">
+                        <p class="doctor_name"><span class="depart">산부인과</span> <span>윤태기</span> 교수</p>
+                        <p class="position">차 여성의학연구소 서울역 원장</p>
+                    </div>
+                </div>
+                <div class="visual_bottom earlyOpen">
+                    <table class="mt4 table_type01">
+                        <colgroup>
+                            <col style="width:84px;">
+                            <col style="width:*;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>일반진료</th>
+                                <th>월</th>
+                                <th>화</th>
+                                <th>수</th>
+                                <th>목</th>
+                                <th>금</th>
+                                <th>토</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>조기진료</td>
+                                <td><span class="dot2"></span></td>
+                                <td><span class="dot2"></span></td>
+                                <td><span class="dot2"></span></td>
+                                <td></td>
+                                <td><span class="dot2"></span></td>
+                                <td></td>
+
+
+                                
+
+                            </tr>
+                            <tr>
+                                <td>오전</td>
+                                <td><img src="/asset/img/ico_schedule_mark.png"></td>
+                                <td><img src="/asset/img/ico_schedule_mark.png"></td>
+                                <td><img src="/asset/img/ico_schedule_mark.png"></td>
+                                <td><img src="/asset/img/ico_schedule_mark.png"></td>
+                                <td><img src="/asset/img/ico_schedule_mark.png"></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>오후</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="visual_explain">
+                        <div class="special">
+                            <p class="title">전문분야</p>
+                            <div class="explain_text">
+                                <div class="special_explain">
+                                     미성숙난자 체외수정, 다낭성 난소증후군, 난소 난자 동결, 착상전 유전자 검사, 복강경-자궁경 수술, 로봇수술
+                                </div>
+                            </div>
+                        </div>
+                        <div class="btn_area mt15">
+                            <a href="/appointment/reserve/guide.cha?deptcd=IF&amp;meddr=AB23511,HB23511">진료예약</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="profile_topImg">
+                <img src="https://wmanager.chamc.co.kr/file/doctor/pc_sub_윤태기.jpg" alt="" onerror="this.src='/asset/img/d/home_pc.jpg'">
+            </div>
+        </div>
+
+        <div class="curri_wrap v2">
+            <div class="curri_area">
+                <div id="ctl00_ContentPlaceHolder1_p1" class="list">
+                    <div class="left"><p class="curri_title">교수 경력</p></div>
+                    <div class="right">
+                        <ul id="ctl00_ContentPlaceHolder1_ul1" class="dot_list">
+                            <li>	차의과학대학교	</li>
+<li>	차의과학대학교 의학전문대학원장</li>
+<li>	미국 Michigan State University 산부인과 겸임교수	</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="ctl00_ContentPlaceHolder1_p6" class="list">
+                    <div class="left"><p class="curri_title">진료 경력</p></div>
+                    <div class="right">
+                        <ul id="ctl00_ContentPlaceHolder1_ul6" class="dot_list">
+                            <li>	차의과학대학교 강남차병원 산부인과 과장	</li>
+<li>	차의과학대학교 산부인과학교실 주임교수	</li>
+<li>	차의과학대학교 강남차병원 여성의학연구소 소장	</li>
+<li>	차의과학대학교 강남차병원 원장	</li>
+<li>	차의과학대학교 의료원 난임센터 명예원장	</li>
+<li>	차여성의학연구소 서울역센터 원장	</li>
+
+                        </ul>
+                    </div>
+                </div>
+
+
+                
+                <div id="ctl00_ContentPlaceHolder1_p2" class="list">
+                    <div class="left"><p class="curri_title">학회∙연구∙Postdoctorial Fellowship∙수상경력</p></div>
+                    <div class="right">
+                        <ul id="ctl00_ContentPlaceHolder1_ul2" class="dot_list">
+                            <li class="part">학회</li>
+<li>	대한불임학회 학술위원장	</li>
+<li>	대한산부인과학회 인공수태심사소위원회(ART) 위원장	</li>
+<li>	한국방송공사(KBS) 의료자문위원	</li>
+<li>	국가생명윤리심의위원회 인공수정전문위원회 위원장	</li>
+<li>	아세아오세아니아 산부인과학회(AOCOG) Reproductive Committee 위원	</li>
+<li>	대한보조생식학회 회장	</li>
+<li>	보건복지부 불임부부 지원사업 중앙심의위원회 부위원장	</li>
+<li>	대한산부인과 내시경학회 윤리위원회 위원장	</li>
+<li>	대한민국 국가생명윤리심의위원회 위원	</li>
+<li>	대한병원협회 학술이사	</li>
+<li>	인구보건협회 난임상담센터 상담위원	</li>
+<li>	대한생식의학회 회장	</li>
+<li>	대한민국 의학한림원 종신회원	</li>
+<br>
+<li class="part">Postdoctorial  Fellowship</li>
+<li>미국 Yale 대학 산부인과 생식내분비학</li>
+<br>
+<li class="part">수상경력</li>
+<li>	1989년 제45차 Annual Meeting of the American Fertility Society 최우수 논문상	</li>
+<li>	1997년 제7차 한국과학기술인협회 최우수 논문상	</li>
+<li>	1998년 제54차 American Society for Rerproductive Medicine 최우수 논문상	</li>
+<li>	2002년 제3차 Pacific Rim Society For Fertility and Sterility 최우수 포스터상	</li>
+<li>	2003년 제59차 The Society for Male Rerpoduction and Urology 우수 논문상	</li>
+<li>	2005년 Conjoin Annual Meeting American Society for Rerproductive Medicine – Canadian Fertility&amp;Andrology Society 영상부문 최우수 논문상	</li>
+<li>	2007년 제63차 American Society for Rerproductive Medicine SMRU Traveling Scholars Award	</li>
+<li>	2008년 제54차 대한생식의학회 우수 포스터상	</li>
+<li>	2014년 제9회 임산부의 날 국무총리상 표창	</li>
+<li>	2020년 글로벌 헬스케어 유공포상 보건복지부장관상 표창	</li>
+
+
+                        </ul>
+                    </div>
+                </div>
+
+                
+                
+
+
+                <div id="ctl00_ContentPlaceHolder1_p4" class="list">
+                    <div class="left"><p class="curri_title">논문</p></div>
+                    <div class="right">
+                        <div class="paper_wrap">
+                            <ol id="ctl00_ContentPlaceHolder1_ul4" class="color_number_list thesisList">
+                                <li><span class="num">08</span>    Long-term liquid nitrogen vapor storage of mouse embryos cryopreserved using vitrification or slow cooling. Fertil Steril. 2009 May;91(5):1928-32.  </li>
+<li><span class="num">07</span>    Effect of using slush nitrogen (SN2) on development of microsurgically manipulated vitrified/warmed mouse embryos. Hum Reprod. 2007 Sep;22(9):2509-14.  </li>
+<li><span class="num">06</span>    Survival rate of human oocytes and pregnancy outcome after vitrification using slush nitrogen in assisted reproductive technologies. Fertil Steril. 2007 Oct;88(4):952-6.   </li>
+<li><span class="num">05</span>    In vitro maturation of immature oocytes and IVF/ICSI in PCOS patients. J Indian Med Assoc. 2006 Aug;104(8):446, 448, 473.   </li>
+<li><span class="num">04</span>    Cryopreservation of the Human Adult Ovarian Cortical Tissues by Vitrification. Kor J Fertil Steril 1999; 26(2):251-263. </li>
+<li><span class="num">03</span>    Improved human oocyte development after vitrification: a comparison of thawing methods. Fertil Steril. 1999; 72(1):142-6    </li>
+<li><span class="num">02</span>    Laparoscopic tubal anastomosis: fertility outcome in 202 cases. Fertil Steril. 1999 Dec;72(6):1121-6.   </li>
+<li><span class="num">01</span>    Pregnancy after in vitro fertilization of human follicular oocytes collected from nonstimulated cycles, their culture in vitro and their transfer in a donor oocyte program. Fertil Steril. 1991 Jan;55(1):109-13.  </li>
+
+                            </ol>
+                            <div class="btn_area thesisBtn" style="display: none;">
+                                <a href="javascript:showthesis();">+ 더보기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                
+
+            </div>
+
+        </div>
+
+        
+                
+
+        
+    </div>
+
+                <!-- //contents -->
+            </div>
+            <!-- //contents wrap -->
+
+            <!-- footer -->
+            
+<!-- footer -->
+<div class="group_site_wrap">
+    <div class="group_site_top">
+        <div class="group_top_area">
+            <h4>차병원 여성의학연구소</h4>
+            <ul>
+                <li><a href="https://ivf.chamc.co.kr/default.cha" target="_blank">
+                    <img src="/asset/img/footer_top01.jpg" alt="차 여성의학연구소 분당"></a></li>
+                <li><a href="https://chaimc.chamc.co.kr/default.aspx" target="_blank">
+                    <img src="/asset/img/footer_top02.jpg" alt="차 여성의학연구소 강남"></a></li>
+                <li><a href="https://seoul.chamc.co.kr/default.aspx" target="_blank">
+                    <img src="/asset/img/footer_top03.jpg" alt="차 여성의학연구소 서울역"></a></li>
+                <li><a href="https://jamsil.chamc.co.kr/Default.aspx" target="_blank">
+                    <img src="/asset/img/footer_top04.jpg" alt="차 여성의학연구소 잠실"></a></li>
+                <li><a href="https://ilsanivf.chamc.co.kr/Default.cha" target="_blank">
+                    <img src="/asset/img/footer_top05.jpg" alt="차 여성의학연구소 일산"></a></li>
+                <li><a href="https://daegu.chamc.co.kr/default.cha" target="_blank">
+                    <img src="/asset/img/footer_top06.jpg" alt="차 여성의학연구소 대구"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="group_site_area">
+        <div class="group_site_list">
+            <p class="group_title">미래형 의료기관 차움</p>
+            <ul class="site_list">
+                <li><a href="http://www.chaum.net" target="_blank">차움</a></li>
+            </ul>
+        </div>
+        <div class="group_site_list">
+            <p class="group_title">국내의료기관</p>
+            <ul class="site_list">
+                <li><a href="https://www.chamc.co.kr/main.cha" target="_blank">차병원</a></li>
+                <li><a href="https://gangnam.chamc.co.kr/" target="_blank">강남차병원</a></li>
+                <li><a href="https://bundang.chamc.co.kr/" target="_blank">분당차병원</a></li>
+                <li><a href="https://bundangwoman.chamc.co.kr/" target="_blank">분당차여성병원</a></li>
+                <li><a href="https://ilsan.chamc.co.kr/" target="_blank">일산차병원</a></li>
+                <li><a href="https://gumi.chamc.co.kr/" target="_blank">구미차병원</a></li>
+                <li><a href="https://daegu.chamc.co.kr/default.cha" target="_blank">차 여성의학연구소 대구</a></li>
+                <li><a href="https://chaimc.chamc.co.kr/default.cha" target="_blank">차 여성의학연구소 강남</a></li>
+                <li><a href="http://seoul.chamc.co.kr/default.aspx" target="_blank">차 여성의학연구소 서울역</a></li>
+                <li><a href="https://jamsil.chamc.co.kr/Default.aspx" target="_blank">차 여성의학연구소 잠실</a></li>
+                <li><a href="https://ivf.chamc.co.kr/default.cha" target="_blank">차 여성의학연구소 분당</a></li>
+                <li><a href="http://ilsanivf.chamc.co.kr/default.aspx" target="_blank">차 여성의학연구소 일산</a></li>
+                <li><a href="https://gcea.chamc.co.kr" target="_blank">차병원 난임 트레이닝센터</a></li>
+                <li><a href="https://news.chamc.co.kr" target="_blank">차병원 뉴스룸</a></li>
+            </ul>
+        </div>
+        <div class="group_site_list">
+            <p class="group_title">해외의료기관</p>
+            <ul class="site_list">
+                <li><a href="https://www.hollywoodpresbyterian.com/" target="_blank">할리우드 차병원</a></li>
+                <li><a href="https://www.cityfertility.com.au/" target="_blank">호주 시티 퍼틸리티 센터</a></li>
+                <li><a href="https://singapore-medical.com/mobile/index.html" target="_blank">싱가포르 메디컬 그룹</a></li>
+            </ul>
+        </div>
+        <div class="group_site_list">
+            <p class="group_title">대학</p>
+            <ul class="site_list">
+                <li><a href="https://www.cha.ac.kr/" target="_blank">CHA 의과학대학교</a></li>
+            </ul>
+        </div>
+        <div class="group_site_list">
+            <p class="group_title">종합건진센터</p>
+            <ul class="site_list">
+                <li><a href="http://www.chaum.net" target="_blank">차움 프리미엄 건진센터</a></li>
+                <li><a href="http://gangnam.chahealth.co.kr/" target="_blank">차움 건진센터 삼성분원</a></li>
+                <li><a href="http://bundang.chahealth.co.kr/" target="_blank">분당차병원 건강증진센터</a></li>
+                <li><a href="https://gumi.chamc.co.kr/MedicalInfo/ChaInfo.aspx?menuCode=695" target="_blank">구미차병원 건강증진센터</a></li>
+                <li><a href="https://ilsan.chamc.co.kr/120wellness/index.cha" target="_blank">일산차병원 건강증진센터</a></li>
+            </ul>
+        </div>
+        <div class="group_site_list">
+            <p class="group_title">차바이오그룹</p>
+            <ul class="site_list">
+                <li><a href="http://www.chabio.com/" target="_blank">차바이오텍</a></li>
+                <li><a href="http://chacarescorp.com/" target="_blank">차케어스 </a></li>
+                <li><a href="https://chatheshop.com/" target="_blank">차바이오에프앤씨 </a></li>
+                <li><a href="http://www.seoulcro.com/" target="_blank">서울CRO </a></li>
+                <li><a href="http://www.chavaccine.com/" target="_blank">차백신연구소 </a></li>
+                <li><a href="http://www.solidusvc.com/" target="_blank">솔리더스인베스트먼트 </a></li>
+                <li><a href="http://cmgpharma.co.kr/" target="_blank">CMG제약 </a></li>
+                <li><a href="http://www.chamt.co.kr/" target="_blank">차메디텍 </a></li>
+                <li><a href="http://www.chahealthcare.com/ko/" target="_blank">차헬스케어 </a></li>
+                <li><a href="https://www.maticabio.com/" target="_blank">마티카 바이오테크놀로지</a></li>
+                <li><a href="http://maticakorea.com/" target="_blank">마티카 바이오랩스</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="footer_wrap">
+    <div class="footer_area">
+        <a href="javascript:;" class="btnTop" style="display: none; opacity: 0;">
+            <span class="blind">top</span>
+            <canvas id="canvas" width="40" height="40"></canvas>
+        </a>
+        <div class="footer_link_area">
+            <ul class="footer_link_list">
+                <li><a href="javascript:fnPopupLayerOpen('/common/patientRights.cha')">환자권리장전</a></li>
+                <li><a href="javascript:fnPopupLayerOpen('/common/termsOfUse.cha')">이용약관</a></li>
+                <li class="point"><a href="javascript:fnPopupLayerOpen('/common/information.cha')"><strong>개인정보처리방침</strong></a></li>
+                <li><a href="javascript:fnPopupLayerOpen('/common/collection.cha')">이메일 수집거부</a></li>
+                <li><a href="javascript:fnPopupLayerOpen('/common/cooperation.cha')">진료협력병∙의원</a></li>
+                <li><a href="/common/charges.cha">비급여진료비</a>
+            </li></ul>
+        </div>
+
+        <div class="footer_address">
+            <span>서울특별시 중구 한강대로 416 서울스퀘어 2층 (구 대우빌딩)</span>
+            <span> (우)04637</span>
+            <span>대표번호 02)2002-0300</span>
+            <span class="copy">COPYRIGHTⓒ2022 CHAMC, ALL RIGHT RESERVED.</span>
+        </div>
+        <!-- 그룹 계열사 전체보기 -->
+        <a href="javascript:" class="group_site_toggle"></a>
+        <!-- //그룹 계열사 전체보기 -->
+    </div>
+</div>
+
+<script>
+    $(function(){
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        var end = 0;
+        function drawScreen(end){
+            ctx.clearRect(0,0,40,40);
+            ctx.beginPath();
+            ctx.strokeStyle = "#833d88";
+            ctx.lineWidth =2;
+            ctx.arc(20,20,19,(Math.PI/180)*(0-90), (Math.PI/180)*(end-90), false);
+            ctx.stroke();
+            ctx.closePath();
+        }
+        drawScreen();
+        $(window).on("scroll", function(){
+            end = $(window).scrollTop() * 360 / ($(document).height() - $(window).height());
+            drawScreen(end);
+        });
+    });
+</script>
+<!-- //footer -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-5515230-17"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-5515230-17');
+</script>
+            <!-- //footer -->
+        </div>
+    </form>
+
+
+</body></html>

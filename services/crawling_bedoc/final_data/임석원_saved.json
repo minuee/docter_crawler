@@ -1,0 +1,93 @@
+{
+  "hospital_cid": 492,
+  "bedoc_id": "A5171",
+  "bedoc_hospitalsite": "http://www.hangpro.co.kr",
+  "bedoc_doctorname": "임석원",
+  "bedoc_deptname": "외과",
+  "bedoc_hospitalname": "항외과",
+  "hospital_name": "항외과",
+  "aiga_hid": "H31KR-11010058",
+  "hospital_site": "http://www.hangpro.co.kr/01_byo/byo_01.html",
+  "site_type": "list",
+  "hospital_addr": "서울특별시 관악구 시흥대로 578, 4, 6층 (신림동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "http://www.hangpro.co.kr/01_byo/byo_01.html?doctorName=%EC%9E%84%EC%84%9D%EC%9B%90&depthName=%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "specialty": "외과",
+  "학력": [
+    {
+      "content": "가톨릭의과대학 부속 성모병원 외과전문의 및 의학박사 학위 취득"
+    },
+    {
+      "content": "일본 동경사회보험 중앙병원연수"
+    },
+    {
+      "content": "영국 세인트 막 병원연수"
+    },
+    {
+      "content": "일본 후쿠오카 대학병원연수"
+    },
+    {
+      "content": "미국 퍼그슨병원 연수"
+    },
+    {
+      "content": "이화여자의과대학 외래교수"
+    }
+  ],
+  "경력": [
+    {
+      "content": "소화기 내시경 전문의"
+    },
+    {
+      "content": "송도병원진료부장(92.3~99.11)"
+    },
+    {
+      "content": "가톨릭의대 외래교수"
+    },
+    {
+      "content": "한림의대 외래교수"
+    }
+  ],
+  "수상": [
+    {
+      "content": "대한대장항문학회 로슈 학술상 수상[2012.04.7] (Analysis of Delayed Postpolypectomy Bleeding in a Colorectal Clinic)"
+    },
+    {
+      "content": "대한대장항문학회 우수 학술상 수상[2006.11.] (요추마취 후 항문수술시에 항문연의 위치 변화의 의미)"
+    }
+  ],
+  "학술": [
+    {
+      "content": "미국 대장항문병 학회 정회원"
+    },
+    {
+      "content": "대한외과학회 정회원 및 평생회원"
+    },
+    {
+      "content": "대한 대장항문학회 평생회원"
+    },
+    {
+      "content": "대한 소화기내시경학회 평생회원"
+    },
+    {
+      "content": "대한대장항문학회 이사선임"
+    },
+    {
+      "content": "대한대장항문학회 편집위원"
+    },
+    {
+      "content": "대한대장항문학회 항문질환 연구회 회장 선임[2015.04.10]"
+    },
+    {
+      "content": "대한외과초음파학회 부회장 선임[2015.05.10]"
+    },
+    {
+      "content": "전  대한대장항문학회  회장"
+    }
+  ],
+  "profileUrl": "http://www.hangpro.co.kr/image/sub/01-a.jpg"
+}

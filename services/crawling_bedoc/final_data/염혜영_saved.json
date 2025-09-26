@@ -1,0 +1,59 @@
+{
+  "hospital_cid": 340,
+  "bedoc_id": "A1224",
+  "bedoc_hospitalsite": "http://www.seoulmc.or.kr",
+  "bedoc_doctorname": "염혜영",
+  "bedoc_deptname": "소아청소년과",
+  "bedoc_hospitalname": "서울의료원",
+  "hospital_name": "서울의료원",
+  "aiga_hid": "H11KR-11000021",
+  "hospital_site": "https://www.seoulmc.or.kr/site/medicalguide/department/medicalGuideDoctorDetail.do?departmentCode=PD&doctorCode=02348A&menucdv=01010201&sitecdv=S0000100&decorator=pmsweb",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 중랑구 신내로 156, (신내동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.seoulmc.or.kr/site/medicalguide/department/medicalGuideDoctorDetail.do?departmentCode=PD&doctorCode=02348A&menucdv=01010201&sitecdv=S0000100&decorator=pmsweb&doctorName=%EC%97%BC%ED%98%9C%EC%98%81&depthName=%EC%86%8C%EC%95%84%EC%B2%AD%EC%86%8C%EB%85%84%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "doctorSiteUrl": "https://www.seoulmc.or.kr/site/medicalguide/department/medicalGuideDoctorDetail.do?departmentCode=PD&doctorCode=02348A&menucdv=01010201&sitecdv=S0000100&decorator=pmsweb",
+  "profileUrl": "https://www.seoulmc.or.kr/upload/medicalMember/1724127560825.jpg",
+  "specialty": "소아 알레르기 호흡기",
+  "학력": [
+    {
+      "content": "연세대학교 의과대학 졸업"
+    },
+    {
+      "content": "연세대학교 의과대학 의학박사"
+    },
+    {
+      "content": "UCSD 의과대학 연수"
+    }
+  ],
+  "경력": [
+    {
+      "content": "연세의료원 소아청소년과 전공의"
+    },
+    {
+      "content": "연세의료원 소아 알레르기 호흡기 전임의"
+    },
+    {
+      "content": "차의대 소아청소년과 조교수"
+    },
+    {
+      "content": "서울의료원 소아청소년과 과장"
+    },
+    {
+      "content": "서울의료원 교육연구부장"
+    }
+  ],
+  "학술": [
+    {
+      "content": "대한 소아 알레르기 호흡기 학회 이사"
+    },
+    {
+      "content": "사회복지공동모금회 사랑의 열매 이사"
+    }
+  ],
+  "논문/연구": []
+}

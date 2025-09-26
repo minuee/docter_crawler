@@ -1,0 +1,41 @@
+{
+  "hospital_cid": 113,
+  "bedoc_id": "A0743",
+  "bedoc_hospitalsite": "http://www.endocrine-clinic.com",
+  "bedoc_doctorname": "김용기",
+  "bedoc_deptname": "내분비내과",
+  "bedoc_hospitalname": "김용기내과의원",
+  "hospital_name": "김용기내과의원",
+  "aiga_hid": "H31KR-21000284",
+  "hospital_site": "https://www.endocrine-clinic.com/content/content.asp?FolderName=sub01&filename=sub01_04",
+  "site_type": "list",
+  "hospital_addr": "부산광역시 서구 보수대로 7, 2,3,4층 (충무동1가)",
+  "isExist": true,
+  "isSearchType": "html_ocr",
+  "error": null,
+  "specialty": "내분비대사, 핵의학",
+  "학력": [
+    { "content": "부산대학교 의과대학, 대학원 졸업" },
+    { "content": "부산대학교 의과대학 박사 학위 취득" }
+  ],
+  "경력": [
+    { "content": "부산대학교병원 인턴" },
+    { "content": "부산대학교병원 내과전공의 수료, 내과전문의 취득" },
+    { "content": "내분비대사내과 전문의, 핵의학 전문의 취득" },
+    { "date": "1982 ~ 2010", "content": "부산대학교 의과대학 내과학 교수" },
+    { "content": "부산대학교 의과대학 내과 주임교수 및 내분비대사내과 과장" },
+    { "content": "홍콩대학교 의과대학 교환교수" },
+    { "content": "미국 토머스제퍼슨 의과대학 교환교수" },
+    { "content": "부산대학교 의과대학 학장" },
+    { "content": "현 김용기내과의원 원장" }
+  ],
+  "학술": [
+    { "content": "대한내분비학회 평생회원, 회장 역임" },
+    { "content": "대한당뇨병학회 평생회원, 회장 역임" },
+    { "content": "세계당뇨병학회 서태평양지구 학회조직위원장 역임" },
+    { "content": "대한지질동맥경화학회 평생회원, 부회장 역임" },
+    { "content": "대한갑상선학회 평생회원, 2010년 추계학술대회장" },
+    { "content": "대한골다공증학회 평생회원" }
+  ],
+  "isAttend": true
+}

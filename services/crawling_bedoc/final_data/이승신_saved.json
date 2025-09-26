@@ -1,0 +1,72 @@
+{
+  "hospital_cid": 422,
+  "bedoc_id": "A0679",
+  "bedoc_hospitalsite": "http://cafe.naver.com/ycseoulent",
+  "bedoc_doctorname": "이승신",
+  "bedoc_deptname": "이비인후과",
+  "bedoc_hospitalname": "양천서울이비인후과의원",
+  "hospital_name": "양천서울이비인후과의원",
+  "aiga_hid": "H31KR-11006093",
+  "hospital_site": "http://ysent.kr/sub01/sub0102.html",
+  "site_type": "list",
+  "hospital_addr": "서울특별시 양천구 목동서로 49, 광장종합상가3 3층 301,302,303호 (목동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "http://ysent.kr/sub01/sub0102.html?doctorName=%EC%9D%B4%EC%8A%B9%EC%8B%A0&depthName=%EC%9D%B4%EB%B9%84%EC%9D%B8%ED%9B%84%EA%B3%BC",
+  "isSearchType": "html_ocr",
+  "error": null,
+  "specialty": "이비인후과",
+  "학력": [
+    {
+      "content": "서울대학교 의과대학 졸업"
+    },
+    {
+      "content": "서울대학교 대학원 석사, 박사학위"
+    }
+  ],
+  "경력": [
+    {
+      "content": "서울대학교병원 이비인후과 전공의 수료"
+    },
+    {
+      "content": "서울대학교병원 이비인후과 전임의 수료"
+    },
+    {
+      "content": "피츠버그대학 연수"
+    },
+    {
+      "content": "스탠포드대학 연수"
+    },
+    {
+      "content": "이화여자대학교 의과대학 이비인후과 교수 역임"
+    },
+    {
+      "content": "이화여자대학교 의과대학 이비인후과 주임교수 역임"
+    },
+    {
+      "content": "이화여자대학교 목동병원 이비인후과 과장 역임"
+    }
+  ],
+  "학술": [
+    {
+      "content": "마르퀴즈 후즈 후 인명대사전 등재"
+    },
+    {
+      "content": "대한이비인후과학회 정회원"
+    },
+    {
+      "content": "대한비과학회 정회원"
+    },
+    {
+      "content": "대한 천식 및 알레르기학회 정회원"
+    },
+    {
+      "content": "대한수면의학회 정회원"
+    },
+    {
+      "content": "대한 이비인후과학회 간행위원 역임"
+    }
+  ],
+  "isAttend": true
+}

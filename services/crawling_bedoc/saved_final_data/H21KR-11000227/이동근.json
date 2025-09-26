@@ -1,0 +1,85 @@
+{
+  "hospital_cid": 387,
+  "bedoc_id": "A5168",
+  "bedoc_hospitalsite": "http://www.hansolh.co.kr",
+  "bedoc_doctorname": "이동근",
+  "bedoc_deptname": "외과",
+  "bedoc_hospitalname": "한솔병원",
+  "hospital_name": "한솔병원",
+  "aiga_hid": "H21KR-11000227",
+  "hospital_site": "https://www.hansolh.com/index.php/html/9?seq=5",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 송파구 송파대로 445, 한솔병원 (석촌동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "bedoc_doctorname_extracted": "이동근",
+  "title": "병원장",
+  "qualifications": "외과 전문의 / 대장항문외과 분과전문의 / 대장내시경 전문의 / 의학박사",
+  "specialty": "치질(치핵, 치루, 치열) 항문질환(항문농양, 한선염, 모소동, 항문소양증, 콘딜로마, 항문용종, 항문·직장 거근증) 골반저질환(직장탈, 직장류, 변실금, 변비) 대장내시경(진단/치료)",
+  "학력": [
+    {
+      "date": null,
+      "content": "토론토 의과대학 부속 병원 대장항문외과 연수"
+    },
+    {
+      "date": null,
+      "content": "덴마크 할레브 대학병원 연수"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "조선대학교 의과대학 외과 조교수"
+    },
+    {
+      "date": null,
+      "content": "성균관대학교 의과대학 외래교수"
+    },
+    {
+      "date": null,
+      "content": "미국 사우스베일로대학 교수"
+    },
+    {
+      "date": null,
+      "content": "현 대한대장항문학회 자문위원"
+    },
+    {
+      "date": null,
+      "content": "전 항문질환연구회 회장"
+    },
+    {
+      "date": null,
+      "content": "전 대한대장항문학회 회장"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "미국 대장항문병학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "세계 대장항문병학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "일본 대장항문병학회 정회원"
+    }
+  ],
+  "수상": [
+    {
+      "date": null,
+      "content": "베스트 닥터 대장항문분야 동아일보"
+    },
+    {
+      "date": null,
+      "content": "베스트 젊은 닥터 대장항문분야 동아일보"
+    },
+    {
+      "date": null,
+      "content": "대장항문분야 세계100대 의학자에 선정(영국캠브리지세계인명사전 IBC)"
+    }
+  ],
+  "isAttend": true
+}

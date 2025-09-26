@@ -1,0 +1,203 @@
+{
+  "hospital_cid": 581,
+  "bedoc_id": "A0116",
+  "bedoc_hospitalsite": "http://www.khnmc.or.kr",
+  "bedoc_doctorname": "주선형",
+  "bedoc_deptname": "외과",
+  "bedoc_hospitalname": "강동경희대병원",
+  "hospital_name": "강동경희대학교한방병원",
+  "aiga_hid": "H11KR-11000004",
+  "hospital_site": "https://km.khnmc.or.kr/kr/treatment/doctor/37/medical-treatise.do",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 강동구 동남로 892, (상일동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://km.khnmc.or.kr/kr/treatment/doctor/37/medical-treatise.do?doctorName=%EC%A3%BC%EC%84%A0%ED%98%95&depthName=%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "specialty": "간암, 담도암, 췌장암, 담석증, 간이식, 복강경수술, 로봇수술",
+  "학력": [
+    {
+      "date": null,
+      "content": "울산대학교 박사"
+    },
+    {
+      "date": null,
+      "content": "울산대학교 석사"
+    },
+    {
+      "date": null,
+      "content": "경희대학교 학사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "2023~ 2024",
+      "content": "강동경희대학교병원 심의조정처장"
+    },
+    {
+      "date": "2020~ 2023",
+      "content": "강동경희대학교병원 기획진료부원장"
+    },
+    {
+      "date": "2017~ 2020",
+      "content": "강동경희대학교병원 수술부장"
+    },
+    {
+      "date": "2018~ 2020",
+      "content": "강동경희대학교병원 로봇수술센터장"
+    },
+    {
+      "date": "2014~ 2018",
+      "content": "강동경희대학교병원 장기이식센터장"
+    },
+    {
+      "date": "2011~ 2018",
+      "content": "강동경희대학교병원 외과장"
+    },
+    {
+      "date": "2010~ 2011",
+      "content": "Miami Transplant Institute Research Fellow"
+    },
+    {
+      "date": "2006~ 현재",
+      "content": "경희대학교 의과대학 교수"
+    },
+    {
+      "date": "2002~ 2006",
+      "content": "한림대학교 강동성심병원 외과 교수"
+    },
+    {
+      "date": "2000~ 2001",
+      "content": "서울아산병원 간이식 간담췌 외과 전임의"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한 외과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한 이식학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "한국간담췌 외과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "member of International society of liver surgeons"
+    }
+  ],
+  "논문": [
+    "Complex Hypersensitivity and Irritation Reaction (CHAIR) Phenomenon after Cyanoacrylate Closure of Varicose Vein (Vascular Specialist International. 2023;39(3):1-9)",
+    "Successful non-surgical treatment for isolated right anterior section bile duct injury following laparoscopic cholecystectomy: Report of a case (Annals of  Liver Transplantation. 2022;2(2):162-168)",
+    "Non-Invasive Diagnosis for Acute Rejection Using Urinary mRNA Signature Reflecting Allograft Status in Kidney Transplantation (FRONTIERS IN IMMUNOLOGY. 2021;12(1):1-12)",
+    "Protective Effect of Polydeoxyribonucleotide Against CCl4-Induced  Acute Liver Injury in Mice (International Neurourology Journal. 2020;24(0):88-95)",
+    "Clinicopathologic analysis of intraductal papillary neoplasm of bile duct: Korean multicenter cohort study (HPB. 2020;22(8):1139-1148)",
+    "Predictor of abnormal gallbladder ejection fraction in patients with atypical biliary pain: Histopathological point of view (Medicine (United States). 2017;96(51):0-0)",
+    "Liver-Wrapping, Nitric Oxide-Releasing Nanofiber Downregulates Cleaved Caspase-3 and Bax Expression on Rat Hepatic Ischemia-Reperfusion Injury (TRANSPLANTATION PROCEEDINGS. 2017;49(5):1170-1174)",
+    "Everolimus-Induced Systemic Serositis After Simultaneous Liver and Kidney Transplantation: A Case Report (TRANSPLANTATION PROCEEDINGS. 2017;49(1):181-184)",
+    "Who experiences endoscopic retrograde cholangiopancreatography after laparoscopic cholecystectomy for symptomatic gallstone disease? (대한외과학회지. 2016;90(6):309-314)",
+    "Spilled gallstones mimicking a retroperitoneal sarcoma following laparoscopic cholecystectomy (World Journal of Gastroenterology. 2016;22(17):4421-4426)",
+    "Remote Preconditioning on Rat Hepatic Ischemia-Reperfusion Injury Downregulated Bax and Cleaved Caspase-3 Expression (TRANSPLANTATION PROCEEDINGS. 2016;48(4):1247-1250)",
+    "(그림으로 보는) 외과수술 아틀라스  : 복부 해부에 의한 수술 포인트 (가본의학, 2015)",
+    "Outcome of conservative percutaneous cholecystostomy in high-risk patients with acute cholecystitis and risk factors leading to surgery (SURGICAL ENDOSCOPY AND OTHER INTERVENTIONAL TECHNIQUES. 2015;29(8):2359-2364)",
+    "Osteopontin Expression in Patients with Hepatolith (Indian J Surg. 2015;77(supple2):S551-S556)",
+    "Outcomes of Expanded-Criteria Deceased Donor Kidney Transplantation in a Single Center (TRANSPLANTATION PROCEEDINGS. 2014;46(4):1067-1070)",
+    "Laparoscopic cholecystectomy in patients with anesthetic problems (World Journal of Gastroenterology. 2013;19(29):4832-4835)",
+    "Splenectomy affects the balance between hepatic growth factor and transforming growth factor-β and its effect on liver regeneration is dependent on the amount of liver resection in rats (대한외과학회지. 2012;82(4):238-245)",
+    "Early use of needle-knife fistulotomy is safe in situations where difficult biliary cannulation is expected (DIGESTIVE DISEASES AND SCIENCES. 2012;57(5):1384-1390)",
+    "Multivariable Analysis of Cholecystectomy after Gastrectomy: Laparoscopy is a Feasible Initial Approach even in the Presence of Common Bile Duct Stones or Acute Cholecystitis (WORLD JOURNAL OF SURGERY. 2012;36(3):638-644)",
+    "Post-transplant lymphoproliferative disorder presented as small bowel intussusception in adult liver transplant patient (대한외과학회지. 2012;82(1):50-53)",
+    "Intrahepatic biliary intraductal papillary mucinous neoplasm with gallbladder agenesis: Case report (SURGICAL LAPAROSCOPY ENDOSCOPY & PERCUTANEOUS TECHNIQUES. 2012;22(5):277-280)",
+    "하복부 수술의 과거력이 있는 환자들에게 시행한 복강경 전복막외접근 탈장교정술의 초기 경험 (대한내시경복강경외과학회지. 2011;14(2):91-95)",
+    "Aggressive hilar inflammatory myofibroblastic tumor with hilar bile duct carcinoma in situ (대한외과학회지. 2011;81(6):59-63)",
+    "Acute Hepatic Failure Associated with Stevens-Johnson Syndrome Induced by Carbamazepine Treatment in a Patient with Transverse Myelitis (대한외과학회지. 2011;80(2):157-160)",
+    "Carcinosarcoma of the Pancreas: A Unique Case with Emphasis on Metaplastic Transformation and the Presence of Undifferentiated Pleomorphic High-Grade Sarcoma (JOURNAL OF GASTROINTESTINAL AND LIVER DISEASES. 2011;20(2):197-200)",
+    "Auxiliary partial orthotopic liver transplantation for adult onset type II citrullinemia (대한외과학회지. 2011;80(6):51-54)",
+    "전이성 대장암 환자에서 동시성 및 이시성 간전이 종양의 Cyclooxygenase (COX)-1과 Cyclooxygenase (COX)-2 및 E-cadherin 발현의 의의 (J Korean Surg Soc. 2010;78(3):177-183)",
+    "Case Review of Impacted Bile Duct Stone at Duodenal Papilla: Detection and Endoscopic Treatment (YONSEI MEDICAL JOURNAL. 2010;51(4):534-539)",
+    "Clinicopathologic Characteristics and Outcomes of Gastric Cancers With the MSI-H Phenotype (JOURNAL OF SURGICAL ONCOLOGY. 2009;99(0):143-147)",
+    "폐쇄성 대장암에서 스텐트 삽입 후 시행한 대장절제술의 단기예후: 비 폐쇄성 대장암군과의 비교 (대한대장항문학회지. 2009;25(1):41-45)",
+    "Large Fibrous Polyps of the Gallbladder Simulating Gallbladder Carcinoma (JOURNAL OF ULTRASOUND IN MEDICINE. 2009;28(0):537-540)",
+    "Cytoplasmic Expression of HuR is Related to Cyclooxygenase-2 Expression in Colon Cancer (Cancer Research and Treatment. 2009;41(2):87-92)",
+    "Laparoscopic resection of an adrenal pseudocyst mimicking a retroperitoneal mucinous cystic neoplasm (WORLD JOURNAL OF GASTROENTEROLOGY. 2009;15(0):2923-2926)",
+    "Comparison of Laparoscopic Totally Extraperitoneal Inguinal Hernia Repair and Tension-Free Herniorrhaphy Using Perfix (R): Short-Term Follow-Up Results (JOURNAL OF THE KOREAN SURGICAL SOCIETY. 2009;77(0):189-194)",
+    "상복부수술의 과거력이 있는 환자들에게 시행한 복강경 담낭절제술 (대한 내시경 복강경외과학회지. 2009;12(2):108-112)"
+  ],
+  "언론": [
+    {
+      "targetDate": "2020-04-09",
+      "type": null,
+      "text": "[서울경제] 너무 안 먹어도 너무 잘 먹어도...담석증 부른다",
+      "url": "#",
+      "issuer": null
+    },
+    {
+      "targetDate": "2018-03-22",
+      "type": null,
+      "text": "[파이낸셜뉴스] [yes+ Health] 배는 콕콕 쑤시는데 위는 이상이 없고.. '담석'의..",
+      "url": "#",
+      "issuer": null
+    },
+    {
+      "targetDate": "2018-02-02",
+      "type": null,
+      "text": "[경향신문] [간암의 날]소리없는 ‘간암’ 2가지 검사만 잘 챙겨도 잡을 수 ..",
+      "url": "#",
+      "issuer": null
+    },
+    {
+      "targetDate": "2017-08-07",
+      "type": null,
+      "text": "[경향신문] 여름철 다이어트, 담낭질환 발생 위험",
+      "url": "#",
+      "issuer": null
+    },
+    {
+      "targetDate": "2017-06-10",
+      "type": null,
+      "text": "[의학신문] “가임기 여성 주의” 담석증 유병률 연구결과",
+      "url": "#",
+      "issuer": null
+    },
+    {
+      "targetDate": "2017-06-08",
+      "type": null,
+      "text": "[창원일보] “가임기 여성 주의” 담석증 유병률 연구결과",
+      "url": "#",
+      "issuer": null
+    },
+    {
+      "targetDate": "2017-06-07",
+      "type": null,
+      "text": "[메디컬헤럴드] “가임기 여성 주의” 담석증 유병률 연구결과",
+      "url": "#",
+      "issuer": null
+    },
+    {
+      "targetDate": "2017-06-05",
+      "type": null,
+      "text": "[이데일리] “가임기 여성 주의” 담석증 유병률 연구결과",
+      "url": "#",
+      "issuer": null
+    },
+    {
+      "targetDate": "2017-06-03",
+      "type": null,
+      "text": "[연합뉴스] 예비맘' 담석증 주의…젊은 여성들에게도 흔해",
+      "url": "#",
+      "issuer": null
+    },
+    {
+      "targetDate": "2015-05-12",
+      "type": null,
+      "text": "[메디칼리뷰] 의사들의 눈에 비친 '풍경' ③",
+      "url": "#",
+      "issuer": null
+    }
+  ],
+  "isAttend": true
+}

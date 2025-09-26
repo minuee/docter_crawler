@@ -1,0 +1,180 @@
+{
+  "hospital_cid": 589,
+  "bedoc_id": "A8254",
+  "bedoc_hospitalsite": "http://www.khnmc.or.kr",
+  "bedoc_doctorname": "진은선",
+  "bedoc_deptname": "심장내과",
+  "bedoc_hospitalname": "강동경희대병원",
+  "hospital_name": "강동경희대학교병원",
+  "aiga_hid": "H11KR-11000004",
+  "hospital_site": "https://www.khnmc.or.kr/kr/treatment/doctor/1301/profile.do",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 강동구 동남로 892, (상일동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.khnmc.or.kr/kr/treatment/doctor/1301/profile.do?doctorName=%EC%A7%84%EC%9D%80%EC%84%A0&depthName=%EC%8B%AC%EC%9E%A5%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "specialty": "부정맥, 두근거림, 심방세동, 부정맥시술, 인공심장박동기, 제세동기, 급사, 실신, 심인성 어지럼증, 심부전, 고혈압",
+  "학력": [
+    {
+      "date": null,
+      "content": "경희대학교 의과대학 박사"
+    },
+    {
+      "date": null,
+      "content": "경희대학교 의과대학 석사"
+    },
+    {
+      "date": null,
+      "content": "경희대학교 의과대학 학사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "현재",
+      "content": "강동경희대학교의대병원 심장혈관내과 과장"
+    },
+    {
+      "date": "현재",
+      "content": "강동경희대학교병원 심장혈관센터 심장혈관내과 교수"
+    },
+    {
+      "date": "현재",
+      "content": "경희대학교 의과대학 순환기학 강의책임교수"
+    },
+    {
+      "date": "현재",
+      "content": "경희대학교 의과대학 임상실습교육실장 및 임상실습수기센터장"
+    },
+    {
+      "date": null,
+      "content": "강동경희대학교병원 QPS실장"
+    }
+  ],
+  "학술": [
+    {
+      "date": "현재",
+      "content": "대한부정맥학회 홍보이사"
+    },
+    {
+      "date": "현재",
+      "content": "대한부정맥학회 심실부정맥연구회 보험이사"
+    },
+    {
+      "date": "현재",
+      "content": "대한심장학회 정책위원회, 의료정보위원회 위원"
+    },
+    {
+      "date": null,
+      "content": "대한부정맥학회 진료지침이사, 학술위원"
+    },
+    {
+      "date": null,
+      "content": "아시아-태평양 부정맥학회 (APHRS) 여성분과장"
+    }
+  ],
+  "논문": [
+    "Impact of Trimetazidine on the Incident Heart Failure After Coronary Artery Revascularization (Journal of cardiovascular pharmacology. 2023;82(4):318-326)",
+    "Public Awareness of Dyslipidemia among the Korean Population: A Survey Study (지질·동맥경화학회지. 2023;12(3):307-314)",
+    "Net clinical benefit of oral anticoagulants in Korean atrial fibrillation patients with low to intermediate stroke risk: A report from the Clinical Survey on Stroke Prevention in patients with Atrial Fibrillation (CS-SPAF) (JOURNAL OF ARRHYTHMIA. 2023;39(3):376-387)",
+    "Adherence and clinical outcomes for twice-daily versus once-daily dosing of non-vitamin K antagonist oral anticoagulants in patients with atrial fibrillation: Is dosing frequency important? (PLoS ONE. 2023;18(3 March):0-0)",
+    "Dyslipidemia Fact Sheet in South Korea, 2022 (Diabetes and Metabolism Journal. 2023;47(5):632-642)",
+    "Preliminary Study on Effect of Lactiplantibacillus plantarum on Osteoporosis in the Ovariectomized Rat (한국축산식품학회지. 2023;43(4):712-720)",
+    "Bone formation effect of highly concentrated tricalcium phosphate biocomposite screws in a rabbit osteoporosis model (JOURNAL OF ORTHOPAEDIC RESEARCH. 2022;40(6):1321-1328)",
+    "Dyslipidemia Fact Sheet in Korea 2022 (The Korean Society of Lipid and Atherosclerosis, 2022)",
+    "Impact of pitavastatin on new-onset diabetes mellitus compared to atorvastatin and rosuvastatin: a distributed network analysis of 10 real-world databases (CARDIOVASCULAR DIABETOLOGY. 2022;21(1):0-0)",
+    "Validation of Biomarker-Based ABCD Score in Atrial Fibrillation Patients with a Non-Gender CHA2DS2-VASc Score 0?1: A Korean Multi-Center Cohort (Yonsei Medical Journal. 2022;63(10):892-901)",
+    "Edoxaban-based long-term antithrombotic therapy in patients with atrial fibrillation and stable coronary disease: Rationale and design of the randomized EPIC-CAD trial (American Heart Journal. 2022;247():123-131)",
+    "The Effect of Genetically Modified Lactobacillus plantarum Carrying Bone Morphogenetic Protein 2 Gene on an Ovari-ectomized Rat (JOURNAL OF KOREAN NEUROSURGICAL SOCIETY. 2022;65(2):204-214)",
+    "Clinical outcomes of discordant exercise electrocardiographic and echocardiographic findings compared with concordant findings in patients with chest pain and no history of coronary artery disease: An observational study (Medicine. 2019;98(39):e17195-17195)",
+    "Left ventricular noncompaction with bicuspid aortic valve: A case report with a comprehensive cardiac MRI approach (Iranian Journal of Radiology. 2019;16(3):85739-85739)",
+    "Slow heart rate recovery is associated with increased exercise-induced arterial stiffness in normotensive patients without overt atherosclerosis (Journal of Cardiovascular Imaging. 2019;27(3):214-223)",
+    "Bilateral ovario-hysterectomy induced osteoporotic rabbit model (JOURNAL OF BIOLOGICAL REGULATORS & HOMEOSTATIC AGE. 2019;33(2):391-396)",
+    "Status of international normalized ratio control and treatment patterns in patients with nonvalvular atrial fibrillation taking vitamin K antagonist with or without antiplatelet therapy: Results from KORAFII registry (JOURNAL OF ARRHYTHMIA. 2019;35(4):593-601)",
+    "Biodegradable Screws Containing Bone Morphogenetic Protein-2 in an Osteoporotic Rat Model (JOURNAL OF KOREAN NEUROSURGICAL SOCIETY. 2018;61(5):559-567)",
+    "Clinical characteristics of occluded culprit arteries and collaterals in patients with non-ST-segment elevation myocardial infarction and impact on clinical outcomes (EXPERIMENTAL AND THERAPEUTIC MEDICINE. 2018;16(4):3710-3720)",
+    "Cryoballoon Ablation for Atrial Fibrillation: a Comprehensive Review and Practice Guide (KOREAN CIRCULATION JOURNAL. 2018;48(2):114-123)",
+    "Quality of anticoagulation and treatment satisfaction in patients with non-valvular atrial\nfibrillation treated with vitamin k antagonist: result from the KORean Atrial Fibrillation\nInvestigation II (JOURNAL OF KOREAN MEDICAL SCIENCE. 2018;33(45):1-2)",
+    "Predictors of decreased left ventricular function subsequent to follow-up echocardiography after percutaneous coronary intervention following acute ST-elevation myocardial infarction (EXPERIMENTAL AND THERAPEUTIC MEDICINE. 2018;15(5):4089-4096)",
+    "The Effect of Biocomposite Screws on Bone Regeneration in a Rat Osteoporosis Model (WORLD NEUROSURGERY. 2017;106(0):964-972)",
+    "Association factor analysis between osteoporosis with cerebral artery disease: The STROBE study (Medicine (United States). 2017;96(9):e6164-0)",
+    "ECG features and proarrhythmic potentials of therapeutic hypothermia (HEART. 2016;102(19):1558-65)",
+    "Prognosis of Variant Angina Manifesting as Aborted Sudden Cardiac Death (JOURNAL OF THE AMERICAN COLLEGE OF CARDIOLOGY. 2016;68(2):137-145)",
+    "Transradial intervention versus transfemoral intervention accompanied with vascular closure device in acute myocardial infarction (INTERNATIONAL JOURNAL OF CARDIOLOGY. 2016;202(0):958-959)",
+    "Comparative clinical implications of admission electrocardiographic findings for patients with non-ST-segment elevation myocardial infarction. (MEDICINE. 2016;95(37):e4862-e4862)",
+    "Wint3a-Producing Fibroblasts in Ovariectomy-Induced Osteoporosis in a Rat Model (TISSUE ENGINEERING AND REGENERATIVE MEDICINE. 2015;12(5):306-313)",
+    "Intractable Ventricular Tachycardia Associated With Stress Cardiomyopathy (Arrhythmia. 2014;15(3):72-75)",
+    "Nonaneurysmal infectious aortitis (ANNALS OF VASCULAR SURGERY. 2014;28(5):1313-16)",
+    "The Value of Assessing Myocardial Deformation at Recovery after Dobutamine Stress Echocardiography (Journal of Cardiovascular Ultrasound. 2014;22(3):127-133)",
+    "Adipose Tissue-Derived Stem Cells in the Ovariectomy-Induced Postmenopausal Osteoporosis Rat Model (TISSUE ENGINEERING AND REGENERATIVE MEDICINE . 2014;11(6):1-9)",
+    "Implantation of Adipose Tissue-derived Mesenchymal Stem Cells in Degenerative Intervertebral Disc of Rat: When is the Most Effective time During the Degeneration Period (조직공학과 재생의학. 2014;11(3):195-202)",
+    "Analysis of Molecular Expression in Adipose Tissue-Derived Mesenchymal Stem Cells : Prospects for Use in the Treatment of Intervertebral Disc Degeneration (JOURNAL OF KOREAN NEUROSURGICAL SOCIETY. 2013;53(0):207-212)",
+    "Takotsubo cardiomyopathy recurrence with left ventricular apical ballooning following isolated right ventricular involvement: A case report (EXPERIMENTAL AND THERAPEUTIC MEDICINE. 2013;6(1):260-262)",
+    "Evaluation of vitamin D level in patients from neurosurgical intensive care unit (NEURAL REGENERATION RESEARCH. 2013;8(16):1528-1534)",
+    "Clinical Characteristics of Elderly Patients Undergoing Coronary Angiography for Chest Pain (대한노인병학회지. 2013;17(1):37-40)",
+    "Coronary Sinus Activation Pattern in the Differential Diagnosis of Regular Atrial Tachyarrhythmias During Catheter Ablation of Atrial Fibrillation (CIRCULATION JOURNAL. 2013;77(3):619-625)",
+    "APACHE II Score, Rather Than Cardiac Function, May Predict  Poor Prognosis in Patients With Stress-Induced Cardiomyopathy (JOURNAL OF KOREAN MEDICAL SCIENCE. 2012;27(1):52-57)",
+    "Takotsubo cardiomyopathy in a patient with coronary artery - left ventricular fistulae (INTERNATIONAL JOURNAL OF CARDIOLOGY. 2012;157(1):5-6)",
+    "Coronary perforation during conventional time domain optical coherence tomography (INTERNATIONAL JOURNAL OF CARDIOLOGY. 2012;155(1):14-15)",
+    "Lead Fracture and Free-Wall Perforation in a Patient with an Implantable Cardioverter-Defibrillator (PACE-PACING AND CLINICAL ELECTROPHYSIOLOGY. 2012;35(6):167-169)",
+    "Endovascular repair of graft limb occlusion after endovascular repair for abdominal aortic aneurysm using 0.014-inch guidewire and coronary balloon (INTERNATIONAL JOURNAL OF CARDIOLOGY. 2012;153(2):e37-e38)",
+    "Effect of Substrate Modification in Catheter Ablation of Paroxysmal Atrial Fibrillation Pulmonary Vein Isolation Alone or with Complex Fractionated Electrogram Ablation (TEXAS HEART INSTITUTE JOURNAL. 2012;39(3):372-379)",
+    "Radiological and pathological evaluation of the spinal cord in a rat model of electrical injury-induced myelopathy (BURNS. 2012;38(7):1066-1071)",
+    "Effects of Slow Pathway Ablation on Fast Pathway Function in Patients With Atrioventricular Nodal Reentrant Tachycardia - Cryo- vs. Radiofrequency Ablation (CIRCULATION JOURNAL. 2012;76(5):1091-1096)",
+    "부정맥 Arrhythmia (군자출판사, 2012)",
+    "Early cardiac valvular changes in ankylosing spondylitis: A transesophageal echocardiography study (Journal of Cardiovascular Ultrasound. 2012;20(1):30-36)",
+    "Treadmill Exercise Stress Echocardiography in Patients  With No History of Coronary Artery Disease:  A Single-Center Experience in Korean Population (Korean Circulation Journal. 2011;41(9):528-534)",
+    "Flecainide 투약 중 발생한 넓은 QRS 빈맥 (부정맥. 2011;12(3):0-0)",
+    "Heavy Coronary Calcium Mimicking In-Stent Restenosis (Korean Circulation Journal. 2011;41(7):421-421)",
+    "Regeneration of intervertebral discs in a rat disc degeneration model by implanted adipose-tissue-derived stromal cells (ACTA NEUROCHIRURGICA. 2010;152(0):1771-1777)",
+    "처음 뇌졸중이 발병한 고혈압 환자에서 경동맥 내막중막두께와 (대한고혈압학회지. 2010;16(2):14-21)",
+    "A Case of Hypoglycemic Brain Injuries with Cortical Laminar Necrosis (JOURNAL OF KOREAN MEDICAL SCIENCE. 2010;25(0):961-965)",
+    "Mechanism of Regular Atrial Tachyarrhythmias During Combined Pulomonary Vein Isolation and Complex Fractionated Electrogram Ablation in Patients With Atrial Fibrillation (Circulation Journal. 2010;74(3):434-441)"
+  ],
+  "저서": [
+    {
+      "date": "2012",
+      "content": "부정맥 Arrhythmia",
+      "issuer": null
+    }
+  ],
+  "언론": [
+    {
+      "targetDate": "2025-08-11",
+      "type": null,
+      "text": "[서울경제TV] 심방세동, 10년간 2배 이상 급증…새 치료법 ‘펄스장절제술’ 주목",
+      "url": "javascript:;",
+      "issuer": null
+    },
+    {
+      "targetDate": "2025-07-13",
+      "type": null,
+      "text": "[시사저널] 심장이 떨리면, 뇌가 멈춘다…'심방세동'의 조용한 위협",
+      "url": "javascript:;",
+      "issuer": null
+    },
+    {
+      "targetDate": "2025-07-06",
+      "type": null,
+      "text": "[데일리메디] 국가건강검진에 왜 심전도 검사는 없을까",
+      "url": "javascript:;",
+      "issuer": null
+    },
+    {
+      "targetDate": "2025-06-26",
+      "type": null,
+      "text": "[한겨레] '가슴 두근거림', 중풍 위험도 높여…심전도 국가검진 시작해야",
+      "url": "javascript:;",
+      "issuer": null
+    },
+    {
+      "targetDate": "2025-06-20",
+      "type": null,
+      "text": "[메디칼업저버] 60대 이상 심방세동 환자 2.3배 증가···국가검진에 심전도 포함해야",
+      "url": "javascript:;",
+      "issuer": null
+    }
+  ],
+  "isAttend": true
+}

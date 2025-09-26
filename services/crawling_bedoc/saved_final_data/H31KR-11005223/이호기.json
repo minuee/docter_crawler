@@ -1,0 +1,29 @@
+{
+  "hospital_cid": 486,
+  "bedoc_id": "A8459",
+  "bedoc_hospitalsite": "http://www.soreeclinic.com",
+  "bedoc_doctorname": "이호기",
+  "bedoc_deptname": "이비인후과",
+  "bedoc_hospitalname": "소리이비인후과",
+  "hospital_name": "소리이비인후과",
+  "aiga_hid": "H31KR-11005223",
+  "hospital_site": "http://www.soreeclinic.com/intro/doctor.asp",
+  "site_type": "list",
+  "hospital_addr": "서울특별시 강남구 학동로 435, 지하1,2,4층 (청담동)",
+  "isExist": true,
+  "isSearchType": "html_ocr",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": null,
+  "specialty": "이비인후과",
+  "학력": [
+    { "date": null, "content": "연세대 의대 졸업" },
+    { "date": null, "content": "이비인후과 전문의, 의학박사" }
+  ],
+  "경력": [
+    { "date": null, "content": "연세대 의과대학 교수" },
+    { "date": null, "content": "美 국립보건원 난청연구소" },
+    { "date": null, "content": "대한이과학회 부회장" },
+    { "date": null, "content": "대한두개저외과학회 개원의대표" }
+  ]
+}

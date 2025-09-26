@@ -1,0 +1,108 @@
+{
+  "hospital_cid": 571,
+  "bedoc_id": "A5591",
+  "bedoc_hospitalsite": "http://www.sarangi.co.kr",
+  "bedoc_doctorname": "조정현",
+  "bedoc_deptname": "산부인과",
+  "bedoc_hospitalname": "사랑아이여성의원",
+  "hospital_name": "사랑아이여성의원",
+  "aiga_hid": "H31KR-11003894",
+  "hospital_site": "http://www.sarangi.co.kr/01_intro/intro02.php?",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 송파구 백제고분로 69, 2,3층 (잠실동, 애플타워)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "http://www.sarangi.co.kr/01_intro/intro02.php?&doctorName=%EC%A1%B0%EC%A0%95%ED%98%84&depthName=%EC%82%B0%EB%B6%80%EC%9D%B8%EA%B3%BC",
+  "isSearchType": "ocr",
+  "isAttend": true,
+  "specialty": "산부인과",
+  "학력": [
+    {
+      "date": null,
+      "content": "연세대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 의과대학 석사"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 의과대학 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "연세대학교 세브란스 병원 인턴"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 강남세브란스 병원 산부인과 레지던트"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 강남세브란스 병원 산부인과 생식의학 전임"
+    },
+    {
+      "date": null,
+      "content": "제일병원 산부인과"
+    },
+    {
+      "date": null,
+      "content": "영동제일병원 부원장"
+    },
+    {
+      "date": null,
+      "content": "미즈메디 강남 부원장"
+    },
+    {
+      "date": null,
+      "content": "미즈메디 강남 원장"
+    },
+    {
+      "date": null,
+      "content": "차의과학대학교 산부인과 교수"
+    }
+  ],
+  "수상": [
+    {
+      "date": null,
+      "content": "President Award in IVF ART World Congress"
+    },
+    {
+      "date": null,
+      "content": "President Award of American Society for Reproductive Medicine"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "Korean Society of Obstetricians and Gynecologists"
+    },
+    {
+      "date": null,
+      "content": "Korean Society for Reproductive Medicine"
+    },
+    {
+      "date": null,
+      "content": "Korean Society for Assisted Reproductive Technology"
+    },
+    {
+      "date": null,
+      "content": "Korean Society of Developmental Biology"
+    },
+    {
+      "date": null,
+      "content": "Korean Society of Gynecologic Endoscopy and minimally Invasive Sur"
+    },
+    {
+      "date": null,
+      "content": "American Society for Reproductive Medicine"
+    },
+    {
+      "date": null,
+      "content": "European Society of Human Reproduction and Embryology"
+    }
+  ]
+}

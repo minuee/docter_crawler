@@ -1,0 +1,32 @@
+{
+  "hospital_cid": 247,
+  "bedoc_id": "A5585",
+  "bedoc_hospitalsite": "http://www.grace-hospital.com/",
+  "bedoc_doctorname": "박형무",
+  "bedoc_deptname": "산부인과",
+  "bedoc_hospitalname": "그레이스병원",
+  "hospital_name": "그레이스병원",
+  "aiga_hid": "H21KR-31000025",
+  "hospital_site": "http://www.grace-hospital.com/bbs_detail.php?bbs_num=673&tb=board_goods_introduce&id=&pg=1&menu_number=727&number=",
+  "site_type": "single",
+  "hospital_addr": "경기도 고양시 일산동구 중앙로 1073, (지하2층,지하1층,1층중일부,2~9층)/중앙로1071(1층중 일부, 2~4층) (백석동)",
+  "isExist": true,
+  "isSearchType": "html_ocr",
+  "specialty": "갱년기클리닉(골다공증, 근감소증, 노화, 폐경)ㆍ부인과내분비클리닉",
+  "학력": [
+    { "content": "서울대학교 의과대학 졸업" },
+    { "content": "서울대학교 의대 대학원 석사/박사" }
+  ],
+  "경력": [
+    { "content": "미국 오하이오 주립대 내분비학 연수" },
+    { "content": "중앙대 산부인과 과장/주임교수 역임" },
+    { "content": "대한산부인과학회 내시경학회 회장 역임" },
+    { "content": "대한폐경학회 회장 역임" },
+    { "content": "대한골대사학회 회장 역임" },
+    { "content": "대한노화방지의학회 회장 역임" },
+    { "content": "대한근감소증학회 회장" },
+    { "content": "대한임상노인의학회 부회장" }
+  ],
+  "isAttend": true,
+  "error": null
+}

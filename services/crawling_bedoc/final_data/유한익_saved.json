@@ -1,0 +1,102 @@
+{
+  "hospital_cid": 365,
+  "bedoc_id": "A1302",
+  "bedoc_hospitalsite": "http://ourchild.kr/",
+  "bedoc_doctorname": "유한익",
+  "bedoc_deptname": "정신건강의학과",
+  "bedoc_hospitalname": "우리아이마음클리닉",
+  "hospital_name": "우리아이마음클리닉",
+  "aiga_hid": "H31KR-11004662",
+  "hospital_site": "http://www.ourchild.kr/sub.asp?maincode=470&sub_sequence=483&sub_sub_sequence=",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 광진구 강변역로4길 10, 4층 (구의동, 강변역지너스타워)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "http://www.ourchild.kr/sub.asp?maincode=470&sub_sequence=483&sub_sub_sequence=&doctorName=%EC%9C%A0%ED%95%9C%EC%9D%B5&depthName=%EC%A0%95%EC%8B%A0%EA%B1%B4%EA%B0%95%EC%9D%98%ED%95%99%EA%B3%BC",
+  "isSearchType": "html_ocr",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": null,
+  "specialty": "정신건강의학과",
+  "학력": [
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 정신과학 석사, 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "서울대학교병원 신경정신과 전공의"
+    },
+    {
+      "date": null,
+      "content": "서울대학교병원 소아청소년정신과 전임의"
+    },
+    {
+      "date": null,
+      "content": "서울아산병원 소아청소년정신과 교수"
+    },
+    {
+      "date": null,
+      "content": "울산의대 정신과 교수"
+    },
+    {
+      "date": null,
+      "content": "국내 최초 작업기억력훈련 Cogmed Quality Assurance Person"
+    }
+  ],
+  "수상": [
+    {
+      "date": "2010",
+      "content": "확인 젊은의학자상 수상"
+    }
+  ],
+  "언론": [
+    {
+      "date": null,
+      "content": "KBS 생로병사의 비밀, ADHD라는 이름의 특별한 아이들"
+    },
+    {
+      "date": null,
+      "content": "KBS 위기탈출넘버원, 어린이 틱장애"
+    },
+    {
+      "date": null,
+      "content": "KBS 기적의 암 치료, 자폐증 치료 어떻게?"
+    },
+    {
+      "date": null,
+      "content": "KBS 생방송 오늘"
+    },
+    {
+      "date": null,
+      "content": "KBS 행복한 교실"
+    },
+    {
+      "date": null,
+      "content": "MBC 생방송 오늘의 아침"
+    },
+    {
+      "date": null,
+      "content": "MBC 뉴스 투데이"
+    },
+    {
+      "date": null,
+      "content": "MBC 우리집 라디오 주치의"
+    },
+    {
+      "date": null,
+      "content": "SBS 세상에서 가장 아름다운 여행"
+    },
+    {
+      "date": null,
+      "content": "EBS 교육마당"
+    }
+  ]
+}

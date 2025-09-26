@@ -1,0 +1,97 @@
+{
+  "hospital_cid": 634,
+  "bedoc_id": "A5015",
+  "bedoc_hospitalsite": "http://www.thanqseoul.com/info/info_01_04.jsp",
+  "bedoc_doctorname": "하정훈",
+  "bedoc_deptname": "이비인후과",
+  "bedoc_hospitalname": "땡큐서울이비인후과의원",
+  "hospital_name": "땡큐서울이비인후과의원",
+  "aiga_hid": "H31KR-11010389",
+  "hospital_site": "https://www.thanqseoul.com/kr/0203.php",
+  "site_type": "list",
+  "hospital_addr": "서울특별시 강남구 역삼1동 테헤란로 337",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.thanqseoul.com/kr/0203.php?doctorName=%ED%95%98%EC%A0%95%ED%9B%88&depthName=%EC%9D%B4%EB%B9%84%EC%9D%B8%ED%9B%84%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "profileUrl": "https://www.thanqseoul.com/kr/images/tqs/d03.jpeg",
+  "specialty": "갑상선암.두경부암 수술 전문가, 이비인후과 전문의, 갑상선-두경부외과 세부전공",
+  "학력": [
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 대학원 의학박사 졸업"
+    },
+    {
+      "date": null,
+      "content": "미국 엠디앤더슨암센터 박사후과정 연수"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "서울대병원 전공의 수료"
+    },
+    {
+      "date": null,
+      "content": "서울대병원 임상강사"
+    },
+    {
+      "date": null,
+      "content": "서울대병원 및 서울의대 교수"
+    },
+    {
+      "date": null,
+      "content": "서울대암병원 갑상선/구강/두경부암센터 교수"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한이비인후과학회 정회원, 학술위원 경력"
+    },
+    {
+      "date": null,
+      "content": "대한갑상선두경부외과학회 정회원, 이사 경력"
+    },
+    {
+      "date": null,
+      "content": "대한두경부종양학회 정회원, 학술위원 경력"
+    },
+    {
+      "date": null,
+      "content": "대한후두음성언어의학회 정회원, 간행위원 경력"
+    },
+    {
+      "date": null,
+      "content": "대한안면성형재건학회 정회원, 학술위원 경력"
+    },
+    {
+      "date": null,
+      "content": "대한갑상선학회 및 미국갑상선학회 회원"
+    }
+  ],
+  "논문": [
+    "Ha J, et al. Overcoming the limitations of surgery for laryngeal cancer. Lancet Oncol. 2023;24(1):e25-e34."
+  ],
+  "저서": [
+    {
+      "date": null,
+      "content": "갑상선암 (공저, 2022)"
+    }
+  ],
+  "언론": [
+    {
+      "targetDate": "2023-05-16",
+      "type": "언론",
+      "text": "[헬스조선] ‘갑상선암’ 수술 흉터 걱정된다면, ‘이 방법’ 고려해야",
+      "url": "https://www.health.chosun.com/site/data/html_dir/2023/05/16/2023051602195.html",
+      "issuer": "헬스조선"
+    }
+  ]
+}

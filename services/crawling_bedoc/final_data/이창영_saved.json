@@ -1,0 +1,104 @@
+{
+  "hospital_cid": 470,
+  "bedoc_id": "A0440",
+  "bedoc_hospitalsite": "https://daegu.dsmc.or.kr:49880/",
+  "bedoc_doctorname": "이창영",
+  "bedoc_deptname": "신경외과",
+  "bedoc_hospitalname": "계명대동산병원",
+  "hospital_name": "계명대동산병원",
+  "aiga_hid": "H01KR-47000002",
+  "hospital_site": "https://www.kmu-med.ac.kr/content/04class/teacher.php?doctor=195",
+  "site_type": "single",
+  "hospital_addr": "대구광역시 달서구 달구벌대로 1035, (신당동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.kmu-med.ac.kr/content/04class/teacher.php?doctor=195&doctorName=%EC%9D%B4%EC%B0%BD%EC%98%81&depthName=%EC%8B%A0%EA%B2%BD%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "doctorSiteUrl": "https://www.kmu-med.ac.kr/content/04class/teacher.php?doctor=195",
+  "profileUrl": null,
+  "specialty": "뇌졸중, 뇌혈관내수술, 뇌혈관질환 미세수술, 뇌두개저수술",
+  "isAttend": false,
+  "학력": [
+    {
+      "date": "1989년 02월",
+      "content": "계명대학교 의과대학 의학사"
+    },
+    {
+      "date": "1998년 02월",
+      "content": "계명대학교 대학원 의학석사"
+    },
+    {
+      "date": "2007년 02월",
+      "content": "경북대학교 대학원 의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1989년 03월 ~ 1990년 02월",
+      "content": "계명대학교 동산병원 인턴"
+    },
+    {
+      "date": "1990년 03월 ~ 1994년 02월",
+      "content": "계명대학교 동산병원 신경외과 레지던트"
+    },
+    {
+      "date": "1994년 03월 ~ 1997년 04월",
+      "content": "군복무"
+    },
+    {
+      "date": "1997년 05월 ~ 1999년 02월",
+      "content": "계명대학교 의과대학 신경외과학교실 연구강사"
+    },
+    {
+      "date": "1999년 03월 ~ 2000년 02월",
+      "content": "가야기독병원 신경외과장"
+    },
+    {
+      "date": "2000년 03월 ~ 2001년 02월",
+      "content": "Tohoku University Hospital. Endovascular dep. sendai, Japan. Clinical Researcher"
+    },
+    {
+      "date": "2001년 03월 ~ 2003년 02월",
+      "content": "계명대학교 의과대학 신경외과학교실 전임강사"
+    },
+    {
+      "date": "2003년 03월 ~ 2007년 02월",
+      "content": "계명대학교 의과대학 신경외과학교실 조교수"
+    },
+    {
+      "date": "2004년 07월 ~ 2005년 07월",
+      "content": "Endovascular center, Baylor university Medicine of School, Houston, USA. 연구원"
+    },
+    {
+      "date": "2007년 03월 ~ 2013년 02월",
+      "content": "계명대학교 의과대학 신경외과학교실 부교수"
+    },
+    {
+      "date": "2013년 03월 ~ 현재",
+      "content": "계명대학교 의과대학 신경외과학교실 교수"
+    }
+  ],
+  "학술": [
+    {
+      "date": "",
+      "content": "대한뇌혈관내수술학회 학술이사"
+    },
+    {
+      "date": "",
+      "content": "대한뇌혈관학회 학술, 기획, 보험위원"
+    },
+    {
+      "date": "",
+      "content": "대한뇌혈관학회 학회지 편집위원"
+    },
+    {
+      "date": "",
+      "content": "대한뇌혈관학회 교과서 편찬위원"
+    },
+    {
+      "date": "",
+      "content": "대한신경외과 세계유치위원회 기획간사"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "hospital_cid": 416,
+  "bedoc_id": "A5855",
+  "bedoc_hospitalsite": "https://daegu.dsmc.or.kr:49880/",
+  "bedoc_doctorname": "이세엽",
+  "bedoc_deptname": "안과",
+  "bedoc_hospitalname": "계명대동산병원",
+  "hospital_name": "누네안과병원",
+  "aiga_hid": "H21KR-11000040",
+  "hospital_site": "https://www.noon.co.kr/about/doctor_view/1/91",
+  "site_type": "single",
+  "hospital_addr": "대구시 중구 달구벌대로 2179 (삼덕동 2가 192-4)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.noon.co.kr/about/doctor_view/1/91?doctorName=%EC%9D%B4%EC%84%B8%EC%97%BD&depthName=%EC%95%88%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "specialty": "사시, 소아안과",
+  "profileUrl": "https://www.noon.co.kr/upload/doctor/20250121095416.png",
+  "학력": [
+    {
+      "date": null,
+      "content": "영남대학교 의학박사"
+    },
+    {
+      "date": null,
+      "content": "미국 UCLA 줄스타인 안과병원(사시·소아안과) 펠로우십 수료"
+    },
+    {
+      "date": null,
+      "content": "누네안과병원(사시, 약시 신경안과, 소아안과 질환) 원장"
+    },
+    {
+      "date": null,
+      "content": "대한안과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "한국 사시·소아안과학회/신경안과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "계명대학교 의과대학 명예교수"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "前 계명대학교 의과대학 교수"
+    },
+    {
+      "date": null,
+      "content": "前 EditorinChief 대한안과학회지"
+    },
+    {
+      "date": null,
+      "content": "前 한국 사시·소아안과학회 회장"
+    },
+    {
+      "date": null,
+      "content": "前 동산병원장/계명대학교 의대 학장"
+    },
+    {
+      "date": null,
+      "content": "前 동산의료원장"
+    }
+  ],
+  "학술": []
+}

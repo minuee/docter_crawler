@@ -1,0 +1,291 @@
+{
+  "hospital_cid": 536,
+  "bedoc_id": "A5951",
+  "bedoc_hospitalsite": "https://daegu.dsmc.or.kr:49880/",
+  "bedoc_doctorname": "정은영",
+  "bedoc_deptname": "외과",
+  "bedoc_hospitalname": "계명대동산병원",
+  "hospital_name": "계명대동산병원",
+  "aiga_hid": "H01KR-47000002",
+  "hospital_site": "https://dongsan.dsmc.or.kr:49870/content/02depart/doctor_view.php?md_idx=196",
+  "site_type": "single",
+  "hospital_addr": "대구광역시 달서구 달구벌대로 1035, (신당동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://dongsan.dsmc.or.kr:49870/content/02depart/doctor_view.php?md_idx=196&doctorName=%EC%A0%95%EC%9D%80%EC%98%81&depthName=%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "specialty": "소아복강경수술, 소아로봇수술, 소아흉강경수술, 최소침습수술, 신생아응급수술, 선천성기형(항문직장기형, 거대결장, 담도폐쇄, 담관낭종), 소아종양, 소아덩이, 소아탈장 및 음낭수종, 성인탈장 로봇복강경 수술",
+  "profileUrl": "https://dongsan.dsmc.or.kr:49870/data/doctor/2.jpg",
+  "isAttend": true,
+  "학력": [
+    {
+      "date": "2012  ~ 2014",
+      "content": "경북대학교 보건대학원 보건학 석사"
+    },
+    {
+      "date": "~ 2000",
+      "content": "계명대학교 의과대학 의학 학사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "2025.03  ~ 현재",
+      "content": "계명대학교 동산병원 소아외과 교수"
+    },
+    {
+      "date": "2022.11  ~ 현재",
+      "content": "계명대학교 동산병원 소아외과분과장"
+    },
+    {
+      "date": "2021.09  ~ 2022.08",
+      "content": "캐나다 토론토 The Hospital for Sick Children 연수"
+    },
+    {
+      "date": "2017.03  ~ 2025.02",
+      "content": "계명대학교 동산병원 소아외과 부교수"
+    },
+    {
+      "date": "2014.03  ~ 2021.08",
+      "content": "계명대학교 동산병원 소아외과 분과장"
+    },
+    {
+      "date": "2013.03  ~ 2017.02",
+      "content": "계명대학교 동산병원 소아외과 조교수"
+    },
+    {
+      "date": "2010.03  ~ 2013.02",
+      "content": "계명대학교 동산병원 소아외과 임상조교수"
+    },
+    {
+      "date": "2009.03  ~ 2010.02",
+      "content": "계명대학교 동산병원 소아외과 연구강사"
+    },
+    {
+      "date": "2008.04",
+      "content": "한국국제협력단(KOICA) 소속 국제협력의사, 탄자니아"
+    },
+    {
+      "date": "2005.03  ~ 2008.04",
+      "content": "군복무"
+    },
+    {
+      "date": "2001.03  ~ 2005.02",
+      "content": "서울아산병원 레지던트"
+    }
+  ],
+  "학술": [
+    {
+      "date": "2023.07.01 ~ 현재",
+      "content": "대한외과학회 교과서편찬위원회 위원"
+    },
+    {
+      "date": "2022.11.01 ~ 현재",
+      "content": "대한탈장학회 학술위원회 위원"
+    },
+    {
+      "date": "2022.11.01 ~ 현재",
+      "content": "대한외과학회 편집위원회 위원"
+    },
+    {
+      "date": "2022.12.01 ~ 현재",
+      "content": "대한주산의학회 학술위원회 위원"
+    },
+    {
+      "date": "2020.11.02  ~  2022.06.30",
+      "content": "대한탈장학회 무임소이사"
+    },
+    {
+      "date": "2018 ~ 2019",
+      "content": "2018-2019년 대한소아외과학회 정보통신이사"
+    }
+  ],
+  "수상": [
+    {
+      "date": "2021.06.12",
+      "content": "우수구연상"
+    },
+    {
+      "date": "2015.05.30",
+      "content": "Best Oral Presentation Award"
+    },
+    {
+      "date": "2014.11.28",
+      "content": "대한소아외과학회 2014년도 제66차 대한외과학회 학술대회(소아외과) 우수 연제상"
+    },
+    {
+      "date": "2013.06.21",
+      "content": "대한소아외과학회 2013년도 제29회 대한소아외과학회 춘계학술대회 우수 연제상"
+    },
+    {
+      "date": "2013.06.21",
+      "content": "대한소아외과학회 춘계학술대회 우수연제상"
+    },
+    {
+      "date": "2012.12.01",
+      "content": "대한주산의학회  제25차 대한주산의학회 추계 학술대회 우수포스터상"
+    },
+    {
+      "date": "2010.06.11",
+      "content": "대한소아외과학회 2010년도 제26회 대한소아외과학회 춘계학술대회 우수연제상"
+    }
+  ],
+  "논문/연구": [
+    {
+      "date": "2024.03.01",
+      "content": "Successful outcome with oral sirolimus treatment for complicated lymphatic malformations: a retrospective multicenter cohort study"
+    },
+    {
+      "date": "2023.10.26",
+      "content": "A comparative study of two national surveys of choledochal cysts in the Korean Association of Pediatric Surgeons"
+    },
+    {
+      "date": "2023.10.01",
+      "content": "An infant case of ruptured umbilical hernia with eviscerated omentum after acupuncture"
+    },
+    {
+      "date": "2023.09.08",
+      "content": "Minimally invasive management of combined esophageal atresia with tracheoesophageal fistula and duodenal atresia: a comprehensive case report"
+    },
+    {
+      "date": "2023.06.01",
+      "content": "Purse-String Closure for Stoma Reversal in Pediatric Patients"
+    },
+    {
+      "date": "2023.05.18",
+      "content": "An infant case of ruptured umbilical hernia with eviscerated omentum after acupuncture"
+    },
+    {
+      "date": "2023.05.01",
+      "content": "Optimal timing for inguinal hernia repair in premature infants: surgical issues for inguinal hernia in premature infants"
+    },
+    {
+      "date": "2022.06.02",
+      "content": "Lymphangioma: A 2019 Survey Conducted by the Korean Association of Pediatric Surgeons"
+    },
+    {
+      "date": "2022.02.28",
+      "content": "Laparoscopic totally extraperitoneal ligation for pediatric inguinal hernia: a novel surgical treatment"
+    },
+    {
+      "date": "2022.02.24",
+      "content": "Hazard of Orbeez water-absorbent beads causing infantile small bowel obstruction: a report of two Korean cases"
+    },
+    {
+      "date": "2020.08.01",
+      "content": "Respiratory epithelium in an enteric duplication cyst at the ileocecal valve"
+    },
+    {
+      "date": "2019",
+      "content": "Spontaneous pneumoperitoneum in two extremely preterm infants during nasal intermittent positive pressure ventilation"
+    },
+    {
+      "date": "2017",
+      "content": "Laparoscopic Choledochal Cyst Excision and Hepaticojejunostomy: A Case Series"
+    },
+    {
+      "date": "2017",
+      "content": "RNA-Seq for Gene Expression Profiling of Human Necrotizing Enterocolitis: a Pilot Study"
+    },
+    {
+      "date": "2017",
+      "content": "Stercoral perforation of the ileum in a very low birth weight infant: A case report"
+    },
+    {
+      "date": "2014",
+      "content": "Successful endoscopic submucosal dissection of a giant poly in a 21-month-old female"
+    },
+    {
+      "date": "2013",
+      "content": "신생아 위천공에서 미숙아와 만삭아의 임상양상 비교"
+    },
+    {
+      "date": "2013",
+      "content": "Mesenteric suture granuloma caused by retained fragments of suture material in a girl who had a laparotomy 12 years previously"
+    }
+  ],
+  "저서": [
+    {
+      "date": "2020.11.05",
+      "content": "외과수술아틀라스"
+    }
+  ],
+  "언론": [
+    {
+      "date": "2025.05.15",
+      "content": "[문화일보] [바이털 닥터] “엄마들 애절한 눈빛 잊지못해… ‘바보 의사’ 소아외과 결심”"
+    },
+    {
+      "date": "2025.03.12",
+      "content": "[전자신문] 계명대 동산병원, 세계 최초 소아 단일공 로봇수술로 담관낭종 절제 성공"
+    },
+    {
+      "date": "2024.05.23",
+      "content": "[뉴시스] 계명대 동산병원, 하이브리드 수술·협진으로 어린 생명 구했다"
+    },
+    {
+      "date": "2023.10.24",
+      "content": "[매일신문] 계명대학교 동산병원 소아외과 정은영 교수, 세계 최초 신생아 복잡 기형 최소침습수술 성공"
+    },
+    {
+      "date": "2023.04.25",
+      "content": "[영남일보] 계명대 동산병원, 지역 최초 ‘로봇탈장수술’ 성공"
+    },
+    {
+      "date": "2023.01.13",
+      "content": "[경북신문] 계명대 동산병원 정은영 교수, 미숙아 고난도 복강경·흉강경 수술 성공"
+    },
+    {
+      "date": "2021.03.24",
+      "content": "[동아일보] 계명대 동산병원 의료진 '서혜부 탈장 복강경 수술법' 개발"
+    },
+    {
+      "date": "2021.03.18",
+      "content": "[대구일보] 계명대 동산병원 정은영 교수...세계 최초 복막 관통 없앤 '서혜부 탈장 복강경 수술' 개발"
+    },
+    {
+      "date": "2021.03.18",
+      "content": "[매일신문] 계명대 동산의료원, 국내 3번째 양성자 암치료기 도입"
+    },
+    {
+      "date": "2018.03.21",
+      "content": "[경북일보] 계명대 동산병원, 1.78㎏ 미숙아 복강경 수술 성공"
+    },
+    {
+      "date": "2017.07.19",
+      "content": "[매일신문] 정은영 계명대 동산병원 소아외과 교수"
+    },
+    {
+      "date": "2016.05.20",
+      "content": "[MBC 약손] 소아외과질환"
+    },
+    {
+      "date": "2014.06.13",
+      "content": "[경북일보] 계명대 동산병원, 2㎏ 신생아 복강경 수술 성공"
+    },
+    {
+      "date": "2014.03.17",
+      "content": "[매일신문] 21개월 여아 내시경으로 위 종양 제거"
+    },
+    {
+      "date": "2014.03.14",
+      "content": "[대구신문] 동산병원 정은영 교수 탄자니아 현지 의대생·전공의 교육"
+    },
+    {
+      "date": "2011.10.11",
+      "content": "[영남일보] 댁의 아이, 갑자기 울고 보채면…"
+    },
+    {
+      "date": "2024.02.13",
+      "content": "[유튜브] 동산히어로즈 ep.1 | 소아외과의 살아있는 역사! 소아외과 정은영 교수"
+    },
+    {
+      "date": "2023.06.03",
+      "content": "[TBC클리닉건강365] 탈장은 저절로 낫지 않아요 | 소아청소년과 정은영 교수"
+    },
+    {
+      "date": "2021.04.17",
+      "content": "[TBC클리닉건강365] 소아 탈장 | 소아외과 정은영 교수"
+    }
+  ]
+}

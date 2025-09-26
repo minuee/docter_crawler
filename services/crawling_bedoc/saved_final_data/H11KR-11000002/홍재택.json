@@ -1,0 +1,123 @@
+{
+  "hospital_cid": 658,
+  "bedoc_id": "A5705",
+  "bedoc_hospitalsite": "http://www.cmcep.or.kr/",
+  "bedoc_doctorname": "홍재택",
+  "bedoc_deptname": "신경외과",
+  "bedoc_hospitalname": "은평성모병원",
+  "hospital_name": "가톨릭대학교 은평성모병원",
+  "aiga_hid": "H11KR-11000002",
+  "hospital_site": "https://www.cmcep.or.kr/page/doctor/1270/D0000954",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 은평구 통일로 1021, (진관동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "doctorDetailUrl": "https://www.cmcep.or.kr/page/doctor/1270/D0000954",
+  "profileUrl": "https://www.cmcep.or.kr/api/attach/view/doctor/D0000954/profile/1",
+  "specialty": "경추·요추 디스크 및 상·하지 방사통, 노인성 척추질환, 척추수술 후 증후군, 말초신경 질환, 척추종양 및 척수종양",
+  "학력": [
+    {
+      "date": "1988~1994",
+      "content": "가톨릭대학교 의학 학사"
+    },
+    {
+      "date": "1996~1998",
+      "content": "가톨릭대학교 신경외과학 석사"
+    },
+    {
+      "date": "1999~2005",
+      "content": "가톨릭대학교 신경외과학 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "2019~현재",
+      "content": "은평성모병원 신경외과 교수"
+    },
+    {
+      "date": "2023~현재",
+      "content": "은평성모병원 신경외과 과장"
+    },
+    {
+      "date": "2017~2019",
+      "content": "성빈센트병원 중환자치료센터장"
+    },
+    {
+      "date": "2015~2017",
+      "content": "성빈센트병원 신경외과 중환자실장"
+    }
+  ],
+  "수상": [
+    {
+      "date": "2017",
+      "content": "대한 척추 신경외과 학회, 라미학술상"
+    },
+    {
+      "date": "2016",
+      "content": "Best faculty Award. The Catholic University of Korea, Neurosurgical Department"
+    },
+    {
+      "date": "2016",
+      "content": "Best Paper Award, The Korean Society of Intraoperative Neurophysiological Monitoring"
+    },
+    {
+      "date": "2015",
+      "content": "대한 척추 신경외과 학회, 라미학술상"
+    }
+  ],
+  "학술": [
+    {
+      "date": "2023",
+      "content": "대한경추연구회 제 9대 회장"
+    },
+    {
+      "date": "2009",
+      "content": "Congress of Neurological Surgery"
+    },
+    {
+      "date": "2007",
+      "content": "Cervical Spine Research Society"
+    },
+    {
+      "date": "2006",
+      "content": "North American Spine Society"
+    }
+  ],
+  "논문": [
+    "Clinical and Radiological Outcomes in C2 Recapping Laminoplasty for the Pathologies in the Upper Cervical Spine (NEUROSPINE, 2024년 06월, 교신저자)",
+    "The safety and effectiveness of lumbar drainage for cerebrospinal fluid leakage after spinal surgery (NEUROCHIRURGIE, 2023년 11월, 공동저자)",
+    "Proliferative Myositis of the Erector Spinae Mistaken for Malignancy (JOURNAL OF MINIMALLY INVASIVE SPINE SURGERY AND TECHNIQUE, 2023년 08월, 공동저자)",
+    "Safety and Efficacy of Intraoperative Doppler Sonography-Assisted Cervical Pedicle Screw Fixation-A Retrospective Comparison with Conventional Pedicle Screw Implantation (GLOBAL SPINE JOURNAL, 2023년 07월, 교신저자)",
+    "Hounsfield unit measurement method and related factors that most appropriately reflect bone mineral density on cervical spine computed tomography (SKELETAL RADIOLOGY, 2022년 10월, 공동저자)"
+  ],
+  "저서": [
+    {
+      "date": null,
+      "content": "Spine Surgery Operative Techniques 3rd Edition (Elsevier 공동)",
+      "issuer": null
+    },
+    {
+      "date": null,
+      "content": "Video Atlas of Spine Surgical Techniques (Bentham Science 공동)",
+      "issuer": null
+    },
+    {
+      "date": null,
+      "content": "Spine Surgery Operative Techniques 2nd Edition (Elsevier 공동)",
+      "issuer": null
+    },
+    {
+      "date": null,
+      "content": "Surgical Techniques of Spine (WFNS 공동)",
+      "issuer": null
+    },
+    {
+      "date": null,
+      "content": "목편하게 사는 이야기기 (대한경추연구회 공동)",
+      "issuer": null
+    }
+  ],
+  "언론": [],
+  "isAttend": true
+}

@@ -1,0 +1,92 @@
+{
+  "hospital_cid": 552,
+  "bedoc_id": "A5769",
+  "bedoc_hospitalsite": "https://incheon.sejongh.co.kr/",
+  "bedoc_doctorname": "조광현",
+  "bedoc_deptname": "피부과",
+  "bedoc_hospitalname": "메디플렉스세종병원",
+  "hospital_name": "인천세종병원",
+  "aiga_hid": "H11KR-22000014",
+  "hospital_site": "https://incheon.sejongh.co.kr/medical_part/part_01_detail?orddeptcd=2140000000&orddrid=20180027&cate1=214&cate2=216",
+  "site_type": "single",
+  "hospital_addr": "인천광역시 계양구 계양문화로 20-0, 인천세종병원",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "https://incheon.sejongh.co.kr/data/doctor/2025/03/FLGTIGVnSu.png",
+  "specialty": "전문분야피부종양, 만성피부질환, 피부암, 피부암 전구증, 항암제 피부 부작용, 하지 염증성질환",
+  "학력": [
+    {
+      "date": null,
+      "content": "서울대학교 졸업"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 대학원 의학석사"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 대학원 의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "서울대병원 수련의"
+    },
+    {
+      "date": null,
+      "content": "서울대병원 전공의"
+    },
+    {
+      "date": null,
+      "content": "미국 Wayne State University School of Medicine 피부과 연수"
+    },
+    {
+      "date": null,
+      "content": "일본 동경대학의과대학 피부과 연수"
+    },
+    {
+      "date": null,
+      "content": "네델란드 라이덴 의과대학 피부과 연수"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 전임강사, 조교수, 부교수, 교수"
+    },
+    {
+      "date": null,
+      "content": "현, 인천세종병원 피부과 진료과장"
+    }
+  ],
+  "논문": [
+    "An Epstein-Barr virus-associated lymphoproliferative lesion of the skin presenting as recurrent necrotic papulovesicles of the face\n- 학술지명: British Journal of Dermatology (134권 791-796 페이지 1996년)",
+    "Erythema induratum of Bazin\n- 학술지명: International Journal of Dermatology (35권 11호 1996년도)",
+    "Angiocentric T cell lymphoma of the skin presenting as inflammatory nodules of the leg\n- 학술지명: Clinical and Experimental Dermatology (22권 104-108 페이지 1997년)",
+    "Epstein-Barr virus-asociated lymphoproliferative lesions presenting as a hydroa vacciniforme-like eruptiom: an analysis of six cases\n- 학술지명: British Journal of Dermatology (151권 372-380 페이지 2004년)"
+  ],
+  "언론": [
+    {
+      "targetDate": null,
+      "type": "기사",
+      "text": "[이데일리] 폭염에 손상된 내 피부... 건강하게 회복하려면?",
+      "url": "http://www.edaily.co.kr/news/news_detail.asp?newsId=03686726619312240&mediaCodeNo=257&OutLnkChk=Y",
+      "issuer": "이데일리"
+    },
+    {
+      "targetDate": null,
+      "type": "기사",
+      "text": "[이데일리] 참을수 없는 피부의 가려움... 벅벅 긁지말고, 보습제로 '톡톡'달래세요",
+      "url": "http://www.edaily.co.kr/news/read?newsId=01226726622488920&mediaCodeNo=257&OutLnkChk=Y",
+      "issuer": "이데일리"
+    },
+    {
+      "targetDate": null,
+      "type": "기사",
+      "text": "[이데일리] 대상포진부터 아토피피부염까지 '피부질환' Q&A",
+      "url": "http://www.edaily.co.kr/news/read?newsId=01128326619409328&mediaCodeNo=257&OutLnkChk=Y",
+      "issuer": "이데일리"
+    }
+  ]
+}

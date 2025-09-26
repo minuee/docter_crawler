@@ -1,0 +1,131 @@
+{
+  "hospital_cid": 471,
+  "bedoc_id": "A1283",
+  "bedoc_hospitalsite": "http://www.sejongh.co.kr",
+  "bedoc_doctorname": "이창하",
+  "bedoc_deptname": "흉부외과",
+  "bedoc_hospitalname": "세종병원",
+  "hospital_name": "부천세종병원",
+  "aiga_hid": "H11KR-31000023",
+  "hospital_site": "https://bucheon.sejongh.co.kr/medical_part/part_01_detail?orddeptcd=2070000000&orddrid=20040061&cate1=214&cate2=216",
+  "site_type": "single",
+  "hospital_addr": "경기도 부천시 소사구 호현로489번길 28, (소사본동, 세종병원)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://bucheon.sejongh.co.kr/medical_part/part_01_detail?orddeptcd=2070000000&orddrid=20040061&cate1=214&cate2=216&doctorName=%EC%9D%B4%EC%B0%BD%ED%95%98&depthName=%ED%9D%89%EB%B6%80%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "specialty": "소아심장",
+  "profileUrl": null,
+  "isAttend": true,
+  "학력": [
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "서울대학원 의과대학 석사"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "제천군송학면보건지소 보건지소장"
+    },
+    {
+      "date": null,
+      "content": "서울대병원 수련의"
+    },
+    {
+      "date": null,
+      "content": "서울대병원 흉부외과 전공의"
+    },
+    {
+      "date": null,
+      "content": "부천세종병원 진료과장"
+    },
+    {
+      "date": null,
+      "content": "미국Boston Children\\\\\\'s병원 Visiting doctor"
+    },
+    {
+      "date": null,
+      "content": "미국USCFcardiovascular surgery Visiting doctor"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 초빙교수"
+    },
+    {
+      "date": null,
+      "content": "길병원 흉부외과 조교수"
+    },
+    {
+      "date": null,
+      "content": "현, 부천세종병원 흉부외과 진료부장, 현 진료부원장"
+    }
+  ],
+  "논문": [
+    "- Measurement of Porcine Aortic and Pulmonary Valve Geometry and Design for Implantable Tissue Valve. Korean J Thorac Cardiovasc Surg 2010;43: 602-613",
+    "- The recent surgical result of total anomalous pulmonary venous return. Korean Circ J 2010;40: 1-35",
+    "- The Application of a Bi-ventricular Assist Device for a Low Weight (2.4 kg) Neonate with Coarctation of the Aorta and Critical Aortic Stenosis. Korean J Thorac Cardiovasc Surg 2010;43: 304-307",
+    "- Anticalcification Treatment of Glutaraldehyde-fixed Bovine Pericardium with Amino Acids (The Effect of Ethanol, Glutamic Acid and Homocysteic Acid Treatment). Korean J Thorac Cardiovasc Surg 2009;42: 409-417",
+    "외 70여편"
+  ],
+  "언론": [
+    {
+      "targetDate": null,
+      "type": "기사",
+      "text": "[이데일리] 부천세종병원 이창하 진료부원장, 경기도지사 표창",
+      "url": "http://www.bosa.co.kr/news/articleView.html?idxno=2227520",
+      "issuer": "이데일리"
+    },
+    {
+      "targetDate": null,
+      "type": "기사",
+      "text": "[의학신문] 부천세종병원 이창하 부원장, 베트남 국적 환자와 재회",
+      "url": "http://www.bosa.co.kr/news/articleView.html?idxno=2227520",
+      "issuer": "의학신문"
+    },
+    {
+      "targetDate": null,
+      "type": "기사",
+      "text": "[약업신문] 부천세종병원 이창하 진료부원, 국내 최초 폰탄 수술 환자 VAD 삽입‧심장이식 성공",
+      "url": "https://www.yakup.com/news/index.html?mode=view&cat=13&nid=285235",
+      "issuer": "약업신문"
+    },
+    {
+      "targetDate": null,
+      "type": "기사",
+      "text": "[후생신보] 부천세종병원, 한국심장재단과 함께 베트남 쵸레이병원 방문교육 재개",
+      "url": "https://www.whosaeng.com/137710",
+      "issuer": "후생신보"
+    },
+    {
+      "targetDate": null,
+      "type": "기사",
+      "text": "[메디파나뉴스] 소아흉부외과 이창하 부장, 선천성심장병환우회와 우리아기심장알기 강연 및 감사 행사",
+      "url": "https://www.medipana.com/article/view.php?news_idx=171293&sch_menu=1&sch_gubun=5",
+      "issuer": "메디파나뉴스"
+    },
+    {
+      "targetDate": null,
+      "type": "기사",
+      "text": "[연합뉴스] 이창하 부원장, 소아·선천성 심장병의 조기 발견과 치료가 꼭 필요해",
+      "url": "https://www.yna.co.kr/view/AKR20230822103500518?input=1195m",
+      "issuer": "연합뉴스"
+    },
+    {
+      "targetDate": null,
+      "type": "기사",
+      "text": "[문화일보] 부천세종병원 이창하 과장, 선천성 심장병은 난치병? 수술성공률 99% 달해",
+      "url": "https://www.munhwa.com/article/10699516",
+      "issuer": "문화일보"
+    }
+  ]
+}

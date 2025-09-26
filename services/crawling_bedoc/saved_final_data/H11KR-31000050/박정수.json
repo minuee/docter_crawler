@@ -1,0 +1,82 @@
+{
+  "hospital_cid": 233,
+  "bedoc_id": "A0188",
+  "bedoc_hospitalsite": "https://ilsan.m.chamc.co.kr/Default.cha",
+  "bedoc_doctorname": "박정수",
+  "bedoc_deptname": "외과",
+  "bedoc_hospitalname": "일산차병원",
+  "hospital_name": "일산차병원",
+  "aiga_hid": "H11KR-31000050",
+  "hospital_site": "https://ilsan.chamc.co.kr/professor/profile.cha?idx=1778",
+  "site_type": "single",
+  "hospital_addr": "경기도 고양시 일산동구 중앙로 1205, 지하1층(일부),지하2층,지하4층(일부),1층(일부),2층(일부),3층(일부),4~5층,6층(일부), 7~10층 (장항동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "profileUrl": "https://wmanager.chamc.co.kr/file/doctor/IL0031-2_1.jpg",
+  "specialty": "갑상선암, 부갑상선종양",
+  "학력": [],
+  "경력": [
+    {
+      "date": null,
+      "content": "Teikyo university (일본)"
+    },
+    {
+      "date": null,
+      "content": "연세대학교"
+    },
+    {
+      "date": null,
+      "content": "차의과학대학교"
+    },
+    {
+      "date": null,
+      "content": "일본 노구치 갑상선 클리닉"
+    },
+    {
+      "date": null,
+      "content": "일본 테이쿄대학"
+    },
+    {
+      "date": null,
+      "content": "강남세브란스병원 외과학교실"
+    },
+    {
+      "date": null,
+      "content": "차의과학대학교 일산차병원 외과"
+    },
+    {
+      "date": null,
+      "content": "차의과학대학교 일산차병원 갑상선암센터장"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한두경부종양학회 회장"
+    },
+    {
+      "date": null,
+      "content": "대한내분비외과학회 회장"
+    },
+    {
+      "date": null,
+      "content": "아시아내분비외과학회 회장"
+    }
+  ],
+  "수상": [
+    {
+      "date": null,
+      "content": "Forbes Korea 대한민국 100대 명의 갑상선암부문 선정(2009)"
+    },
+    {
+      "date": null,
+      "content": "동아일보 선정 갑상샘 질환분야 베스트 닥터(2004)"
+    },
+    {
+      "date": null,
+      "content": "동아일보 선정 갑상샘 질환분야 베스트 닥터(2000)"
+    }
+  ],
+  "논문": []
+}

@@ -1,0 +1,53 @@
+{
+  "hospital_cid": 482,
+  "bedoc_id": "A0742",
+  "bedoc_hospitalsite": "http://endolee.co.kr/",
+  "bedoc_doctorname": "이현철",
+  "bedoc_deptname": "내분비내과",
+  "bedoc_hospitalname": "연세이현철내과",
+  "hospital_name": "연세이현철내과",
+  "aiga_hid": "H31KR-11006826",
+  "hospital_site": "https://endolee.medisay.co.kr/build/endolee/menu-specialist_c322ba34-0024-4ad0-b59f-68ef04a9f33d.html",
+  "site_type": "list",
+  "hospital_addr": "서울특별시 마포구 서강로 133, 4층 (노고산동, 병우빌딩)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "specialty": "내분비내과",
+  "profileUrl": "https://endolee.medisay.co.kr/api/file/0b24b404-cf3e-4c67-abea-9f2fc73b39c3",
+  "학력": [
+    {"date": null, "content": "연세대학교 의과대학 졸업"},
+    {"date": null, "content": "연세대학교 대학원 의학 석사,박사"},
+    {"date": null, "content": "세브란스병원 인턴 및 내과 전공의 수료 미국"},
+    {"date": null, "content": "하버드의과대학 조슬린 당뇨병센터 연구원"},
+    {"date": null, "content": "연세대학교의과대학 세브란스병원 내과 교수"},
+    {"date": null, "content": "연세대학교의과대학 내분비연구소 소장"},
+    {"date": null, "content": "연세대학교의과대학 세브란스병원 당뇨병센터 소장"},
+    {"date": null, "content": "연세대학교의과대학 임상의학연구센터 소장"}
+  ],
+  "경력": [
+    {"date": null, "content": "아세아-오세아니아 내분비학술대회 사무총장"},
+    {"date": null, "content": "대한당뇨병학회 이사장"},
+    {"date": null, "content": "대한당뇨병학회 대사증후군 소연구회 위원장"},
+    {"date": null, "content": "한국지질동맥경화학회 이사장"},
+    {"date": null, "content": "한국지질동맥경화학회 회장"},
+    {"date": null, "content": "대한내분비학회 회장"},
+    {"date": null, "content": "대한임상노인의학회 회장"},
+    {"date": null, "content": "한국과학기술한림원 정회원"},
+    {"date": null, "content": "International Journal of Endoclinology 편집위원"},
+    {"date": null, "content": "김대중 전 대통령 내분비내과 주치의"}
+  ],
+  "수상": [
+    {"date": null, "content": "연세대학교 우수업적 교수상"},
+    {"date": null, "content": "연세대학교 의과대학 보원학술상"},
+    {"date": null, "content": "연세대학교 동창회 연세를 빛낸 동문상"},
+    {"date": null, "content": "대한당뇨병학회 설원학술상"},
+    {"date": null, "content": "재단법인 인촌기념회 동아일보사 인촌상"},
+    {"date": null, "content": "한국과학기술 총연합회 과학기술 우수논문상"},
+    {"date": null, "content": "한국과학기자협회 의학의료인상"},
+    {"date": null, "content": "한국과학재단 과학기술자상"},
+    {"date": null, "content": "한국화이자제약 화이자 의학상"},
+    {"date": null, "content": "후생신보사 지석영 의학상"}
+  ]
+}

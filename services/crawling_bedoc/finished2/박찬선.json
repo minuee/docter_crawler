@@ -1,0 +1,44 @@
+{
+  "hospital_cid": 241,
+  "bedoc_id": "A8389",
+  "bedoc_hospitalsite": "http://www.paik.ac.kr/haeundae/",
+  "bedoc_doctorname": "박찬선",
+  "bedoc_deptname": "알레르기내과",
+  "bedoc_hospitalname": "해운대백병원",
+  "hospital_name": "인제대학교해운대백병원",
+  "aiga_hid": "H11KR-21000019",
+  "hospital_site": "https://www.paik.ac.kr/haeundae/user/doctor/view.do?doctorId=890",
+  "site_type": "single",
+  "hospital_addr": "부산광역시 해운대구 해운대로 875, (좌동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "https://www.paik.ac.kr/cmmn/file/imageSrc.do?atchFileId=cf9b9c4584364c37bd54eecad6eed635&fileSn=2",
+  "specialty": "기관지천식, 만성기침, 음식물/약물알레르기, 두드러기, 비염",
+  "학력": [
+    { "date": null, "content": "관동대학교 의과대학 졸업" },
+    { "date": null, "content": "울산대 의과대학 석사 취득" },
+    { "date": null, "content": "울산대 의과대학 박사 취득" }
+  ],
+  "경력": [
+    { "date": null, "content": "서울아산병원 수련의, 전공의" },
+    { "date": null, "content": "서울아산병원 알레르기 내과 전임의" },
+    { "date": null, "content": "서울아산병원 건강의학과 임상 전임강사" },
+    { "date": null, "content": "인제대학교 해운대백병원 내과 조교수" },
+    { "date": null, "content": "인제대학교 해운대백병원 내과 부교수" },
+    { "date": null, "content": "현, 인제대학교 해운대백병원 내과 교수" },
+    { "date": null, "content": "현, 인제대학교 해운대백병원 알레르기내과 분과장" },
+    { "date": null, "content": "현, 인제대학교 해운대백병원 지역의약품안전센터장" }
+  ],
+  "학술": [
+    { "date": null, "content": "대한 내과학회 정회원" },
+    { "date": null, "content": "대한 천식 및 알레르기 학회 정회원" },
+    { "date": null, "content": "대한 면역학회 정회원" }
+  ],
+  "논문": [
+    "국내 논문 12편",
+    "국외 논문 (SCI(E)) 10편"
+  ],
+  "저서": []
+}

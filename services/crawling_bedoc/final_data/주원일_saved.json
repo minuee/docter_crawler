@@ -1,0 +1,103 @@
+{
+  "hospital_cid": 583,
+  "bedoc_id": "A8299",
+  "bedoc_hospitalsite": "http://www.cmcep.or.kr/",
+  "bedoc_doctorname": "주원일",
+  "bedoc_deptname": "신경외과",
+  "bedoc_hospitalname": "은평성모병원",
+  "hospital_name": "가톨릭대학교 은평성모병원",
+  "aiga_hid": "H11KR-11000002",
+  "hospital_site": "https://www.cmcep.or.kr/page/doctor/1270/D0000971",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 은평구 통일로 1021, (진관동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.cmcep.or.kr/page/doctor/1270/D0000971?doctorName=%EC%A3%BC%EC%9B%90%EC%9D%BC&depthName=%EC%8B%A0%EA%B2%BD%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "isAttend": true,
+  "doctorSiteUrl": "https://www.cmcep.or.kr/page/doctor/1270/D0000971",
+  "profileUrl": "https://www.cmcep.or.kr/api/attach/view/doctor/D0000971/profile/1",
+  "specialty": "뇌종양, 안면떨림, 안면통증, 뇌하수체종양(내시경)",
+  "학력": [
+    {
+      "date": "1988~1994",
+      "content": "가톨릭대학교 의학 학사"
+    },
+    {
+      "date": "1997~2003",
+      "content": "가톨릭대학교 신경외과학 석사"
+    },
+    {
+      "date": "2003~2006",
+      "content": "가톨릭대학교 신경외과학 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "2019~현재",
+      "content": "은평성모병원 신경외과 교수"
+    },
+    {
+      "date": "2019~2023",
+      "content": "은평성모병원 신경외과 과장"
+    },
+    {
+      "date": "2014~2019",
+      "content": "여의도성모병원 신경외과 교수"
+    },
+    {
+      "date": "2009~2014",
+      "content": "여의도성모병원 신경외과 부교수"
+    },
+    {
+      "date": "2006~2009",
+      "content": "여의도성모병원 신경외과 조교수"
+    },
+    {
+      "date": "2004~2006",
+      "content": "여의도성모병원 신경외과 전임강사"
+    },
+    {
+      "date": "2002~2004",
+      "content": "여의도성모병원 신경외과 임상강사"
+    }
+  ],
+  "논문": [
+    "Microsurgical anatomy of the glossopharyngeal nerve (CLINICAL ANATOMY, 2024년 07월, 단독)",
+    "Effects of an Infection Control Protocol for Coronavirus Disease in Emergency Mechanical Thrombectomy (JOURNAL OF KOREAN NEUROSURGICAL SOCIETY(대한신경외과학회지), 2022년 03월, 공동저자)",
+    "Association between height and the risk of primary brain malignancy in adults: a nationwide population-based cohort study (NEURO-ONCOLOGY ADVANCES, 2021년 08월, 교신저자)",
+    "Clinical Significance of Decompressive Craniectomy Surface Area and Side (JOURNAL OF KOREAN NEUROSURGICAL SOCIETY(대한신경외과학회지), 2021년 03월, 공동저자)",
+    "Microsurgical anatomy of the facial nerve (CLINICAL ANATOMY, 2021년 01월, 교신저자)",
+    "Temperature Difference between Brain and Axilla according to Body Temperature in the Patient with Brain Injury (KOREAN JOURNAL OF NEUROTRAUMA(대한신경손상학회지), 2020년 10월, 공동저자)",
+    "Collagen/poly(d,l-lactic-co-glycolic acid) composite fibrous scaffold prepared by independent nozzle control multi-electrospinning apparatus for dura repair (JOURNAL OF INDUSTRIAL AND ENGINEERING CHEMISTRY, 2018년 10월, 공동저자)",
+    "The cochlea in skull base surgery: an anatomy study (JOURNAL OF NEUROSURGERY, 2016년 11월, 공동저자)"
+  ],
+  "저서": [
+    {
+      "date": null,
+      "content": "Acoustic Neuroma (군자출판사 단독)",
+      "issuer": null
+    },
+    {
+      "date": null,
+      "content": "neurovascular surgical techniques (Jaypee Brothers Medical Publishers 공동)",
+      "issuer": null
+    },
+    {
+      "date": null,
+      "content": "광역학치료 (고려의학 공동)",
+      "issuer": null
+    },
+    {
+      "date": null,
+      "content": "뇌종양학 (군자출판사 공동)",
+      "issuer": null
+    },
+    {
+      "date": null,
+      "content": "A Textbook of Skull Base Surgery (군자출판사 공동)",
+      "issuer": null
+    }
+  ]
+}

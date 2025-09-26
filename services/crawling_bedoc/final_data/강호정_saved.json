@@ -1,0 +1,65 @@
+{
+  "bedoc_id": "A1151",
+  "hospitalName": "강남연세사랑병원",
+  "hospitalAddress": "서울특별시 서초구 남부순환로 2205 (우:06702)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "http://www.yonserang.com/template/info/info.php?doctorName=%EA%B0%95%ED%98%B8%EC%A0%95&depthName=%EC%A0%95%ED%98%95%EC%99%B8%EA%B3%BC",
+  "doctorName": "강호정",
+  "department": "정형외과",
+  "profileUrl": null,
+  "doctorDetailUrl": "http://www.yonserang.com/template/info/info.php",
+  "specialty": "손 손목 상지관절",
+  "학력": [
+    {
+      "date": null,
+      "content": "연세대학교 의과대학/대학원 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "연세대학교 정형외과학 교수"
+    },
+    {
+      "date": null,
+      "content": "강남세브란스병원 정형외과장"
+    },
+    {
+      "date": "2022-04 ~ 현재",
+      "content": "연세사랑병원 명예원장"
+    }
+  ],
+  "수상": [],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한수부외과학회 이사장"
+    },
+    {
+      "date": null,
+      "content": "대한정형외과학회 기초의학연구위원회 위원"
+    },
+    {
+      "date": null,
+      "content": "대한 수부외과학회 편집위원"
+    },
+    {
+      "date": null,
+      "content": "대한미세수술학회 편집위원장"
+    }
+  ],
+  "언론": [
+    {
+      "targetDate": "2014-05-16",
+      "type": "방송",
+      "text": "EBS 명의(방심이 키우는 질환, 손과 손목통증)",
+      "url": null,
+      "issuer": "EBS"
+    }
+  ],
+  "저서": [],
+  "논문": [],
+  "aiga_hid": "H21KR-11000155"
+}

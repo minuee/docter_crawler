@@ -1,0 +1,235 @@
+{
+  "bedoc_id": "A8287",
+  "hospitalName": "원자력병원",
+  "hospitalAddress": "01812 서울시 노원구 노원로 75 원자력병원",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.kcch.re.kr/doctor/profViewPop.do?deptNo=67&profNo=55&doctorName=%EC%8B%A0%EC%9D%98%EC%84%AD&depthName=%EC%99%B8%EA%B3%BC",
+  "doctorName": "신의섭",
+  "department": "외과",
+  "profileUrl": null,
+  "doctorDetailUrl": "https://www.kcch.re.kr/doctor/profViewPop.do?deptNo=67&profNo=55",
+  "specialty": "대장항문질환,대장양성질환,직장암,대장암",
+  "학력": [
+    {
+      "date": "200803-201002",
+      "content": "울산대학교 의과대학 의학박사"
+    },
+    {
+      "date": "200303-200802",
+      "content": "울산대학교 의과대학원 의학석사"
+    },
+    {
+      "date": "199303-199902",
+      "content": "울산대학교 의과 대학 졸업"
+    }
+  ],
+  "경력": [
+    {
+      "date": "200902-현재",
+      "content": "원자력병원 외과 과장"
+    },
+    {
+      "date": "200705-200901",
+      "content": "울산대학교 서울아산병원 대장항문외과 전임의"
+    },
+    {
+      "date": "200403-200704",
+      "content": "공중보건의"
+    },
+    {
+      "date": "200003-200402",
+      "content": "울산대학교 서울아산병원 외과 전공의"
+    },
+    {
+      "date": "199903-200002",
+      "content": "울산대학교 서울아산병원 수련의"
+    }
+  ],
+  "수상": [],
+  "학술": [
+    {
+      "date": "202012",
+      "content": "방사선생명과학회 추계학술대회 연자"
+    },
+    {
+      "date": "201904-202103",
+      "content": "대한대장항문학회 건강보험위원"
+    },
+    {
+      "date": "201606",
+      "content": "2016 미국 ASCO 연제 발표 및 참관"
+    },
+    {
+      "date": "201501-201601",
+      "content": "대장암 치료의 최신 지견 습득 및 관련 주제 임상 연구(미국 MD ACC)"
+    },
+    {
+      "date": "200705",
+      "content": "대한대장항문학회 평생회원"
+    },
+    {
+      "date": "200402",
+      "content": "대한외과학회 평생회원"
+    }
+  ],
+  "언론": [
+    {
+      "date": null,
+      "content": "블로그: 50대 이상, 증상 없어도 정기적인 검사 필수 – 원자력병원 외과 신의섭 과장"
+    },
+    {
+      "date": null,
+      "content": "조선일보: [인사]한국원자력의학원"
+    },
+    {
+      "date": null,
+      "content": "국민일보: [진료실에서] 50대 이상, 대장 건강 요주의"
+    },
+    {
+      "date": null,
+      "content": "원자력병원, 개원의 연수강좌 개최 - 소화기 질환의 외과적 진료"
+    },
+    {
+      "date": null,
+      "content": "국민일보: [진료실에서] 치질로 오해하기 쉬운 대장암 - 외과 신의섭 과장"
+    },
+    {
+      "date": null,
+      "content": "유튜브: 암은 원자력병원입니다.-대장암-대장암센터 신의섭 과장"
+    },
+    {
+      "date": null,
+      "content": "한국원자력의학원, 천진암센터와 세미나 개최"
+    }
+  ],
+  "저서": [],
+  "논문/연구": [
+    {
+      "date": "2023",
+      "content": "IGFL2-AS1, a Long Non-Coding RNA, Is Associated with Radioresistance in Colorectal Cancer. Int J Mol Sci."
+    },
+    {
+      "date": "2023",
+      "content": "긴 비암호화 RNA인 IGFL2-AS1의 대장암 방사선 내성 연구. International journal of molecular sciences"
+    },
+    {
+      "date": "2023",
+      "content": "18F-FDG PET 이미지 특징을 사용하여 직장암 수술전 방사선 화학요법 치료 효과 예측. Cancers"
+    },
+    {
+      "date": "2023",
+      "content": "Fisetin induces the upregulation of AKAP12 mRNA and anti-angiogenesis in a patient-derived organoid xenograft model. Biomedicine & Pharmacotherapy"
+    },
+    {
+      "date": "2023",
+      "content": "Neuromedin U contributes to radiation resistance in colorectal cancer via activating YAP/TAZ signaling. Oncology Report"
+    },
+    {
+      "date": "2022",
+      "content": "Clinical outcomes of locking polymeric clip for laparoscopic appendectomy in patients with appendicitis: a retrospective comparison with loop ligature. Ann Coloproctol"
+    },
+    {
+      "date": "2021",
+      "content": "Valproic acid protects intestinal organoids against radiation via NOTCH signaling. Cell Biol Int"
+    },
+    {
+      "date": "2021",
+      "content": "The Impact of Primary Tumor Resection on Survival in Asymptomatic Colorectal Cancer Patients With Unresectable Metastases. Ann Coloproctol"
+    },
+    {
+      "date": "2021",
+      "content": "Implication of FDG-PET/CT without synchronous colonic lesion in patients with stenotic left-sided colorectal cancer. Sci Rep"
+    },
+    {
+      "date": "2021",
+      "content": "Advanced Xenograft Model with Cotransplantation of Patient-Derived Organoids and Endothelial Colony-Forming Cells for Precision Medicine. J Oncol"
+    },
+    {
+      "date": "2021",
+      "content": "A Patient-Derived Organoid-Based Radiosensitivity Model for the Prediction of Radiation Responses in Patients with Rectal Cancer. Cancers (Basel)"
+    },
+    {
+      "date": "2020",
+      "content": "Butyrate enhances the efficacy of radiotherapy via FOXO3A in colorectal cancer patient-derived organoids. Int J Oncol"
+    },
+    {
+      "date": "2019",
+      "content": "Neutrophil to Lymphocyte Ratio: A Predictive Marker for Treatment Outcomes in Patients With Rectal Cancer Who Underwent Neoadjuvant Chemoradiation Followed by Surgery. Ann Coloproctol"
+    },
+    {
+      "date": "2019",
+      "content": "5-Fluorouracil as a Tumor-Treating Field-Sensitizer in Colon Cancer Therapy. Cancers (Basel)"
+    },
+    {
+      "date": "2018",
+      "content": "Protein arginine methyltransferase 5 is implicated in the aggressiveness of human hepatocellular carcinoma and controls the invasive activity of cancer cells. Oncol Rep"
+    },
+    {
+      "date": "2018",
+      "content": "Detection of Methylated SEPT9 in Korean Colorectal Cancer Patients: Comparison with Previous Studies. Clin Lab"
+    },
+    {
+      "date": "2017",
+      "content": "Is the Location of the Tumor Another Prognostic Factor for Patients With Colon Cancer? Ann Coloproctol"
+    },
+    {
+      "date": "2014",
+      "content": "Is microsatellite instability really a good prognostic factor of colorectal cancer? Ann Coloproctol"
+    },
+    {
+      "date": "2014",
+      "content": "Prognostic value of 18F-FDG uptake by regional lymph nodes on pretreatment PET/CT in patients with resectable colorectal cancer. Eur J Nucl Med Mol Imaging"
+    },
+    {
+      "date": "2014",
+      "content": "Role of peritoneal lavage cytology and prediction of prognosis and peritoneal recurrence after curative surgery for colorectal cancer. Ann Coloproctol"
+    },
+    {
+      "date": "2013",
+      "content": "Immunogenicity of influenza vaccine in colorectal cancer patients. Cancer Res Treat"
+    },
+    {
+      "date": "2012",
+      "content": "High dose stereotactic body radiotherapy using three fractions for colorectal oligometastases. J Surg Oncol"
+    },
+    {
+      "date": "2012",
+      "content": "Incidence and risk factors of parastomal hernia. J Korean Soc Coloproctol"
+    },
+    {
+      "date": "2011",
+      "content": "Mucinous rectal cancer: effectiveness of preoperative chemoradiotherapy and prognosis. Ann Surg Oncol"
+    },
+    {
+      "date": "2011",
+      "content": "Impact on Prognosis of Lymph Node Micrometastasis and Isolated Tumor Cells in Stage II Colorectal Cancer. J Korean Soc Coloproctol"
+    },
+    {
+      "date": "2011",
+      "content": "Effectiveness of Adjuvant Chemotherapy with 5-FU/Leucovorin and Prognosis in Stage II Colon Cancer. J Korean Soc Coloproctol"
+    },
+    {
+      "date": "2010",
+      "content": "Complications after sphincter-saving resection in rectal cancer patients according to whether chemoradiotherapy is performed before or after surgery. Int J Radiat Oncol Biol Phys"
+    },
+    {
+      "date": "2010",
+      "content": "Oligometastases confined one organ from colorectal cancer treated by SBRT. Clin Exp Metastasis"
+    },
+    {
+      "date": "2010",
+      "content": "Delayed anastomotic leakage following sphincter-preserving surgery for rectal cancer. Int J Colorectal Dis"
+    },
+    {
+      "date": "2010",
+      "content": "Clinicopathological characteristics of rectal carcinoids. Int J Colorectal Dis"
+    },
+    {
+      "date": "2010",
+      "content": "Clinicopathologic characteristics, surgical treatment and outcomes for splenic flexure colon cancer. Cancer Res Treat"
+    }
+  ],
+  "aiga_hid": "H11KR-21000003"
+}

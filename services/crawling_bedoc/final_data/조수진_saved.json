@@ -1,0 +1,402 @@
+{
+  "hospital_cid": 560,
+  "bedoc_id": "A0479",
+  "bedoc_hospitalsite": "http://dongtan.hallym.or.kr/",
+  "bedoc_doctorname": "조수진",
+  "bedoc_deptname": "신경과",
+  "bedoc_hospitalname": "동탄성심병원",
+  "hospital_name": "동탄성심병원",
+  "aiga_hid": "H11KR-31000063",
+  "hospital_site": "https://dongtan.hallym.or.kr/ptm207.asp?Doctor_Id=1248",
+  "site_type": "single",
+  "hospital_addr": "경기도 화성시 큰재봉길 7, (석우동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://dongtan.hallym.or.kr/ptm207.asp?Doctor_Id=1248&doctorName=%EC%A1%B0%EC%88%98%EC%A7%84&depthName=%EC%8B%A0%EA%B2%BD%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "학력": [
+    {
+      "date": "1992",
+      "content": "연세대학교 의과대학 졸업"
+    },
+    {
+      "date": "1997",
+      "content": "연세대학교 의학대학원 의학 신경과학 석사"
+    },
+    {
+      "date": "2003",
+      "content": "고려대학교 일반대학원 의학 예방의학과 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1992 ~ 1997",
+      "content": "연세대학교세브란스병원 수련/전공의 수료"
+    },
+    {
+      "date": "1997 ~ 1999",
+      "content": "삼성의료원 신경과 뇌혈관질환 전임의"
+    },
+    {
+      "date": "1999 ~ 2003",
+      "content": "부천세종병원 신경과 과장"
+    },
+    {
+      "date": "2003 ~ 2012",
+      "content": "한림대학교동탄성심병원 신경과 조/부교수"
+    },
+    {
+      "date": "2006 ~ 2007",
+      "content": "미국 Columbia University Medical Center, Division of Aging and Dementia 연수"
+    },
+    {
+      "date": "2007 ~",
+      "content": "근전도·전기진단의학 QC Certificate"
+    },
+    {
+      "date": "2012 ~",
+      "content": "한림대학교동탄성심병원 신경과 교수"
+    },
+    {
+      "date": "~ 2013",
+      "content": "국제두통학회 Certificate of Headache Master"
+    },
+    {
+      "date": "2018 ~ 2024",
+      "content": "한림대학교동탄성심병원 신경과 과장"
+    },
+    {
+      "date": "2024 ~",
+      "content": "수면다원검사 인증의"
+    },
+    {
+      "date": "2024 ~",
+      "content": "급성 뇌졸중 인증의"
+    }
+  ],
+  "학술": [
+    {
+      "date": "2023 ~",
+      "content": "Editor in Chief, Headache and Pain Research. 대한두통학회 영문학회지 편집장"
+    },
+    {
+      "date": "2023 ~",
+      "content": "The Journal of Headache and Pain,  Editorial Board member"
+    },
+    {
+      "date": "2019 ~ 2023",
+      "content": "The Journal of Headache and Pain, Junior Editorial Board member"
+    },
+    {
+      "date": "2019 ~ 2023",
+      "content": "대한두통학회 회장"
+    },
+    {
+      "date": "2019 ~",
+      "content": "국제두통학회 Advisory Council/Cluster Headache Special Interest Group member"
+    },
+    {
+      "date": "2018 ~ 2021",
+      "content": "대한신경과학회 이사"
+    },
+    {
+      "date": "2017 ~ 2021",
+      "content": "대한신경집중치료학회 이사"
+    }
+  ],
+  "수상": [],
+  "논문": [
+    "1. Petersen AS, Lund N, Goadsby PJ, Belin AC, Wang S-J, Fronczek R, et al. Recent advances in diagnosing, managing, and understanding the pathophysiology of cluster headache. The Lancet Neurology. 2024;23:712-24.",
+    "2. Kang MK, Hong Y, Kim YH, Park HK, Kim SK, Sohn JH, et al. Diagnosis, Treatment, and Follow-Up of Giant-Cell Arteritis: A Retrospective Multicenter Study. J Clin Neurol. 2024;20:306-14.",
+    "3. Hong Y, Kang M-K, Chu MK, Cho S-J, Im H-J. Cluster Headache Characteristics and the Severity of Obstructive Sleep Apnea: Insights from Polysomnography Analysis. Headache Pain Res. 2024;25:63-71.",
+    "4. Lee MJ, Park JW, Chu MK, Moon HS, Chung PW, Chung JM, et al. Treatment pattern and response for cluster headache in Korea: A prospective multicenter observation study. Cephalalgia. 2023;43:3331024231159627.",
+    "5. Kim BK, Chu MK, Yu SJ, Dell'Agnello G, Han JH, Cho SJ. Burden of migraine and unmet needs from the patients' perspective: a survey across 11 specialized headache clinics in Korea. J Headache Pain. 2021;22:45.",
+    "6. Kim BS, Chung PW, Kim BK, Lee MJ, Park JW, Chu MK, et al. The impact of remission and coexisting migraine on anxiety and depression in cluster headache. J Headache Pain. 2020;21:58.",
+    "7. Lee SH, Kang Y, Cho SJ. Subjective cognitive decline in patients with migraine and its relationship with depression, anxiety, and sleep quality. J Headache Pain. 2017;18:77.",
+    "8. Park JW, Chu MK, Kim JM, Park SG, Cho SJ. Analysis of Trigger Factors in Episodic Migraineurs Using a Smartphone Headache Diary Applications. PLoS One. 2016;11:e0149577.",
+    "9. Influence of silent and symptomatic infarcts on cognitive profile in patients with Alzheimer’s disease (11)",
+    "10. 한국인 인구집단에서 교육수준이 긴장형두통의 유병률에 미치는 영향(11)",
+    "11. Subclinical cerebrovascular disease in mild cognitive impairment (09‘)",
+    "12. Long-term outcomes after acute ischemic stroke in patients aged 80 years and older (08)",
+    "13. 편두통의 급성기 치료: 트립탄 외의 약물들(10), 약물에 의한 두통(09), 왜 어떤 편두통 환자는 예방 약물에 반응하지 않을까?(05)",
+    "14. 긴장형두통: 최근 이해와 치료(08)"
+  ],
+  "언론": [
+    {
+      "targetDate": "2025-04-24",
+      "type": "기사",
+      "text": "봄철 눈물 쏙~ 콧물 쏙~ ' '군발두통' ' 뭐길래",
+      "url": "https://www.k-health.com/news/articleView.html?idxno=80526",
+      "issuer": "경향신문"
+    },
+    {
+      "targetDate": "2024-05-07",
+      "type": "기사",
+      "text": "‘눈을 칼로 도려내는 듯한’ 군발두통, 산소 치료가 큰 효과",
+      "url": "https://n.news.naver.com/mnews/article/469/0000799577?rc=N&ntype=RANKING",
+      "issuer": "한국일보"
+    },
+    {
+      "targetDate": "2024-04-30",
+      "type": "기사",
+      "text": "국내 연구진, '아시아인 군발두통' 산소치료 효능 첫 입증",
+      "url": "https://n.news.naver.com/mnews/article/003/0012519987?sid=102",
+      "issuer": "뉴시스"
+    },
+    {
+      "targetDate": "2023-07-12",
+      "type": "기사",
+      "text": "“내 머리 어떻게 된거 아냐?”...뒷골 당기는 이유, 사실은",
+      "url": "https://n.news.naver.com/mnews/article/009/0005157368?rc=N&ntype=RANKING",
+      "issuer": "매일경제"
+    },
+    {
+      "targetDate": "2023-03-25",
+      "type": "기사",
+      "text": "조수진 두통학회 회장 “군발두통 산소치료, 우리도 건보 적용 시급”",
+      "url": "https://n.news.naver.com/mnews/article/032/0003213046?rc=N&ntype=RANKING",
+      "issuer": "경향신문"
+    },
+    {
+      "targetDate": "2023-01-06",
+      "type": "기사",
+      "text": "편두통, ‘예방 치료’ 시대의 개막",
+      "url": "http://www.monews.co.kr/news/articleView.html?idxno=318616",
+      "issuer": "메디칼업저버"
+    },
+    {
+      "targetDate": "2022-11-29",
+      "type": "기사",
+      "text": "대한두통학회 학술대회 '산소치료 급여화 적극 추진'",
+      "url": "https://n.news.naver.com/mnews/article/032/0003189376?rc=N&ntype=RANKING",
+      "issuer": "경향신문"
+    },
+    {
+      "targetDate": "2022-08-29",
+      "type": "기사",
+      "text": "근육통의 놀라운 신호...왼팔 아프면 심장, 옆구리 통증땐 콩팥",
+      "url": "https://n.news.naver.com/mnews/article/025/0003219628?sid=103",
+      "issuer": "중앙일보"
+    },
+    {
+      "targetDate": "2022-05-03",
+      "type": "기사",
+      "text": "한림대동탄성심병원 신경과 조수진 교수, 제26회 JW중외학술대상 수상",
+      "url": "https://www.metroseoul.co.kr/article/20220502500339",
+      "issuer": "메트로"
+    },
+    {
+      "targetDate": "2022-03-22",
+      "type": "기사",
+      "text": "'편두통 아닙니다'…군발두통 진단까지 평균 5.7년 소요",
+      "url": "https://news.naver.com/main/read.naver?mode=LSD&mid=sec&sid1=103&oid=469&aid=0000664550",
+      "issuer": "한국일보"
+    },
+    {
+      "targetDate": "2022-02-14",
+      "type": "기사",
+      "text": "'1월 23일은 두통의날, 인식개선 및 신속한 치료 중요'",
+      "url": "http://www.monews.co.kr/news/articleView.html?idxno=310387",
+      "issuer": "메디칼업저버"
+    },
+    {
+      "targetDate": "2022-02-09",
+      "type": "기사",
+      "text": "'두통 없는 행복한 세상' 만드는 공약은 없나요",
+      "url": "https://news.naver.com/main/read.naver?mode=LPOD&mid=sec&oid=009&aid=0004919265",
+      "issuer": "매일경제"
+    },
+    {
+      "targetDate": "2021-01-21",
+      "type": "기사",
+      "text": "군발두통, 편두통... '머리 아프면 꼭 의사 진찰 한번'",
+      "url": "http://www.hitnews.co.kr/news/articleView.html?idxno=37931",
+      "issuer": "히트뉴스"
+    },
+    {
+      "targetDate": "2021-09-14",
+      "type": "기사",
+      "text": "한림대동탄성심병원 조수진 교수, 대한두통학회장 연임",
+      "url": "https://news.naver.com/main/read.naver?mode=LSD&mid=sec&sid1=004&oid=346&aid=0000044306",
+      "issuer": "헬스조선"
+    },
+    {
+      "targetDate": "2021-08-17",
+      "type": "기사",
+      "text": "'민감한 뇌' 가진 두통 환자… 일탈 없이 규칙적인 생활을",
+      "url": "https://news.naver.com/main/read.naver?mode=LSD&mid=sec&sid1=103&oid=346&aid=0000043514",
+      "issuer": "헬스조선"
+    },
+    {
+      "targetDate": "2021-08-09",
+      "type": "기사",
+      "text": "편두통 치료, 선택이 아니라 생존의 문제입니다",
+      "url": "http://www.kukinews.com/newsView/kuk202108030199",
+      "issuer": "국민일보"
+    },
+    {
+      "targetDate": "2021-08-09",
+      "type": "기사",
+      "text": "두통, 일상 파괴하는 중증질환… “신약·산소치료 접근성 높여야”",
+      "url": "http://www.kukinews.com/newsView/kuk202108030122",
+      "issuer": "국민일보"
+    },
+    {
+      "targetDate": "2021-06-08",
+      "type": "기사",
+      "text": "[건강·의학] 만성편두통, 보톡스 주사로 효과",
+      "url": "http://www.kyeonggi.com/news/articleView.html?idxno=2366131",
+      "issuer": "경기일보"
+    },
+    {
+      "targetDate": "2021-06-02",
+      "type": "기사",
+      "text": "한림대동탄성심병원, 보톡스 주사요법으로 만성편두통 치료",
+      "url": "http://www.monews.co.kr/news/articleView.html?idxno=304522",
+      "issuer": "메디칼업저버"
+    },
+    {
+      "targetDate": "2021-04-09",
+      "type": "기사",
+      "text": "원인 모를 두통에 답답한가요? 안과 진료 받아보세요",
+      "url": "https://jhealthmedia.joins.com/article/article_view.asp?pno=23532",
+      "issuer": "중앙일보"
+    },
+    {
+      "targetDate": "2021-03-21",
+      "type": "기사",
+      "text": "오늘은 '군발두통인식의 날'...산소치료 이렇게 하세요",
+      "url": "http://www.kukinews.com/newsView/kuk202103190304",
+      "issuer": "쿠키뉴스"
+    },
+    {
+      "targetDate": "2021-03-19",
+      "type": "기사",
+      "text": "'군발두통 산소치료법 영상으로 확인하세요' 한림대동탄성심병원, 산소치료 안내영상 제작",
+      "url": "https://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=004&oid=346&aid=0000038832",
+      "issuer": "헬스조선"
+    },
+    {
+      "targetDate": "2021-02-08",
+      "type": "기사",
+      "text": "두통 일수·강도와 약 복용일 등 입력, 체계적 증상 관리 [e건강앱 ①]",
+      "url": "http://news.khan.co.kr/kh_news/khan_art_view.html?artid=202102052236025",
+      "issuer": "경향신문"
+    },
+    {
+      "targetDate": "2020-06-23",
+      "type": "기사",
+      "text": "“두통 중 가장 고통 심한 군발두통, 산소 처방받게 해 주세요”",
+      "url": "https://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=103&oid=005&aid=0001334365",
+      "issuer": "국민일보"
+    },
+    {
+      "targetDate": "2020-06-17",
+      "type": "기사",
+      "text": "군발두통 환자 35%는 우울증 앓아",
+      "url": "https://www.hankyung.com/life/article/2020061608521",
+      "issuer": "한국경제"
+    },
+    {
+      "targetDate": "2020-02-26",
+      "type": "기사",
+      "text": "군발성두통, 불안한 사람이 통증 더 심하다",
+      "url": "http://health.chosun.com/site/data/html_dir/2020/02/26/2020022603024.html",
+      "issuer": "헬스조선"
+    },
+    {
+      "targetDate": "2020-01-31",
+      "type": "기사",
+      "text": "젊은 남성들의 '지옥 경험'… 군발성 두통을 아시나요?",
+      "url": "http://health.chosun.com/site/data/html_dir/2020/01/30/2020013004100.html",
+      "issuer": "조선일보"
+    },
+    {
+      "targetDate": "2019-12-28",
+      "type": "기사",
+      "text": "[KBS 통일백세 질환탐구] 두통2",
+      "url": "http://program.kbs.co.kr/scr/radio/unite/pc/board.html?smenu=906dc8&bbs_loc=R2018-0044-03-797689,list,none,1,0",
+      "issuer": "KBS"
+    },
+    {
+      "targetDate": "2019-11-12",
+      "type": "기사",
+      "text": "왜 갑자기 머리가 아프지… 범인은 '음식'에 있다",
+      "url": "http://health.chosun.com/site/data/html_dir/2019/11/11/2019111103407.html",
+      "issuer": "조선일보"
+    },
+    {
+      "targetDate": "2019-11-05",
+      "type": "기사",
+      "text": "커피? 늦잠? 언제 아팠지…'편두통' 일기 쓰면 원인 찾기 쉬워",
+      "url": "https://www.hankookilbo.com/news/Read/201911021804093359",
+      "issuer": "한국일보"
+    },
+    {
+      "targetDate": "2019-09-20",
+      "type": "기사",
+      "text": "자고 일어나면 머리가 '지끈' 편두통·수면무호흡증 의심을",
+      "url": "http://health.chosun.com/site/data/html_dir/2019/09/19/2019091903170.html",
+      "issuer": "조선일보"
+    },
+    {
+      "targetDate": "2019-07-23",
+      "type": "기사",
+      "text": "편두통으로 생활 불편 호소 10년 새 2.5배...병원 방문은 되레 줄어",
+      "url": "http://news.khan.co.kr/kh_news/khan_art_view.html?artid=201907232110015",
+      "issuer": "경향신문"
+    },
+    {
+      "targetDate": "2019-04-02",
+      "type": "기사",
+      "text": "눈물 나는 ‘군발 두통’, 송곳으로 찌르는 듯한 심한 통증에 눈물·콧물",
+      "url": "http://www.hankookilbo.com/News/Read/201903301208055071",
+      "issuer": "한국일보"
+    },
+    {
+      "targetDate": "2019-03-28",
+      "type": "기사",
+      "text": "`군발두통` 환자 85%가 직장 내 어려움 겪어...정규직 비율은 68%",
+      "url": "https://www.mk.co.kr/news/it/view/2019/03/188020/",
+      "issuer": "매일경제"
+    },
+    {
+      "targetDate": "2019-01-23",
+      "type": "기사",
+      "text": "소아·청소년 57% '두통 참다가 심해져야 진통제 복용'",
+      "url": "http://www.segye.com/newsView/20190123001585",
+      "issuer": "세계일보"
+    },
+    {
+      "targetDate": "2018-10-02",
+      "type": "기사",
+      "text": "[And 건강] ‘군발 두통’, 송곳으로 찌르는 듯한 심한 통증에 눈물·콧물",
+      "url": "http://news.kmib.co.kr/article/view.asp?arcid=0924012863&code=14130000&cp=nv",
+      "issuer": "국민일보"
+    },
+    {
+      "targetDate": "2021-07-13",
+      "type": "건강매거진",
+      "text": "씩씩TV [씩씩TV] 학회장님께 치료 받으면 완치 가능? 두통약 분석 들어갑니다",
+      "url": "https://www.youtube.com/watch?v=6l7eCyoj0L8"
+    },
+    {
+      "targetDate": "2021-07-06",
+      "type": "건강매거진",
+      "text": "씩씩TV [씩씩TV] 두통의 원인이 스트레스일까? 두통학회장이 알려주는 두통 완벽 정리",
+      "url": "https://www.youtube.com/watch?v=dG2cu9tNtYc"
+    },
+    {
+      "targetDate": "2021-03-29",
+      "type": "건강매거진",
+      "text": "병원 및 검사 안내 군발두통 환자를 위한 산소치료 안내 영상",
+      "url": "https://www.youtube.com/watch?v=W1-Ri1ipFFs"
+    }
+  ],
+  "저서": [],
+  "profileUrl": "https://dongtan.hallym.or.kr/CHPFile/treatment/H_20210903_12107110_b_3.png",
+  "specialty": "편두통, 군발두통, 두개내압저하/상승, 가역뇌혈관수축증후군, 뇌혈관질환, 뇌졸중, 치매, 건망증, 인지장애, 어지럼증, 항CGRP치료, 두통보톡스치료"
+}

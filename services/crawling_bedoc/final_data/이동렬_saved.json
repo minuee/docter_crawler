@@ -1,0 +1,88 @@
+{
+  "hospital_cid": 389,
+  "bedoc_id": "A5428",
+  "bedoc_hospitalsite": "http://www.maryknoll.co.kr",
+  "bedoc_doctorname": "이동렬",
+  "bedoc_deptname": "신장내과",
+  "bedoc_hospitalname": "메리놀병원",
+  "hospital_name": "메리놀병원",
+  "aiga_hid": "H31KR-24000668",
+  "hospital_site": "http://www.maryknoll.co.kr/03_doctor/doctor_detail_new.php?d_idx=103",
+  "site_type": "single",
+  "hospital_addr": "부산광역시 중구 중구로 121, (대청동4가)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "http://www.maryknoll.co.kr/03_doctor/doctor_detail_new.php?d_idx=103&doctorName=%EC%9D%B4%EB%8F%99%EB%A0%AC&depthName=%EC%8B%A0%EC%9E%A5%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "profileUrl": "http://www.maryknoll.co.kr/board/upfile/__doctor/DDA_1102104028_28414.jpg",
+  "specialty": "신장이식, 당뇨병성신증, 만성 신부전, 사구체질환, 혈액 및 복막투석",
+  "학력": [
+    {
+      "date": null,
+      "content": "부산대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "부산대학교 의과대학 대학원 의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "메리놀병원 내과 전공의"
+    },
+    {
+      "date": null,
+      "content": "메리놀병원 신장내과 전임의"
+    },
+    {
+      "date": null,
+      "content": "콜로라도대학병원, Anschutz Medical Campus"
+    },
+    {
+      "date": null,
+      "content": "임상연구 및 신장내과/신장이식팀 방문교수"
+    },
+    {
+      "date": null,
+      "content": "Marquis Who’s Who in the World 5년 연속 세계 인명사전 등재."
+    },
+    {
+      "date": null,
+      "content": "현)메리놀병원 장기이식위원회 위원장"
+    },
+    {
+      "date": null,
+      "content": "현)메리놀병원 내과 주임과장"
+    },
+    {
+      "date": null,
+      "content": "현)메리놀병원 신장이식센터 센터장"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한내과학회 회원"
+    },
+    {
+      "date": null,
+      "content": "대한신장학회, 대한내과학회 평의원"
+    },
+    {
+      "date": null,
+      "content": "대한이식학회 상임이사"
+    },
+    {
+      "date": null,
+      "content": "미국신장학회 및 이식학회 회원"
+    },
+    {
+      "date": null,
+      "content": "미국(AST) 및 유럽 신장학회/이식학회(ESOT) 회원"
+    }
+  ],
+  "isAttend": true
+}

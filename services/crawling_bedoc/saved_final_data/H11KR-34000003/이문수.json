@@ -1,0 +1,36 @@
+{
+  "hospital_cid": 395,
+  "bedoc_id": "A5334",
+  "bedoc_hospitalsite": "http://www.schmc.ac.kr/cheonan/kor/index.do",
+  "bedoc_doctorname": "이문수",
+  "bedoc_deptname": "외과",
+  "bedoc_hospitalname": "순천향대천안병원",
+  "hospital_name": "순천향대천안병원",
+  "aiga_hid": "H11KR-34000003",
+  "hospital_site": "https://www.schmc.ac.kr/cheonan/doctr/home.do?key=2945&doctrNo=971",
+  "site_type": "single",
+  "hospital_addr": "충청남도 천안시 동남구 순천향6길 31,  5동 (봉명동,순천향대학교병원)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "specialty": "위암센터(위암, 위장관외과, 복강경)",
+  "학력": [
+    { "content": "순천향대학교 의과대학" },
+    { "content": "순천향대학교 대학원 (의학석사)" },
+    { "content": "Toho University Graduate School (의학박사)" }
+  ],
+  "경력": [
+    { "content": "1994 ~ 현재 : 순천향대학교 의과대학 외과 교수" },
+    { "content": "2010 ~ 2021 : 순천향대학교 부속 천안병원 병원장" },
+    { "content": "2013 ~ 2021 : 순천향대학교 부속병원 관리원장" },
+    { "content": "2021 ~ 현재 : 새병원 건설본부장" },
+    { "content": "2024 ~ 현재 : 순천향대학교 부속 천안병원 병원장" },
+    { "content": "2007년 한국로슈종양학술상" },
+    { "content": "2012년 자랑스러운 순천향인상" },
+    { "content": "2015년 대한위암학회 종양학술상" },
+    { "content": "2016, 2017년 대한위암학회 최다논문게재상" },
+    { "content": "2017년, 2018년, 2019년, 2020년 세계 인명사전 'Marquis Who's Who' 등재" }
+  ],
+  "profileUrl": null,
+  "isAttend": true
+}

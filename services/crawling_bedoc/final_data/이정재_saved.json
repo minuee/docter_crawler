@@ -1,0 +1,76 @@
+{
+  "hospital_cid": 454,
+  "bedoc_id": "A0915",
+  "bedoc_hospitalsite": "http://www.schmc.ac.kr/seoul/kor/index.do",
+  "bedoc_doctorname": "이정재",
+  "bedoc_deptname": "산부인과",
+  "bedoc_hospitalname": "순천향대서울병원",
+  "hospital_name": "순천향대서울병원",
+  "aiga_hid": "H11KR-11000026",
+  "hospital_site": "https://www.schmc.ac.kr/seoul/doctr/home.do?key=1605&doctrNo=1222",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 용산구 대사관로 59, (한남동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.schmc.ac.kr/seoul/doctr/home.do?key=1605&doctrNo=1222&doctorName=%EC%9D%B4%EC%A0%95%EC%9E%AC&depthName=%EC%82%B0%EB%B6%80%EC%9D%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "https://www.schmc.ac.kr/attach/DATA/doctr/seoul_0220250724155032846.png",
+  "specialty": "모체태아의학 (고위험임신, 태아기형, 유전상담), 자궁, 난소질환의 복강경 수술 및 로봇수술",
+  "학력": [
+    {
+      "date": null,
+      "content": "순천향대학교 의과대학 졸업, 의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "미국 Harbor-UCLA Medical Center 전임의"
+    },
+    {
+      "date": null,
+      "content": "현재 순천향대학교병원 산부인과 교수"
+    },
+    {
+      "date": null,
+      "content": "건강보험심사평가원 심사위원"
+    },
+    {
+      "date": null,
+      "content": "순천향대학교 중앙의료원 기획조정실장(전)"
+    },
+    {
+      "date": null,
+      "content": "순천향대학교 부속 서울병원 부원장(전)"
+    },
+    {
+      "date": null,
+      "content": "순천향대학교 부속 서울병원장 (현)"
+    },
+    {
+      "date": null,
+      "content": "대한산부인과학회: 보험위원회 간사, 학술 TFT 위원"
+    },
+    {
+      "date": null,
+      "content": "대한주산의학회: 기획위원장"
+    },
+    {
+      "date": null,
+      "content": "대한모체태아의학회: 보험위원장"
+    },
+    {
+      "date": null,
+      "content": "대한병원협회: 임상질지표 전문위원"
+    },
+    {
+      "date": null,
+      "content": "미국 모체태아의학회 회원"
+    }
+  ],
+  "논문": [],
+  "학술": []
+}

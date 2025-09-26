@@ -1,11 +1,17 @@
 const { chromium } = require('playwright');
+const fs = require('fs');
 
 (async () => {
+  const url = process.argv[2];
+  if (!url) {
+    console.error('Please provide a URL as a command-line argument.');
+    process.exit(1);
+  }
+
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
 
   try {
-    const url = 'https://www.ish.or.kr/main/doctor/view.do?md_idx=56&doctor_code=545598&mp_idx=60&mc_idx=';
     await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 60000 });
 
     const doctorData = await page.evaluate(() => {
@@ -84,11 +90,11 @@ const { chromium } = require('playwright');
       return data;
     });
 
-    console.log(JSON.stringify(doctorData, null, 2));
+    fs.writeFileSync('parser_output.json', JSON.stringify(doctorData, null, 2));
 
   } catch (error) {
       console.error('An error occurred:', error);
-      console.log(JSON.stringify({}, null, 2));
+      fs.writeFileSync('parser_output.json', JSON.stringify({}, null, 2));
   } finally {
     await browser.close();
   }

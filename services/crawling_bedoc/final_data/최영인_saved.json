@@ -1,0 +1,88 @@
+{
+  "hospital_cid": 609,
+  "bedoc_id": "A0036",
+  "bedoc_hospitalsite": "http://hanaeyes.co.kr/",
+  "bedoc_doctorname": "최영인",
+  "bedoc_deptname": "안과",
+  "bedoc_hospitalname": "하나안과의원",
+  "hospital_name": "하나안과의원",
+  "aiga_hid": "H31KR-11009800",
+  "hospital_site": "http://hanaeyes.co.kr/intro/main03_02.html",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 강북구 도봉로 34, 5층 (미아동, 트레지오빌딩)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "http://hanaeyes.co.kr/intro/main03_02.html?doctorName=%EC%B5%9C%EC%98%81%EC%9D%B8&depthName=%EC%95%88%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "profileUrl": "http://hanaeyes.co.kr/intro/img/main03_p02_s.jpg",
+  "specialty": "굴절수술,라식,라섹, 엑시머레이저 수술, 투명 수정체 제거술",
+  "학력": [
+    {
+      "content": "서울대 의대 졸업"
+    },
+    {
+      "content": "서울대 의학박사 취득"
+    }
+  ],
+  "경력": [
+    {
+      "content": "한일병원 안과 주임과장 역임"
+    },
+    {
+      "content": "을지의대 안과학교실 주임교수 역임"
+    },
+    {
+      "content": "을지병원 안과부장 역임"
+    },
+    {
+      "content": "15년 이상 시력교정(라식 등)수술 시행"
+    },
+    {
+      "content": "20년 이상 백내장 수술 시행"
+    }
+  ],
+  "학술": [
+    {
+      "content": "대한안과학회 이사 및 고시위원 역임"
+    },
+    {
+      "content": "ARCRS(미국 백내장 굴절학회 정회원)"
+    },
+    {
+      "content": "AAO(미국 안과학회 정회원)"
+    },
+    {
+      "content": "유럽 백내장 굴절학회 정회원"
+    },
+    {
+      "content": "대한안과학회 정회원"
+    },
+    {
+      "content": "대한 백내장 굴절학회 정회원"
+    }
+  ],
+  "저서": [
+    {
+      "content": "굴절검사와 처방 (1996, 울산대학교 출판부)"
+    },
+    {
+      "content": "RGP 콘택트렌즈(1998, 현문사)"
+    },
+    {
+      "content": "백내장(2002, 일조각)"
+    },
+    {
+      "content": "굴절교정수술(2005, KSCRS)"
+    }
+  ],
+  "수상": [
+    {
+      "content": "동아일보에서 뽑은 안과부문 [전국의 명의들]에 선정"
+    },
+    {
+      "content": "스포츠서울이 선정한 베스트병원(하나안과)"
+    }
+  ],
+  "isAttend": true
+}

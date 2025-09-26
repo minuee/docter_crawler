@@ -1,0 +1,172 @@
+{
+  "hospital_cid": 450,
+  "bedoc_id": "A8515",
+  "bedoc_hospitalsite": "https://www.cnush.co.kr/main/index.do",
+  "bedoc_doctorname": "이정길",
+  "bedoc_deptname": "정형외과",
+  "bedoc_hospitalname": "세종충남대병원",
+  "hospital_name": "세종충남대병원",
+  "aiga_hid": "H11KR-41000001",
+  "hospital_site": "https://www.cnush.co.kr/prog/cnushDoctor/drHomepage.do?gwaCode=OS&doctorId=H000200430",
+  "site_type": "single",
+  "hospital_addr": "세종특별자치시 보듬7로 20, 세종충남대학교병원 (도담동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.cnush.co.kr/prog/cnushDoctor/drHomepage.do?gwaCode=OS&doctorId=H000200430&doctorName=%EC%9D%B4%EC%A0%95%EA%B8%B8&depthName=%EC%A0%95%ED%98%95%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "specialty": "고관절 질환 및 외상",
+  "학력": [
+    {
+      "date": "2011.03 ~ 2013.02",
+      "content": "충남대학교 의과대학 대학원 의학 석사 (정형외과학)"
+    },
+    {
+      "date": "2004.03 ~ 2010.02",
+      "content": "충남대학교 의과대학 학사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "2025.09 ~ 현재",
+      "content": "세종충남대학교병원 미래의학연구원장"
+    },
+    {
+      "date": "2023.01 ~ 2024.12",
+      "content": "세종충남대학교병원 정형외과 과장"
+    },
+    {
+      "date": "2020.04 ~ 현재",
+      "content": "세종충남대학교병원 정형외과 고관절 임상조교수"
+    },
+    {
+      "date": "2019.03 ~ 2020.03",
+      "content": "충남대학교병원 정형외과 고관절 전임의"
+    },
+    {
+      "date": "2018.05 ~ 2019.02",
+      "content": "충남대학교병원 족부족관절 전임의"
+    },
+    {
+      "date": "2015.05 ~ 2018.04",
+      "content": "계룡대 지구병원 정형외과 군의관"
+    },
+    {
+      "date": "2011.03 ~ 2015.02",
+      "content": "충남대학교병원 정형외과 전공의"
+    },
+    {
+      "date": "2010.03 ~ 2011.02",
+      "content": "충남대학교병원 인턴"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한고관절학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한정형외과학회 정회원"
+    }
+  ],
+  "수상": [
+    {
+      "date": "2018",
+      "content": "우수학술상 (대한정형외과초음파학회): ‘초음파 유도 하 경피적 아킬레스 건 봉합술: 개방적 봉합술과의 비교’"
+    },
+    {
+      "date": "2019",
+      "content": "우수학술상 (대한정형외과초음파학회): ‘초음파 유도하 비절개성 아킬레스 봉합술’"
+    },
+    {
+      "date": "2019",
+      "content": "비디오전시장려상 (대한정형외과학회): ‘Non-incisional Achilles tendon repair: Surgical technic’"
+    }
+  ],
+  "논문": [
+    "Cha SM, Shin HD, Kim KC, Lee JK. Simple excision vs the Kidner procedure for type 2 accessory navicular associated with flatfoot in pediatric population.",
+    "Cha SM, Shin HD, Kim KC, Lee JK. A Girl with Limping Diagnosed as Burkitt Lymphoma.",
+    "Kang C, Lee GS, Kim SB, Won YG, Lee JK, Jung YS, et al. Comparison of postoperative pain control methods after bony surgery in the foot and ankle.",
+    "Kang C, Lee GS, Lee JK. Acute Anterior Talofibular Ligament Open Type Avulsion Fracture: A Case Report.",
+    "Hwang JM, Hwang DS, Kang C, Lee WY, Lee GS, Lee JK, et al. Arthroscopic Treatment for Femoroacetabular Impingement with Extraspinal Diffuse Idiopathic Skeletal Hyperostosis.",
+    "Kang C, Hwang DS, Lee JK, Won Y, Song JH, Lee GS. Screw Fixation of the Posterior Malleolus Fragment in Ankle Fracture.",
+    "Lee JK, Kang C, Kim SB, Lee GS. Stiff-Person Syndrome: Diagnostic Difficulty.",
+    "Jeon YS, Hwang DS, Hwang JM, Lee JK, Park YC. Pathological Fracture of the Femoral Neck due to Tophaceous Gout: An Unusual Case of Gout.",
+    "JK Lee, C Kang, DS Hwang, GS Lee, JM Hwang, GW Seo, DH Kim. Surgical Outcomes of the Reinforcing Technique of a Weakened Medial Capsule in Severe Hallux Valgus Using Internal Brace.",
+    "Lee JK, Kang C, Hwang DS, et al. An Innovative Pain Control Method Using Peripheral Nerve Block and Patient-Controlled Analgesia With Ketorolac After Bone Surgery in the Ankle Area: A Prospective Study",
+    "Zheng L, Hwang JM, Hwang DS, Kang C, Lee JK, Park YC. Incidence and location of heterotopic ossification following hip arthroscopy.",
+    "Lee JK, Hwang DS, Kang C, et al. Midterm-clinical Outcomes after Hip Arthroscopy in Middle-aged Patients with Early Osteoarthritis.",
+    "Lee JK, Kang C, Hwang DS, et al. A comparative study of innovative percutaneous repair and open repair for acute Achilles tendon rupture: Innovative usage of intraoperative ultrasonography.",
+    "Song JH, Kang C, Kim TG, Lee GS, Lee JK, Ahn KJ, et al. Perioperative axial loading computed tomography findings in varus ankle osteoarthritis: Effect of supramalleolar osteotomy on abnormal internal rotation of the talus.",
+    "Hwang DS, Kang C, Lee JK, Park JY, Zheng L, Hwang JM. The utility of hip arthroscopy for patients with painful borderline hip dysplasia.",
+    "Hwang JM, Kang C, Hwang DS, Lee GS, Lee JK, An BK. Flexible Intramedullary Nailing in High-Energy Tibial Fractures With Extensive Soft-Tissue Loss A Case Report."
+  ],
+  "언론": [
+    {
+      "targetDate": "2021-10-15",
+      "type": "기사",
+      "text": "KBS 정형외과 이기수 교수, 이정길 교수 - KBS TV이웃 다정다감",
+      "url": null,
+      "issuer": null
+    },
+    {
+      "targetDate": "2025-03-31",
+      "type": "기사",
+      "text": "세종충남대병원·홍익대 세종캠퍼스, RISE 업무협약 체결",
+      "url": null,
+      "issuer": null
+    },
+    {
+      "targetDate": "2023-11-28",
+      "type": "기사",
+      "text": "미래의학연구원, 전문가 초청 세미나",
+      "url": null,
+      "issuer": null
+    },
+    {
+      "targetDate": "2023-09-04",
+      "type": "기사",
+      "text": "김상범 진료처장 등 주요 보직자 인선",
+      "url": null,
+      "issuer": null
+    },
+    {
+      "targetDate": "2022-11-23",
+      "type": "기사",
+      "text": "정형외과 이정길 교수, 2022 서울국제발명전시회 ‘대상’",
+      "url": null,
+      "issuer": null
+    },
+    {
+      "targetDate": "2022-04-04",
+      "type": "기사",
+      "text": "첨단 국가연구개발사업 연속 선정 쾌거",
+      "url": null,
+      "issuer": null
+    },
+    {
+      "targetDate": "2021-09-27",
+      "type": "기사",
+      "text": "세종충남대학교병원 2021년도 직무발명 공모전 및 사업화 시상식 개최",
+      "url": null,
+      "issuer": null
+    },
+    {
+      "targetDate": "2021-01-25",
+      "type": "기사",
+      "text": "정형외과 이기수 교수 연구팀, 국가 연구개발 사업 최종 계약",
+      "url": null,
+      "issuer": null
+    },
+    {
+      "targetDate": "2020-09-09",
+      "type": "기사",
+      "text": "정형외과 이기수 교수 연구팀, 국가 연구개발 사업 최종 선정",
+      "url": null,
+      "issuer": null
+    }
+  ]
+}

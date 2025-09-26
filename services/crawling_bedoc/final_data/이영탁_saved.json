@@ -1,0 +1,126 @@
+{
+  "hospital_cid": 430,
+  "bedoc_id": "A5249",
+  "bedoc_hospitalsite": "https://incheon.sejongh.co.kr/",
+  "bedoc_doctorname": "이영탁",
+  "bedoc_deptname": "흉부외과",
+  "bedoc_hospitalname": "메디플렉스 세종병원",
+  "hospital_name": "인천세종병원",
+  "aiga_hid": "H11KR-22000014",
+  "hospital_site": "https://incheon.sejongh.co.kr/medical_part/part_01_detail?orddrid=20200031&cate1=&cate2=",
+  "site_type": "single",
+  "hospital_addr": "인천광역시 계양구 계양문화로 20-0, 인천세종병원",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://incheon.sejongh.co.kr/medical_part/part_01_detail?orddrid=20200031&cate1=&cate2=&doctorName=%EC%9D%B4%EC%98%81%ED%83%81&depthName=%ED%9D%89%EB%B6%80%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "https://incheon.sejongh.co.kr/data/doctor/2025/03/n3NeOXWGVz.png",
+  "specialty": "관상동맥우회술, 인공심장",
+  "학력": [
+    {
+      "date": null,
+      "content": "서울대학교 문리과대학 의예과 수료"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 졸업 (의학사)"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 대학원 의학과 (석사)"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 대학원 의학과 (박사)"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "서울대학교병원 수련의"
+    },
+    {
+      "date": null,
+      "content": "서울대학교병원 흉부외과 전공의"
+    },
+    {
+      "date": null,
+      "content": "세종병원 흉부외과 과장"
+    },
+    {
+      "date": null,
+      "content": "세종병원 흉부외과 부장"
+    },
+    {
+      "date": null,
+      "content": "세종병원 진료부장"
+    },
+    {
+      "date": null,
+      "content": "삼성서울병원 심장혈관센타 부센터장"
+    },
+    {
+      "date": null,
+      "content": "삼성서울병원 심장외과 과장"
+    },
+    {
+      "date": null,
+      "content": "삼성서울병원 흉부외과 과장"
+    },
+    {
+      "date": null,
+      "content": "성균관대학교 의과대학 흉부외과학 교실 주임 교수"
+    },
+    {
+      "date": null,
+      "content": "삼성서울병원 심장혈관센터장"
+    },
+    {
+      "date": null,
+      "content": "삼성서울병원 흉부외과 전문의"
+    },
+    {
+      "date": null,
+      "content": "성균관대학교 의과대학 흉부외과 교수"
+    },
+    {
+      "date": null,
+      "content": "현, 인천세종병원 흉부외과 과장 / 지역심뇌혈관질환센터 센터장"
+    }
+  ],
+  "수상": [
+    {
+      "date": null,
+      "content": "2013 삼성서울병원 ‘올해의 교수상’ 수상"
+    }
+  ],
+  "논문": [
+    "Purely bilateral internal thoracic artery bypass grafting in a child with multivessel coronary involvement of Kawasaki disease"
+  ],
+  "언론": [
+    {
+      "targetDate": null,
+      "type": "기사",
+      "text": "[헬스조선]1분 1초에 생사가 달린 심혈관 질환",
+      "url": "http://health.chosun.com/site/data/html_dir/2010/03/02/2010030201421.html?srchCol=news&srchUrl=news1",
+      "issuer": "헬스조선"
+    },
+    {
+      "targetDate": null,
+      "type": "기사",
+      "text": "[의학신문] 메디플렉스 세종병원, 이영탁 前 삼성서울병원 흉부외과 교수 영입",
+      "url": "http://www.bosa.co.kr/news/articleView.html?idxno=2122511",
+      "issuer": "의학신문"
+    },
+    {
+      "targetDate": null,
+      "type": "기사",
+      "text": "[매일경제] [중증 질환] 스텐트시술과 관상동맥우회술",
+      "url": "https://www.mk.co.kr/news/it/view/2009/03/135006/",
+      "issuer": "매일경제"
+    }
+  ]
+}

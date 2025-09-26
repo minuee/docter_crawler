@@ -1,0 +1,69 @@
+{
+  "hospital_cid": 358,
+  "bedoc_id": "A1101",
+  "bedoc_hospitalsite": "https://seoul.eumc.ac.kr/main.do",
+  "bedoc_doctorname": "유은선",
+  "bedoc_deptname": "소아청소년과",
+  "bedoc_hospitalname": "이대서울병원",
+  "hospital_name": "이대서울병원",
+  "aiga_hid": "H01KR-11000015",
+  "hospital_site": "https://seoul.eumc.ac.kr/doctor/basicInfo.do?dr_sid=1001705&dept_cd=PGE",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 강서구 공항대로 260, 이화의대부속서울병원 (마곡동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "doctorDetailUrl":"https://seoul.eumc.ac.kr/doctor/basicInfo.do?dr_sid=1001705&dept_cd=PGE",
+  "profileUrl": "https://seoul.eumc.ac.kr/upload/doctor/info/48eecd4a141c41559a9f61eab01ead32.jpg",
+  "specialty": "소아혈액질환(빈혈, 자반, 출혈), 림프절질환(림프절종대, 림프절종, 림프관종), 혈관종, 혈액종양질환(백혈병, 림프종, 뇌종양, 신경모세포종, 고형암 등), 조혈모세포이식",
+  "학력": [
+    { "content": "경희대학교 의학박사" },
+    { "content": "이화여자대학교 의학석사" },
+    { "content": "이화여자대학교 의과대학 졸업" }
+  ],
+  "경력": [
+    { "date": "현재", "content": "이대서울병원 소아청소년과 과장" },
+    { "date": "2000 ~ 현재", "content": "이화여자대학교 의과대학 소아과학교실 조교수, 부교수, 정교수" },
+    { "date": "2009 ~ 2010", "content": "미국 시카고, Rush University Medical Cenetr, 조혈모세포이식 및 세포치료 센터, 교환교수" },
+    { "date": "2000 ~ 2019", "content": "이대목동병원 소아청소년과 교수" },
+    { "date": "1997 ~ 2000", "content": "미국, Texas Children Hospital, Baylor College of Medicine, Postdoc fellow" },
+    { "date": "1996 ~ 1998", "content": "서울대학교 어린이병원 소아과 혈액종양 전임의사" },
+    { "date": "1995 ~ 1996", "content": "이화여자대학교 부속병원 소아과 전임의사" },
+    { "date": "1991 ~ 1995", "content": "이화여자대학교 부속병원 소아과 전공의 수료" }
+  ],
+  "학술": [
+    { "content": "이대서울병원 IRB 위원장" },
+    { "content": "대한소아혈액종양학회 홍보이사" },
+    { "content": "대한소아응급의학회 대외협력이사" },
+    { "content": "대한소아혈액종양학회 총무이사" },
+    { "content": "소아혈액종양학회 보험이사" },
+    { "content": "보건복지부 암정복추진기획단위원" },
+    { "content": "대한소아과학회 홍보.정보위원" },
+    { "content": "대한소아청소년과학회 정회원" },
+    { "content": "대한소아혈액종양학회 정회원" },
+    { "content": "대한혈액학회 정회원" },
+    { "content": "대한조혈모세포이식학회 정회원" },
+    { "content": "대한소아뇌종양학회 정회원" },
+    { "content": "대한소아응급의학회 정회원" },
+    { "content": "대한암학회 정회원" },
+    { "content": "대한분자생물학회 정회원" }
+  ],
+  "언론": [
+    { "targetDate": "2024-11-04", "type": "언론", "text": "[헬스인뉴스] 유은선 이대서울병원 교수, 대한소아혈액종양학회 학술공로상 수상", "url": "https://www.healthinnews.co.kr/view.php?ud=2024110416363814446aa9cc43d0_48", "issuer": "헬스인뉴스" },
+    { "targetDate": "2021-08-09", "type": "언론", "text": "[헬스조선] 갑자기 주저앉아 못 걷는 아이, 혹시 버킷림프종?", "url": "https://health.chosun.com/site/data/html_dir/2021/08/09/2021080901096.html", "issuer": "헬스조선" }
+  ],
+  "논문": [
+    "Allogeneic hematopoietic cell transplantation in patients with juvenile myelomonocytic leukemia in Korea: a report of the Korean Pediatric Hematology-Oncology Group. Bone Marrow Transplantation. 2023, v.58 no.1, 20-29.",
+    "Epidemiological Study of Hereditary Hemolytic Anemia in the Korean Pediatric Population during 1997-2016: a Nationwide Retrospective Cohort Study. JOURNAL OF KOREAN MEDICAL SCIENCE. 2020, v.35 no.33, e279.",
+    "Peroxiredoxin 3 has important roles on arsenic trioxide induced apoptosis in human acute promyelocytic leukemia cell line via hyperoxidation of mitochondrial specific reactive oxygen species. Molecules and Cells. 2020, v.43 no.9, 813-820.",
+    "Tannic acid attenuates the formation of cancer stem cells by inhibiting NF-kappa B-mediated phenotype transition of breast cancer cells. AMERICAN JOURNAL OF CANCER RESEARCH. 2019, v.9 no.8, 1664-.",
+    "Clinical Observations of Kikuchi-Fujimoto disease in Children and Adolescents: A Single Center Experience. Ewha Medical Journal. 2018-10.",
+    "Differentiation between incomplete Kawasaki disease and secondary hemophagocytic lymphohistiocytosis following Kawasaki disease using N-terminal pro-brain natriuretic peptide. Korean J Pediatr. 2018-05.",
+    "Bortezomib Induces Apoptosis by Increasing Oxidative Stress Through Upregulation of Mitochondria-specific Reactive Oxygen Species as a Consequence of Peroxiredoxin III Oxidation by Multimer Formation in Multiple Myeloma. European Society for Blood and marrow transplantation. 2018-03.",
+    "Targeting autiphagy in overcoming imatinib resistance in Philadelphia positive CML cells and its possible therapeutic opportunities. Clin Pediatr Hematol Oncol. 2017-10.",
+    "Reduction of thoredoxin reducrase 2 is a potential mechanism of BTZ-induced myeloma cell death. Blood research. 2017-05.",
+    "Improved Outcome of a Reduced Toxicity-Fludarabine, Cyclophosphamide, plus Thymoglobulin Conditioning Regimen for Unrelated Donor Transplantation in Severe Aplastic Anemia: Comparison of 2 Multicenter Prospective Studies.. Biol Blood Marrow Transplant. 2016-08.",
+    "Submicroscopic Deletions of Immunoglobulin Heavy Chain Gene (IGH) in Precursor B Lymphoblastic Leukemia with IGH Rearrangements. Ann Lab Med. 2015-01."
+  ],
+  "isAttend": true
+}

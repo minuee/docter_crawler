@@ -1,0 +1,67 @@
+{
+  "hospital_cid": 245,
+  "bedoc_id": "A8298",
+  "bedoc_hospitalsite": "http://www.cmcep.or.kr/",
+  "bedoc_doctorname": "박해관",
+  "bedoc_deptname": "신경외과",
+  "bedoc_hospitalname": "은평성모병원",
+  "hospital_name": "가톨릭대학교 은평성모병원",
+  "aiga_hid": "H11KR-11000002",
+  "hospital_site": "https://www.cmcep.or.kr/page/doctor/1270/D0000995",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 은평구 통일로 1021, (진관동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "profileUrl": "https://www.cmcep.or.kr/api/attach/view/doctor/D0000995/profile/1",
+  "specialty": "뇌혈관질환(뇌동맥류,뇌동정맥기형,모야모야병 등) 치료(수술 및 뇌혈관 내 수술),뇌졸중 급성기 치료와 예방,경동맥협착,뇌종양,두통",
+  "isAttend": true,
+  "학력": [
+    {
+      "date": "1981~1987",
+      "content": "가톨릭대학교 의학 학사"
+    },
+    {
+      "date": "1995~1997",
+      "content": "가톨릭대학교 신경외과학 석사"
+    },
+    {
+      "date": "1997~2000",
+      "content": "가톨릭대학교 신경외과학 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "2019~2021",
+      "content": "은평성모병원 뇌신경센터장"
+    },
+    {
+      "date": "2020~현재",
+      "content": "대한신경외과학회 이사 (뇌혈관발전위원회)"
+    },
+    {
+      "date": "2019~현재",
+      "content": "은평성모병원 신경외과 교수"
+    },
+    {
+      "date": "2018~2020",
+      "content": "대한신경외과학회 상임이사(뇌혈관질환)"
+    }
+  ],
+  "수상": [
+    {
+      "date": "2010",
+      "content": "대한민국 국회 공로장(제847호)"
+    }
+  ],
+  "학술": [],
+  "논문": [
+    "Microsurgical anatomy of the facial nerve (CLINICAL ANATOMY, 공동저자)",
+    "Clinical significance of decompressive craniectomy surface area and side (JOURNAL OF KOREAN NEUROSURGICAL SOCIETY, 공동저자)",
+    "Temperature Difference between Brain and Axilla according to Body Temperature in the Patient with Brain Injury (KOREAN JOURNAL OF NEUROTRAUMA, 교신저자)",
+    "Differentiation of hemorrhagic infarction from primary intracerebral hemorrhage in the chronic period (JOURNAL OF CLINICAL NEUROSCIENCE, 공동저자)",
+    "Progressive postoperative slippage of titanium aneurysm clip confirmed by follow-up radiographic imaging studies and by reoperation: a case report (BRITISH JOURNAL OF NEUROSURGERY, 교신저자)"
+  ],
+  "저서": [],
+  "언론": []
+}

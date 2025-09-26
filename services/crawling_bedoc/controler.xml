@@ -19,8 +19,9 @@
             hospital_bedoc_list as a left join hospital h on a.new_hospital_hid = h.hid
         WHERE
             1=1 and is_getdetail_done = false and  new_doctor_url != '' and  new_doctor_url is not null and a.new_hospital_hid is not null
+            and a.bedoc_id = 'A0329'
         ORDER BY a.hospital_cid ASC
-        LIMIT 5 OFFSET 165
+        LIMIT 10 
     </select>
 
     <select id="select_bedoc_hospital_old">

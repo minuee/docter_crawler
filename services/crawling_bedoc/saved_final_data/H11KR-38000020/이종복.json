@@ -1,0 +1,55 @@
+{
+  "hospital_cid": 456,
+  "bedoc_id": "A1176",
+  "bedoc_hospitalsite": "http://www.nmc.or.kr",
+  "bedoc_doctorname": "이종복",
+  "bedoc_deptname": "비뇨의학과",
+  "bedoc_hospitalname": "국립중앙의료원",
+  "hospital_name": "창원한마음병원",
+  "aiga_hid": "H11KR-38000020",
+  "hospital_site": "https://hanheart.co.kr/medical/detail_doctor.php?deptCd=2150000000&doctorId=12220001",
+  "site_type": "single",
+  "hospital_addr": "경상남도 창원시 의창구 용동로57번길 8, (사림동)",
+  "isExist": true,
+  "isSearchType": "html_playwright_failed",
+  "error": "Successfully scraped visible data, but failed to extract full details from popups.",
+  "isAttend": true,
+  "profileUrl": "https://hanheart.co.kr/bbsDown/doctor/2022010603605272292.png",
+  "specialty": "전립선질환, 요로결석, 여성비뇨기과학, 비뇨기종양",
+  "학력": [
+    {
+      "date": null,
+      "content": "하버드의대 배뇨장애 연수"
+    },
+    {
+      "date": null,
+      "content": "UCSF 비뇨기외상 연수"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "현. 한양대학교 창원한마음병원 전립선비뇨센터장"
+    },
+    {
+      "date": null,
+      "content": "전.국립중앙의료원 비뇨기과 과장 및 진료부원장"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한비뇨의학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한외상학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한전립선레이저연구회 정회원"
+    }
+  ],
+  "논문": [],
+  "저서": []
+}

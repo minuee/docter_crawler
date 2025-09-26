@@ -1,0 +1,91 @@
+{
+  "hospital_cid": 451,
+  "bedoc_id": "A5582",
+  "bedoc_hospitalsite": "http://gangnam.chamc.co.kr",
+  "bedoc_doctorname": "이정노",
+  "bedoc_deptname": "산부인과",
+  "bedoc_hospitalname": "강남차병원",
+  "hospital_name": "강남차병원",
+  "aiga_hid": "H11KR-11000037",
+  "hospital_site": "https://gangnam.chamc.co.kr/treatment/list/obstetrics/reservation.cha?ctCode=2#none",
+  "site_type": "list",
+  "hospital_addr": "서울특별시 강남구 논현로 566, 강남차병원(역삼동650-9, 606-4, 605외2필지(지하7층~지하1층, 지상2층~7층)) (역삼동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://gangnam.chamc.co.kr/treatment/list/obstetrics/reservation.cha?ctCode=2#none&doctorName=%EC%9D%B4%EC%A0%95%EB%85%B8&depthName=%EC%82%B0%EB%B6%80%EC%9D%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "specialty": "폐경기, 일반부인과(부인과초음파, 자궁경부암검사, 부인과염증)",
+  "학력": [
+    {
+      "date": null,
+      "content": "연세대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "미국 미시간대학 연합 부속병원 산부인과 Intern, Residnt수료"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "미국 CALIFORNIA UCIrvine과 Kaiser Permanente에서 비뇨부인과 연수"
+    },
+    {
+      "date": null,
+      "content": "대한 산부인과 전문의"
+    },
+    {
+      "date": null,
+      "content": "미국 산부인과 전문의"
+    },
+    {
+      "date": null,
+      "content": "미국 CALIFORNIA SIMIVALLY HOSP. 산부인과 과장"
+    },
+    {
+      "date": null,
+      "content": "미국 USC 의과대학 산부인과 임상부교수"
+    },
+    {
+      "date": null,
+      "content": "CHA 의과대학교 강남차병원 병원장 역임"
+    },
+    {
+      "date": null,
+      "content": "현 CHA의과대학교 산부인과 교수"
+    },
+    {
+      "date": null,
+      "content": "현 CHA의과대학교 교학부총장"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한 산부인과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "미국 산부인과 학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "국제 비뇨부인과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "미국 복강경학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "미국 비뇨부인과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "현 대한 비뇨부인과 학회 회장"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "hospital_cid": 27,
+  "bedoc_id": "A0930",
+  "bedoc_hospitalsite": "http://www.andonghospital.co.kr",
+  "bedoc_doctorname": "구태본",
+  "bedoc_deptname": "산부인과",
+  "bedoc_hospitalname": "안동병원",
+  "hospital_name": "안동병원",
+  "aiga_hid": "H11KR-37000017",
+  "hospital_site": "https://www.andonghospital.co.kr/doctor/profViewPop.do?deptNo=10&profNo=29",
+  "site_type": "popup",
+  "hospital_addr": "경상북도 안동시 앙실로 11,  (수상동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "doctorSiteUrl": "https://www.andonghospital.co.kr/doctor/profViewPop.do?deptNo=10&profNo=29",
+  "profileUrl": "https://www.andonghospital.co.kr/_upload/profImg/a5345752-29fc-4bb3-a08b-29f42a8864b8",
+  "specialty": "출산, 부인과 질환",
+  "isAttend": true,
+  "학력": [
+    {
+      "date": null,
+      "content": "경북대학교 의학과"
+    },
+    {
+      "date": null,
+      "content": "경북대학교 의과대학원 의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "경북대학교병원 인턴"
+    },
+    {
+      "date": null,
+      "content": "경북대학교병원 레지던트"
+    },
+    {
+      "date": null,
+      "content": "경북대학교 의과대학 교수(1999-2009)"
+    },
+    {
+      "date": null,
+      "content": "포항의료원 산부인과 과장"
+    },
+    {
+      "date": null,
+      "content": "하나병원 산부인과 과장"
+    },
+    {
+      "date": null,
+      "content": "미국 위스콘신 밀워키 샌프란시스병원 연수(복강경수술)"
+    },
+    {
+      "date": null,
+      "content": "미국 미주리 세인트루이스 와싱턴 대학병원 연수(초기임신 태반형성 연구)"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한산부인과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한부인종양콜포스코피학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한비뇨부인과학회 정회원"
+    }
+  ],
+  "논문": []
+}

@@ -1,0 +1,75 @@
+{
+  "hospital_cid": 464,
+  "bedoc_id": "A5433",
+  "bedoc_hospitalsite": "http://남서울내과.kr/intro/GuideView.asp?MenuNumber=1&PageNumber=3&SubPageNumber=0",
+  "bedoc_doctorname": "이중건",
+  "bedoc_deptname": "신장내과",
+  "bedoc_hospitalname": "남서울내과의원",
+  "hospital_name": "남서울내과의원",
+  "aiga_hid": "H31KR-11001353",
+  "hospital_site": "http://xn--vb0bq3ebb340kftg.kr/intro/aboutView.asp?MenuNumber=1&PageNumber=1&SubPageNumber=0",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 노원구 노해로 488, 4층 (상계동, 근호빌딩)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "http://xn--vb0bq3ebb340kftg.kr/intro/aboutView.asp?MenuNumber=1&PageNumber=1&SubPageNumber=0&doctorName=%EC%9D%B4%EC%A4%91%EA%B1%B4&depthName=%EC%8B%A0%EC%9E%A5%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": null,
+  "specialty": "신장내과",
+  "학력": [
+    {
+      "content": "서울대학교 의과대학 졸업"
+    },
+    {
+      "content": "의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "content": "서울대병원 신장내과 전임의사 역임"
+    },
+    {
+      "content": "노원을지의료원,을지의과대학교 교수 및 신장내과 과장 역임"
+    },
+    {
+      "content": "서울대병원 내과 외래교수"
+    },
+    {
+      "content": "현 남서울내과의원 원장"
+    }
+  ],
+  "학술": [
+    {
+      "content": "현 대한신장학회 투석이사"
+    },
+    {
+      "content": "현 대한투석협회 부회장"
+    },
+    {
+      "content": "대한내과학회 정회원"
+    },
+    {
+      "content": "대한신장학회 정회원"
+    },
+    {
+      "content": "대한투석전문의협회 정회원"
+    },
+    {
+      "content": "대한위장내시경학회 정회원"
+    }
+  ],
+  "저서": [
+    {
+      "content": "임상신장학(공저)"
+    },
+    {
+      "content": "최신지견 내과학(공저)"
+    }
+  ],
+  "논문": [
+    "외 논문 다수"
+  ]
+}

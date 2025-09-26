@@ -1,0 +1,186 @@
+{
+  "hospital_cid": 371,
+  "bedoc_id": "A0448",
+  "bedoc_hospitalsite": "https://www.eulji.or.kr/",
+  "bedoc_doctorname": "윤병우",
+  "bedoc_deptname": "신경과",
+  "bedoc_hospitalname": "의정부을지대병원",
+  "hospital_name": "의정부을지대병원",
+  "aiga_hid": "H11KR-31000062",
+  "hospital_site": "https://www.uemc.ac.kr/clinic/clinic_doc_view01_05.jsp?dept=ABOAAA&doct=20201833",
+  "site_type": "single",
+  "hospital_addr": "경기도 의정부시 동일로 712, 을지대학교 의정부캠퍼스 및 부속병원 (금오동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.uemc.ac.kr/clinic/clinic_doc_view01_05.jsp?dept=ABOAAA&doct=20201833&doctorName=%EC%9C%A4%EB%B3%91%EC%9A%B0&depthName=%EC%8B%A0%EA%B2%BD%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": "",
+  "profileUrl": "https://www.uemc.ac.kr/upload/doctor/20201833_20210319092248.png",
+  "specialty": "뇌졸중, 뇌혈관질환 / 만15세 이상, ",
+  "isAttend": false,
+  "학력": [
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 학사"
+    },
+    {
+      "date": "1983",
+      "content": "서울대학교 의과대학 의학과 석사"
+    },
+    {
+      "date": "1989",
+      "content": "서울대학교 의과대학 의학과 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1980 ~ 1981",
+      "content": "서울대학교병원 인턴"
+    },
+    {
+      "date": "1981 ~ 1984",
+      "content": "서울대학교병원 내과 전공의 \n1987 ~ 1989 서울대학교병원 신경과 전공의"
+    },
+    {
+      "date": "1989 ~ 1990",
+      "content": "서울대학교병원 신경과 전임의"
+    },
+    {
+      "date": "1992 ~ 1994",
+      "content": "교환교수로 장기연수"
+    },
+    {
+      "date": "2004 ~ 2006",
+      "content": "서울대병원 교육연구부장2006 ~ 2010 서울대병원 신경과장2006 ~ 2010 서울의과대학 신경과 주임교수2006 ~ 2015 뇌졸중임상연구센터 센터장2010 ~ 2014 서울대학교 신경과학연구소 소장2010 ~ 2016 서울대학교 산학협력단 이사2000 ~ 2020 서울대학교병원 신경과학교실 교수2020 ~ 2021 의정부을지대학교병원 초대 병원장現 서울대학교 명예교수2022 ~ 2024 을지대학교의료원 의료원장(의정부)2022 ~ 2024 을지대학교 의무부총장"
+    }
+  ],
+  "언론": [
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "[학회초대석] 한국 의료, 세계학회와 어깨…APSO 회장의 미션은?",
+      "url": "javascript:;goUrl('https://www.medicaltimes.com/Main/News/NewsView.html?ID=1145869&ref=daum%27);",
+      "issuer": "메디칼타임즈"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "신경과 윤병우 교수, 아태뇌졸중학회 회장 선출",
+      "url": "javascript:;goUrl('https://www.khan.co.kr/science/science-general/article/202201101226001');",
+      "issuer": "경향신문"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "윤병우 병원장 \"경기북부 주민들 '수도권 원정진료' 불편·답답함 해결\"",
+      "url": "javascript:;goUrl('http://www.dailymedi.com/detail.php?number=876557&thread=22r02%27);",
+      "issuer": "데일리메디"
+    }
+  ],
+  "논문": [
+    "High neutrophil-to-lymphocyte ratio predicts stroke-associated pneumonia. Stroke. 2018",
+    "Building linked big data for stroke in Korea: Linkage of stroke registry and national health insurance claims data. JKMS. 2018.",
+    "Rivaroxabn for stroke prevention after embolic stroke of undetermined source. NEJM. 2018.",
+    "Clinical outcomes depending on acute blood pressure after cerebral hemorrhage. Ann Neurol. 2018.",
+    "Targeted delivery of iron oxide nanoparticle-loaded human embryonic stem cell-derived spherical neural masses for treating intracerebral hemorrhage. Int J Mol Sci. 2020.",
+    "Characteristics and management of stroke in Korea: 2014-2018 data from Korean Stroke Registry. Int J Stroke. 2020.",
+    "Modification of acute stroke pathway in Korea after the Coronavirus disease 2019 outbreak. Front Neurol. 2020.",
+    "Predicting functional outcome based on linked data after acute ischemi stroke: S-SMART Score. Translational Stroke Research. 2020.",
+    "Glycated albumin, a novel biomarker for short-term functional outcomes in acute ischemic stroke. Brain Sci. 2021",
+    "Triglyceride-glucose index is associated with early neurological deterioration in single subcortical infarction: Early prognosis in single subcortical infarctions. Int J Stroke. 2021.",
+    "Effectiveness of mechanical thrombectomy in cancer-related stroke and associated factors with unfavorable outcomme. BMC Neurology. 2021",
+    "Changes in stroke patients' health-seeking behavior by COVID-19 epidemic regions: Data from the Korean Stroke Registry. Cerebrovascular Diseases. 2021.",
+    "Rivaroxaban versus aspirin for prevention of covert brain infarcts in patients with embolic stroke of undetermined source: NAVIGATE ESUS MRI substudy. Int J Stroke. 2021.",
+    "Intensive blood pressure lowering with nicardipine and outcomes after intracerebral hemorrhage: An individual participant data systematic review. Int J Stroke. 2021",
+    "Frequency and patterns brain infarction in patients with embolic stroke of undetermined source: NAVIGATE ESUS Trial. Stroke. 2022",
+    "2022 Update of the Korean Clinical Practice Guidelines for Stroke: Antithrombotic Therapy for Patients with Acuet Ischemic Stroke or Transient Ischemic Attack. J of Stroke. 2022.",
+    "U-shaped associations between glycated albumin and obesity and role of IL-10 in hyperacute ischemic stroke. Clinical Neurology and Neurosurgery. 2023.",
+    "Association of high-estimated glomerular filtration rate with the severity of ischemic stroke during non-vitamin K antagonist oral anticoagulants therapy: a nationwide cohort therapy. Front Neurol. 2023",
+    "Clonal hematopoiesis and acute ischemic stroke outcomes. Ann Neurol. 2023.",
+    "Multiple antiplatelet therapy in ischemic stroke already on antiplatelet agents based on the linked big data for stroke. JKMS 2023",
+    "Organizational update from the Asia Pacific Stroke Organization. Stroke. 2024",
+    "Safety and efficacy of factor Xia inhibition with milvexian for secondary stroke prevention. Lancet Neurology. 2024"
+  ],
+  "수상": [],
+  "학술": [
+    {
+      "date": null,
+      "content": "(전) 한국뇌신경과학회 대의원"
+    },
+    {
+      "date": null,
+      "content": "(전) 중환자의학회 평생회원"
+    },
+    {
+      "date": null,
+      "content": "(전) Stroke(뇌졸중 국제학술지) 한국어판 편집위원장"
+    },
+    {
+      "date": null,
+      "content": "(전) 대한뇌졸중학회 총무이사"
+    },
+    {
+      "date": null,
+      "content": "(전) 대한신경과학회 고시이사"
+    },
+    {
+      "date": null,
+      "content": "(전) 대한뇌졸중학회 진료지침위원장"
+    },
+    {
+      "date": null,
+      "content": "(전) 아시아 뇌졸중 자문회의 의장"
+    },
+    {
+      "date": null,
+      "content": "(전) 대한신경과학회 보험위원회 자문위원"
+    },
+    {
+      "date": null,
+      "content": "(전) 대한뇌졸중학회 회장"
+    },
+    {
+      "date": null,
+      "content": "(전) 대한신경과학회 이사장"
+    },
+    {
+      "date": null,
+      "content": "(전) 대한뇌졸중학회 교과서 개정위원회 위원장"
+    },
+    {
+      "date": null,
+      "content": "(전) 대한뇌졸중학회 연구활성화 위원장"
+    },
+    {
+      "date": null,
+      "content": "(전) 미국심장학회 뇌졸중 자문위원회 위원"
+    },
+    {
+      "date": null,
+      "content": "(전) 아시아태평양뇌졸중학회 회장"
+    },
+    {
+      "date": null,
+      "content": "대한내과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한신경과학회 정회원"
+    }
+  ],
+  "저서": [
+    "2005 신경과학",
+    "2007 신경학",
+    "2009 뇌졸중진료지침",
+    "2009 뇌졸중",
+    "2010 임상의학과 나의삶",
+    "2010 순환기학",
+    "2012 신경학 2판",
+    "2015 뇌졸중 2판",
+    "2013 Clinical Recovery from CNS damage",
+    "2016 Stroke in Asia. 1st Ed",
+    "2017 Stroke in Asia. 2nd Ed",
+    "2018 환자를 볼까 검사를 볼까 (ABC of Clinical Reasoning) - 역서"
+  ]
+}

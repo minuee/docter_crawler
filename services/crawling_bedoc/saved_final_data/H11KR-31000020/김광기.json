@@ -1,0 +1,71 @@
+{
+  "hospital_cid": 42,
+  "bedoc_id": "A8217",
+  "bedoc_hospitalsite": "http://www.dumc.or.kr/isom",
+  "bedoc_doctorname": "김광기",
+  "bedoc_deptname": "신경과",
+  "bedoc_hospitalname": "동국대일산병원",
+  "hospital_name": "동국대학교 일산병원",
+  "aiga_hid": "H11KR-31000020",
+  "hospital_site": "http://www.dumc.or.kr/medical/department/doctorDetail.do?act=doctorDetail&nowPageInfo=ILSH&nowMenuId=&deptCode=NR&docCode=060135",
+  "site_type": "single",
+  "hospital_addr": "경기도 고양시 일산동구 동국로 27, (식사동, 동국대학교일산병원)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "학력": [
+    {
+      "date": null,
+      "content": "서울대학교 의과대학졸업"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "서울대학교병원 전공의"
+    },
+    {
+      "date": null,
+      "content": "서울대학교병원 전임의"
+    },
+    {
+      "date": null,
+      "content": "강원대학교병원 전임강사"
+    },
+    {
+      "date": null,
+      "content": "미국 신시내티의과대학 신경과 (Center for Neuroimaging, Epilepsy Center of University of Cincinnati)"
+    },
+    {
+      "date": null,
+      "content": "現 동국대학교의료원 기획처장"
+    }
+  ],
+  "논문": [],
+  "저서": [],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한신경과학회"
+    },
+    {
+      "date": null,
+      "content": "대한뇌전증(간질)학회"
+    },
+    {
+      "date": null,
+      "content": "대한치매학회"
+    },
+    {
+      "date": null,
+      "content": "대한수면학회/대한수면연구학회"
+    },
+    {
+      "date": null,
+      "content": "대한 임상신경생리학회"
+    }
+  ],
+  "specialty": "뇌전증(간질), 수면장애, 기억장애, 치매, 뇌전증클리닉, 수면장애·기억장애클리닉",
+  "profileUrl": "http://www.dumc.or.kr/common/images/doctor/A06016_IL.jpg",
+  "isAttend": true
+}

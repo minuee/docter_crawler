@@ -1,0 +1,166 @@
+{
+  "hospital_cid": 594,
+  "bedoc_id": "A0006",
+  "bedoc_hospitalsite": "http://www.kimeye.com/kimeye/",
+  "bedoc_doctorname": "차흥원",
+  "bedoc_deptname": "안과",
+  "bedoc_hospitalname": "김안과",
+  "hospital_name": "김안과병원",
+  "aiga_hid": "H21KR-11000027",
+  "hospital_site": "https://www.kimeye.com/goods/goods_view_pop.php?g_id=112",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 영등포구 영신로 136, (영등포동4가)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": "Cheerio parser could not extract education or experience.",
+  "profileUrl": "https://www.kimeye.com/data/goods/append/274",
+  "specialty": "안과",
+  "학력": [
+    {
+      "date": "1982",
+      "content": "서울대학교 의과대학 졸업"
+    },
+    {
+      "date": "1986",
+      "content": "서울대학교 대학원 의학 석사"
+    },
+    {
+      "date": "1990",
+      "content": "서울대학교 대학원 의학 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1982",
+      "content": "서울대학교 의과대학 졸업"
+    },
+    {
+      "date": "1986",
+      "content": "서울대학교병원 안과전공의 수료"
+    },
+    {
+      "date": "1987",
+      "content": "서울을지병원 안과 과장"
+    },
+    {
+      "date": "1989",
+      "content": "미네소타의대 안과 전임의"
+    },
+    {
+      "date": "2004",
+      "content": "톱콘 안과 학술상 시상"
+    },
+    {
+      "date": "2010",
+      "content": "한국각막질환연구회 회장"
+    },
+    {
+      "date": "2005 ~2012",
+      "content": "톱콘 안과 학술상 시상"
+    },
+    {
+      "date": null,
+      "content": "Asia Dry Eye Society 창립멤버"
+    },
+    {
+      "date": "2010 ~2020",
+      "content": "Eye World 한국판 편집장"
+    },
+    {
+      "date": "1989 ~2023",
+      "content": "울산대학교 의과대학 교수"
+    },
+    {
+      "date": null,
+      "content": "서울아산병원 안과 과장"
+    },
+    {
+      "date": "2023",
+      "content": "김안과병원 입사"
+    },
+    {
+      "date": "現",
+      "content": "김안과병원 각막센터 전문의"
+    },
+    {
+      "date": null,
+      "content": "Asia Dry Eye Society Board of Director 위원"
+    },
+    {
+      "date": null,
+      "content": "실명예방재단 부이사장"
+    }
+  ],
+  "학술": [
+    {
+      "date": "2010 ~2012",
+      "content": "한국백내장굴절수술학회 회장"
+    },
+    {
+      "date": "2012",
+      "content": "미국백내장굴절수술학회, 아시아태평양백내장굴절수술학회에서 여러 학술상시상"
+    },
+    {
+      "date": "2017",
+      "content": "미국안과학회 Achievenment award 수상"
+    },
+    {
+      "date": "2015 ~2018",
+      "content": "미국 백내장굴절수술학회 Cataract Clinical Committee 위원"
+    },
+    {
+      "date": "2016 ~2018",
+      "content": "아시아태평양안과학회 Regional Secretary"
+    },
+    {
+      "date": null,
+      "content": "대한안과학회 이사장"
+    },
+    {
+      "date": "2019",
+      "content": "아시아태평양안과학회 Outstanding service in prevention of blindness award 수상"
+    },
+    {
+      "date": "2018 ~2020",
+      "content": "아시아태평양백내장굴절수술학회 Treasurer"
+    },
+    {
+      "date": null,
+      "content": "아시아 안구건조증학회(ADES) 회장 (한국인 최초)"
+    },
+    {
+      "date": null,
+      "content": "아시아태평양백내장굴절수술학회 Board of Officers 위원"
+    },
+    {
+      "date": null,
+      "content": "아시아태평양안과학회 Council Member"
+    }
+  ],
+  "언론": [
+    {
+      "targetDate": "2024-09-16",
+      "type": "기사",
+      "text": "온찜질과 냉찜질 눈에 뭐가 더 좋아요? f.차흥원 김안과병원 [신과대화]",
+      "url": "https://www.kimeye.com/bbs/link.php?bo_table=report&wr_id=1909&no=1",
+      "issuer": null
+    },
+    {
+      "targetDate": "2023-08-09",
+      "type": "기사",
+      "text": "눈에도 점이 생긴다..없앨 수 있을까?",
+      "url": "https://www.kimeye.com/bbs/link.php?bo_table=report&wr_id=1792&no=1",
+      "issuer": null
+    },
+    {
+      "targetDate": "2023-05-22",
+      "type": "기사",
+      "text": "[중앙일보][건강한 가족] 흰자 위에 생긴 푸른 점, 수술로 해결 가능",
+      "url": "https://www.kimeye.com/bbs/link.php?bo_table=report&wr_id=1776&no=1",
+      "issuer": null
+    }
+  ],
+  "수상": [],
+  "논문": [],
+  "저서": []
+}

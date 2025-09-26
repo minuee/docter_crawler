@@ -1,0 +1,91 @@
+{
+  "hospital_cid": 516,
+  "bedoc_id": "A5057",
+  "bedoc_hospitalsite": "http://www.emc.ac.kr/default.asp",
+  "bedoc_doctorname": "전제혁",
+  "bedoc_deptname": "소화기내과",
+  "bedoc_hospitalname": "을지대병원",
+  "hospital_name": "의료법인 명인의료재단 화홍병원",
+  "aiga_hid": "H11KR-31000037",
+  "hospital_site": "https://hwahonghospital.co.kr/page/medical/doctor/doctor_view.php?d_idx=249",
+  "site_type": "single",
+  "hospital_addr": "경기도 수원시 권선구 호매실로90번길 98, (호매실동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://hwahonghospital.co.kr/page/medical/doctor/doctor_view.php?d_idx=249&doctorName=%EC%A0%84%EC%A0%9C%ED%98%81&depthName=%EC%86%8C%ED%99%94%EA%B8%B0%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "학력": [
+    {
+      "date": null,
+      "content": "울산대학교 의과대학원 석사"
+    },
+    {
+      "date": null,
+      "content": "인하대학교 의과대학 의학과 학사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "평택성모병원 소화기내과 과장"
+    },
+    {
+      "date": null,
+      "content": "대전 을지대병원 소화기내과 조교수"
+    },
+    {
+      "date": null,
+      "content": "대전 을지대병원 소화기내과 임상교수"
+    },
+    {
+      "date": null,
+      "content": "서울아산병원 소화기내과 전임의"
+    },
+    {
+      "date": null,
+      "content": "강릉아산병원 소화기내과 전임의"
+    },
+    {
+      "date": null,
+      "content": "강릉아산병원 내과 전공의 수료"
+    },
+    {
+      "date": null,
+      "content": "인하대학교병원 인턴 수료"
+    },
+    {
+      "date": null,
+      "content": "췌장담도내시경 인증의"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한 내과학회 평생회원/대한 소화기 내시경학회 평생회원"
+    },
+    {
+      "date": null,
+      "content": "대한 췌담도학회 평생회원/대한 장연구학회 회원"
+    },
+    {
+      "date": null,
+      "content": "대한 소화기학회 평생회원/대한 소화기암학회 평생회원"
+    },
+    {
+      "date": null,
+      "content": "대한 임상초음파학회 평생회원/한국초음파학회 평생회원"
+    },
+    {
+      "date": null,
+      "content": "대한 비만학회 평생회원/대한 노인병학회 회원"
+    },
+    {
+      "date": null,
+      "content": "대한의사협회·네이버 지식iN 우수 답변 의사"
+    }
+  ],
+  "specialty": "췌장암, 담도암\n급성/만성 췌장염, 담석증, 췌장낭성병변, 간질환\n상부위장관질환, 하부위장관질환\n진단내시경, 치료내시경 ▶ 건강정보 바로가기",
+  "profileUrl": "https://hwahonghospital.co.kr/admin/member/image/64c76c473a4dd.png",
+  "isAttend": true
+}

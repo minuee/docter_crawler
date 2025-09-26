@@ -10,35 +10,73 @@
   "hospital_site": "https://www.cmcujb.or.kr/page/doctor/350/D0001014",
   "site_type": "popup",
   "hospital_addr": "경기도 의정부시 천보로 271, 의정부성모병원 (금오동)",
-  "isExist": null,
-  "isSearchType": "html_failed",
-  "error": "Forced fallback for detailed parsing.",
+  "isExist": true,
+  "isSearchType": "html_playwright",
   "doctorSiteUrl": "https://www.cmcujb.or.kr/page/doctor/350/D0001014",
-  "profileUrl": null,
-  "education": [
+  "profileUrl": "https://www.cmcujb.or.kr/api/attach/view/doctor/D0001165/thumbs/1",
+  "학력": [
     {
-      "content": "2003~2010\n                                                     가톨릭대학교 외과학 박사"
+      "date": "2003~2010",
+      "content": "가톨릭대학교 외과학 박사"
     },
     {
-      "content": "1998~2003\n                                                     가톨릭대학교 외과학 석사"
+      "date": "1998~2003",
+      "content": "가톨릭대학교 외과학 석사"
     },
     {
-      "content": "1984~1990\n                                                     조선대학교 의학 학사"
+      "date": "1984~1990",
+      "content": "조선대학교 의학 학사"
     }
   ],
-  "experience": [
+  "경력": [
     {
-      "content": "2015\n                                                     의정부성모병원 외과 임상과장"
+      "date": "2015",
+      "content": "의정부성모병원 외과 임상과장"
     },
     {
-      "content": "2017~현재\n                                                     의정부성모병원 외과 교수"
+      "date": "2017~현재",
+      "content": "의정부성모병원 외과 교수"
     },
     {
-      "content": "2010~2017\n                                                     의정부성모병원 외과 부교수"
+      "date": "2010~2017",
+      "content": "의정부성모병원 외과 부교수"
     },
     {
-      "content": "2004~2010\n                                                     의정부성모병원 외과 조교수"
+      "date": "2004~2010",
+      "content": "의정부성모병원 외과 조교수"
+    },
+    {
+      "date": "2002~2004",
+      "content": "의정부성모병원 외과 전임강사"
+    },
+    {
+      "date": "1999~2002",
+      "content": "의정부성모병원 외과 임상강사"
+    },
+    {
+      "date": "1995~1999",
+      "content": "의정부성모병원 외과 레지던트"
     }
   ],
-  "thesis": []
+  "연수": [
+    {
+      "date": "2007~2009",
+      "content": "미국 피츠버그 의과대학 Univ. of Pittsburgh(UPMC) Starzle Transplant Institute(STI)연수, 간이식모델연구, 이식간의 허혈기전연구"
+    }
+  ],
+  "학술": [
+    {
+      "date": "2021~현재",
+      "content": "한국 간담췌외과학회 경인지회 회장"
+    }
+  ],
+  "논문": [
+    "Innovative Therapeutic Delivery of Metastasis-Associated in Colon Cancer 1-Suppressing miRNA Using High Transmembrane 4 L6 Family Member 5-Targeting Exosomes in Colorectal Cancer Mouse Models (INTERNATIONAL JOURNAL OF MOLECULAR SCIENCES 공동저자)",
+    "Pioneering PGC-1α-boosted secretome: a novel approach to combating liver fibrosis (ANNALS OF SURGICAL TREATMENT AND RESEARCH 공동저자)",
+    "Safety of performing distal pancreatosplenectomy in patients who underwent distal gastrectomy previously: a multicenter cohort analysis with systematic literature review (ANNALS OF SURGICAL TREATMENT AND RESEARCH 공동저자)",
+    "Robotic surgery enables safe and comfortable single-incision cholecystectomy: A comparison of robotic and laparoscopic approaches for single-incision surgery (JOURNAL OF MINIMAL ACCESS SURGERY 공동저자)",
+    "Prognostic value of Dickkopf-1 and ß-catenin expression according to the antitumor immunity of CD8-positive tumor-infiltrating lymphocytes in biliary tract cancer (SCIENTIFIC REPORTS 교신저자)"
+  ],
+  "specialty": "간암, 담도암, 췌장암, 담석, 로봇 복강경수술",
+  "isAttend": true
 }

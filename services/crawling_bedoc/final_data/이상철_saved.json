@@ -1,0 +1,52 @@
+{
+  "hospital_cid": 408,
+  "bedoc_id": "A5176",
+  "bedoc_hospitalsite": "http://www.cmcdj.or.kr/",
+  "bedoc_doctorname": "이상철",
+  "bedoc_deptname": "외과",
+  "bedoc_hospitalname": "대전성모병원",
+  "hospital_name": "진주제일병원",
+  "aiga_hid": "H11KR-38000017",
+  "hospital_site": "https://chinjujeil.co.kr/department/surgery/",
+  "site_type": "popup",
+  "hospital_addr": "경상남도 진주시 진주대로 885, (강남동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://chinjujeil.co.kr/department/surgery/?doctorName=%EC%9D%B4%EC%83%81%EC%B2%A0&depthName=%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "isAttend": true,
+  "profileUrl": "https://chinjujeil.co.kr/iez14/uploaded/ez_f02_doctor/50e6e2b3cdbe7866d7a2125d4f7d1fe0.jpg.uploaded",
+  "specialty": "단일공복강경수술 및 최소침습. 무흉터 수술. 암(위암, 대장암,간,담도췌장암,복막암). 비만대사수술. 각종 탈장. 소화기(위,소장,대장) 및 항문질환. 소아질환. 위/대장내시경",
+  "학력": [
+    {
+      "date": null,
+      "content": "충남대학교 의과대학 학사"
+    },
+    {
+      "date": null,
+      "content": "가톨릭대학교 의과대학원 의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "가톨릭대학교 서울성모병원 임상강사"
+    },
+    {
+      "date": null,
+      "content": "가톨릭대학교 대전성모병원"
+    },
+    {
+      "date": null,
+      "content": "최소습복강경수술센터 소장/ 탈장전문센터 소장"
+    },
+    {
+      "date": null,
+      "content": "가톨릭대학교 대전성모병원 교수 / 외과 과장"
+    }
+  ],
+  "학술": [],
+  "수상": [],
+  "논문": []
+}

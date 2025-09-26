@@ -1,0 +1,65 @@
+{
+  "hospital_cid": 407,
+  "bedoc_id": "A0521",
+  "bedoc_hospitalsite": "http://www.hangileye.co.kr",
+  "bedoc_doctorname": "이상언",
+  "bedoc_deptname": "안과",
+  "bedoc_hospitalname": "한길안과병원",
+  "hospital_name": "한길안과병원",
+  "aiga_hid": "H21KR-22000042",
+  "hospital_site": "https://hangileye.co.kr/mrenew/02_center/doc_4.html",
+  "site_type": "popup",
+  "hospital_addr": "인천광역시 부평구 부평대로 35, 1층일부,2층~10층 (부평동, 정명빌딩)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://hangileye.co.kr/mrenew/02_center/doc_4.html?doctorName=%EC%9D%B4%EC%83%81%EC%96%B8&depthName=%EC%95%88%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "isAttend": true,
+  "profileUrl": "https://hangileye.co.kr/admin_2021/class_admin_Center/files/1623912793.jpg",
+  "specialty": "성형안과, 눈물길질환, 백내장",
+  "학력": [
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 졸업"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "前 서울아산병원 안과 전문의"
+    },
+    {
+      "date": null,
+      "content": "前 미국 미시간대학교 안과 센터(USA, University of Michigan Kellogg Eye Center) 갑상선 안질환 연수"
+    },
+    {
+      "date": null,
+      "content": "前 한길의료재단 한길안과병원 진료부장"
+    },
+    {
+      "date": null,
+      "content": "現 가톨릭관동대학교 의학과 전임교수"
+    },
+    {
+      "date": null,
+      "content": "現 한길의료재단 한길안과병원 진료부원장"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한안과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "한국안성형연구회 이사"
+    },
+    {
+      "date": null,
+      "content": "한국미용학회 정회원"
+    }
+  ],
+  "수상": [],
+  "논문": []
+}

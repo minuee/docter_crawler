@@ -1,0 +1,106 @@
+{
+  "hospital_cid": 412,
+  "bedoc_id": "A8338",
+  "bedoc_hospitalsite": "http://www.cmhospital.co.kr",
+  "bedoc_doctorname": "이상훈",
+  "bedoc_deptname": "정형외과",
+  "bedoc_hospitalname": "CM충무병원",
+  "hospital_name": "CM병원",
+  "aiga_hid": "H11KR-11000027",
+  "hospital_site": "https://cmhospital.co.kr/cmhospital/sub_02_1.php",
+  "site_type": "popup",
+  "hospital_addr": "서울특별시 영등포구 영등포로36길 13, (영등포동4가, 충무병원)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://cmhospital.co.kr/cmhospital/sub_02_1.php?doctorName=%EC%9D%B4%EC%83%81%ED%9B%88&depthName=%EC%A0%95%ED%98%95%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "specialty": "스포츠 의학 /  견·주관절 /  상지관절 / 인공관절 / 관절경",
+  "profileUrl": "https://cmhospital.co.kr/images/dept/team01_2.jpg",
+  "학력": [
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 대학원 졸업. 의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "서울대학교병원 정형외과 전공의"
+    },
+    {
+      "date": null,
+      "content": "미국 New York Columbia University Medical center임상강사"
+    },
+    {
+      "date": null,
+      "content": "건국대학교병원 정형외과 교수"
+    },
+    {
+      "date": null,
+      "content": "카이스트 기계공학과 교수"
+    },
+    {
+      "date": null,
+      "content": "선문대학교 보건대학교 교수"
+    },
+    {
+      "date": null,
+      "content": "국가대표 진천선수촌 메디컬센터 대표"
+    },
+    {
+      "date": null,
+      "content": "IOC 인증 스포츠전문의"
+    },
+    {
+      "date": null,
+      "content": "대한민국 국가대표 의무위원장"
+    },
+    {
+      "date": null,
+      "content": "대한럭비협회 이사"
+    },
+    {
+      "date": null,
+      "content": "대한민국 배구 국가대표 팀닥터"
+    },
+    {
+      "date": null,
+      "content": "프로야구 키움히어로즈 수석팀닥터"
+    },
+    {
+      "date": null,
+      "content": "프로배구 우리카드위비 수석팀닥터"
+    },
+    {
+      "date": null,
+      "content": "건-인대 연구회 회장"
+    },
+    {
+      "date": null,
+      "content": "세계 견주관절학회 2016 임원"
+    },
+    {
+      "date": null,
+      "content": "2009 대한견주관절학회 최우수 학술상"
+    },
+    {
+      "date": null,
+      "content": "2010 대한정형외과 선정 ‘젊은 의학자’상"
+    },
+    {
+      "date": null,
+      "content": "2012 대한수부외과 학회 우수논문상"
+    },
+    {
+      "date": null,
+      "content": "2010~2016 세계인명사전 등재"
+    }
+  ]
+}

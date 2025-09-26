@@ -1,0 +1,52 @@
+{
+  "hospital_cid": 493,
+  "bedoc_id": "A0161",
+  "bedoc_hospitalsite": "",
+  "bedoc_doctorname": "임승길",
+  "bedoc_deptname": "내분비내과",
+  "bedoc_hospitalname": "드림메디 임승길내과의원",
+  "hospital_name": "드림메디 임승길내과의원",
+  "aiga_hid": "H31KR-31001548",
+  "hospital_site": "https://limsk-endo.co.kr/19",
+  "site_type": "single",
+  "hospital_addr": "경기도 수원시 장안구 정조로 925, 2층 (영화동)",
+  "isExist": true,
+  "isSearchType": "html_ocr",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": null,
+  "specialty": "내분비내과",
+  "학력": [
+    { "date": "~ 1995", "content": "울산대학교 대학원 의학 박사" },
+    { "date": "~ 1985", "content": "연세대학교 대학원 의학 석사" },
+    { "date": "~ 1978", "content": "연세대학교 의학 학사" }
+  ],
+  "경력": [
+    { "date": "2007", "content": "연세대 의대 연구부학장, 연세대 의대 교학부학장" },
+    { "date": "2009", "content": "대한내분비학회 이사장, 국제골다공증협회(IOF) 한국대표" },
+    { "date": "2011.01", "content": "한국여성건강 및 골다공증 재단 이사장" },
+    { "date": "2009", "content": "국제골다공증협회 한국대표" },
+    { "date": "2009 ~", "content": "대한내분비학회 이사장" },
+    { "date": "2007 ~", "content": "연세대학교 의과대학 연구부 학장" },
+    { "date": "2007 ~", "content": "연세대학교 의과대학 교학부 학장" },
+    { "date": "2005", "content": "한국과학기술한림원 정회원" },
+    { "date": "2005", "content": "대한골다공증학회 회장" },
+    { "date": "2004", "content": "대한남성갱년기학회 회장" },
+    { "date": "2000 ~", "content": "연세대학교 의과대학 내분비내과 과장" },
+    { "date": "2000 ~", "content": "연세대학교 의과대학 내분비내과 교수" },
+    { "date": "1995 ~ 2000", "content": "연세대학교 의과대학 내분비내과 부교수" },
+    { "date": "1988 ~ 1995", "content": "연세대학교 의과대학 내분비내과 조교수" },
+    { "date": "1988.08 ~ 1991.08", "content": "미국 하버드대학교 의과대학 부속 메사츄세츠 종합병원 초빙교수" },
+    { "date": "1985 ~ 1987", "content": "연세대학교 의과대학 내분비내과 전임강사" },
+    { "date": "1985.06 ~ 1985.08", "content": "일본 도쿄대학 초빙교수" },
+    { "date": "1981 ~ 1985", "content": "연세대학교 부속 세브란스 병원(신촌) 인턴 내과 레지던트 수료" }
+  ],
+  "수상": [
+    { "date": "2005", "content": "연세대학교 의과대학 우수업적 교수상" },
+    { "date": "2005", "content": "대한의학회 우수업적 교수상" },
+    { "date": "2001", "content": "지석영 학술상" },
+    { "date": "2000", "content": "연세대학교 우수업적 교수상" },
+    { "date": "1995", "content": "연세대학교 우수업적 교수상" },
+    { "date": "1995", "content": "보원학술상" }
+  ]
+}

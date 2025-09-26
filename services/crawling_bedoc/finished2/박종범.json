@@ -1,0 +1,179 @@
+{
+  "hospital_cid": 235,
+  "bedoc_id": "A1025",
+  "bedoc_hospitalsite": "http://www.cmcujb.or.kr/",
+  "bedoc_doctorname": "박종범",
+  "bedoc_deptname": "정형외과",
+  "bedoc_hospitalname": "의정부성모병원",
+  "hospital_name": "가톨릭대학교의정부성모병원",
+  "aiga_hid": "H11KR-31000003",
+  "hospital_site": "https://www.cmcujb.or.kr/page/doctor/160/D0001104",
+  "site_type": "single",
+  "hospital_addr": "경기도 의정부시 천보로 271, 의정부성모병원 (금오동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "doctorSiteUrl": "https://www.cmcujb.or.kr/page/doctor/160/D0001104",
+  "profileUrl": "https://www.cmcujb.or.kr/api/attach/view/doctor/D0001165/thumbs/1",
+  "학력": [
+    {
+      "date": "1999~2002",
+      "content": "가톨릭대학교 의과대학원 박사"
+    },
+    {
+      "date": "1995~1997",
+      "content": "가톨릭대학교 의과대학원 석사"
+    },
+    {
+      "date": "1983~1989",
+      "content": "가톨릭대학교 의과대학 학사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1997~현재",
+      "content": "가톨릭의대 정형외과 교수"
+    },
+    {
+      "date": "2012~2013",
+      "content": "의정부성모병원 연구부원장"
+    },
+    {
+      "date": "2009~2013",
+      "content": "의정부성모병원 임상의학연구소장"
+    },
+    {
+      "date": "2005~2009",
+      "content": "의정부성모병원 정형외과 과장"
+    }
+  ],
+  "연수": [
+    {
+      "date": "2002~2004",
+      "content": "미국 와싱턴의대 척추센터"
+    }
+  ],
+  "수상": [
+    {
+      "date": "2025",
+      "content": "AO아시아태평양척추학회 우수논문상"
+    },
+    {
+      "date": "2022",
+      "content": "아시아태평양척추학회 최우수논문상"
+    },
+    {
+      "date": "2022",
+      "content": "대한경추연구학회 학술상"
+    },
+    {
+      "date": "2018",
+      "content": "대한척추외과학회 학술상"
+    },
+    {
+      "date": "2017",
+      "content": "아시아태평양척추학회 최우수논문상"
+    },
+    {
+      "date": "2017",
+      "content": "대한척추외과학회 학술상"
+    },
+    {
+      "date": "2016",
+      "content": "대한척추외과학회 학술상"
+    }
+  ],
+  "학술": [
+    {
+      "date": "2025~2028",
+      "content": "AO아시아태평양척추학회 교육회장"
+    },
+    {
+      "date": "2024~2025",
+      "content": "아시아태평양경추학회 회장"
+    },
+    {
+      "date": "2024~2025",
+      "content": "대한척추외과학회 회장"
+    },
+    {
+      "date": "2021~2024",
+      "content": "AO국제척추학회 한국회장"
+    },
+    {
+      "date": "2022~2024",
+      "content": "대한바이오척추학회 회장"
+    },
+    {
+      "date": "2019~현재",
+      "content": "대한척추외과학회 평의원"
+    },
+    {
+      "date": "2024~현재",
+      "content": "아시아태평양경추학회 집행위원 및 연구위원장"
+    }
+  ],
+  "논문": [
+    "Significance of Necroptosis in Cartilage Degeneration (BIOMOLECULES 공동저자)",
+    "Inhibitory Effect of Insulin Treatment on Apoptosis of Intervertebral Disc Cells in a Streptozotocin-Induced Diabetic Rat Model (ASIAN SPINE JOURNAL 교신저자)",
+    "Anterior Dens Screw Fixation for Traumatic C1-2 Lateral Subluxation With 3-Part Fractures of the C2 Axis (Dens, Lateral Mass, and Hangman Fractures): A Case Report (JOURNAL OF THE AMERICAN ACADEMY OF ORTHOPAEDIC SURGEONS GLOBAL RESEARCH AND REVIEWS 교신저자)",
+    "15-year survivorship analysis of an interspinous device in surgery for single-level lumbar disc herniation (BMC MUSCULOSKELETAL DISORDERS 교신저자)",
+    "Cervical Myelopathy Caused by Posttraumatic Osteophytes Resulting From Long-Standing Neglected Posterior Atlanto-Occipital Dislocation More Than 30 years: A Case Report (JOURNAL OF THE AMERICAN ACADEMY OF ORTHOPAEDIC SURGEONS GLOBAL RESEARCH AND REVIEWS 교신저자)"
+  ],
+  "저서": [
+    {
+      "date": "2020 Apr",
+      "content": "정형외과학 8판",
+      "issuer": "대한정형외과학회"
+    },
+    {
+      "date": "2016 Mar",
+      "content": "정형외과학 7판",
+      "issuer": "대한정형외과학회"
+    },
+    {
+      "date": "2015 Oct",
+      "content": "필수 정형외과학",
+      "issuer": "대한정형외과학회"
+    },
+    {
+      "date": "2015 Mar",
+      "content": "최신 정형외과학",
+      "issuer": "최신의학사"
+    },
+    {
+      "date": "2011 Apr",
+      "content": "척추외과학",
+      "issuer": "최신의학사"
+    },
+    {
+      "date": "2011 Apr",
+      "content": "척추외과학",
+      "issuer": "최신의학사"
+    },
+    {
+      "date": "2014 Mar",
+      "content": "척추외과학",
+      "issuer": "최신의학사"
+    },
+    {
+      "date": "2017 May",
+      "content": "제4판 척추외과학",
+      "issuer": "최신의학사"
+    },
+    {
+      "date": "2024 Jan",
+      "content": "Insights and Innovations from AO Spine Asia Pacific",
+      "issuer": "AO foundation"
+    }
+  ],
+  "언론": [
+    {
+      "targetDate": "2017.08.09",
+      "type": "뉴스",
+      "text": "경향신문 _ 의정부성모병원 박종범 교수, 세계정형외과학회 척추분과 차기위원장 선출",
+      "url": "http://news.khan.co.kr/kh_news/khan_art_view.html?artid=201609061440062&code=900303"
+    }
+  ],
+  "specialty": "척추외과학/허리디스크, 목 디스크, 퇴행성 척추질환, 척추 골절, 골다공증",
+  "isAttend": true
+}

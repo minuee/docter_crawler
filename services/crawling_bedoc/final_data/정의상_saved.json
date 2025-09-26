@@ -1,0 +1,113 @@
+{
+  "hospital_cid": 537,
+  "bedoc_id": "A0042",
+  "bedoc_hospitalsite": "http://www.snuseoul.com/community/community02.php",
+  "bedoc_doctorname": "정의상",
+  "bedoc_deptname": "안과",
+  "bedoc_hospitalname": "SNU서울안과",
+  "hospital_name": "SNU서울안과",
+  "aiga_hid": "H31KR-11006165",
+  "hospital_site": "https://www.snuseoul.com/company/doctor.php",
+  "site_type": "list",
+  "hospital_addr": "서울특별시 강남구 강남대로 624, ICT TOWER 3, 12층 (신사동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.snuseoul.com/company/doctor.php?doctorName=%EC%A0%95%EC%9D%98%EC%83%81&depthName=%EC%95%88%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "학력": [
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 의학사"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 대학원 의학석사"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 대학원 의학박사"
+    },
+    {
+      "date": null,
+      "content": "서울대학교병원 수련의"
+    },
+    {
+      "date": null,
+      "content": "서울대학교병원 전공의"
+    },
+    {
+      "date": null,
+      "content": "서울대학교병원 전임의"
+    },
+    {
+      "date": null,
+      "content": "삼성서울병원 전임의"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "성균관대학교 의과대학 삼성서울병원 교수"
+    },
+    {
+      "date": null,
+      "content": "하버드의과대학 쉬펜스 안연구소 연구교수"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "AAO 정회원"
+    },
+    {
+      "date": null,
+      "content": "ASCRS 정회원"
+    },
+    {
+      "date": null,
+      "content": "한국백내장굴절수술학회 정회원 (2006~2014이사)"
+    },
+    {
+      "date": null,
+      "content": "한국외안부학회 정회원 (2008~2013총무)"
+    },
+    {
+      "date": null,
+      "content": "한국콘택트렌즈학회 정회원 (2008~2012이사)"
+    },
+    {
+      "date": null,
+      "content": "대한안과학회 정회원 (2010~2012 기획이사)"
+    },
+    {
+      "date": null,
+      "content": "삼성서울병원 교수 재직기간 동안 유명 국내외 학술잡지연구 논문 총 62편 발표"
+    }
+  ],
+  "specialty": "하버드대학교 연구교수 출신\n스마일라식 및 토릭ICL 국내 도입",
+  "profileUrl": "https://www.snuseoul.com/admin/data/bbs/doctor/S2504300850059_1.jpg",
+  "isAttend": true,
+  "논문": [
+    "Correlation between Preoperative Biometry and Posterior Chamber Phakic Visian Implantable Collamer Lens Vaulting Lee DH, Choi SH, Chung ES, Chung TY(Ophthalmology. 2012)",
+    "Risk factor evaluation for cataract development in patients with low vaulting after phakic intraocular lens implantation Maeng HS, Chung TY, Lee DH, Chung ES (J Cataract Refract Surg. 2011 )",
+    "Comparison of refractive changes after deep anterior lamellar keratoplasty and penetrating keratoplasty for keratoconus Kim KH, Choi SH, Ahn K, Chung ES, Chung TY (Jpn J Ophthalmol. 2011 )",
+    "Reproducibility of LASIK Flap Thickness Using the Zeiss Femtosecond Laser Measured Postoperatively by Optical Coherence Tomography Ju WK, Lee JH, Chung TY, Chung ES (J Refract Surg. 2011 )",
+    "Comparison of the Torie Implantable Collamer Lens and Bioptics for Myopic Astigmatism Choi SH, Lee MO, Chung ES, Chung TY(J Refract Surg. 2011)",
+    "Long-term efficacy and rotational stabili ty ofN:.rySof toric intraocular lens implantation in cataract surgery Kim MH, Chung TY, Chung ES (Korean J Ophthalmol. 2010)",
+    "A comparison of posterior lamellar keratoplasty modalities: DLEK vs. DSEK Yi CH, Lee DH, Chung ES, Chung TY (Korean J Ophthalmol. 2010)",
+    "Axial growth and binocular function following bilateral lensectomy and scleral fixation of an intraocular lens in nontraumatic ectopia lentis Park SC, Chung ES, Chung TY, Kim SA Oh SY (Jpn J Ophthalmol. 2010)",
+    "Contribution of macrophages to angiogenesis induced by vascular endothelial growth factor receptor·3-specific ligands Chung ES, Chauhan SK, Nakao S, Hafezi·Moqhadam A van Rooijen N, Zhang Q, Chen L, Dana R (Am J Pathol. 2009)",
+    "Regulation of blood vessel versus lymphatic vessel growth in the cornea Chung ES, Saban DR, Chauhan SK, Dana R (Invest Ophthalmol Vis Sci. 2009)",
+    "Changes in iridocorneal angle structure and trabecular pigmentation with STAAR implantable collamer lens during 2 years Chung TY, Park SC, Lee MO, Ahn K, Chung ES (J Refract Surg. 2009)",
+    "Radial extension of capsulorhexis in true exfoliation patient: a potentially hazardous complication Kim KH, Chung ES, Chung TY (J Cataract Refract Surg. 2009)",
+    "Clinical outcomes of surgical techniques in congenital cataracts Kim KH, Ahn K, Chung ES, Chung TY (Korean J Ophthalmol. 2008)",
+    "Clinical evaluation of accommodative intraocular lens implantation in high myopic eyes Kim JH, Park CS, Chung TY, Chung ES (Korean J Ophthalmol. 2008)",
+    "Pichia anomala fungal keratitis Park KA, Ahn K, Chung ES, Chung TY (Cornea. 2008)",
+    "Case report: femtosecond laser-assisted small incision deep lamellar endothelial keratoplasty Lee DH, Chung TY, Chung ES, Az.ar DT (Korean J Ophthalmol. 2008)",
+    "Deep anterior lame llar keratoplasty in Korean patients with Avelli no dystrophy Park KA, Ki CS, Chung ES, Chung TY (Cornea. 2007)",
+    "Homozygous granular corneal dystrophy type II (Avellino corneal dystrophy): natural history and progression after treatment Moon JW, Kim SW, Kim Tl, Cristol SM, Chung ES, Kim EK",
+    "Ultrasound biomicroscopy for determining visian implantable contact lens length in phakic IOL implantation Choi KH, Chung SE, Chung TY, Chung ES (J Refract Surg. 2007)",
+    "Comparative analysis of postoperative changes in higher order aberrations following LASIK and laser thermal keratoplasty Lee HW, Park SC, Park OW, Chung TY, Chung ES (J Refract Surg. 2007)"
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "hospital_cid": 544,
+  "bedoc_id": "A1051",
+  "bedoc_hospitalsite": "http://www.cmcbucheon.or.kr",
+  "bedoc_doctorname": "정창훈",
+  "bedoc_deptname": "정형외과",
+  "bedoc_hospitalname": "부천성모병원",
+  "hospital_name": "가톨릭대학교부천성모병원",
+  "aiga_hid": "H11KR-31000002",
+  "hospital_site": "https://www.cmcbucheon.or.kr/page/doctor/156/D0001041",
+  "site_type": "single",
+  "hospital_addr": "경기도 부천시 원미구 소사로 327, 가톨릭대학교 부천성모병원 (소사동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.cmcbucheon.or.kr/page/doctor/156/D0001041?doctorName=%EC%A0%95%EC%B0%BD%ED%9B%88&depthName=%EC%A0%95%ED%98%95%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "doctorSiteUrl": "https://www.cmcbucheon.or.kr/page/doctor/156/D0001041",
+  "profileUrl": "https://www.cmcbucheon.or.kr/api/attach/view/doctor/D0001041/profile/1",
+  "specialty": "소아정형외과(소아척추, 종양질환 제외), 소아외상 및 스포츠손상, 견주관절질환(어깨관절) 및 외상, 관절경수술",
+  "학력": [
+    {
+      "date": "1982~1988",
+      "content": "가톨릭대학교 의학 학사"
+    },
+    {
+      "date": "1993~1996",
+      "content": "가톨릭대학교 정형외과학 석사"
+    },
+    {
+      "date": "1996~2000",
+      "content": "가톨릭대학교 정형외과학 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "2015",
+      "content": "부천성모병원 인체유래물중앙은행장"
+    },
+    {
+      "date": "2015~2021",
+      "content": "부천성모병원 정형외과 임상과장"
+    },
+    {
+      "date": "2014~2015",
+      "content": "부천성모병원 인체유래물은행장"
+    },
+    {
+      "date": "2009~2015",
+      "content": "부천성모병원 임상과장"
+    },
+    {
+      "date": "1996~1997",
+      "content": "성가병원 정형외과 전강대우"
+    },
+    {
+      "date": "1992~1996",
+      "content": "강남성모병원 정형외과 레지던트"
+    },
+    {
+      "date": "1988~1989",
+      "content": "강남성모병원 인턴"
+    }
+  ],
+  "수상": [],
+  "학술": [
+    {
+      "date": "2020~2021",
+      "content": "대한골연장변형교정학회장"
+    },
+    {
+      "date": null,
+      "content": "대한 소아정형외과 학회 정회원"
+    }
+  ],
+  "논문": [
+    "Extratendinous migration of calcific tendinitis of the rotator cuff: imaging findings and clinical characteristics with temporal changes (ULTRASONOGRAPHY, 2022년 07월, 공동저자)",
+    "Medial Epicondyle Fracture in Children and Its Association with Increased Carrying Angle (INTERNATIONAL JOURNAL OF CLINICAL PRACTICE, 2022년 01월, 제1저자)",
+    "Trampoline-related fractures of the proximal tibia in children (JOURNAL OF ORTHOPAEDIC SURGERY AND RESEARCH, 2021년 12월, 제1저자)",
+    "Novel WTX nonsense mutation in a family diagnosed with osteopathia striata with cranial sclerosis Case report (MEDICINE, 2021년 10월, 제1저자)",
+    "Importance of detection of capitellar cartilage injuries concomitant with isolated radial head fractures: A retrospective clinical study (ACTA ORTHOPAEDICA ET TRAUMATOLOGICA TURCICA, 2021년 03월, 공동저자)",
+    "아킬레스건 봉합술 후 발생한 감염에서 이차적 건 재건을 시행하지 않고 치료한 4예의 장기 추시 결과 (대한정형외과학회지, 2020년 10월, 공동저자)",
+    "Carpal Tunnel Syndrome Caused by Lipofibromatous Hamartoma of the Median Nerve (JOURNAL OF KOREAN NEUROSURGICAL SOCIETY(대한신경외과학회지), 2020년 09월, 공동저자)",
+    "요수근 굴곡건의 폐쇄성 파열로 발생한 동통성 가성 힘줄: 증례 보고 및 문헌 고찰 (ARCHIVES OF HAND AND MICROSURGERY, 2020년 06월, 공동저자)"
+  ],
+  "저서": [
+    {
+      "date": null,
+      "content": "정형외과학 (최신의학사 공동)",
+      "issuer": null
+    },
+    {
+      "date": null,
+      "content": "소아 청소년의 고관절 질환과 외상 (가톨릭대학교 소아정형외과연구회 공동)",
+      "issuer": null
+    },
+    {
+      "date": null,
+      "content": "견관절 치환술 (영창의학사 공동)",
+      "issuer": null
+    },
+    {
+      "date": null,
+      "content": "증례중심의 골연장 및 변형교정학 (영창출판사 공동)",
+      "issuer": null
+    },
+    {
+      "date": null,
+      "content": "소아청소년 골절학 (대한소아정형외과학회 공동)",
+      "issuer": null
+    },
+    {
+      "date": "2018",
+      "content": "골절학 (범문에듀케이션 공동)",
+      "issuer": "범문에듀케이션"
+    },
+    {
+      "date": "2022",
+      "content": "이덕용 소아정형외과학 5판 (군자출판사 공동)",
+      "issuer": "군자출판사"
+    }
+  ],
+  "언론": []
+}

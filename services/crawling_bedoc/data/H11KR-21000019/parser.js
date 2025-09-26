@@ -4,7 +4,12 @@ const { chromium } = require('playwright');
 (async () => {
   const browser = await chromium.launch();
   const page = await browser.newPage();
-  await page.goto('https://www.paik.ac.kr/haeundae/user/doctor/view.do?doctorId=881', { waitUntil: 'networkidle' });
+  const url = process.argv[2];
+  if (!url) {
+    console.error('Please provide a URL as an argument.');
+    process.exit(1);
+  }
+  await page.goto(url, { waitUntil: 'networkidle' });
 
   const doctorData = await page.evaluate(() => {
     const baseUrl = 'https://www.paik.ac.kr';

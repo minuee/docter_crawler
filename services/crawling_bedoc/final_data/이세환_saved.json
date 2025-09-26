@@ -1,0 +1,73 @@
+{
+  "hospital_cid": 417,
+  "bedoc_id": "A0073",
+  "bedoc_hospitalsite": "http://www.schmc.ac.kr/cheonan/kor/index.do",
+  "bedoc_doctorname": "이세환",
+  "bedoc_deptname": "소화기내과",
+  "bedoc_hospitalname": "순천향대천안병원",
+  "hospital_name": "순천향대천안병원",
+  "aiga_hid": "H11KR-34000003",
+  "hospital_site": "https://www.schmc.ac.kr/cheonan/doctr/home.do?key=2945&doctrNo=943",
+  "site_type": "single",
+  "hospital_addr": "충청남도 천안시 동남구 순천향6길 31,  5동 (봉명동,순천향대학교병원)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.schmc.ac.kr/cheonan/doctr/home.do?key=2945&doctrNo=943&doctorName=%EC%9D%B4%EC%84%B8%ED%99%98&depthName=%EC%86%8C%ED%99%94%EA%B8%B0%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "specialty": "급만성간염, 간경변증, 간암",
+  "profileUrl": "https://www.schmc.ac.kr/attach/DATA/doctr/coco_1809.png",
+  "학력": [
+    {
+      "date": null,
+      "content": "중앙대학교 의학대학"
+    },
+    {
+      "date": null,
+      "content": "울산대학교 대학원 의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "2003 ~ 2009 : 서울아산병원 내과 전공의 및 소화기내과 임상강사"
+    },
+    {
+      "date": null,
+      "content": "2009 ~ 현재 : 순천향대학교 부속 천안병원 교수"
+    },
+    {
+      "date": null,
+      "content": "2014 ~ 2015 : Mass. General Hospital, Boston, MA. GI unit, research fellow"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "현재 :  대한간학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "현재 : 대한소화기학회 평생회원"
+    },
+    {
+      "date": null,
+      "content": "현재 : American Association for Cancer Research, Active member"
+    },
+    {
+      "date": "2023.6 - 2026.2",
+      "content": "National Research Foundation of Korea, ''The validation of a novel biomarker phosphatase in the progression of liver fibrosis''"
+    }
+  ],
+  "논문": [
+    "2021년 Effect of antiviral therapy in patients with low HBV DNA level on transarterial chemoembolization for hepatocellular carcinoma. J Viral Hepat.",
+    "2017년 Tenofovir disoproxil fumarate monotherapy is superior to entecavir-adefovir combination therapy in patients with suboptimal response to lamivudine-adefovir therapy for nucleoside-resistant HBV: a 96-week prospective multicenter trial. Antivir Therary",
+    "2015년 Clinical outcomes of patients with advanced hepatocellular carcinoma treated with sorafenib: a retrospective study of routine clinical practice in multi-institutions. BMC Cancer. 2015;15:236.",
+    "2014년 Long-term outcomes and dynamics of mutants during lamivudine-adefovir rescue therapy in patients with lamivudine-resistant chronic hepatitis B(Gut Liver)",
+    "2012년 Pre-existing YMDD Mutants in Treatment-naïve Patients with Chronic Hepatitis B Are Not Selected during Lamivudine Therapy(J Med Virol, 84:217-222)",
+    "2012년 Single Nucleotide Polymorphisms Associated with Metastatic Tumor Antigen 1 Overexpression in Patients with Hepatocellular Carcinoma(Liver int, 32:457-466)",
+    "2011년 Histologic Characteristics Predisposing to Development of Hepatocellular Carcinoma in Patients with Chronic Hepatitis B(J Clin Pathol, 64:599-604)"
+  ]
+}

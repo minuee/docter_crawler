@@ -1,0 +1,57 @@
+{
+  "hospital_cid": 448,
+  "bedoc_id": "A8251",
+  "bedoc_hospitalsite": "http://www.khnmc.or.kr",
+  "bedoc_doctorname": "이재훈",
+  "bedoc_deptname": "정형외과",
+  "bedoc_hospitalname": "강동경희대병원",
+  "hospital_name": "예손병원",
+  "aiga_hid": "H21KR-31000186",
+  "hospital_site": "https://www.yesonhospital.com/page.php?pageIndex=150103&ca_name=%EC%88%98%EB%B6%80%EC%84%BC%ED%84%B0#48",
+  "site_type": "popup",
+  "hospital_addr": "경기도 부천시 원미구 부천로 206, (춘의동, 다성빌딩)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "specialty": "피부 결손재건술, 수부손목관절, 팔꿈치 관절질환 및 외상, 미세 재건술, 소아수부, 외상",
+  "profileUrl": "https://www.yesonhospital.com/data/file/doctor/2113049640_N6mRKku5_sub_ljh.png",
+  "학력": [
+    { "date": null, "content": "경희대학교 의과대학 졸업" },
+    { "date": null, "content": "경희대학교 대학원 의학석사, 박사" },
+    { "date": null, "content": "미국 하버드 의대(MGH)연수" }
+  ],
+  "경력": [
+    { "date": null, "content": "경희의료원 인턴" },
+    { "date": null, "content": "경희의료원 정형외과 레지던트" },
+    { "date": null, "content": "경희의료원 정형외과 수부 및 미세수술 전임의" },
+    { "date": null, "content": "가천의대 길병원 정형외과 조교수(수부 및 미세수술 분야)" },
+    { "date": null, "content": "강동경희대병원 정형외과 과장, 교수 (수부 및 미세수술 분야)" },
+    { "date": null, "content": "국민연금 장해심사위원" },
+    { "date": null, "content": "Bunnell international traveling fellowship" },
+    { "date": null, "content": "Europe AO international traveling fellowship" },
+    { "date": null, "content": "EBS 명의" },
+    { "date": null, "content": "의료분쟁조정중재원 비상임위원" }
+  ],
+  "학술": [
+    { "date": null, "content": "대한수부외과학회 정회원, 이사, 학회지 편집위원" },
+    { "date": null, "content": "대한미세수술학회 정회원, 이사, 학회지 편집위원" },
+    { "date": null, "content": "대한정형외과학회 정회원, 학회지 심사위원" },
+    { "date": null, "content": "대한정형외과학회 의료감정특별위원" },
+    { "date": null, "content": "대한골절학회 정회원 및 보험위원" },
+    { "date": null, "content": "대한말초신경수술학회 회장" },
+    { "date": null, "content": "세계미세재건학회 정회원" },
+    { "date": null, "content": "미국수부외과학회 정회원" }
+  ],
+  "수상": [
+    { "date": null, "content": "대한미세수술학회 최우수 논문상" },
+    { "date": null, "content": "대한수부외과학회 최우수 논문상" }
+  ],
+  "논문": [
+    "Comparative Study of A1 Pulley Release and Ulnar Superficialis Slip Resection in Trigger Finger With Flexion Contracture of the Proximal Interphalangeal Joint(근위지관절의 굴곡구축이 있는 방아쇠 수지에서 단순 활차 유리술과 천수지굴건 부분절제술의 비교 연구) - 교신저자",
+    "Ulnar-Silded Sclerosis if the Lunate Does  Not Affect Outcomes in Patients Undergoing Volar Locking Plate Fixation for Distal Radius Fracture(원위요골 골절의 전방금속판 고정술 후 월상골의 경화 소견은 수술 결과에 영향을 미치지 않는다.) - 공동저자"
+  ],
+  "저서": [
+    "1. 임상미세수술학 (대한미세수술학회, 2003), 최신의학사\n2. 미세수술기법 및 주관절 외과의 최신 지견(대한미세수술학회, 2006), 최신의학사"
+  ]
+}

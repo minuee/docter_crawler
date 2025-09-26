@@ -1,0 +1,82 @@
+{
+  "hospital_cid": 521,
+  "bedoc_id": "A8317",
+  "bedoc_hospitalsite": "http://www.brmh.org",
+  "bedoc_doctorname": "전혜원",
+  "bedoc_deptname": "산부인과",
+  "bedoc_hospitalname": "서울보라매병원",
+  "hospital_name": "서울보라매병원",
+  "aiga_hid": "H11KR-11000019",
+  "hospital_site": "https://www.brmh.org/custom/popup/layer_doctor_view.do?dt_no=336&medi_code=001011000%7C001011000",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 동작구 보라매로5길 20, (신대방동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.brmh.org/custom/popup/layer_doctor_view.do?dt_no=336&medi_code=001011000%7C001011000&doctorName=%EC%A0%84%ED%98%9C%EC%9B%90&depthName=%EC%82%B0%EB%B6%80%EC%9D%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "http://www.brmh.org/upload/TB_MEDITEAM/30ae31dcce9542029315d9680a4ac3ea.png",
+  "specialty": "부인과종양(부인암, 양성, 악성), 내시경수술(로봇, 단일절개복강경), 자궁질탈출증 및 골반재건클리닉",
+  "학력": [
+    {
+      "content": "서울대학교 의과대학 졸업"
+    },
+    {
+      "content": "의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "content": "산부인과 전문의"
+    },
+    {
+      "content": "부인암 분과전문의"
+    },
+    {
+      "content": "보라매병원 산부인과 과장(2007.9 - 2014.8)"
+    },
+    {
+      "content": "보라매병원 의료사회복지실장(2008.9 - 2016.6)"
+    },
+    {
+      "content": "서울대학교병원 교수"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한산부인과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한부인종양 콜포스코피학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한부인내시경학회 정회원"
+    }
+  ],
+  "논문": [
+    "Elevation of circulating neutrophil extracellular traps in endometrial cancer: Poor prognostic value of cell-free double-stranded DNA. (Transl Oncol, 2024-11)",
+    "Endometriosis and Adverse Pregnancy Outcomes: A Nationwide Population-Based Study. (J Clin Med, 2023-08)",
+    "Lymph Node Ratio Is a Strong Prognostic Factor in Patients with Early-Stage Cervical Cancer Undergoing Minimally Invasive Radical Hysterectomy (Yonsei medical journal, 2021-03)",
+    "Survival impact of additional chemotherapy after adjuvant concurrent chemoradiation in patients with early cervical cancer who underwent radical hysterectomy (BMC cancer, 2021-11)",
+    "Previous ovarian surgery increases the risk of tubal factor infertility (Clinical and Experimental Obstetrics & Gynecology, 2020-02)",
+    "Can the cervical length in mid-trimester predict the use of vacuum in vaginal delivery? (Obstetrics & gynecology science, 2020-01)",
+    "Effectiveness and safety of sublingual misoprostol in medical treatment of the 1st trimester miscarriage: experience of off-label use in Korea (Obstetrics & gynecology science, 2018-03)",
+    "CT findings of adnexal torsion: A matched case-control study (PloS one, 2018-07)",
+    "Gestational Age-specific Cut-off Values Are Needed for Diagnosis of Subclinical Hypothyroidism in Early Pregnancy (Journal of Korean medical science, 2015-09)",
+    "High-risk human papillomavirus load and biomarkers in cervical intraepithelial neoplasia and cancer (APMIS, 2014-05)"
+  ],
+  "언론": [
+    {
+      "targetDate": "2022-02-03",
+      "type": "기사",
+      "text": "산부인과 전혜원 교수_초기 증상이 거의 없는 난소암, 수술 후 재발관리가 중요합니다",
+      "url": "http://www.queen.co.kr/news/articleView.html?idxno=372116",
+      "issuer": "Queen"
+    }
+  ]
+}

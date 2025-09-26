@@ -1,0 +1,102 @@
+{
+  "hospital_cid": 452,
+  "bedoc_id": "A8423",
+  "bedoc_hospitalsite": "http://www.nhimc.or.kr",
+  "bedoc_doctorname": "이정석",
+  "bedoc_deptname": "정신건강의학과",
+  "bedoc_hospitalname": "일산병원",
+  "hospital_name": "일산병원",
+  "aiga_hid": "H11KR-31000014",
+  "hospital_site": "https://www.nhimc.or.kr/doctor/profViewPop.do?deptNo=11&profNo=220&deptYn=Y",
+  "site_type": "single",
+  "hospital_addr": "경기도 고양시 일산동구 일산로 100, (백석동,백석1동 1241외1필지 4층)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.nhimc.or.kr/doctor/profViewPop.do?deptNo=11&profNo=220&deptYn=Y&doctorName=%EC%9D%B4%EC%A0%95%EC%84%9D&depthName=%EC%A0%95%EC%8B%A0%EA%B1%B4%EA%B0%95%EC%9D%98%ED%95%99%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "https://www.nhimc.or.kr/_upload/profImg/37b2e2d6-7dc4-4d01-81a0-3e5a48b763a1",
+  "specialty": "조현병, 노인정신의학, 불안장애, 기억력장애, 우울증, 수면장애, 기질성 정신장애 ,치매예방센터",
+  "학력": [
+    {
+      "date": null,
+      "content": "연세대학교 의과대학 의학과 박사 졸업"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 의과대학 의학과 석사 졸업"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 의과대학 졸업"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "현) 국민건강보험 일산병원 정신건강의학과 전문의"
+    },
+    {
+      "date": null,
+      "content": "현) 연세대학교 의과대학 정신과학교실 임상교수"
+    },
+    {
+      "date": null,
+      "content": "현) 국민건강보험 일산병원 정신건강의학과장"
+    },
+    {
+      "date": null,
+      "content": "현) 고양시 정신건강복지센터장"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 의과대학 정신과학교실 연구강사"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 의과대학 정신과학교실 전공의"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한신경정신의학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한노인정신의학회 평생회원"
+    },
+    {
+      "date": null,
+      "content": "대한조현병학회 평생회원 및 총무이사"
+    },
+    {
+      "date": null,
+      "content": "대한불안의학회 평생회원"
+    },
+    {
+      "date": null,
+      "content": "대한정신약물학회 평생회원"
+    }
+  ],
+  "논문": [
+    "2023,제1/교신저자,대한조현병학회지,KCI 정신질환 언론보도 가이드라인의 현황과 향후 방향 / Current Status and Future Direction of Media Guidelines on Mental illness",
+    "2022,제1/교신저자,노인정신의학, KCI 치매노인의 시설입소 관련 요인: 전국인구기반 데이터 분석 / Factors Related to Institutionalization in Elderly With Dementia: Analysis of Nationwide Population-Based Data",
+    "2021,제1저자,정신신체의학, KCI 조현병 환자에서 QTc 간격연장에 관련되는 요인 : 후향적 연구 / Clinical Correlates of QTc Prolongation in Patients with Schizophrenia : A Retrospective Study",
+    "2021,공동저자,Psychiatry Research: Neuroimaging,SCI/SCIE The relationship between ambivalence, alexithymia, and salience network dysfunction in schizophrenia",
+    "2021,공동저자,Journal of Clinical Medicine,SCI/SCIE Anhedonia Relates to the Altered Global and Local Grey Matter Network Properties in Schizophrenia",
+    "2020, 제1저자, Clinical Psychopharmacology and Neuroscience, SCI/SCIE Korean Medication Algorithm for Schizophrenia 2019, Second Revision: Treatment of Psychotic Symptoms",
+    "2020, 제1/교신저자, Psychiatry Investigation, KCI The Relationship between Neuropsychiatric Symptoms and Default-Mode Network Connectivity in Alzheimer’s Disease",
+    "2017, 공동저자, 신경정신의학, 2017:56(1): 10-19, KCI The Significance and Limitations of Korean Diagnosis-Related Groups in Psychiatric Inpatients’ Hospital Charges/정신건강의학과 환자 입원의료비에 있어 한국형 진단명기준 환자군분류체계의 의미와 한계",
+    "2017, 공동저자, Psychiatry investigation, 2017:14(4), p413419., KCI Validation of the Korean Version of the Clinical Assessment Interview for Negative Symptoms",
+    "2016, 제1저자, Psychiatry Research: Neuroimaging, 2016:Vol. 254 112p ~ 118p, SCI/SCIE The relationship between self-referential processing-related brain activity and anhedonia in patients with schizophrenia",
+    "2016, 제1저자, Neuropsychiatric Disease and Treatment, 2016:Vol. 2016 No. Issue 1 1p ~ 14p, SCI/SCIE Early visual processing for low spatial frequency fearful face is correlated with cortical volume in patients with schizophrenia",
+    "2016, 공동저자, Neuropsychiatric Disease and Treatment, 2016:Vol. 2016 No. Issue 1 1167p ~ 1172p, SCI/SCIE Measuring negative symptoms in patients with schizophrenia: reliability and validity of the Korean version of the Motivation and Pleasure Scale-Self-Report",
+    "2016, 공동저자, Clinical Neuropharmacology, 2016. 39.6, SCI/SCIE Comparing the Effectiveness and Safety of the Addition of and Switching to Aripiprazole for Resolving Antipsychotic-Induced Hyperprolactinemia: A Multicenter, Open-Label, Prospective Study",
+    "2015, 제1저자, 대한조현병학회지, 2015:18(2):73-78, 기타국내 조현병 환자에서 자기참조 처리와 내재동기의 관련성",
+    "2015, 제1저자, current neuropharmacology' SCI/SCIE Neural Basis of Anhedonia and Amotivation in Patients with Schizophrenia: The role of Reward System",
+    "2015, 제1저자, PLoS ONE' SCI/SCIE Altered neural basis of the reality processing and its relation to cognitive insight in schizophrenia"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "hospital_cid": 611,
+  "bedoc_id": "A0820",
+  "bedoc_hospitalsite": "http://healthjoint.co.kr/",
+  "bedoc_doctorname": "최우진",
+  "bedoc_deptname": "정형외과",
+  "bedoc_hospitalname": "연세한강병원",
+  "hospital_name": "최우진정형외과",
+  "aiga_hid": "H31KR-11009232",
+  "hospital_site": "http://footandankle.co.kr/index.php/html/11",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 서초구 동작대로 36, 대광빌딩 3,6,7층 (방배동)",
+  "isExist": true,
+  "isSearchType": "html_ocr",
+  "error": null,
+  "isAttend": true,
+  "specialty": "정형외과",
+  "학력": [
+    { "date": null, "content": "연세대학교 의과대학 졸업" },
+    { "date": null, "content": "연세대학교 의학대학원 의학박사" }
+  ],
+  "경력": [
+    { "date": null, "content": "전) 차의과대학교 분당차병원 정형외과학교실 교수" },
+    { "date": null, "content": "전) 연세대학교 의과대학 정형외과학교실 교수" }
+  ],
+  "학술": [
+    { "date": null, "content": "대한정형외과학회 정회원" },
+    { "date": null, "content": "대한족부족관절학회 정회원 (편집위원, 교육위원, 학술위원회 간사)" },
+    { "date": null, "content": "대한당뇨발학회 정형외과이사" },
+    { "date": null, "content": "미국 정형외과 족부족관절학회 정회원" },
+    { "date": null, "content": "국제 발목 연골 손상 치료학회 (ICCRA) 정회원" },
+    { "date": null, "content": "국제 발목 인대 손상 연구학회 (Ankle Instability Group) 정회원" }
+  ]
+}

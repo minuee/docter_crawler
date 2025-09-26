@@ -1,0 +1,181 @@
+{
+  "hospital_cid": 375,
+  "bedoc_id": "A8073",
+  "bedoc_hospitalsite": "http://www.cmcujb.or.kr/",
+  "bedoc_doctorname": "윤형규",
+  "bedoc_deptname": "호흡기내과",
+  "bedoc_hospitalname": "여의도성모병원",
+  "hospital_name": "가톨릭대학교 여의도성모병원",
+  "aiga_hid": "H11KR-11000001",
+  "hospital_site": "https://www.cmcsungmo.or.kr/page/doctor/197/D0001209",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 영등포구 63로 10, 여의도성모병원 (여의도동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "doctorDetailUrl" :"https://www.cmcsungmo.or.kr/page/doctor/197/D0001209",
+  "profileUrl": "https://www.cmcsungmo.or.kr/page/doctor/197/D0001209",
+  "specialty": "만성폐쇄성폐질환,천식,폐암,간질성폐질환, 연구분야: 만성 폐쇄성 폐질환, 기관지 천식, 환경성 페질환; 미세먼지, 석면",
+  "학력": [
+    {
+      "date": "1984~1990",
+      "content": "가톨릭대학교 의학 학사"
+    },
+    {
+      "date": "1993~1999",
+      "content": "가톨릭대학교 내과학 석사"
+    },
+    {
+      "date": "1999~2003",
+      "content": "가톨릭대학교 내과학 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "2020~현재",
+      "content": "가톨릭대학교 의과대학 내과학교실 호흡기내과 학과장"
+    },
+    {
+      "date": "2021~현재",
+      "content": "여의도성모병원 내과과장"
+    },
+    {
+      "date": "2019~현재",
+      "content": "여의도성모병원 의료윤리사무국장"
+    },
+    {
+      "date": "2015~현재",
+      "content": "여의도성모병원 호흡기내과 교수"
+    },
+    {
+      "date": "2019~2020",
+      "content": "성의교정 의과대학 책임교수"
+    },
+    {
+      "date": "2017~2019",
+      "content": "여의도성모병원 건강증진센터소장"
+    },
+    {
+      "date": "2015~2019",
+      "content": "성의교정 내과 전공책임교수"
+    },
+    {
+      "date": "2005~2005",
+      "content": "연수: 미국 National Institute for Environmental Health Science"
+    }
+  ],
+  "수상": [
+    {
+      "date": "2015",
+      "content": "가톨릭대학교 여의도성모병원 우수교원"
+    }
+  ],
+  "학술": [
+    {
+      "date": "2020~현재",
+      "content": "환경성 폐질환 연구회 회장"
+    },
+    {
+      "date": "2019~현재",
+      "content": "대한내과학회 수련이사"
+    },
+    {
+      "date": "2017~2020",
+      "content": "천식연구회 부회장"
+    },
+    {
+      "date": "1995~현재",
+      "content": "대한 내과학회 회원"
+    },
+    {
+      "date": "1995~현재",
+      "content": "대한 결핵 및 호흡기학회 회원"
+    }
+  ],
+  "언론": [
+    {
+      "targetDate": "2022.06.13",
+      "type": "뉴스",
+      "text": "[서울경제] 호흡기폐암센터, 롱코비드 진료 개시(2022.6.13)",
+      "url": "https://www.sedaily.com/NewsView/26789SZEHM",
+      "issuer": "서울경제"
+    },
+    {
+      "targetDate": "2022.03.25",
+      "type": "뉴스",
+      "text": "[서울경제] 여의도성모병원, 호흡기폐암센터 개소…\"진단 1주일 이내 치료 시작\"(2022.3.24)",
+      "url": "https://www.sedaily.com/NewsView/263JK915LG",
+      "issuer": "서울경제"
+    },
+    {
+      "targetDate": "2022.03.24",
+      "type": "뉴스",
+      "text": "[뉴시스] 여의도성모병원, 호흡기폐암센터 문 열었다(2022.3.24)",
+      "url": "https://newsis.com/view/?id=NISX20220324_0001805440&cID=10201&pID=10200#",
+      "issuer": "뉴시스"
+    },
+    {
+      "targetDate": "2019.12.02",
+      "type": "뉴스",
+      "text": "[데일리메디] 국립중앙의료원, '환경성 호흡기질환' 심포지엄(2019.11.28)",
+      "url": "http://www.dailymedi.com/detail.php?number=850167&thread=22r02",
+      "issuer": "데일리메디"
+    },
+    {
+      "targetDate": "2018.01.29",
+      "type": "뉴스",
+      "text": "[연합뉴스] 이 많이 빠진 남성 '폐쇄성폐질환' 위험 4배 높다(2016.02.25)",
+      "url": "http://www.yonhapnews.co.kr/bulletin/2016/02/25/0200000000AKR20160225040500017.HTML?input=1195m",
+      "issuer": "연합뉴스"
+    }
+  ],
+  "저서": [
+    {
+        "date": "2016",
+        "content": "2016 폐기능검사 지침침",
+        "author": "공동",
+        "issuer": "대한결핵및호흡기학회"
+    },
+    {
+        "date": "2014",
+        "content": "COPD 진료지침",
+        "author": "공동",
+        "issuer": "대한결핵 및 호흡기학회"
+    },
+    {
+        "date": "2014",
+        "content": "천식 진료지침",
+        "author": "공동",
+        "issuer": "대한결핵 및 호흡기학회"
+    },
+    {
+        "date": "2013",
+        "content": "(2013) 제7회 가톨릭대학교 내과 연수강좌",
+        "author": "공동",
+        "issuer": "신원의학서적"
+    },
+    {
+        "date": "2011",
+        "content": "(대한의학회) 장애평가기준",
+        "author": "공동",
+        "issuer": "박영사"
+    },
+    {
+        "date": "2011",
+        "content": "임신·출산·신생아 관리의 실용적 접근",
+        "author": "공동",
+        "issuer": "여문각"
+    }
+  ],
+  "논문": [
+    "Influence and distinctions of particulate matter exposure across varying etiotypes in chronic obstructive pulmonary disease (COPD) mouse model - JOURNAL OF INFLAMMATION-LONDON, 2024",
+    "Sex Differences in Chronic Cough Epidemiology: The Korean Cough Study Group - JOURNAL OF KOREAN MEDICAL SCIENCE, 2024",
+    "Application of the Lancet Commission COPD classification to COPD Cohort Population in South Korea - RESPIRATORY MEDICINE, 2024",
+    "The effect of nebulized N-acetylcysteine on the phlegm of chronic obstructive pulmonary disease: the NEWEST study - BMC PULMONARY MEDICINE, 2024",
+    "Efficacy and safety of mixture of ivy leaf extract and coptidis rhizome in the treatment of acute bronchitis: multicenter, randomized, double-blinded, active-controlled, parallel, therapeutic confirmatory clinical trial - CURRENT MEDICAL RESEARCH AND OPINION, 2024",
+    "Prior pneumococcal vaccination improves in-hospital mortality among elderly population hospitalized due to community-acquired pneumonia - BMC PULMONARY MEDICINE, 2024",
+    "Response - CHEST, 2024",
+    "Pulmonary Rehabilitation Is Associated With Decreased Exacerbation and Mortality in Patients With COPD A Nationwide Korean Study - CHEST, 2024"
+  ],
+  "isAttend": true
+}

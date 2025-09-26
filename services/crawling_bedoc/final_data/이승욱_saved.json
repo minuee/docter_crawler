@@ -1,0 +1,154 @@
+{
+  "hospital_cid": 423,
+  "bedoc_id": "A1246",
+  "bedoc_hospitalsite": "http://guri.hyumc.com/index.asp?",
+  "bedoc_doctorname": "이승욱",
+  "bedoc_deptname": "비뇨의학과",
+  "bedoc_hospitalname": "한양대구리병원",
+  "hospital_name": "한양대구리병원",
+  "aiga_hid": "H11KR-31000064",
+  "hospital_site": "https://guri.hyumc.com/guri/mediteam/mditeam.do?action=detail&searchCondition1=seqMediteam&searchCommonSeq=44&searchCommonCd1=2117350&searchCommonCd2=111290&searchKeyword=%EB%B9%84%EB%87%A8%EC%9D%98%ED%95%99%EA%B3%BC",
+  "site_type": "single",
+  "hospital_addr": "경기도 구리시 경춘로 153, (교문동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://guri.hyumc.com/guri/mediteam/mditeam.do?action=detail&searchCondition1=seqMediteam&searchCommonSeq=44&searchCommonCd1=2117350&searchCommonCd2=111290&searchKeyword=%EB%B9%84%EB%87%A8%EC%9D%98%ED%95%99%EA%B3%BC&doctorName=%EC%9D%B4%EC%8A%B9%EC%9A%B1&depthName=%EB%B9%84%EB%87%A8%EC%9D%98%ED%95%99%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": "Media URLs require manual review (javascript:nttView).",
+  "isAttend": true,
+  "profileUrl": "https://guri.hyumc.com/upload/ckfinder/images/photo_doctor/guri/0%EB%B9%84%EB%87%A8%EA%B8%B0%EA%B3%BC%20%EC%9D%B4%EC%8A%B9%EC%9A%B13.jpg",
+  "specialty": "전립선질환, 비뇨기계종양, 복강경수술, 남성과학, 결석",
+  "학력": [
+    {
+      "date": null,
+      "content": "한양대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "한양대학교 의과대학 대학원 석사"
+    },
+    {
+      "date": null,
+      "content": "고려대학교 의과대학 대학원 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "한양대학교병원 비뇨기과 전공의"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 의과대학 비뇨기과 전임의"
+    },
+    {
+      "date": null,
+      "content": "을지대학교 의과대학 비뇨기과 전임강사"
+    },
+    {
+      "date": null,
+      "content": "을지대학교 의과대학 비뇨기과 조교수"
+    },
+    {
+      "date": null,
+      "content": "한양대학교 의과대학 비뇨기과 교수"
+    },
+    {
+      "date": null,
+      "content": "미국 로봇센터 연수"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한비뇨기과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한비뇨기종양학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한배뇨장애요실금학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "현 대한내비뇨기과학회 이사"
+    },
+    {
+      "date": null,
+      "content": "현 대한남성과학회 정보이사"
+    },
+    {
+      "date": null,
+      "content": "현 대한전립선학회 편집이사"
+    }
+  ],
+  "수상": [
+    {
+      "date": "2010.03",
+      "content": "대한전립선학회 우수논문상"
+    },
+    {
+      "date": "2012.11",
+      "content": "대한비뇨기과학회 우수논문상"
+    },
+    {
+      "date": "2013.04",
+      "content": "대한남성과학회 우수논문상"
+    },
+    {
+      "date": "2013.07",
+      "content": "대한내비뇨기과학회 우수논문상"
+    },
+    {
+      "date": "2013.09",
+      "content": "대한배뇨장애요실금학회 우수논문상"
+    },
+    {
+      "date": "2013.11",
+      "content": "대한비뇨기과학회 우수논문상"
+    },
+    {
+      "date": "2014.03",
+      "content": "대한전립선학회 우수논문상"
+    },
+    {
+      "date": "2014.04",
+      "content": "대한남성과학회 최다논문상"
+    }
+  ],
+  "언론": [
+    {
+      "targetDate": null,
+      "type": "조선일보",
+      "text": "조선일보",
+      "url": "http://health.chosun.com/site/data/html_dir/2017/11/21/2017112101966.html?Dep0=health&Dep1=main&Dep2=top",
+      "issuer": null
+    },
+    {
+      "targetDate": null,
+      "type": "국민일보",
+      "text": "국민일보",
+      "url": "http://www.kukinews.com/news/article.html?no=393768",
+      "issuer": null
+    },
+    {
+      "targetDate": "2016.09.05",
+      "type": "NEWS",
+      "text": "비뇨기과 이승욱 교수, '남성 갱년기의 진단과 치료' 건강강좌 개최",
+      "url": "javascript:nttView('news', '1400')",
+      "issuer": null
+    },
+    {
+      "targetDate": "2016.05.03",
+      "type": "NEWS",
+      "text": "비뇨기과 이승욱 교수, 대한전립선학회서 최우수, 우수 논문상 수상",
+      "url": "javascript:nttView('news', '1310')",
+      "issuer": null
+    }
+  ],
+  "논문": [],
+  "저서": []
+}

@@ -1,0 +1,67 @@
+{
+  "hospital_cid": 474,
+  "bedoc_id": "A8348",
+  "bedoc_hospitalsite": "https://chamhosp.co.kr/",
+  "bedoc_doctorname": "이춘기",
+  "bedoc_deptname": "정형외과",
+  "bedoc_hospitalname": "참조은병원",
+  "hospital_name": "참조은병원",
+  "aiga_hid": "H11KR-31000060",
+  "hospital_site": "https://chamhosp.co.kr/?p=10_view&doctorId=59&dType=department",
+  "site_type": "single",
+  "hospital_addr": "경기도 광주시 광주대로 45, (경안동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://chamhosp.co.kr/?p=10_view&doctorId=59&dType=department&doctorName=%EC%9D%B4%EC%B6%98%EA%B8%B0&depthName=%EC%A0%95%ED%98%95%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "학력": [
+    {
+      "date": null,
+      "content": "- 서울대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "- 서울대학교 의과대학 의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "- 서울대학교 의과대학 주임교수"
+    },
+    {
+      "date": null,
+      "content": "- 서울대학교병원 정형외과장"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "- 대한정형외과학회 회장"
+    },
+    {
+      "date": null,
+      "content": "- 대한정형외과학회 이사장"
+    },
+    {
+      "date": null,
+      "content": "- 대한척추외과학회 회장"
+    },
+    {
+      "date": null,
+      "content": "- 대한민국의학한림원 정회원"
+    },
+    {
+      "date": null,
+      "content": "- 대한정형외과학회지 편집위원장"
+    },
+    {
+      "date": null,
+      "content": "- Clinics in Orthopedic Surgery, Editor-in-Chief"
+    }
+  ],
+  "specialty": "척추질환, 허리디스크, 척추관협착증, 경추 추간판장애, 척추측만증/후만증, 척추전방전위증, 척추변형, OLIF수술",
+  "profileUrl": "https://chamhosp.co.kr/_File/medicalTeam//infofile_1706942868_0.png",
+  "isAttend": true
+}

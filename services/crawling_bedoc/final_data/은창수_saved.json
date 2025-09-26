@@ -1,0 +1,109 @@
+{
+  "hospital_cid": 377,
+  "bedoc_id": "A0548",
+  "bedoc_hospitalsite": "http://guri.hyumc.com/index.asp?",
+  "bedoc_doctorname": "은창수",
+  "bedoc_deptname": "소화기내과",
+  "bedoc_hospitalname": "한양대구리병원",
+  "hospital_name": "한양대구리병원",
+  "aiga_hid": "H11KR-31000064",
+  "hospital_site": "https://guri.hyumc.com/guri/mediteam/mediofCent.do?action=detail&returnAction=list&currentPageNo=1&recordCountPerPage=8&searchCondition1=seqMediteam&searchCommonSeq=48&searchCommonCd1=2077226&searchCommonCd2=111110&searchCondition2=all&searchKeyword=%EC%86%8C%ED%99%94%EA%B8%B0%EB%82%B4%EA%B3%BC&searchKeyword2=&userTab1=mediteam&empyId=&bbsId=bestPartner&nttSeq=",
+  "site_type": "single",
+  "hospital_addr": "경기도 구리시 경춘로 153, (교문동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://guri.hyumc.com/guri/mediteam/mediofCent.do?action=detail&returnAction=list&currentPageNo=1&recordCountPerPage=8&searchCondition1=seqMediteam&searchCommonSeq=48&searchCommonCd1=2077226&searchCommonCd2=111110&searchCondition2=all&searchKeyword=%EC%86%8C%ED%99%94%EA%B8%B0%EB%82%B4%EA%B3%BC&searchKeyword2=&userTab1=mediteam&empyId=&bbsId=bestPartner&nttSeq=&doctorName=%EC%9D%80%EC%B0%BD%EC%88%98&depthName=%EC%86%8C%ED%99%94%EA%B8%B0%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "profileUrl": "https://guri.hyumc.com/images/guri/mediteam/2077226.jpg",
+  "specialty": "위질환, 대장질환, 식도질환, 소장질환, 위암, 대장암, 대장용종",
+  "학력": [
+    {
+      "date": null,
+      "content": "한양대학교 의과대학 의학사"
+    },
+    {
+      "date": null,
+      "content": "한양대학교 의과대한 내과학 의학석사"
+    },
+    {
+      "date": null,
+      "content": "한양대학교 의과대학 내과학 의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "한양대학교구리병원 소화기내과 전임의"
+    },
+    {
+      "date": null,
+      "content": "한림대학교 한강성심병원 조교수"
+    },
+    {
+      "date": null,
+      "content": "한양대학교 의과대학 내과 교수"
+    },
+    {
+      "date": null,
+      "content": "한양대학교구리병원 건강검진센터장"
+    },
+    {
+      "date": null,
+      "content": "미국 노스캐롤라이나 주립대학 염증성장질환 센터 연수"
+    }
+  ],
+  "수상": [],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한내과학회"
+    },
+    {
+      "date": null,
+      "content": "대한소화기학회"
+    },
+    {
+      "date": null,
+      "content": "대한소화기내시경학회"
+    },
+    {
+      "date": null,
+      "content": "대한장연구학회 보험이사"
+    }
+  ],
+  "언론": [
+    {
+      "targetDate": "2018.02.05",
+      "type": "신문",
+      "text": "최신 검진 장비 도입… 정확도 크게 높여",
+      "url": "http://health.chosun.com/site/data/html_dir/2018/02/04/2018020400772.html",
+      "issuer": "조선일보"
+    },
+    {
+      "targetDate": "2016.09.14",
+      "type": "신문",
+      "text": "10㎜ 또는 3개 이상 용종 뗐다면 3년 내 대장내시경 추적검사 해야",
+      "url": "http://health.chosun.com/site/data/html_dir/2016/09/13/2016091302557.html",
+      "issuer": "조선일보"
+    },
+    {
+      "targetDate": "2016.08.24",
+      "type": "신문",
+      "text": "내시경 할면 할수록 손해, 소독 수가 0원",
+      "url": "http://health.chosun.com/site/data/html_dir/2016/08/23/2016082301899.html",
+      "issuer": "조선일보"
+    },
+    {
+      "targetDate": "2014.12.09",
+      "type": "신문",
+      "text": "한양대구리병원 대장암 조기발견 건강강좌 열어",
+      "url": "http://news.kukinews.com/article/view.asp?arcid=0008932175&code=41171911&cp=du",
+      "issuer": "국민일보"
+    }
+  ],
+  "저서": [],
+  "논문": [],
+  "isAttend": true
+}

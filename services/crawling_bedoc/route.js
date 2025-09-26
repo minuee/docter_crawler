@@ -784,4 +784,301 @@ router.get('/save-detailurl', async function(req, res) {
 });
 
 
+
+/**
+ * @swagger
+ *  /v1/c/crawling_bedoc/parsing-final:
+ *    get:
+ *      summary: "최종 수집된 의사 데이터 파싱 및 수정"
+ *      description: "특정 디렉토리의 의사 JSON 파일들을 순차적으로 읽어 지시된 내용으로 수정합니다."
+ *      tags: [crawling_bedoc-베닥의사 수집]
+ *      responses:
+ *        "200":
+ *          description: 데이터 처리 결과
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    message:
+ *                      type: string
+ */
+router.get('/parsing-final', async function(req, res) {
+  let processed_count = 0;
+  const errors = [];
+  // NOTE: 작업할 파일이 있는 디렉토리를 지정해야 합니다. 우선 'final_data'로 설정합니다.
+  const targetDir = path.join(global.appRoot, 'services/crawling_bedoc/final_data'); 
+
+  try {
+    if (!fs.existsSync(targetDir)) {
+      return res.status(404).send({
+        code: 404,
+        success: false,
+        message: `Directory not found: ${targetDir}`
+      });
+    }
+
+    const allDoctorFiles = fs.readdirSync(targetDir)
+      .filter(file => file.endsWith('.json') && !file.endsWith('_saved.json') && !file.endsWith('_failed.json'));
+    const filesToProcess = allDoctorFiles.slice(0, 10); // 한 번에 10개 파일만 선택
+
+    console.log(`[PARSING-FINAL] Found ${allDoctorFiles.length} total files. Will process a batch of ${filesToProcess.length}.`);
+
+    for (const fileName of filesToProcess) {
+      const filePath = path.join(targetDir, fileName);
+      try {
+        console.log(`[PARSING-FINAL] --- Processing file: ${fileName} ---`);
+        const fileContent = fs.readFileSync(filePath, 'utf-8');
+        let doctorData = JSON.parse(fileContent);
+
+        // isFinalComplete가 true이면 파일을 건너뛴다.
+        if (doctorData.isFinalComplete === true) {
+          console.log(`[PARSING-FINAL] Skipping already completed file: ${fileName}`);
+          continue;
+        }
+
+        // =================================================================
+        // 1. 필요한 모든 키가 있는지 확인하고 로직 실행
+        const baseUrl = doctorData.doctorDetailUrl || doctorData.hospital_site;
+        const doctorNameValue = doctorData.bedoc_doctorname || doctorData.doctorName;
+        const deptNameValue = doctorData.bedoc_deptname || doctorData.department;
+
+        // 2. 모든 필수 데이터가 있는 경우에만 전체 수정 작업을 진행
+        if (baseUrl && doctorNameValue && deptNameValue) {
+            // 2-1. saveDoctorDetailUrl 값 생성
+            const doctorName = encodeURIComponent(doctorNameValue);
+            const deptName = encodeURIComponent(deptNameValue);
+            const queryString = `doctorName=${doctorName}&depthName=${deptName}`;
+            const separator = baseUrl.includes('?') ? '&' : '?';
+            const newUrl = `${baseUrl}${separator}${queryString}`;
+
+            // 2-2. 필드 순서 조정을 위해 객체를 새로 생성
+            const newData = {};
+            let newFieldsAdded = false;
+            for (const key in doctorData) {
+                newData[key] = doctorData[key];
+                if (key === 'isExist') {
+                    newData.isFinalComplete = true;
+                    newData.isSaveToDatabase = false;
+                    newData.saveDoctorDetailUrl = newUrl; // isSaveToDatabase 바로 뒤에 추가
+                    newFieldsAdded = true;
+                }
+            }
+            // isExist 키가 없는 경우, 마지막에 새 필드들을 추가
+            if (!newFieldsAdded) {
+                newData.isFinalComplete = true;
+                newData.isSaveToDatabase = false;
+                newData.saveDoctorDetailUrl = newUrl;
+            }
+            doctorData = newData;
+
+            // 2-3. 수정된 내용을 파일에 쓰고, 파일명 변경
+            fs.writeFileSync(filePath, JSON.stringify(doctorData, null, 2), 'utf-8');
+            const newFilePath = filePath.replace('.json', '_saved.json');
+            fs.renameSync(filePath, newFilePath);
+
+            processed_count++;
+            console.log(`[PARSING-FINAL] Successfully processed and renamed ${fileName}`);
+
+        } else {
+            // 필수 데이터가 없어 처리하지 않고 _failed.json으로 이름 변경
+            const newFilePath = filePath.replace('.json', '_failed.json');
+            fs.renameSync(filePath, newFilePath);
+            errors.push(`File ${fileName} was renamed to _failed.json due to missing data.`);
+            console.log(`[PARSING-FINAL] Skipped and renamed to ${fileName.replace('.json', '_failed.json')} due to missing data.`);
+        }
+        // =================================================================
+
+
+      } catch (fileError) {
+        const errorMessage = `File ${fileName}: ${fileError.message}`;
+        console.error(`[PARSING-FINAL] CRITICAL ERROR processing ${errorMessage}`);
+        errors.push(errorMessage);
+      }
+    }
+
+    return res.send({
+      code: 200,
+      success: true,
+      message: `Batch complete. Processed ${processed_count} doctor records. Errors: ${errors.length}`,
+      errors: errors
+    });
+  } catch (error) {
+    console.error('Critical error in /parsing-final route:', error.message);
+    res.status(500).send('A critical error occurred during the parsing process: ' + error.message);
+  }
+});
+
+
+/**
+ * @swagger
+ *  /v1/c/crawling_bedoc/refactor-thesis:
+ *    get:
+ *      summary: "논문 필드 포맷 일괄 수정"
+ *      description: "final_data 디렉토리의 모든 JSON 파일들을 순회하며, 논문 필드의 포맷을 가이드에 맞게 문자열 배열로 수정합니다."
+ *      tags: [crawling_bedoc-베닥의사 수집]
+ *      responses:
+ *        "200":
+ *          description: 데이터 처리 결과
+ */
+router.get('/refactor-thesis', async function(req, res) {
+  let checked_count = 0;
+  let refactored_count = 0;
+  const errors = [];
+  const targetDir = path.join(global.appRoot, 'services/crawling_bedoc/final_data');
+
+  try {
+    if (!fs.existsSync(targetDir)) {
+      return res.status(404).send({ code: 404, success: false, message: `Directory not found: ${targetDir}` });
+    }
+
+    const allFiles = fs.readdirSync(targetDir).filter(file => file.endsWith('.json'));
+
+    for (const fileName of allFiles) {
+      const filePath = path.join(targetDir, fileName);
+      checked_count++;
+      try {
+        const fileContent = fs.readFileSync(filePath, 'utf-8');
+        let doctorData = JSON.parse(fileContent);
+
+        // 논문 필드가 있고, 배열이며, 내용이 있는지, 그리고 첫 항목이 객체인지 확인
+        if (doctorData.논문 && Array.isArray(doctorData.논문) && doctorData.논문.length > 0 && typeof doctorData.논문[0] === 'object' && doctorData.논문[0] !== null) {
+          
+          // 포맷이 객체 배열인 경우, 문자열 배열로 변환
+          if (doctorData.논문[0].content) {
+            doctorData.논문 = doctorData.논문.map(item => item.content);
+            fs.writeFileSync(filePath, JSON.stringify(doctorData, null, 2), 'utf-8');
+            refactored_count++;
+            console.log(`[REFACTOR-THESIS] Refactored and saved: ${fileName}`);
+          } else {
+            console.log(`[REFACTOR-THESIS] Skipping file with object array but no 'content' key: ${fileName}`);
+          }
+        } else {
+          console.log(`[REFACTOR-THESIS] Skipping file with correct or no thesis data: ${fileName}`);
+        }
+      } catch (fileError) {
+        const errorMessage = `File ${fileName}: ${fileError.message}`;
+        console.error(`[REFACTOR-THESIS] Error processing file: ${errorMessage}`);
+        errors.push(errorMessage);
+      }
+    }
+
+    return res.send({
+      code: 200,
+      success: true,
+      message: `Checked ${checked_count} files. Refactored ${refactored_count} files.`,
+      errors: errors
+    });
+  } catch (error) {
+    console.error('Critical error in /refactor-thesis route:', error.message);
+    res.status(500).send('A critical error occurred during the refactoring process: ' + error.message);
+  }
+});
+
+
+/**
+ * @swagger
+ *  /v1/c/crawling_bedoc/update-hid:
+ *    get:
+ *      summary: "aiga_hid 필드 일괄 업데이트"
+ *      description: "saved_final_data 폴더를 참조하여 final_data 폴더의 aiga_hid 값을 bedoc_id 기준으로 업데이트합니다."
+ *      tags: [crawling_bedoc-베닥의사 수집]
+ *      responses:
+ *        "200":
+ *          description: 데이터 처리 결과
+ */
+router.get('/update-hid', async function(req, res) {
+  let updated_count = 0;
+  let checked_count = 0;
+  const not_found_errors = [];
+  const general_errors = [];
+
+  try {
+    // --- Phase 1: Build Lookup Map ---
+    console.log('[UPDATE-HID] Starting Phase 1: Building lookup map...');
+    const bedocIdToHidMap = {};
+    const referenceRootDir = path.join(global.appRoot, 'services/crawling_bedoc/saved_final_data');
+
+    if (!fs.existsSync(referenceRootDir)) {
+      return res.status(404).send({ code: 404, success: false, message: `Reference directory not found: ${referenceRootDir}` });
+    }
+
+    const hospitalDirs = fs.readdirSync(referenceRootDir, { withFileTypes: true })
+      .filter(dirent => dirent.isDirectory())
+      .map(dirent => dirent.name);
+
+    for (const hospitalHid of hospitalDirs) {
+      const doctorDir = path.join(referenceRootDir, hospitalHid);
+      const doctorFiles = fs.readdirSync(doctorDir).filter(file => file.endsWith('.json'));
+      for (const doctorFile of doctorFiles) {
+        try {
+          const filePath = path.join(doctorDir, doctorFile);
+          const fileContent = fs.readFileSync(filePath, 'utf-8');
+          const referenceData = JSON.parse(fileContent);
+          if (referenceData.bedoc_id) {
+            bedocIdToHidMap[referenceData.bedoc_id] = hospitalHid;
+          }
+        } catch (mapError) {
+            console.error(`[UPDATE-HID] Error building map from ${doctorFile}: ${mapError.message}`);
+        }
+      }
+    }
+    console.log(`[UPDATE-HID] Phase 1 Complete: Map created with ${Object.keys(bedocIdToHidMap).length} entries.`);
+
+    // --- Phase 2: Update Final Files ---
+    console.log('[UPDATE-HID] Starting Phase 2: Updating final files...');
+    const targetDir = path.join(global.appRoot, 'services/crawling_bedoc/final_data');
+    if (!fs.existsSync(targetDir)) {
+        return res.status(404).send({ code: 404, success: false, message: `Target directory not found: ${targetDir}` });
+    }
+    const filesToUpdate = fs.readdirSync(targetDir).filter(file => file.endsWith('.json'));
+
+    for (const fileName of filesToUpdate) {
+      const filePath = path.join(targetDir, fileName);
+      checked_count++;
+      try {
+        const fileContent = fs.readFileSync(filePath, 'utf-8');
+        let doctorData = JSON.parse(fileContent);
+
+        if (doctorData.bedoc_id) {
+          const newHid = bedocIdToHidMap[doctorData.bedoc_id];
+          if (newHid) {
+            if (doctorData.aiga_hid !== newHid) {
+              doctorData.aiga_hid = newHid;
+              fs.writeFileSync(filePath, JSON.stringify(doctorData, null, 2), 'utf-8');
+              updated_count++;
+              console.log(`[UPDATE-HID] Updated HID for ${fileName} to ${newHid}`);
+            } else {
+              // console.log(`[UPDATE-HID] HID for ${fileName} is already correct. Skipping.`);
+            }
+          } else {
+            not_found_errors.push(`bedoc_id '${doctorData.bedoc_id}' in file ${fileName} not found in reference data.`);
+          }
+        } else {
+          not_found_errors.push(`File ${fileName} is missing bedoc_id.`);
+        }
+      } catch (updateError) {
+        general_errors.push(`Failed to process ${fileName}: ${updateError.message}`);
+      }
+    }
+
+    return res.send({
+      code: 200,
+      success: true,
+      message: `Checked ${checked_count} files. Updated ${updated_count} files.`,
+      lookup_map_size: Object.keys(bedocIdToHidMap).length,
+      not_found_count: not_found_errors.length,
+      error_count: general_errors.length,
+      not_found_details: not_found_errors,
+      errors: general_errors
+    });
+
+  } catch (error) {
+    console.error('Critical error in /update-hid route:', error.message);
+    res.status(500).send('A critical error occurred during the update process: ' + error.message);
+  }
+});
+
 module.exports = router;

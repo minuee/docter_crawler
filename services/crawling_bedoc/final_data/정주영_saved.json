@@ -1,0 +1,84 @@
+{
+  "hospital_cid": 541,
+  "bedoc_id": "A5929",
+  "bedoc_hospitalsite": "http://www.paik.ac.kr/sanggye",
+  "bedoc_doctorname": "정주영",
+  "bedoc_deptname": "소아청소년과",
+  "bedoc_hospitalname": "상계백병원",
+  "hospital_name": "상계백병원",
+  "aiga_hid": "H11KR-11000035",
+  "hospital_site": "https://www.paik.ac.kr/sanggye/user/doctor/view.do?doctorId=452",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 노원구 동일로 1342, 상계백병원 (상계동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.paik.ac.kr/sanggye/user/doctor/view.do?doctorId=452&doctorName=%EC%A0%95%EC%A3%BC%EC%98%81&depthName=%EC%86%8C%EC%95%84%EC%B2%AD%EC%86%8C%EB%85%84%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "profileUrl": "https://www.paik.ac.kr/cmmn/file/imageSrc.do?atchFileId=373ad13b6b3244f2bac7fbc0ca15879d&fileSn=2",
+  "specialty": "위장관",
+  "학력": [
+    {
+      "date": "1990",
+      "content": "서울의대 졸업()"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1991",
+      "content": "서울대병원 인턴과정 수료()"
+    },
+    {
+      "date": "1995",
+      "content": "서울대병원 소아과 전공의 과정 수료()"
+    },
+    {
+      "date": "1999",
+      "content": "서울대병원 소아소화기영양 fellowship()"
+    },
+    {
+      "date": null,
+      "content": "현재 인제대학교 상계백병원 교수"
+    }
+  ],
+  "수상": [
+    {
+      "date": "2005",
+      "content": "1회 Asian Society for Pediatric Research"
+    },
+    {
+      "date": null,
+      "content": "Young Investigator Awards"
+    },
+    {
+      "date": "2008",
+      "content": "상계백병원 우수 논문상 (내과계)"
+    },
+    {
+      "date": "2009",
+      "content": "인제대학교 Distinguished researcher award"
+    },
+    {
+      "date": "2013",
+      "content": "대한소아청소년과학회 석천 학술상(논문)"
+    }
+  ],
+  "논문": [
+    "Han TH, Kim CH, Chung JY, Park SH, Hwang ES. Klassevirus infection in childrne, South Korea. Emerg Infect Dis 2010;16:1623-5.",
+    "HanTH, Kim CH, Chung JY, Park SH, Hwang ES. Genetic characterization of rotavirus in children in South Korea from 2007 to 2009. Arch Virol 2010;155:1663-73.",
+    "Chung JY, Han TH. Park SH, Kim SW, Hwang ES. Detection of GII-4/2006b variant and recombinant noroviruses in children with acute gastroenteritis, South Korea. J Med Virol 2010;82:146-52.",
+    "Han TH, Kim CH, Park SH, Kim EJ, Chung JY, Hwang ES. Detection of human bocavirus-2 in children with acute gastroenteritis in South Korea. Arch Virol 2009;154:1923-7.",
+    "Chung JY, Han TH, Kim JS, Kim SW, Park CG, Hwang ES. Th1 and Th2 cytokine levels in nasopharyngeal aspirates from children with human bocavirus bronchiolitis. J Clin Virol 2008;43:223-5.",
+    "Chung JY, Han TH, Kim SW, Hwang ES. Genotype variability of human metapneumovirus, South Korea. J Med Virol 2008;80:902-5.",
+    "Han TH, Chung JY, Koo JW, Kim SW, Hwang ES. WU polyomavirus in children with acute lower respiratory tract infections, South Korea. Emerg Infect DIs 2007;13:1766-8.",
+    "Lee JI, Chung JY, Han TH, Song MO, Hwang ES. Detection of human bocavirus in children hospitalized because of acute gastroenteritis. J Infect Dis 2007;196:994-7.",
+    "Chung JY, Han TH, Kim SW, Kim CK, Hwang ES. Detection of virses identified recently in children with acute wheezing. J Med Virol 2007;79:1238-43.",
+    "Han TH, Chung JY, Kim SW, Hwang ES. Human coroavirus-NL63 infections in Korean children, 2004-2006. J Clin Virol 2007;38:27-31.",
+    "Chung JY, Han TH, Kim CK, Kim SW> Bocavirus infection in hospitalized children, South Korea. Emerg Infect Dis 2006;12:1254-6."
+  ],
+  "isAttend": true,
+  "학술": [],
+  "저서": [],
+  "언론": []
+}
