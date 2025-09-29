@@ -977,6 +977,111 @@ router.get('/refactor-thesis', async function(req, res) {
   }
 });
 
+/**
+ * @swagger
+ *  /v1/c/crawling_bedoc/refactor-books:
+ *    get:
+ *      summary: "저서 필드 포맷 일괄 수정"
+ *      description: "final_data 디렉토리의 모든 JSON 파일들을 순회하며, 저서 필드의 포맷을 { date, content } 객체 배열로 수정합니다."
+ *      tags: [crawling_bedoc-베닥의사 수집]
+ *      responses:
+ *        "200":
+ *          description: 데이터 처리 결과
+ */
+router.get('/refactor-books', async function(req, res) {
+  let checked_count = 0;
+  let refactored_count = 0;
+  const errors = [];
+  const targetDir = path.join(global.appRoot, 'services/crawling_bedoc/final_data');
+
+  try {
+    if (!fs.existsSync(targetDir)) {
+      return res.status(404).send({ code: 404, success: false, message: `Directory not found: ${targetDir}` });
+    }
+
+    const allFiles = fs.readdirSync(targetDir).filter(file => file.endsWith('_saved.json') && !file.endsWith('_saved2.json'));
+    const filesToProcess = allFiles.slice(0, 10); // 한 번에 10개 파일만 선택
+
+    console.log(`[REFACTOR-BOOKS] Found ${allFiles.length} total files. Will process a batch of ${filesToProcess.length}.`);
+
+    for (const fileName of filesToProcess) {
+      const filePath = path.join(targetDir, fileName);
+      checked_count++;
+      try {
+        const fileContent = fs.readFileSync(filePath, 'utf-8');
+        let doctorData = JSON.parse(fileContent);
+        let needsRefactor = false;
+
+        // '저서' 필드가 있고, 배열이며, 내용이 있는지 확인
+        if (doctorData.저서 && Array.isArray(doctorData.저서) && doctorData.저서.length > 0) {
+          const firstItem = doctorData.저서[0];
+
+          if (typeof firstItem === 'string') {
+            // Case 1: 문자열 배열 -> [{ date: null, content: string }]
+            doctorData.저서 = doctorData.저서.map(item => ({ date: null, content: item }));
+            needsRefactor = true;
+            console.log(`[REFACTOR-BOOKS] Refactoring string array in: ${fileName}`);
+          } else if (typeof firstItem === 'object' && firstItem !== null) {
+            // Case 2: 객체 배열
+            if (!firstItem.hasOwnProperty('content')) {
+              // Case 2a: targetDate, text 키를 가진 다른 포맷의 객체
+              if (firstItem.hasOwnProperty('text')) {
+                doctorData.저서 = doctorData.저서.map(item => {
+                  const newBook = {
+                    date: item.targetDate || null,
+                    content: item.text || ''
+                  };
+                  if (item.url) {
+                    newBook.url = item.url;
+                  }
+                  if (item.issuer) {
+                    newBook.issuer = item.issuer;
+                  }else if (item.publisher) {
+                    newBook.issuer = item.publisher;
+                  }
+                  return newBook;
+                });
+                needsRefactor = true;
+                console.log(`[REFACTOR-BOOKS] Refactoring object array from 'text' property in: ${fileName}`);
+              } else {
+                console.log(`[REFACTOR-BOOKS] Skipping object array with unknown format in: ${fileName}`);
+              }
+            } else {
+              // Case 2b: 이미 올바른 포맷 { content: ... }
+              console.log(`[REFACTOR-BOOKS] Skipping file with correct format: ${fileName}`);
+            }
+          }
+        } else {
+          // '저서' 필드가 없거나 비어있음
+          console.log(`[REFACTOR-BOOKS] Skipping file with no '저서' data: ${fileName}`);
+        }
+
+        //if (needsRefactor) {
+          fs.writeFileSync(filePath, JSON.stringify(doctorData, null, 2), 'utf-8');
+          const newFilePath = filePath.replace('_saved.json', '_saved2.json');
+          fs.renameSync(filePath, newFilePath);
+          refactored_count++;
+          console.log(`[REFACTOR-BOOKS] Successfully refactored and renamed ${fileName}`);
+        //}
+      } catch (fileError) {
+        const errorMessage = `File ${fileName}: ${fileError.message}`;
+        console.error(`[REFACTOR-BOOKS] Error processing file: ${errorMessage}`);
+        errors.push(errorMessage);
+      }
+    }
+
+    return res.send({
+      code: 200,
+      success: true,
+      message: `Batch complete. Checked ${checked_count} files. Refactored ${refactored_count} files.`,
+      errors: errors
+    });
+  } catch (error) {
+    console.error('Critical error in /refactor-books route:', error.message);
+    res.status(500).send('A critical error occurred during the refactoring process: ' + error.message);
+  }
+});
+
 
 /**
  * @swagger

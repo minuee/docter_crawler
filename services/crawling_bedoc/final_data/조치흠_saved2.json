@@ -1,0 +1,551 @@
+{
+  "hospital_cid": 578,
+  "bedoc_id": "A8169",
+  "bedoc_hospitalsite": "https://daegu.dsmc.or.kr:49880/",
+  "bedoc_doctorname": "조치흠",
+  "bedoc_deptname": "산부인과",
+  "bedoc_hospitalname": "계명대동산병원",
+  "hospital_name": "계명대동산병원",
+  "aiga_hid": "H01KR-47000002",
+  "hospital_site": "https://dongsan.dsmc.or.kr:49870/content/02depart/doctor_view.php?md_idx=173",
+  "site_type": "single",
+  "hospital_addr": "대구광역시 달서구 달구벌대로 1035, (신당동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://dongsan.dsmc.or.kr:49870/content/02depart/doctor_view.php?md_idx=173&doctorName=%EC%A1%B0%EC%B9%98%ED%9D%A0&depthName=%EC%82%B0%EB%B6%80%EC%9D%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "학력": [
+    {
+      "date": null,
+      "content": "계명대학교 의과대학 학사"
+    },
+    {
+      "date": null,
+      "content": "계명대학교 의학대학원 외과학석사"
+    },
+    {
+      "date": null,
+      "content": "경상대학교 의학대학원 외과학박사수료"
+    }
+  ],
+  "경력": [
+    {
+      "date": "2024.03  ~ 현재",
+      "content": "계명대학교 동산의료원 건설기획단장"
+    },
+    {
+      "date": "2023.03  ~ 현재",
+      "content": "계명대학교 동산의료원 의료원장"
+    },
+    {
+      "date": "2019.09  ~ 2021.08",
+      "content": "계명대학교 동산병원장"
+    },
+    {
+      "date": "2018.03  ~ 2019.06",
+      "content": "계명대학교 동산의료원 개원준비단 부단장"
+    },
+    {
+      "date": "2016.02  ~ 2019.08",
+      "content": "계명대학교 동산의료원 기획정보처장"
+    },
+    {
+      "date": "2015.03  ~ 2018.02",
+      "content": "계명대학교 동산병원 암센터장"
+    },
+    {
+      "date": "2015.03  ~ 2016.01",
+      "content": "계명대학교 동산의료원 연구처장"
+    },
+    {
+      "date": "2014.09  ~ 2015.02",
+      "content": "Stanford University Gym Oncology 연수"
+    },
+    {
+      "date": "2012.05  ~ 현재",
+      "content": "계명대학교 동산병원 암연구소장"
+    },
+    {
+      "date": "2005.03  ~ 현재",
+      "content": "계명대학교 동산병원 산부인과 교수"
+    },
+    {
+      "date": "2001.03  ~ 2005.02",
+      "content": "계명대학교 동산병원 산부인과 부교수"
+    },
+    {
+      "date": "2000.02  ~ 2001.02",
+      "content": "미국 애틀란타 Emory University Gynecology Oncology"
+    },
+    {
+      "date": "1997.03  ~ 2001.02",
+      "content": "계명대학교 동산병원 산부인과 조교수"
+    },
+    {
+      "date": "1995.05  ~ 1997.02",
+      "content": "계명대학교 동산병원 산부인과 전임강사"
+    },
+    {
+      "date": "1993.05  ~ 1995.04",
+      "content": "경산 경상병원 산부인과 과장"
+    },
+    {
+      "date": "1992.05",
+      "content": "울진의료원 산부인과 과장"
+    },
+    {
+      "date": "1992.02  ~ 1995.04",
+      "content": "군복무"
+    },
+    {
+      "date": "1988.03  ~ 1992.01",
+      "content": "계명대학교 동산병원 레지던트"
+    },
+    {
+      "date": "1987.03  ~ 1988.02",
+      "content": "계명대학교 동산병원 인턴"
+    }
+  ],
+  "학술": [
+    {
+      "date": "2022.01.01 ~ 현재",
+      "content": "자궁근종연구회 회장"
+    },
+    {
+      "date": "2021.09 ~ 2023.08",
+      "content": "아시아로봇수술학회 회장"
+    },
+    {
+      "date": "2021.07.01 ~ 2022.11.30",
+      "content": "대한부인종양학회 제2부회장 및 이사"
+    },
+    {
+      "date": "2021.01~2022.12.",
+      "content": "대구경북 부인종양연구회 회장"
+    },
+    {
+      "date": "2020.11.01 ~ 2022.11.31",
+      "content": "대한부인종양학회 부회장"
+    },
+    {
+      "date": "2019.07.01 ~ 2021.06.30",
+      "content": "대한부인종양학회 이사"
+    },
+    {
+      "date": "2018.07.01 ~ 2021.06.30",
+      "content": "대한부인종양학회 정보통신위원회 위원장"
+    },
+    {
+      "date": "2019.01 ~ 현재",
+      "content": "한림원 정회원"
+    },
+    {
+      "date": "2019.01 ~ 현재",
+      "content": "GRS(Society of Korean Robotic Gynecologic Surgery) 편집장"
+    },
+    {
+      "date": "2018.07.01 ~ 2019.06.30",
+      "content": "대한산부인과학회 Obstetrics & Gynecology Science Editorial Board"
+    },
+    {
+      "date": "2018.07.01 ~ 2019.06.30",
+      "content": "대한부인종양학회 정보통신위원회 이사"
+    },
+    {
+      "date": "2018.01.01 ~ 2019.12.31",
+      "content": "대한산부인과로봇수술학회 회장"
+    },
+    {
+      "date": "2017.02.01 ~ 2019.12.31",
+      "content": "대한부인암중개연구회 회장"
+    },
+    {
+      "date": "2014.03.01 ~ 2016.07.05",
+      "content": "대한암학회 이사"
+    },
+    {
+      "date": "2014.02.25 ~ 2014.02.25",
+      "content": "국립암센터 국립암센터가 주관하는 국가암검진권고안 개정위원회 위원"
+    },
+    {
+      "date": "2013.01.01 ~ 2014.12.31",
+      "content": "대한산부인과내시경학회 부회장"
+    },
+    {
+      "date": "2012.07.01 ~ 2013.06.30",
+      "content": "계명대학교 의과대학 계명의대학술지 간행위원"
+    },
+    {
+      "date": "2011.10.01",
+      "content": "대한산부인과학회 편집위원회 위원"
+    },
+    {
+      "date": "2011.10.01",
+      "content": "대한산부인과학회 부인종양위원회 위원"
+    },
+    {
+      "date": "2011.10.01",
+      "content": "대한산부인과학회 재정위원회 위원"
+    },
+    {
+      "date": "2011.10.01",
+      "content": "대한산부인과학회 학술TFT 위원"
+    },
+    {
+      "date": "2011.01.01 ~ 2012.12.31",
+      "content": "대한산부인과내시경학회 홍보위원장"
+    },
+    {
+      "date": "2009.04.15",
+      "content": "대한산부인과학회 편집위원회 위원"
+    },
+    {
+      "date": "2009.03.25 ~ 2011.03.24",
+      "content": "대구경북지역암세터 위원"
+    },
+    {
+      "date": "2009.01.01 ~ 2010.10.30",
+      "content": "대한산부인과내시경학회 홍보위원장"
+    },
+    {
+      "date": "2008.12.01 ~ 2009.11.30",
+      "content": "대한부인종양·콜포스코피학회 편집 및 학술위원회 위원"
+    },
+    {
+      "date": "2008.10.01 ~ 2011.03.24",
+      "content": "대구경북지역 암정복협의위원회 위원"
+    },
+    {
+      "date": "2007.07.01 ~ 2008.06.30",
+      "content": "대한산부인과초음파학회 홍보위원회 위원장"
+    },
+    {
+      "date": "2006.12.01 ~ 2007.11.30",
+      "content": "대한부인종양·콜포스코피학회 수련위원"
+    },
+    {
+      "date": "2006.01.01 ~ 2007.12.31",
+      "content": "질병관리본부 예방접종심의위원회 papilloma virus 분과위원회 위원"
+    },
+    {
+      "date": "2005.11.01 ~ 2007.10.31",
+      "content": "대한산부인과 초음파학회 윤리위원"
+    },
+    {
+      "date": "2004.12.31 ~ 2006.12.31",
+      "content": "대한부인종양·콜포스코피학회 KGOG 세부운영위원"
+    },
+    {
+      "date": "2004.12.01 ~ 2007.11.30",
+      "content": "대한부인종양·콜포스코피학회 편집위원"
+    },
+    {
+      "date": "2004.09.01 ~ 2006.08.31",
+      "content": "대한산부인과학회 논문심사위원"
+    },
+    {
+      "date": "2004.08.01 ~ 2010.07.31",
+      "content": "국립암센터 암정복추진기획단 위원"
+    },
+    {
+      "date": "2004.06.23 ~ 2005.08.11",
+      "content": "질병관리본부 Papilloma Virus 분과위원회 위원"
+    },
+    {
+      "date": "2003.10.01 ~ 2005.12.31",
+      "content": "대한산부인과학회 대구광역시지회 총무이사"
+    },
+    {
+      "date": "2003.05.01 ~ 2005.04.30",
+      "content": "대구광역시의사회 의무위원"
+    },
+    {
+      "date": "2002.11.01 ~ 2004.10.31",
+      "content": "대한부인종양콜포스코피학회 학술위원 위원"
+    },
+    {
+      "date": "2000.10.01 ~ 2002.10.31",
+      "content": "대한산부인과내시경학회 학술위원회 위원"
+    }
+  ],
+  "수상": [
+    {
+      "date": "2021.04.13",
+      "content": "황조근정훈장"
+    },
+    {
+      "date": "2017.03.21",
+      "content": "보건복지부 장관 표창 수상"
+    },
+    {
+      "date": "2015.09.18",
+      "content": "그레이스최우수논문상-부인종양학-"
+    },
+    {
+      "date": "2014.04.25",
+      "content": "신풍호월학술대상"
+    },
+    {
+      "date": "2008.04.25",
+      "content": "대한부인종양·콜포스코피학회 학술지에서 우수논문상"
+    },
+    {
+      "date": "2008.04.25",
+      "content": "대한부인종양.콜포스코피학회 학술지에서 우수논문상"
+    },
+    {
+      "date": "2007.06.15",
+      "content": "대한암학회 Growth Inhibition and Induced Apoptosis in Human Endometrial Cancer Cells by Treatment with Histone"
+    },
+    {
+      "date": "2004.10.23",
+      "content": "대한산부인과학회 Increased expression of cyclin G1 inuterine leiomyoma compared with Normal myometrium"
+    },
+    {
+      "date": "2004.04.23",
+      "content": "대한부인종양콜포스코피학회 Downregulation of Peroxisome Proleferator-Activated Receptor gamma in Human Cervical Carcinoma"
+    }
+  ],
+  "논문": [
+    "Comparison of Long-Term Outcomes in Early-Stage Endometrial Cancer: Robotic Single-Site vs. Multiport Laparoscopic Surgery",
+    "Serum Lipidome Profiling Reveals a Distinct Signature of Ovarian Cancer in Korean Women",
+    "Menopausal status induces vaginal dysbiosis in women with human papillomavirus infection",
+    "RPL27 contributes to colorectal cancer proliferation and stemness via PLK1 signaling",
+    "Robotic Single-Site Radical Hysterectomy for Early Cervical Cancer: A Single Center Experience of 5 Years",
+    "RPL17 Promotes Colorectal Cancer Proliferation and Stemness through ERK and NEK2/β-catenin Signaling Pathways",
+    "A risk scoring system to predict progression to severe pneumonia in patients with Covid-19",
+    "Case report of lighted ureteral stent insertion with robotic single-site radical hysterectomy in early cervical cancer treatment",
+    "Survival with Cemiplimab in Recurrent Cervical Cancer",
+    "Pembrolizumab for Persistent, Recurrent, or Metastatic Cervical Cancer",
+    "Robotic Single-Site Versus Multiport Radical Hysterectomy in Early Stage Cervical Cancer: An Analysis of 62 Cases from a Single Institution",
+    "Silencing CDCA8 Suppresses Hepatocellular Carcinoma Growth and Stemness via Restoration of ATF3 Tumor Suppressor and Inactivation of AKT/β–Catenin Signaling",
+    "Modified Laparoscopic Transabdominal Cervicoisthmic Cerclage for the Surgical Management of Recurrent Pregnancy Loss due to Cervical Factors",
+    "A multicentre, randomised, open-label, parallel-group Phase 2b study of belotecan versus topotecan for recurrent ovarian cancer",
+    "Targeting progesterone signaling prevents metastatic ovarian cancer",
+    "InIntroduction of new tool for avoiding ureter injury in gynecologic surgery the IRIS U-kit®",
+    "이행성연구위원회(Translational Research Committee)",
+    "Giant uterine mass with uterine smooth muscle tumor of uncertain malignant potential: A case report",
+    "NAA10 as a New Prognostic Marker for Cancer Progression",
+    "Trends in robotic surgery in Korean gynecology",
+    "Epidemiological and clinical characteristics of coronavirus disease 2019 in Daegu, South Korea",
+    "Multicenter, randomized, open-label, parallel-group phase 2b study of belotecan vs. topotecan for recurrent ovarian cancer",
+    "Trends in robotic surgery at the gynecologic field: 9 years of experience in a single institution",
+    "Trends in robotic surgery in Korean gynecology",
+    "Epidemiological and clinical characteristics of coronavirus disease 2019 in Daegu, South Korea",
+    "In vivo modeling of metastatic human high-grade serous ovarian cancer in mice",
+    "Circulating Tumor Cells Enumerated by a Centrifugal Microfluidic Device as a Predictive Marker for Monitoring Ovarian Cancer Treatment: A Pilot Study",
+    "A Phase II, Prospective, Randomized, Multicenter, Open-Label Study of GX-188E, an HPV DNA Vaccine, in Patients with Cervical Intraepithelial Neoplasia 3",
+    "Safety and Effectiveness of Dienogest (Visanne®) for Treatment of Endometriosis: A Large Prospective Cohort Study",
+    "Clinical and biological significance of EZH2 expression in endometrial cancer",
+    "Status of HPV vaccination among HPV-infected women aged 20-60 years with abnormal cervical cytology in South Korea: a multicenter, retrospective study",
+    "An optimized BRCA1/2 next-generation sequencing for different clinical sample types",
+    "A phase 1/2a, dose-escalation, safety and preliminary efficacy study of oral therapeutic vaccine in subjects with cervical intraepithelial neoplasia 3",
+    "Short-term clinical and immunologic effects of poly-gamma-glutamic acid (γ-PGA) in women with cervical intraepithelial neoplasia 1(CIN 1): A multicenter, randomized, double blind, phase II trial",
+    "Robotic single-site staging operation for early-stage endometrial cancer: initial experience at a single institution",
+    "Risk of cervical dysplasia among human papillomavirus-infected women in Korea: a multicenter prospective study",
+    "A case of an endobronchial metastasis from an endometrial carcinoma",
+    "Risk factors for cytological progression in HPV 16 infected women with ASC-US or LSIL: The Korean HPV cohort",
+    "BRCA1/2 mutations, including large genomic rearrangements, among unselected ovarian cancer patients in Korea",
+    "Manifestations of Sasang Typology according to Common Chronic Diseases in Koreans",
+    "Cell Origins of High-Grade Serous Ovarian Cancer",
+    "Ulipristal acetate induces cell cycle delay and remodeling of extracellular matrix",
+    "Current medical treatment of uterine fibroids",
+    "An Open-Label, Randomized, Parallel, Phase II Trial to Evaluate the Efficacy and Safety of a Cremophor-Free Polymeric Micelle Formulation of Paclitaxel as First-Line Treatment for Ovarian Cancer: A Korean Gynecologic Oncology Group Study (KGOG-3021).",
+    "A retrospective comparison of outcome in IB2 and IIA cervical cancer patients treated with primary concurrent chemoradiation versus radical hysterectomy with or without tailored adjuvant therapy",
+    "Targeted therapy of ovarian cancer including immune check point inhibitor",
+    "New suturing technique for robotic-assisted vaginal cuff closure during single-site hysterectomy",
+    "Erratum to: Efficacy and safety of aprepitant for the prevention of chemotherapy-induced nausea and vomiting during the first cycle of moderately emetogenic chemotherapy in Korean patients with a broad range of tumor types",
+    "A randomized controlled trial of physical activity, dietary habit, and distress management with the Leadership and Coaching for Health (LEACH) program for disease-free cancer survivors",
+    "Hsp90 inhibitor SY-016 induces G2/M arrest and apoptosis in paclitaxel-resistant human ovarian cancer cells",
+    "Efficacy and safety of aprepitant for the prevention of chemotherapy-induced nausea and vomiting during the first cycle of moderately emetogenic chemotherapy in Korean patients with a broad range of tumor types (vol 25, pg 801, 2017)",
+    "Salinomycin reduces stemness and induces apoptosis on human ovarian cancer stem cell",
+    "Knockdown of RPL9 expression inhibits colorectal carcinoma growth via the inactivation of Id-1/NF-kappa B signaling axis",
+    "The Impact of High-Risk HPV Genotypes Other Than HPV 16/18 on the Natural Course of Abnormal Cervical Cytology: A Korean HPV Cohort Study",
+    "The effect of salinomycin on ovarian cancer stem-like cells",
+    "Health-Related Quality of Life and Sociodemographic Characteristics as Prognostic Indicators of Long-term Survival in Disease-Free Cervical Cancer Survivors",
+    "The Feasibility of a Modified Method of Laparoscopic Transabdominal Cervicoisthmic Cerclage During Pregnancy",
+    "The Korean guideline for cervical cancer screening",
+    "Multi-Institution, prospective randomized trial to compare the success rates of single-port versus multi-port laparoscopic hysterectomy for the treatment of uterine myoma or adenomyosis",
+    "Microcystic Stromal Tumor of the Ovary With Mutation in Exon 3 of β-catenin: A Case Report.",
+    "A 9-valent HPV vaccine against infection and intraepithelial neoplasia in women.",
+    "Asian Society of Gynecologic Oncology International Workshop 2014.",
+    "Ciglitazone enhances ovarian cancer cell death via inhibition of glucose transporter-1",
+    "Salinomycin inhibited cell proliferation and induced apoptosis in human uterine leiomyoma cells",
+    "Lymph Node Status Did Not Significantly Improve the Predictability of Survival in Patients With Clinically Early-Stage Endometrial Cancer",
+    "A Phase 2 Trial of Radiation Therapy With Concurrent Paclitaxel Chemotherapy After Surgery in Patients With High-Risk Endometrial Cancer: A Korean Gynecologic Oncologic Group Study",
+    "A Web-based nomogram predicting para-aortic nodal metastasis in incompletely staged patients with endometrial cancer: a Korean Multicenter Study",
+    "1p36.22 region containing PGD gene is frequently gained in human cervical cancer",
+    "Antitumor Effects of Flavopiridol on Human Uterine Leiomyoma In Vitro and in a Xenograft model",
+    "Efficacy of a training program for long-term disease- free cancer survivors as health partners: a randomized controlled trial in Korea",
+    "Outcomes of ovarian preservation in a cohort of premenopausal women with early-stage endometrial cancer: a Korean Gynecologic Oncology Group study",
+    "A comparison of outcomes between concurrent chemorediotherapy and radiotherapy alone in cancer of the uterine cervix: a single institutional experience",
+    "Inhibition of checkpoint kinase 2 (CHK2) enhances sensitivity of pancreatic adenocarcinoma cells to gemcitabine",
+    "The correlates of unemployment and its association with quality of life in cervical cancer survivors",
+    "Salinomycin inhibits Akt/NF-κB and induces apoptosis in cisplatin resistant ovarian cancer cells",
+    "The Understanding of Terminal Cancer and Its Relationship with Attitudes toward End-of-Life Care Issues",
+    "Prevalence and type distribution of human papillomavirus in cervical adenocarcinoma in Korean women",
+    "The correlations between BRCA1 defect and environmental factors in the risk of breast cancer",
+    "Regulatory role of osteopontin in malignant transformation of endometrial cancer",
+    "The attitudes of Korean cancer patients, family caregivers, oncologists, and members of the general public toward advance directives",
+    "The Synergistic Apoptotic Interaction of Indole-3-Carbinol and Genistein with TRAIL on Endometrial Cancer Cells",
+    "Salinomycin induces apoptosis via death receptor-5 up-regulation in cisplatin-resistant ovarian cancer cells.",
+    "Establishment of a Korea HPV cohort study",
+    "Minimal deviation adenocarcinoma of the cervix and tumorlets of sex-cord stromal tumor with annular tubules of the ovary in Peutz-Jeghers syndrome",
+    "Efficacy of systematic pelvic lymphadenectomy in patients with non-endometrioid endometrial cancers: A retrospective, multicenter study in Korea",
+    "A randomized, multi-center, clinical trial to assess the efficacy and safety of alginate carboxymethylcellulose hyaluronic Acid compared to carboxymethylcellulose hyaluronic Acid to prevent postoperative intrauterine adhesion",
+    "수술 전 영상학적으로 진단된 원발성 난관암 1예",
+    "Metastatic gestational trophoblastic tumor presenting as spontaneous kidney rupture: Treatment with embolization",
+    "How low is low enough? Evaluation of various risk-assessment models for lymph node metastasis in endometrial cancer: a Korean multicenter study.",
+    "Prevalence and Seroprevalence of Low-Risk Human Papillomavirus in Korean Women",
+    "Exploring Protein Kinase Inhibitors: Unveiling Gemcitabine Resistance in Pancreatic Cancer",
+    "Efficacy of systematic pelvic lymphadenectomy in patients with non-endometrioid endometrial cancers: A retrospective, multicenter study in Korea",
+    "Osteoporosis Patient Treatment Satisfaction Questionnaire in postmenopausal women intermittently treated with oral bisphosphonates: the BRAVO study.",
+    "Lymphadenectomy increases the prognostic value of the revised 2009 FIGO staging system for endometrial cancer: a multi-center study.",
+    "The comparison of clinicopathological characteristics in primary malignant mixed m?llerian tumour with epithelial endometrial carcinoma",
+    "A Novel der(16)t(3;16)(p25;q24) in a Patient with Ovarian Cancer",
+    "Cavernous Hemangioma of the Uterus in a Postmenopausal Woman - A Case Report -",
+    "Different Characteristics of Mitochondrial Microsatellite Instability Between Uterine Leiomyomas and Leiomyosarcomas",
+    "Efficacy of Para-Aortic Lymphadenectomy in Early-Stage Endometrioid Uterine Corpus Cancer",
+    "Attitudes of cancer patients, family caregivers, oncologists and members of the general public toward critical interventions at the end of life of terminally ill patients",
+    "Role of Systematic Lymphadenectomy and Adjuvant Radiation in Early-Stage Endometrioid Uterine Cancer",
+    "Removal of a lowt intrauterine device by colonoscopy after a successful full-term delivery(with video)",
+    "Prevalence and Seroprevalence of High-Risk Human Papillomavirus Infection",
+    "Evaluation of serum CA-125 levels for preoperative counseling in endometrioid endometrial cancer: A multi-center study",
+    "Role of body mass index as a risk and prognostic factor of endometrioid uterine cancer in Korean women",
+    "Nuclear Factor (Erythroid-Derived 2)-Like 2 Regulates Drug Resistance in Pancreatic Cancer Cells",
+    "Clinical Presentation of Endometrioid Epithelial Ovarian Cancer with Concurrent Endometriosis: A Multicenter Retrospective Study",
+    "Factors related to second cancer screening practice in disease-free cervical cancer survivors",
+    "Ovarian preservation during the surgical treatment of early stage endometrial cancer: A nation-wide study conducted by the Korean Gynecologic Oncology Group",
+    "Cervical cancer patient information-seeking behaviors, information needs, and information sources in South Korea",
+    "The Risk of Lymph Node Metastasis Based on Myometrial Invasion and Tumor Grade in Endometrioid Uterine Cancers: A Multicenter, Retrospective Korean Study",
+    "Histone Deacetylase 억제제로 유도된 자궁내막암 세포의 세포증식 억제와 세포자멸사 기전연구",
+    "Comparison of radiation therapy alone and concurrent chemoradiation therapy in stage III cervical cancer: A multicenter retrospective study",
+    "The Risk of Lymph Node Metastasis Based on Myometrial Invasion and Tumor Grade in Endometrioid Uterine Cancers: A Multicenter, Retrospective Korean Study",
+    "Clinicopathologic Characteristics of Malignant Germ Cell Tumors in the Ovaries of Korean Women: A Korean Gynecologic Oncology Group Study",
+    "Cervical cancer patient information-seeking behaviors, information needs, and information sources in South Korea",
+    "난치성 분만 후 출혈: 출산 방법에 따른 혈관조영술 소견과 경도관 동맥색전술",
+    "BRCA1 transcriptional activity is enhanced by interactions between its AD1 domain and AhR",
+    "BRCA1 modulates sensitivity to 5F-203 by regulating xenobiotic stress-inducible protein levels and EROD activity",
+    "Comorbidity in disease-free survivors of cervical cancer compared with the general female population",
+    "Cyclin-dependent kinase inhibitor p27(Kip1) controls growth and cell cycle progression in human uterine leiomyoma",
+    "태아에서 산전초음파로 발견된 경부새열낭종 1예",
+    "Induction of growth inhibition and apoptosis in human uterine leiomyoma cells by isoliquiritigenin",
+    "방향화효소 억제제 Letrozole이 정상 월경주기를 가진 여성의 생식호르몬 분비에 미치는 영향과 무배란성 불임 환자에서의 배란유도 효과",
+    "Upregulation of ATP-sensitive potassium channels for estrogen-mediated cell proliferation in human uterine leiomyoma cells",
+    "Loss of cyclin G1 expression in human uterine leiomyoma cells induces apoptosis",
+    "Induction of Apoptosis by Hibiscus Protocatechuic Acid in Human Uterine Leiomyoma Cells",
+    "Quality of Life and Sexual Problems in Disease-Free Survivors of Cervical Cancer Compared With the General Population",
+    "Growth inhibition and apoptosis induced in human leiomyoma cells by treatment with the PPAR gamma ligand ciglitizone",
+    "HeLa 자궁경부암 세포주에서 Sodium Butyrate와 Rapamycin의 성장억제 효과",
+    "한국 젊은 여성의 성생활 양상; HPV예방 백신 도입을 위한 예비 연구",
+    "Indole-3-carbinol과 Genistein에 의한 자궁근종세포의 성장억제 효과",
+    "Low Molecular Weight Heparin Treatment in Pregnant Women with a Mechanical Heart Valve Prosthesis",
+    "Resveratrol에 의한 자궁근종세포의 성장억제 효과",
+    "Endometrial cancer patientw and tibolone : A matched case-control study",
+    "난소의 성기삭 종양을 닮은 자궁종양 1예",
+    "Muscular cell proliferative and protective effects of N-acetylcysteine by modulating activety of extracellur signal-regulated protein kinase",
+    "A Successful Live Birth Through in vitro Fertilization Program After Conservative Treatment of FIGO Grade I Endometrial Cancer",
+    "BRCA1 Modulates Xenobiotic Stress-inducible Gene Expression by Interacting with ARNT in Human Breast Cancer Cells",
+    "BRCA1 plays a role in the hypoxic response by regulating HIF-αstability and by modulating VEGF expression",
+    "Augmentation of sodium butyrate-induced apoptosis by phosphatidylinositol 3-kinase inhibition in the human cervical cancer cell-line",
+    "Endometrial cancer patients and tibolone: A matched case-control study",
+    "자궁경부암 세포주에서 Isoliquiritizenin의 세포자멸사 유도 효과",
+    "전자간증에서의 혈청내 용해성 Fas/Fas 배위자값 및 태반조직의 Fas/Fas배위자 발현에 관한 연구",
+    "Expression of apoptotic nuclei by ultrastructural terminal deoxyribonucleotidyl transferase mediated dUTP nick end labeling and detection of FasL, caspases and PARP protein molecules in cadmium induced acute alveolar cell injury",
+    "Inhibitory modulation of ATP-sensitive postassium channels by gallate-ester moiety of (-)-epigallocatechin-3-gallate",
+    "질의 원발성 악성 흑색종: 증례보고",
+    "Down-regulation of peroxisome proliferator-activated receptor gamma in human cervical carcinoma",
+    "생식세포난소종양(Ovarian Germ Cell Tumors)의 최신 처치 지견",
+    "Ciglitizone inhibits cell proliferation in human uterine leiomyoma via activiation of store-operated Ca2+ channels",
+    "Tauring Increase glucose sensitivity of UCP2-overexpressing β-cells by ameliorating mitochondrial metabolism",
+    "Taurine Block of clone ATP-sensitive K+ channels with different sulfonylurea receptor subunits expressed in Xenopus laevis oocytes",
+    "Ultrastructural evaluation o the protective effect of nitroglycerin in preservation-reperfusion injury of rat lungs",
+    "Catalase induces the expression of inducible nitric oxide synthase through activation of NF-kB and PI3K signaling pathway in Raw 264.7 cells",
+    "Selective Estrogen Receptor Modulator에 의한 자궁근종의 증식 억제",
+    "난소암에서 GADD34 유전자의 발현변화",
+    "골격근과 평활근의 KATP 통로 활성에 대한 세포내 ATP의 다른효과",
+    "자궁근종 세포에서 ATP-민감성 칼륨 통로의 동정",
+    "Cadmium Induced Acute Lung Injury and TUNEL Expression of Apoptosis in Respiratory Cells",
+    "난소암에서 종양억제유전자들의 Multiple Methylator Phenotypes",
+    "Laparoscopic Transabdominal Cervicoisthmic Cerclage Durging Pregnancy",
+    "Pretreatment of indole-3-carbinol augments TRAIL-induced apoptosis in a prostate cancer cell line, LNCaP",
+    "자궁경부암 및 난소암에서 세포자멸사 억제인자인 C-IAP1과 C-IAP2의 발현 양상",
+    "자궁내막암 환자에 있어서 골반경과 개복술의 비교분석",
+    "DNA Chip을 이용한 자궁평활근종과 정상 자궁근조직에서의 유전자발현 비교 분석",
+    "Apoptosis Induced by Preservation and Reperfusion in Canine Lung Transplantation",
+    "Increased expression of cyclin G1 in leiomyoma compared with normal myometrium",
+    "Pyrrolidine dithiocarbamate induces cyclooxygenase-2 expression in NIH 3T3 gibroblast cells",
+    "Se-methylselenocysteine induces apoptosis through caspase activation and Bax cleavage mediated by calpain in SKOV-3 ovarian cancer cells",
+    "최근 26년간 여성 생식기 암 발생 양상의 변화",
+    "최근 26년간 여성 생식기 암 발생 양상의 변화",
+    "Lysophosphatidic acid induceds glycodelin gene expression in cancer cells",
+    "골반경 자궁내막종 수술 후 임신에 관한 임상적 고찰",
+    "난소암 종에서 c-IAP2 유전자의 발현 분석",
+    "골반경 근종 절제술 후에 임신에 관한 임상적 고찰",
+    "Increased glycodelin levels in gynecological malignancies",
+    "Laparoscopic Pelvic Anatomy",
+    "자궁경부암에서 인유두종 바이러스 감염, p16INK4A와 p18INK4C 유전자 변이 및 세포주기조절 단백의 발현",
+    "Suppression of collagen-induced arthritis with histone H1",
+    "Ultrastructural Evaluation of Preservation and Reperfusion Effects of Low Potassium Dextran Glucose Solution in Canine Allograft Lungs",
+    "p53 Codon 72 polymorphism and Risk of Cervical Carcinoma in Korean Women",
+    "거대 양성 난소 낭종의 복강경 수술",
+    "cDNA Microarray 기술로 동정된 난소암 종의 c-IAP1 유전자과 발현",
+    "전자궁 적출술후 질원개 탈출의 복강경 수술에 의한 교정",
+    "여성 생식호르몬 영향에 의한 자궁내막과 자궁내막암에서 텔로메레이즈(TELOMERASE)의 활성",
+    "골반경 수술 639예에 대한 임상적 고찰",
+    "최근 20년간 여성생식기 암 발생 양상의 변화",
+    "자궁경부암에서 인유두종바이러스 감염과 p53,p21WAF1 및 p16INK4a유전자 돌연변이검색",
+    "난소암에서의 텔로메레이즈 (thelomerase)활성도의 변화탐색",
+    "자궁경부암에 있어서 Cyclin 유전자의 발현",
+    "원인불명 반복지연 유산 환자에서 B임파구, T임파구 및 아형의 변화",
+    "자궁경부의 원발성 악성임파종 1례",
+    "골반경하 전자궁적출술 방법에 따른 적응증의 임상적 고찰",
+    "악성질흑색종의 1례",
+    "자궁경부상피세포암의 암화과정에 따른 인유두종바이러스감염과 Telomere길이 및 Telomerase의 활성",
+    "자궁경을 통한 점막하근종 절제술시 팽창배지에 의한 폐부종 1예",
+    "유도분만에서 misoprostol과 prostaglandin E2 질정의 비교",
+    "조기파수된 태아막의 초미세구조의 변화",
+    "복막 유두종 장액성 악성종양 1예",
+    "Multifire endo GIA를 이용한 골반경 자궁적출술(CISH)의 임상적 고찰",
+    "자궁경부암에서 Proliferating Cell Nuclear Antigen(PCNA)의 발현예후",
+    "상피성난소암에서 p53유전자의 발현",
+    "지혈곤란한 골반장기 출혈시 내장골동맥 결찰술",
+    "한국인 양수의 정균 및 살균작용",
+    "복강경을 통한 prostglandin F2 alpha국소주입에 의한 비파열성 난관임신 치료 1예",
+    "지속성 및 재발성 자궁경부암에 대한 5-Fluorouracil 5일간 지속주입과 Cisplatinum의 복합화학요법",
+    "임신중 말초혈액내 B임파구, T임파구 및 그 아형의 변화"
+  ],
+  "저서": [
+    {
+      "date": "2021.01.29",
+      "content": "부인과학",
+      "authors": "조치흠, 신정규, 권선영, 이승미, 신소진",
+      "issuer": "대한산부인과학회"
+    },
+    {
+      "date": "2005.08.28",
+      "content": "자궁 근종의 병인과 치료",
+      "authors": "조치흠, 권상훈",
+      "issuer": "계명대학교 출판부"
+    }
+  ],
+  "언론": [
+    {
+      "title": "[영남일보] 마약 예방을 위한 ‘NO EXIT’ 캠페인 참여",
+      "department": "산부인과",
+      "professor": "조치흠",
+      "date": "2023.05.18"
+    }
+  ],
+  "TV방송": [
+    {
+      "title": "창사특집, <의사소통(醫思疏통)> | 산부인과 조치흠 교수",
+      "channel": "대구MBC메디컬약손",
+      "date": "2022.08.23"
+    }
+  ],
+  "specialty": "로봇수술, 부인종양학, 골반내시경, 일반산부인과",
+  "profileUrl": "https://dongsan.dsmc.or.kr:49870/data/doctor/%EC%A1%B0%EC%B9%98%ED%9D%A0_02.jpg",
+  "isAttend": true
+}

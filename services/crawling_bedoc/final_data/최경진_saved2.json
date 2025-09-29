@@ -1,0 +1,77 @@
+{
+  "hospital_cid": 597,
+  "bedoc_id": "A0822",
+  "bedoc_hospitalsite": "http://www.foothospital.co.kr/",
+  "bedoc_doctorname": "최경진",
+  "bedoc_deptname": "정형외과",
+  "bedoc_hospitalname": "최경진정형외과",
+  "hospital_name": "최경진정형외과",
+  "aiga_hid": "H31KR-11009196",
+  "hospital_site": "http://www.foothospital.co.kr/content/content.asp?FolderName=sub01&filename=sub01_02",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 중구 다산로 111, (신당동, 한미빌딩)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "http://www.foothospital.co.kr/content/content.asp?FolderName=sub01&filename=sub01_02&doctorName=%EC%B5%9C%EA%B2%BD%EC%A7%84&depthName=%EC%A0%95%ED%98%95%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "profileUrl": "http://www.foothospital.co.kr/Images/sub/img_doc01.jpg",
+  "specialty": "Orthopedic Foot,Ankle Surgeon",
+  "학력": [],
+  "경력": [
+    {
+      "date": null,
+      "content": "정형외과 전문의, 세부전공 : 족부 정형외과 및 스포츠 의학"
+    },
+    {
+      "date": null,
+      "content": "한양대 외래교수"
+    },
+    {
+      "date": null,
+      "content": "전 관동의대 교수"
+    },
+    {
+      "date": null,
+      "content": "Hospital Special Surgery research fellowship"
+    },
+    {
+      "date": null,
+      "content": "American Orthopedic Foot and Ankle Society"
+    },
+    {
+      "date": null,
+      "content": "Sports Medicine of the foot & Ankle Course 2000. AOFAS.연수"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한 정형외과학회 회원"
+    },
+    {
+      "date": null,
+      "content": "대한 족부외과 회원"
+    },
+    {
+      "date": null,
+      "content": "International Association for Dance Medicine Society 회원"
+    },
+    {
+      "date": null,
+      "content": "당뇨병성 족부질환 연구회 회원"
+    }
+  ],
+  "저서": [
+    {
+      "date": null,
+      "content": "“당뇨병성 족부질환” (최신 의학사) 의 공동저자"
+    },
+    {
+      "date": null,
+      "content": "“축구의학” (군자출판사) 의 공동저자"
+    }
+  ],
+  "isAttend": true
+}

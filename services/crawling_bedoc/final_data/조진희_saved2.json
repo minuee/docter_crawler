@@ -1,0 +1,149 @@
+{
+  "hospital_cid": 575,
+  "bedoc_id": "A0660",
+  "bedoc_hospitalsite": "http://www.cmcujb.or.kr/",
+  "bedoc_doctorname": "조진희",
+  "bedoc_deptname": "이비인후과",
+  "bedoc_hospitalname": "여의도성모병원",
+  "hospital_name": "가톨릭대학교 여의도성모병원",
+  "aiga_hid": "H11KR-11000001",
+  "hospital_site": "https://www.cmcsungmo.or.kr/page/doctor/141/D0000880",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 영등포구 63로 10, 여의도성모병원 (여의도동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.cmcsungmo.or.kr/page/doctor/141/D0000880?doctorName=%EC%A1%B0%EC%A7%84%ED%9D%AC&depthName=%EC%9D%B4%EB%B9%84%EC%9D%B8%ED%9B%84%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "doctorSiteUrl": "https://www.cmcsungmo.or.kr/page/doctor/141/D0000880",
+  "profileUrl": "https://www.cmcsungmo.or.kr/api/attach/view/doctor/D0000880/profile/1",
+  "specialty": "비부비동질환,비성형,알레르기,코골이,수면무호흡",
+  "학력": [
+    {
+      "date": "1980~1986",
+      "content": "가톨릭대학교 의학 학사"
+    },
+    {
+      "date": "1988~1993",
+      "content": "가톨릭대학교 이비인후과학 석사"
+    },
+    {
+      "date": "1994~1998",
+      "content": "가톨릭대학교 이비인후과학 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "2012~현재",
+      "content": "여의도성모병원 이비인후과 교수"
+    },
+    {
+      "date": "2018~2019",
+      "content": "여의도성모병원 진료협력센터장"
+    },
+    {
+      "date": "2009~2015",
+      "content": "여의도성모병원 이비인후과 임상과장"
+    },
+    {
+      "date": "2008~2012",
+      "content": "여의도성모병원 이비인후과 부교수"
+    },
+    {
+      "date": "1998~2008",
+      "content": "강남성모병원 이비인후과 조교수, 부교수"
+    },
+    {
+      "date": "1993~1998",
+      "content": "의정부성모병원, 강남성모병원 이비인후과 전임강사"
+    },
+    {
+      "date": "1987~1990",
+      "content": "가톨릭의대 성모병원 이비인후과 레지던트"
+    },
+    {
+      "date": "1986~1987",
+      "content": "가톨릭의대 성모병원 인턴"
+    },
+    {
+      "date": "2000~2001",
+      "content": "University of San Diego, Allergy & Immunology Laboratory"
+    }
+  ],
+  "수상": [
+    {
+      "date": "2014",
+      "content": "대한이비인후과학회 공로상"
+    }
+  ],
+  "학술": [
+    {
+      "date": "2017~현재",
+      "content": "대한비과학회 회장"
+    },
+    {
+      "date": "2008~2013",
+      "content": "대한이비인후과학회 보험이사"
+    },
+    {
+      "date": "2004~2008",
+      "content": "대한비과학회 섭외, 보험이사"
+    }
+  ],
+  "논문": [
+    "TBHQ Alleviates Particulate Matter-Induced Pyroptosis in Human Nasal Epithelial Cells (TOXICS, 2024 Jun, 공동저자)",
+    "Sinonasal microbiome and inflammatory profiles in fungal ball and chronic rhinosinusitis (AURIS NASUS LARYNX, 2024 Apr, 공동저자)",
+    "The analgesic Efficacy and Safety of Topically Applied Tramadol in Peritonsillar Space During Pediatric Adenotonsillectomy: A Meta-Analysis (ANNALS OF OTOLOGY RHINOLOGY AND LARYNGOLOGY, 2023 Oct, 공동저자)",
+    "Differences in the predicted nasoseptal flap length among races: A propensity score matching analysis (PLOS ONE, 2023 Mar, 공동저자)",
+    "Clinical Trial to Reconfirm the Efficacy and Safety of Cefetamet Pivoxil Treatment in Sinusitis Patients: A Double-Blind, Randomized, Parallel Designed, Multicenter, Active Comparator Study (CASIS Study) (ENT-EAR NOSE & THROAT JOURNAL, 2023 Feb, 교신저자)"
+  ],
+  "저서": [
+    {
+      "date": "2017",
+      "content": "최신임상비과학",
+      "issuer": "대한비과학회"
+    },
+    {
+      "date": "2012",
+      "content": "두개저외과학",
+      "issuer": "군자출판사"
+    },
+    {
+      "date": "2012",
+      "content": "Otolaryngology",
+      "issuer": "InTeck"
+    },
+    {
+      "date": "2009",
+      "content": "ALLERGYCLEAR",
+      "issuer": "메디칼리뷰"
+    },
+    {
+      "date": "2009",
+      "content": "이비인후과학 두경부외과학 대한이비인후과학회편",
+      "issuer": "일조각"
+    }
+  ],
+  "언론": [
+    {
+      "targetDate": "2021.11.24",
+      "type": "뉴스",
+      "text": "[pdf] 코콜이, 수면 무호흡증_가톨릭메디컬타임즈 2220호(2019.06.05)",
+      "url": "https://www.cmcsungmo.or.kr/api/attach/download/50154"
+    },
+    {
+      "targetDate": "2021.11.23",
+      "type": "뉴스",
+      "text": "[건강매거진] 잠버릇 아닌 질환이에요 코골이∙수면 무호흡증의 이해",
+      "url": "https://www.cmcsungmo.or.kr/page/health/magazine/detail/171?p=1&s=5&q=%7B%7D"
+    },
+    {
+      "targetDate": "2019.05.13",
+      "type": "뉴스",
+      "text": "[KBS 라디오] [박광식의 건강365] 어린이 코골이·수면무호흡 방치, ‘키’ 크는데 지장",
+      "url": "http://news.kbs.co.kr/news/view.do?ncd=4198622&ref=A"
+    }
+  ],
+  "isAttend": true
+}

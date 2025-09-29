@@ -1,0 +1,686 @@
+{
+  "hospital_cid": 366,
+  "bedoc_id": "A0394",
+  "bedoc_hospitalsite": "http://www.ncc.re.kr",
+  "bedoc_doctorname": "유헌",
+  "bedoc_deptname": "신경외과",
+  "bedoc_hospitalname": "국립암센터",
+  "hospital_name": "국립암센터",
+  "aiga_hid": "H11KR-31000013",
+  "hospital_site": "https://www.ncc.re.kr/ncc_about03_param.ncc?searchKey=&searchValue=&dept=NS",
+  "site_type": "popup",
+  "hospital_addr": "경기도 고양시 일산동구 일산로 323, (마두동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.ncc.re.kr/ncc_about03_param.ncc?searchKey=&searchValue=&dept=NS&doctorName=%EC%9C%A0%ED%97%8C&depthName=%EC%8B%A0%EA%B2%BD%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "https://www.ncc.re.kr/imageViewer.ncc?in_fileUrl=EMRFILE01/www/hongbo/img/profile/10333.jpg",
+  "specialty": "뇌종양, 척수종양, 뇌전이암, 두개기저부종양, 암성통증,악성교종, 뇌전이암 및 연수막암전이 발생기전에 대한 기초연구, 신치료법 개발과 임상시험",
+  "학력": [
+    {
+      "date": "1983-03 ~ 1989-02",
+      "content": "서울대학교 의과대학 의학과 대졸(의대)"
+    },
+    {
+      "date": "1991-03 ~ 1993-08",
+      "content": "서울대학교 대학원 의학과 대학원졸(석사)"
+    },
+    {
+      "date": "1998-03 ~ 2001-08",
+      "content": "서울대학교 대학원 의학과 대학원졸(박사)"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1989-03 ~ 1990-02",
+      "content": "서울대학교병원 인턴"
+    },
+    {
+      "date": "1990-03 ~ 1994-02",
+      "content": "서울대학교병원 레지던트"
+    },
+    {
+      "date": "1997-05 ~ 1998-04",
+      "content": "서울대학교병원 전임의"
+    },
+    {
+      "date": "1998-05 ~ 1999-02",
+      "content": "원자력병원 전임의"
+    },
+    {
+      "date": "1999-03 ~ 2001-05",
+      "content": "서울백병원 조교수"
+    },
+    {
+      "date": "2001-06 ~ 현재",
+      "content": "국립암센터 특수암센터 전문의"
+    },
+    {
+      "date": "2005-04 ~ 2006-03",
+      "content": "University of California, San Francisco 미국연수"
+    },
+    {
+      "date": "2007-04 ~ 2009-07",
+      "content": "국립암센터 중환자실 실장"
+    },
+    {
+      "date": "2008-09 ~ 2009-01",
+      "content": "국립암센터 뇌척수암연구과 과장"
+    },
+    {
+      "date": "2009-01 ~ 2014-08",
+      "content": "국립암센터 특수암연구과 과장"
+    },
+    {
+      "date": "2009-08 ~ 2016-03",
+      "content": "국립암센터 특수암센터 센터장"
+    },
+    {
+      "date": "2014-03 ~ 2017-02",
+      "content": "국제암대학원대학교 시스템종양생물학과 겸임교수"
+    },
+    {
+      "date": "2014-07 ~ 2014-08",
+      "content": "국립암센터 이행성임상제2연구부 부장"
+    },
+    {
+      "date": "2016-04 ~ 2017-11",
+      "content": "국립암센터 교육훈련부 부장"
+    },
+    {
+      "date": "2017-03 ~ 현재",
+      "content": "국립암센터국제암대학원대학교 암의생명과학과 겸임교수"
+    },
+    {
+      "date": "2019-02 ~ 2023-03",
+      "content": "국립암센터 신경외과 의사직"
+    },
+    {
+      "date": "2019-02 ~ 현재",
+      "content": "국립암센터 희귀암센터 의사직"
+    },
+    {
+      "date": "2023-03 ~ 현재",
+      "content": "국립암센터 신경외과 의사직(임상교수)"
+    }
+  ],
+  "학술": [
+    {
+      "type": "출원",
+      "title": "고온종양치료기",
+      "number": "07-008688.9",
+      "date": "2008-04-14"
+    },
+    {
+      "type": "출원",
+      "title": "고온종양치료기",
+      "number": "2007-124448",
+      "date": "2008-04-14"
+    },
+    {
+      "type": "출원",
+      "title": "고온종양치료기",
+      "number": "10-2006-0042451",
+      "date": "2008-04-14"
+    },
+    {
+      "type": "출원",
+      "title": "고온종양치료기",
+      "number": "11-789059",
+      "date": "2008-04-14"
+    }
+  ],
+  "논문": [
+    "Exploratory profiling of metabolites in cerebrospinal fluid using a commercially available targeted LC-MS based metabolomics kit to discriminate leptomeningeal metastasis: CANCER & METABOLISM. 13:2~ (5.3)",
+    "Changes in the Eepidemiologic Pattern of Primary CNS Tumors in Response to the Aging Population: an Updated Nationwide Cancer Registry Sata in the Republic of Korea: . :~ ()",
+    "The Clinical Outcomes of Cervical Spine Chordoma: A Nationwide Multicenter Retrospective Study: NEUROSPINE. 21(3):942~953 (3.8)",
+    "Extracellular Vesicles from Cerebrospinal Fluid of Leptomeningeal Metastasis Patients Deliver MiR-21 and Induce Methotrexate Resistance in Lung Cancer Cells: INTERNATIONAL JOURNAL OF MOLECULAR SCIENCES. 25(6):3124~ (4.9)",
+    "The efficacy of slow-rate ventriculolumbar perfusion chemotherapy for leptomeningeal carcinomatosis: a phase II study: ACTA NEUROCHIRURGICA. 166(1):117~ (1.9)",
+    "Disseminating Necrotizing Leukoencephalopathy Associated With Intra-CSF Methotrexate Chemotherapy: A Retrospective Observational Study: NEUROLOGY. 102(5):e209167~ (8.4)",
+    "Integrated proteogenomic characterization of glioblastoma evolution: CANCER CELL. 42(3):358~377 (48.8)",
+    "Clinical Safety and Efficiency  of the H-Port for Treatment of Leptomeningeal Metastasis: JOURNAL OF KOREAN NEUROSURGICAL SOCIETY. :~ (1.6)",
+    "Crosstalk between PARN and EGFR-STAT3 Signaling Facilitates Self-Renewal and Proliferation of Glioblastoma Stem Cells: CANCER RESEARCH. 83(22):3693~3709 (11.2)",
+    "Phase 1 trial of 4-1BB-based adoptive T-cell therapy targeting human telomerase reverse transcriptase in patients with advanced refractory solid tumors: CYTOTHERAPY. 25(11):1236~1241 (4.5)",
+    "Efficacy and safety of metformin plus low-dose temozolomide in patients with recurrent or refractory glioblastoma: a randomized, prospective, multicenter, double-blind, controlled, phase 2 trial (KNOG-1501 study): DISCOVER ONCOLOGY. 14(1):90~ (2.2)",
+    "IGFBP5 is an ROR1 ligand promoting glioblastoma invasion via ROR1/HER2-CREB signaling axis: NATURE COMMUNICATIONS. 14(1):1578~ (16.6)",
+    "Leptomeningeal Metastasis in Gliomas : Clinical Characteristics and Risk Factors: JOURNAL OF KOREAN NEUROSURGICAL SOCIETY. Online:Published (2.249)",
+    "Lumboperitoneal Shunt Combined With Ommaya Reservoir Enables Continued Intraventricular Chemotherapy for Leptomeningeal Metastasis With Increased Intracranial Pressure: Brain Tumor Research and Treatment. 10(4):237~243 (0)",
+    "Cerebrospinal fluid neurofilament light chain as a potential prognostic biomarker for leptomeningeal metastasis: ONCOLOGY LETTERS. 24(6):428~ (3.111)",
+    "Different Metabolomic and Proteomic Profiles of Cerebrospinal Fluid in Ventricular and Lumbar Compartments in Relation to Leptomeningeal Metastases: METABOLITES. 12(1):80~ (5.581)",
+    "Experimental Assessment of Leptomeningeal Metastasis Diagnosis in Medulloblastoma Using Cerebrospinal Fluid Metabolomic Profiles: METABOLITES. 11(12):851~ (4.932)",
+    "Exploratory Profiling of Extracellular microRNAs in Cerebrospinal Fluid Comparing Leptomeningeal Metastasis with Other Central Nervous System Tumor Statuses: JOURNAL OF CLINICAL MEDICINE. 10(21):4860~ (4.242)",
+    "Influence of concurrent and adjuvant temozolomide on health-related quality of life of patients with grade III gliomas: a secondary analysis of a randomized clinical trial (KNOG-1101 study): CANCER RESEARCH AND TREATMENT. Online:Published (4.679)",
+    "Cerebrospinal fluid profiles and their changes after intraventricular chemotherapy as prognostic or predictive markers for patients with leptomeningeal carcinomatosis: JOURNAL OF KOREAN NEUROSURGICAL SOCIETY. 64(4):631~643 (1.729)",
+    "Radiological assessment schedule for 1p/19q-codeleted gliomas during the surveillance period using parametric modeling: Neuro-Oncology Advances. 3(1):vdab069~ (0)",
+    "Modulation of Nogo receptor 1 expression orchestrates myelin-associated infiltration of glioblastoma: BRAIN. 144(2):636~654 (13.501)",
+    "Molecular Signature of Extracellular Vesicular Small Non-Coding RNAs Derived from Cerebrospinal Fluid of Leptomeningeal Metastasis Patients: Functional Implication of miR-21 and Other Small RNAs in Cancer Malignancy: CANCERS. 13(2):209~ (6.639)",
+    "A nationwide, population-based epidemiology study of primary central nervous system tumors in Korea. 2007-2016: A comparison with United States data: CANCER RESEARCH AND TREATMENT. Online:Published (3.761)",
+    "A Stiffness Adjustable 6-DOF Robotic System for Pituitary Tumor Resection under MRI: IEEE ACCESS. 8:192557~192568 (3.745)",
+    "Nanoparticles in 472 human cerebrospinal fluid: Changes in extracellular vesicle concentration and miR-21 expression as a biomarker for leptomeningeal metastasis: CANCERS. 12(10):E2745~ (6.126)",
+    "Clinical Experience of Bevacizumab for Radiation Necrosis in Patients with Brain Metastasis: Brain Tumor Research and Treatment. 8(2):93~102 (0)",
+    "Comparative cerebrospinal fluid metabolites profiling in glioma patients to predict malignant transformation and leptomeningeal metastasis with a potential for preventive personalized medicine: EPMA JOURNAL. Online:Published (4.901)",
+    "ARS2/MAGL signaling in glioblastoma stem cells promotes self-renewal and M2-like polarization of tumor-associated macrophages: NATURE COMMUNICATIONS. 11(1):2978~ (12.121)",
+    "CYFRA 21-1 levels in cerebrospinal fluid as a putative therapeutic monitoring biomarker for patients with leptomeningeal carcinomatosis: A pilot study: CANCER BIOMARKERS. 28(1):81~89 (3.436)",
+    "Dexamethasone Interferes with Autophagy and Affects Cell Survival in Irradiated Malignant Glioma Cells: JOURNAL OF KOREAN NEUROSURGICAL SOCIETY. Online:Published (1.376)",
+    "A design of brain port with a built-in bi-directional check valve improves the ventriculostomy: The International Journal of Artificial Organs. 43(5):348~353 (1.232)",
+    "Discordance of Epidermal Growth Factor Receptor Mutation between Brain Metastasis and Primary Non-Small Cell Lung Cancer: Brain Tumor Research and Treatment. 7(2):137~140 (0)",
+    "Efficacy of Slow Rate Ventriculolumbar Perfusion Chemotherapy for Leptomeningeal Carcinomatosis: Interim Result of a Phase II Study: Brain Tumor Research and Treatment. 7(2):85~91 ()",
+    "Concurrent and Adjuvant Temozolomide for Newly Diagnosed Grade III Gliomas without 1p/19q Co-deletion: A Randomized, Open-Label, Phase 2 Study (KNOG-1101 Study): CANCER RESEARCH AND TREATMENT. Online:Published (3.363)",
+    "Association of MRI findings with clinical characteristics and prognosis in patients with leptomeningeal carcinomatosis from non?small cell lung cancer: JOURNAL OF NEURO-ONCOLOGY. 143(3):553~562 (3.129)",
+    "Cerebrospinal Fluid CYFRA 21-1 as a Diagnostic Indicator for Leptomeningeal Metastasis in Cancer Patients: Journal of the Korean Neurological Association. 37(2):161~165 (0)",
+    "Clinical outcome of cerebrospinal fluid shunts in patients with leptomeningeal carcinomatosis: WORLD JOURNAL OF SURGICAL ONCOLOGY. 17(1):59~59 (1.966)",
+    "Compact size of a Wilkinson power divider using impedance coordinate tracking based on T-shaped line: Microwave and Optical Technology Letters. 61(8):1964~1967 (0.933)",
+    "Clinical outcome of proton therapy for patients with chordomas: Radiation Oncology Journal. 36(3):182~191 (0)",
+    "A Multi-detection Fluorescence Dye with 5-ALA and ICG Using Modified Light Emitting Diodes: Current Optics and Photonics. 3(3):256~262 (0.573)",
+    "Local recurrence of brain metastasis reduced by intra-operative hyperthermia treatment: International Journal of Hyperthermia. 35(1):168~175 (3.44)",
+    "Double Sequential Ballooning(Eggshell) Method for Treatment of Severe Metastatic Compression Fractures with Extra-Compartment Involvement: In Comparison with Conventional Balloon Kyphoplasty: the nerve. 4(2):42~49 (0)",
+    "Treatment Results and Prognostic Factors of Brain Metastases From Ovarian Cancer: International journal of gynecological cancer. 28(8):1631~1638 (2.192)",
+    "A Novel Implantable Cerebrospinal Fluid Reservoir: A Pilot Study: Journal of Korean Neurosurgical Society. 61(5):640~644 (0.86)",
+    "Procarbazine and CCNU Chemotherapy for Recurrent Glioblastoma with MGMT Promotor Methylation: Journal of Korean medical science. 33(24):e167~e167 (1.588)",
+    "Discordances in ER, PR, and HER2 between primary breast cancer and brain metastasis: Journal of Neuro-Oncology. 137(2):295~302 (2.98)",
+    "Cerebrospinal fluid metabolomic profiles can discriminate patients with leptomeningeal carcinomatosis from patients at high risk for leptomeningeal metastasis: Oncotarget. 8(60):101203~101214 (5.168)",
+    "Clinical Results of Lumboperitoneal Shunt with a Valve Reservoir Compared with Ventriculoperitoneal Shunt: Nerve. 3(2):64~66 ()",
+    "Monitoring rate and predictability of intraoperative monitoring in patients with intradural extramedullary and epidural metastatic spinal tumors: Spinal cord. 55(1):906~910 (1.87)",
+    "Transglutaminase 2 inhibition reverses mesenchymal transdifferentiation of glioma stem cells by regulating C/EBPβ signaling: Cancer Research. 77(18):4973~4984 (9.122)",
+    "An Updated Nationwide Epidemiology of Primary Brain Tumors in Republic of Korea, 2013: Brain Tumor Research Treatment. 5(1):16~23 (0)",
+    "Nationwide Population-based Incidence and Survival rates of Malignant Central Nervous System Germ Cell Tumors in Korea, 2005-2012: Cancer Research and Treatment. 49(2):494~501 (4.245)",
+    "Concurrent Chemoradiotherapy with Temozolomide Followed by Adjuvant Temozolomide for Newly Diagnosed Glioblastoma Patients: A Retrospective Multicenter Observation Study in Korea.: Cancer Research and Treatment. 49(1):193~203 (4.245)",
+    "Retrospective Analysis of Cerebrospinal Fluid Profiles in 228 Patients with Leptomeningeal Carcinomatosis : Differences According to the Sampling Site, Symptoms, and Systemic Factors.: Journal of Korean Neurosurgical Society. 59(6):570~576 (0.599)",
+    "Histone variant H3F3A promotes lung cancer cell migration through intronic regulation: Nature Communications. 7:12914~12914 (11.329)",
+    "Review of Neurosurgical Fluorescence Imaging Systems for Clinical Application: Journal of the Optical Society of Korea(OSA). 20(2):305~313 (0.827)",
+    "A Case of Langerhans Cell Histiocytosis Manifested as a Suprasellar Mass: Brain Tumor Research and Treatment. 4:26~29 ()",
+    "Percutaneous vertebroplasty for patients with metastatic compression fractures of the thoracolumbar spine: clinical and radiological factors affecting functional outcomes: The spine journal : official journal of the North American Spine Society. 16(3):355~364 (2.426)",
+    "Clinical characteristics and follow-up of intracranial metastases from thyroid cancer: Acta neurochirurgica. 157(12):2185~2194 (1.766)",
+    "The Efficacy of Postoperative Chemotherapy for Patients with Metastatic Brain Tumors from Non-Small Cell Lung Cancer.: Brain Tumor Research and Treatment. 3(2):108~114 (0)",
+    "A Case of Radiation-Induced Osteosarcoma after the Treatment of Pineoblastoma.: Brain Tumor Research and Treatment. 3(2):156~159 (0)",
+    "Population-Based Incidence and Survival for Primary Central Nervous System Lymphoma in Korea, 1999-2009: Cancer Research and Treatment. 47(4):569~574 (3.318)",
+    "Clinical Factors and Perioperative Strategies Associated with Outcome in Preinjury Antiplatelet and Anticoagulation Therapy for patients with Traumatic Brain Injuries: Journal of Korean Neurosurgical Society. 58:262~270 (0.636)",
+    "DEAD-box RNA helicase DDX23 modulates glioma malignancy via elevating miR-21 biogenesis: Brain. 138(Pt9):2553~2570 (9.196)",
+    "Recent Advancements of Treatment for Leptomeningeal Carcinomatosis: Journal of Korean Neurosurgical Society. 58(1):1~8 (0.636)",
+    "Acute intracranial bleeding and recurrence after bur hole craniostomy for chronic subdural hematoma: Journal of neurosurgery. 123(1):65~74 (3.737)",
+    "Pigment Epithelium-Derived Factor (PEDF) Expression Induced by EGFRvIII Promotes Self-renewal and Tumor Progression of Glioma Stem Cells: PLoS biology. 13(5):1002152~1002152 (9.343)",
+    "A case of benign meningioma presented with subdural hemorrhage: Brain Tumor Research and Treatment. 3(1):30~33 (0)",
+    "Incidence of Primary Spinal Cord, Spinal Meninges, and Cauda Equina Tumors in Korea, 2006-2010: Cancer research and treatment. 47(2):166~172 (3.318)",
+    "Radiation-induced autophagy contributes to cell death and induces apoptosis partly in malignant glioma cells.: Cancer research and treatment. 47(2):221~241 (3.318)",
+    "Study of a Brain tumore and blood vessel detection system usgin multiple fluorescence imaging by surgical microscope: 한국광학회지. 26:23~29 (0)",
+    "Development of Indocyanine Green and 5-Aminolevulinic Acid Detection System for Surgical Microscope: 대한의용생체공학회. 36:16~21 (0)",
+    "Extraneural Metastases of Glioblastoma without Simultaneous Central Nervous System Recurrence: Brain tumor research and treatment. 2(2):124~127 (0)",
+    "Ventriculolumbar Perfusion Chemotherapy With Methotrexate for Treating Leptomeningeal Carcinomatosis: A Phase II Study.: The oncologist. 19(10):1044~1045 (4.54)",
+    "CPEB1 modulates differentiation of glioma stem cells via downregulation of HES1 and SIRT1 expression: Oncotarget. 5(16):6756~6769 (6.627)",
+    "The ubiquitin ligase human TRIM71 regulates let-7 microRNA biogenesis via modulation of Lin28B protein: Biochimica et biophysica acta-Gene Regulatory Mechanisms. 1839(5):374~386 (5.44)",
+    "Roles of Long Non-Coding RNAs on Tumorigenesis and Glioma Development: Brain tumor research and treatment. 2(1):1~6 (0)",
+    "Steroid-resistant relapsing IgG4-related pachymeningitis treated with methotrexate: JAMA Neurol. 71(2):222~225 (7.008)",
+    "Outcome of Surgical Resection of Symptomatic Cerebral Lesions in Non-Small Cell Lung Cancer Patients with Multiple Brain Metastases: Brain tumor research and treatment. 1(2):64~70 (0)",
+    "The volumetric change and dose-response relationship following hypofractionated proton therapy for chordomas: Acta Oncologica. 53(4):563~568 (3.71)",
+    "Temozolomide salvage chemotherapy for recurrent anaplastic oligodendroglioma and oligo-astrocytoma.: Journal of Korean Neurosurgical Society. 54(6):489~495 (0.556)",
+    "Assessment of effects of phlebotomy in patients with polycythemia vera and secondary polycythemia: 대한수혈학회지. 24(3):265~274 (0)",
+    "Analysis of treatment outcomes of intraventricular chemotherapy in 105 patients for leptomeningeal carcinomatosis from non-small-cell lung cancer.: Journal of thoracic oncology. 8(5):599~605 (4.473)",
+    "An updated nationwide epidemiology of primary brain tumors in Republic of Korea: Brain Tumor Research and Treatment. 1:16~23 (0)",
+    "Non small cell carcinoma metastasis to meningioma: Journal of Korean Neurosurgical Society. 53(1):43~45 (0.556)",
+    "Single-stage posterior decompression and stabilization for metastasis of the thoracic spine: prognostic factors for functional outcome and patients' survival.: The spine journal. 12)12_:1083~1092 (3.29)",
+    "Silencing of MicroRNA-21 Confers Radio-Sensitivity through Inhibition of the PI3K/AKT Pathway and Enhancing Autophagy in Malignant Glioma Cell Lines.: PLOS ONE. 7(10):e47449~e47449 (4.092)",
+    "Population-based survival data for brain tumors in Korea: Journal of Neuro-Oncology. 109(2):301~307 (3.214)",
+    "Ventriculolumbar Perfusion Chemotherapy for the Treatment of Leptomeningeal Carcinomatosis: A Phase I Study With Pharmacokinetic Data.: American journal of clinical oncology. Online:Published (2.005)",
+    "Risk for leptomeningeal seeding after resection for brain metastases: implication of tumor location with mode of resection.: Journal of Neurosurgery. 116(5):984~993 (2.965)",
+    "Volumetric response evaluation after intensity modulated radiotherapy in patients with supratentorial gliomas: Technology in Cancer Research & Treatment. 11(1):41~48 (1.692)",
+    "PTEN Modulates miR-21 Processing via RNA-Regulatory Protein RNH1: PLoS ONE. 6(12):e28308~e28308 (4.411)",
+    "Human Brain Endothelial Cell-derived COX-2 Facilitates Extravasation of Breast Cancer Cells across the Blood-brain Barrier: Anticancer Research. 31(12):4307~4313 (1.656)",
+    "Chemotherapy for malignant gliomas based on histoculture drug response assay: a pilot study: Journal of Korean Neurosurgical Society. 50:426~433 (0.607)",
+    "Single-Dose Versus Fractionated Stereotactic Radiotherapy for Brain Metastases: International Journal of Radiation Oncology, Biology and Physics. 81(2):483~489 (4.503)",
+    "Chemoport with a non-collapsible chamber as a replacement for an Ommaya reservoir in the treatment of leptomeningeal carcinomatosis: Acta Neurochirugica. 153:1971~1978 (1.329)",
+    "Postoperative recurrence and growth rate of cystic brain metastases: Journal of Korean Brain Tumor Society. 10:91~96 ()",
+    "Real-time and non-invasive optical imaging of tumor-targeting glycol chitosan nanoparticles in various tumor models: Biomaterials. 32:5252~5261 (7.883)",
+    "Surgical outcomes of hemorrhagic metastatic brain tumors: Cancer Research and Treatment. 43(2):102~107 ()",
+    "Downregulation of Spry2 by miR-21 triggers malignancy in human gliomas: Oncogene. 30(21):2433~2442 (7.414)",
+    "Growth rate of newly developed metastatic brain tumors after thoracotomy in patients with non-small cell lung cancer: Lung Cancer. 71(2):205~208 (3.356)",
+    "Simultaneous Integrated Boost Intensity-Modulated Radiotherapy in Patients with High-Grade Gliomas: International journal of radiation oncology, biology, physics. 78(2):390~397 (4.592)",
+    "Histoculture drug response assay for brain tumors: a preliminary study for evaluability and compatibility: Journal of Korean Brain Tumor Society. 9:67~73 ()",
+    "Epidemiology of Primary Brain and Central Nervous System Tumors in Korea: Journal of Korean Neurosurgical Society. 48(2):145~152 (0.155)",
+    "Cytogenetic study of glioneuronal tumor with neuropil-like islands: Neuropathology. 30(4):420~426 (1.861)",
+    "The expressions of carbonic anhydrase 9 and vascular endothelial growth factor in astrocytic tumors predict a poor prognosis: International Journal of Molecular Medicine. 26:3~9 (1.98)",
+    "Giant Invasive Intraosseous Schwannoma in Lumbar Spine: Korean Journal of Spine. 6:214~217 (0)",
+    "Clinical application of anti-epileptic drugs in the field of neuro-oncology: Jounal of Korean Brain Tumor Society. 8:3~15 (0)",
+    "Primary T-cell central nervous system lymphoma: Journal of Korean Brain Tumor Society. 8:72~75 ()",
+    "Reduced local recurrence of a single brain metastasis through microscopic total resection: Journal of Neurosurgery. 110(4):730~736 (2.124)",
+    "17-Allylamino-17-Demethoxygeldanamycin Down-Regulates Hyaluronic Acid-Induced Glioma Invasion by Blocking Matrix Metalloproteinase-9 Secretion: Molecular Cancer Research. 6:1657~1665 (4.317)",
+    "Growth rates of metastatic brain tumors in nonsmall cell lung cancer: Cancer. 113:1043~1047 (4.632)",
+    "Primary chemotherapy for newly diagnosed nonsmall cell lung cancer patients with synchronous brain metastases compared with whole-brain radiotherapy administered first : result of a randomized pilot study: Cancer. 113:143~149 (4.632)",
+    "The Efficacy of Wide Surgical Resection of Brain Metastasis with Confirming Clean Surgical Margin by Intraoperative Margin Biopsy: Journal of Korean Brain Tumor Society. 7:16~25 ()",
+    "Remote Cerebellar Hemorrhaeg after Supratentorial meningioma Surgery: Journal of korean Brain Tumor Society. 7:50~54 (0)",
+    "Radiation-induced necrosis deteriorating neurological symptoms and mimicking progression of brain metastasis after stereotactic guideded radiotherapy: Cancer Research and Treatment. 39:16~21 ()",
+    "Expression of the hypoxia marker carbonic anhydrase 9 is associated with anaplastic phenotypes in meningiomas: Clinical Cancer Research. 13:68~75 (6.25)",
+    "Result of adjuvant therapy after metastatectomy for brain metastasis from non-small cell lung cancer: Journal of Korean Brain Tumor Society. 5:77~84 ()",
+    "Emodin suppresses hyaluronic acid-induced MMP-9 secretion and invasion of gliom cells: International Journal of Oncology. 27:839~846 (3.056)",
+    "Immunohistochemical study of central neurocytoma, subependymoma, and subependymal giant cell astrocytoma: Journal of Neuro-Oncology. 74:1~8 (0.325)",
+    "Hyaluronic acid induces osteopontin via the phosphatidylinositol 3-kinase/Akt pathway to enhance the motility of human glioma cells: Cancer Research. 65:686~691 (8.649)",
+    "Hyaluronic acid induces osteopontin via the phosphatidylinositol 3-kinase/Akt pathway to enhance the motility of human glioma cells.: Cancer Research. 65:686~691 (0)",
+    "Increased expression of antioxidant enzymes in radioresistant variant from U251 human glioblastoma cell line: International Journal of Molecular Medicine. 13:883~887 (3.19)",
+    "Anterior spinal augmentation using vertebroplasty after partial corpectomy in metastatic spinal tumors: Korean Journal of Spine. 1:218~223 ()",
+    "Metastatectomy a feasible treatment in selected patients with gynecologic malignancy: Korean Journal of Obstetrics and Gynecology. 46:1019~1026 ()",
+    "Surgical management of dural arteriovenous fistula of the anterior cranial fossa after failure of embolization therapy: Journal of Korean Neurosurgical Society. 31:271~273 ()",
+    "Atretic cephalocele: Journal of Korean Neurosurgical Society. 31:380~383 ()",
+    "Hemorrhagic presentation of a vestibular schwannoma: Journal of Korean Brain Tumor Society. 1:78~80 ()",
+    "PTEN suppresses hyaluronic acid-induced matrix metalloproteinase-9 expression in U87MG glioblastoma cells through focal adhesion kinase dephosphorylation: CANCER RES. 62:6318~6322 (8.318)",
+    "A fatal complication associated with combined posterior petrous and suboccipital approach to a giant jugular foramen schwannoma: Journal of Korean Neurosurgical Society. 30:1144~1149 ()",
+    "Multiple meningiomas of different pathological features: case report.: Journal of Clinical Neuroscience. 8:40~43 (0.543)",
+    "An angiographic lesion mimicking pseudo-aneurysm in cerebral arteriovenous malformation: Acta Neurochirurgica. 143:1177~1181 (0.779)",
+    "Epithelioid hemangioendothelioma of the sphenoid bone: Journal of Clinical Neuroscience. 8:1~4 (0.543)",
+    "Repeated transsphenoidal surgery for pituitary tumors: Jornal of Korean Neurosurgical Society. 29:929~934 ()",
+    "Treatment outcome and prognostic factors of Cushing's disease in adults: Journal of Korean Neurosurgical Society. 29:1316~1321 ()",
+    "Infantile myofibromatosis of the skull: Journal of Korean Neurosurgical Society. 29:430~433 ()",
+    "Meningioma manifestating intracerebral hemorrhage: a possible mechanism of hemorrhage: Acta Neurochirurgica. 142:165~168 (0.779)",
+    "Longterm outcome and growth rate of subtotally resected petroclival meningioma: experience of 38 cases: Neurosurgery. 46:567~575 (2.896)",
+    "Sparganosis of brain and lumbar spinal canal: Journal of Korean Neurosurgical Society. 28:1028~1031 ()",
+    "Clinical analysis of 178 metastatic brain tumors: Journal of Korean Neurosurgical Society. 28:1185~1193 ()",
+    "Surgical treatment of metastatic spinal tumor: Journal of Korean Neurosurgical Society. 28:1491~1497 ()",
+    "Hypoglossal neurinoma without preoperative hypoglossal nerve palsy: Journal of Korean Neurosurgical Society. 28:1800~1804 ()",
+    "Neurenteric cyst of the posterior cranial fossa: Journal of Korean Neurosurgical Society. 28:843~848 ()",
+    "Brainstem glioma -survival and prognostic factors-: Journal of Korean Neurosurgiccal Society. 28:1556~1568 ()",
+    "Modified transpetrosal (mini-petrosal) approach to petroclival tumors: technical note: Journal of Korean Neurosurgical Society. 28:406~413 ()",
+    "One-stage vertebral reconstruction combined with posterior instrumentation by posterolateral approach for spinal metastasis: Journal of Korean Neurosurgical Society. 28:1485~1490 ()",
+    "Jugular foramen schwannomas: surgical approaches and outcome of treatment: Skull Base Surgery. 9:243~252 (0.121)",
+    "Multiple intraparenchyma schwannomas in the cerebellum, brainstem, and cervical spinal cord: Acta Neurochirurgica. 141:779~780 (0.779)",
+    "Experience with an image-guided surgery device -CANS navigator-: Journal of Korean Neurosurgical Society. 27:71~79 ()",
+    "Jugular foramen schwannomas: Journal of Korean Neurosurgical Society. 26:1705~1713 ()",
+    "Morphological study of surgically induced open neural tube defects in chick embryos -postoperative 24 hours-: Journal of Korean Medical Science. 9:116~122 ()",
+    "Preenhanced computed tomographic findings in brain death: Journal of Korean Medical Science. 8:305~307 (0.372)",
+    "A case of malignant meningioma presented with intracerebral hemorrhage: Journal of Korean Neurosurgical Society. 21:706~710 ()"
+  ],
+  "저서": [
+    {
+      "date": null,
+      "content": "Essentials of Neurosurgical Procedures and Operations"
+    },
+    {
+      "date": null,
+      "content": "Essentials of Neurosurgical Procedures and Operations"
+    },
+    {
+      "date": null,
+      "content": "암예방 100문 100답"
+    },
+    {
+      "date": null,
+      "content": "전립선암 100문 100답"
+    },
+    {
+      "date": null,
+      "content": "뇌종양 100문 100답"
+    }
+  ],
+  "수상": [
+    {
+      "date": "2009-10-16",
+      "content": "대한신경외과학회 심보성 학술상"
+    },
+    {
+      "date": "2009-06-27",
+      "content": "대한뇌종양학회 학술상"
+    }
+  ],
+  "언론": [
+    {
+      "targetDate": "2024-07-17",
+      "type": "기사",
+      "text": "한국 '실버 쓰나미' 위협…중추신경계 종양 증가세",
+      "issuer": "스포츠조선"
+    },
+    {
+      "targetDate": "2024-07-11",
+      "type": "기사",
+      "text": "사회인구학적 문제-원발성 중추신경계 종양 발생률 연관",
+      "issuer": "후생신보"
+    },
+    {
+      "targetDate": "2024-07-11",
+      "type": "기사",
+      "text": "사회인구학적 문제들과 원발성 중추신경계 종양 발생률 상관관계 최초 연구",
+      "issuer": "메디칼통신"
+    },
+    {
+      "targetDate": "2024-07-10",
+      "type": "기사",
+      "text": "급격한 노령화에 따른 원발성 중추신경계 종양 발생률 상관관계 규명",
+      "issuer": "이데일리"
+    },
+    {
+      "targetDate": "2024-07-10",
+      "type": "기사",
+      "text": "고령화 영향 '노인 종양 쓰나미' 닥친다",
+      "issuer": "의협신문"
+    },
+    {
+      "targetDate": "2024-07-10",
+      "type": "기사",
+      "text": "보라매병원 신경외과 변윤환 교수, 사회인구학적 문제들과 원발성 중추신경계 종양 발생률 상관관계 연구 발표",
+      "issuer": "헬스인뉴스"
+    },
+    {
+      "targetDate": "2024-07-10",
+      "type": "기사",
+      "text": "인구노령화, ‘원발성 중추신경계 종양’ 증가시켜",
+      "issuer": "의학신문"
+    },
+    {
+      "targetDate": "2024-07-10",
+      "type": "기사",
+      "text": "고령화로 원발성 중추신경계 종양 발생률도 증가",
+      "issuer": "메디칼업저버"
+    },
+    {
+      "targetDate": "2024-07-10",
+      "type": "기사",
+      "text": "사회인구학적 문제들과 원발성 중추신경계 종양 관계 첫 연구",
+      "issuer": "e의료정보"
+    },
+    {
+      "targetDate": "2024-07-10",
+      "type": "기사",
+      "text": "“실버 쓰나미 다가온다”…고령화에 ‘교모세포종?원발성 중추신경계 림프종’ 증가세",
+      "issuer": "메디컬투데이"
+    },
+    {
+      "targetDate": "2024-07-10",
+      "type": "기사",
+      "text": "“사회인구학적 문제, 원발성 중추신경계 종양 발생률에 영향 미친다”",
+      "issuer": "의사신문"
+    },
+    {
+      "targetDate": "2024-07-10",
+      "type": "기사",
+      "text": "인구 노령화에 따른 ‘원발성 중추신경계 종양’ 역학적 패턴 변화 규명 外",
+      "issuer": "의약뉴스"
+    },
+    {
+      "targetDate": "2024-07-10",
+      "type": "기사",
+      "text": "사회인구학적 문제들과 원발성 중추신경계 종양 발생률 상관관계 최초 규명",
+      "issuer": "메디컬월드뉴스"
+    },
+    {
+      "targetDate": "2024-07-10",
+      "type": "기사",
+      "text": "'사회인구학적 문제-원발성 중추신경계 종양 발생' 상관관계 규명",
+      "issuer": "보건타임즈"
+    },
+    {
+      "targetDate": "2024-07-10",
+      "type": "기사",
+      "text": "급격한 인구 노령화에 따른 ‘중추신경계 종양’ 패턴 변한다",
+      "issuer": "재활뉴스"
+    },
+    {
+      "targetDate": "2024-03-11",
+      "type": "기사",
+      "text": "국립암센터 의료기기 연구개발사업 10대 대표과제 선정",
+      "issuer": "메디칼통신"
+    },
+    {
+      "targetDate": "2024-03-10",
+      "type": "기사",
+      "text": "국립암센터 도윤식 교수, 범부처전주기의료기기 R&D '10대 대표과제' 수상",
+      "issuer": "보건뉴스"
+    },
+    {
+      "targetDate": "2024-03-08",
+      "type": "기사",
+      "text": "국립암센터 도윤식 교수, 범부처 전주기 의료기기 연구개발사업 ‘10대 대표과제’ 선정 및 표창 수상",
+      "issuer": "팜뉴스"
+    },
+    {
+      "targetDate": "2024-03-08",
+      "type": "기사",
+      "text": "국립암센터 도윤식 교수, 범부처전주기의료기기 R&D ‘10대 대표과제’ 수상",
+      "issuer": "의학신문"
+    },
+    {
+      "targetDate": "2024-03-08",
+      "type": "기사",
+      "text": "국립암센터, 범부처 전주기 의료기기 연구개발사업 '10대 대표과제' 선정 및 표창 수상",
+      "issuer": "이로운넷"
+    },
+    {
+      "targetDate": "2024-03-08",
+      "type": "기사",
+      "text": "국립암센터 도윤식 교수, 범부처 전주기 의료기기 연구개발사업 10대 대표과제 선정",
+      "issuer": "의약뉴스"
+    },
+    {
+      "targetDate": "2024-02-09",
+      "type": "기사",
+      "text": "고령화로 국내 뇌종양 발생 패턴 변화해",
+      "issuer": "청년의사"
+    },
+    {
+      "targetDate": "2018-04-02",
+      "type": "기사",
+      "text": "뇌종양, 아침에 두통 심해진다면…꼭 뇌검사를",
+      "issuer": "농민신문"
+    },
+    {
+      "targetDate": "2016-04-01",
+      "type": "기사",
+      "text": "[인사]국립암센터",
+      "issuer": "동아일보"
+    },
+    {
+      "targetDate": "2015-03-05",
+      "type": "기사",
+      "text": "[조영남, 최유라의 지금은 라디오 시대] 마음으로 쓰는 편지",
+      "issuer": "MBC라디오"
+    },
+    {
+      "targetDate": "2012-06-12",
+      "type": "기사",
+      "text": "암치료 어떻게 할까 6 - 뇌종양",
+      "issuer": "노컷뉴스"
+    },
+    {
+      "targetDate": "2011-02-08",
+      "type": "기사",
+      "text": "[암 이렇게 극복하자(10)-뇌종양] ③뇌종양의 치료",
+      "issuer": "국민일보"
+    },
+    {
+      "targetDate": "2011-02-08",
+      "type": "기사",
+      "text": "[암 이렇게 극복하자(10)-뇌종양] ②증상이 다양한 ‘뇌종양’",
+      "issuer": "국민일보"
+    },
+    {
+      "targetDate": "2011-02-08",
+      "type": "기사",
+      "text": "[암 이렇게 극복하자(10)-뇌종양] ①발생 원인이 불명확한 ‘뇌종양’",
+      "issuer": "국민일보"
+    },
+    {
+      "targetDate": "2010-07-17",
+      "type": "기사",
+      "text": "SBS 출발!모닝와이드 - 이찬휘 기자의 건강테크(출연:조관호,유헌)",
+      "issuer": "SBS"
+    },
+    {
+      "targetDate": "2009-12-21",
+      "type": "기사",
+      "text": "눈높이 맞추면 좋은 보호자 만든다",
+      "issuer": "메디게이트"
+    },
+    {
+      "targetDate": "2009-05-08",
+      "type": "기사",
+      "text": "건강플러스",
+      "issuer": "KBS"
+    },
+    {
+      "targetDate": "2009-05-07",
+      "type": "기사",
+      "text": "뇌암, 주변뇌조직도 제거… 재발 위험 3배이상 감소",
+      "issuer": "한국일보"
+    },
+    {
+      "targetDate": "2009-05-04",
+      "type": "기사",
+      "text": "전이성 뇌암 재발률 대폭 낮춰",
+      "issuer": "건강보험신문"
+    },
+    {
+      "targetDate": "2009-05-04",
+      "type": "기사",
+      "text": "뇌암 주변조직 함께 제거 전이성뇌암 재발위험 3배 줄어",
+      "issuer": "메디칼업저버"
+    },
+    {
+      "targetDate": "2009-05-04",
+      "type": "기사",
+      "text": "뇌암 재발률 낮출 획기적 수술법 개발",
+      "issuer": "메디코파마뉴스"
+    },
+    {
+      "targetDate": "2009-04-30",
+      "type": "기사",
+      "text": "뇌 전이암 새수술법 개발",
+      "issuer": "후생신보"
+    },
+    {
+      "targetDate": "2009-04-30",
+      "type": "기사",
+      "text": "뇌 전이암 새수술법 개발",
+      "issuer": "의사신문"
+    },
+    {
+      "targetDate": "2009-04-28",
+      "type": "기사",
+      "text": "국립암센터,전이성 뇌암 재발 줄이는 새 수술법 개발",
+      "issuer": "후생신보"
+    },
+    {
+      "targetDate": "2009-04-28",
+      "type": "기사",
+      "text": "국립암센터,전이성 뇌암 재발 줄이는 새 수술법 개발",
+      "issuer": "헬스코리아 뉴스"
+    },
+    {
+      "targetDate": "2009-04-28",
+      "type": "기사",
+      "text": "국립암센터,전이성 뇌암 재발 줄이는 새 수술법 개발",
+      "issuer": "청년의사"
+    },
+    {
+      "targetDate": "2009-04-28",
+      "type": "기사",
+      "text": "국립암센터,전이성 뇌암 재발 줄이는 새 수술법 개발",
+      "issuer": "이헬스통신"
+    },
+    {
+      "targetDate": "2009-04-28",
+      "type": "기사",
+      "text": "국립암센터,전이성 뇌암 재발 줄이는 새 수술법 개발",
+      "issuer": "의학신문"
+    },
+    {
+      "targetDate": "2009-04-28",
+      "type": "기사",
+      "text": "국립암센터,전이성 뇌암 재발 줄이는 새 수술법 개발",
+      "issuer": "의약뉴스"
+    },
+    {
+      "targetDate": "2009-04-28",
+      "type": "기사",
+      "text": "국립암센터,전이성 뇌암 재발 줄이는 새 수술법 개발",
+      "issuer": "아주경제"
+    },
+    {
+      "targetDate": "2009-04-28",
+      "type": "기사",
+      "text": "국립암센터,전이성 뇌암 재발 줄이는 새 수술법 개발",
+      "issuer": "시사서울"
+    },
+    {
+      "targetDate": "2009-04-28",
+      "type": "기사",
+      "text": "국립암센터,전이성 뇌암 재발 줄이는 새 수술법 개발",
+      "issuer": "사이언스엠디뉴스"
+    },
+    {
+      "targetDate": "2009-04-28",
+      "type": "기사",
+      "text": "국립암센터,전이성 뇌암 재발 줄이는 새 수술법 개발",
+      "issuer": "메디포뉴스"
+    },
+    {
+      "targetDate": "2009-04-28",
+      "type": "기사",
+      "text": "국립암센터,전이성 뇌암 재발 줄이는 새 수술법 개발",
+      "issuer": "메디팜뉴스"
+    },
+    {
+      "targetDate": "2009-04-28",
+      "type": "기사",
+      "text": "국립암센터,전이성 뇌암 재발 줄이는 새 수술법 개발",
+      "issuer": "메디게이트"
+    },
+    {
+      "targetDate": "2009-04-28",
+      "type": "기사",
+      "text": "국립암센터,전이성 뇌암 재발 줄이는 새 수술법 개발",
+      "issuer": "머니투데이"
+    },
+    {
+      "targetDate": "2009-04-28",
+      "type": "기사",
+      "text": "국립암센터,전이성 뇌암 재발 줄이는 새 수술법 개발",
+      "issuer": "매일경제신문"
+    },
+    {
+      "targetDate": "2009-04-28",
+      "type": "기사",
+      "text": "국립암센터,전이성 뇌암 재발 줄이는 새 수술법 개발",
+      "issuer": "데일리 메디"
+    },
+    {
+      "targetDate": "2009-04-28",
+      "type": "기사",
+      "text": "국립암센터,전이성 뇌암 재발 줄이는 새 수술법 개발",
+      "issuer": "뉴시스"
+    },
+    {
+      "targetDate": "2009-04-28",
+      "type": "기사",
+      "text": "국립암센터,전이성 뇌암 재발 줄이는 새 수술법 개발",
+      "issuer": "국민일보"
+    },
+    {
+      "targetDate": "2009-04-28",
+      "type": "기사",
+      "text": "국립암센터,전이성 뇌암 재발 줄이는 새 수술법 개발",
+      "issuer": "경인일보"
+    },
+    {
+      "targetDate": "2009-04-27",
+      "type": "기사",
+      "text": "국립암센터, 뇌전이암 新수술법 개발",
+      "issuer": "E-헬스통신"
+    },
+    {
+      "targetDate": "2009-04-27",
+      "type": "기사",
+      "text": "재발줄인 전이성뇌암 새수술법 개발 '화제'",
+      "issuer": "보건타임즈"
+    },
+    {
+      "targetDate": "2009-04-27",
+      "type": "기사",
+      "text": "전이성 뇌암, 새 치료법으로 재발 최소화",
+      "issuer": "보건신문"
+    },
+    {
+      "targetDate": "2009-04-27",
+      "type": "기사",
+      "text": "전이성 뇌암, 재발 줄인다!",
+      "issuer": "YTN"
+    }
+  ]
+}
