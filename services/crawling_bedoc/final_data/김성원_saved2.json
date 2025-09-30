@@ -1,0 +1,74 @@
+{
+  "hospital_cid": 90,
+  "bedoc_id": "A5364",
+  "bedoc_hospitalsite": "http://www.drh.co.kr",
+  "bedoc_doctorname": "김성원",
+  "bedoc_deptname": "외과",
+  "bedoc_hospitalname": "대림성모병원",
+  "hospital_name": "대림성모병원",
+  "aiga_hid": "H11KR-11000011",
+  "hospital_site": "https://www.drh.co.kr/new/front/?g_page=center&m_page=center01_02&act=center.staff&C_IDX=1",
+  "site_type": "list",
+  "hospital_addr": "서울특별시 영등포구 시흥대로 657, (대림동, 대림성모병원)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.drh.co.kr/new/front/?g_page=center&m_page=center01_02&act=center.staff&C_IDX=1&doctorName=%EA%B9%80%EC%84%B1%EC%9B%90&depthName=%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "specialty": "유방암, 유전성유방암, 양성유방질환, 유방성형 및 재건술, 유방암 검진",
+  "학력": [
+    {
+      "content": "서울대학교 의과대학 졸업 (의학사)"
+    },
+    {
+      "content": "서울대학교 대학원 의학과 (석사)"
+    },
+    {
+      "content": "서울대학교 대학원 의학과 (박사)"
+    }
+  ],
+  "경력": [
+    {
+      "content": "서울대학교병원 외과 전공의"
+    },
+    {
+      "content": "서울대학교병원 외과 유방내분비분과 임상강사"
+    },
+    {
+      "content": "Memorial Sloan-Kettering cancer center USA 외과 유방분과 임상강사 수료"
+    },
+    {
+      "content": "분당서울대학교병원 외과 부교수"
+    },
+    {
+      "content": "대한의학유전학회 임상유전학 인증의"
+    }
+  ],
+  "학술": [
+    {
+      "content": "대한암협회 집행이사"
+    },
+    {
+      "content": "유방건강재단 이사"
+    },
+    {
+      "content": "대한의학유전학회 유전상담위원회 위원장"
+    },
+    {
+      "content": "2015 GBCC 홍보위원장"
+    },
+    {
+      "content": "한국인 유전성유방암 연구 총괄 책임연구자"
+    },
+    {
+      "content": "현)한국유방암학회 부회장"
+    },
+    {
+      "content": "대한외과학회 정회원"
+    },
+    {
+      "content": "한국유방암학회 정회원"
+    }
+  ]
+}

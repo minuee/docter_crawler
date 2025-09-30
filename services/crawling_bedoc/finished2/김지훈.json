@@ -1,0 +1,64 @@
+{
+  "hospital_cid": 132,
+  "bedoc_id": "A0117",
+  "bedoc_hospitalsite": "http://www.emc.ac.kr/default.asp",
+  "bedoc_doctorname": "김지훈",
+  "bedoc_deptname": "외과",
+  "bedoc_hospitalname": "을지대병원",
+  "hospital_name": "서울아산병원",
+  "aiga_hid": "H01KR-11000010",
+  "hospital_site": "https://www.amc.seoul.kr/asan/staff/base/staffBaseInfoDetail.do;asanJSESSIONID=w1xL6fLv3h3T5bnwBcVW61MkF7rBoh8LOBGmtQyuvlZkyOUupexF!322559586?drEmpId=N1FleDBwMXJPWGwxTG9qL0x4eTEydz09&pageIndex=1&searchHpCd=&tabIndex1=3&tabIndex2=",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 송파구 올림픽로43길 88, 서울아산병원 (풍납동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "profileUrl": "https://www.amc.seoul.kr/asan/file/imageView.do?fileId=F000000623645_YNEfiZ",
+  "isAttend": true,
+  "학력": [
+    {
+      "content": "충북대학교 의학 박사"
+    },
+    {
+      "content": "충남대학교 의학 석사"
+    },
+    {
+      "content": "단국대학교 의학 학사"
+    }
+  ],
+  "경력": [
+    {
+      "content": "서울아산병원 간이식ㆍ간담도외과 부교수"
+    },
+    {
+      "content": "국립암센터 부교수(책임연구원)"
+    },
+    {
+      "content": "대전을지대학교병원 조교수"
+    },
+    {
+      "content": "충북대학교병원 임상조교수"
+    },
+    {
+      "content": "분당서울대학교병원 전임의"
+    },
+    {
+      "content": "서울대학교병원 전공의(레지던트)"
+    },
+    {
+      "content": "서울아산병원 수련의(인턴)"
+    }
+  ],
+  "specialty": "간암, 간내 담도암 및 간질환 복강경간절제술, 로봇간절제술",
+  "논문": [
+    "Novel Traction Method by STRATAFIX Symmetric (Pulley Maneuver) in Laparoscopic Hepatectomy",
+    "Laparoscopic Left Hemihepatectomy Using the Hilar Plate-First Approach (with Video)",
+    "Laparoscopic Left Hemihepatectomy using the Transfissural Glissonean Approach Through the Main Portal Fissure",
+    "Laparoscopic left hemihepatectomy using the extrahepatic Glissonean approach: Technical tips for entering gaps",
+    "Tailored Strategy for Dissecting the Glissonean Pedicle in Laparoscopic Right Posterior Sectionectomy: Extrahepatic, Intrahepatic, and Transfissural Glissonean Approaches (with Video)",
+    "Author's Reply: Pure Laparoscopic Hepatectomy for Tumors Close to the Major Hepatic Veins: Intraparenchymal Identification of the Major Hepatic Veins using the Ventral Approach",
+    "Laparoscopic Right Hemihepatectomy Using the Glissonean Approach: Detachment of the Hilar Plate (with Video)",
+    "Pure Laparoscopic Hepatectomy for Tumors Close to the Major Hepatic Veins: Intraparenchymal Identification of the Major Hepatic Veins using the Ventral Approach",
+    "Round Ligament Traction Method During Laparoscopic Hemihepatectomy (with Video)",
+    "Tailored Strategy for Dissecting the Glissonean Pedicle in Laparoscopic Right Anterior Sectionectomy: The Extrahepatic, Intrahepatic, and Transfissural Glissonean Approaches (with Video)"
+  ]
+}

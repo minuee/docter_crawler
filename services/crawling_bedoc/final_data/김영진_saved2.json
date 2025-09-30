@@ -1,0 +1,92 @@
+{
+  "hospital_cid": 109,
+  "bedoc_id": "A0966",
+  "bedoc_hospitalsite": "http://www.scys.co.kr",
+  "bedoc_doctorname": "김영진",
+  "bedoc_deptname": "성형외과",
+  "bedoc_hospitalname": "신촌연세병원",
+  "hospital_name": "신촌연세병원",
+  "aiga_hid": "H21KR-11000136",
+  "hospital_site": "http://www.scys.co.kr/center/center01.html",
+  "site_type": "list",
+  "hospital_addr": "서울특별시 마포구 서강로 110, 지2층~6층 (신수동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "http://www.scys.co.kr/center/center01.html?doctorName=%EA%B9%80%EC%98%81%EC%A7%84&depthName=%EC%84%B1%ED%98%95%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "profileUrl": "http://www.scys.co.kr/common/doctor/16887731472015.png",
+  "specialty": "수지접합클리닉, 수부클리닉",
+  "학력": [
+    {
+      "date": null,
+      "content": "연세대학교 의과대학 졸업"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "연세대학교 성형외과 전문의 수료"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 수부외과 전임의"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 세브란스병원 성형외과 외래교수"
+    },
+    {
+      "date": null,
+      "content": "고려대/가톨릭대/이대 외래교수"
+    },
+    {
+      "date": null,
+      "content": "대한성형외과학회 이사"
+    },
+    {
+      "date": null,
+      "content": "대한수부외과학회 이사"
+    }
+  ],
+  "언론": [
+    {
+      "date": "2025.09.29",
+      "content": "명절 이후 손목·손가락 통증 증가, 대표적인 수부질."
+    },
+    {
+      "date": "2025.08.25",
+      "content": "손가락 절단 사고, 접합 성공률 높이려면 ‘적절한."
+    },
+    {
+      "date": "2025.07.11",
+      "content": "손목터널증후군·손목 건초염 등 수부질환 조기 진단"
+    },
+    {
+      "date": "2025.06.05",
+      "content": "성공적인 미세수지접합술, 올바른 응급처치부터 시"
+    },
+    {
+      "date": "2025.04.07",
+      "content": "현대인 3대 수부질환 ‘손목터널증후군·방아쇠수지"
+    },
+    {
+      "date": "2025.03.06",
+      "content": "낙상 시 손으로 꽈당…‘손목 골절’ 꼭 확인해야"
+    },
+    {
+      "date": "2025.01.24",
+      "content": "다양한 수부질환, 수부외과 전문의에게"
+    },
+    {
+      "date": "2025.01.14",
+      "content": "손목터널증후군·방아쇠수지 등 일상 괴롭히는 수부..."
+    },
+    {
+      "date": "2024.09.14",
+      "content": "아는 것이 힘…추석 대비 ‘3대 수부질환’ 바로 알..."
+    }
+  ],
+  "isAttend": true
+}

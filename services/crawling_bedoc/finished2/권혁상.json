@@ -1,0 +1,472 @@
+{
+  "hospital_cid": 35,
+  "bedoc_id": "A0725",
+  "bedoc_hospitalsite": "http://www.cmcujb.or.kr/",
+  "bedoc_doctorname": "권혁상",
+  "bedoc_deptname": "내분비내과",
+  "bedoc_hospitalname": "여의도성모병원",
+  "hospital_name": "가톨릭대학교 여의도성모병원",
+  "aiga_hid": "H11KR-11000001",
+  "hospital_site": "https://www.cmcsungmo.or.kr/page/doctor/26/D0000902",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 영등포구 63로 10, 여의도성모병원 (여의도동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "doctorSiteUrl": "https://www.cmcsungmo.or.kr/page/doctor/26/D0000902",
+  "profileUrl": "https://www.cmcsungmo.or.kr/api/attach/view/doctor/D0000902/profile/1",
+  "학력": [
+    {
+      "date": "1987~1993",
+      "content": "가톨릭대학교 의학 학사"
+    },
+    {
+      "date": "1995~2002",
+      "content": "가톨릭대학교 내과학 석사"
+    },
+    {
+      "date": "2002~2005",
+      "content": "가톨릭대학교 내과학 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "2014~현재",
+      "content": "여의도성모병원 내분비내과 교수"
+    },
+    {
+      "date": "2024~현재",
+      "content": "가톨릭대학교 의과대학 내과학교실 내분비학과장"
+    },
+    {
+      "date": "2025~현재",
+      "content": "가톨릭대학교 산학협력단 산학부단장"
+    },
+    {
+      "date": "2021~2025",
+      "content": "연구부원장, 임상의학연구소장"
+    },
+    {
+      "date": "2017~2021",
+      "content": "여의도성모병원 PI실장"
+    },
+    {
+      "date": "2015~2017",
+      "content": "여의도성모병원 수련교육부장"
+    },
+    {
+      "date": "2013~2015",
+      "content": "여의도성모병원 임상시험센터소장"
+    },
+    {
+      "date": "2009~2014",
+      "content": "여의도성모병원 내분비내과 부교수"
+    },
+    {
+      "date": "2005~2009",
+      "content": "강남성모병원 내분비내과 조교수"
+    },
+    {
+      "date": "2003~2005",
+      "content": "강남성모병원 내분비내과 전임강사"
+    },
+    {
+      "date": "2001~2003",
+      "content": "강남성모병원 내분비내과 임상강사"
+    },
+    {
+      "date": "1998~2001",
+      "content": "대한민국 육군 군의관(27사단 및 수도통합병원 근무)"
+    },
+    {
+      "date": "1994~1998",
+      "content": "강남성모병원 내과 레지던트"
+    },
+    {
+      "date": "1993~1994",
+      "content": "강남성모병원 인턴"
+    },
+    {
+      "date": "2007~2008",
+      "content": "미국에모리대학교 심혈관질환연구센터 연수"
+    }
+  ],
+  "수상": [
+    {
+      "date": "2025",
+      "content": "2025년 비만예방의 날 보건복지부 장관 표창"
+    },
+    {
+      "date": "2024",
+      "content": "대한내과학회 학술상 수상"
+    },
+    {
+      "date": "2023",
+      "content": "가톨릭의대 연구업적 우수교원상(성의논문 피인용상)"
+    },
+    {
+      "date": "2015",
+      "content": "아세아 오세아니아 비만학회 우수연제상 수상"
+    },
+    {
+      "date": "2007",
+      "content": "일본당뇨병학회 우수연제상 수상"
+    },
+    {
+      "date": "2006",
+      "content": "대한내분비학회 우수연제상 수상"
+    },
+    {
+      "date": "2006",
+      "content": "대한내과학회 학술상 수상"
+    },
+    {
+      "date": "2005",
+      "content": "대한내과학회 우수논문상 수상"
+    },
+    {
+      "date": "2005",
+      "content": "대한내분비학회 젊은 연구자상 수상"
+    }
+  ],
+  "학술": [
+    {
+      "date": "현재~현재",
+      "content": "대한내과학회, 대한내분비학회, 대한당뇨병학회, 대한비만학회, 미국당뇨병학회 정회원"
+    },
+    {
+      "date": "2024~현재",
+      "content": "대한당뇨병학회 간행이사 겸 Editor in Chief in Diabetes Metabolism Journal"
+    },
+    {
+      "date": "2020~현재",
+      "content": "Ethics Editor in Journal of Obesity & Metabolic Syndrome"
+    },
+    {
+      "date": "2025~현재",
+      "content": "대한남성건강갱년기학회 부회장"
+    },
+    {
+      "date": "2025~현재",
+      "content": "대한내분비학회 행정이사"
+    },
+    {
+      "date": "2025~현재",
+      "content": "대한비만학회 재무이사"
+    },
+    {
+      "date": "2025~현재",
+      "content": "한국지질동맥경화학회 무임소이사"
+    },
+    {
+      "date": "2025~현재",
+      "content": "대한심뇌혈관질환예방학회 무임소이사"
+    },
+    {
+      "date": "2021~현재",
+      "content": "심장대사증후군학회 무임소이사"
+    },
+    {
+      "date": "2023~2024",
+      "content": "대한내분비학회 재무이사"
+    },
+    {
+      "date": "2023~2024",
+      "content": "한국지질동맥경화학회 감사"
+    },
+    {
+      "date": "2023~2024",
+      "content": "대한심뇌혈관질환예방학회 부회장"
+    },
+    {
+      "date": "2023~2024",
+      "content": "대한비만학회 교과서 TFT팀장"
+    },
+    {
+      "date": "2022~2023",
+      "content": "대한당뇨병학회 언론홍보이사"
+    },
+    {
+      "date": "2022~2023",
+      "content": "Journal of Korean Medical Science Section Editor"
+    },
+    {
+      "date": "2021~2022",
+      "content": "대한내분비학회 총무이사"
+    },
+    {
+      "date": "2020~2021",
+      "content": "대한당뇨병학회 수련이사"
+    },
+    {
+      "date": "2019~2020",
+      "content": "대한비만학회 학술이사"
+    },
+    {
+      "date": "2019~2020",
+      "content": "대한내분비학회 국제협력이사"
+    },
+    {
+      "date": "2018~2020",
+      "content": "대한심뇌혈관질환예방학회 대사및당뇨병위원장"
+    },
+    {
+      "date": "2019~2020",
+      "content": "심장대사증후군학회 당뇨이사"
+    },
+    {
+      "date": "2015~2018",
+      "content": "대한비만학회 총무이사"
+    },
+    {
+      "date": "2017~2018",
+      "content": "대한내분비학회 학술위원, 고시위원"
+    },
+    {
+      "date": "2015~2016",
+      "content": "한국지질동맥경화학회 홍보이사"
+    },
+    {
+      "date": "2014~2015",
+      "content": "대한당뇨병학회 홍보이사"
+    },
+    {
+      "date": "2012~2013",
+      "content": "대한당뇨병학회 총무이사"
+    },
+    {
+      "date": "2010~2010",
+      "content": "세계당뇨연맹-아시아태평양지역 학술대회 조직위원회 사무부총장"
+    },
+    {
+      "date": "2010~2010",
+      "content": "세계당뇨면역학술대회 조직위원회 사무부총장"
+    },
+    {
+      "date": "",
+      "content": "대한당뇨병학회 학술위원, 연구위원, 교육위원, 수련위원, 부총무, 신경병증연구회 간사 역임"
+    },
+    {
+      "date": "",
+      "content": "대한내분비학회 수련위원, 임상시험위원 역임"
+    },
+    {
+      "date": "",
+      "content": "한국지질동맥경화학회 교육위원 역임"
+    },
+    {
+      "date": "",
+      "content": "대한비만학회 연구위원 및 간사 역임"
+    }
+  ],
+  "isAttend": false,
+  "논문": [
+    "Sodium–Glucose Cotransporter 2 Inhibitors and Risk of Retinal Vein Occlusion Among Patients With Type 2 Diabetes: A Propensity Score–Matched Cohort Study",
+    "Cumulative exposure to impaired fasting glucose and future risk of type 2 diabetes mellitus",
+    "Renal outcomes and all-cause death associated with sodium-glucose co-transporter-2 inhibitors versus other glucose-lowering drugs (CVD-REAL 3 Korea).",
+    "Effects of DA-9801 on the inflammation and apoptosis induced by angiotensin II in human dermal microvascular endothelial cells",
+    "Gemigliptin Inhibits Interleukin-1 beta-Induced Endothelial- Mesenchymal Transition via Canonical-Bone Morphogenetic Protein Pathway",
+    "Cholesterol levels and development of cardiovascular disease in Koreans with type 2 diabetes mellitus and without pre-existing cardiovascular disease",
+    "BMI, Weight Change, and Dementia Risk in Patients With New-Onset Type 2 Diabetes: A Nationwide Cohort Study",
+    "Blood Pressure and Development of Cardiovascular Disease in Koreans With Type 2 Diabetes Mellitus",
+    "The Association between Pancreatic Steatosis and Diabetic Retinopathy in Type 2 Diabetes Mellitus Patients",
+    "Impact of weight changes on the incidence of diabetes mellitus: a Korean nationwide cohort study",
+    "Insulin Resistance Distribution and Cut-Off Value in Koreans from the 2008-2010 Korean National Health and Nutrition Examination Survey",
+    "Serum bone morphogenic protein-4 contributes to discriminating coronary artery disease severity",
+    "Acute Myocardial Infarction Is a Risk Factor for New Onset Diabetes in Patients with Coronary Artery Disease",
+    "The association between ectopic fat in the pancreas and subclinical atherosclerosis in type 2 diabetes",
+    "Higher levels of small dense low-density lipoprotein (LDL) are associated with cardiac autonomic neuropathy in patients with Type 2 diabetes",
+    "Usefulness of Albuminuria as Predictor for Coronary Artery Stenosis, Regardless of Estimated Glomerular Filtration Rate, in Patients With Type 2 Diabetes Mellitus",
+    "All-cause and cause-specific mortality risks in individuals with diabetes living alone: A large-scale population-based cohort study",
+    "Germline Mutations and Phenotypic Associations in Korean Patients With Pheochromocytoma and Paraganglioma: A Multicenter Study and Literature Review",
+    "Fenofibrate to prevent amputation and reduce vascular complications in patients with diabetes: FENO-PREVENT",
+    "Association between serum uric acid levels and dietary fiber intake in adults: the Korea national health and nutrition examination survey (KNHANES VII, 2016-2018)",
+    "Metabolic dysfunction-associated fatty liver disease increases the risk of type 2 diabetes mellitus in young Korean adults",
+    "A multicentre, double-blind, placebo-controlled, randomized, parallel comparison, phase 3 trial to evaluate the efficacy and safety of pioglitazone add-on therapy in type 2 diabetic patients treated with metformin and dapagliflozin",
+    "Body Weight Variability and Risk of Suicide Mortality: A Nationwide Population-Based Study",
+    "Diabetes severity and the risk of depression: A nationwide population-based study",
+    "Weight change in patients with new-onset type 2 diabetes mellitus and its association with remission: Comprehensive real-world data",
+    "Repeated detection of non-alcoholic fatty liver disease increases the incidence risk of type 2 diabetes in young adults",
+    "Association between Smoking Status and the Risk of Hip Fracture in Patients with Type 2 Diabetes: A Nationwide Population-Based Study",
+    "Long-Term Cumulative Exposure to High γ-Glutamyl Transferase Levels and the Risk of Cardiovascular Disease: A Nationwide Population-Based Cohort Study",
+    "Optimal LDL cholesterol levels in young and old patients with type 2 diabetes for secondary prevention of cardiovascular diseases are different",
+    "Case 16: A 75-Year-Old Man With Macroglossia and Hypercalcemia",
+    "The Risk of Shoulder Adhesive Capsulitis in Individuals with Prediabetes and Type 2 Diabetes Mellitus : A Longitudinal Nationwide Population-Based Study",
+    "Diabetes Mellitus in the Elderly Adults in Korea: Based on Data from the Korea National Health and Nutrition Examination Survey 2019 to 2020",
+    "Risk of Pancreatic Cancer and Use of Dipeptidyl Peptidase 4 Inhibitors in Patients with Type 2 Diabetes: A Propensity Score-Matching Analysis",
+    "Association between regular physical activity and lower incidence of colorectal cancer in patients with diabetes mellitus: a nationwide cohort study",
+    "Physical activity and reduced risk of fracture in thyroid cancer patients after thyroidectomy - a nationwide cohort study",
+    "Cumulative exposure to metabolic syndrome increases thyroid cancer risk in young adults: a population-based cohort study",
+    "Association of Metabolic Syndrome Components and Nutritional Status with Kidney Cancer in Young Adult Population: A Nationwide Population-Based Cohort Study in Korea",
+    "Association of Body Mass Index and Fracture Risk Varied by Affected Bones in Patients with Diabetes: A Nationwide Cohort Study (Diabetes Metab J 2023;47: 242-54)",
+    "Persistence with Denosumab in Male Osteoporosis Patients: A Real-World, Non-Interventional Multicenter Study",
+    "Cumulative exposure to metabolic syndrome in a national population-based cohort of young adults and sex-specific risk for type 2 diabetes",
+    "Association of Body Mass Index and Fracture Risk Varied by Affected Bones in Patients with Diabetes A Nationwide Cohort Study",
+    "Alcohol-induced increase in BMP levels promotes fatty liver disease in male prediabetic stage Otsuka Long-Evans Tokushima Fatty rats",
+    "Bone mineral density and lipid profiles in older adults: a nationwide cross-sectional study",
+    "Sodium-glucose cotransporter 2 inhibitors for non-alcoholic fatty liver disease in patients with type 2 diabetes mellitus: A nationwide propensity-score matched cohort study",
+    "A Real-World Study of Long-Term Safety and Efficacy of Lobeglitazone in Korean Patients with Type 2 Diabetes Mellitus",
+    "The efficacy of denosumab in Korean male patients with osteoporosis",
+    "Roles of Follicle-Stimulating Hormone on Bone Metabolism in Late Postmenopausal Women",
+    "Weight change and the risk of hip fractures in patients with type 2 diabetes: a nationwide cohort study",
+    "Effect of follow-up raloxifene therapy after denosumab discontinuation in postmenopausal women",
+    "Effects of exercise initiation and smoking cessation after new-onset type 2 diabetes mellitus on risk of mortality and cardiovascular outcomes",
+    "Differential Diagnosis of Thyrotoxicosis by Machine Learning Models with Laboratory Findings",
+    "Diabetes Fact Sheet in Korea 2021",
+    "Repeated Low High-Density Lipoprotein Cholesterol and the Risk of Thyroid Cancer: A Nationwide Population-Based Study in Korea",
+    "Not Control but Conquest: Strategies for the Remission of Type 2 Diabetes Mellitus",
+    "Response to Comment on Lee et al. Sodium-Glucose Cotransporter 2 Inhibitors and Risk of Retinal Vein Occlusion Among Patients With Type 2 Diabetes: A Propensity Score-Matched Cohort Study. Diabetes Care 2021; 44:2419-2426",
+    "Comparison of fracture risk between type 1 and type 2 diabetes: a comprehensive real-world data",
+    "Long-Term Glycaemic Durability of Early Combination Therapy Strategy versus Metformin Monotherapy in Korean Patients with Newly Diagnosed Type 2 Diabetes Mellitus",
+    "Sodium-Glucose Cotransporter 2 Inhibitors and Risk of Retinal Vein Occlusion Among Patients With Type 2 Diabetes: A Propensity Score-Matched Cohort Study",
+    "Frequency of Exposure to Impaired Fasting Glucose and Risk of Mortality and Cardiovascular Outcomes",
+    "Association of Dynamic Changes in Metabolic Syndrome Status with the Risk of Parkinson's Disease: A Nationwide Cohort Study",
+    "Framingham risk score assessment in subjects with pre-diabetes and diabetes: A cross-sectional study in Korea",
+    "Comparison of the Effects of Various Antidiabetic Medication on Bone Mineral Density in Patients with Type 2 Diabetes Mellitus",
+    "Weight change and microvascular outcomes in patients with new-onset diabetes: a nationwide cohort study",
+    "Weight change and microvascular outcomes in patients with newonset diabetes: a nationwide cohort study.",
+    "Cumulative exposure to impaired fasting glucose and future risk of type 2 diabetes mellitus",
+    "Effect of Dapagliflozin as an Add-on Therapy to Insulin on the Glycemic Variability in Subjects with Type 2 Diabetes Mellitus (DIVE): A Multicenter, Placebo-Controlled, Double-Blind, Randomized Study",
+    "Renal outcomes and all-cause death associated with sodium-glucose co-transporter-2 inhibitors versus other glucose-lowering drugs (CVD-REAL 3 Korea)",
+    "Changes in metabolic syndrome status affect the incidence of end-stage renal disease in the general population: a nationwide cohort study",
+    "Changes in metabolic syndrome status affect the incidence of end-stage renal disease in the general population: a nationwide cohort study",
+    "Effects of DA-9801 on the inflammation and apoptosis induced by angiotensin II in human dermal microvascular endothelial cells",
+    "COVID-19 and diabetes mellitus: from pathophysiology to clinical management",
+    "Effect of Variability in Blood Pressure, Glucose and Cholesterol Concentrations, and Body Weight on Emergency Hospitalization and 30-Day Mortality in the General Population",
+    "Exposure-weighted scoring for metabolic syndrome and the risk of myocardial infarction and stroke: a nationwide population-based study",
+    "Efficacy and safety of evogliptin treatment in patients with type 2 diabetes: A multicentre, active-controlled, randomized, double-blind study with open-label extension (the EVERGREEN study)",
+    "Prepregnancy smoking and the risk of gestational diabetes requiring insulin therapy",
+    "γ-Linolenic Acid versus α-Lipoic Acid for Treating Painful Diabetic Neuropathy in Adults: A 12-Week, Double-Placebo, Randomized, Noninferiority Trial",
+    "Weight change and microvascular outcomes in patients with new-onset diabetes: a nationwide cohort study",
+    "Combinations of metabolic syndrome components and the risk of type 2 diabetes mellitus: A nationwide cohort study",
+    "Consistency of the Gycation Gap with the Hemoglobin Glycation Index Derived from a Continous Glucose Monitoring System",
+    "A model to predict risk of stroke in middle-aged adults with type 2 diabetes generated from a nationwide population-based cohort study in Korea",
+    "Changes in metabolic syndrome and its components and the risk of type 2 diabetes: a nationwide cohort study.",
+    "Changes in metabolic syndrome and its components and the risk of type 2 diabetes: a nationwide cohort study",
+    "Metformin Treatment for Patients with Diabetes and Chronic Kidney Disease: A Korean Diabetes Association and Korean Society of Nephrology Consensus Statement",
+    "Efficacy and Safety of Omega-3 Fatty Acids in Patients Treated with Statins for Residual Hypertriglyceridemia: A Randomized, Double-Blind, Placebo-Controlled Clinical Trial",
+    "Effect of bisphosphonate on the prevention of bone loss in patients with gastric cancer after gastrectomy: A randomized controlled trial",
+    "Age-specific diabetes risk by the number of metabolic syndrome components: a Korean nationwide cohort study",
+    "2019 Clinical Practice Guidelines for Type 2 Diabetes Mellitus in Korea",
+    "Weight change and mortality and cardiovascular outcomes in patients with new-onset diabetes mellitus: a nationwide cohort study",
+    "약제에 의한 당뇨병 예방",
+    "High hemoglobin levels are associated with decreased risk of diabetic retinopathy in Korean type 2 diabetes",
+    "House dust mite and Cockroach specific Immunoglobulin E sensitization is associated with diabetes mellitus in the adult Korean population",
+    "Prevalence and Clinical Characteristics of Dyslipidemia in Koreans",
+    "Empagliflozin Cardiovascular Outcome Event Trial in Type 2 Diabetes Mellitus Patients (EMPA-REG OUTCOME) 연구: 실제 임상에서 처방 패턴이 변할 것인가?",
+    "High glucose and palmitate increases bone morphogenic protein 4 expression in human endothelial cells",
+    "우리나라 당뇨병의 현황과 중재연구의 필요성",
+    "Effect of maternal age at childbirth on insulin resistance: the 2010 Korean National Health and Nutrition Examination Survey",
+    "Identifying subgroups of obesity using the product of triglycerides and glucose: the Korea National Health and Nutrition Examination Survey, 2008-2010",
+    "Clinical utility of serum beta-2-microglobulin as a predictor of diabeticcomplications in patients with type 2 diabetes without renal impairment",
+    "Long-acting GLP-1 receptor agonist",
+    "미국당뇨병학회(ADA) 2014년 진료 가이드라인 리뷰",
+    "Association between Urinary Albumin Excretion and Intraocular Pressure in Type 2 Diabetic Patients without Renal Impairment",
+    "Changes in Serum Levels of Bone Morphogenic Protein 4 and Inflammatory Cytokines after Bariatric Surgery in Severely Obese Korean Patients with Type 2 Diabetes",
+    "글루카곤양펩티드-1(GLP-1) 유사체의 임상효과",
+    "β-Cell dysfunction and insulin resistance in gestational glucose intolerance",
+    "새로운 혈당강하제의 기전 및 효과",
+    "Influence of Visceral Adiposity on Cardiovascular Autonomic Neuropathy in Patients with Type 2 Diabetes Mellitus",
+    "New therapeutic agents for glycemic control in diabetes mellitus",
+    "Serum BMP-4 levels in relation to arterial stiffness and carotid atherosclerosis in patietns with type 2 diabetes",
+    "당뇨병성 케톤산증으로 오인된 아세톤 중독 1예",
+    "Identifying metabolically obese but normal-weight (MONW) individuals in a nondiabetic Korean population: the Chungju Metabolic disease Cohort (CMC) study",
+    "Prevalence and Characteristics of Metabolically Obese but Normal Weight and Metabolically Healthy but Obese in Middle-aged Koreans: the Chungju Metabolic Disease Cohort (CMC) Study",
+    "Diabetic retinopathy is associated with subclinical atherosclerosis in newly diagnosed type 2 diabetes mellitus",
+    "당뇨병성위장관 자율신경병증",
+    "당뇨병과 지방간",
+    "당뇨병성 신경병증",
+    "Insulin resistance and inflammation may have an additional role in the link between cystatin C and cardiovascular disease in type 2 diabetes mellitus patients",
+    "흔히 접하는 인슐린처방시의 문제점 및 그 해결",
+    "당뇨병전기의 생활습관교정 치료",
+    "당뇨병성 심혈관계 합병증과 관련된 생체표지자의 임상적 의의",
+    "당뇨병성 이상지질혈증",
+    "제2형 당뇨병환자에서 심혈관질환 예측인자로서 혈중 cystatin C의 유용성",
+    "Pancytopenia and secondary myelofibrosis could be induced by primary hyperparathyroidism",
+    "Acromegaly Associated with Type 2 Diabetes Showing Normal IGF-1 Levels under Poorly Controlled Glycemia",
+    "한 환자에서 동시에 발견된 갑상선 수질암과 유두암",
+    "False-positive iodine uptake in thymic hyperplasia on diagnostic I-123 whole-body scan after total thyroidectomy"
+  ],
+  "저서": [
+    {
+      "date": "2013 Dec",
+      "content": "당뇨병성 신경병증",
+      "issuer": "대한당뇨병학회"
+    },
+    {
+      "date": "2013 Jan",
+      "content": "(2013) 제7회 가톨릭대학교 내과 연수강좌",
+      "issuer": "신원의학서적"
+    },
+    {
+      "date": "2012 Jun",
+      "content": "당뇨인에게 중요한 중성지방이 뭔가요?",
+      "issuer": "크레너"
+    },
+    {
+      "date": "2011 Jul",
+      "content": "당뇨병성 신경병증 진료지침, 제3판",
+      "issuer": "대한당뇨병학회"
+    },
+    {
+      "date": "2011 Jun",
+      "content": "임신·출산·신생아 관리의 실용적 접근",
+      "issuer": "여문각"
+    },
+    {
+      "date": "2010 Nov",
+      "content": "스타틴 임상연구의 근거",
+      "issuer": "한국지질·동맥경화학회 치료지침 위원회"
+    },
+    {
+      "date": "2009 Jan",
+      "content": "대사증후군",
+      "issuer": "21세기 당뇨병 혈관연구소"
+    },
+    {
+      "date": "2007 Nov",
+      "content": "당뇨병 진료지침",
+      "issuer": "대한당뇨병학회"
+    },
+    {
+      "date": "2007 Nov",
+      "content": "당뇨병성 신경병증 진료지침",
+      "issuer": "대한당뇨병학회"
+    },
+    {
+      "date": "2018 Mar",
+      "content": "당뇨병학",
+      "issuer": "범문에듀케이션"
+    },
+    {
+      "date": "2018 Sep",
+      "content": "Special Articles for Primary Care Physician",
+      "issuer": "주식회사 후생신보사"
+    },
+    {
+      "date": "2019 Jan",
+      "content": "심뇌혈관질환 예방지침서",
+      "issuer": "대한심뇌혈관질환예방학회"
+    },
+    {
+      "date": "2020 Nov",
+      "content": "Textbook of Geriatric Medicine and Gerontolgoy",
+      "issuer": "군자출판사"
+    },
+    {
+      "date": "2022 Dec",
+      "content": "임상영역에서의 성차의학",
+      "issuer": "㈜에스앤씨퍼블리싱"
+    },
+    {
+      "date": "2023 Sep",
+      "content": "당뇨병학",
+      "issuer": "범문에듀케이션"
+    },
+    {
+      "date": "2024 Jun",
+      "content": "Sex/Gender-Specific Medicine in Clinical Areas",
+      "issuer": "Springer Nature"
+    }
+  ]
+}

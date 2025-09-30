@@ -1,0 +1,45 @@
+{
+  "hospital_cid": 204,
+  "bedoc_id": "A8168",
+  "bedoc_hospitalsite": "https://daegu.dsmc.or.kr:49880/",
+  "bedoc_doctorname": "박남희",
+  "bedoc_deptname": "흉부외과",
+  "bedoc_hospitalname": "계명대동산병원",
+  "hospital_name": "계명대학교 의과대학",
+  "aiga_hid": "H01KR-47000002",
+  "hospital_site": "https://www.kmu-med.ac.kr/content/04class/teacher.php?doctor=51",
+  "site_type": "single",
+  "hospital_addr": "대구광역시 달서구 달구벌대로 1035, (신당동)",
+  "isExist": true,
+  "isSearchType": "html_ocr",
+  "error": null,
+  "doctorSiteUrl": "https://www.kmu-med.ac.kr/content/04class/teacher.php?doctor=51",
+  "profileUrl": "https://www.kmu-med.ac.kr/data/doctor/박남희 교수2.jpg",
+  "학력": [
+    {"date": "1992년 02월", "content": "계명대학교 의과대학 의학사"},
+    {"date": "1995년 02월", "content": "계명대학교 대학원 의학석사"},
+    {"date": "2002년 02월", "content": "영남대학교 대학원 의학박사"}
+  ],
+  "경력": [
+    {"date": null, "content": "계명대학교 의과대학 심장혈관흉부외과학교실 교수"},
+    {"date": "1992년 03월 ~ 1993년 02월", "content": "계명대학교 동산병원 인턴"},
+    {"date": "1993년 03월 ~ 1997년 02월", "content": "계명대학교 동산병원 흉부외과 레지던트"},
+    {"date": "1997년 02월 ~ 2000년 04월", "content": "군복무"},
+    {"date": "2000년 05월 ~ 2001년 02월", "content": "계명대학교 의과대학 흉부외과학교실 연구강사"},
+    {"date": "2001년 03월 ~ 2002년 02월", "content": "울산의대 현대중앙병원 전임의"},
+    {"date": "2002년 03월 ~ 2004년 02월", "content": "계명대학교 의과대학 흉부외과학교실 전임강사"},
+    {"date": "2004년 03월 ~ 2008년 02월", "content": "계명대학교 의과대학 흉부외과학교실 조교수"},
+    {"date": "2008년 03월 ~ 2014년 02월", "content": "계명대학교 의과대학 흉부외과학교실 부교수"}
+  ],
+  "학술": [
+    {"content": "대한흉부외과학회"}
+  ],
+  "논문/연구": [
+    "관상동맥질",
+    "대동맥질환",
+    "흉강경수술"
+  ],
+  "강의분야": [
+    "대동맥 질환"
+  ]
+}

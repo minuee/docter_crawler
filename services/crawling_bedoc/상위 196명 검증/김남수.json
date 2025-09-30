@@ -1,0 +1,57 @@
+{
+  "hospital_cid": 55,
+  "bedoc_id": "A1275",
+  "bedoc_hospitalsite": "http://guri.hyumc.com/index.asp?",
+  "bedoc_doctorname": "김남수",
+  "bedoc_deptname": "소아청소년과",
+  "bedoc_hospitalname": "한양대구리병원",
+  "hospital_name": "의정부을지대학교병원",
+  "aiga_hid": "H11KR-31000062",
+  "hospital_site": "https://m.uemc.ac.kr/dept/dept_pg01_03.jsp?dept=ABCAAA&doct=20250795",
+  "site_type": "single",
+  "hospital_addr": "경기도 의정부시 동일로 712, 을지대학교 의정부캠퍼스 및 부속병원 (금오동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "doctorSiteUrl": "https://m.uemc.ac.kr/dept/dept_pg01_03.jsp?dept=ABCAAA&doct=20250795",
+  "profileUrl": "http://www.uemc.ac.kr/upload/doctor/20250795_20250701090428.png",
+  "isAttend": true,
+  "specialty": "선천성심장질환, 소아심장질환, 가와사키병, 부정맥",
+  "학력": [
+    {
+      "content": "서울대학교 의과대학 학사"
+    },
+    {
+      "content": "서울대학교 의과대학원 석사"
+    },
+    {
+      "content": "서울대학교 의과대학원 박사"
+    }
+  ],
+  "경력": [
+    {
+      "content": "서울대학교병원 인턴"
+    },
+    {
+      "content": "서울대학교병원 레지던트"
+    },
+    {
+      "content": "부천 세종병원 소아과 과장"
+    },
+    {
+      "content": "한양대학교 의과대학 교수(소아청소년과 소아심장)"
+    },
+    {
+      "content": "일산차병원 소아청소년과 과장"
+    },
+    {
+      "content": "명지병원 소아청소년과 교수"
+    },
+    {
+      "content": "단원병원 소아청소년과 과장"
+    },
+    {
+      "content": "인하대병원 진료교수"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "hospital_cid": 42,
+  "bedoc_id": "A8217",
+  "bedoc_hospitalsite": "http://www.dumc.or.kr/isom",
+  "bedoc_doctorname": "김광기",
+  "bedoc_deptname": "신경과",
+  "bedoc_hospitalname": "동국대일산병원",
+  "hospital_name": "동국대학교 일산병원",
+  "aiga_hid": "H11KR-31000020",
+  "hospital_site": "http://www.dumc.or.kr/medical/department/doctorDetail.do?act=doctorDetail&nowPageInfo=ILSH&nowMenuId=&deptCode=NR&docCode=060135",
+  "site_type": "single",
+  "hospital_addr": "경기도 고양시 일산동구 동국로 27, (식사동, 동국대학교일산병원)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "http://www.dumc.or.kr/medical/department/doctorDetail.do?act=doctorDetail&nowPageInfo=ILSH&nowMenuId=&deptCode=NR&docCode=060135&doctorName=%EA%B9%80%EA%B4%91%EA%B8%B0&depthName=%EC%8B%A0%EA%B2%BD%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "학력": [
+    {
+      "date": null,
+      "content": "서울대학교 의과대학졸업"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "서울대학교병원 전공의"
+    },
+    {
+      "date": null,
+      "content": "서울대학교병원 전임의"
+    },
+    {
+      "date": null,
+      "content": "강원대학교병원 전임강사"
+    },
+    {
+      "date": null,
+      "content": "미국 신시내티의과대학 신경과 (Center for Neuroimaging, Epilepsy Center of University of Cincinnati)"
+    },
+    {
+      "date": null,
+      "content": "現 동국대학교의료원 기획처장"
+    }
+  ],
+  "논문": [
+    "Functional neuroanatomy of visual search with differential attentional demands: an fMRI study. Brain Res 2012;1475:49-61.",
+    "The effects of left or right hemispheric epilepsy on language networks investigated with semantic decision fMRI task and independent component analysis. Epilepsy Behav 2011;20:623-632.",
+    "Verbal working memory of Korean–English bilinguals: An fMRI study. Journal of Neurolinguistics 2011;24:1-13.",
+    "Semantic association investigated with functional MRI and independent component analysis. Epilepsy Behav 2011;20:613-622.",
+    "Lessons learned from a comparison of language localisation using fMRI and electrocortical mapping: case studies of neocortical epilepsy patients. Epileptic Disord 2011;13:368-374.",
+    "Postictal language function. Epilepsy Behav 2010;19:140-145.",
+    "A Case of Mirror Writing in a Patient with Corona Radiata Infarction. Dementia and Neurocognitive Disorders 2007; 6: 73-6 (corresponding author)",
+    "Prognostic Factors in Neocortical Epilepsy Surgery:Multivariate Analysis. Epilepsia 2006;47(3):574-579",
+    "Clinico-electrical Characteristics of Lateral Temporal Lobe Epilepsy;Anterior and Posterior Lateral Temporal Lobe Epilepsy. Journal of Clinical Nerurology 2006:2:118-125",
+    "Early Onset Hemiparesis with Epilepsy：Pattern of Surgical Outcome according to Ictal Onset Zone. Journal of Korean Epilepsy Society 2006; 10(1):51-55"
+  ],
+  "저서": [
+    {
+      "date": null,
+      "content": "임상간질학 (대한간질학회, 공저)"
+    },
+    {
+      "date": null,
+      "content": "신경과학 (대표저자 이광우, 공저)"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한신경과학회"
+    },
+    {
+      "date": null,
+      "content": "대한뇌전증(간질)학회"
+    },
+    {
+      "date": null,
+      "content": "대한치매학회"
+    },
+    {
+      "date": null,
+      "content": "대한수면학회/대한수면연구학회"
+    },
+    {
+      "date": null,
+      "content": "대한 임상신경생리학회"
+    }
+  ],
+  "specialty": "뇌전증(간질), 수면장애, 기억장애, 치매, 뇌전증클리닉, 수면장애·기억장애클리닉",
+  "profileUrl": "http://www.dumc.or.kr/common/images/doctor/A06016_IL.jpg",
+  "isAttend": true
+}

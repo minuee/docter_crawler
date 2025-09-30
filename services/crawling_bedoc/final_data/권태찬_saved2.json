@@ -1,0 +1,35 @@
+{
+  "hospital_cid": 34,
+  "bedoc_id": "A1274",
+  "bedoc_hospitalsite": "https://daegu.dsmc.or.kr:49880/",
+  "bedoc_doctorname": "권태찬",
+  "bedoc_deptname": "소아청소년과",
+  "bedoc_hospitalname": "계명대동산병원",
+  "hospital_name": "한빛아동병원",
+  "aiga_hid": "H21KR-37000047",
+  "hospital_site": "https://hanbit-i.co.kr/16",
+  "site_type": "list",
+  "hospital_addr": "경상북도 경주시 용담로 34,  (황성동)",
+  "isExist": null,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://hanbit-i.co.kr/16?doctorName=%EA%B6%8C%ED%83%9C%EC%B0%AC&depthName=%EC%86%8C%EC%95%84%EC%B2%AD%EC%86%8C%EB%85%84%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "specialty": "성인 심장, 소아 심장, 소아 호흡기, 예방접종, 영유아 검진",
+  "학력": [
+    {
+      "date": null,
+      "content": "의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "소아청소년과 전문의"
+    },
+    {
+      "date": null,
+      "content": "계명의대 소아청소년과 교수"
+    }
+  ]
+}

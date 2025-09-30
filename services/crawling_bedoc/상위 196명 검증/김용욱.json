@@ -1,0 +1,43 @@
+{
+  "hospital_cid": 115,
+  "bedoc_id": "A1270",
+  "bedoc_hospitalsite": "http://www.kch.or.kr",
+  "bedoc_doctorname": "김용욱",
+  "bedoc_deptname": "소아청소년과",
+  "bedoc_hospitalname": "광주기독병원",
+  "hospital_name": "광주기독병원",
+  "aiga_hid": "H11KR-24000002",
+  "hospital_site": "https://www.kch.or.kr/user/sub2020/doctor_list/depart_no/202412-110009",
+  "site_type": "list",
+  "hospital_addr": "광주광역시 남구 양림로 37,  (양림동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "https://www.kch.or.kr/site_data/cms/c_doctor/1747125405_zxif9OYw_EC868CEC95.png",
+  "specialty": "심장질환, 호흡기질환, 심초음파검사, 공공심야 어린이병원",
+  "학력": [
+    {
+      "content": "1980 전남대학교 의과대학 졸업"
+    }
+  ],
+  "경력": [
+    {
+      "content": "1983 - 1987 광주기독병원 인턴, 전공의 수료"
+    },
+    {
+      "content": "1987 - 현재 소아청소년과 진료과장"
+    }
+  ],
+  "자격증": [
+    {
+      "content": "1980 의사면허 취득"
+    },
+    {
+      "content": "1987 소아청소년과 전문의 취득"
+    },
+    {
+      "content": "2012 세부전문의 (소아청소년 심장) 취득"
+    }
+  ]
+}

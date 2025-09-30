@@ -1,0 +1,129 @@
+{
+  "hospital_cid": 94,
+  "bedoc_id": "A5911",
+  "bedoc_hospitalsite": "http://www.paik.ac.kr/haeundae/",
+  "bedoc_doctorname": "김성철",
+  "bedoc_deptname": "소아 비뇨기과",
+  "bedoc_hospitalname": "해운대백병원",
+  "hospital_name": "울산대학교병원 ",
+  "aiga_hid": "H01KR-48000006",
+  "hospital_site": "https://cancer.uuh.ulsan.kr/ch/?pCode=doctor&idx=338",
+  "site_type": "single",
+  "hospital_addr": "울산광역시 동구 대학병원로 25, 울산대학교병원 (전하동)",
+  "isExist": true,
+  "isSearchType": "html_playwright_partial",
+  "error": "Could not scrape Media tab due to tool timeout.",
+  "doctorSiteUrl": "https://cancer.uuh.ulsan.kr/ch/?pCode=doctor&idx=338",
+  "profileUrl": "https://cancer.uuh.ulsan.kr/_Data/MediTeamData/394a24a252c490e6cdb1fea35c10bcda.png",
+  "isAttend": true,
+  "specialty": "소아비뇨기, 비뇨기종양, 로봇수술, 전립선질환",
+  "학력": [
+    {
+      "date": null,
+      "content": "울산대학교 의과대학 의학과 졸업"
+    },
+    {
+      "date": null,
+      "content": "울산대학교 의과대학 의학과 석사"
+    },
+    {
+      "date": null,
+      "content": "울산대학교 의과대학 의학과 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "서울아산병원 전공의"
+    },
+    {
+      "date": null,
+      "content": "서울아산병원 임상강사"
+    },
+    {
+      "date": null,
+      "content": "해운대백병원 전임강사"
+    },
+    {
+      "date": null,
+      "content": "해운대백병원 조교수"
+    },
+    {
+      "date": null,
+      "content": "해운대백병원 부교수"
+    },
+    {
+      "date": null,
+      "content": "울산대학교병원 비뇨의학과 임상부교수"
+    },
+    {
+      "date": null,
+      "content": "울산대학교병원 비뇨의학과 부교수"
+    }
+  ],
+  "저서": [
+    {
+      "date": null,
+      "content": "노인비뇨의학, chapter 6. 야간뇨 (2017)"
+    },
+    {
+      "date": null,
+      "content": "남자 아이가 있는 부모가 알아야 할 소아비뇨의학, 야뇨증 (2018)"
+    },
+    {
+      "date": null,
+      "content": "전립선암 치료 진료권고안, 전립선암 치료 (2018)"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한소아비뇨의학회 정보이사"
+    },
+    {
+      "date": null,
+      "content": "대한배뇨장애야뇨증학회 협연이사"
+    },
+    {
+      "date": null,
+      "content": "대한비뇨의학회"
+    },
+    {
+      "date": null,
+      "content": "대한전립선학회"
+    },
+    {
+      "date": null,
+      "content": "대한비뇨기종양학회"
+    },
+    {
+      "date": null,
+      "content": "아시아-태평양 소아비뇨기과학회"
+    },
+    {
+      "date": null,
+      "content": "한일소아비뇨기과학회"
+    }
+  ],
+  "논문": [
+    "Extranodal extension in node-positive bladder cancer: the continuing controversy. Jeong IG, Ro JY, Kim SC, You D, Song C, Hong JH, Ahn H, Kim CS. BJU Int 2011",
+    "Factors determining functional outcomes after radical prostatectomy: robot-assisted versus retropubic. Kim SC, Song C, Kim W, Kang T, Park J, Jeong IG, Lee S, Cho YM, Ahn H. Eur Urol 2011",
+    "Renal function change after refluxing type orthotopic ileal substitution. Song C, Kim SC, Park J, Moon DH, Ahn H. J Urol 2011",
+    "Impact of adjuvant androgen-deprivation therapy on disease progression in patients with node-positive prostate cancer. Park S, Kim SC, Kim W, Song C, Ahn H. Korean J Urol 2011",
+    "Value of immediate second resection of the tumor bed to improve the effectiveness of transurethral resection of bladder tumor. Kim W, Song C, Park S, Kim J, Park J, Kim SC, Cho YM, Hong B, Ahn H. J Endourol 2012",
+    "Factors associated with non-orthotopic urinary diversion after radical cystectomy. Jeong IG, You D, Kim J, Kim SC, Hong JH, Ahn H, Kim CS. World J Urol 2012",
+    "Comparison of oncological outcomes between retropubic radical prostatectomy and robot-assisted radical prostatectomy: an analysis stratified by surgical experience. Park J, Yoo DS, Song C, Park S, Park S, Kim SC, Cho Y, Ahn H. World J Urol 2014",
+    "Thulium laser (RevoLix) vaporesection versus vapoenucleation with morcellator (Piranha) for the treatment of benign prostatic obstruction: a propensity-matched multicenter analysis. Chung JS, Kang PM, Seo WI, Oh CK, Kim SC, Park SH, Choi JH, Yoon JH, Kang DI, Chung Jl. Int J Urol 2014",
+    "Is bladder tumor location associated with prostate cancer detection after intravesical bacillus Calmette-Guérin instillation? Hong S, Kim SC, Kwon T, Jeong IG, Kim CS, Ahn H, Hong JH. PLoS one 2014",
+    "Magnification-assisted subinguinal varicocelectomy with testicular delivery in children: a preliminary report. Cho SJ, Kim SC, Kim KS, Park S. World J Mens Health 2014",
+    "Simultaneous robotic low anterior resection and prostatectomy for adenocarcinoma of rectum and prostate: initial case report. Park M, Kim SC, Chung JS, Park SH, Park SS, Oh SJ, Lee D, Rha KH, Oh CK. Springerplus 2016",
+    "Management of patients with refractory nocturnal enuresis. Kim SC, J Korean Med Ass 2017",
+    "Longitudinal changes in erectile function after thulium: YAG prostatectomy for the treatment of benign prostatic obstruction: a 1-year follow-up study. Chung JS, Park SH, Oh CK, Kim SC, Kim TS, Kang PM, Seo WI, Kim WS, Yoon JH, Kang DI, Min KS, Chung Jl. Lasers Med Sci 2017",
+    "Can recording only the day-time voided volumes predict bladder capacity? Cho WY, Kim SC, Kim SO, Park S, Lee SD, Chung JM, Kim KD, Moon DG, Kim YS, Kim JM. Investig Clin Urol 2018",
+    "Effect of spinal kypho-orthosis to gait and forward flexion in Parkinson disease. Jo G, Park J, Yoon JY, Kim H, Kim SC, Park SH. J Phys Ther Sci 2018",
+    "Clinicopathological Characteristics of Urinary Bladder Tumors in Korean Patients 20 Years or Younger. Kim SC, Park S, Song SH, Kim KS, Park S. J Korean Med Sci 2018",
+    "Surgical managements of pseudoepitheliomatous keratotic and micaceous balanitis: A case report. Kim JY, Kim JY, Park M, Oh CK, Chung JS, Park SH, Kim SC. Int J Surg Case Rep 2019",
+    "Factors affecting the response rate of frequency volume chart: A prospective nonrandomized controlled study. Oh CK, Park M, Chung JS, Park SH, Kim SC. Neurourol Urodyn 2020",
+    "Effect of 5a-reductase inhibitors on the efficiency of thulium:yttrium-aluminium-garnet (RevoLix®) vaporesection for treating benign prostatic hyperplasia. Chung JS, Seo WI, Oh CK, Kim SC, Park MC, Park SH, Yu J, Lee CH, Kim W, Park TY, Min KS, Chung Jl. Investig Clin Urol 2020"
+  ]
+}

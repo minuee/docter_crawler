@@ -821,7 +821,7 @@ router.get('/parsing-final', async function(req, res) {
     }
 
     const allDoctorFiles = fs.readdirSync(targetDir)
-      .filter(file => file.endsWith('.json') && !file.endsWith('_saved.json') && !file.endsWith('_failed.json'));
+      .filter(file => file.endsWith('.json') && !file.endsWith('_saved.json') && !file.endsWith('_saved2.json') && !file.endsWith('_failed.json'));
     const filesToProcess = allDoctorFiles.slice(0, 10); // 한 번에 10개 파일만 선택
 
     console.log(`[PARSING-FINAL] Found ${allDoctorFiles.length} total files. Will process a batch of ${filesToProcess.length}.`);

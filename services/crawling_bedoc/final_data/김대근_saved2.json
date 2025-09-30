@@ -1,0 +1,44 @@
+{
+  "hospital_cid": 57,
+  "bedoc_id": "A8263",
+  "bedoc_hospitalsite": "http://www.goodvision.co.kr",
+  "bedoc_doctorname": "김대근",
+  "bedoc_deptname": "안과",
+  "bedoc_hospitalname": "신촌김안과",
+  "hospital_name": "신촌김안과의원",
+  "aiga_hid": "H31KR-11005652",
+  "hospital_site": "http://www.goodvision.co.kr/Module/Intro/AboutView.asp",
+  "site_type": "list",
+  "hospital_addr": "서울특별시 마포구 신촌로16길 4, 4층 (노고산동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "http://www.goodvision.co.kr/Module/Intro/AboutView.asp?doctorName=%EA%B9%80%EB%8C%80%EA%B7%BC&depthName=%EC%95%88%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "specialty": "안과",
+  "profileUrl": "http://fileupload.drline.net/10883/DoctorInfo/김대근(0).JPG",
+  "학력": [
+    {
+      "content": "서울대학교 의과대학 졸업"
+    }
+  ],
+  "경력": [
+    {
+      "content": "서울대학교병원 안과 전공의"
+    },
+    {
+      "content": "- 대한 안과학회 정회원"
+    },
+    {
+      "content": "- 대한 안과학회 의무이사 역임"
+    },
+    {
+      "content": "- 마포구 의사회장 역임"
+    },
+    {
+      "content": "대한 안과의사회 회장 역임"
+    }
+  ]
+}

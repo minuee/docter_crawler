@@ -1,0 +1,148 @@
+{
+  "hospital_cid": 267,
+  "bedoc_id": "A0319",
+  "bedoc_hospitalsite": "http://www.paik.ac.kr/sanggye",
+  "bedoc_doctorname": "백종삼",
+  "bedoc_deptname": "신경과",
+  "bedoc_hospitalname": "상계백병원",
+  "hospital_name": "인제대학교 상계백병원",
+  "aiga_hid": "H11KR-11000035",
+  "hospital_site": "https://www.paik.ac.kr/sanggye/user/doctor/view.do?doctorId=421",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 노원구 동일로 1342, 상계백병원 (상계동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.paik.ac.kr/sanggye/user/doctor/view.do?doctorId=421&doctorName=%EB%B0%B1%EC%A2%85%EC%82%BC&depthName=%EC%8B%A0%EA%B2%BD%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "profileUrl": "https://www.paik.ac.kr/cmmn/file/imageSrc.do?atchFileId=3e23bb1e336e49149c6f952e3be37c2e&fileSn=2",
+  "specialty": "고형암,유방암, 소화기암, 비뇨생식기암, 육종, 희귀암, 림프종, 다발골수종",
+  "학력": [
+    {
+      "date": "2004",
+      "content": "경희대학교 의과대학 의학학사"
+    },
+    {
+      "date": "2010",
+      "content": "울산대학교 의과대학원 의학석사"
+    },
+    {
+      "date": "2012",
+      "content": "울산대학교 의과대학원 의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "2004",
+      "content": "서울아산병원 수련의"
+    },
+    {
+      "date": "2005",
+      "content": "서울아산병원 전공의"
+    },
+    {
+      "date": "2009",
+      "content": "서울아산병원 종양내과 전임의"
+    },
+    {
+      "date": "2010",
+      "content": "인제대학교 상계백병원 혈액종양내과 임상조교수"
+    },
+    {
+      "date": "2011",
+      "content": "인제대학교 상계백병원 혈액종양내과 조교수"
+    },
+    {
+      "date": "2016",
+      "content": "인제대학교 상계백병원 혈액종양내과 부교수"
+    },
+    {
+      "date": null,
+      "content": "(현) 인제대학교 상계백병원 혈액종양내과 교수"
+    }
+  ],
+  "수상": [
+    {
+      "date": null,
+      "content": "한국임상암학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한항암요법연구회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한조혈모세포이식학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한혈액학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한암학회 평생회원"
+    },
+    {
+      "date": null,
+      "content": "한국혈전지혈학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "한국정맥경장영양학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "미국임상종양학회 (ASCO) 정회원"
+    },
+    {
+      "date": null,
+      "content": "유럽종양학회 (ESMO) 정회원"
+    }
+  ],
+  "논문": [
+    "Yi JH, Kim SJ, Yoon DH, Suh C, Lee W-S, Yang DH, et al. Clinical outcomes of early-progressed follicular lymphoma in Korea: a multicenter, retrospective analysis. Archives of Medical Science. 2022.",
+    "Sohn BS. Recent Progress in Immunotherapy for Advanced Gastric Cancer. JDCR. 2022;10(1):22-30.",
+    "Kim H-D, Cho H, Sohn BS, Park C-S, Huh J, Ryu JS, et al. Prognostic significance of serum β2-microglobulin levels in patients with peripheral T-cell lymphoma not otherwise specified. Leukemia & Lymphoma. 2022;63(1):124-30.",
+    "Yoon SE, Song Y, Kim SJ, Yoon DH, Chen T-Y, Koh Y, et al. Comprehensive analysis of peripheral T-cell and natural killer/T-cell lymphoma in Asian patients: A multinational, multicenter, prospective registry study in Asia. The Lancet Regional Health - Western Pacific. 2021;10:100126.",
+    "Lee Y-P, Yoon SE, Song Y, Kim SJ, Yoon DH, Chen T-Y, et al. Cutaneous T-cell lymphoma in Asian patients: a multinational, multicenter, prospective registry study in Asia. International Journal of Hematology. 2021;114(3):355-62.",
+    "Kim IH, Shin SJ, Kang BW, Kang J, Kim D, Kim M, et al. 2020 Korean guidelines for the management of metastatic prostate cancer. Korean J Intern Med. 2021;36(3):491-514.",
+    "Jeong SH, Kim SJ, Yoon DH, Park Y, Kang HJ, Koh Y, et al. Pegfilgrastim Prophylaxis is Effective in the Prevention of Febrile Neutropenia and Reduces Mortality in Patients Aged ≥75 Years with Diffuse Large B-Cell Lymphoma Treated with R-CHOP: A Prospective Cohort Study. J Korean Cancer Assoc. 2021;0(0):0-.",
+    "Sohn BS, Jeong JH, Ahn JH, Jung KH, Kim JE, Sohn JH, et al. A pilot study on intermittent every other days of 5-dose Filgrastim compared with single Pegfilgrastim in breast Cancer patients receiving adjuvant Docetaxel, doxorubicin, and cyclophosphamide (TAC) chemotherapy. Invest New Drugs. 2020;38(3):866-73.",
+    "Kang S, Cho H, Sohn BS, Oh SY, Lee W-S, Lee SM, et al. Long-term follow-up of abbreviated R-CHOP chemoimmunotherapy for completely resected limited-stage diffuse large B cell lymphoma (CISL 12-09). Annals of Hematology. 2020;99(12):2831-6.",
+    "Yi JH, Lee GW, Do YR, Jung HR, Hong JY, Yoon DH, et al. Multicenter retrospective analysis of the clinicopathologic features of monomorphic epitheliotropic intestinal T-cell lymphoma. Ann Hematol. 2019;98(11):2541-50.",
+    "Kim ST, Oh SY, Lee J, Kang JH, Lee HW, Lee MA, et al. Capecitabine plus Oxaliplatin as a Second-Line Therapy for Advanced Biliary Tract Cancers: A Multicenter, Open-Label, Phase II Trial. Journal of Cancer. 2019;10(25):6185-90.",
+    "Kim ST, Kang JH, Lee J, Lee HW, Oh SY, Jang JS, et al. Capecitabine plus oxaliplatin versus gemcitabine plus oxaliplatin as first-line therapy for advanced biliary tract cancers: a multicenter, open-label, randomized, phase III, noninferiority trial. Annals of Oncology. 2019;30(5):788-95.",
+    "Byun JH, Ahn JB, Kim SY, Kang JH, Zang DY, Kang SY, et al. The impact of primary tumor location in patients with metastatic colorectal cancer: a Korean Cancer Study Group CO12-04 study. Korean J Intern Med. 2019;34(1):165-77.",
+    "Bae WK, Lee HJ, Park SH, Kim JH, Kim HJ, Maeng CH, et al. Comparative effectiveness of palliative chemotherapy versus neoadjuvant chemotherapy followed by radical cystectomy versus cystectomy followed by adjuvant chemotherapy versus cystectomy for regional node-positive bladder cancer: A retrospective analysis: KCSG GU 17-03. Cancer Medicine. 2019;8(12):5431-7.",
+    "Yoon DH, Sohn BS, Oh SY, Lee WS, Lee SM, Yang DH, et al. Feasibility of abbreviated cycles of immunochemotherapy for completely resected limited-stage CD20+ diffuse large B-cell lymphoma (CISL 12-09). Oncotarget. 2017;8(8):13367-74.",
+    "Sohn BS, Kim SB, Ahn JH, Jung KH, Kim J, Lee KS, et al. Quality of life on TSU-68: Combination of docetaxel and TSU-68, an oral antiangiogenic agent, in patients with metastatic breast cancer previously treated with anthracycline. Asia Pac J Clin Oncol. 2017;13(6):365-71.",
+    "Kang G, Sohn BS, Pyo J-S, Kim JY, Lee B, Kim K-M. Detecting Primary KIT Mutations in Presurgical Plasma of Patients with Gastrointestinal Stromal Tumor. Molecular Diagnosis & Therapy. 2016;20(4):347-51.",
+    "Cho SH, Suh C, Do YR, Lee JJ, Yun HJ, Oh SY, et al. Clinical Features and Survival of Patients With Follicular Lymphoma in Korea. Clin Lymphoma Myeloma Leuk. 2016;16(4):197-202.",
+    "Sohn BS, Yuh YJ, Song HS, Kim B-S, Lee KH, Jang J-S, et al. Triplet cytotoxic chemotherapy with gemcitabine, 5-fluorouracil and cisplatin for advanced pancreatic cancer. Oncology Letters. 2015;10(2):1204-10.",
+    "Kang G, Bae BN, Sohn BS, Pyo J-S, Kang GH, Kim K-M. Detection of KIT and PDGFRA mutations in the plasma of patients with gastrointestinal stromal tumor. Targ Oncol. 2015;10(4):597-601.",
+    "Sohn BS, Park SJ, Kim JE, Kim K, Hong YS, Suh C, et al. Single-Nucleotide Polymorphisms in the Vascular Endothelial Growth Factor Pathway and Outcomes of Patients Treated with First-Line Cytotoxic Chemotherapy Combined with Bevacizumab for Advanced Colorectal Cancer. Oncology. 2014;87(5):280-92.",
+    "Park S, Ryu M-H, Ryoo B-Y, Park Y, Sohn B, Kim H, et al. The Role of Surgical Resection Following Imatinib Treatment in Patients with Recurrent or Metastatic Gastrointestinal Stromal Tumors: Results of Propensity Score Analyses. Ann Surg Oncol. 2014:1-7.",
+    "Sohn BS, Yuh YJ, Kim KH, Jeon TJ, Kim NS, Kim SR. Phase II trial of combination chemotherapy with gemcitabine, 5-fluorouracil and cisplatin for advanced cancers of the bile duct, gallbladder, and ampulla of Vater. Tumori. 2013;99(2):139-44.",
+    "Sohn BS, Yoon DH, Kim KP, Kim S, Lee KM, Park JS, et al. The role of F-fluorodeoxyglucose positron emission tomography at response assessment after autologous stem cell transplantation in T-cell non-Hodgkin's lymphoma patients. Ann Hematol. 2013.",
+    "Kim HJ, Sohn BS, Kwon JE, Kim JY, Park K. ThinPrep Cytological Findings of Desmoplastic Small Round Cell Tumor with Extensive Glandular Differentiation: A Case Study. Korean J Pathol. 2013;47(2):182-7.",
+    "An H, Ryu M-H, Ryoo B-Y, Sohn B, Kim K-H, Oh S, et al. The Effects of Surgical Cytoreduction Prior to Imatinib Therapy on the Prognosis of Patients with Advanced GIST. Ann Surg Oncol. 2013:1-7.",
+    "Sohn BS, Lee DH, Kim EK, Yoon DH, Kim HO, Ryu JS, et al. The Role of Integrated 18F-FDG PET-CT as a Staging Tool for Limited-Stage Small Cell Lung Cancer: A Retrospective Study. Onkologie. 2012;35(7-8).",
+    "Sohn BS, Kim SM, Yoon DH, Kim S, Lee DH, Kim JH, et al. The comparison between CHOP and R-CHOP in primary gastric diffuse large B cell lymphoma. Ann Hematol. 2012.",
+    "Sohn B, Yoon D, Kim S, Lee K, Kang E, Park J, et al. The role of prophylactic antimicrobials during autologous stem cell transplantation: a single-center experience. European Journal of Clinical Microbiology & Infectious Diseases. 2012;31(7):1653-61.",
+    "Yoon DH, Lee DH, Choi DR, Sohn BS, Kim S, Kim SW, et al. Feasibility of BU, CY and etoposide (BUCYE), and auto-SCT in patients with newly diagnosed primary CNS lymphoma: a single-center experience. Bone Marrow Transplant. 2011;46(1):105-9.",
+    "Yoo C, Lee D, Kim J, Jo J, Yoon D, Sohn B, et al. Limited role of interim PET/CT in patients with diffuse large B-cell lymphoma treated with R-CHOP. Annals of Hematology. 2011;90(7):797-802.",
+    "Sohn BS, Ahn JH, Jung KH, Ahn S-H, Son BH, Gong G, et al. Updated Longitudinal Data on Acute Exacerbation of Chronic Hepatitis B in Patients With Breast Cancer Receiving Anthracycline-based Adjuvant Chemotherapy: Therapeutic vs. Pre-emptive Use of Lamivudine. Japanese Journal of Clinical Oncology. 2011.",
+    "Kim SR, Yuh YJ, Sohn BS, Yang SH. A phase II trial of 5-fluorouracil, leucovorin and mitomycin C in patients with advanced gastric cancer. Tumori. 2011;97(6):698-703.",
+    "Yoo C KS, Sohn BS, Kim JE, Yoon DH, Huh J, Lee DH, Kim SW, Lee JS, Suh C. Modified Number of Extranodal Involved Sites as a Prognosticator in R-CHOP-Treated Patients with Disseminated Diffuse Large B-Cell Lymphoma. Korean J Intern Med. 2010;25(3):301-8.",
+    "Yoon DH, Sohn BS, Jang G, Kim EK, Kang BW, Kim C, et al. Higher infused CD34+ hematopoietic stem cell dose correlates with earlier lymphocyte recovery and better clinical outcome after autologous stem cell transplantation in non-Hodgkin's lymphoma. Transfusion. 2009;49(9):1890-900.",
+    "Sohn BS, Park I, Kim EK, Yoon DH, Lee SS, Kang BW, et al. Comparison of clinical outcome after autologous stem cell transplantation between patients with peripheral T-cell lymphomas and diffuse large B-cell lymphoma. Bone Marrow Transplant. 2009;44(5):287-93.",
+    "Sohn BS, Kim TW, Lee JL, Ryu MH, Chang HM, Kang YK, et al. The Role of KRAS Mutations in Predicting the Efficacy of Cetuximab-Plus-Irinotecan Therapy in Irinotecan-Refractory Korean Metastatic Colorectal Cancer Patients. Oncology. 2009;77(3-4):224-30.",
+    "Park I, Lee JL, Ryu MH, Kim TW, Chang HM, Lee SS, et al. Efficacy and Safety of S-1 Monotherapy in Patients with Advanced Biliary Tract Adenocarcinoma. Oncology. 2009;76(2):126-32.",
+    "Yoon DH SB, Lee WJ, Lim SN, Kim EK, Park I, Kim KM, Jang G, Kim S, Lee DH, Huh J, Suh C. VPDL Chemotherapy for T-cell Lymphoblastic Lymphoma (T-LBL) in Adults: Comparison with Upfront Autologous Stem Cell Transplantation in a Single Center. Korean J Hematol. 2008;43(3):138-44."
+  ],
+  "학술": [],
+  "저서": [],
+  "언론": [],
+  "isAttend": true
+}

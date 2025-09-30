@@ -1,0 +1,37 @@
+{
+  "hospital_cid": 242,
+  "bedoc_id": "A5890",
+  "bedoc_hospitalsite": "https://www.gnuh.co.kr/",
+  "bedoc_doctorname": "박찬후",
+  "bedoc_deptname": "소아청소년과",
+  "bedoc_hospitalname": "창원경상대병원",
+  "hospital_name": "창원경상국립대학교병원",
+  "aiga_hid": "H11KR-38000018",
+  "hospital_site": "https://www.gnuch.co.kr/gnuh/treat/docInfo.do?rbsIdx=55&code=PD&dno=11088",
+  "site_type": "single",
+  "hospital_addr": "경상남도 창원시 성산구 삼정자로 11, (성주동, 창원경상대학교병원)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "specialty": "이른둥이, 고위험신생아, 기타 신생아질환",
+  "profileUrl": "https://www.gnuch.co.kr/gnuh/treat/image.do?rbsIdx=55&f=gMO9nEJQe0kIIzMqb7sW4MAb6Yvqd4dnPoMh4MenudY=",
+  "isAttend": true,
+  "학력": [
+    { "date": null, "content": "서울대학교 의대 졸업" },
+    { "date": null, "content": "서울대학교 의학박사" }
+  ],
+  "경력": [
+    { "date": null, "content": "서울대학교병원 인턴, 소아과 전공의" },
+    { "date": null, "content": "경상대학교병원 소아과 임상강사" },
+    { "date": null, "content": "경상대학교병원 소아과 임상교수" },
+    { "date": null, "content": "경상대학교병원 소아과 기금교수" },
+    { "date": null, "content": "경상대학교의과대학 조교수" },
+    { "date": null, "content": "경상대학교의과대학 부교수" },
+    { "date": null, "content": "현) 창원경상국립대학교병원 소아청소년과 교수" }
+  ],
+  "학술": [
+    { "date": null, "content": "대한 소아과학회" },
+    { "date": null, "content": "대한 신생아학회" },
+    { "date": null, "content": "대한 주산기학회" }
+  ]
+}

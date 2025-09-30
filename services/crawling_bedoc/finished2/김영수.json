@@ -1,0 +1,60 @@
+{
+  "hospital_cid": 105,
+  "bedoc_id": "A0373",
+  "bedoc_hospitalsite": "http://dongtan.hallym.or.kr/",
+  "bedoc_doctorname": "김영수",
+  "bedoc_deptname": "신경외과",
+  "bedoc_hospitalname": "동탄성심병원",
+  "hospital_name": "한림대학교동탄성심병원",
+  "aiga_hid": "H11KR-31000063",
+  "hospital_site": "https://dongtan.hallym.or.kr/ptm207.asp?Doctor_Id=2960",
+  "site_type": "single",
+  "hospital_addr": "경기도 화성시 큰재봉길 7, (석우동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "학력": [
+    {
+      "date": null,
+      "content": "1976.03 ~ 1982.02연세대학교 의과대학"
+    },
+    {
+      "date": null,
+      "content": "1984.09 ~ 1990.08연세대학교 의과대학 대학원 석사"
+    },
+    {
+      "date": null,
+      "content": "1991.09 ~ 1995.08연세대학교 의과대학 대학원 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1990.05 ~ 1992.02",
+      "content": "연세대학교 의과대학 연구강사"
+    },
+    {
+      "date": "1992.03 ~ 1994.02",
+      "content": "한양대학교 의과대학 전임강사"
+    },
+    {
+      "date": "1994.03 ~ 2000.02",
+      "content": "한양대학교 의과대학 조교수"
+    },
+    {
+      "date": "2000.03 ~ 2005.02",
+      "content": "한양대학교 의과대학 부교수"
+    },
+    {
+      "date": "2005.03 ~ 2023.02",
+      "content": "한양대학교 의과대학 정교수"
+    }
+  ],
+  "학술": [],
+  "수상": [],
+  "논문": [],
+  "언론": [],
+  "저서": [],
+  "profileUrl": "https://dongtan.hallym.or.kr/CHPFile/treatment/H_20230310105054_12107117_a_1.PNG",
+  "specialty": "정위기능(파킨슨병, 이상운동질환,손떨림, 얼굴떨림), 뇌전증, 삼차신경통, 난치성 통증, 두통, 방사선수술, 뇌종양, 척추전이종양",
+  "isAttend": true
+}

@@ -1,0 +1,73 @@
+{
+  "hospital_cid": 253,
+  "bedoc_id": "A1108",
+  "bedoc_hospitalsite": "http://www.sshosp.co.kr",
+  "bedoc_doctorname": "배대경",
+  "bedoc_deptname": "정형외과",
+  "bedoc_hospitalname": "서울성심병원",
+  "hospital_name": "서울성심병원",
+  "aiga_hid": "H11KR-11000016",
+  "hospital_site": "https://www.sshosp.co.kr/about/medical__list.html?bmain=view&uid=7&search=%26page%3D1",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 동대문구 왕산로 259, 서울성심병원 (청량리동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.sshosp.co.kr/about/medical__list.html?bmain=view&uid=7&search=%26page%3D1&doctorName=%EB%B0%B0%EB%8C%80%EA%B2%BD&depthName=%EC%A0%95%ED%98%95%EC%99%B8%EA%B3%BC",
+  "isSearchType": "manual_user_data",
+  "error": null,
+  "specialty": "슬관절",
+  "학력": [
+    {
+      "content": "서울대학교 의과대학 졸업",
+      "date": null
+    },
+    {
+      "content": "서울대학교 대학원 졸업/ 의학석사",
+      "date": null
+    },
+    {
+      "content": "서울대학교 대학원 졸업/ 의학박사",
+      "date": null
+    }
+  ],
+  "경력": [
+    {
+      "content": "미국 위스콘신의대 부속병원/ 임상연구원",
+      "date": null
+    },
+    {
+      "content": "미국 하버드의대 브리감우먼 병원/ 교환교수",
+      "date": null
+    },
+    {
+      "content": "경희대학교 의학대학 부속병원/ 정형외과 전임강사",
+      "date": null
+    },
+    {
+      "content": "경희대학교 의과대학 부속병원/ 정형외과 조교수",
+      "date": null
+    },
+    {
+      "content": "경희대학교 의과대학/ 정형외과 부교수",
+      "date": null
+    },
+    {
+      "content": "경희대학교 의과대학/ 정형외과 교수",
+      "date": null
+    },
+    {
+      "content": "경희대학교 의과대학부속 경희의료원/ 응급의료 센타 실장",
+      "date": null
+    },
+    {
+      "content": "경희대학교 의과대학부속 경희의료원/ 정형외과 과장",
+      "date": null
+    },
+    {
+      "content": "경희대학교 의과대학/ 주임교수",
+      "date": null
+    }
+  ],
+  "isAttend": true
+}

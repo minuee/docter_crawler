@@ -1,0 +1,101 @@
+{
+  "hospital_cid": 83,
+  "bedoc_id": "A5413",
+  "bedoc_hospitalsite": "http://www.paik.ac.kr/sanggye",
+  "bedoc_doctorname": "김상현",
+  "bedoc_deptname": "신장내과",
+  "bedoc_hospitalname": "상계백병원",
+  "hospital_name": "인제대학교상계백병원",
+  "aiga_hid": "H11KR-11000035",
+  "hospital_site": "https://www.paik.ac.kr/sanggye/user/doctor/view.do?doctorId=412",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 노원구 동일로 1342, 상계백병원 (상계동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "https://www.paik.ac.kr/cmmn/file/imageSrc.do?atchFileId=04f541703dc14410bbf684abfce25670&fileSn=2",
+  "specialty": "당뇨성·고혈압성 신장병, 사구체신염, 만성콩팥병, 급성콩팥손상, 혈액투석, 복막투석",
+  "학력": [
+    {
+      "date": null,
+      "content": "인제의대졸업"
+    },
+    {
+      "date": null,
+      "content": "의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "서울아산병원 신장내과 전임의"
+    },
+    {
+      "date": null,
+      "content": "상계백병원 신장내과 부교수 재직중"
+    }
+  ],
+  "수상": [],
+  "논문": [],
+  "학술": [],
+  "저서": [],
+  "언론": [
+    {
+      "targetDate": "2024-06-27",
+      "type": "신문",
+      "text": "냄새·양·거품·색깔로 건강 상태 말해 주는 '소변'",
+      "url": "https://www.asiatoday.co.kr/view.php?key=20240627010015357",
+      "issuer": "아시아투데이"
+    },
+    {
+      "targetDate": "2024-03-16",
+      "type": "신문",
+      "text": "소리 없이 아프다...피 보면 늦어요 '붉은 소변의 경고'",
+      "url": "https://www.khan.co.kr/life/health/article/202403160600005",
+      "issuer": "경향신문"
+    },
+    {
+      "targetDate": "2024-03-08",
+      "type": "신문",
+      "text": "아침 첫 소변 잘 살피세요...거품 수분 이상 가면 신장 손상 신호",
+      "url": "https://jhealthmedia.joins.com/article/article_view.asp?pno=27842",
+      "issuer": "중앙일보 헬스미디어"
+    },
+    {
+      "targetDate": "2024-03-06",
+      "type": "신문",
+      "text": "소변에 거품 끼고, '이 증상'도 있다면… 콩팥 이상 신호",
+      "url": "https://health.chosun.com/site/data/html_dir/2024/03/06/2024030601104.html",
+      "issuer": "헬스조선"
+    },
+    {
+      "targetDate": "2022-11-01",
+      "type": "신문",
+      "text": "노폐물 잡는 체내 정수기 건강 시작은 튼튼한 콩팥",
+      "url": "https://www.mk.co.kr/news/it/10511889",
+      "issuer": "매일경제"
+    },
+    {
+      "targetDate": "2021-12-24",
+      "type": "신문",
+      "text": "속이 울렁거리고 구토가 생긴다면… 만성콩팥병 때문?",
+      "url": "https://www.hankookilbo.com/News/Read/A2021122422090002197?did=NA",
+      "issuer": "한국일보"
+    },
+    {
+      "targetDate": "2021-08-10",
+      "type": "신문",
+      "text": "콩팥은 몸속 정수기...만성 콩팥병 예방 6가지 생활수칙",
+      "url": "https://www.mk.co.kr/news/it/view/2021/08/775805/",
+      "issuer": "매일경제"
+    },
+    {
+      "targetDate": "2020-03-16",
+      "type": "신문",
+      "text": "오줌이 붉거나 탁하거나 거품이 많으면...",
+      "url": "https://www.hankookilbo.com/News/Read/202003111866069074?did=NA&dtype=&dtypecode=&prnewsid=",
+      "issuer": "한국일보"
+    }
+  ]
+}

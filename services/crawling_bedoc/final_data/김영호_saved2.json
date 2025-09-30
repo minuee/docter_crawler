@@ -1,0 +1,86 @@
+{
+  "hospital_cid": 111,
+  "bedoc_id": "A0251",
+  "bedoc_hospitalsite": "http://yunsuh.ilikedoc.kr/",
+  "bedoc_doctorname": "김영호",
+  "bedoc_deptname": "정형외과",
+  "bedoc_hospitalname": "윤서병원",
+  "hospital_name": "윤서병원",
+  "aiga_hid": "H21KR-31000211",
+  "hospital_site": "http://yunsuh.co.kr/sub02.html",
+  "site_type": "list",
+  "hospital_addr": "경기도 구리시 건원대로 47, (인창동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "http://yunsuh.co.kr/sub02.html?doctorName=%EA%B9%80%EC%98%81%ED%98%B8&depthName=%EC%A0%95%ED%98%95%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_ocr",
+  "error": null,
+  "specialty" : "정형외과",
+  "학력": [
+    {
+      "content": "한양대학교 의과대학 졸업"
+    },
+    {
+      "content": "한양대학교 의과대학대학원 석사, 박사"
+    }
+  ],
+  "경력": [
+    {
+      "content": "한양대학교병원 인턴, 레지던트 수료"
+    },
+    {
+      "content": "순천향대학교 천안병원 부교수"
+    },
+    {
+      "content": "영국 Northern General Hospital, Wrightington Hospital 연수"
+    },
+    {
+      "content": "한양대학교 정형외과 교수"
+    },
+    {
+      "content": "한양대학교구리병원 병원장"
+    },
+    {
+      "content": "현 윤서병원 원장"
+    }
+  ],
+  "학술": [
+    {
+      "content": "대한고관절학회 회장"
+    },
+    {
+      "content": "대한정형외과학회 고시위원장"
+    },
+    {
+      "content": "대한정형외과학회 수련교육위원"
+    },
+    {
+      "content": "대한정형통증의학회 회장"
+    },
+    {
+      "content": "ASIA인공관절학회 이사, ARTHROPLASTY 학술지 편집위원"
+    },
+    {
+      "content": "건강심사평가원, 산재자문위원"
+    },
+    {
+      "content": "서울지방병무청, 분쟁조정위원회 자문위원"
+    }
+  ],
+  "수상": [
+    {
+      "content": "제50차대한정형외과학회 고관절 논문학술상 수상"
+    },
+    {
+      "content": "제62차대한고관절학술대회 최우수연제상 수상"
+    },
+    {
+      "content": "대한고관절학술대회 고관절부문 '해외학술상'수상"
+    },
+    {
+      "content": "정부 녹조근정훈장 수상"
+    }
+  ],
+  "isAttend": true
+}

@@ -1,0 +1,60 @@
+{
+  "hospital_cid": 174,
+  "bedoc_id": "A8365",
+  "bedoc_hospitalsite": "http://www.namkise.co.kr/",
+  "bedoc_doctorname": "남기세",
+  "bedoc_deptname": "정형외과",
+  "bedoc_hospitalname": "남기세병원",
+  "hospital_name": "남기세병원",
+  "aiga_hid": "H21KR-11000039",
+  "hospital_site": "http://www.namkise.co.kr/Front/Info/Info_03.asp?gMnu1=201&gMnu2=20103",
+  "site_type": "list",
+  "hospital_addr": "서울특별시 강동구 천호대로 1133, (길동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "http://www.namkise.co.kr/Front/Info/Info_03.asp?gMnu1=201&gMnu2=20103&doctorName=%EB%82%A8%EA%B8%B0%EC%84%B8&depthName=%EC%A0%95%ED%98%95%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "specialty": "척추 디스크•고난이도 수술, 줄기세포, 유전자 치료",
+  "학력": [
+    {
+      "content": "서울대학교 의과대학병원 정형외과"
+    },
+    {
+      "content": "스탠퍼드 의과대학 신경외과 연수 (디스크 재생, 줄기세포)"
+    }
+  ],
+  "경력": [
+    {
+      "content": "미국 정형외과학회 국제회원 (AAOS)"
+    },
+    {
+      "content": "미국 최소침습 척추수술 전문의 (FABMISS)"
+    },
+    {
+      "content": "국제 최소 침습 척추수술학회 정회원 (ISMISS)"
+    },
+    {
+      "content": "前 우리들병원 제1정형외과 과장"
+    },
+    {
+      "content": "現 남기세병원 병원장"
+    },
+    {
+      "content": "現 서울대 정형외과 외래 겸임교수"
+    },
+    {
+      "content": "現 국민건강보험 공단 심사평가원 심사위원"
+    }
+  ],
+  "논문": [
+    "Expression of phospho-p44/42 MAP kinase in neurons and Glia during healing process after cerebral stab wound in rats, 2006.2",
+    "“Morphological Changes of the Distal Segment of the Injured Nerve. ” J Korean Orthop Assoc. 28 (1993): 1293-1304.",
+    "Results of Acetabular Cup Revision using Allograft for the Acetabular Bone Defect. ” J Korean Hip Soc. 5 (1993): 136-144.",
+    "“Clinical analysis of Discoid Meniscus in Children. ” J Korean Orthop Assoc. 28 (1993): 1093-1098.",
+    "“Percutaneous Fixation in Medial Malleolar Fracture. ” J Korean Fracture Soc. 12 (1999): 314-319.",
+    "“Preoperative Planning of Total Hip Arthroplasty Using Software Program for Templating. ” J Korean Hip Soc. 15 (2003): 238-244."
+  ]
+}

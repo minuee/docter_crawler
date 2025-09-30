@@ -1,0 +1,99 @@
+{
+  "hospital_cid": 74,
+  "bedoc_id": "A0925",
+  "bedoc_hospitalsite": "https://www.mizmedi.com/",
+  "bedoc_doctorname": "김민형",
+  "bedoc_deptname": "산부인과",
+  "bedoc_hospitalname": "강서미즈메디병원",
+  "hospital_name": "미즈메디병원",
+  "aiga_hid": "H11KR-11000013",
+  "hospital_site": "https://www.mizmedi.com/wweb/alldoctors/doctordetail?doctorId=709&goBackUrl=&deptPkid=3",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 강서구 강서로 295, (내발산동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.mizmedi.com/wweb/alldoctors/doctordetail?doctorId=709&goBackUrl=&deptPkid=3&doctorName=%EA%B9%80%EB%AF%BC%ED%98%95&depthName=%EC%82%B0%EB%B6%80%EC%9D%B8%EA%B3%BC",
+  "isSearchType": "html_ocr",
+  "profileUrl": "https://www.mizmedi.com/static/UPLOAD_FILE/wweb/doctor/359c8403-aadc-4302-ad4d-73f77b60b478.png",
+  "specialty": "고위험 임신,임신중독증, 임신성 당뇨, 고령임신, 조기진통, 태아 발육 지연, 쌍둥이 임신, 융모막/양수검사, 태아 기형 진단, 정밀 초음파, 임신 전 상담",
+  "학력": [
+    {
+      "date": null,
+      "content": "성균관대학교 의과대학원 박사"
+    },
+    {
+      "date": null,
+      "content": "전남대학교 의과대학원 석사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "미즈메디병원 산과 분과장"
+    },
+    {
+      "date": null,
+      "content": "제일병원 산부인과 주산기과 전임의"
+    },
+    {
+      "date": null,
+      "content": "제일병원 산부인과 전공의"
+    },
+    {
+      "date": null,
+      "content": "단국대의대 부교수"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한의학유전학회 임상유전학인증의"
+    },
+    {
+      "date": null,
+      "content": "대한모체태아의학회 국제협력위원장"
+    },
+    {
+      "date": null,
+      "content": "대한 의학유전학회 학술위원"
+    },
+    {
+      "date": null,
+      "content": "대한 모자보건학회 학술위원"
+    },
+    {
+      "date": null,
+      "content": "대한 산부인과학회 정회원"
+    },
+    {
+      "date": "2019",
+      "content": "제3회 이안도날드 국제 초음파컨퍼런스 - 포스터 발표"
+    }
+  ],
+  "언론": [
+    {
+      "targetDate": null,
+      "type": "기사",
+      "text": "[중앙일보] 35세 이상 고령 산모 10년새 13.3% 증가",
+      "url": null,
+      "issuer": "중앙일보"
+    },
+    {
+      "targetDate": null,
+      "type": "기사",
+      "text": "[국민일보] 자녀계획 세우세요? '자궁 혹'...",
+      "url": null,
+      "issuer": "국민일보"
+    },
+    {
+      "targetDate": null,
+      "type": "기사",
+      "text": "[매경헬스] 임신 중 출혈, 괜찮은가요?",
+      "url": null,
+      "issuer": "매경헬스"
+    }
+  ],
+  "isAttend": true,
+  "error": null
+}

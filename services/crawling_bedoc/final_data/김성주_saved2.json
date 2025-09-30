@@ -1,0 +1,160 @@
+{
+  "hospital_cid": 93,
+  "bedoc_id": "A0502",
+  "bedoc_hospitalsite": "http://www.kimeye.com/kimeye/",
+  "bedoc_doctorname": "김성주",
+  "bedoc_deptname": "안과",
+  "bedoc_hospitalname": "김안과병원",
+  "hospital_name": "김안과병원",
+  "aiga_hid": "H21KR-11000027",
+  "hospital_site": "https://www.kimeye.com/goods/goods_view_pop.php?g_id=25",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 영등포구 영신로 136, (영등포동4가)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.kimeye.com/goods/goods_view_pop.php?g_id=25&doctorName=%EA%B9%80%EC%84%B1%EC%A3%BC&depthName=%EC%95%88%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "profileUrl": "https://www.kimeye.com/data/goods/append/49",
+  "specialty": "안과",
+  "학력": [
+    {
+      "date": "1987",
+      "content": "연세대학교 원주 의과대학 졸"
+    },
+    {
+      "date": "2001",
+      "content": "인하대학교 의과대학 의학석사"
+    },
+    {
+      "date": "2004",
+      "content": "인하대학교 의과대학 의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1988",
+      "content": "원주기독병원 인턴과정 수료"
+    },
+    {
+      "date": "1991",
+      "content": "원주기독병원 안과 레지던트 수료"
+    },
+    {
+      "date": null,
+      "content": "안성의료원 안과장"
+    },
+    {
+      "date": "1994",
+      "content": "연세대학교 안과 전문의"
+    },
+    {
+      "date": "1996",
+      "content": "UBC(Canada) 연수"
+    },
+    {
+      "date": "1997",
+      "content": "Jules Stein Eye Institute¸ UCLA(USA) 연수"
+    },
+    {
+      "date": "2000",
+      "content": "연세대학교 의과대학 전임강사"
+    },
+    {
+      "date": "2002",
+      "content": "김안과병원 입사"
+    },
+    {
+      "date": "2006 ~2009",
+      "content": "김안과병원 병원장 역임"
+    },
+    {
+      "date": "現",
+      "content": "김안과병원 성형안과센터 전문의"
+    }
+  ],
+  "학술": [
+    {
+      "date": "2010 ~2012",
+      "content": "대한 안성형학회 회장 역임"
+    }
+  ],
+  "언론": [
+    {
+      "targetDate": "2019-04-16",
+      "type": "기사",
+      "text": "베트남 진출한 김안과병원 현지 의사 키워 의료한류 앞장",
+      "url": "https://www.kimeye.com/bbs/link.php?bo_table=report&wr_id=1275&no=1",
+      "issuer": null
+    },
+    {
+      "targetDate": "2018-06-28",
+      "type": "기사",
+      "text": "“김안과병원 선생님처럼 세상에 빛을 선물하고 싶어요”",
+      "url": "https://www.kimeye.com/bbs/link.php?bo_table=report&wr_id=1132&no=1",
+      "issuer": null
+    },
+    {
+      "targetDate": "2018-06-15",
+      "type": "기사",
+      "text": "법보신문·로터스월드·김안과병원 캄보디아 의안지원 캠페인",
+      "url": "https://www.kimeye.com/bbs/link.php?bo_table=report&wr_id=1133&no=1",
+      "issuer": null
+    },
+    {
+      "targetDate": "2017-12-13",
+      "type": "기사",
+      "text": "김안과병원 성형안과 의료진 ‘눈꺼풀처짐’ 교과서 발간",
+      "url": "https://www.kimeye.com/bbs/link.php?bo_table=report&wr_id=962&no=1",
+      "issuer": null
+    },
+    {
+      "targetDate": "2017-09-19",
+      "type": "기사",
+      "text": "[명의&인의를 찾아서-(128) 김안과병원 성형안과센터] 초정밀 ‘안성형’… 세계 최고 수준 기술 보유",
+      "url": "https://www.kimeye.com/bbs/link.php?bo_table=report&wr_id=971&no=1",
+      "issuer": null
+    },
+    {
+      "targetDate": "2017-07-17",
+      "type": "기사",
+      "text": "여름 선글라스는 패션이 아니라 '보호장구'…꼭 쓰세요",
+      "url": "https://www.kimeye.com/bbs/link.php?bo_table=report&wr_id=1137&no=1",
+      "issuer": null
+    },
+    {
+      "targetDate": "2016-11-28",
+      "type": "기사",
+      "text": "전문병원에 부는 세분화, 종합화 바람",
+      "url": "https://www.kimeye.com/bbs/link.php?bo_table=report&wr_id=1138&no=1",
+      "issuer": null
+    },
+    {
+      "targetDate": "2015-12-07",
+      "type": "기사",
+      "text": "“감사합니다. 우리 아이 얼굴에도 눈이 생겼어요”",
+      "url": "https://www.kimeye.com/bbs/link.php?bo_table=report&wr_id=814&no=1",
+      "issuer": null
+    },
+    {
+      "targetDate": "2014-12-19",
+      "type": "기사",
+      "text": "눈이 좋아야 골프 잘친다? 우즈 신지애 박세리 라식수술 후…",
+      "url": "https://www.kimeye.com/bbs/link.php?bo_table=report&wr_id=1139&no=1",
+      "issuer": null
+    },
+    {
+      "targetDate": "2014-07-07",
+      "type": "기사",
+      "text": "노안과 함께 오는 ‘눈꺼풀 처짐증’ 아시나요",
+      "url": "https://www.kimeye.com/bbs/link.php?bo_table=report&wr_id=1140&no=1",
+      "issuer": null
+    }
+  ],
+  "수상": [],
+  "논문": [
+    "-The Effect of Collagen Gel Mixed with bFGF and Wrapping Materials on Fibrovascular Ingrowth of Orbital Implant"
+  ],
+  "저서": []
+}

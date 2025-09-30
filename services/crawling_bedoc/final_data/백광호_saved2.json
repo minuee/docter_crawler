@@ -1,0 +1,107 @@
+{
+  "hospital_cid": 262,
+  "bedoc_id": "A0551",
+  "bedoc_hospitalsite": "http://chuncheon.hallym.or.kr/",
+  "bedoc_doctorname": "백광호",
+  "bedoc_deptname": "소화기내과",
+  "bedoc_hospitalname": "춘천성심병원",
+  "hospital_name": "한림대학교춘천성심병원",
+  "aiga_hid": "H11KR-32000013",
+  "hospital_site": "https://chuncheon.hallym.or.kr/commCHP/ptm207.asp?doctor_Id=162",
+  "site_type": "single",
+  "hospital_addr": "강원특별자치도 춘천시 삭주로 77, 77",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://chuncheon.hallym.or.kr/commCHP/ptm207.asp?doctor_Id=162&doctorName=%EB%B0%B1%EA%B4%91%ED%98%B8&depthName=%EC%86%8C%ED%99%94%EA%B8%B0%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "https://chuncheon.hallym.or.kr/CHPFile/treatment/C_20210903_12103101_b_1.png",
+  "specialty": "위장관질환",
+  "학력": [
+    {
+      "date": "1999.09 ~ 2001.08",
+      "content": "한림대학교 의학 석사"
+    },
+    {
+      "date": "1987.03 ~ 1993.02",
+      "content": "한림대학교 의학 학사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "現 한림대학교춘천성심병원 소화기센터장"
+    },
+    {
+      "date": null,
+      "content": "한림대학교춘천성심병원 내과 과장 역임"
+    },
+    {
+      "date": "2015 ~ 2016",
+      "content": "한림대학교춘천성심병원 진료부원장"
+    },
+    {
+      "date": "2010 ~ 2012",
+      "content": "한림대학교춘천성심병원 수련교육부장"
+    },
+    {
+      "date": null,
+      "content": "일본 교토 제2적십자병원 내시경 초음파 연수"
+    },
+    {
+      "date": null,
+      "content": "내시경초음파 미국 Columbia University Medical Center 연수"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한상부위장관 및 H. pylori학회 학술위원"
+    },
+    {
+      "date": null,
+      "content": "대한소화기내시경학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한소화기학회 정회원"
+    }
+  ],
+  "수상": [],
+  "논문": [
+    "일반 상부위장관 내시경의 전처치로서 Cimetropium bromide의 유용성에 관한 연구(대한소화기내시경학회)",
+    "소화성궤양에서 아르곤 플라즈마와 전열기 탐침자의 비교(대한내과학회)",
+    "춘천 지역의 위식도 역류질환과 역류성 식도염의 특징-건강 검진자 연구(대한내과학회)",
+    "2006년 건강검진자에서의 상부 소화기질환의 분포(대한 Helicobacter연구학회)",
+    "춘천 지역에서의 위암 발생률 변화에 관한 연구(The Korean Journal of Helicobacter and Upper Gastrointestinal Research)",
+    "춘천지역에서의 위암 발생률에 관한 연구(대한내과학회)",
+    "장기적인 학회의 발전 방향 및 추계학술대회 활성화 방안(대한 helicobacter 및 상부위장관 학회)",
+    "Helicobacter pylori Infection and Peptic Ulcer Disease in Patients with Liver Cirrhosis(The Korean Journal of Internal Medicine)",
+    "Has Peptic Ulcer Disease Changed During the Past Ten Years(Dig Dis Sci)",
+    "Seroprevalence of Helicobacter pylori in South Korea(Helicobacter)",
+    "Comparison of 7-day and 14-day proton pump Inhibitor-comtaining Triple therapy for Helicobacter pylori Eradication :neither treatment duration provides acceptable eradication rate in Korea(Helicobacter)"
+  ],
+  "저서": [],
+  "언론": [
+    {
+      "date": "2018-07-19",
+      "issuer": "강원일보",
+      "title": "백광호·방창석 교수 과학기술우수논문상",
+      "url": "http://www.kwnews.co.kr/nview.asp?s=201&aid=218071800139"
+    },
+    {
+      "date": "2016-07-22",
+      "issuer": "춘천KBS",
+      "title": "무더위 속 `세균성 장염` 비상",
+      "url": "http://chuncheon.kbs.co.kr/news/index.html?localDomain=chuncheon&seq=3505398&region=8812&pDomain=http%3A%2F%2Fnkoreanet.kbs.co.kr&parentUrl=http%3A%2F%2Fchuncheon.kbs.co.kr%2F"
+    },
+    {
+      "date": "2014-09-03",
+      "issuer": "강원도민일보",
+      "title": "위암, 죽음의 질병 아닌 치료대상",
+      "url": "http://www.kado.net/news/articleView.html?idxno=696625"
+    }
+  ]
+}
