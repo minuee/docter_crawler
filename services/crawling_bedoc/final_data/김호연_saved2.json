@@ -1,0 +1,158 @@
+{
+  "hospital_cid": 165,
+  "bedoc_id": "A0835",
+  "bedoc_hospitalsite": "http://rheumaho.com/",
+  "bedoc_doctorname": "김호연",
+  "bedoc_deptname": "류마티스내과",
+  "bedoc_hospitalname": "김호연내과",
+  "hospital_name": "김호연내과",
+  "aiga_hid": "H31KR-11001247",
+  "hospital_site": "http://rheumaho.com/sub01/sub0102.html",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 강남구 봉은사로 109, 2층 (논현동, 싼타홍메디컬타워)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "http://rheumaho.com/sub01/sub0102.html?doctorName=%EA%B9%80%ED%98%B8%EC%97%B0&depthName=%EB%A5%98%EB%A7%88%ED%8B%B0%EC%8A%A4%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_ocr",
+  "error": null,
+  "isAttend": true,
+  "specialty": "류마티스내과",
+  "학력": [
+    {
+      "date": null,
+      "content": "한양대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "한양대학교 의과대학 석사, 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "한양대학교 류마티스병원 임상교수"
+    },
+    {
+      "date": null,
+      "content": "한양대학교 의과대학 내과학교실 겸임교수"
+    },
+    {
+      "date": null,
+      "content": "미국 하버드의대 Brigham and Women's Hospital 연수"
+    },
+    {
+      "date": null,
+      "content": "미국 국립보건원(NIH) 연수"
+    },
+    {
+      "date": null,
+      "content": "대한내과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한류마티스학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "미국류마티스학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한임상초음파학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한골대사학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한통증학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한의사협회지 감수위원"
+    },
+    {
+      "date": null,
+      "content": "대한류마티스학회 보험위원"
+    },
+    {
+      "date": null,
+      "content": "대한류마티스학회 학술위원"
+    },
+    {
+      "date": null,
+      "content": "대한류마티스학회 개원위원"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한류마티스학회 초음파 강사"
+    },
+    {
+      "date": null,
+      "content": "대한내과학회 초음파 강사"
+    },
+    {
+      "date": null,
+      "content": "대한개원내과의사회 초음파 강사"
+    },
+    {
+      "date": null,
+      "content": "대한통증학회 TPI 강사"
+    },
+    {
+      "date": "2017",
+      "content": "대한류마티스학회 개원의 연수강좌 “류마티스 관절염의 진단”"
+    },
+    {
+      "date": "2017",
+      "content": "대한내과학회 춘계학술대회 “통풍의 진단과 치료”"
+    }
+  ],
+  "수상": [
+    {
+      "date": null,
+      "content": "대한류마티스학회 최우수 구연상 수상"
+    },
+    {
+      "date": null,
+      "content": "대한류마티스학회 우수 포스터상 수상"
+    },
+    {
+      "date": null,
+      "content": "대한류마티스학회 젊은 연구자상 수상"
+    },
+    {
+      "date": null,
+      "content": "보건복지부장관 표창"
+    },
+    {
+      "date": null,
+      "content": "질병관리본부장 표창"
+    }
+  ],
+  "논문": [],
+  "언론": [
+    {
+      "targetDate": "2007-09-13",
+      "type": "TV방송",
+      "text": "제26회 100세 장인의 찾기법, 관절염",
+      "issuer": "EBS"
+    },
+    {
+      "targetDate": "2008-01-03",
+      "type": "TV방송",
+      "text": "무의사들 장인의 관절염, 제3회 내년 의료진찰의 방법, 류마티스",
+      "issuer": "EBS"
+    },
+    {
+      "targetDate": "2012-06-22",
+      "type": "TV방송",
+      "text": "제26회 한국의 의료철할 관절염",
+      "issuer": "EBS"
+    }
+  ]
+}

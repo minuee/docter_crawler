@@ -1,0 +1,320 @@
+{
+  "hospital_cid": 129,
+  "bedoc_id": "A0773",
+  "bedoc_hospitalsite": "http://www.ncc.re.kr",
+  "bedoc_doctorname": "김주영",
+  "bedoc_deptname": "방사선종양학과",
+  "bedoc_hospitalname": "국립암센터",
+  "hospital_name": "국립암센터",
+  "aiga_hid": "H11KR-31000013",
+  "hospital_site": "https://www.ncc.re.kr/main.ncc?uri=proton_guide01",
+  "site_type": "list",
+  "hospital_addr": "경기도 고양시 일산동구 일산로 323, (마두동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.ncc.re.kr/main.ncc?uri=proton_guide01&doctorName=%EA%B9%80%EC%A3%BC%EC%98%81&depthName=%EB%B0%A9%EC%82%AC%EC%84%A0%EC%A2%85%EC%96%91%ED%95%99%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "isAttend": true,
+  "profileUrl": "https://www.ncc.re.kr/images/no-image.gif",
+  "specialty": "소아암/부인암의 방사선 및 양성자치료",
+  "학력": [
+    {
+      "date": "1980-03 ~ 1986-02",
+      "content": "고려대학교 의과대학교 의학과 대졸(의대)"
+    },
+    {
+      "date": "1987-03 ~ 1989-08",
+      "content": "고려대학교 대학원 의학과 대학원졸(석사)"
+    },
+    {
+      "date": "1989-09 ~ 1993-02",
+      "content": "고려대학교 대학원 의학과 대학원졸(박사)"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1990-03 ~ 1992-02",
+      "content": "고려대학교병원 임상강사"
+    },
+    {
+      "date": "1992-03 ~ 1993-02",
+      "content": "서울대학교병원 임상강사"
+    },
+    {
+      "date": "1993-10 ~ 1995-02",
+      "content": "서울동작구보건소 전문의"
+    },
+    {
+      "date": "1995-02 ~ 1999-02",
+      "content": "중앙길병원 진료과장"
+    },
+    {
+      "date": "1999-03 ~ 2000-01",
+      "content": "가천의대 길병원 조교수"
+    },
+    {
+      "date": "2000-02 ~ 2002-09",
+      "content": "영국 Paterson Institute 임상연구원"
+    },
+    {
+      "date": "2002-10 ~ 2003-06",
+      "content": "가천의대 길병원 주임교수"
+    },
+    {
+      "date": "2003-07 ~ 2003-07",
+      "content": "국립암센터 유방암센터 임시직"
+    },
+    {
+      "date": "2003-08 ~ 현재",
+      "content": "국립암센터 양성자치료센터 전문의"
+    },
+    {
+      "date": "2003-08 ~ 2007-04",
+      "content": "국립암센터 자궁암센터 의사직"
+    },
+    {
+      "date": "2004-09 ~ 2012-01",
+      "content": "국립암센터 자궁암연구과 책임연구원"
+    },
+    {
+      "date": "2007-04 ~ 2019-01",
+      "content": "국립암센터 자궁암센터 전문의"
+    },
+    {
+      "date": "2009-02 ~ 2011-08",
+      "content": "국립암센터 자궁암센터 센터장"
+    },
+    {
+      "date": "2009-08 ~ 2019-01",
+      "content": "국립암센터 소아암센터 전문의"
+    },
+    {
+      "date": "2010-03 ~ 2014-02",
+      "content": "국립암센터 방사선의학연구과 영년제 책임연구원"
+    },
+    {
+      "date": "2011-08 ~ 2014-08",
+      "content": "국립암센터 양성자치료센터 센터장"
+    },
+    {
+      "date": "2012-01 ~ 2014-02",
+      "content": "국립암센터 방사선의학연구과 과장, 책임연구원"
+    },
+    {
+      "date": "2012-03 ~ 2015-02",
+      "content": "국립암센터 방사선종양학과 과장"
+    },
+    {
+      "date": "2014-03 ~ 2016-06",
+      "content": "국립암센터 방사선의학연구과 과장, 수석연구원"
+    },
+    {
+      "date": "2014-03 ~ 2017-02",
+      "content": "국제암대학원대학교 시스템종양생물학과 겸임교수"
+    },
+    {
+      "date": "2014-09 ~ 2015-12",
+      "content": "국립암센터 이행성임상제2연구부 부장"
+    },
+    {
+      "date": "2015-12 ~ 2016-03",
+      "content": "AKH Hospital(오스트리아), St.Jude Hospital(미국), MGH(미국), 단기연수"
+    },
+    {
+      "date": "2016-03 ~ 2016-06",
+      "content": "국립암센터 이행성임상제2연구부 부장"
+    },
+    {
+      "date": "2016-06 ~ 2017-11",
+      "content": "국립암센터 연구소 연구소장"
+    },
+    {
+      "date": "2017-03 ~ 현재",
+      "content": "국립암센터국제암대학원대학교 암의생명과학과 겸임교수"
+    },
+    {
+      "date": "2017-04 ~ 2019-01",
+      "content": "국립암센터 입자치료연구과 수석연구원"
+    },
+    {
+      "date": "2019-02 ~ 2023-03",
+      "content": "국립암센터 방사선종양학과 전문의"
+    },
+    {
+      "date": "2019-02 ~ 현재",
+      "content": "국립암센터 양성자치료센터 전문의"
+    },
+    {
+      "date": "2019-02 ~ 2021-08",
+      "content": "국립암센터 융합기술연구부 최고연구원"
+    },
+    {
+      "date": "2021-09 ~ 현재",
+      "content": "국립암센터 국립암센터 방사선의학연구과 최고연구원"
+    },
+    {
+      "date": "2021-09 ~ 현재",
+      "content": "국립암센터 희귀ㆍ소아암연구과 최고연구원"
+    },
+    {
+      "date": "2023-03 ~ 현재",
+      "content": "국립암센터 방사선종양학과 임상교수"
+    }
+  ],
+  "논문": [
+    "Proteogenomic characterization of molecular and cellular targets for treatment-resistant subtypes in locally advanced cervical cancers: MOLECULAR CANCER. 24(1):77~ (33.9)",
+    "Therapeutic effects of surgical debulking of metastatic lymph nodes in cervical cancer IIICr: a trial protocol for a phase III, multicenter, randomized controlled study (KGOG1047/DEBULK trial): JOURNAL OF GYNECOLOGIC ONCOLOGY. 35(5):e57~ (3.4)",
+    "Feature Importance Analysis of a Deep Learning Model for Predicting Late Bladder Toxicity Occurrence in Uterine Cervical Cancer Patients: CANCERS. 15(13):3463~ (5.2)",
+    "Pattern of practice for postoperative management of endometrial cancer in Korea: a survey by the Korean Gynecologic Oncology Group and the Korean Radiation Oncology Group (KGOG 2028-KROG 2104): JOURNAL OF GYNECOLOGIC ONCOLOGY. 34(4):e54~ (3.9)",
+    "Outcomes of intracranial non-germinomatous germ cell tumors: a retrospective Asian multinational study on treatment strategies and prognostic factors: JOURNAL OF NEURO-ONCOLOGY. 160:41~53 (4.506)",
+    "Clinical characteristics and long?term outcomes of rhabdomyosarcoma in Korean children, adolescents and young adults: a single?center experience: JOURNAL OF CANCER RESEARCH AND CLINICAL ONCOLOGY. Online:Published (4.322)",
+    "Randomized multicenter phase II trial of prophylactic irradiation of para-aortic lymph nodes in advanced cervical cancer according to tumor hypoxia: Korean Radiation Oncology Group (KROG 07-01) study: INTERNATIONAL JOURNAL OF CANCER. Online:Published (7.316)",
+    "Dose Profile Modulation of Proton Minibeam for Clinical Application: CANCERS. 14(12):2888~ (6.575)",
+    "Outcome of intracranial germinoma-a retrospective multinational Asian study on effect of clinical presentation and differential treatment strategies: NEURO-ONCOLOGY. Online:Published (12.3)",
+    "Active small bowel sparing in intracavitary brachytherapy for cervical cancer: JAPANESE JOURNAL OF CLINICAL ONCOLOGY. Online:Published (3.019)",
+    "Neurocognitive and psychological functioning of pediatric brain tumor patients undergoing proton beam therapy for three different tumor types: PEDIATRIC BLOOD & CANCER. Online:Published (3.167)",
+    "Regression and pseudoprogression of pediatric optic pathway glioma in patients treated with proton beam therapy: PEDIATRIC BLOOD & CANCER. Online:Published (3.167)",
+    "Predicting the risk of the distant recurrence of cervical cancer after concurrent chemoradiation: A validation study of the Korean Gynecologic Oncologic Group (KGOG)-1024 model: GYNECOLOGIC ONCOLOGY. 164(1):62~67 (5.482)",
+    "Definitive Chemoradiotherapy versus Radical Hysterectomy Followed by Tailored Adjuvant Therapy in Women with Early-Stage Cervical Cancer Presenting with Pelvic Lymph Node Metastasis on Pretreatment Evaluation: A Propensity Score Matching Analysis: CANCERS. 13(15):3703~ (6.639)",
+    "Atypical Teratoid/Rhabdoid Tumor of the Central Nervous System in Children Under the Age of 3 Years: CANCER RESEARCH AND TREATMENT. Online:Published (3.761)",
+    "Treatment outcome and long-term follow-up of central nervous system germ cell tumor using upfront chemotherapy with subsequent photon or proton radiation therapy: a single tertiary center experience of 127 patients: BMC CANCER. 20(1):979~ (3.15)",
+    "Choosing Wisely: The Korean Perspective and Launch of the ‘Right Decision in Cancer Care’ Initiative: CANCER RESEARCH AND TREATMENT. Online:Published (3.761)",
+    "Effect of addition of bevacizumab to chemoradiotherapy in newly diagnosed stage IVB cervical cancer: a single institution experience in Korea: INTERNATIONAL JOURNAL OF GYNECOLOGICAL CANCER. 30(6):764~771 (2.095)",
+    "Choosing Wisely, The Korean Perspective: The Launch of the Nationwide “Right Decision in Cancer Care” Initiative(BRIEF REPORT): INTERNATIONAL JOURNAL OF RADIATION ONCOLOGY BIOLOGY PHYSICS. Online:Published (5.859)",
+    "Type-Specific Viral Load and Physical State of HPV Type 16, 18, and 58 as Diagnostic Biomarkers for High-Grade Squamous\nIntraepithelial Lesions or Cervical Cancer: CANCER RESEARCH AND TREATMENT. 52(2):396~405 (3.363)",
+    "The association of integration patterns of human papilloma virus and single nucleotide polymorphisms on immune- or DNA repair-related genes in cervical cancer patients: SCIENTIFIC REPORTS. 9(1):13132~13132 (4.011)",
+    "Type-Specific Viral Load and Physical State of HPV Type 16, 18, and 58 as Diagnostic Biomarkers for High-Grade Squamous Intraepithelial Lesions or Cervical Cancer: CANCER RESEARCH AND TREATMENT. Online:Published (3.363)",
+    "Combined Effect of Secondhand Smoking and Alcohol Drinking on Risk of Persistent Human Papillomavirus Infection: BIOMED RESEARCH INTERNATIONAL. 2019:5829676~5829676 (2.197)",
+    "Protective association of HLA-DRB1*13:02, HLA-DRB1*04:06, and HLADQB1*06:04 alleles with cervical cancer in a Korean population: Human Immunology. 80(2):107~111 (1.994)",
+    "Clinical outcome of proton therapy for patients with chordomas: Radiation Oncology Journal. 36(3):182~191 (0)",
+    "Involved-field radiation therapy for recurrent ovarian cancer: Results of a multi-institutional prospective phase II trial: Gynecologic oncology. 151(1):39~45 (4.54)",
+    "Inhibition of Estrogen signaling reduces the incidence of BRCA1-associated mammary tumor formation: INTERNATIONAL JOURNAL OF BIOLOGICAL SCIENCES. 14(12):1755~1768 (4.057)",
+    "Treatment Results and Prognostic Factors of Brain Metastases From Ovarian Cancer: International journal of gynecological cancer. 28(8):1631~1638 (2.192)",
+    "Second primary colorectal cancer among endometrial cancer survivor: shared etiology and treatment sequelae: Journal of cancer research and clinical oncology. 144(5):845~854 (3.282)",
+    "General health status of cervical cancer survivors after curative radiotherapy: Strahlentherapie und Onkologie. : (2.717)",
+    "Clinical Outcomes of Proton Beam Therapy for Choroidal Melanoma at a Single Institute in Korea.: Cancer Research and Treatment. 50(2):335~344 (3.772)",
+    "Neurocognitive and Psychological Functioning of Children with an Intracranial Germ Cell Tumor: Cancer Research & Treatment. 49(4):960~969 (3.772)",
+    "General health status of long-term cervical cancer survivors after radiotherapy: Strahlentherapie Und Onkologie. 193(7):543~551 (2.735)",
+    "Integration Pattern of Human Papillomavirus Is a Strong Prognostic Factor for Disease-Free Survival After Radiation Therapy in Cervical Cancer Patients: International Journal of Radiation Oncology Biology Physics. 98(3):654~661 (5.133)",
+    "CHK2 is involved in the p53-independent radiosensitizing effects of valproic acid: Oncology Letters. 13(4):2591~2598 (1.39)",
+    "Toxicities and dose-volume histogram parameters of MRI-based brachytherapy for cervical cancer: Brachytherapy. 16(1):116~125 (2.088)",
+    "Magnetic resonance image-guided brachytherapy for cervical cancer : Prognostic factors for survival.: Strahlentherapie und Onkologie. 192(12):922~930 (2.898)",
+    "Ablative dose proton beam therapy for stage I and recurrent non-small cell lung carcinomas: Strahlenther Onkol. 192(9):649~657 (2.898)",
+    "Prophylactic irradiation of para-aortic lymph nodes for patients with locally advanced cervical cancers with and without high CA9 expression (KROG 07-01): A randomized, open-label, multicenter, phase 2 trial: Radiotherapy and Oncology. 120(3):383~389 (4.817)",
+    "Two-dimensional in vivo rectal dosimetry using an endorectal balloon with unfoldable radiochromic film during prostate cancer radiotherapy: Radiotherapy and oncology. 120(2):327~332 (4.817)",
+    "Predictors of Radiation Field Failure After Definitive Chemoradiation in Patients With Locally Advanced Cervical Cancer: International Journal of Gynecological Cancer. 26(4):737~742 (2.116)",
+    "Depression and distress in caregivers of children with brain tumors undergoing treatment: psychosocial factors as moderators: Psycho-Oncology. 25(5):544~550 (2.443)",
+    "Nucleotide Excision Repair Gene ERCC2 and 5 Variants Increase Risk of Uterine Cervical Cancer: Cancer Research and Treatment. 48(2):708~714 (3.318)",
+    "Second Primary Cancer after Diagnosis and Treatment of Cervical Cancer: Cancer research and treatment. 48(2):641~649 (3.318)",
+    "Postoperative Lower Extremity Edema in Patients with Primary Endometrial Cancer: Annals of surgical oncology. 23(1):186~195 (3.93)",
+    "Comparison of Lower Extremity Edema in Locally Advanced Cervical Cancer: Pretreatment Laparoscopic Surgical Staging with Tailored Radiotherapy Versus Primary Radiotherapy.: Annals of surgical oncology. 23(1):203~210 (3.93)",
+    "Treatment of Retinoblastoma: The Role of External Beam Radiotherapy: Yonsei medical journal. 56(6):1478~1491 (1.287)",
+    "Normal Liver Sparing by Proton Beam Therapy for Hepatocellular Carcinoma: Comparison with Helical Intensity Modulated Radiotherapy and Volumetric Modulated Arc Therapy: Acta oncologica. 54(10):1827~1832 (2.997)",
+    "Comparison of the performance of Anyplex II HPV HR, the Cobas 4800 human papillomavirus test and Hybrid Capture 2: Annals of clinical biochemistry. Online:Published (2.335)",
+    "A comparison of the quality assurance of four dosimetric tools for intensity modulated radiation therapy: Radiology and Oncology. 49:307~313 (1.912)",
+    "Differential dosimetric benefit of proton beam therapy over intensity modulated radiotherapy for a variety of targets in patients with intracranial germ cell tumors: Radiation oncology [electronic resource]. 10:135~135 (2.546)",
+    "Understanding the Treatment Strategies of Intracranial Germ Cell Tumors : Focusing on Radiotherapy: Journal of Korean Neurosurgical Society. 57(5):315~322 (0.636)",
+    "Alcohol consumption and persistent infection of high-risk human papillomavirus: Epidemiology and Infection. 143:1442~1450 (2.535)",
+    "Radical prostatectomy versus external beam radiotherapy for localized prostate cancer : Comparison of treatment outcomes.: Strahlentherapie und Onkologie. 191(4):321~329 (2.914)",
+    "Postoperative simultaneous integrated boost-intensity modulated radiation therapy for patients with locoregionally advanced papillary thyroid carcinoma: preliminary results of a phase II trial and propensity score analysis.: The Journal of clinical endocrinology and metabolism. 100(3):1009~1017 (6.209)",
+    "Phase I Dose-Escalation Study of Proton Beam Therapy for Inoperable Hepatocellular Carcinoma.: Cancer research and treatment. 47(1):34~45 (3.318)",
+    "Proton beam therapy reduces the incidence of acute haematological and gastrointestinal toxicities associated with craniospinal irradiation in pediatric brain tumors: Acta oncologica. 53(9):1158~1164 (3.71)",
+    "Synergistic Effect of Viral Load and Alcohol Consumption on the Risk of Persistent High-Risk Human Papillomavirus Infection: PLoS One. 9(8):e104374~e104374 (3.534)",
+    "A nomogram predicting the risks of distant metastasis following postoperative radiotherapy for uterine cervical carcinoma: a Korean radiation oncology group study (KROG 12-08): Radiotherapy and oncology. 111(3):437~441 (4.857)",
+    "Comparison of clinical outcomes of adenocarcinoma and adenosquamous carcinoma in uterine cervical cancer patients receiving surgical resection followed by radiotherapy: a multicenter retrospective study (KROG 13-10): Gynecologic oncology. 132(3):618~23 (3.687)",
+    "Prognostic implication of retrocrural lymph node involvement revealed by (18)F-FDG PET/CT in patients with uterine cervical cancer: Nuclear medicine communications. 35(3):268~275 (1.371)",
+    "Physical status of human papillomavirus integration in cervical cancer is associated with treatment outcome of the patients treated with radiotherapy: PLoS One. 9(1):e78995~e78995 (3.534)",
+    "Loss of β2-spectrin prevents cardiomyocyte differentiation and heart development: Cardiovascular Research. 101(1):39~47 (5.808)",
+    "Dosimetric Evaluation of Magnetic Resonance Imaging-based Intracavitary Brachytherapy for Cervical Cancer: Technology in Cancer Research and Treatment. 13(3):243~251 (1.886)",
+    "The volumetric change and dose-response relationship following hypofractionated proton therapy for chordomas: Acta Oncologica. 53(4):563~568 (3.71)",
+    "Incidence of cervical, endometrial, and ovarian cancer in Korea, 1999-2010.: Journal of Gynecologic Oncology. 24(4):298~302 (1.73)",
+    "An infant with prenatally diagnosed congenital anaplastic astrocytoma who remains disesase-free after proton therapy: Journal of Korean Medical Science. 28:1394~1398 (1.249)",
+    "Proton-radiography-based quality assurance of proton range compensator: Physics in Medicine and Biology. 58(18):6511~6523 (2.701)",
+    "Phase II trial of proton beam accelerated partial breast irradiation in breast cancer: Radiotherapy and Oncology. 108(2):209~214 (4.52)",
+    "Comparison of capecitabine and 5-fluorouracil in chemoradiotherapy for locally advanced pancreatic cancer: Radiation Oncology. 8(1):160~160 (2.107)",
+    "The size of the metastatic lymph node is an independent prognostic factor for the patients with cervical cancer treated by definitive radiotherapy: Radiotherapy and Oncology. 1081(1):168~173 (4.52)",
+    "Retrospective analysis of treatment outcome of pediatric ependymomas in Korea: analysis of Korean multi-institutional data.: Journal of Neuro-oncology. 113(1):39~48 (3.115)",
+    "Proton Beam Radiotherapy for Pediatric Gliomas: Early Outcomes and Dose Comparison: Clinical Pediatric Hematology-Oncololgy. 20(1):40~50 (0)",
+    "A phase II study of hypofractionated proton therapy for prostate cancer.: Acta Oncologica. 52(3):477~485 (2.867)",
+    "High Control Rate for Lymph Nodes in Cervical Cancer Treated with High-dose  Radiotherapy using Helical Tomotherapy: Technology in Cancer Research and Treatment. 12(1):45~51 (1.943)",
+    "Combined Primary Tumor and Extracranial Metastasis Status as Constituent Factor of Prognostic Indices for Predicting the Overall Survival in Patients with Brain Metastases: Journal of Korean medical science. 28(2):205~212 (1.249)",
+    "A prospective observational study with dose volume parameters predicting rectosigmoidoscopic findings and late rectosigmoid bleeding in patients with uterine cervical cancer treated by definitive radiotherapy: Radiation Oncology. 8:28~28 (2.107)",
+    "Brain metastasis in patients with uterine cervical cancer: Journal of Obstetrics and Gynaecology Research. 39(1):287~291 (0.841)",
+    "Stage-to-stage Comparison of Neoadjuvant Chemotherapy Versus Adjuvant Chemotherapy in Pathological Lymph Node Positive Breast Cancer Patients: Japanese Journal of Clinical Oncology. 42(11):995~1001 (1.783)",
+    "Curative chemoradiotherapy in patients with stage IVB cervical cancer   presenting  with para-aortic and left supraclavicular lymph node metastases: International journal of radiation oncology, biology, physics. 84(3):741~747 (4.105)",
+    "Pelvic exenteration for recurrent cervical cancer: ten-year experience at National Cancer Center in Korea: Journal of Gynecology Oncology. 23(4):242~250 (1.489)",
+    "Dickkopf-1 (DKK-1) interrupts FAK/PI3K/mTOR pathway by interaction of carbonic anhydrase IX (CA9) in tumorigenesis: Cellular Signalling. 24(7):1406~1413 (4.058)",
+    "Hypoxia-induced up-regulation of apelin is associated with a poor prognosis in oral squamous cell carcinoma patients: Oral Oncology. 48(6):500~506 (2.857)",
+    "Association between the location of transposed ovary and ovarian function in patients with uterine cervical cancer treated with (postoperative or primary) pelvic radiotherapy.: Fertility and sterility.. 97(6):1387~1393 (3.775)",
+    "Volumetric response evaluation after intensity modulated radiotherapy in patients with supratentorial gliomas: Technology in Cancer Research & Treatment. 11(1):41~48 (1.692)",
+    "Outcomes and toxicities for the treatment of stage IVB cervical cancer: Archives of gynecology and obstetrics. 285(6):1685~1693 (1.277)",
+    "Estimation of the secondary cancer risk induced by diagnostic imaging radiation during proton therapy: Journal of Radiological Protection. 31(4):477~487 (1.323)",
+    "The Effect of a Contrast Agent on Proton Beam Range in Radiotherapy Planning Using Computed Tomography for Patients With Locoregionally Advanced Lung Cancer.: International journal of radiation oncology, biology, physics. 81:317~324 (4.503)",
+    "Craniospinal Irradiation Techniques: A Dosimetric Comparison of Proton Beams with Standard and Advanced Photon Radiotherapy.: International journal of radiation oncology, biology, physics. 81(3):637~646 (4.503)",
+    "Single-Dose Versus Fractionated Stereotactic Radiotherapy for Brain Metastases: International Journal of Radiation Oncology, Biology and Physics. 81(2):483~489 (4.503)",
+    "Persistent human papillomavirus DNA is associated with local recurrence after radiotherapy of uterine cervical cancer: International Journal of Cancer. 129(4):896~902 (4.926)",
+    "Carbonic anhydrase IX (CA9) modulates tumor-associated cell migration and invasion: Journal of Cell Science. 124:1077~1087 (6.29)",
+    "Is human papillomavirus genotype an influencing factor on radiotherapy outcome? Ambiguity caused by an association of HPV 18 genotype and adenocarcinoma histology.: Journal of gynecologic oncology.. 22(1):32~38 (0)",
+    "Pelvic Lymph Node Status Assessed by 18f-Fluorodeoxyglucose Positron Emission Tomography Predicts Low-Risk Group for Distant Recurrence in Locally Advanced Cervical Cancer: A Prospective Study.: International journal of radiation oncology, biology, physics. 79(3):788~793 (4.503)",
+    "Anti-apoptotic protein TCTP controls the stability of the tumor suppressor p53: FEBS Letters. 585:29~35 (3.601)",
+    "3D CT-based high-dose-rate brachytherapy for cervical cancer: Clinical impact on late rectal bleeding and local control: Radiotherapy and Oncology. 97(3):507~513 (4.343)",
+    "Carbonic anhydrase XII expression is associated with histologic grade of cervical cancer and superior radiotherapy outcome.: RADIATION ONCOLOGY. 5:101~101 (2.529)",
+    "Simultaneous Integrated Boost Intensity-Modulated Radiotherapy in Patients with High-Grade Gliomas: International journal of radiation oncology, biology, physics. 78(2):390~397 (4.592)",
+    "Use of serum squamous cell carcinoma antigen for follow-up monitoring of cervical cancer patients who were treated by concurrent chemoradiotherapy.: Radiation Oncology. 5:78~78 (2.529)",
+    "Human papillomavirus 16 E6 increases the radiosensitivity of p53-mutated cervcial cancer cells, associated with up-regulation of aurora A: International Journal of Radiation Biology. 86(9):769~779 (1.842)",
+    "Reply to M.-C. Vozenin et al.: Journal of clinical oncology. 28(20):e342~e342 (17.793)",
+    "Reconstruction of a Fletcher Type Applicator with CT/MR Compatible Catheter using MR Imaging for Cervical Cancer Brachytherapy: Journal of the Korean Physical Society. 56:874~879 (0)",
+    "Diagnostic Value of 18F-FDG PET for Evaluation of Paraaortic Nodal Metastasis in Patients with Cervical Carcinoma: A Metaanalysis.: Journal of nuclear medicine : official publication, Society of Nuclear Medicine. 51(3):360~367 (6.424)",
+    "Pathologic diagnosis and resection of suspicious thoracic metastases in patients withcervical cancer through thoracotomy or video-assisted thoracic surgery: Gynecologic Oncology. 116(3):478~482 (3.733)",
+    "Endogenous and radiation-induced expression of gammaH2AX in biopsies from patients treated for carcinoma of the uterine cervix.: Radiotherapy and Oncology. 94(1):82~89 (4.343)",
+    "Low initial HPV viral load implicates worse prognosis in patients with uterine cervical cancer treated with radiotherapy.: Journal of Clinical Oncology. 92:138~141 (17.157)",
+    "Laparoscopy-assisted ICR tandem placement for patients with cervical cancer: International Journal of Gynecological Cancer. 19:1125~1130 (1.932)",
+    "Cyclooxygenase-2 up-regulates Ataxia telangiectasia and Rad3 related through extracellular signal-regulated kinase activation: Molecular Cancer Research. 7(7):1158~68 (4.533)",
+    "Synchronous multifocal HPV-related neoplasm involving both the genital tract and the head-and-neck area: A case report of Fanconi anemia: Radiotherapy and Oncology. 92:138~141 (3.99)",
+    "gammaH2AX expression in tumors exposed to cisplatin and fractionated irradiation: Clinical Cancer Research. 15(10):3344~3353 (6.488)",
+    "Metastasis at the site of venous needle punctures in patients with advanced cervical cancer: European Journal of Obstetrics & Gynecology and Reproductive Biology. Online:Published (1.565)",
+    "Intravaginal Packing Effects of CT-guided Intracavitary Radiotherapy for Cervical Cancer: Journal of the Korean Physical Society. 54:250~254 (1.204)",
+    "Allogeneic blood transfusion given before radiotherapy is associated with the poor clinical outcome in patients with cervical cancer: Yonsei Medical Journal. 49:993~1003 (0.781)",
+    "Expression of carbonic anhydrase IX is associated with postoperative recurrence and poor prognosis in surgically treated oral squamous cell carcinoma.: Human Pathology. 39:1317~1322 (3.034)",
+    "Inter- and intrafractional movement-induced dose reduction of prostate target volume in proton beam treatment: International Journal of Radiation Oncology, Biology, Physics. 71:1091~1102 (4.29)",
+    "SMART (Simultaneous Modulated Accelerated RadioTherapy) for locally advanced nasopharyngeal carcinomas.: Head & Neck. 30:159~169 (2.007)",
+    "Carbonic anhydrase 9 (CA9) expression in tumor cells enhances sensitivity to tirapazamine: Journal of Cancer Research and Clinical Oncology. 134:397~404 (2.366)",
+    "Effect of radiation scattering on dose uniformity in open and closed cell culture vessels: International Journal of Radiation Biology. 83:561~566 (1.312)",
+    "Computed tomography-based high-dose-rate intracavitary brachytherapy for cervical cancer: Preliminary demonstration of correlation between dose-volume parameters and rectal mucosal changes observed by flexible sigmoidoscopy: International Journal of Radiation Oncology Biology Physics. 68:1446~1454 (4.463)",
+    "The clinical values of squamous cell carcinoma antigen and carcinoembryonic antigen in patients with cervical cancer treated with concurrent chemoradiotherapy: International Journal of Gynecologic Cancer. 17:872~878 (1.469)",
+    "Intensity-modulated radiotherapy with a belly board for rectal cancer: International Journal of Colorectal Disease. 22:373~379 (2.006)",
+    "Tumor carbonic anhydrase 9 expression is associated with the presence of lymph node metastases in uterine cervical: Cancer Science. 98:329~333 (3.869)",
+    "MRI for pretreatment lymph node staging in uterine cervical cancer: American Journal of Roentgenology. 187:538~543 (2.209)",
+    "Clinical impact of FDG-PET imaging in post-therapy surveillance of uterine\ncervical cancer: From diagnosis to prognosis: Gynecologic Oncology. 103:165~170 (2.251)",
+    "The effect of belly board location in rectal cancer patients treated with preoperative radiotherapy: Clinical Oncology. 18:441~446 (1.288)",
+    "A new evaluation method of target volume coverage and homogeneity for IMRT treatment planning: Physica Medica. 22:43~51 (0.169)",
+    "Dominant-negative Rac increases both inherent and ionizing radiation-induced cell migration in C6 rat glioma cells: International Journal of Cancer. 118:2056~2063 (4.7)",
+    "CT-guided intracavitary radiotherapy for cervical cancer: Comparison of conventional point A plan with clinical target volume-based three-dimensional plan using dose-volume parameters.: International Journal of Radiation Oncology Biology Physics. 64(1):197~204 (4.556)",
+    "Tumor-associated carbonic anhydrases are linked to metastases in primary cervical cancer: Journal of Cancer Research and Clinical Oncology. 132:302~308 (2.503)",
+    "Ionizing radiation induces astrocyte gliosis through microglia activation.: Neurobiology of disease. 21(3):457~467 (4.048)",
+    "Adenocarcinoma arising in a vaginal müllerian cyst: a case report.: gynecologic oncology. 99(3):767~769 (2.083)",
+    "dosimetric Parameters Predicting Late Rectal Complications after Curative Radiotherapy in Patients with Uterine Cervical Cancer: Cancer. 104(6):1304~1311 (4.434)",
+    "Comparative Analysis of the effects of belly board and bladder distension in postoperative radiotherapy of rectal cancer patients: Strahlentherapie und Onkologie. 181(9):601~605 (3.121)",
+    "Role of positron emission tomography in pretreatment lymph node staging of uterine cervical cancer: A prospective surgicopathologic correlation study: European Journal of Cancer. 41:2086~2092 (3.302)",
+    "Dose-volumetric Parameters of Acute Esophageal Toxicity in Patients with Lung Cancer Treated with Three Dimensional Radiotherapy: International Journal of Radiation Oncology Biology Physics. 62:995~1002 (4.297)",
+    "Pretreatment laparoscopic surgical staging in locally advanced cervical cancer : preliminary results in Korea: Gynecologic Oncology. 97(2):468~475 (2.083)",
+    "Dose-volumetric Parameters for Predicting Severe Radiation Pneumonitis after Three-dimensional Conformal Radiation Therapy for Lung cancer: Radiology. 235(1):208~224 (5.076)",
+    "Computed Tomography findings of ovarian metastases from colon cancer: comparison with primary malignant ovarian tumors: Journal of computer assisted tomography. 29:69~73 (1.357)",
+    "Reduced rectal dose with the rectal retractor in high dose rate intracavitary brachytherapy for carcinoma of the uterine cervix: Yonsei Medical Journal. 49(1):113~22 (0.417)",
+    "자궁경부암의 고선량강내치료시 rectal retractor 사용을 통한 직장선량의 감소: YONSEI MED J. 45(1):71~77 (0.38)",
+    "The bioreductive agent RH1 and -irradiation both cause G2/M cell cycle phase arrest and polyploidy in a p53-mutated human breast cancer cell line: International journal of radiation oncology, biology, physics. 58(2):376~85 ()",
+    "The importance of DT-diaphorase and Hypoxia in the Cytotoxicity of RH1 in Human Breast and Non-small-cell lung cancer cell line: Anticancer Drugs. 15:71~77 (2.013)",
+    "Cytotoxicity of the bioreductive agent RH1 and its lack of interaction with radiation: Radiother Oncol. 70:311~317 (2.838)",
+    "Tumor Apoptosis in Cervical Cancer: Its Role as a Prognostic Factor in 42 Radiotherapy Patients: International Journal of Cancer. 96(5):305~12 (4.463)",
+    "Gene Expression Profiles in Cervical Cancer with Radiation Therapy Alone and Chemo-radiation Therapy: Journal of the Korean Society for Therapeutic Radiology and Oncology. 21(1):54~65 (0.132)",
+    "Effect of gamma irradiation on the activities of Monoamine Oxidase in rat brain and liver: Journal of the Korean Society for Therapeutic Radiology and Oncology. 11(2):205~218 (0.132)",
+    "Results of radiation therapy of cerebellar medulloblastoma-with emphasis of the neuraxis dose: Journal of the Korean Society for Therapeutic Radiology and Oncology. 11(1):69~77 (0.132)",
+    "Clinical significance of plasma CEA levels in the patients with cervical carcinoma during follow-up: Journal of the Korean Society for Therapeutic Radiology and Oncology. 9:293~301 (0.132)",
+    "Analysis of treatment failures in early uterine cervical cancer: Journal of the Korean Society for Therapeutic Radiology and Oncology. 9(2):285~291 (0.132)",
+    "Radiation therapy of a chordoma of the thoracic vertebra: Journal of the Korean Society for Therapeutic Radiology and Oncology. 6(2):295~300 (0.132)"
+  ],
+  "저서": [],
+  "수상": [],
+  "언론": []
+}

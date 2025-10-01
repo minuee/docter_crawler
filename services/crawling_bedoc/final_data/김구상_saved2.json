@@ -1,0 +1,534 @@
+{
+  "hospital_cid": 45,
+  "bedoc_id": "A5366",
+  "bedoc_hospitalsite": "http://www.dkmc.or.kr",
+  "bedoc_doctorname": "김구상",
+  "bedoc_deptname": "외과",
+  "bedoc_hospitalname": "동강병원",
+  "hospital_name": "고신대학교 복음병원",
+  "aiga_hid": "H01KR-48000001",
+  "hospital_site": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?boardid=staff&mode=view&idx=186",
+  "site_type": "single",
+  "hospital_addr": "부산광역시 서구 감천로 262, (암남동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.kosinmed.or.kr/depart/depart_1_detail.php?boardid=staff&mode=view&idx=186&doctorName=%EA%B9%80%EA%B5%AC%EC%83%81&depthName=%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "학력": [
+    {
+      "date": "2008",
+      "content": "아주대학교 대학원 박사"
+    },
+    {
+      "date": "2000",
+      "content": "단국대학교 대학원 석사"
+    },
+    {
+      "date": "1992",
+      "content": "단국대학교 의학사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "2020",
+      "content": "2020 ~ 현재 고신대학교 복음병원 교수"
+    },
+    {
+      "date": "2015",
+      "content": "2015 ~ 2019 울산시티병원, 동강병원 유방갑상선센터장"
+    },
+    {
+      "date": "2013",
+      "content": "2013 ~ 2014 아주대학교 의과대학 부교수"
+    },
+    {
+      "date": "2008",
+      "content": "2008 ~ 2012 아주대학교 의과대학 조교수"
+    },
+    {
+      "date": "2006",
+      "content": "2006 ~ 2008 서울대학교 의과대학/분당서울대병원 임상강사"
+    },
+    {
+      "date": "2003",
+      "content": "2003 ~ 2006 공군항공우주의료원 외과장/비행군의관"
+    },
+    {
+      "date": "1998",
+      "content": "1998 ~ 2003 단국대의료원 수련의/전공의"
+    },
+    {
+      "date": "1998",
+      "content": "1998. 02 의사면허 취득"
+    },
+    {
+      "date": "2003",
+      "content": "2003. 02 외과 전문의 취득"
+    },
+    {
+      "date": "2008",
+      "content": "2008. 10 종양외과 인정의 취득"
+    },
+    {
+      "date": "2010",
+      "content": "2010. 03 항공전문의사 취득"
+    },
+    {
+      "date": "2012",
+      "content": "2012. 03 대한외과학회 지도전문의 취득"
+    },
+    {
+      "date": "2014",
+      "content": "2014. 12 유방외과 세부 전문의 취득"
+    },
+    {
+      "date": "2016",
+      "content": "2016. 10 외과초음파 유방인정의 취득"
+    },
+    {
+      "date": "2022",
+      "content": "2022. 11 항공전문의사/항공신체검사 지정"
+    }
+  ],
+  "수상": [
+    {
+      "date": "2023",
+      "content": "KSERS Best Mentor-Mentee Videa Award 최우수상"
+    },
+    {
+      "date": "2023",
+      "content": "Robot Breast Surgery 참관센터지정"
+    },
+    {
+      "date": "2021",
+      "content": "서울국제종양외과학회 [SISSO 2021] 우수논문상"
+    },
+    {
+      "date": "2021",
+      "content": "춘계외과초음파학회 우수논문상 2편"
+    },
+    {
+      "date": "2019",
+      "content": "최우수리뷰어상 대한종양외과학회"
+    },
+    {
+      "date": "2013",
+      "content": "최우수교수상(교육부문) 아주대학교 의과대학"
+    },
+    {
+      "date": "2013",
+      "content": "보건복지부장관상 암환자치료분야"
+    },
+    {
+      "date": "2012",
+      "content": "병원장상(진료부문) 아주대학교 의료원"
+    },
+    {
+      "date": "2000",
+      "content": "우수전공의상 단국대학교 의료원"
+    },
+    {
+      "date": null,
+      "content": "&nbsp;"
+    }
+  ],
+  "학술": [
+    {
+      "date": "2021",
+      "content": "~ 한국로봇내시경최소침습 유방수술연구회"
+    },
+    {
+      "date": "2016",
+      "content": "~ 대구경북유방암연구회"
+    },
+    {
+      "date": "2015",
+      "content": "~ 부울경유방암연구회"
+    },
+    {
+      "date": "2012",
+      "content": "~ 한국인 유방암 생존자연구회"
+    },
+    {
+      "date": "2018",
+      "content": "동남권의생명연구회"
+    },
+    {
+      "date": "2008",
+      "content": "경인지역유방암연구회"
+    },
+    {
+      "date": "2007",
+      "content": "한국인 유전성 유방암연구회 [KOHBRA]"
+    },
+    {
+      "date": null,
+      "content": "한국항공우주의학협회 항공전문의사"
+    },
+    {
+      "date": null,
+      "content": "대한외과초음파학회 연구이사"
+    },
+    {
+      "date": null,
+      "content": "대한임상초음파학회 학술이사"
+    },
+    {
+      "date": null,
+      "content": "대한내분비외과학회 고시위원, 진료권고안위원"
+    },
+    {
+      "date": null,
+      "content": "한국유방암학회 편집위원"
+    },
+    {
+      "date": null,
+      "content": "대한종양외과학회 편집위원"
+    },
+    {
+      "date": null,
+      "content": "대한외과학회 연구위원"
+    },
+    {
+      "date": null,
+      "content": "부울경유방암학회 차기회장"
+    },
+    {
+      "date": null,
+      "content": "대한유전의학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한갑상선학회 정회원"
+    }
+  ],
+  "specialty": "로봇갑상선수술 경구,로봇갑상선수술 액와, 갑상선암, 고주파열치료, 조직검사, 세침검사, 고주파열치료클리닉",
+  "profileUrl": "https://www.kosinmed.or.kr/uploaded/board/staff/l_6491d494b1ed2a5776f27b3a686f69ad0.png",
+  "저서": [
+    {
+      "date": "2021",
+      "content": "외과초음파학 초판"
+    },
+    {
+      "date": "2017",
+      "content": "유방학 4판"
+    },
+    {
+      "date": "2013",
+      "content": "유전성 유방암 초판"
+    },
+    {
+      "date": "2013",
+      "content": "유방학 3판"
+    },
+    {
+      "date": "2012",
+      "content": "암예방을 위한 영양과 운동 가이드라인"
+    },
+    {
+      "date": "2011",
+      "content": "여성암환자의 성"
+    },
+    {
+      "date": null,
+      "content": "[학술발표/튜터/좌장] (최근 2년간)"
+    },
+    {
+      "date": "2023",
+      "content": ".11 Speaker: Technical tip of ultrasound guided FNA and core needle biopsy for"
+    },
+    {
+      "date": null,
+      "content": "thyroid nodule, ASUS 2023"
+    },
+    {
+      "date": "2023",
+      "content": ".11 Moderator: Learning from Real-World Cases_Challenging Lesions Found in Breast"
+    },
+    {
+      "date": null,
+      "content": "Cancer Clinic, ACKSS 2023"
+    },
+    {
+      "date": "2023",
+      "content": ".11 Speaker: The Role of the Surgeon in Cancer Diagnosis, ACKSS 2023"
+    },
+    {
+      "date": "2023",
+      "content": ".11 Speaker: Tomosynthesis-Guided Stereotactic Biopsy for Breast Surgery, ACKSS 2023"
+    },
+    {
+      "date": "2023",
+      "content": ".9 Moderator: Variable techniques in Korean robot breast surgery, KoREA-BSG symphosium"
+    },
+    {
+      "date": "2023",
+      "content": ".7 Speaker: Rediscovery of bisphosphonate Focus on risedronate, Hanlim Symphosium"
+    },
+    {
+      "date": "2023",
+      "content": ".5 Speaker: Robotic Breast Surgery; Kosin Gospel Hospital"
+    },
+    {
+      "date": "2023",
+      "content": ".4 Moderator: Junior Doctors Forum; GBCC 2023"
+    },
+    {
+      "date": "2023",
+      "content": ".4 Moderator: Breast Ultrasonography; Advanced course."
+    },
+    {
+      "date": null,
+      "content": "The Korean Association of Clinical Ultrasound"
+    },
+    {
+      "date": "2022",
+      "content": ".12 Speaker: Rediscovery of bisphosphonate Focus on risedronate, Hanlim Symphosium"
+    },
+    {
+      "date": "2022",
+      "content": ".11 Moderator: Current standards and future perspective of the management of"
+    },
+    {
+      "date": null,
+      "content": "HR+HER2- EBC, Dionysos Symphosium"
+    },
+    {
+      "date": "2022",
+      "content": ".11 Moderator: Novel Approach in Breast Cancer Surgery, 2022 ACKSS"
+    },
+    {
+      "date": "2022",
+      "content": ".11 Speaker: USG Guided Biopsy in Breast/ Thyroid disease, 2022 ACKSS"
+    },
+    {
+      "date": "2022",
+      "content": ".10 Speaker: Proposal for joined Asian clinical research of surgical ultrasound, 2022 ASUS"
+    },
+    {
+      "date": "2022",
+      "content": ".10 Tutor: Hands-on Session - Breast Core Biopsy, 2022 ASUS"
+    },
+    {
+      "date": "2022",
+      "content": ".10 Speaker: Thyroid FNAB &amp; Core Bx by thyroid surgeon, 2022 ASUS"
+    },
+    {
+      "date": "2022",
+      "content": ".10 Spaeaker: Endoscopic Breast Surgery in Korea, 2022 WCES"
+    },
+    {
+      "date": "2022",
+      "content": ".9 Panel : 2022 The 4th KoREa-BSG Symposium"
+    },
+    {
+      "date": "2022",
+      "content": ".8 Moderator: 2022 5th Busan Breast Forum"
+    },
+    {
+      "date": "2022",
+      "content": ".7 Moderator: BUG Breast - Newlasta BTS Symphosium"
+    },
+    {
+      "date": "2022",
+      "content": ".6 Speaker: Stereotactic vacuum assisted biopsy by surgeon, Kyeongin Symphosium"
+    },
+    {
+      "date": "2022",
+      "content": ".6 Moderator: Kosin Surgery Symphosium"
+    },
+    {
+      "date": "2022",
+      "content": ".5 Moderator: BUG Breast - Hanmi Symphosium"
+    },
+    {
+      "date": "2022",
+      "content": ".5 Moderator: 2022 Annual Congress of Korean Surgical Society"
+    },
+    {
+      "date": "2022",
+      "content": ".5 Moderator: Breast USG Session, Annual Congress of Clinical Ultrasound Society"
+    },
+    {
+      "date": "2022",
+      "content": ".5 Speaker: Stereotactic vacuum assisted biopsy by surgeon, Annual Congress of Surgical"
+    },
+    {
+      "date": null,
+      "content": "Ultrasound Society"
+    },
+    {
+      "date": "2022",
+      "content": ".5 Panel: Robotic mastectomy, KAROS"
+    },
+    {
+      "date": "2022",
+      "content": ".4 Moderator: Survivorship Session, GBCC"
+    },
+    {
+      "date": "2022",
+      "content": ".3 Speaker: Breast Thyroid USG Training Module; Korean Surgical Society Symposium"
+    },
+    {
+      "date": "2022",
+      "content": ".2 Tutor: FNAB &amp; Core Biopsy in Thyroid; School of thyroid surgeon"
+    },
+    {
+      "date": "2021",
+      "content": ".12 Speaker: Stereotactic Breast Biopsy, Daegu Pink Hospital Symposium"
+    },
+    {
+      "date": "2021",
+      "content": ".11 Tutor: Core Biopsy in Breast; Annual Congress of Surgical Ultrasound Society"
+    },
+    {
+      "date": "2021",
+      "content": ".10 Speaker: A New Era of Hope for patients with Advanced Triple-Negative Breast Cancer"
+    },
+    {
+      "date": null,
+      "content": "MSD Symposium"
+    },
+    {
+      "date": "2021",
+      "content": ".10 Speaker: Adjuvant Ovarian Suppression Plus Endocrine Therapy in"
+    },
+    {
+      "date": null,
+      "content": "Premenopausal Patients, Alvogen Symposium"
+    },
+    {
+      "date": "2021",
+      "content": ".10 Speaker: Adjuvant Ovarian Suppression Plus Endocrine Therapy in"
+    },
+    {
+      "date": null,
+      "content": "Premenopausal Patients, Autumn Symposium, Korean Breast Cancer Society"
+    },
+    {
+      "date": "2021",
+      "content": ".10 Speaker: Real World Practice in HER2 Breast Cancer Therapy, Celltrion Seminar"
+    },
+    {
+      "date": "2021",
+      "content": ". 6 Speaker: [Attack of Titan] PONV in Breast Cancer; Symposium"
+    },
+    {
+      "date": "2021",
+      "content": ". 5 Speaker: Immunotherapy in Breast Cancer; Annual Congress of Korean Surgical Society"
+    },
+    {
+      "date": "2021",
+      "content": ". 5 Speaker: Evolving Therapeutic Landscape for HER-2Positive Breast Cancer; Symposium"
+    },
+    {
+      "date": "2021",
+      "content": ". 5 Speaker: Role of Goserelin in Breast Cancer; Symposium"
+    },
+    {
+      "date": "2021",
+      "content": ". 5 Tutor: Core Biopsy in Breast; Annual Congress of Surgical Ultrasound Society"
+    }
+  ],
+  "논문": [
+    "Characteristics and chronologically changing patterns of late-onset breast cancer in Korean women of age ≥ 70 years: A hospital based-registry study",
+    "Hyun-June Paik, Suk Jung Kim, Ku Sang Kim, Yongsuk Kim, Se Kyung Lee, Su Hwan Kang, Jeong Joon, Hyun Jo Youn; Korean Breast Cancer Society. BMC Cancer. 2022 Dec 5;22(1):1261. doi: 10.1186/s12885-022-10295-y.",
+    "Prognosis of pregnancy after breast cancer diagnosis according to the type of treatment: A population-based study in Korea by the SMARTSHIP group",
+    "Soo Youn Bae, Jihyoun Lee, Ji Sung Lee, Jae Sun Yoon, Ku Sang Kim, Yoo Seok Kim, Zisun Kim, Jun Won Min, Eun-Jung Shim, Ilkyun Lee, Min Hyuk Lee, Sungmin Park.Breast. 2022 Jun;63:46-53. doi: 10.1016/j.breast.2022.03.005. Epub 2022 Mar 11.",
+    "Clinical Application of Ultrasound-guided Core Needle Biopsy of the Breast, Ku Sang Kim. Clinical Ultrasound 2022;7:22-26 https://doi.org/10.18525/cu.2022.7.1.22",
+    "Follow-Up after Volume Replacement Using Acellular Dermal Matrix in Oncoplastic Breast-Conserving Surgery. Hee Seung Lee, Ku Sang Kim. Clin Ultrasound > Volume 7(1); 2022",
+    "Isoflavone intake on the risk of overall breast cancer and molecular subtypes in women at high risk for hereditary breast cancer.",
+    "Sim EJ, Ko KP, Ahn C, Park SM, Surh YJ, An S, Kim SW, Lee MH, Lee JW, Lee JE, Kim KS, Yom CK, Kim HA, Park SK.Breast Cancer Res Treat. 2020 Nov;184(2):615-626. doi: 10.1007/s10549-020-05875-0. Epub 2020 Oct 17.PMID: 33068197",
+    "Long-term risk of congestive heart failure in younger breast cancer survivors: A nationwide study by the SMARTSHIP group.",
+    "Lee J, Hur H, Lee JW, Youn HJ, Han K, Kim NW, Jung SY, Kim Z, Kim KS, Lee MH, Han SH, Jung SH, Chung IY.Cancer. 2020 Jan 1;126(1):181-188. doi: 10.1002/cncr.32485. Epub 2019 Aug 27.",
+    "Neoadjuvant Chemotherapy and Prognosis of Pregnancy-Associated Breast Cancer: A Time-Trends Study of the Korean Breast Cancer Registry Database.",
+    "Bae SY, Kim KS, Kim JS, Lee SB, Park BW, Lee SW, Lee HJ, Kim HK, You JY, Jung SP; Korean Breast Cancer Society.J Breast Cancer. 2018 Dec;21(4):425-432. doi: 10.4048/jbc.2018.21.e58. Epub 2018 Dec 10.",
+    "Tamoxifen therapy improves overall survival in luminal A subtype of ductal carcinoma in situ: a study based on nationwide Korean Breast Cancer Registry database.",
+    "Hwang KT, Kim EK, Jung SH, Lee ES, Kim SI, Lee S, Park HK, Kim J, Oh S, Kim YA; Korean Breast Cancer Society.Breast Cancer Res Treat. 2018 Jun;169(2):311-322. doi: 10.1007/s10549-018-4681-6. Epub 2018 Jan 30.",
+    "Reproductive factors as risk modifiers of breast cancer in BRCA mutation carriers and high-risk non-carriers.",
+    "Park B, Hopper JL, Win AK, Dowty JG, Sung HK, Ahn C, Kim SW, Lee MH, Lee J, Lee JW, Kang E, Yu JH, Kim KS, Moon BI, Han W, Noh DY, Park SK; KOHBRA Study Group.Oncotarget. 2017 Oct 31;8(60):102110-102118. doi: 10.18632/oncotarget.22193. eCollection 2017 Nov 24.",
+    "Different prognosis of young breast cancer patients in their 20s and 30s depending on subtype: a nationwide study from the Korean Breast Cancer Society.",
+    "Ryu JM, Yu J, Kim SI, Kim KS, Moon HG, Choi JE, Jeong J, Do Byun K, Nam SJ, Lee JE, Lee SK, Kim SW.Breast Cancer Res Treat. 2017 Dec;166(3):833-842. doi: 10.1007/s10549-017-4472-5. Epub 2017 Aug 22.PMID: 28831642",
+    "Prognostic value of ABO blood types in young patients with breast cancer; a nationwide study in Korean Breast Cancer Society.",
+    "Park S, Kim KS, Kim JS, Han W, Park BW, Lee S, Jeon YW, Lee SK, Yu J, Lee JE, Kim SW, Nam SJ; Korean Breast Cancer Society.Med Oncol. 2017 Jun;34(6):118. doi: 10.1007/s12032-017-0974-6. Epub 2017 May 12.",
+    "Poor Prognosis of Lower Inner Quadrant in Lymph Node-negative Breast Cancer Patients Who Received No Chemotherapy: A Study Based on Nationwide Korean Breast Cancer Registry Database.",
+    "Hwang KT, Kim J, Kim EK, Jung SH, Sohn G, Kim SI, Jeong J, Lee HJ, Park JH, Oh S; Korean Breast Cancer Society.Clin Breast Cancer. 2017 Jul;17(4):e169-e184. doi: 10.1016/j.clbc.2016.12.011. Epub 2017 Jan 10.",
+    "Effects of compensatory cognitive training intervention for breast cancer patients undergoing chemotherapy: a pilot study.",
+    "Park JH, Jung YS, Kim KS, Bae SH.Support Care Cancer. 2017 Jun;25(6):1887-1896. doi: 10.1007/s00520-017-3589-8. Epub 2017 Jan 28.",
+    "Nomogram of Naive Bayesian Model for Recurrence Prediction of Breast Cancer.",
+    "Kim W, Kim KS, Park RW.Healthc Inform Res. 2016 Apr;22(2):89-94. doi: 10.4258/hir.2016.22.2.89. Epub 2016 Apr 30.",
+    "Phase 3, open-label, randomized study comparing 3-monthly with monthly goserelin in pre-menopausal women with estrogen receptor-positive advanced breast cancer.",
+    "Noguchi S, Kim HJ, Jesena A, Parmar V, Sato N, Wang HC, Lokejaroenlarb S, Isidro J, Kim KS, Itoh Y, Shin E.Breast Cancer. 2016 Sep;23(5):771-9. doi: 10.1007/s12282-015-0637-4. Epub 2015 Sep 9.",
+    "The prevalence and spectrum of BRCA1 and BRCA2 mutations in Korean population: recent update of the Korean Hereditary Breast Cancer (KOHBRA) study.",
+    "Kang E, Seong MW, Park SK, Lee JW, Lee J, Kim LS, Lee JE, Kim SY, Jeong J, Han SA, Kim SW; Korean Hereditary Breast Cancer Study Group.Breast Cancer Res Treat. 2015 May;151(1):157-68. doi: 10.1007/s10549-015-3377-4. Epub 2015 Apr 12.PMID: 25863477",
+    "Feasibility of implementing a surgical student internship program in South Korea.",
+    "Roh H, Kim KS, Kim KH, Choi IS, Lee KE, Kim HY, Yi NJ, Kim SW, Kim MG.Ann Surg Treat Res. 2015 Apr;88(4):181-6. doi: 10.4174/astr.2015.88.4.181. Epub 2015 Mar 26.",
+    "Sentinel lymph node biopsy alone after neoadjuvant chemotherapy in patients with initial cytology-proven axillary node metastasis.",
+    "Kim JY, Kim MK, Lee JE, Jung Y, Bae SY, Lee SK, Kil WH, Kim SW, Kim KS, Nam SJ, Han S.J Breast Cancer. 2015 Mar;18(1):22-8. doi: 10.4048/jbc.2015.18.1.22. Epub 2015 Mar 27.",
+    "The reality in the follow-up of breast cancer survivors: survey of Korean Breast Cancer Society.",
+    "Kim KS, Kim Z, Shim EJ, Kim NH, Jung SY, Kim J, Sohn G, Lee JW, Cho J, Lee JE, Lee J, Youn HJ, Lee J, Lee MH; Korean Breast Cancer Society.Ann Surg Treat Res. 2015 Mar;88(3):133-9. doi: 10.4174/astr.2015.88.3.133. Epub 2015 Feb 27.",
+    "T 1 relaxation measurement of ex-vivo breast cancer tissues at ultralow magnetic fields.",
+    "Lee SJ, Shim JH, Kim K, Hwang SM, Yu KK, Lim S, Han JH, Yim H, Kim JH, Jung YS, Kim KS.Biomed Res Int. 2015;2015:385428. doi: 10.1155/2015/385428. Epub 2015 Jan 29.",
+    "The clinical impact of 21-gene recurrence score on treatment decisions for patients with hormone receptor-positive early breast cancer in Korea.",
+    "Lee MH, Han W, Lee JE, Kim KS, Park H, Kim J, Bae SY, Shin HJ, Lee JW, Lee ES.Cancer Res Treat. 2015 Apr;47(2):208-14. doi: 10.4143/crt.2013.223. Epub 2014 Sep 11.",
+    "A review of breast cancer survivorship issues from survivors' perspectives.",
+    "Cho J, Jung SY, Lee JE, Shim EJ, Kim NH, Kim Z, Sohn G, Youn HJ, Kim KS, Kim H, Lee JW, Lee MH.J Breast Cancer. 2014 Sep;17(3):189-99. doi: 10.4048/jbc.2014.17.3.189. Epub 2014 Sep 30.",
+    "A multi-institutional study of the prevalence of BRCA1 and BRCA2 large genomic rearrangements in familial breast cancer patients.",
+    "Seong MW, Cho SI, Kim KH, Chung IY, Kang E, Lee JW, Park SK, Lee MH, Choi DH, Yom CK, Noh WC, Chang MC, Park SS, Kim SW; Korean Hereditary Breast Cancer Study Group.BMC Cancer. 2014 Sep 1;14:645. doi: 10.1186/1471-2407-14-645.",
+    "Phase II randomized trial of neoadjuvant metformin plus letrozole versus placebo plus letrozole for estrogen receptor positive postmenopausal breast cancer (METEOR).",
+    "Kim J, Lim W, Kim EK, Kim MK, Paik NS, Jeong SS, Yoon JH, Park CH, Ahn SH, Kim LS, Han S, Nam SJ, Kang HS, Kim SI, Yoo YB, Jeong J, Kim TH, Kang T, Kim SW, Jung Y, Lee JE, Kim KS, Yu JH, Chae BJ, Jung SY, Kang E, Choi SY, Moon HG, Noh DY, Han W.BMC Cancer. 2014 Mar 10;14:170. doi: 10.1186/1471-2407-14-170.",
+    "Is there any correlation between model-based perfusion parameters and model-free parameters of time-signal intensity curve on dynamic contrast enhanced MRI in breast cancer patients?",
+    "Yi B, Kang DK, Yoon D, Jung YS, Kim KS, Yim H, Kim TH.Eur Radiol. 2014 May;24(5):1089-96. doi: 10.1007/s00330-014-3100-6. Epub 2014 Feb 21.",
+    "Utility of MRI and PET/CT after neoadjuvant chemotherapy in breast cancer patients: correlation with pathological response grading system based on tumor cellularity.",
+    "Kim T, Kang DK, An YS, Yim H, Jung YS, Kim KS, Kang SY, Kim TH.Acta Radiol. 2014 May;55(4):399-408. doi: 10.1177/0284185113498720. Epub 2013 Aug 20.",
+    "Comparison of neoadjuvant adriamycin and docetaxel versus adriamycin, cyclophosphamide followed by paclitaxel in patients with operable breast cancer.",
+    "Hong WS, Jeon JY, Kang SY, Jung YS, Kim JY, Ahn MS, Kang DK, Kim TH, Yim HE, An YS, Park RW, Kim KS.J Korean Surg Soc. 2013 Jul;85(1):7-14. doi: 10.4174/jkss.2013.85.1.7. Epub 2013 Jun 26.",
+    "Magnetic resonance imaging enhancement features before and after neoadjuvant chemotherapy in patients with breast cancer: a predictive value for responders.",
+    "Kang DK, Kim TH, Han TS, Kim KS, Yim H.J Comput Assist Tomogr. 2013 May-Jun;37(3):432-9. doi: 10.1097/RCT.0b013e31828386ae.",
+    "Granulocytic sarcoma in breast after bone marrow transplantation.",
+    "Kim SJ, Hong WS, Jun SH, Jeong SH, Kang SY, Kim TH, Kang DK, Yim HE, Jung YS, Kim KS.J Breast Cancer. 2013 Mar;16(1):112-6. doi: 10.4048/jbc.2013.16.1.112. Epub 2013 Mar 31.",
+    "Impact of local surgical treatment on survival in young women with T1 breast cancer: long-term results of a population-based cohort.",
+    "Jeon YW, Choi JE, Park HK, Kim KS, Lee JY, Suh YJ.Breast Cancer Res Treat. 2013 Apr;138(2):475-84. doi: 10.1007/s10549-013-2456-7. Epub 2013 Mar 3.",
+    "Usefulness of (18)F-fluoride PET/CT in Breast Cancer Patients with Osteosclerotic Bone Metastases.",
+    "Yoon SH, Kim KS, Kang SY, Song HS, Jo KS, Choi BH, Lee SJ, Yoon JK, An YS.Nucl Med Mol Imaging. 2013 Mar;47(1):27-35. doi: 10.1007/s13139-012-0178-0. Epub 2012 Oct 27.",
+    "The prevalence of BRCA mutations among familial breast cancer patients in Korea: results of the Korean Hereditary Breast Cancer study.",
+    "Han SA, Kim SW, Kang E, Park SK, Ahn SH, Lee MH, Noh WC, Kim LS, Jung Y, Kim KS, Noh DY, Choi DH, Noh WC, Kim LS, Kim KS, Suh YJ, Lee JE, Jung Y, Moon BI, Yang JH, Son BH, Yom CK, Kim SY, Lee H, Jung SH; KOHBRA Research Group and the Korean Breast Cancer Society.Fam Cancer. 2013 Mar;12(1):75-81. doi: 10.1007/s10689-012-9578-7.",
+    "Prognostic role of MRI enhancement features in patients with breast cancer: value of adjacent vessel sign and increased ipsilateral whole-breast vascularity.",
+    "Han M, Kim TH, Kang DK, Kim KS, Yim H.AJR Am J Roentgenol. 2012 Oct;199(4):921-8. doi: 10.2214/AJR.11.7895.",
+    "Development of novel breast cancer recurrence prediction model using support vector machine.",
+    "Kim W, Kim KS, Lee JE, Noh DY, Kim SW, Jung YS, Park MY, Park RW.J Breast Cancer. 2012 Jun;15(2):230-8. doi: 10.4048/jbc.2012.15.2.230. Epub 2012 Jun 28.",
+    "Contralateral enhancing lesions on magnetic resonance imaging in patients with breast cancer: role of second-look sonography and imaging findings of synchronous contralateral cancer.",
+    "Kim TH, Kang DK, Jung YS, Kim KS, Yim H.J Ultrasound Med. 2012 Jun;31(6):903-13. doi: 10.7863/jum.2012.31.6.903.",
+    "Differential diagnosis in idiopathic granulomatous mastitis and tuberculous mastitis.",
+    "Seo HR, Na KY, Yim HE, Kim TH, Kang DK, Oh KK, Kang SY, An YS, Chun M, Kim W, Park RW, Jung YS, Kim KS.J Breast Cancer. 2012 Mar;15(1):111-8. doi: 10.4048/jbc.2012.15.1.111. Epub 2012 Mar 28.",
+    "Magnetic resonance imaging patterns of tumor regression after neoadjuvant chemotherapy in breast cancer patients: correlation with pathological response grading system based on tumor cellularity.",
+    "Kim TH, Kang DK, Yim H, Jung YS, Kim KS, Kang SY.J Comput Assist Tomogr. 2012 Mar-Apr;36(2):200-6. doi: 10.1097/RCT.0b013e318246abf3.",
+    "Prevalence of BRCA1 and BRCA2 mutations in non-familial breast cancer patients with high risks in Korea: the Korean Hereditary Breast Cancer (KOHBRA) Study.",
+    "Son BH, Ahn SH, Kim SW, Kang E, Park SK, Lee MH, Noh WC, Kim LS, Jung Y, Kim KS, Noh DY, Moon BI, Suh YJ, Lee JE, Choi DH, Kim SY, Jung SH, Yom CK, Lee H, Yang JH; KOHBRA Research Group and Korean Breast Cancer Society.Breast Cancer Res Treat. 2012 Jun;133(3):1143-52. doi: 10.1007/s10549-012-2001-0. Epub 2012 Mar 2.",
+    "Nation-wide Korean breast cancer data from 2008 using the breast cancer registration program.",
+    "Jung YS, Na KY, Kim KS, Ahn SH, Lee SJ, Park HK, Cho YU.J Breast Cancer. 2011 Sep;14(3):229-36. doi: 10.4048/jbc.2011.14.3.229. Epub 2011 Sep 29.",
+    "An Automated Measurement of Ciliary Beating Frequency using a Combined Optical Flow and Peak Detection.",
+    "Kim W, Han TH, Kim HJ, Park MY, Kim KS, Park RW.Healthc Inform Res. 2011 Jun;17(2):111-9. doi: 10.4258/hir.2011.17.2.111. Epub 2011 Jun 30.",
+    "Granular cell tumor of the male breast: two case descriptions and brief review of the literature.",
+    "Kim EY, Kang DK, Kim TH, Jung YS, Kim KS, Yim H.J Ultrasound Med. 2011 Sep;30(9):1295-301. doi: 10.7863/jum.2011.30.9.1295.",
+    "Characteristics of double heterozygosity for BRCA1 and BRCA2 germline mutations in Korean breast cancer patients.",
+    "Noh JM, Choi DH, Nam SJ, Lee JE, Kim JW, Kim SW, Kang E, Lee MH, Ahn SH, Kim KS, Park SK, Haffty BG; Korea Breast Cancer Study Group.Breast Cancer Res Treat. 2012 Jan;131(1):217-22. doi: 10.1007/s10549-011-1718-5. Epub 2011 Aug 17.",
+    "The 70-gene prognostic signature for korean breast cancer patients.",
+    "Na KY, Kim KS, Lee JE, Kim HJ, Yang JH, Ahn SH, Moon BI, Kim RM, Ko SM, Jung YS.J Breast Cancer. 2011 Mar;14(1):33-8. doi: 10.4048/jbc.2011.14.1.33. Epub 2011 Mar 31.",
+    "Analysis of Relationship between Levofloxacin and Corrected QT Prolongation Using a Clinical Data Warehouse.",
+    "Park MY, Kim EY, Lee YH, Kim W, Kim KS, Sheen SS, Lim HS, Park RW.Healthc Inform Res. 2011 Mar;17(1):58-66. doi: 10.4258/hir.2011.17.1.58. Epub 2011 Mar 31.",
+    "Quality of life and symptom experience in breast cancer survivors after participating in a psychoeducational support program: a pilot study.",
+    "Park JH, Bae SH, Jung YS, Kim KS.Cancer Nurs. 2012 Jan-Feb;35(1):E34-41. doi: 10.1097/NCC.0b013e318218266a.",
+    "The Korean Hereditary Breast Cancer (KOHBRA) study: protocols and interim report.",
+    "Han SA, Park SK, Ahn SH, Lee MH, Noh DY, Kim LS, Noh WC, Jung Y, Kim KS, Kim SW; Korean Breast Cancer Study Group.Clin Oncol (R Coll Radiol). 2011 Sep;23(7):434-41. doi: 10.1016/j.clon.2010.11.007. Epub 2011 Apr 16.",
+    "Effect of BRCA1/2 mutation on short-term and long-term breast cancer survival: a systematic review and meta-analysis.",
+    "Lee EH, Park SK, Park B, Kim SW, Lee MH, Ahn SH, Son BH, Yoo KY, Kang D; KOHBRA Research Group; Korean Breast Cancer Society.Breast Cancer Res Treat. 2010 Jul;122(1):11-25. doi: 10.1007/s10549-010-0859-2. Epub 2010 Apr 8.",
+    "The accuracy of preoperative core biopsy in determining histologic grade, hormone receptors, and human epidermal growth factor receptor 2 status in invasive breast cancer.",
+    "Park SY, Kim KS, Lee TG, Park SS, Kim SM, Han W, Noh DY, Kim SW.Am J Surg. 2009 Feb;197(2):266-9. doi: 10.1016/j.amjsurg.2007.11.024. Epub 2008 Jul 9.",
+    "Scoring system for predicting malignancy in patients diagnosed with atypical ductal hyperplasia at ultrasound-guided core needle biopsy.",
+    "Ko E, Han W, Lee JW, Cho J, Kim EK, Jung SY, Kang MJ, Moon WK, Park IA, Kim SW, Kim KS, Lee ES, Min KH, Kim SW, Noh DY.Breast Cancer Res Treat. 2008 Nov;112(1):189-95. doi: 10.1007/s10549-007-9824-0. Epub 2007 Dec 4"
+  ],
+  "isAttend": true
+}

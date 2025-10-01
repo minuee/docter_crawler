@@ -32,11 +32,11 @@ module.exports = {
 
   },
 
-  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url) => {
+  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url,hName,originalDetailUrl) => {
 
     let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL set_doctor_basic(?)`
-    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url]);
+    const query = `CALL set_doctor_basic_v3(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url,hName,originalDetailUrl]);
     if (DBError) {
       console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
       return { error: DBError, data: null };
@@ -274,12 +274,14 @@ module.exports = {
 
   saveDoctorDataToDb: async (doctorData) => {
     const doctorName = doctorData.bedoc_doctorname || '';
+    const hName = doctorData.hospital_name || '';
     const tmpHospitalID = doctorData.aiga_hid || '';
-    const checkHospitalID = doctorData.found_hospital_aiga_hid || '';
+    const checkHospitalID = '';
     const deptName = doctorData.bedoc_deptname || '';
     const specialtyData = doctorData.specialty || '';
     const doctorProfileImgUrl = doctorData.profileUrl || '';
-    const refUrl = doctorData.doctorDetailUrl;
+    const refUrl = doctorData.saveDoctorDetailUrl;
+    const originalDetailUrl =  doctorData.saveDoctorDetailUrl.replace(/([?&])doctorName=.*$/, "") ;
 
     const hospitalID = checkHospitalID ? checkHospitalID : tmpHospitalID;
 
@@ -299,7 +301,7 @@ module.exports = {
         return { success: false, error: "Empty rid_encrypt" };
       }
 
-      const SP2 = await module.exports.setCrawlingDoctorLink(tempRid, hospitalID, deptName, doctorName, refUrl);
+      const SP2 = await module.exports.setCrawlingDoctorLink(tempRid, hospitalID, deptName, doctorName, refUrl,hName,originalDetailUrl);
       if (SP2.error) return { success: false, error: "Empty rid_encrypt" };
       await CS.wait(300);
 

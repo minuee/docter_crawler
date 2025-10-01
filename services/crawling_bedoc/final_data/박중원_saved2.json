@@ -1,0 +1,203 @@
+{
+  "hospital_cid": 238,
+  "bedoc_id": "A0079",
+  "bedoc_hospitalsite": "http://www.ncc.re.kr",
+  "bedoc_doctorname": "박중원",
+  "bedoc_deptname": "소화기내과",
+  "bedoc_hospitalname": "국립암센터",
+  "hospital_name": "명지병원",
+  "aiga_hid": "H11KR-31000048",
+  "hospital_site": "https://mjh.or.kr/main/doctor/view.do?md_idx=255&doctor_code=GI074&mp_idx=&part_code=GI",
+  "site_type": "single",
+  "hospital_addr": "경기도 고양시 덕양구 화수로14번길 55, (화정동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://mjh.or.kr/main/doctor/view.do?md_idx=255&doctor_code=GI074&mp_idx=&part_code=GI&doctorName=%EB%B0%95%EC%A4%91%EC%9B%90&depthName=%EC%86%8C%ED%99%94%EA%B8%B0%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "https://mjh.or.kr/data/doctor/GI074_2.png",
+  "specialty": "간암, 간경변증, 간염, 지방간 등 간 질환 질환",
+  "학력": [
+    {
+      "date": null,
+      "content": "서울대학교 의과대학원 박사"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 졸업"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "명지의료재단 명지병원 간,간암센터장 (현)"
+    },
+    {
+      "date": null,
+      "content": "명지의료재단 명지병원 암통합치유센터장 (현)"
+    },
+    {
+      "date": null,
+      "content": "국립암센터 최고연구원"
+    },
+    {
+      "date": null,
+      "content": "국립암센터 간암센터장"
+    },
+    {
+      "date": null,
+      "content": "국립암센터 항암신약신치료개발사업단 단장"
+    },
+    {
+      "date": null,
+      "content": "국립암센터 국제암대학원대학교 겸임교수"
+    },
+    {
+      "date": null,
+      "content": "미국 메이요클리닉 소화기병연구소 전임연구원"
+    },
+    {
+      "date": null,
+      "content": "중앙대학교 의과대학 소화기내과 부교수"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한간암학회 회장"
+    },
+    {
+      "date": null,
+      "content": "대한민국의학한림원 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한간암학회-국립암센터 간세포암종 진료가이드라인 제정-개정 위원장"
+    },
+    {
+      "date": null,
+      "content": "아시아-태평양 간암전문가협회 (APPLE) 학술위원장"
+    },
+    {
+      "date": null,
+      "content": "국제간암학회 (ILCA) 운영이사"
+    },
+    {
+      "date": null,
+      "content": "대한간암학회 학술위원장"
+    },
+    {
+      "date": null,
+      "content": "대한간학회 학술위원장"
+    }
+  ],
+  "수상": [
+    {
+      "date": null,
+      "content": "대한민국 국무총리 표창: 보건의료기술진흥부문"
+    },
+    {
+      "date": null,
+      "content": "대한민국의학한림원 화이자 의학상: 임상의학부분"
+    },
+    {
+      "date": null,
+      "content": "보건복지부 임상시험 국가유공자 장관표창"
+    },
+    {
+      "date": null,
+      "content": "보건복지부 암의날 공로 장관표창"
+    },
+    {
+      "date": null,
+      "content": "서울대학교의과대학 함춘의학상: 연구업적부문"
+    },
+    {
+      "date": null,
+      "content": "대한암학회 로슈 암학술상"
+    },
+    {
+      "date": null,
+      "content": "대한내과학회 최우수논문상"
+    },
+    {
+      "date": null,
+      "content": "대한간학회 최우수논문상"
+    }
+  ],
+  "저서": [
+    {
+      "date": null,
+      "content": "김정룡 소화기계질환 2, 3, 4판 공동저자"
+    },
+    {
+      "date": null,
+      "content": "간담췌외과학 4판 공동저자"
+    },
+    {
+      "date": null,
+      "content": "Mitochondria in Pathogenesis 공동저자"
+    }
+  ],
+  "논문": [
+    "Concurrent nivolumab and external beam radiation therapy for hepatocellular carcinoma with macrovascular invasion: A phase 2 study. JHEP Reports 2023, December online",
+    "Proton beam radiotherapy vs. radiofrequency ablation for recurrent hepatocellular carcinoma: A randomized phase III trial. J Hepatol 2021;74:603-612",
+    "Sorafenib with or without concurrent transarterial chemoembolization in patients with advanced hepatocellular carcinoma: The phase III STAH trial. J Hepatol 2019;70:684-691",
+    "2022 Korean Liver Cancer Association-National Cancer Center Korea Practice Guidelines for the Management of Hepatocellular Carcinoma. Clin Mol Hepatol 2022 Oct;28(4):583-705",
+    "Global patterns of hepatocellular carcinoma management from diagnosis to death: the BRIDGE Study. Liver Int 2015;35:2155-2166",
+    "A prospective evaluation of F-18-FDG and C-11-acetate PET/CT for detection of primary and metastatic hepatocellular carcinoma. J Nuclear Med 2008; 49:1912-1921"
+  ],
+  "언론": [
+    {
+      "targetDate": "25-05-19",
+      "type": "기사",
+      "text": "박중원 교수, 간암에서 새로운 면역항암제 병용치료 효과 입증",
+      "url": "https://mjh.or.kr/main/contents.do?proc_type=view&a_num=85515332&b_num=16949",
+      "issuer": "언론보도"
+    },
+    {
+      "targetDate": "24-01-30",
+      "type": "기사",
+      "text": "간암을 유발하는 습관! 예방하는 습관!",
+      "url": "https://mjh.or.kr/main/health/index.do?proc_type=view&midx=582",
+      "issuer": "MJ건강교실"
+    },
+    {
+      "targetDate": "24-01-25",
+      "type": "기사",
+      "text": "짧은 시술 시간으로 암을 태운다고요? 간암 병기별 맞춤 치료법",
+      "url": "https://mjh.or.kr/main/health/index.do?proc_type=view&midx=581",
+      "issuer": "MJ건강교실"
+    },
+    {
+      "targetDate": "24-01-19",
+      "type": "기사",
+      "text": "간암 사망률이 높은 이유!",
+      "url": "https://mjh.or.kr/main/health/index.do?proc_type=view&midx=579",
+      "issuer": "MJ건강교실"
+    },
+    {
+      "targetDate": "24-01-09",
+      "type": "기사",
+      "text": "‘간암 권위자’ 박중원 교수 영입",
+      "url": "https://mjh.or.kr/main/contents.do?proc_type=view&a_num=85515332&b_num=16299",
+      "issuer": "언론보도"
+    },
+    {
+      "targetDate": "2025.06.13.",
+      "type": "기사",
+      "text": "'6개월 밖에 못산다던 환자가 완치 판정도…전이성 간암, 희망 찾아'",
+      "url": "https://www.sedaily.com/NewsView/2GU248XNGW",
+      "issuer": "서울경제"
+    },
+    {
+      "targetDate": "2025.03.31.",
+      "type": "기사",
+      "text": "'술 안 먹고 말랐는데 왜…'침묵의 경고 ‘지방간’, 그냥 넘기면 큰일 [건강+'",
+      "url": "https://www.segye.com/daumview/20250328511430?OutUrl=daum",
+      "issuer": "세계일보"
+    }
+  ]
+}

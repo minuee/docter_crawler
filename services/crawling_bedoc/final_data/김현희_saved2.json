@@ -131,53 +131,86 @@
       "content": "대한소아알레르기호흡기학회 비염연구회 회장"
     }
   ],
-  "논문": [
-    "Blood eosinophil counts as a biomarker for allergen sensitization in childhood allergic diseases in comparison with total IgE (ALLERGY ASTHMA & RESPIRATORY DISEASE 공동저자)",
-    "꽃가루 생태변화와 소아청소년 알레르기비염에 관한 고찰 (ALLERGY ASTHMA & RESPIRATORY DISEASE 공동저자)",
-    "Level of interleukin-18 binding protein is significantly different in patients with anaphylaxis than urticaria (ASIAN PACIFIC JOURNAL OF ALLERGY AND IMMUNOLOGY 공동저자)",
-    "집먼지진드기로 유발한 알레르기비염 면역치료 모델의 개발 (ALLERGY ASTHMA & RESPIRATORY DISEASE 공동저자)",
-    "소아청소년에서 흡연 노출과 알레르기비염 (ALLERGY ASTHMA & RESPIRATORY DISEASE 공동저자)"
+  "논문/연구": [
+    {
+      "date": "2024 Jan",
+      "journal": "ALLERGY ASTHMA & RESPIRATORY DISEASE",
+      "role": "공동저자",
+      "title": "Blood eosinophil counts as a biomarker for allergen sensitization in childhood allergic diseases in comparison with total IgE"
+    },
+    {
+      "date": "2023 Jan",
+      "journal": "ALLERGY ASTHMA & RESPIRATORY DISEASE",
+      "role": "공동저자",
+      "title": "꽃가루 생태변화와 소아청소년 알레르기비염에 관한 고찰"
+    },
+    {
+      "date": "2022 Dec",
+      "journal": "ASIAN PACIFIC JOURNAL OF ALLERGY AND IMMUNOLOGY",
+      "role": "공동저자",
+      "title": "Level of interleukin-18 binding protein is significantly different in patients with anaphylaxis than urticaria"
+    },
+    {
+      "date": "2022 Oct",
+      "journal": "ALLERGY ASTHMA & RESPIRATORY DISEASE",
+      "role": "공동저자",
+      "title": "집먼지진드기로 유발한 알레르기비염 면역치료 모델의 개발"
+    },
+    {
+      "date": "2022 Oct",
+      "journal": "ALLERGY ASTHMA & RESPIRATORY DISEASE",
+      "role": "공동저자",
+      "title": "소아청소년에서 흡연 노출과 알레르기비염"
+    }
   ],
   "저서": [
     {
       "date": "2013 May",
       "content": "소아알레르기 호흡기학",
-      "issuer": "여문각"
+      "issuer": "여문각",
+      "role": "공동"
     },
     {
       "date": "2012 Mar",
       "content": "천식과 알레르기질환",
-      "issuer": "여문각"
+      "issuer": "여문각",
+      "role": "공동"
     },
     {
       "date": "2012 Feb",
       "content": "홍창의 소아과학",
-      "issuer": "(주)미래엔"
+      "issuer": "(주)미래엔",
+      "role": "공동"
     },
     {
       "date": "2009 Dec",
       "content": "지역사회 아토피 천식 예방관리를 위한 아토피 천식의 역학과 관리(개정, 2009)",
-      "issuer": "질병관리본부"
+      "issuer": "질병관리본부",
+      "role": "공동"
     },
     {
       "date": "2009 May",
       "content": "소아 청소년 알레르기비염 진료 가이드라인",
-      "issuer": "대한 소아알레르기 호흡기학회"
+      "issuer": "대한 소아알레르기 호흡기학회",
+      "role": "공동"
     },
     {
       "date": "2008 Oct",
       "content": "어린이 청소년 천식 바로 알고 바로 치료하자",
-      "issuer": "대한 소아알레르기 호흡기학회"
+      "issuer": "대한 소아알레르기 호흡기학회",
+      "role": "공동"
     },
     {
       "date": "2008 Apr",
       "content": "가정상비 응급상황지침서",
-      "issuer": "대한의사협회"
+      "issuer": "대한의사협회",
+      "role": "공동"
     },
     {
       "date": "2008 Apr",
       "content": "소아 청소년 아토피피부염 진료가이드라인",
-      "issuer": "대한 소아알레르기 호흡기학회"
+      "issuer": "대한 소아알레르기 호흡기학회",
+      "role": "공동"
     },
     {
       "date": "2008 Feb",

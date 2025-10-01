@@ -17,8 +17,8 @@
   "isSearchType": "html_playwright",
   "error": "Cheerio parser could not extract education or experience.",
   "profileUrl": "https://wmanager.chamc.co.kr/file/doctor/1_%EA%B6%8C%EC%84%B1%EC%9B%90_1.png",
-  "수상": [],
-  "논문": [
+  "논문": [],
+  "수상": [
     "제3회 국제영상비뇨기과학회 올림푸스상 1991",
     "제3회 메디슨 의공학상, 대한의용생체공학회, 1996.11",
     "동아의료문학상, 동아제약&의협신문, 1997.4",
@@ -36,34 +36,34 @@
   ],
   "경력": [
     {
-      "date": null,
-      "content": "現 강남차병원 비뇨기과 진료"
+      "date": "現",
+      "content": "강남차병원 비뇨기과 진료"
     },
     {
-      "date": null,
-      "content": "1973~76 연세대학교 의과대학교 교수"
+      "date": "1973~76",
+      "content": "연세대학교 의과대학교 교수"
     },
     {
-      "date": null,
-      "content": "1976~02 이대부속 동대문병원 비뇨기과 과장"
+      "date": "1976~02",
+      "content": "이대부속 동대문병원 비뇨기과 과장"
     },
     {
-      "date": null,
-      "content": "1979.4~11 일본대학 니혼대 의학부 연구교수"
+      "date": "1979.4~11",
+      "content": "일본대학 니혼대 의학부 연구교수"
     },
     {
-      "date": null,
-      "content": "1985.7~12 스웨덴 Barcellona의대 연구교수"
+      "date": "1985.7~12",
+      "content": "스웨덴 Barcellona의대 연구교수"
     }
   ],
   "학술": [
     {
-      "date": null,
-      "content": "1996~98 대한비뇨기과학회 이사장"
+      "date": "1996~98",
+      "content": "대한비뇨기과학회 이사장"
     },
     {
-      "date": null,
-      "content": "1999~01 대한의학레이저 의학회 회장"
+      "date": "1999~01",
+      "content": "대한의학레이저 의학회 회장"
     },
     {
       "date": null,
@@ -74,8 +74,8 @@
       "content": "대한의학레이저 의학회"
     },
     {
-      "date": null,
-      "content": "2001~현재 한국전립선관리협회 회장"
+      "date": "2001~현재",
+      "content": "한국전립선관리협회 회장"
     }
   ]
 }

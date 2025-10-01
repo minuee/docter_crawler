@@ -1,0 +1,155 @@
+{
+  "hospital_cid": 28,
+  "bedoc_id": "A0329",
+  "bedoc_hospitalsite": "http://www.schmc.ac.kr/seoul/kor/index.do",
+  "bedoc_doctorname": "권겸일",
+  "bedoc_deptname": "신경과",
+  "bedoc_hospitalname": "순천향대서울병원",
+  "hospital_name": "순천향대학교 서울병원",
+  "aiga_hid": "H11KR-11000026",
+  "hospital_site": "https://www.schmc.ac.kr/seoul/doctr/home.do?key=1605&doctrNo=298",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 용산구 대사관로 59, (한남동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "profileUrl": "https://www.schmc.ac.kr/attach/DATA/doctr/seoul_0220250718101448024.png",
+  "specialty": "이상운동질환(파킨슨병, 수전증, 실조증, 무도증 등), 치매,  두통 및 어지러움",
+  "학력": [
+    {
+      "date": null,
+      "content": "1997. 3. ~ 2003. 2 학사, 고려대학교 의과대학"
+    },
+    {
+      "date": null,
+      "content": "2006 ~ 2007 석사, 울산대학교 의과대학"
+    },
+    {
+      "date": null,
+      "content": "2008 ~ 2011 박사, 카이스트 의과학대학원"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "2003 인턴, 서울아산병원"
+    },
+    {
+      "date": null,
+      "content": "2004 ~ 2007 레지던트, 서울아산병원 신경과"
+    },
+    {
+      "date": null,
+      "content": "2012 연구조교수, 한양대학교 의공학연구소"
+    },
+    {
+      "date": null,
+      "content": "2013 ~ 2014 임상강사, 고려대학교 구로병원 신경과"
+    },
+    {
+      "date": null,
+      "content": "2015 ~ 조교수, 순천향대학교 구미병원 신경과"
+    },
+    {
+      "date": null,
+      "content": "2017 ~ 2020 조교수, 순천향대학교 서울병원 신경과"
+    },
+    {
+      "date": null,
+      "content": "2020 ~ 2025.2. 부교수, 순천향대학교 서울병원 신경과"
+    },
+    {
+      "date": null,
+      "content": "2025.03. -교수, 순천향대학교 서울병원 신경과"
+    },
+    {
+      "date": null,
+      "content": "대한신경과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한 파킨슨병 및 이상운동질환학회 정회원(편집위원 & 특임이사)"
+    },
+    {
+      "date": null,
+      "content": "International parkinson and movement disorder society 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한치매학회 정회원"
+    }
+  ],
+  "수상": [
+    {
+      "date": "2014.4.",
+      "content": "대한파킨슨병및이상운동질환학회전임의학술상"
+    },
+    {
+      "date": "2015.6.",
+      "content": "삼성서울병원신경과이원용학술상"
+    },
+    {
+      "date": "2018.8.",
+      "content": "순천향대학교우수학술연구자상"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한신경과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한 파킨슨병 및 이상운동질환학회 정회원(편집위원 & 특임이사)"
+    },
+    {
+      "date": null,
+      "content": "International parkinson and movement disorder society 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한치매학회 정회원"
+    }
+  ],
+  "논문": [
+    { "date": "2022년 01월", "journal": "J Integr Neurosci", "role": "교신저자", "title": "Impact of subjective dizziness on motor and non-motor symptoms in patients with early stages of Parkinson's disease", "volume": "21(1):3" },
+    { "date": "2022년 01월", "journal": "Geriatr Gerontol Int", "role": "교신저자", "title": "Effect of intensive olfactory training for cognitive function in patients with dementia", "volume": "22(1):5-11" },
+    { "date": "2022년 01월", "journal": "J Mov Disord", "role": "교신저자", "title": "Cortical Subarachnoid Hemorrhage Presenting with Hemibody Dystonic Myoclonus: An Illustrative Case", "volume": "15(1):75-76" },
+    { "date": "2021년 03월", "journal": "Sci Rep", "role": "교신저자", "title": "Association of fall risk factors and non-motor symptoms in patients with early Parkinson's disease", "volume": "11(1):5171" },
+    { "date": "2021년 05월", "journal": "Geriatr Gerontol Int", "role": "교신저자", "title": "Impact of motor subtype on non-motor symptoms and fall-related features in patients with early Parkinson's disease", "volume": "21(5):416-420" },
+    { "date": "2021년 04월", "journal": "Neurol Sci", "role": "교신저자", "title": "Early suspicion of progressive supranuclear palsy using dopamine transporter imaging: an illustrative case presenting with levodopa-responsive parkinsonism", "doi": "10.1007/s10072-021-05246-7" },
+    { "date": "2021년 03월", "journal": "Neurol Sci", "role": "교신저자", "title": "Diagnostic usefulness of putaminal abnormality on diffusion- and susceptibility-weighted imaging: two illustrative cases of multiple system atrophy-parkinsonian type", "volume": "42(3):1211-1213" },
+    { "date": "2020년 07월", "journal": "BMC Neurol", "role": "교신저자", "title": "Detailed visual assessment of striatal dopaminergic depletion in patients with idiopathic normal pressure hydrocephalus: unremarkable or not?", "volume": "20(1):277" },
+    { "date": "2020년 05월", "journal": "J Mov Disord", "role": "교신저자", "title": "Risk Factors for Falls in Patients with de novo Parkinson's Disease: A Focus on Motor and Non-Motor Symptoms", "volume": "13(2):142-145" },
+    { "date": "2020년 05월", "journal": "Geriatr Gerontol Int", "role": "교신저자", "title": "Dizziness in patients with early stages of Parkinson's disease: Prevalence, clinical characteristics and implications", "volume": "20(5):443-447" },
+    { "date": "2019년 10월", "journal": "J Clin Neurol", "role": "공동저자", "title": "Backward gait is associated with motor symptoms and fear of falling in patients with de novo Parkinson's disease", "volume": "15(4):473-479" },
+    { "date": "2019년 12월", "journal": "Neurol Sci", "role": "교신저자", "title": "Revisiting the diagnostic value of Evans' index: lessons from an unusual case of normal pressure hydrocephalus with Evans' index less than 0.3", "volume": "40(12):2637-2639" },
+    { "date": "2019년 04월", "journal": "Acta Neurol Belg", "role": "교신저자", "title": "Isolated leg tremor in a middle-aged woman: an unusual presenting symptom of Graves' disease", "note": "Epub ahead of print" },
+    { "date": "2019년 02월", "journal": "Neurol Sci", "role": "교신저자", "title": "Lack of association between dopamine transporter loss and non-motor symptoms in patients with Parkinson's disease: a detailed PET analysis of 12 striatal subregions", "volume": "40(2):311-317" },
+    { "date": "2019년 01월", "journal": "J Mov Disord", "role": "공동저자", "title": "Clinical Characteristics of Involuntary Movement in Hospitalized Patients", "volume": "12(1):31-36" },
+    { "date": "2018년 12월", "journal": "Clin Neuroradiol", "role": "교신저자", "title": "Parkinsonian Patient with Comorbid Normal Pressure Hydrocephalus : Clinical Usefulness of Diagnosis Supported by Neurological Findings", "volume": "28(4):617-618" },
+    { "date": "2019년 03월", "journal": "Acta Neurol Belg", "role": "교신저자", "title": "Bilateral thalamic and basal ganglia lesions in an old woman: unusual involvement of uremic encephalopathy", "volume": "119(1):133-135" },
+    { "date": "2018년 07월", "journal": "Geriatr Gerontol Int", "role": "교신저자", "title": "Unusual case of idiopathic normal pressure hydrocephalus initially presenting as Parinaud's syndrome", "volume": "18(7):1136-1137" },
+    { "date": "2018년 07월", "journal": "J Clin Neurol", "role": "교신저자", "title": "An Elderly Woman with Reversal of Clinical Presentation Mimicking Rapid-Onset Dystonia-Parkinsonism", "volume": "14(3):423-425" },
+    { "date": "2018년 07월", "journal": "J Clin Neurol", "role": "공동저자", "title": "Hand Tremor Questionnaire: A Useful Screening Tool for Differentiating Patients with Hand Tremor between Parkinson's Disease and Essential Tremor", "volume": "14(3):381-386" },
+    { "date": "2018년 06월", "journal": "Acta Neurol Belg", "role": "교신저자", "title": "A middle-aged man with lying-down headache: an unusual presentation of sphenoid sinus mucocele", "volume": "118(2):315-317" },
+    { "date": "2018년 03월", "journal": "Geriatr Gerontol Int", "role": "교신저자", "title": "Elderly woman presenting with unusual propriospinal myoclonus triggered by drug-induced nausea and vomiting", "volume": "18(3):504-505" },
+    { "date": "2018년 01월", "journal": "NeuroQuantology", "role": "공동저자", "title": "A Pilot Study of F-18 FP-CIT PET Imaging in Early-onset Patients with Parkinson's Disease: Parkin versus Non-parkin Mutation", "volume": "16(1):52-56" },
+    { "date": "2017년 10월", "journal": "Gait Posture", "role": "공동저자", "title": "Recuperation of slow walking in de novo Parkinson's disease is more closely associated with increased cadence, rather than with expanded stride length", "volume": "58:1-6" },
+    { "date": "2017년 09월", "journal": "Parkinsonism Relat Disord", "role": "교신저자", "title": "Recurrent episodes of nocturnal hemiballism: A post-stroke movement disorder", "volume": "42:102-104" },
+    { "date": "2017년 10월", "journal": "J Clin Neurol", "role": "교신저자", "title": "Reversible Dementia with Middle Cerebellar Peduncle Hyperintensity: 1-Year Follow-Up of HIV-Negative Neurosyphilis", "volume": "13(4):437-438" },
+    { "date": "2017년 01월", "journal": "J Clin Neurol", "role": "교신저자", "title": "Recurrent falls associated with lower limb deep vein thrombosis", "volume": "13(1):112-113" },
+    { "date": "2016년 09월", "journal": "J Mov Disord", "role": "공동저자", "title": "Cognition and visit-to-visit variability of blood pressure and heart rate in de novo patients with Parkinson's disease", "volume": "9(3):144-51" },
+    { "date": "2016년 09월", "journal": "Parkinsonism Relat Disord", "role": "교신저자", "title": "Recurrent episodes of isolated hemidystonia in a young adult: Dissection-associated stenosis in the middle cerebral artery", "volume": "30:86-8" },
+    { "date": "2016년 03월", "journal": "J Neurol Sci", "role": "교신저자", "title": "Serial MRI findings in a case of the Parkinson variant of multiple system atrophy: Clinical usefulness of diffusion-weighted imaging at B1000 in early stages of the disease", "volume": "362:136-8" },
+    { "date": "2016년 02월", "journal": "J Neurol Sci", "role": "공동저자", "title": "Comparison of motor and non-motor features between essential tremor and tremor dominant Parkinson's disease", "volume": "361:34-8" },
+    { "date": "2015년 07월", "journal": "Can J Neurol Sci", "role": "공동저자", "title": "A probable Korean case of autosomal recessive spastic ataxia of Charlevoix-Saguenay", "volume": "42(4):271-3" },
+    { "date": "2015년 06월", "journal": "Parkinsonism Relat Disord", "role": "공동저자", "title": "Long lasting isolated freezing of gait with good response to methylphenidate: a patient with pantothenate kinase-associated neurodegeneration", "volume": "21(6):671-2" },
+    { "date": "2014년", "journal": "Can J Neurol Sci", "role": "공동저자", "title": "Nonmotor Symptoms and Cognitive Decline in de novo Parkinson's Disease", "volume": "41(5):597-602" },
+    { "date": "2014년", "journal": "J Neurol Sci", "role": "공동저자", "title": "Is reduced arm and leg swing in Parkinson's disease associated with rigidityorbradykinesia?", "volume": "341(1-2):32-5" },
+    { "date": "2011년", "journal": "Biochem Biophys Res Commun", "role": "공동저자", "title": "CCCP induces autophagy in an AMPK-independent manner", "volume": "416(3-4):343-8" },
+    { "date": "2009년", "journal": "J Mov Disord", "role": "공동저자", "title": "Comparison of cerebral glucose metabolism between probable and possible multiple system atrophy", "volume": "2(1):22-8" },
+    { "date": "2008년", "journal": "Eur J Neurol", "role": "공동저자", "title": "Diagnostic value of brain MRI and 18F-FDG PET in the differentiation of Parkinsonian-type multiple system atrophy from Parkinson's disease", "volume": "15(10):1043-9" },
+    { "date": "2007년", "journal": "Mov Disord", "role": "공동저자", "title": "Comparison of brain MRI and 18F-FDG PET in the differential diagnosis of multiple system atrophy from Parkinson's disease", "volume": "22(16):2352-8" }
+  ],
+  "isAttend": true
+}

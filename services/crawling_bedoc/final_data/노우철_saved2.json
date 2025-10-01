@@ -1,0 +1,248 @@
+{
+  "hospital_cid": 182,
+  "bedoc_id": "A5345",
+  "bedoc_hospitalsite": "http://www.kcch.re.kr",
+  "bedoc_doctorname": "노우철",
+  "bedoc_deptname": "외과",
+  "bedoc_hospitalname": "원자력병원",
+  "hospital_name": "건국대학교병원",
+  "aiga_hid": "H01KR-11000002",
+  "hospital_site": "https://www.kuh.ac.kr/doctor/basicInfo.do?dr_sid=20210415",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 광진구 능동로 120-1, (화양동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.kuh.ac.kr/doctor/basicInfo.do?dr_sid=20210415&doctorName=%EB%85%B8%EC%9A%B0%EC%B2%A0&depthName=%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_ocr",
+  "profileUrl": "https://www.kuh.ac.kr/images/doctor/20210415.jpg",
+  "specialty": "유방암",
+  "학력": [
+    {
+      "date": "1998",
+      "content": "서울대학교 의학과(박사)"
+    },
+    {
+      "date": "1996",
+      "content": "서울대학교 의학과(석사)"
+    },
+    {
+      "date": "1987",
+      "content": "서울대학교 의학과(학사)"
+    }
+  ],
+  "경력": [
+    {
+      "date": "2021-현재",
+      "content": "건국대학교병원 외과 교수"
+    },
+    {
+      "date": "1996-2021",
+      "content": "원자력병원 외과 과장"
+    },
+    {
+      "date": "2015-2018",
+      "content": "원자력병원 병원장"
+    },
+    {
+      "date": "2010-2015",
+      "content": "원자력병원 교육수련부 및 진료부 부장"
+    },
+    {
+      "date": "1995-1996",
+      "content": "이화대학병원 외과 전임의"
+    },
+    {
+      "date": "1993-1995",
+      "content": "청와대 의무실 외과 군의관"
+    },
+    {
+      "date": "1987-1992",
+      "content": "서울대학교병원 외과 인턴 및 전공의"
+    }
+  ],
+  "수상": [
+    {
+      "date": "2020",
+      "content": "대한암연구재단 김진복암연구상"
+    },
+    {
+      "date": "2019",
+      "content": "한국원자력의학원 의학원발전 특별공로상"
+    },
+    {
+      "date": "2019",
+      "content": "한국원자력의학원 친절직원상"
+    },
+    {
+      "date": "2018",
+      "content": "제1회 김현택박사 특별공로상 Jian XIan-Special Achievement Award"
+    },
+    {
+      "date": "2016",
+      "content": "한국유방암학회 우수연구자상 (Best Research Award)"
+    }
+  ],
+  "학술": [
+    {
+      "date": "2018-현재",
+      "content": "한국보건의료원 연구기획자문위원"
+    },
+    {
+      "date": "2016-현재",
+      "content": "대한암협회 상임이사"
+    },
+    {
+      "date": "2016-현재",
+      "content": "금융감독원 금융분쟁조정위원회 자문위원"
+    },
+    {
+      "date": "2019-2021",
+      "content": "세계유방암학회 대회장"
+    },
+    {
+      "date": "2017-2019",
+      "content": "세계유방암학회 조직위원장"
+    },
+    {
+      "date": "2017-2019",
+      "content": "한국유방암학회 이사장"
+    },
+    {
+      "date": "2016-2019",
+      "content": "북부검찰청 의료자문위원"
+    },
+    {
+      "date": "2016-2018",
+      "content": "대한종양외과학회 상임이사"
+    },
+    {
+      "date": "2015-2017",
+      "content": "한국유방암학회 부회장"
+    },
+    {
+      "date": "2014-2018",
+      "content": "대한암학회 상임이사"
+    },
+    {
+      "date": "2013-2015",
+      "content": "한국유방암학회 출판간행위원장"
+    },
+    {
+      "date": "2011-2013",
+      "content": "한국유방암학회 진료권고안위원장"
+    },
+    {
+      "date": "2009-2011",
+      "content": "한국유방암학회 등록사업위원장"
+    },
+    {
+      "date": "2009-2011",
+      "content": "대한외과학회 홍보위원"
+    },
+    {
+      "date": "2008-2010",
+      "content": "Members of Independent Safety Monitoring Committee for \"A phase 2 non-randomized, open label study of Temsirolimus in subjectives with advanced renal cell carcinoma\""
+    },
+    {
+      "date": "2003-2010",
+      "content": "한국유방암학회 편집 및 심사위원"
+    },
+    {
+      "date": "2003-2010",
+      "content": "한국유방암학회 임상시험위원"
+    },
+    {
+      "date": "2006-2009",
+      "content": "대한외과학회 학술위원"
+    },
+    {
+      "date": "2009",
+      "content": "2009 세계유방암학회 사무총장"
+    },
+    {
+      "date": "2006-2008",
+      "content": "대한외과학회 편집 및 심사위원"
+    },
+    {
+      "date": "2005-2007",
+      "content": "한국유방암학회 학술위원장 및 상임이사"
+    },
+    {
+      "date": "2007",
+      "content": "2007 세계유방암학회 학술기획위원장"
+    },
+    {
+      "date": "2003-2005",
+      "content": "한국유방암학회 교과서출판위원 (2판)"
+    },
+    {
+      "date": "2001",
+      "content": "아시아유방암학회 사무차장"
+    },
+    {
+      "date": "1998-2000",
+      "content": "한국유방암학회 교과서출판위원 (1판)"
+    }
+  ],
+  "논문": [
+    "Noh WC. Prediction of menstrual recovery patterns in premenopausal women with breast cancer taking tamoxifen after chemotherapy: an ASTRRA Substudy. Breast Cancer Research. 2024 Nov 5;26:152.",
+    "Chung HW, So Y, Noh WC, Yoo YB, Nam SE, Park KS. PET/MRI and Novel Targets for Breast Cancer. Biomedicines. 2024 Jan;12(1):172.",
+    "Noh WC. Adding Ovarian Suppression to Tamoxifen for Premenopausal Women With Hormone Receptor-Positive Breast Cancer After Chemotherapy: An 8-Year Follow-Up of the ASTRRA Trial. Journal of Clinical Oncology. 2023 Nov;41(31):4864-71.",
+    "Noh WC. Can chemotherapy be omitted for patients with N0 or N1 endocrine-sensitive breast cancer treated with gonadotropin-releasing hormone agonist and tamoxifen?. Annals of Surgical Treatment and Research. 2023 Jul;105(1):31-6.",
+    "Noh WC. Survival analysis of breast cancer patients after diagnosis of second primary malignancies, focusing on the second primary hematologic malignancy. Annals of Surgical Treatment and Research. 2023 Jul;105(1):1-9.",
+    "Nam SE, Noh WC, Yoo YB, Yoon IJ, Park KS. Vitamin D receptor (VDR) mRNA overexpression is associated with poor prognosis in breast carcinoma. Annals of Surgical Treatment and Research. 2022 Oct;103(4):183-94.",
+    "Cho JH, So Y, Yoo YB, Park KS, Nam SE, Noh WC, Chung HW. FDG PET/CT to Predict Recurrence of Early Breast Invasive Ductal Carcinoma. Diagnostics. 2022 Mar;12(3):694.",
+    "Noh WC. The Prediction of HER2-Targeted Treatment Response Using 64Cu-Tetra-Azacyclododecanetetra-Acetic Acid (DOTA)-Trastuzumab PET/CT in Metastatic Breast Cancer: A Case Report. Journal of Breast Cancer. 2022 Feb;25(1):69-73.",
+    "Noh WC. miR-3188 Enhances Sensitivity of Breast Cancer Cells to Ionizing Radiation by Down-regulating Rictor. Anticancer Research. 2021 Dec;41(12):6169-76.",
+    "Kim JH, Park S, Park HS, Park JS, Lee ST, Kim SW, Lee JW, Lee MH, Park SK, Noh WC, Choi DH, Han W, Jung SH. Analysis of BRCA1/2 variants of unknown significance in the prospective Korean Hereditary Breast Cancer Study. Sci Rep. 2021/11/1/8485.",
+    "Lee I, Lim I, Byun BH, Kim BI, Choi CW, Woo SK, Kim KI, Lee KC, Kang JH, Seong MK, Kim HA, Noh WC, Lim SM. A preliminary clinical trial to evaluate 64Cu-NOTA-Trastuzumab as a positron emission tomography imaging agent in patients with breast cancer. EJNMMI Res. 2021/11/1/8.",
+    "Kim HJ, Noh WC, Nam SJ, Park BW, Lee ES, Im SA, Jung YS, Yoon JH, Kang SS, Park KH, Lee SJ, Jeong J, Lee MH, Cho SH, Kim SY, Kim HA, Han SH, Han W, Hu MH, Kim S, Ahn SH. Five-year changes in ovarian function restoration in premenopausal patients with breast cancer taking tamoxifen after chemotherapy: An ASTRRA study report. Eur J Cancer . 2021/151/190-200.",
+    "Jang YJ, Oh SJ, Choi H, Cho S, Shin CH, Kim C, Woo J, Lee J, Park HK, Lee HB, Noh WC, Kim YS. Clinical significance of HER2 status in T1bN0 breast cancer: a nationwide study from the Korean Breast Cancer Society. Breast Cancer Res Treat. 2021/186/1/125-134."
+  ],
+  "언론": [
+    {
+      "targetDate": "2023-06-08",
+      "type": "기사",
+      "text": "\"졸리처럼 가슴 절제? 따라하지 마세요\"…유방암 명의 경고",
+      "url": "https://www.joongang.co.kr/article/25168340#home",
+      "issuer": "중앙일보"
+    },
+    {
+      "targetDate": "2023-02-03",
+      "type": "기사",
+      "text": "건국대병원, 유방암 수술 연 700례 달성 기념식 개최",
+      "url": "http://www.bosa.co.kr/news/articleView.html?idxno=2190408",
+      "issuer": "의학신문"
+    },
+    {
+      "targetDate": "2022-11-16",
+      "type": "기사",
+      "text": "더 독한 '젊은 유방암' 잡는 새 전략… 난소 기능 낮춰 생존율 높인다",
+      "url": "https://health.chosun.com/site/data/html_dir/2022/11/15/2022111501793.html",
+      "issuer": "헬스조선"
+    },
+    {
+      "targetDate": "2022-04-12",
+      "type": "기사",
+      "text": "7년 만에 재발한 유방암, 완치될 수 있을까요",
+      "url": "https://jhealthmedia.joins.com/article/article_view.asp?pno=25273",
+      "issuer": "중앙일보 헬스미디어"
+    },
+    {
+      "targetDate": "2022-04-07",
+      "type": "기사",
+      "text": "유방암 재발 예측 인자 나왔다",
+      "url": "https://health.chosun.com/site/data/html_dir/2022/04/07/2022040702000.html",
+      "issuer": "헬스조선"
+    },
+    {
+      "targetDate": "2021-12-16",
+      "type": "기사",
+      "text": "\"여성 암 1위 유방암, 완치 가능해\"… 구체적인 치료 방법은?",
+      "url": "https://health.chosun.com/site/data/html_dir/2021/12/16/2021121600984.html",
+      "issuer": "헬스조선"
+    }
+  ],
+  "isAttend": true
+}

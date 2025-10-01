@@ -1,0 +1,148 @@
+{
+  "hospital_cid": 162,
+  "bedoc_id": "A5175",
+  "bedoc_hospitalsite": "http://www.cmcep.or.kr/",
+  "bedoc_doctorname": "김형진",
+  "bedoc_deptname": "외과",
+  "bedoc_hospitalname": "은평성모병원",
+  "hospital_name": "가톨릭대학교 은평성모병원",
+  "aiga_hid": "H11KR-11000002",
+  "hospital_site": "https://www.cmcep.or.kr/page/doctor/1258/D0001196",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 은평구 통일로 1021, (진관동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "doctorSiteUrl": "https://www.cmcep.or.kr/page/doctor/1258/D0001196",
+  "profileUrl": "https://www.cmcep.or.kr/api/attach/view/doctor/D0001196/profile/1",
+  "specialty": "대장암, 직장암 복강경 및 로봇수술, 탈장",
+  "학력": [
+    {
+      "date": "1992~1998",
+      "content": "가톨릭대학교 의학 학사"
+    },
+    {
+      "date": "2000~2002",
+      "content": "가톨릭대학교 외과학 석사"
+    },
+    {
+      "date": "2002~2011",
+      "content": "가톨릭대학교 외과학 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "2023~현재",
+      "content": "은평성모병원 암센터장"
+    },
+    {
+      "date": "2021~2023",
+      "content": "은평성모병원 입원진료부장"
+    },
+    {
+      "date": "2019~2023",
+      "content": "은평성모병원 외과 과장"
+    },
+    {
+      "date": "2020~2021",
+      "content": "은평성모병원 중환자실장"
+    }
+  ],
+  "연수": [
+    {
+      "date": "2014~2015",
+      "content": "Cleveland Clinic Foundation, Ohio"
+    }
+  ],
+  "수상": [
+    {
+      "date": "2024",
+      "content": "두산연강 외과학술상"
+    },
+    {
+      "date": "2012",
+      "content": "대한대장항문학회 우수연제학술상"
+    },
+    {
+      "date": "2012",
+      "content": "대한대장항문학회 Best Video Award"
+    },
+    {
+      "date": "2011",
+      "content": "Cleveland Clinic Florida. 12th Annual Kyo-Ho Lee,M.D.& Haeune Nam Memorial Scholarship"
+    }
+  ],
+  "학술": [
+    {
+      "date": "2025~현재",
+      "content": "대한대장항문학회 섭외홍보위원장"
+    },
+    {
+      "date": "2024~현재",
+      "content": "대한암학회 건강보험정책위원장"
+    },
+    {
+      "date": "2024~현재",
+      "content": "대한탈장학회 국제위원장"
+    },
+    {
+      "date": "2025~현재",
+      "content": "대한외과술기연구회 전문의교육위원장, 복강경고급과정 대표"
+    }
+  ],
+  "논문/연구": [
+    {
+      "date": "2024 Nov",
+      "journal": "WORLD JOURNAL OF STEM CELLS",
+      "role": "제1저자",
+      "title": "Exosome-based strategy against colon cancer using small interfering RNA-loaded vesicles targeting soluble a proliferation-inducing ligand"
+    },
+    {
+      "date": "2024 Jul",
+      "journal": "JAMA SURGERY",
+      "role": "교신저자",
+      "title": "Plastic Wound Protector vs Surgical Gauze for Surgical Site Infection Reduction in Open GI Surgery"
+    },
+    {
+      "date": "2024 Mar",
+      "journal": "BMC CANCER",
+      "role": "공동저자",
+      "title": "mFOLFIRINOX versus mFOLFOX 6 as adjuvant treatment for high-risk stage III colon cancer - the FROST trial: study protocol for a multicenter, randomized controlled, phase II trial"
+    },
+    {
+      "date": "2023 Oct",
+      "journal": "PLOS ONE",
+      "role": "공동저자",
+      "title": "The effect of circular stapler size on anastomotic stricture formation in colorectal surgery: A propensity score matched study"
+    },
+    {
+      "date": "2023 Apr",
+      "journal": "BIOMEDICINES",
+      "role": "교신저자",
+      "title": "Assessment of Colorectal Anastomosis with Intraoperative Colonoscopy: Its Role in Reducing Anastomotic Complications"
+    }
+  ],
+  "저서": [
+    {
+      "date": "2020 Oct",
+      "content": "외과수술아틀라스",
+      "issuer": "군자출판사",
+      "role": "공동"
+    },
+    {
+      "date": "2014 Apr",
+      "content": "Master Techniques in Surgery : Hernia",
+      "issuer": "바이오메디북",
+      "role": "공동"
+    },
+    {
+      "date": "2020 Nov",
+      "content": "외과수술아틀라스",
+      "issuer": "군자출판사",
+      "role": "공동",
+      "type": "교과서및지도서"
+    }
+  ],
+  "언론": [],
+  "isAttend": true
+}

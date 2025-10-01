@@ -1,0 +1,104 @@
+{
+  "hospital_cid": 103,
+  "bedoc_id": "A0245",
+  "bedoc_hospitalsite": "http://www.daegumc.co.kr",
+  "bedoc_doctorname": "김신윤",
+  "bedoc_deptname": "정형외과",
+  "bedoc_hospitalname": "대구의료원",
+  "hospital_name": "대구의료원",
+  "aiga_hid": "H11KR-23000008",
+  "hospital_site": "https://www.daegumc.co.kr/main/doctor/view.do?md_idx=90&mp_idx=",
+  "site_type": "single",
+  "hospital_addr": "대구광역시 서구 평리로 157, (중리동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.daegumc.co.kr/main/doctor/view.do?md_idx=90&mp_idx=&doctorName=%EA%B9%80%EC%8B%A0%EC%9C%A4&depthName=%EC%A0%95%ED%98%95%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "profileUrl": "https://www.daegumc.co.kr/data/doctor/%EA%B2%BD%EB%8C%80%ED%8C%8C%EA%B2%AC-%EA%B9%80%EC%8B%A0%EC%9C%A4.png",
+  "specialty": "대퇴골 두․무혈성괴사, 골다공증, 고관절 골절, 일반정형외과",
+  "학력": [
+    {
+      "date": null,
+      "content": "경북대학교 의과대학 졸업"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "대구의료원 정형외과 1과장"
+    },
+    {
+      "date": null,
+      "content": "대구 곽병원 정형외과 과장"
+    },
+    {
+      "date": null,
+      "content": "경북대학교 정형외과학 교실 조교수"
+    },
+    {
+      "date": null,
+      "content": "경북대학교 정형외과학 교실 부교수"
+    },
+    {
+      "date": null,
+      "content": "경북대학교 정형외과학 교실 교수"
+    },
+    {
+      "date": null,
+      "content": "경북대학교 정형외과학 교실 주임교수"
+    },
+    {
+      "date": null,
+      "content": "경북대학교병원 정형외과 과장"
+    },
+    {
+      "date": null,
+      "content": "경북대학교병원 의료정책단장"
+    },
+    {
+      "date": null,
+      "content": "경북대학교병원 진료처장"
+    },
+    {
+      "date": null,
+      "content": "현, 대구의료원 제1 정형외과장"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한정형외과연구학회 회장"
+    },
+    {
+      "date": null,
+      "content": "대한고관절학회회장"
+    },
+    {
+      "date": null,
+      "content": "한국조직공학재생의학회회장"
+    },
+    {
+      "date": null,
+      "content": "대한정형컴퓨터수술학회회장"
+    },
+    {
+      "date": null,
+      "content": "대한3D 메디칼프린팅학회회장"
+    },
+    {
+      "date": null,
+      "content": "대한근감소증학회회장"
+    },
+    {
+      "date": null,
+      "content": "ARCO International(국제 골순환학회회장)"
+    },
+    {
+      "date": null,
+      "content": "The International Hip Society Member"
+    }
+  ],
+  "isAttend": true
+}

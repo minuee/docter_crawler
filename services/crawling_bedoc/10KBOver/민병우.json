@@ -1,0 +1,654 @@
+{
+  "hospital_cid": 199,
+  "bedoc_id": "A0260",
+  "bedoc_hospitalsite": "https://daegu.dsmc.or.kr:49880/",
+  "bedoc_doctorname": "민병우",
+  "bedoc_deptname": "정형외과",
+  "bedoc_hospitalname": "계명대동산병원",
+  "hospital_name": "W병원",
+  "aiga_hid": "H31KR-11001861",
+  "hospital_site": "https://www.w-hospital.co.kr/hospital/doctor/detail?id=108",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 서초구 강남대로 435, 7층(사용-8층) (서초동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "profileUrl": "https://www.w-hospital.co.kr/upload/doctor/%EB%AF%BC%EB%B3%91%EC%9A%B0%20%EC%9D%98%EB%AC%B4%EC%9B%90%EC%9E%A5%20%EC%A6%9D%EB%AA%85%EC%82%AC%EC%A7%84(%EB%B3%B4%EC%A0%95_%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80)278x372.png",
+  "specialty": "인공관절 수술, 고관절 질환, 무혈성괴사, 관절염, 대퇴골 및 고관절 골절, 골다공증, 비구이형증",
+  "학력" : [
+    {
+      "date": null,
+      "content": "경북대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "계명대학교 동산병원 인턴 수료"
+    },
+    {
+      "date": null,
+      "content": "계명대학교 동산병원 레지던트 수료"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "現 W병원 의무원장"
+    },
+    {
+      "date": null,
+      "content": "경북대학교 대학원 석사학위 취득"
+    },
+    {
+      "date": null,
+      "content": "정형외과 전문의 자격 취득"
+    },
+    {
+      "date": null,
+      "content": "계명대학교 의과대학 전임강사"
+    },
+    {
+      "date": null,
+      "content": "계명대학교 의과대학 조교수"
+    },
+    {
+      "date": null,
+      "content": "경북대학교 대학원 박사학위 취득"
+    },
+    {
+      "date": null,
+      "content": "미국 의사 자격 취득"
+    },
+    {
+      "date": null,
+      "content": "미국 University of Southern California의 인공관절센터 교환교수"
+    },
+    {
+      "date": null,
+      "content": "계명대학교 의과대학 부교수"
+    },
+    {
+      "date": null,
+      "content": "계명대학교 의과대학 교수"
+    },
+    {
+      "date": null,
+      "content": "계명대학교 동산의료원 기획정보처 전산차장"
+    },
+    {
+      "date": null,
+      "content": "계명대학교 의과대학 정형외과학교실 주임교수 및 과장"
+    },
+    {
+      "date": null,
+      "content": "계명대학교 동산병원 부원장"
+    },
+    {
+      "date": null,
+      "content": "계명대학교 동산병원 대외협력처장"
+    },
+    {
+      "date": null,
+      "content": "계명대학교 동산병원 사무처장"
+    },
+    {
+      "date": null,
+      "content": "계명대학교 동산병원 병원장"
+    },
+    {
+      "date": null,
+      "content": "계명대학교 동산병원 정형외과 노인골절치유센터장"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "학회 경력"
+    },
+    {
+      "date": null,
+      "content": "대한정형외과학회 회장"
+    },
+    {
+      "date": null,
+      "content": "대한고관절학회 회장"
+    },
+    {
+      "date": null,
+      "content": "대한골절학회 회장"
+    },
+    {
+      "date": null,
+      "content": "대한골·연부조직이식학회 회장"
+    },
+    {
+      "date": null,
+      "content": "대한정형외과학회 대구·경북지회장"
+    },
+    {
+      "date": null,
+      "content": "대한골다공증학회 부회장"
+    },
+    {
+      "date": null,
+      "content": "대한조직은행위원"
+    },
+    {
+      "date": null,
+      "content": "대한정형외과학회 전문의 시험 출제위원"
+    },
+    {
+      "date": null,
+      "content": "대한고관절학회 평의원"
+    },
+    {
+      "date": null,
+      "content": "대한골·연부조직이식학회 평의원"
+    },
+    {
+      "date": null,
+      "content": "대학골절학회 평의원"
+    },
+    {
+      "date": null,
+      "content": "대한골다공증학회 평의원"
+    },
+    {
+      "date": null,
+      "content": "대한정형통증학회 학술위원"
+    },
+    {
+      "date": null,
+      "content": "AO Korea 이사"
+    },
+    {
+      "date": null,
+      "content": "대한정형외과 연구학회 평의원"
+    },
+    {
+      "date": null,
+      "content": "대한정형외과학회 이사"
+    },
+    {
+      "date": null,
+      "content": "Clinics in Orthopaedic Surgery Editorial Board"
+    },
+    {
+      "date": null,
+      "content": "International OTA Fellow"
+    },
+    {
+      "date": null,
+      "content": "AFOS Advisory Board Member"
+    },
+    {
+      "date": null,
+      "content": "서태평양 정형외과학회(WPOA) 정회원"
+    },
+    {
+      "date": null,
+      "content": "세계정형외과학회(SICOT) 정회원"
+    },
+    {
+      "date": null,
+      "content": "미국골연구학회(ASBMR) 정회원"
+    },
+    {
+      "date": null,
+      "content": "미국정형외과연구학회(ORS) 정회원"
+    },
+    {
+      "date": null,
+      "content": "국제AO학회(AOAA) 정회원"
+    },
+    {
+      "date": null,
+      "content": "미국정형외과학회(AAOS) 회원"
+    },
+    {
+      "date": null,
+      "content": "아시아 인공관절학회(ASIA) 회원"
+    },
+    {
+      "date": null,
+      "content": "대한정형외과학회 대구·경북지회 학술이사"
+    },
+    {
+      "date": null,
+      "content": "대한골다공증학회 이사"
+    },
+    {
+      "date": null,
+      "content": "대한고관절학회 골절연구회 위원장"
+    },
+    {
+      "date": null,
+      "content": "대한정형외과학회 고시위원회 위원"
+    },
+    {
+      "date": null,
+      "content": "대한고관절학회지 심사위원회 위원"
+    },
+    {
+      "date": null,
+      "content": "대한골다공증학회 골절위원회 위원"
+    },
+    {
+      "date": null,
+      "content": "대한골절학회 학술위원"
+    },
+    {
+      "date": null,
+      "content": "대한골다공증학회 연수위원회 위원"
+    },
+    {
+      "date": null,
+      "content": "대한정형외과학회 영문학회지 편집위원"
+    },
+    {
+      "date": null,
+      "content": "대한정형외과학회 논문심사위원"
+    },
+    {
+      "date": null,
+      "content": "대한정형외과학회 홍보위원"
+    },
+    {
+      "date": null,
+      "content": "대한정형외과학회 전산정보위원"
+    },
+    {
+      "date": null,
+      "content": "대한정형외과학회 관절염 홍보위원"
+    },
+    {
+      "date": null,
+      "content": "대한정형외과학회 상대가치평가위원회 전문위원"
+    },
+    {
+      "date": null,
+      "content": "대한정형외과학회 학회지 편집위원"
+    },
+    {
+      "date": null,
+      "content": "대한정형외과학회 학회지 심사위원"
+    },
+    {
+      "date": null,
+      "content": "대한고관절학회 편집위원회 위원"
+    },
+    {
+      "date": null,
+      "content": "대한골다공증학회 감사"
+    },
+    {
+      "date": null,
+      "content": "Case Reports in Orthopaedics의 논문 심사위원"
+    },
+    {
+      "date": null,
+      "content": "Clinical Orthopaedics and Related Research의 논문 심사위원"
+    },
+    {
+      "date": null,
+      "content": "----------------------------------------------------------------------------"
+    },
+    {
+      "date": null,
+      "content": "사회 경력"
+    },
+    {
+      "date": null,
+      "content": "식약처 조직은행 정도관리 위원"
+    },
+    {
+      "date": null,
+      "content": "건강보험심사평가원 심사위원"
+    },
+    {
+      "date": null,
+      "content": "근로복지공단 자문의사"
+    },
+    {
+      "date": null,
+      "content": "중·동구 장애인활동지원 수급자격심의위원회위원"
+    },
+    {
+      "date": null,
+      "content": "보건의료연구개발사업 중개기반연구 과제평가단 평가위원"
+    },
+    {
+      "date": null,
+      "content": "한국보건산업진흥원 보건의료연구개발사업 평가위원"
+    },
+    {
+      "date": null,
+      "content": "근로복지공단 업무상질병판정위원회 위원"
+    },
+    {
+      "date": null,
+      "content": "국가보훈처 보훈심사위원회 위원"
+    },
+    {
+      "date": null,
+      "content": "인구보건복지협회 대구·경북지회 감사"
+    },
+    {
+      "date": null,
+      "content": "식품의약품안전처 정책자문위원"
+    },
+    {
+      "date": null,
+      "content": "한국보건의료연구원 연구기획 자문위원"
+    },
+    {
+      "date": null,
+      "content": "메디시티대구 의료서비스개선위원회 위원장"
+    },
+    {
+      "date": null,
+      "content": "메디시티 Medi-CT Center 전공별 소위원회 위원"
+    },
+    {
+      "date": null,
+      "content": "국민연금공단 자문의사"
+    }
+  ],
+  "수상": [
+    {
+      "date": "2024",
+      "content": "대한고관절학회 학회 발전 공로상"
+    },
+    {
+      "date": "2024",
+      "content": "대한골절학회 공로상"
+    },
+    {
+      "date": "2022",
+      "content": "대한고관절학회 공로상"
+    },
+    {
+      "date": "2021",
+      "content": "대한정형외과학회 학술 장려상(임상)"
+    },
+    {
+      "date": "2019",
+      "content": "대한정형외과학회 DAEWON CiOS 학술상"
+    },
+    {
+      "date": "2018",
+      "content": "대한정형외과학회 ISTA 2008 Seoul 학술상"
+    },
+    {
+      "date": "2017",
+      "content": "대한정형외과학회 학술 장려상(임상)"
+    },
+    {
+      "date": "2016",
+      "content": "대한고관절학회 학술상"
+    },
+    {
+      "date": "2016",
+      "content": "AO Trauma Asia Pacific Best Poster Award"
+    },
+    {
+      "date": "2016",
+      "content": "계명대학교 창립 117주년 기념식 업적우수상"
+    },
+    {
+      "date": "2015",
+      "content": "대한정형외과학회 ISTA 2008 Seoul 학술상"
+    },
+    {
+      "date": "2014",
+      "content": "대한골절학회 우수 논문상"
+    },
+    {
+      "date": "2013",
+      "content": "경찰청 감사장"
+    },
+    {
+      "date": "2011",
+      "content": "대구광역시장 친절제일 메디시티 대구선도병원 가꾸기 표창장"
+    },
+    {
+      "date": "2011",
+      "content": "경찰청 감사장"
+    },
+    {
+      "date": "2010",
+      "content": "IBC Marquis who’s who 등재"
+    },
+    {
+      "date": "2009",
+      "content": "Marquis who’s who 등재"
+    },
+    {
+      "date": "2007",
+      "content": "대한정형외과학회 학술 본상"
+    },
+    {
+      "date": "2007",
+      "content": "대한정형외과학회 학술전시 우수상"
+    },
+    {
+      "date": "2005",
+      "content": "International Biographic Center 등재"
+    },
+    {
+      "date": "2005",
+      "content": "American Biographics Institute(ABI) 등재"
+    },
+    {
+      "date": "2004",
+      "content": "세계인명대사전 ‘마르퀴즈 후즈후', ‘ABI', ‘IBC' 등재"
+    },
+    {
+      "date": "2001",
+      "content": "대한고관절학회 학술 장려상"
+    },
+    {
+      "date": "2000",
+      "content": "대한정형외과학회 만례재단 학술전시 우수논문상"
+    },
+    {
+      "date": "1997",
+      "content": "대한골절학회 학술 우수상"
+    }
+  ],
+  "논문": [
+    "Bioceramic and alternative bearings in joint arthroplasty, Edited by JD Jang. Chapter: pp311-318: Tips and tricks: Fracture of a ceramic insrt with modern ceramic total hip replacement, Springer, ISBN 978-3-7985-1782-0, 2007.",
+    "Minimally invasive Total Hip Arthroplasty. Edited by TR Yoon. Chapter: pp12-17: Minimally invasive total hip arthroplasty through anterolateral approach, IB Publishing Co. ISBN 978-89-92715-00-3, 2007",
+    "AO principles of Fracture Management Korean Edition, Edited by JC Ihn. Chapter 4.4-4.5: pp400-449, ISBN 89-953171-02-6. 2000",
+    "Disability evaluation, Edited by Korean Orthopaedic Association. ISBN 89-953171-7-5. 2005.",
+    "Guidebook for osteoporosis, Edited by Korean Orthopaedic Association, Chapter 10-7, ISBN 978-89-92676-28-1.20. 2011",
+    "Principles of Fracture Management, Edited by Korean Fracture Society. ISBN 978-89-97140-77-0(93510). 2013",
+    "Orthopedics, 7th Edition. Edited by Korean Orthopaedic Association, Chapter IX.ISBN 978-89-88159-95-5-94510. 2013",
+    "고관절학, 대한고관절학회, Chapter 3 고정방법, ISBN 978-89-6278-928-7. 2014",
+    "Principle of Fracture Management. 2nd Edition, Edited by Korean Fracture Society, ISBN 979-11-5943-106-7 (93510). 2018",
+    "고관절학 제2판, Edited by Korean Hip Society, Chapter3, chapter8, ISBN 979-11-5955-505-3, Koonja Publishing. 2019",
+    "정형외과학, 대한정형외과학회, Chapter D IX 비구골절 1. 1802-1817. ISBN 978-89-88159-91-0 94510, 2020.",
+    "Cement Filling Technique to Prevent Greater Trochanter Displacement in Hip Arthroplasty for Femoral Intertrochanteric Fracture: A Technical Note. Hip&Pelvis. 36(3) 223-230. 2024.",
+    "Is the Direct Fixation of Displaced Quadrilateral Plates in Acetabular Fractures Necessary?. Journal of Clinical Medicine. 12(22) 6994. 2023.",
+    "The Validation of Two-Dimensional and Three-Dimensional Radiographic Measurements of Host Bone Coverage in Total Hip Arthroplasty for Hip Dysplasia: A Comparison with Intra-Operative Measurements. Journal of Clinical Medicine. 12(19) 6227. 2023.",
+    "Femoral Shaft Fracture in Klippel–Trenaunay–Weber Syndrome Patients – What to Do to Reduce Bleeding Risk: A Case Report. Hip&Pelvis. 34(4) 262-268. 2022.",
+    "Screw augmented cement spacer for deficient acetabulum in periprosthetic infection following Total Hip Arthroplasty. Orthop Traumatol Surg Res. 108(6) 103041. 2022.",
+    "A prospective double-blind randomized trial on ultrasound-guided versus blind intra-articular corticosteroid injections for primary frozen shoulder. The bone&joint journal. 103-B(2) 353-359. 2021.",
+    "Progression of Asymptomatic Contralateral Femur in Patients with Complete Atypical Femoral Fracture, According to Initial Radiographic Findings. J Bone Joint Surg Am. 103(2) 123-130. 2021.",
+    "High Failure Rates of Locking Compression Plate Osteosynthesis with Transverse Fracture around a Well-Fixed Stem Tip for Periprosthetic Femoral Fracture. Journal of Clinical Medicine. 9(11) 1-11. 2020.",
+    "Rapid Destructive Arthrosis Due to Subchondral Insufficiency Fracture of the Shoulder: Clini Characteristics, Radiographic Appearances, and Outcomes of Treatment. Diagnostics. 10(11) 1-12. 2020.",
+    "Protection of Surgical Team from COVID-19 during Bipolar Hemiarthroplasty in an Infected Elderly Patient. Clinics in Orthopedic Surgery. 12(3) 286–290. 2020.",
+    "Early Clinical Outcomes of Manipulation under Anesthesia for Refractory Adhesive Capsulitis: Comparison with Arthroscopic Capsular Release. Clinics in Orthopedic Surgery. 12(2) 217-223. 2020.",
+    "Highly Cross‑Linked Polyethylene in Cementless Total Hip Arthroplasty in Patients with Previous Acetabular Fractures: A Minimum 5‑Year Follow‑Up Study. Indian Journal of Orthopaedics. 54(Suppl 2) 239-245. 2020.",
+    "Unintended Retention of Temporary Articulating Spacers in the Treatment of Periprosthetic Hip Joint Infection. Orthopedics. 43(4) e251-e257. 2020.",
+    "Highly Cross-Linked Polyethylene in Total Hip Arthroplasty in Patients Younger Than 50 Years with Osteonecrosis of the Femoral Head: A Minimum of 10 Years of Follow-Up. J Arthroplasty. 35(3) 805-810. 2020.",
+    "Salvage treatment of failed internal fixation of intertrochanteric fractures: What factors determine the failure of treatment?. Injury. 51(2) 367-371. 2020.",
+    "High survivorship of highly cross-linked polyethylene in revision Total hip Arthroplasty: a minimum 10-year follow-up study. Arthroplasty. 17(1) 1-7. 2019.",
+    "The Treatment Strategies for Failed Fixation of Intertrochanteric Fractures. Injury. 1339-1346. 50(7). 2019.",
+    "Surgical Treatment of the Atypical Femoral Fracture: Overcoming Femoral Bowing. Hip&Pelvis. 30(4) 202-209. 2018.",
+    "Revision Total Hip Arthroplasty after Ceramic Bearing Fractures in Patients Under 60-years Old: Mid-term Results. Hip&Pelvis. 30(3) 156-161. 2018.",
+    "Radiographic Progression of Osteoarthritis after Rotational Acetabular Osteotomy: Minimum 10-Year Follow-up Outcome According to the Tönnis Grade. Clinics in Orthopedic Surgery. 10(3) 299-306. 2018.",
+    "Incidence, Risk Factors, and Fracture Healing of Atypical Femoral Fractures: A Multicenter Case-Control Study. Osteoporosis International. 29(11) 2427-35. 2018.",
+    "Outcomes are Equivalent for Two-Column Acetabular Fractures Either with or without Posterior-wall Fractures. Archives of Orthopaedic and Trauma Surgery. 138(9) 1223-34. 2018.",
+    "Minimally Invasive Plate Osteosynthesis with Locking Compression Plate in Patients with Vancouver Type B1 Periprosthetic Femoral Fractures. Injury. 49(7) 1336-40. 2018.",
+    "Is the Pectoralis Major Tendon a Reliable Reference for Restoration of Humeral Length with Fracture Hemiarthroplasty?. J Shoulder Elbow Surg. 27(2) e45-e49. 2018.",
+    "T-Score Discordance of Bone Mineral Density in Patients with Atypical Femoral Fracture. J Bone Joint Surg Am. 99(19) 1683-88. 2017.",
+    "Scoring System for Identifying Impending Complete Fractures in Incomplete Atypical Femoral Fractures. J Clin Endocrinol Metab. 102(2) 545-550. 2017.",
+    "Kikuchi-Fujimoto Disease Misdiagnosed as Relapse of the Infection After Treatment of Periprosthetic Hip Joint Infection. Hip&Pelvis. 28(4) 254-258. 2016.",
+    "A Comparison between Methicillin Resistant Organism and Non-Methicillin Resistant Organism in 2-Stage Reimplantation of Periprosthetic Hip Infection. J Infect Dis Preve Med. 4(2) 1-5. 2016.",
+    "Prospective, Randomized, Double-Blinded, Double-Dummy and Multicenter Phase Iv Clinical Study Comparing The Efficacy and Safety of Pg201 (Layla) and Ski306X in Patients with Osteoarthritis. J Ethnopharmacol. 181 1-7. 2016.",
+    "Chondral fracture of the lateral femoral condyle in children with different treatment methods, Journal of Pediatric Orthopaedics B. 25(1) 87-91. 2016.",
+    "Result of Internal Fixation for Stable Femoral Neck Fractures in Elderly Patients. Hip&Pelvis. 28(1) 43-48. 2016.",
+    "Perioperative Pain Management in Total Hip Arthroplasty Korean Hip Society Guidelines. Hip&Pelvis. 28(1) 15-23. 2016.",
+    "High Incidence of Stem Loosening in Association with Periprosthetic Femur Fractures in Previously Well-Fixed Cementless Grit-Blasted Tapered-Wedge Stems. Int Orthop. 39(9) 1689-93. 2015.",
+    "Efficacy of Interscalene Block Combined with Multimodal Pain Control for Postoperative Analgesia After Rotator Cuff Repair, Knee Surg Sports Traumatol Arhrosc. 23(2) 542-47. 2015.",
+    "Does Zoledronate Prevent Femoral Head Collapse from Osteonecrosis? A Prospective, Randomized, Open-Label, Multicenter Study, J Bone Joint Surg Am. 97(14) 1142-48. 2015.",
+    "Expert Tibia Nail for Subtrochanteric Femoral Fracture to Prevent Thermal Injury. Int J Surg Case Rep. 10 158-61. 2015.",
+    "Atypical Femoral Fracture: 2015 Position Statement of the Korean Society for Bone and Mineral Research. J Bone Metab. 22(3) 87-91. 2015.",
+    "Periprosthetic Atypical Femoral Fracture-like Fracture after Hip Arthroplasty: A Report of Three Cases. Hip&Pelvis. 27(3) 187-191. 2015.",
+    "Mid-term Restults of Revision Total Hip Arthroplasty Using Modular Cementless Femoral Stems. Hip&Pelvis. 27(3) 135-140. 2015.",
+    "Nonsurgical Treatment Strategies after Osteoporotic Hip Fractures. Hip&Pelvis. 27(1) 9-16. 2015.",
+    "Up-Regulation of Acid-Sensing Ion Channels In The Capsule of The Joint In Frozen Shoulder. Bone Joint J. 97(6) 824-9. 2015.",
+    "Efficacy of Interscalene Block Combined with Multimodal Pain Control for Postoperative Analgesia After Rotator Cuff Repair. Knee Surg Sports Traumatol Arthrosc. 23(2) 542-54. 2015.",
+    "Surgical Correction of Pelvic Malunion and Nonunion. Clin Orthop Surg. 7(3) 396-401. 2015.",
+    "Etoricoxib in the treatment of Korean patients with osteoarthritis in a double-blind, randomized controlled trial. Curr Med Res Opin. 30(12) 2399-408. 2014.",
+    "Atypical Femoral Fractures After Anti-Osteoporotic Medication: A Korean Multicenter Study. Int Orthop. 38(6) 1247-53. 2014.",
+    "Detection of Pre-fracture Hip Lesions in Atypical Subtrochanteric Fracture with Dual Energy X-ray Absorptiometry (DXA) Hip Images Radiology. 270(2) 487-95. 2014.",
+    "Revision of Ceramic Haed Fracutre After Third Genration Ceramic-on-Ceramic Total Hip Arthroplasty. The Journal of Arthroplasty. 29(1) 214-18. 2014.",
+    "Computed Tomography-Guided Removal of a Misplaced Acetabular Screw. Skeletal Radiol. 42(2) 309-12. 2013.",
+    "Highly Cross-Linked Polyethylene in Total Hip Arthroplasty for Osteonecrosis of the Femoral Head: A minimum 5-Year Follow-Up Study. J Arthoplasty. 28(3) 526-530. 2013.",
+    "Inflammatory cytokines are oerexpressed in the subacromial bursa of frozen shoulder, J Shoulder Elbow Surg. 22(5) 666-672. 2012.",
+    "Subcutaneous Sacrococcygeal Myxopapillary Ependymoma In Asian Female: A Case Report. J Clin Med Res. 4(1) 61-63. 2012.",
+    "Anterolateral Approach for Mini-Open Rotator Cuff Repair. International Orthopaedics. 36(1) 95-100. 2012.",
+    "Multimodal Approach to Postoperative Pain Control in Patients Undergoing Rotator Cuff Repair. Knee Surg Sports Traumatol Arthrosc. 19(10) 1744-48. 2011.",
+    "Anterolateral approach for mini-open rotator cuff repair. Int Orthop. 36(1) 95-100. 2011.",
+    "Acetabulotrochanteric Distance in Slipped Capital Femoral Epiphysis. J pediatr Orthop. 31(6) 644-647. 2011.",
+    "Avascular Necrosis of the Femoral Head After Osteosynthesis of Femoral Neck Fracture. Orthopaedics. 33(11) 349. 2011.",
+    "Osteochondroma of the Bicipital Tuberosity Causing an Avulsion of the Distal Biceps Tendon. Ortopaedics. 33(11) 849. 2010.",
+    "Operative Treatment of Clavicle Mid-Shaft Fractures: Comparison between Reconstructive Plate & Reconstruction Locking Compression Plate. Clin Orthop Surg. 2(3) 154-59. 2010.",
+    "Cementless Total Hip Arthroplasty Performed in Patients with Pigmented Villonodular Synovitis. J Arthroplasty. 25(4) 552-557. 2010.",
+    "Tardy Posterior Interosseous Nerve Palsy Resulting From Residual Dislocation of The Redial Head In A Monteggia Fracture: A Case Report. J Med Case Reports. 3(1) 9300-9303. 2009.",
+    "Musculoskeletal Injuries In Break-Dancers. Injury. 40(11) 1207-1211. 2009.",
+    "Scaphoid Nonunion in Break-Dancers: A Report of 3 Cases. Orthopedics. 32(7) 526. 2009.",
+    "Long-Term Results of Remodeling of Lateral Condylar Prominence after Lateral Closed-Wedge Osteotomy for Cubitus Varus. J Shoulder Elbow Surg. 18(3) 478-483. 2009.",
+    "Femoral Osteolysis around the Unrevised Stem during Isolated Acetabular Revision. Clin Orthop Relat Res. 467(6) 1501-1506. 2009.",
+    "Collapsed Subchondral Fatigue Fracture of the Femoral Head. Orthop Clin North Am. 40(2) 259-265. 2009.",
+    "Efficacy of Multimodal Pain Control Protocol in the Setting of Total Hip Arthroplasty. Clin Orthop Surg. 1(3) 155-160. 2009.",
+    "Closed Reduction and Internal Fixation of Displaced Unstable Lateral Condylar Fractures of the Humerus in Children. J Bone Joint Surg. 90(12) 2673-2681. 2008.",
+    "Extra-articular Pigmented Villonodular Synovitis of the Subacromial Space. Orthopedics. 31(12) 1-3. 2008.",
+    "Second-Generation Cementless Total Hip Arthroplasty in Patients with Osteonecrosis of the Femoral Head. J Arthroplasty. 23(6) 902-910. 2008.",
+    "Untreated Asymptomatic Hips in Patients with Osteonecrosis of the Femoral Head. Clin Orthop Relat Res. vol 466(5) 1087-1092. 2008.",
+    "Congenital Clubfoot with Concomitant Peroneal Nerve Palsy In Children. Journal of Pediatric Orthopaedics B. 17(2) 85-89. 2008.",
+    "Untreated Asymptomatic Hips in Patients with Osteonecrosis of the Femoral Head. Clin Orthop Relat Res. 466(5) 1087-1092. 2008.",
+    "The Effect of Stem Alignment on Results of Total Hip Arthroplasty with a Cementless Tapered-Wedge Femoral Component. The Journal of Arthroplasty. 23(3) 418-423. 2008.",
+    "Subchondral Fracture of the Femoral Head in Healthy Adults: Clinical orthopaedics and Rlated Rsearch, 464 196-204. 2007.",
+    "Internal Oblique Radiographs for Diagnosis of Nondisplaced or Minimally Displaced Lateral Condylar Fractures of the Humerus in Children. JBJS-AM 89(1) 58-63. 2007.",
+    "The Microstructural and Biomechaical Properties of the Primary Compressive Trabecular System In Human Femoral Head: Key Engineering Materials Vol. 342-343 917-920. 2007.",
+    "Delayed Fracture of A Ceramic Insert with Modern Ceramic THR: J Arthroplasty. 22(1) 136-139. 2007.",
+    "Valgus Intertrochanteric Osteotomy for Non-Union of Femoral Neck Fracture: Injury. 37 786-790. 2006.",
+    "Polyethylene Liner Failure In Second Generation Harris-Galante Acetabular Components: J of Arthroplasty, 20(6) 717-722. 2005.",
+    "Fatty Marrow Conversion of The Proximal Femoral Metaphysis In Transient Bone Marrow Edema Syndrome: Archives Of Orthopaedic and Trauma Surgery. 125(6) 390-395. 2005.",
+    "Cable Fixation In Displaced Fractures of The Acetabulum: 21 Patients Followed for 2-8 years: Acta Orthopedica Scandinavica, 73(6) 619-624. 2002.",
+    "Subcapital Fractures Associated with Extensive Osteonecrosis of the Femoral Head: Clinical Orthopaedic and Related Research, Number 390 227-231. 2001.",
+    "Radiographic Comparison of Diaphyseal Grit Blasted with Smooth Surface Stems by Matched Pair Analysis: Clnical Orthopaedic and Related Research, 381 156-167. 2000.",
+    "Preoperative and Postoperative Evaluation of Intra-Articular Fractures of the Calcaneus Based on Computed Tompgraphy Scanning. Journal of Orthopaedic Trauma, 11(6) 435-440. 1997.",
+    "Decision-Making and Principle of Management in Periprosthetic Femoral Fracture after Total Hip Arthroplasty. J Korean Orthop Assoc. 56(3) 200-207. 2021.",
+    "Clinical Outcomes and Radiologic Characteristics of Insufficiency Femoral Neck Fracture in Elderly Patients. J Korean Fract Soc. 34(1) 1-7. 2021.",
+    "Revision Total Hip Arthroplasty with Constrained Liner in Patients with Abductor Insufficiency. J Korean Orthop Assoc. 51(4) 281-286. 2016.",
+    "Surgical Treatment of Malunion and Nonunion after Pelvic Bone Fracture. J Korean Fract Soc. 28(4) 266-272. 2015.",
+    "Incidence of Deep Vein Thrombosis before Hip Fracture Surgery Diagnosed by Color Doppler Sonography surveillance. J Korean Orthop US Soc. 7(2) 98-104. 2014.",
+    "Cementless Total Hip Arthroplasty with Subtrochanteric Transverse Shortening Osteotomy in Patients with High Hip Dislocation. Hip&Pelvis. 26(1) 22-28. 2014.",
+    "Results of Use of Compression Hip Screw with Trochanter Stabilizing Plate for Reverse Oblique Intertrochanteric Fracture. J Korea Fract Soc. 27(2) 120-126. 2014.",
+    "Complications of Pelvic Ring Injury, The Korean Fracture Society. 26(4) 348-353. 2013.",
+    "Revision Total Hip Arthroplsty: Acetabular Cup. Hip & Pelvis. 25(2) 85-94. 2013.",
+    "Medical Treatment of Atypical Femoral Fracture. J Korean Orthop Assoc. 48(3) 180-184. 2013.",
+    "Surgical Treatment of Atypical Femoral Fracture. J Korean Orthop Assoc. 48(3) 185-189. 2013.",
+    "Salvage Re-Fixation for the Failed Fixation of Pertrochanteric Fracture. J Korean Fract Soc. 26(2) 150-111. 2013.",
+    "The Efficacy of Trochanteric Flip Osteotomy in Cases of Femoral Head Fracture. J Korean Orthop Assoc. 48(3) 250-212. 2013.",
+    "Musculoskeletal Ultrasound intervention: Principles & Cautions. J Korean Orthop US Soc. 6(1) 38-44. 2013.",
+    "Mid-term Results of Deep Frozen Allograft used for the Acetabular Defect in Revision Total hip Arthroplasty. J Korean Musculoskeletal Transplantat Soc. 12(1) 17-24. 2012.",
+    "Ultrasonography-Guided Multiple Needling for the Treatment of Calcific Tendinitis Around Hip Joint: 4 Cases Report. J Korean Orthop US Soc. 5(2) 89-93. 2012.",
+    "Ultrasonographic Finding of Acetabular Labral Tear Accompanied with Iliopsoas Bursitis: 2 Cases Report. J Korean Orthop US Soc. 4(2) 97-100. 2011.",
+    "Comparative Results of Acetabular Both Column Fracture According to the Fixation Method. J Korean Hip Society. 23(2) 131-136. 2011.",
+    "Effectiveness of Microbiological and Fungal Cultures of Deep Frozen Allograft Just Before Implantation. J Kor Musculoskeletal Transplantation Soc. 11(1). 1-7 2011.",
+    "Revision Total Hip Arthroplasty with a Strut Allograft and an Extensively Porous-Coated Femoral Stem. J Korean Hip society. 22(3) 197-202. 2010.",
+    "Indirect Reduction of Posterior Columm through Ilioinguinal Approach in Case of Both Columm Fractures. J Korean Hip Soc. 21(4) 334-338. 2009.",
+    "Results of Treating Senile Osteoporotic Peritrochanteric Fracture with Proximal Femoral Nail Antirotation (PFNA). J Korean Hip Soc. 21(2) 162-167. 2009.",
+    "Treatment of Intertrochanteric Fracture: Dynamic Hip Screw. J Korean Fracture Soc. 22(1) 51-55. 2009.",
+    "Complications in patients with acetabular fractures treated surgically. J Korean Fracture Soc. 21(4) 341-346. 2008.",
+    "Allograft in Revision Total Hip Arthroplasty. J of Korean Musculoskeletal Transplantation. 8(1) 1-10. 2008.",
+    "Efficacy of Multimodal Pain Control in Total Hip Arthroplasty. J of Korean Hip Society. 20(2) 75-79. 2008.",
+    "Metallosis after Revision of a Fractured Ceramic Head onto a Metal-on-Polyethylene Articulation. j of the Korean orthopaedic association. 40(2) 501-505. 2008.",
+    "Surgical Treatment of Late Presented Displaced Lateral Condylar Fracture of the Humerus in Children. J of the Korean orthopaedic association. 43(1) 24-49. 2008.",
+    "Hip Osteoporosis: Medial Management. J Korea hip society. 19(3) 266-270. 2007.",
+    "Avascular Necrosis of the Femoral Head after Intertrochanteric Fracture. J Korean Hip Soc. 18(5) 486-491. 2006.",
+    "Change of Antimicrobial Use Density According to Application of Computerized Management Program for Restriction of Antimicrobials Use in a University Hospital. J of Korea society of pediatric infection Disease. 13(2) 155-162. 2006.",
+    "Prevention of Hip Fracture: Medical Management. J Korean Hip Soc. 18(4) 405-408. 2006.",
+    "Anterolateral mini-incision total hip arthroplasty. J Korean Hip Soc. 18(2) 169-173. 2006.",
+    "The Extended Trochanteric Osteotomy through the lateral Approach in Revision Hip Arthroplasty. J Korean Orthropedic Assoc. 41(1) 110-114. 2006.",
+    "Operative Treatment of Acetabular Fractures through the llioinguinal Approach, J Korean Orthropedic Assoc. 40(7) 923-928. 2005.",
+    "The Effect of Stem Alignment on Clinical and Radiographic Results of a Tapered CLS stem. J Korean Orthopaedic Assoc. 40(2) 132-137. 2005.",
+    "Rotational Acetabular Osteotomy for the Dysplastic Hip: A Follow-up for 5 to 18 years. J Korean Orthropedic Assoc. 40(6) 717-722. 2005.",
+    "Total hip arthroplasty in traumatic osteoarthritis. J Korean Hip Soc. 17(3) 128-131. 2005.",
+    "Failure Mode of Polyethylene Liner in Total Hip Replacement with Harris-Galante II Acetabular cup. J of Korean Orthopaedic Association. 39(7) 766-772. 2004.",
+    "Anatomic Assessment of the Acetabular Fossa for Screw Fixation in acetabular Fracture. J of Korean Orthropedic Assoc. 39(5) 464-468. 2004.",
+    "Complication of the Operative Treatment in Unstable Pelvic Bone Fractures. J Korean Hip Soc. 16(3) 373-379. 2004.",
+    "Surgical Treatment of Acetabular Fracture. J Korean Hip Soc. 16(2) 296-303. 2004.",
+    "Treatment of the Segmental Fractures of Tibia with Ilizarov External Fixation. J Korean Fracture Soc. 17(1) 25-31. 2004.",
+    "Grit-Blasted Femoral Stem. J Korean Hip Soc. 15(4) 329-332. 2003.",
+    "Revision Hip Arthroplasty with Extensively Porous-Coated Femoral Stem. J Korean Hip Soc. 15(2) 150-157. 2003.",
+    "Bipolar Versus Total Hip Arthroplasty for the Osetonecrosis of the Femoral Head - Retrospective matched pair study -. J Korean Hip soc. 15(3) 245-251. 2003.",
+    "Minimally Invasive Primary Total Hip Replacement (Preliminary report). J Korean Hip Society. 15(1) 65-70. 2003.",
+    "Operative Treatment of Pelvis Fracture. J Korean Hip Society. 14(4) 322-326. 2002.",
+    "Femoral Osteolysis in Total Hip Arthroplasty with Circumferentially Porous Coated Multilock Femoral Stem. J Korean Orthopedic Assoc. 37(4) 499-504. 2002.",
+    "Plate Fixation for Sacroiliac Joint Separation through the Anterior Approach. J of Korean Orthropedic Assoc. 37(4) 478-482. 2002.",
+    "Revision Hip Arthroplasty with Extensively Porous-Coated Femoral Stem. J of Korean Fracture Society. 15(2) 150-157. 2002.",
+    "Total Hip Arthroplasty with the CLS Stem in Osteonecrosis of the Femoral. J of Korean Hip Society. 14(2) 97-102. 2002.",
+    "Primary Total Hip Replacement with Second-Generation Harris-Galante Acetabular Components. J of Korean Hip Society. 13(4) 359-366. 2001.",
+    "Complications in Patients with Pertrochanteric Fractures Treated with a Gamma Asia-Pacific Locking Nail. J of Korean Orthopedic Assoc. 36(5) 429-436. 2001.",
+    "Circumferentially Porous Coated Multilock Femoral Stem in Total Hip Replacement. J of Korean Hip Society. 13(3) 259-266. 2001.",
+    "Complications of Surgical Treatment in Patients with Acetabular Fractures. J of Korean Hip Society. 12(3) 253-260. 2000.",
+    "Osteolysis in Association with a Bipolar Hemiathroplasty for Osteonecrosis of the Femoral Head. J of Korean Hip Society. 12(2) 221-226. 2000.",
+    "Operative Treatment of Symphseal Disruption. J of Korean Orthopedic Assoc. 35(3) 511-518. 2000.",
+    "Fate of Untreated Asymptomatic Hips in Patients with Non-Traumatic Osteonecrosis. J of Korean Hip Society. 11(3) 168-172. 1999.",
+    "The Prevalence and Surveillance of Deep Vein Thrombosis after Total Hip Arthoplasty. J of Korean Orthopedic Assoc. 34(5) 877-882. 1999.",
+    "Cementless Total Hip Arthroplasty for Dysplastic Hips. J of Korean Hip Society. 11(1) 9-15. 1999.",
+    "Femoral Neck Fracture Fixation (Comparison of Dynamic Hip Screw and Cannulated Screw Fixation). J of Korean Orthopedic Assoc. 34(2) 365-371. 1999.",
+    "Spontaneous Femoral Neck Fracture following Avascular Necrosis of the Femoral Head. J of Korean Hip Society. 10(2) 171-180. 1998.",
+    "Fixation Failure in Patients with Proximal Fractures of the Femur Treated with a Compression Hip Screw: J of Korean Hip Society. 10(2) 163-170. 1998.",
+    "Intertrochanteric Valgus Osteotomy for Non-Union following Fracture of the Femoral Neck. J of Korean Hip Society. 9(2) 164-172. 1997.",
+    "The Changes in the Rate of C-reactive protein in Orthopaedic Surgery. J of Korean Orthopedic Assoc. 32(3) 697-703. 1997.",
+    "Use of Polymerase Chain Reaction for Identification of Mycobacterium Tuberculosis in Bone and Joint. J of Keimyung Medical School. 15(4) 327-333. 1996.",
+    "A Case of Transient Osteoporosis of Hip. J of Keimyung Medical School. 15(3) 259-262. 1996.",
+    "Cable Fixation Method for Displaced Acetabular Fracture. J of Korean Fracture Society. 9(3) 574-582. 1996.",
+    "Operative Treatment of the Unstable Pelvic Bone Fracture. J of Korean Fracture Society. 9(3) 518-524. 1996.",
+    "Classification and Evaluation of the Clinical Result of the Calcaneal Fracture based on the Computed Tomography. J of Korean Orthopedic Assoc. 31(3) 606-64. 1996.",
+    "Radial Neck Fracture in Children. J of Korean Orthopedic Assoc. 31(3) 408-417. 1996.",
+    "Subungal Exostosis. J of Korean Tumor Assoc. 2(1) 106-110. 1996.",
+    "Treatment of open Fracture of tibial shaft with no-reamed interlocking nailing. J of Korean Trauma Assoc. 8(4) 841-847. 1995.",
+    "Investigation of Postural Sway Characteristics of Patients after Total Hip Replacement. Journal of the Ergonomics society of korea. 14(2) 87-103. 1995.",
+    "Ischemia of the lower extremity after total hip replacement. A case report. J of Korean Hip Society. 7(2) 168-171. 1995.",
+    "Effect of immunoisuppressants on lipopolysaccharide-Induced changes of Nitric oxide synthase activity in liver and brain of mice. J of pharmacology. 31(2) 233-239. 1995.",
+    "Bipolar prosthetic replacement in patients with avascular necrosis of the femoral head. J of Korean Hip Society. 7(2) 172-180. 1995.",
+    "Total Hip Replacement using high hip center in osteoarthritis secondary to hip dysplastic(Preliminary study). J of Korean Orthopaedic Assc. 30(6) 1610-1617. 1995.",
+    "Diagnosis of internal disc derangement. J of Korean Spine Surg. 2(2) 209-218. 1995.",
+    "Treatment of open fracture of tibial shaft with non-reamed interlocking nailing. J of Korean Trauma Assoc. 8(4) 841-847. 1995.",
+    "The operative treatment on the fracture of the displaced femoral neck in children. J of Korean Orthop Assoc. 30(5) 1249-1259. 1995.",
+    "Operative treatment for comminuted fractures of the proximal humerus using T-plate. J of Korean Trauma Assoc. 8(4) 878-884. 1995.",
+    "Effect of immunosuppressants on lipopolysaccharide-induced changes of nitric oxide synthetase activity in liver and brain of mice. J of Korean Pharmacology. 31(2) 233-239. 1995.",
+    "Total hip replacement in the deficient acetabulum using acetabular roof reinforcement ring with hook. J of Korean Hip Society. 6(1) 250-256. 1994.",
+    "Surgical treatment for posterior fracture-dislocations of the hip with fracture of acetabulum. J of Korean Trauma Assoc. 7(2) 530-537. 1994.",
+    "Surgical treatment of non-union of the carpal scaphoid by modified Matti-Russe technique. J of Korean Trauma Assoc. 7(2) 538-644. 1994.",
+    "Traumatic false aneurysm of peripheral arteries. J of Korean Orthop Assoc. 29(3) 1080-1085. 1994.",
+    "Sillicone rubber replacement of the severely fractured radial head. J of Korean Trauma Assoc. 7(1) 43-48. 1994.",
+    "Central acetabular fracture dislocations. J of Korean Hip Society. 5(1) 54-60. 1993.",
+    "MRI of osteonecrosis of the femoral head: Diagnostic value and histologic correlation. J of Korean Orthop Assoc. 28(2) 527-539. 1993.",
+    "Clinical analysis of neurologic complications after pin fixation of supracondylar humerus fractures in children. J of Korean Orthop. Assoc. 28(2) 774-780. 1993.",
+    "Open reduction and internal fixation of clavicular midshaft fractures. J of Korean Orthop. Assoc. 28(1) 186-192. 1993.",
+    "A clinical study of the surgical treatment of pilon fracture. J of Korean Orthop Assoc. 28(1) 276-282. 1993.",
+    "Clinical study of Harris-Galante noncemented total hip replacement. J of Korean Orthop Assoc. 27(6) 1570-1578. 1992.",
+    "Quadricepsplasty and arthrolysis in stiff knee. J of Korean Knee Society. 4(1) 69-79. 1992.",
+    "A clinical analysis of the tibial plateau fractures. J of Korean Orthop Assoc. 23(3) 733-742. 1988.",
+    "Hypnosis induced by alpha-2 agonists and benzodiazephines in chicks (M.S.)",
+    "Gluteus maximus myocutaneous flaps for repair of the sacral pressure sores. J of Korean Orthop Assoc. 22(6) 1361-1366. 1987."
+  ],
+  "isAttend": true
+}

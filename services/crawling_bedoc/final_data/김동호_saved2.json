@@ -1,0 +1,259 @@
+{
+  "hospital_cid": 65,
+  "bedoc_id": "A5822",
+  "bedoc_hospitalsite": "http://www.kcch.re.kr",
+  "bedoc_doctorname": "김동호",
+  "bedoc_deptname": "소아청소년과",
+  "bedoc_hospitalname": "원자력병원",
+  "hospital_name": "원자력병원",
+  "aiga_hid": "H11KR-21000003",
+  "hospital_site": "https://www.kcch.re.kr/doctor/profViewPop.do?deptNo=64&profNo=75",
+  "site_type": "popup",
+  "hospital_addr": "부산광역시 기장군 장안읍 좌동길 40, (장안읍)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.kcch.re.kr/doctor/profViewPop.do?deptNo=64&profNo=75&doctorName=%EA%B9%80%EB%8F%99%ED%98%B8&depthName=%EC%86%8C%EC%95%84%EC%B2%AD%EC%86%8C%EB%85%84%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "학력": [
+    {
+      "date": "200703~200902",
+      "content": "서울대학교 의학대학원 의학석사"
+    },
+    {
+      "date": "198803~199402",
+      "content": "서울대학교 의과 대학 졸업"
+    }
+  ],
+  "경력": [
+    {
+      "date": "202404~현재",
+      "content": "원자력병원 병원장"
+    },
+    {
+      "date": "201806",
+      "content": "방사선의학임상연구부장"
+    },
+    {
+      "date": "200809",
+      "content": "소아감염병 세부전문의"
+    },
+    {
+      "date": "200806",
+      "content": "식품의약품안전청 소아인플루엔자 백신 유용성 평가 용역사업 수행(연구책임자)"
+    },
+    {
+      "date": "200403",
+      "content": "원자력병원 감염관리팀 팀장"
+    },
+    {
+      "date": "200303",
+      "content": "원자력병원 소아청소년과 과장"
+    },
+    {
+      "date": "200203~200302",
+      "content": "서울대학교병원 소아감염 전임의"
+    },
+    {
+      "date": "199705~200202",
+      "content": "서울대학교병원 수련의, 소아과 전공의"
+    }
+  ],
+  "논문": [
+    "Early menarche is a risk factor of short stature in young Korean female: Epidemiologic study (Journal of Clinical Research in Pediatric Endocrinology, 2019년)",
+    "A Case of Autosomal Dominant Osteopetrosis Type II with a CLCN7 Gene Mutation (Journal of Clinical Research in Pediatric Endocrinology, 2019년)",
+    "Lymphocyte-Monocyte Ratio at the 14th day of First Cisplatin-Doxorubicin Chemotherapy is associated with Treatment Outcome of Pediatric Patients with Osteosarcoma (Korean J Pediatr, 2018년)",
+    "Evaluation of field-protective effectiveness of seasonal influenza vaccine in Korean children aged <60 months during the 2014-2015 and 2015-2016 influenza seasons: a cohort study (Human Vaccine & Immunotherapeutics, 2018년)",
+    "Hemagglutination inhibiting antibody persistence 1 year after of influenza vaccination in Korean children and adolescents (Human Vaccines & Immunotherapeutics, 2017년)",
+    "Radiotherapy and Gemcitabine-Docetaxel Chemotherapy in Children and Adolescents with Unresectable Recurrent or Refractory Osteosarcoma (Japanese Journal of Clinical Oncology, 2016년)",
+    "Early menarche is associated with metabolic syndrome and insulin resistance in premenopausal Korean women (European journal of pediatrics, 2016년)",
+    "The priming effect of previous natural pandemic H1N1 infection on the immunogenicity to subsequent 2010-2011 influenza vaccination in children: a prospective cohort study (BMC infectious disease, 2016년)",
+    "Induction of Interleukin-1 beta (IL-1b) is a Critical Component of Lung Inflammation during Influenza A (H1N1) Virus Infection (journal of medical viology, 2015년)",
+    "Bone mineral density change during adjuvant chemotherapy in pediatric osteosarcoma (Annals of Pediatirc Endocrinology & Metabolism, 2015년)",
+    "Immunogenicity and safety assessment of a trivalent, inactivated split influenza vaccine in Korean children: Double-blind, randomized, active-controlled multicenter phase III clinical trial. (Hum Vaccin Immunother, 2015년)",
+    "Immunogenicity and safety of the new reduced-dose tetanus-diphtheria vaccine in healthy Korean adolescents: A comparative active control, double-blind, randomized, multicenter phase III study. (J Microbiol Immunol Infect, 2015년)",
+    "Prevalence of insulin resistance and cardiometabolic risk in Korean children and adolescents: a population-based study (Diabetes Res Clin Pract, 2014년)",
+    "Gemcitabine and docetaxel for the treatment of children and adolescents with recurrent or refractory osteosarcoma: Korea Cancer Center Hospital experience (Pediatric Blood and Cancer, 2014년)",
+    "The hemoglobin values of Korean adolescents show distinctive characteristics in comparison to those of Caucasians and African Americans (Pediatr Blood Cancer, 2014년)",
+    "An RNA aptamer that specifically binds to the glycosylated hemagglutinin of avian influenza virus and suppresses viral infection in cells. (PLoS One, 2014년)",
+    "High-dose chemotherapy and autologous peripheral blood stem cell transplantation in the treatment of children and adolescents with Ewing sarcoma family of tumors (Korean J Pediatr, 2013년)",
+    "Serum Alkaline Phosphatase Levels in 10-20 Year Old Healthy Korean Children and Adolescents:Based on the 2009 Korean National Health and Nutrition Examination Survey (대한소아내분비학회지, 2013년)",
+    "Age at menarche in the Korean female: secular trends and relationship to adulthood body mass index (Ann Pediatr Endocrinol Metab, 2013년)",
+    "Young age at diagnosis, male sex, and decreased lean mass are risk factors of osteoporosis in long-term survivors of osteosarcoma (J Pediatr Hematol Oncol, 2013년)",
+    "Immunogenicity of influenza vaccine in colorectal cancer patients (대한암학회지, 2013년)",
+    "Reference values for bone mineral density according to age with body size adjustment in Korean children and adolescents (J Bone Miner Metab, 2013년)",
+    "Healthy range of serum alanine aminotransferase and its predictive power for cardiovascular risk in children and adolescents (J Pediatr Gastroenterol Nutr, 2013년)",
+    "Comparison of immunogenicity and reactogenicity of split versus subunit influenza vaccine in Korean children aged 6-35 months. (Scand J Infect Dis, 2013년)",
+    "Comparison of immune response by virus infection and vaccination to 2009 pandemic influenza A/H1N1 in children. (J Korean Med Sci, 2013년)",
+    "Assessment of influenza vaccine  immunogenicity in immunocompromized host during 2009 influenza season: A single institution experience (소아감염, 2012년)",
+    "Evaluation of immunogenicity of the 2008-2009 seasonal influenza vaccines by microneutralization test (Korean Journal of Pediatrics, 2012년)",
+    "Clinical utility of the Xpert MRSA assay for early detection of methicillin-resistant Staphylococcus aureus. (Mol Med Rep, 2012년)",
+    "Candida tropicalis arthritis of the elbow in a patient with Ewing's sarcoma that successfully responded to itraconazole. (Korean J Pediatr, 2011년)"
+  ],
+  "저서": [
+    {
+      "content": "소아암환자에서 암의 전이로 오인된 폐결핵 (소아과 학회지, 2009년)"
+    },
+    {
+      "content": "인플루엔자백신(소아)의 유용성 평가-인플루엔자 백신의 면역 지속능 평가 (식약청 용역 결과 보고서, 2009년)"
+    },
+    {
+      "content": "인플루엔자백신(소아)의 유용성 평가 연구 -소아대상 인플루엔자 백신의 면역원성 및 안전성 평가 (식약청 용역 결과 보고서, 2008년)"
+    },
+    {
+      "content": "Kasai 수술 후 발생한 상행성 담관염에서 경험적 항생제로서 Cefotaxime 치료의 적정성에 대한 평가 (소아과 학회지, 2002년)"
+    }
+  ],
+  "학술": [
+    {
+      "date": "202012",
+      "content": "(재)국가마우스표현형분석사업단 COVID-19 비임상시험연구팀 선정위원회 선정위원"
+    },
+    {
+      "date": "202012",
+      "content": "서울특별시북북교육지원청 학교감염병 예방관리평가관리 위원회 위원"
+    },
+    {
+      "date": "202012",
+      "content": "국립보건연구원 코로나19 범정부 실무추진단 위원"
+    },
+    {
+      "date": "202012",
+      "content": "한국생명공학연구원 영장류모델 동물실험 선정위원회 위원"
+    },
+    {
+      "date": "202011",
+      "content": "안전성평가연구소 코로나19 대흥 GLP 독성평가사업지원 선정평가 위원"
+    },
+    {
+      "date": "202006~현재",
+      "content": "영장류모델 동물실험 선정위원회 위원"
+    },
+    {
+      "date": "202006~현재",
+      "content": "코로나19 범정부 실무추진단 위원"
+    },
+    {
+      "date": "201911",
+      "content": "대한소아감염학회 추계학술대회 좌장"
+    },
+    {
+      "date": "201908~202108",
+      "content": "과학기술정보통신부 바이러스기초연구소 설립준비위원"
+    },
+    {
+      "date": "201908~202108",
+      "content": "과학기술정보통신부 바이오의료기술사업 추친위 위원"
+    },
+    {
+      "date": "201906",
+      "content": "대한소아감염학회 일반이사"
+    },
+    {
+      "date": "201905~202010",
+      "content": "ACPID2020 제10차 Asian Congress of Pediatric Infectious Disease 재무위원회 위원장"
+    },
+    {
+      "date": "201905~202010",
+      "content": "제10차 Asian Congress of Pediatric Infectious Disease 재무위원회 위원장"
+    },
+    {
+      "date": "201607~201705",
+      "content": "대한소아감염학회 재무이사 위촉"
+    },
+    {
+      "date": "201605~201705",
+      "content": "식품의약품 등의 안전기술 의약품 전문분과위원회 위원"
+    },
+    {
+      "date": "201511",
+      "content": "Asian Pacific Vaccinology Meeting 참석"
+    },
+    {
+      "date": "201211~201810",
+      "content": "대한소아과학회 법제위원"
+    },
+    {
+      "date": "201209",
+      "content": "한국소아감염병학회 연수강좌"
+    },
+    {
+      "date": "201205",
+      "content": "2012년도 제31회 한국모자보건학회 춘계학술대회 초청강연"
+    },
+    {
+      "date": "201201~201612",
+      "content": "질별관리본부(영유아검진분야 감염전문기술분과) 위원"
+    },
+    {
+      "date": "200203",
+      "content": "대한소아과 학회 정회원"
+    },
+    {
+      "date": "200203",
+      "content": "한국 소아감염병학회 정회원"
+    }
+  ],
+  "specialty": "소아 감염 질환,소아 예방접종,여행자의학,감염,소아 호흡기 질환,알레르기 질환,해외 유입 감염",
+  "profileUrl": "https://www.kcch.re.kr/_upload/profImg/31802004-c60c-49e7-87f8-9610c8d5abd5",
+  "isAttend": true,
+  "언론": [
+    {
+      "targetDate": null,
+      "type": "의학신문",
+      "text": "미래컴퍼니, 원자력병원과 의료진 교육 합의각서 체결",
+      "url": "javascript: openUrl('http://www.bosa.co.kr/news/articleView.html?idxno=2251312')",
+      "issuer": "의학신문"
+    },
+    {
+      "targetDate": null,
+      "type": "의학신문",
+      "text": "원자력병원, '난치암 치료' 개원의 연수강좌 개최",
+      "url": "javascript: openUrl('http://www.bosa.co.kr/news/articleView.html?idxno=2249603')",
+      "issuer": "의학신문"
+    },
+    {
+      "targetDate": null,
+      "type": "블로그",
+      "text": "손 자주 씻어라, 기침은 가리고 해라... 등원 전 꼭 얘기해주세요! - 소아청소년과 전문의 김동호 병원장",
+      "url": "javascript: openUrl('https://blog.naver.com/PostView.naver?blogId=kirams1963&logNo=223544915751&categoryNo=6&parentCategoryNo=6&viewDate=&currentPage=1&postListTopCurrentPage=&from=thumbnailList')",
+      "issuer": "블로그"
+    },
+    {
+      "targetDate": null,
+      "type": "블로그",
+      "text": "소아 알레르기, 빨리 치료할수록 효과 좋아요! – 원자력병원 소아청소년과 김동호 과장",
+      "url": "javascript: openUrl('https://blog.naver.com/PostView.naver?blogId=kirams1963&logNo=222536740296&categoryNo=6&parentCategoryNo=6&viewDate=&currentPage=3&postListTopCurrentPage=&from=thumbnailList')",
+      "issuer": "블로그"
+    },
+    {
+      "targetDate": null,
+      "type": "국민일보",
+      "text": "침방울과 손으로 전염되는 소아 호흡기 감염병 [진료실 문답]",
+      "url": "javascript: openUrl('https://www.kukinews.com/article/view/kuk202409090006')",
+      "issuer": "국민일보"
+    },
+    {
+      "targetDate": null,
+      "type": "블로그",
+      "text": "손 자주 씻어라, 기침은 가리고 해라... 등원 전 꼭 얘기해주세요!",
+      "url": "javascript: openUrl('https://blog.naver.com/kirams1963/223544915751?trackingCode=blog_bloghome_searchlist')",
+      "issuer": "블로그"
+    },
+    {
+      "targetDate": null,
+      "type": "",
+      "text": "원자력병원, 2019년 병원학교 여름캠프 개최",
+      "url": "javascript: openUrl('medipana.com/news/news_viewer.asp?NewsNum=244120&MainKind=A&NewsKind=5&vCount=12&vKind=1')",
+      "issuer": ""
+    },
+    {
+      "targetDate": null,
+      "type": "유튜브",
+      "text": "암은 원자력병원입니다.-소아 감염질환-소아청소년과 김동호 과장",
+      "url": "javascript: openUrl('https://www.youtube.com/embed/y2NfiHOK5NQ')",
+      "issuer": "유튜브"
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "hospital_cid": 146,
+  "bedoc_id": "A0761",
+  "bedoc_hospitalsite": "http://www.ncc.re.kr",
+  "bedoc_doctorname": "김태현",
+  "bedoc_deptname": "방사선종양학과",
+  "bedoc_hospitalname": "국립암센터",
+  "hospital_name": "국립암센터",
+  "aiga_hid": "H11KR-31000013",
+  "hospital_site": "https://www.ncc.re.kr/ncc_about03_param.ncc?searchKey=&searchValue=&dept=TR",
+  "site_type": "list",
+  "hospital_addr": "경기도 고양시 일산동구 일산로 323, (마두동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "isAttend": true,
+  "profileUrl": "https://www.ncc.re.kr/images/no-image.gif",
+  "specialty": "엑스선 및 양성자선을 이용한 치료 연구",
+  "학력": [
+    { "date": "1990-03 ~ 1996-02", "content": "고려대학교 의과대학교 의학과 대졸(의대)" },
+    { "date": "1998-03 ~ 2000-02", "content": "고려대학교 대학원 의학과 대학원졸(석사)" },
+    { "date": "2000-09 ~ 2006-02", "content": "고려대학교 대학원 의학과 대학원졸(박사)" }
+  ],
+  "경력": [
+    { "date": "1996-03 ~ 2001-02", "content": "고려대학교 안암병원 전공의" },
+    { "date": "2001-04 ~ 2002-04", "content": "포천군 영중보건지소 공보의" },
+    { "date": "2002-04 ~ 2004-04", "content": "국립암센터 공보의" },
+    { "date": "2004-05 ~ 2005-02", "content": "국립암센터 양성자치료센터 전임의" },
+    { "date": "2005-03 ~ 2019-01", "content": "국립암센터 간암센터 겸임" },
+    { "date": "2007-12 ~ 2014-02", "content": "국립암센터 방사선의학연구과 선임연구원" },
+    { "date": "2008-04 ~ 2009-03", "content": "Univ. of Michigan Visiting Scientist" },
+    { "date": "2009-09 ~ 2019-01", "content": "국립암센터 갑상선암센터 겸임" },
+    { "date": "2014-03 ~ 2017-02", "content": "국립암센터 방사선의학연구과 책임연구원" },
+    { "date": "2015-03 ~ 2019-01", "content": "국립암센터 유방암센터 겸임" },
+    { "date": "2016-09 ~ 현재", "content": "국립암센터 양성자치료센터 센터장" },
+    { "date": "2017-03 ~ 2023-03", "content": "국립암센터 방사선종양학과 과장" },
+    { "date": "2017-03 ~ 2019-01", "content": "국립암센터 입자치료연구과 책임연구원" },
+    { "date": "2019-02 ~ 2021-08", "content": "국립암센터 융합기술연구부 수석연구원" },
+    { "date": "2021-09 ~ 2022-08", "content": "국립암센터 방사선의학연구과 과장, 수석연구원" },
+    { "date": "2022-09 ~ 2025-02", "content": "국립암센터 방사선의학연구과 과장, 영년제 석연구원" },
+    { "date": "2023-03 ~ 현재", "content": "국립암센터 방사선종양학과 과장, 임상교수" },
+    { "date": "2025-03 ~ 현재", "content": "국립암센터 방사선의학연구과 영년제 수석연구원" }
+  ],
+  "논문": [
+	{
+		"date": "2025",
+		"type": "SCI-E",
+		"title": "Optimization of electrode position in electric field treatment for pancreatic cancer:BMC GASTROENTEROLOGY. 25:222~ (2.6)"
+	},
+	{
+		"date": "2025",
+		"type": "SCI-E",
+		"title": "Mutant KRAS and GATA6 Stratify Survival in Patients Treated with Chemotherapy for Pancreatic Adenocarcinoma: A Prospective Cohort Study:CANCERS. 17(5):896~ (4.4)"
+	},
+	{
+		"date": "2025",
+		"type": "SCI-E",
+		"title": "Inhibition of mTOR attenuates the initiation and progression of BRCA1-associated mammary tumors:CANCER COMMUNICATIONS. 45(4):486~490 (24.9)"
+	},
+	{
+		"date": "2024",
+		"type": "SCI-E",
+		"title": "Role and Effectiveness of Hypofractionated Proton Beam Therapy and Combinations with Systemic Chemotherapy in Inoperable Extrahepatic Cholangiocarcinoma:CANCER RESEARCH AND TREATMENT. :~ (4.1)"
+	},
+	{
+		"date": "2024",
+		"type": "SCI-E",
+		"title": "Concurrent vs. Sequential Adjuvant Capecitabine-Based Chemoradiation in Residual TNBC after neoadjuvant-chemotherapy: A Multicenter comparative Study:INTERNATIONAL JOURNAL OF RADIATION ONCOLOGY BIOLOGY PHYSICS. 122(1):72~83 (6.4)"
+	},
+	{
+		"date": "2024",
+		"type": "SCI-E",
+		"title": "Patient-Reported Outcomes Between Whole-Breast Plus Regional Irradiation and Whole-Breast Irradiation Only in pN1 Breast Cancer After Breast-Conserving Surgery and Taxane-Based Chemotherapy: A Randomized Phase 3 Clinical Trial (KROG17-01):INTERNATIONAL JOURNAL OF RADIATION ONCOLOGY BIOLOGY PHYSICS. 121(2):341~351 (6.4)"
+	},
+	{
+		"date": "2024",
+		"type": "SCI-E",
+		"title": "Neoadjuvant Chemotherapy with Concurrent Letrozole for Estrogen Receptor-Positive and HER2-Negative Breast Cancer: An Open-Label, Single-Center, Nonrandomized Phase II Study (NeoCHAI):CANCERS. 16(18):3122~ (4.5)"
+	},
+	{
+		"date": "2024",
+		"type": "SCI-E",
+		"title": "Treatment Outcomes after Postoperative Radiotherapy in Triple-Negative Breast Cancer: Multi-Institutional Retrospective Study (KROG 17-05):JOURNAL OF PERSONALIZED MEDICINE. 14(9):941~ (3)"
+	},
+	{
+		"date": "2024",
+		"type": "SCI-E",
+		"title": "Risk of radionecrosis in HER2-positive breast cancer with brain metastasis receiving trastuzumab emtansine (T-DM1) and brain stereotactic radiosurgery:RADIOTHERAPY AND ONCOLOGY. 199:110461~ (4.9)"
+	},
+	{
+		"date": "2024",
+		"type": "SCI-E",
+		"title": "Locoregional Recurrence in Adenoid Cystic Carcinoma of the Breast: A Retrospective, Multicenter Study (KROG 22-14):CANCER RESEARCH AND TREATMENT. 57(1):150~158 (4.1)"
+	},
+	{
+		"date": "2024",
+		"type": "SCI-E",
+		"title": "Toxicity evaluation of dose-escalation in hypofractionated regional nodal irradiation for breast cancer: a retrospective study:INTERNATIONAL JOURNAL OF RADIATION ONCOLOGY BIOLOGY PHYSICS. 120(3):823~834 (6.4)"
+	},
+	{
+		"date": "2024",
+		"type": "SCI-E",
+		"title": "The Efficacy and Safety of an Indocyanine Green-Macroaggregated Albumin-Hyaluronic Acid Mixture (LuminoMark™) for Surgical Localization of Recurrent Thyroid Cancer:ANNALS OF SURGICAL ONCOLOGY. 31:2349~2356 (3.4)"
+	},
+	{
+		"date": "2024",
+		"type": "SCI-E",
+		"title": "Defining Minimum Treatment Parameters of Ablative Radiation Therapy in Patients With Hepatocellular Carcinoma: An Expert Consensus:Practical Radiation Oncology. 14(2):134~145 (3.4)"
+	},
+	{
+		"date": "2024",
+		"type": "SCI-E",
+		"title": "Combined High-Dose Radiotherapy with Sequential Gemcitabine-Cisplatin Based Chemotherapy Increase the Resectability and Survival in Locally Advanced Unresectable Intrahepatic Cholangiocarcinoma: A Multi-institutional Cohort Study:CANCER RESEARCH AND TREATMENT. 56(3):838~846 (4.1)"
+	},
+	{
+		"date": "2023",
+		"type": "SCI-E",
+		"title": "Concurrent nivolumab and external beam radiation therapy for hepatocellular carcinoma with macrovascular invasion:JHEP REPORTS. 6(4):100991~ (8.3)"
+	},
+	{
+		"date": "2023",
+		"type": "SCI-E",
+		"title": "Concurrent nivolumab and external beam radiation therapy for hepatocellular carcinoma with macrovascular invasion: A phase II study:JHEP REPORTS. 6(4):100991~ (8.3)"
+	},
+	{
+		"date": "2023",
+		"type": "SCI-E",
+		"title": "Treatment Outcomes of Proton Beam Therapy for Esophageal Squamous Cell Carcinoma at a Single Institute:CANCERS. 15(23):5524~ (5.2)"
+	},
+	{
+		"date": "2023",
+		"type": "SCI-E",
+		"title": "Current evidence and the potential role of proton beam therapy for hepatocellular carcinoma:CLINICAL AND MOLECULAR HEPATOLOGY. 29(4):958~968 (8.9)"
+	},
+	{
+		"date": "2023",
+		"type": "SCI-E",
+		"title": "Risk factors for distant metastasis in extrahepatic bile duct cancer after curative resection (KROG 1814):CANCER RESEARCH AND TREATMENT. 56(1):272~279 (4.6)"
+	},
+	{
+		"date": "2023",
+		"type": "기타",
+		"title": "Feasibility of additional radiotherapy in patients with advanced hepatocellular carcinoma treated with atezolizumab plus bevacizumab:Journal of Liver Cancer. :~ (0)"
+	},
+	{
+		"date": "2023",
+		"type": "SCI-E",
+		"title": "Comparison of initial and sequential salvage brain-directed treatment in patients with 1-4 vs. 5-10 brain metastases from breast cancer (KROG 16-12):BREAST CANCER RESEARCH AND TREATMENT. 200(1):37~45 (3.8)"
+	},
+	{
+		"date": "2023",
+		"type": "SCI-E",
+		"title": "One-Week versus Two-Week Chemoradiotherapy Followed by Curative Surgery in Rectal Cancer: Long-Term Comparative Pooled Analysis of Two Prospective Multicenter Phase II Trials.:CANCER RESEARCH AND TREATMENT. 55(3):918~926 (4.6)"
+	},
+	{
+		"date": "2023",
+		"type": "기타",
+		"title": "A case of successful surgical treatment for peritoneal seeding of hepatocellular carcinoma after radiotherapy and atezolizumab plus bevacizumab combination treatment:Journal of Liver Cancer. Online:Published (0)"
+	}
+  ],
+  "저서": [
+    { "date": "2020-11-28", "content": "The Essentials of Head & Neck Oncology: Thyroid Cancer", "publisher": "두경부종양학회" }
+  ],
+  "수상": [
+    { "date": "2024-06-28", "content": "Journal of Liver Cancer 인용 우수상", "organization": "대한간암학회" },
+    { "date": "2022-06-24", "content": "학술상", "organization": "대한간암학회" },
+    { "date": "2022-05-13", "content": "ROJ 우수심사위원상", "organization": "대한방사선종양학회" },
+    { "date": "2021-04-13", "content": "국무총리표창", "organization": "보건복지부" },
+    { "date": "2020-10-30", "content": "KOSRO Best Poster Award", "organization": "대한방사선종양학회" },
+    { "date": "2018-07-08", "content": "Best Poster Presentation Award", "organization": "Asia Pacific Primary Liver Cancer Expert Association" },
+    { "date": "2016-10-14", "content": "Eleckta ROJ Best Impact Factor Article Award", "organization": "The Korean Society for Radiation Oncology" },
+    { "date": "2015-02-14", "content": "Best Poster Award", "organization": "대한간암학회" },
+    { "date": "2014-10-17", "content": "KOSRO Best Poster Award", "organization": "The Korean Society for Radiation Oncology" },
+    { "date": "2013-06-14", "content": "Best Reviewer Award", "organization": "대한암학회" },
+    { "date": "2012-10-12", "content": "대한방사선종양학회 학술상 (KOSRO Award)", "organization": "대한방사선종양학회" },
+    { "date": "2006-11-30", "content": "우수과학기술논문상", "organization": "한국과학기술총연합회" },
+    { "date": "2004-05-13", "content": "Young Investigators award", "organization": "The 14th International Conference on the Use of Co" }
+  ],
+  "언론": [
+    { "date": "2025-06-15", "title": "국립암센터, 연변대와 ‘암정복 평화의료 세미나’ 개최", "media": "병원신문" },
+    { "date": "2025-06-14", "title": "국립암센터, 연변대와 ‘암정복’ 세미나 개최", "media": "의계신문" },
+    { "date": "2025-06-13", "title": "‘국립암센터-연변대학교 암정복과 평화의료 세미나’ 개최", "media": "메디포뉴스" },
+    { "date": "2025-06-13", "title": "국립암센터?연변대, ‘암정복과 평화의료 세미나’ 개최", "media": "의학신문" },
+    { "date": "2025-06-13", "title": "국립암센터, 연변대와 암정복·평화의료 세미나.. 암 조기진단·치료 협력 강화", "media": "메디팜스투데이" }
+  ]
+}

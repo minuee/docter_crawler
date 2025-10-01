@@ -554,6 +554,90 @@ router.get('/save', async function(req, res) {
   }
 });
 
+
+/**
+ * @swagger
+ *  /v1/c/crawling_bedoc/save:
+ *    get:
+ *      summary: "수집된 의사 데이터를 DB에 저장"
+ *      description: "services/crawling_bedoc/data/ 폴더의 JSON 파일들을 읽어 DB에 저장합니다."
+ *      tags: [crawling_bedoc-베닥의사 수집]
+ *      responses:
+ *        "200":
+ *          description: 데이터 저장 결과
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    message:u000a                      type: string
+ */
+router.get('/bedoc-save', async function(req, res) {
+  //mapper 경로
+  mybatisMapper.createMapper([`${global.appRoot}/services/crawling_bedoc/controler.xml`]);
+  let saved_count = 0;
+  const errors = [];
+  let emptyDoctors = [];
+  try {
+    const dataDir = path.join(global.appRoot, 'services/crawling_bedoc/final_data');
+    const hospitalDirs = fs.readdirSync(dataDir, { withFileTypes: true }).filter(dirent => dirent.isDirectory()).map(dirent => dirent.name);
+
+    for (const hospitalID of hospitalDirs) {
+      const doctorFiles = fs.readdirSync(path.join(dataDir, hospitalID)).filter(file => file.endsWith('.json') && !file.endsWith('_saved.json'));
+
+      for (const fileName of doctorFiles) {
+        const filePath = path.join(dataDir, hospitalID, fileName);
+        let doctorData = null; // Declare doctorData here
+        let doctorName = 'Unknown Doctor'; // Declare and initialize
+        let hospitalName = 'Unknown Hospital'; // Declare and initialize
+
+        try {
+          const fileContent = fs.readFileSync(filePath, 'utf-8');
+          doctorData = JSON.parse(fileContent); // Assign to the outer-scoped variable
+
+          if (!doctorData || CS.isEmpty(doctorData?.saveDoctorDetailUrl) || CS.isEmpty(doctorData?.bedoc_doctorname) || !doctorData?.isExist ) { // Handle cases where JSON.parse returns null/undefined
+            emptyDoctors.push(doctorData)
+            throw new Error('Parsed doctorData is null or undefined.');
+          }
+
+          doctorName = doctorData.bedoc_doctorname || 'Unknown Doctor';
+          hospitalName = doctorData.hospital_name || 'Unknown Hospital';
+
+          const saveResult = await crawlingCtrl.saveDoctorDataToDb(doctorData);
+          if (saveResult.success) {
+            const saveBedocResult = await crawlingCtrl.saveDoctorDataToBedocTable(doctorData,hospitalID);
+            console.log(`saveResult.success: ${saveResult.success}`)
+            saved_count++;
+            
+          } else {
+            errors.push(`Doctor ${doctorName} from ${hospitalName}: ${saveResult.error}`);
+          }
+        } catch (fileError) {
+          console.error(`[SAVE] Error processing file ${filePath}: ${fileError.message}`);
+          errors.push(`File ${filePath} (Doctor: ${doctorName}, Hospital: ${hospitalName}): ${fileError.message}`);
+        }
+        // Rename the file to mark as saved
+        const newFilePath = path.join(dataDir, hospitalID, fileName.replace('_saved2.json', '_final_saved.json'));
+        fs.renameSync(filePath, newFilePath);
+        console.log(`Renamed ${fileName} to ${fileName.replace('_saved2.json', '_final_saved.json')}`);
+        await CS.wait(1000); //의사 1명당 1초씩 텀은 준다
+      }
+    }
+    console.log(`Saved ${saved_count} doctor records. Errors: ${errors.length}, Empty Doctors: ${emptyDoctors.length}`)
+    return res.send({
+      code: 200,
+      success: true,
+      message: `Saved ${saved_count} doctor records. Errors: ${errors.length}, Empty Doctors: ${emptyDoctors.length}`,
+      errors: errors
+    });
+  } catch (error) {
+    console.error('Error in /save route:', error.message);
+    res.status(500).send('An error occurred during the save process: ' + error.message);
+  }
+});
+
 /**
  * @swagger
  *  /v1/c/crawling_bedoc/get-allhid:

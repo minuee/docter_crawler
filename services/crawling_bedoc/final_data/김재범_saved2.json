@@ -1,0 +1,333 @@
+{
+  "hospital_cid": 121,
+  "bedoc_id": "A8449",
+  "bedoc_hospitalsite": "https://daegu.dsmc.or.kr:49880/",
+  "bedoc_doctorname": "김재범",
+  "bedoc_deptname": "흉부외과",
+  "bedoc_hospitalname": "계명대동산병원",
+  "hospital_name": "계명대학교 동산병원",
+  "aiga_hid": "H01KR-47000002",
+  "hospital_site": "https://dongsan.dsmc.or.kr:49870/content/02depart/doctor_view.php?md_idx=419",
+  "site_type": "single",
+  "hospital_addr": "대구광역시 달서구 달구벌대로 1035, (신당동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://dongsan.dsmc.or.kr:49870/content/02depart/doctor_view.php?md_idx=419&doctorName=%EA%B9%80%EC%9E%AC%EB%B2%94&depthName=%ED%9D%89%EB%B6%80%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "specialty": "중환자의학, 외상학",
+  "profileUrl": "https://dongsan.dsmc.or.kr:49870/data/doctor/%EA%B9%80%EC%9E%AC%EB%B2%94.jpg",
+  "isAttend": true,
+  "학력": [
+    {
+      "date": "~ 2000",
+      "content": "계명대학교 의과대학 의학 석사"
+    },
+    {
+      "date": "~ 1997",
+      "content": "계명대학교 의과대학 의학 학사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "2025.03  ~ 현재",
+      "content": "계명대학교 의과대학 부학장"
+    },
+    {
+      "date": "2019.03  ~ 현재",
+      "content": "계명대학교 동산병원 심장혈관흉부외과 교수"
+    },
+    {
+      "date": "2019.03  ~ 2024.02",
+      "content": "계명대학교 동산병원 심장혈관흉부외과장"
+    },
+    {
+      "date": "2016.03  ~ 2019.08",
+      "content": "계명대학교 동산병원 집중치료센터장"
+    },
+    {
+      "date": "2014.03  ~ 2019.02",
+      "content": "계명대학교 동산병원 흉부외과 부교수"
+    },
+    {
+      "date": "2009.09  ~ 2014.02",
+      "content": "계명대학교 동산병원 흉부외과 조교수"
+    },
+    {
+      "date": "2007.03  ~ 2009.08",
+      "content": "계명대학교 동산병원 흉부외과 임상전임강사"
+    },
+    {
+      "date": "2006.09  ~ 2007.02",
+      "content": "계명대학교 동산병원 흉부외과 임상연구상사"
+    },
+    {
+      "date": "2005.05  ~ 2006.08",
+      "content": "제주중앙병원 흉부외과 과장"
+    },
+    {
+      "date": "2002.03  ~ 2005.04",
+      "content": "군복무(창녕군 공중보건의)"
+    },
+    {
+      "date": "1998.03  ~ 2002.02",
+      "content": "계명대학교 동산병원 흉부외과 레지던트"
+    },
+    {
+      "date": "1997.03  ~ 1998.02",
+      "content": "계명대학교 동산병원 인턴"
+    }
+  ],
+  "학술": [
+    {
+      "date": "2024.05.21 ~ 2024.05.22",
+      "content": "제250차 심폐소생술 일반인 강사 과정"
+    },
+    {
+      "date": "2024.05.09 ~ 2024.05.09",
+      "content": "<2023년(4차) 중환자실 적정성 평가> 2차 분과위원회 참석"
+    },
+    {
+      "date": "2024.04.23 ~ 2024.04.23",
+      "content": "제12차 KBLS Instructor 과정 참석"
+    },
+    {
+      "date": "2024.02.03 ~ 2024.02.03",
+      "content": "제67차 전문의 자격시험 2차시험 면접 위원"
+    },
+    {
+      "date": "2024.02.02 ~ 2024.02.03",
+      "content": "제67차 전문의 자격시험 2차시험 선택작업, 감독작업"
+    },
+    {
+      "date": "2024.01.22 ~ 2024.01.25",
+      "content": "제67차 전문의 자격시험 1차시험 선택작업 위원"
+    },
+    {
+      "date": "2024.01.01 ~ 2024.06.30",
+      "content": "대한심장혈관흉부외과학회 고시위원회 위원장"
+    },
+    {
+      "date": "2023.12.13 ~ 2023.12.13",
+      "content": "제10차 KBLS Instructor 과정 참석"
+    },
+    {
+      "date": "2023.11.13 ~ 2023.11.13",
+      "content": "2023년 중환자의학 세부전문의 수련병원 실태조사위원"
+    },
+    {
+      "date": "2023.10.26 ~ 2023.10.27",
+      "content": "제241차 심폐소생술 일반인 강사 과정"
+    },
+    {
+      "date": "2023.10.11 ~ 2023.10.11",
+      "content": "2024년도 제 88차 의사 국가시험 실기시험 시험일자별 채점위원"
+    },
+    {
+      "date": "2023.09.01 ~ 현재",
+      "content": "건강보험심사평가원 제5기 의료평기위원회 비상근평가위원"
+    },
+    {
+      "date": "2023.07.26 ~ 2023.07.27",
+      "content": "제236차 심폐소생술 일반인 강사 과정"
+    },
+    {
+      "date": "2023.07.01 ~ 현재",
+      "content": "대한심장혈관흉부외과학회 초음파위원회 위원"
+    },
+    {
+      "date": "2022.05.01 ~ 2023.06.30",
+      "content": "대한중환자의학회 제34대 학술위원"
+    },
+    {
+      "date": "2022.02.01 ~ 2022.06.30",
+      "content": "대한심폐소생협회 BLS위원회(의료인분과) 위원"
+    },
+    {
+      "date": "2021.01.01 ~ 2022.06.30",
+      "content": "한국의학교육학회 대구경북지회 재무이사"
+    },
+    {
+      "date": "2021.10.24 ~ 2022.06.30",
+      "content": "대구지방검찰청 의료자문위원"
+    },
+    {
+      "date": "2021.08.11 ~ 현재",
+      "content": "대한의학회 건강보험심사평가원 제4기 의료평가위원회 비상근평가위원"
+    },
+    {
+      "date": "2021.02.15",
+      "content": "2022년도 제86회 상반기 의사 국가시험 실기시험 시험일자별 채점위원"
+    },
+    {
+      "date": "2021.02.04  ~  2021.02.05",
+      "content": "제64차 전문의 자격시험 2차 시험 위원"
+    },
+    {
+      "date": "2021.01.25",
+      "content": "제64차 전문의 자격시험 1차 시험 위원"
+    },
+    {
+      "date": "2021.01.23",
+      "content": "2022년도 제86회 상반기 의사 국가시험 실기시험 시험일자별 채점위원"
+    },
+    {
+      "date": "2020.11.18",
+      "content": "2020년 중환자의학 세부전무의 수련병원 실태조사위원"
+    },
+    {
+      "date": "2020.08.04  ~  2020.08.05",
+      "content": "제208차 심폐소생술 일반인 강사과정 참석"
+    },
+    {
+      "date": "2019.07.01 ~ 2022.06.30",
+      "content": "한국의학교육학회 일반이사"
+    },
+    {
+      "date": "2018.07.01 ~ 현재",
+      "content": "대한심장혈관흉부외과학회 이사"
+    },
+    {
+      "date": "2018.07.01 ~ 2019.06.30",
+      "content": "한국의학대학 의학전문대학원협회 기본임상술기지침, 기본진료수행지침 현집위원회 위원"
+    },
+    {
+      "date": "2018.04.01 ~ 2020.06.30",
+      "content": "대한중환자의학회 보험위원회 위원"
+    },
+    {
+      "date": "2017.07.01 ~ 현재",
+      "content": "대한심장혈관흉부외과학회 초음파위원"
+    },
+    {
+      "date": "2015.03.01 ~ 2017.02.28",
+      "content": "대한흉부심장혈관외과 대구경북지회 총무이사"
+    },
+    {
+      "date": "2015.02.01 ~ 2020.06.30",
+      "content": "대한심폐소생협회 BLS 위원회(의료인분과) 위원"
+    },
+    {
+      "date": "2014.08.25 ~ 2014.08.25",
+      "content": "대한중환자의학회 제2014년 중환자의학 세부전문의 수련병원 실태조사위원"
+    },
+    {
+      "date": "2014.04.01 ~ 2016.06.30",
+      "content": "대한중환자의학회 학회지 논문심사위원"
+    },
+    {
+      "date": "2013.11.01 ~ 현재",
+      "content": "대한심장혈관흉부외과학회 고시위원회 위원"
+    },
+    {
+      "date": "2013.01.01 ~ 2014.12.31",
+      "content": "대한중환자의학회  평의원"
+    },
+    {
+      "date": "2012.05.01 ~ 현재",
+      "content": "대한중환자의학회 수련위원회 위원"
+    },
+    {
+      "date": "2012.05.01 ~ 2015.10.31",
+      "content": "대한중환자의학회 제12회 세계 중환자의학회 학술대회 학술위원회 위원"
+    },
+    {
+      "date": "2011.11.01 ~ 현재",
+      "content": "대한심장혈관흉부외과학회 학술위원회 위원"
+    },
+    {
+      "date": "2011.03.01 ~ 2013.02.28",
+      "content": "대한심장혈관흉부외과학회 대구경북지회 총무이사"
+    }
+  ],
+  "수상": [
+    {
+      "date": "2023.05.19",
+      "content": "우수연제상-포스터부문"
+    },
+    {
+      "date": "2020.11.06",
+      "content": "흉부외과 의학상 대상"
+    },
+    {
+      "date": "2018.10.26",
+      "content": "대한흉부심장혈관외과학회 위원회 위원으로 활동 공로패"
+    }
+  ],
+  "논문": [
+    "Surgical Results of the Superior Vena Cava Intimal Layer-Only Suture Technique in Heart Transplantation",
+    "Is It Safe to Preserve Left Atrial Appendage During Maze Procedure?",
+    "Safety of low-dose anticoagulation in extracorporeal membrane oxygenation using the Permanent Life Support System: a retrospective observational study",
+    "The Profile of Early Sedation Depth and Clinical Outcomes of Mechanically Ventilated Patients in Korea",
+    "Hyperglycemia and Hypoglycemia Are Associated with In-Hospital Mortality among Patients with Coronavirus Disease 2019 Supported with Extracorporeal Membrane Oxygenation",
+    "Burnout of faculty Members of Medical Schools in Korea",
+    "Coli Embolization for Supera-annular Repture During Transcatherer Aortic Valve Replacement under Extracorporeal Membrane Oxygenation Support",
+    "The Development of evaluation Methods for Outcomes in Medical humanities Curriculum of a Medical School",
+    "Extracorporeal Membrane Oxygenation for Coronavirus Disease 2019: Expert Recommendations from The Korean Society for Thoracic and Cardiovascular Surgery",
+    "Clinical course of COVID-19 patients treated with ECMO: A multicenter",
+    "Author's Reply to Heart Transplantation to Fulminant Myocarditis during COVID-19 Outbreak",
+    "Multimodality Imaging Guidance in Fulminant Myocarditis: When Endomyocardial Biopsy Is Not Amenable",
+    "Successful Heart Transplantation to a Fulminant Myocarditis Patient during COVID-19 Outbreak – Lessons Learned",
+    "Ventricular Septal Defect Closure in a Neonate with Osteogenesis Imperfecta.",
+    "Impact of volume reduction in giant left atrium during surgical ablation of atrial fibrillation.",
+    "Open Repair of Thoracoabdominal Aortic Aneurysm in a 46-Year-Old Man with Pleural Adhesions and Aberrant Right Subclavian Artery.",
+    "Airway Improvement with Medium-Term Compression Duration after Right Pulmonary Artery Anterior Translocation.",
+    "Aortic retrograde type A aortic dissection following repair of a thoraco-abdominal aortic aneurysm.",
+    "심장 자기공명영상을 이용한 팔로사징 완전 교정술 후 우심실 기능에 대한 연구",
+    "Chemical Pleurodesis Using Doxycycline and Viscum album Extract",
+    "Catastrophic bronchial spasm due to a severe anaphylactic reaction to protamine",
+    "임상실습 중 의과대학생의 기초의학 관련 요구도 조사:'기본의학교육 학습성과:과학적 개념과 원리중심",
+    "Development and Implementation of e-learning Contents of Medical Ethics based on 'Goal-based Scenario'",
+    "Sutureless aortic valve replacement in stentless bioprosthesis failure.",
+    "ATRIAL SEPTAL DEFECT WITH NORMAL PULMONARY ARTERIAL PRESSURE IN ADULT CYANOTIC PATIENT",
+    "Safety of a Totally Implantable Central Venous Port System with Percutaneous Subclavian Vein Access",
+    "Asymptomatic ruptured sinus of Valsalva aneurysm combined with perimembraneous ventricular septal defect, and bicuspid aortic valve in adult patient",
+    "Long Term Survival of Patients with Unsuspected N2 Disease in Non-Small Cell Lung Cancer",
+    "Rare Combination of Dextrocardia With Right-Sided Poland Syndrome",
+    "Extraanatomic Reconstruction for Isolated Thoracic Aorta Coarctation in an Adult Patient",
+    "Gastric tube reconstruction of esophagus for esophageal and stomach carcinomas",
+    "Surgical Treatment of a Tuberculous Abscess of the Chest Wall",
+    "Leiomyosarcoma of the Posterior Mediastinum Extending into the Adjacent Spinal Canal",
+    "Incidence of Pulmonary Embolism among Hospitalized Patients",
+    "Overexpression of Cyclooxygenase-2 in NCI-H292 Human Alveolar Epithelial Carcinoma Cells: Roles of p 38 MAPK, ERK-1/2, and PI3K/PKB Signaling Proteins",
+    "Azygos Vein Aneurysm - A Case for Elective Resection by Video-assisted Thoracic Surgery",
+    "Clinical Characteristics and Management of Intrathoracic Bronchogenic Cysts: A Single Center Experience",
+    "The Effect of Thoracoscopic Sympathicotomy at the Fourth Rib(R4) for the Treatment of Palmar and Axillary Hyperhidrosis",
+    "Transient Constrictive Pericarditis after Coronary Bypass Surgery",
+    "Bronchogenic Cyst of the Right Hemidiaphragm Presenting with Pleural Effusion",
+    "대동맥 박리증 수술 후 발생한 혈전증을 동반한 헤파린 기인성 혈소판 감소증의 치료",
+    "심장 수술 후 발생한 혈전증을 동반한 헤파린 기인성 혈소판 감소증의 치료 -증례보고",
+    "한 대학병원에서 급성 폐색전증으로 진단된 환자들이 임상적 특성 및 예후",
+    "Nutcracker Syndrme를 위해 왼콩팥정맥에 삽입한 스텐트의 우심실 이동 -1예 보고-",
+    "Aortic Arch Aneurysm Associated with Arch Vessel Anomalies: Truncus Bicaroticus and Retroesophageal Right Subclavian Artery"
+  ],
+  "저서": [
+    {
+      "content": "코로나19 에크모 백서 : 3년 4개월의 기록"
+    },
+    {
+      "content": "(대한심폐소생협회) 기본소생술 강사"
+    },
+    {
+      "content": "(대한심폐소생협회) 기본소생술"
+    },
+    {
+      "content": "기본 임상술기 지침"
+    },
+    {
+      "content": "생명을 살리는 심폐소생술"
+    },
+    {
+      "content": "심폐소생술 일반인 강사 교재"
+    },
+    {
+      "content": "기본 진료수행 지침"
+    },
+    {
+      "content": "기본 임상술기 지침"
+    },
+    {
+      "content": "의과대학생을 위한 기본 임상 술기학"
+    }
+  ]
+}

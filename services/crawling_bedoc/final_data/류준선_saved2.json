@@ -1,0 +1,180 @@
+{
+  "hospital_cid": 189,
+  "bedoc_id": "A0221",
+  "bedoc_hospitalsite": "http://www.ncc.re.kr",
+  "bedoc_doctorname": "류준선",
+  "bedoc_deptname": "외과",
+  "bedoc_hospitalname": "국립암센터",
+  "hospital_name": "국립암센터",
+  "aiga_hid": "H11KR-31000013",
+  "hospital_site": "https://www.ncc.re.kr/ncc_about03_param.ncc?searchKey=&searchValue=&dept=TH",
+  "site_type": "popup",
+  "hospital_addr": "경기도 고양시 일산동구 일산로 323, (마두동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.ncc.re.kr/ncc_about03_param.ncc?searchKey=&searchValue=&dept=TH&doctorName=%EB%A5%98%EC%A4%80%EC%84%A0&depthName=%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "isAttend": true,
+  "profileUrl": "https://www.ncc.re.kr/images/no-image.gif",
+  "specialty": "갑상선암, 두경부암, 인후두암의 수술적 치료, 진행성 갑상선암의 수술",
+  "학력": [
+    {
+      "date": "1985-03 ~ 1991-02",
+      "content": "서울대학교 의과대학 의학과 대졸(의대)"
+    },
+    {
+      "date": "1996-03 ~ 1998-08",
+      "content": "한림대학교 대학원 이비인후과학 대학원졸(석사)"
+    },
+    {
+      "date": "2001-03 ~ 2004-02",
+      "content": "부산대학교 대학원 의학과 대학원졸(박사)"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1991-03 ~ 1992-02",
+      "content": "서울대학교병원 수련의"
+    },
+    {
+      "date": "1995-05 ~ 1999-02",
+      "content": "삼성서울병원 전공의"
+    },
+    {
+      "date": "1999-03 ~ 1999-08",
+      "content": "삼성서울병원 전임의"
+    },
+    {
+      "date": "1999-09 ~ 2001-02",
+      "content": "동국대경주병원 전임강사"
+    },
+    {
+      "date": "2001-03 ~ 2002-09",
+      "content": "동국대경주병원 조교수"
+    },
+    {
+      "date": "2002-10 ~ 2019-01",
+      "content": "국립암센터 특수암센터 두경부종양클리닉 의사직"
+    },
+    {
+      "date": "2009-08 ~ 현재",
+      "content": "국립암센터 갑상선암센터 의사직"
+    },
+    {
+      "date": "2010-12 ~ 2011-12",
+      "content": "MD Anderson Cancer Center 해외연수"
+    },
+    {
+      "date": "2012-01 ~ 2023-03",
+      "content": "국립암센터 이비인후과 의사직"
+    },
+    {
+      "date": "2012-03 ~ 2019-01",
+      "content": "국립암센터 갑상선암센터 센터장"
+    },
+    {
+      "date": "2019-02 ~ 현재",
+      "content": "국립암센터 그래픽지원팀 팀장"
+    },
+    {
+      "date": "2019-02 ~ 현재",
+      "content": "국립암센터 희귀암센터 의사직"
+    },
+    {
+      "date": "2023-03 ~ 현재",
+      "content": "국립암센터 이비인후과 의사직(임상교수)"
+    }
+  ],
+  "논문": [
+    "Damnacanthal exerts anti-cancer effects in breast cancer cells via NAG-1 upregulation, CRM1 downregulation, and induction of autophagy: EUROPEAN JOURNAL OF PHARMACOLOGY. 1000:177734~ (4.7)",
+    "NAG-1/GDF15 as a tumor suppressor in colorectal cancer: inhibition of β-catenin and NF-κB pathways via interaction with EpCAM: CELL DEATH & DISEASE. 16:355~ (9.6)",
+    "Anaplastic and poorly differentiated thyroid carcinomas at intervention sites: implications of track seeding and the importance of follow-up monitoring- report of two cases: EUROPEAN ARCHIVES OF OTO-RHINO-LARYNGOLOGY. 282(6):3357~3361 (2.2)",
+    "A novel thrombospondin-1 variant as a potential diagnostic biomarker and therapeutic target in canine mammary tumor and osteosarcoma cells: JOURNAL OF VETERINARY SCIENCE. 26(2):e22~ (1.5)",
+    "The Efficacy and Safety of an Indocyanine Green-Macroaggregated Albumin-Hyaluronic Acid Mixture (LuminoMark™) for Surgical Localization of Recurrent Thyroid Cancer: ANNALS OF SURGICAL ONCOLOGY. 31:2349~2356 (3.4)",
+    "Effect of thyroid-stimulating hormone suppression on quality of life in thyroid lobectomy patients: interim analysis of a multicenter, randomized controlled trial in low- to intermediate-risk thyroid cancer patients (MASTER study): ANNALS OF SURGICAL TREATMENT AND RESEARCH. 106(1):19~30 (1.4)",
+    "Tolfenamic acid negatively regulates YAP and TAZ expression in human cancer cells: BIOCHIMICA ET BIOPHYSICA ACTA-MOLECULAR CELL RESEARCH. 1870(8):119556~ (5.1)",
+    "Evaluation and Classification of Supraorbital Nerve Emerging Patterns: AESTHETIC PLASTIC SURGERY. 48(3):304~311 (2.4)",
+    "Quercetin Induces Dual Specificity Phosphatase 5 via Serum Response Factor: BMB REPORTS. 56(9):508~513 (3.8)",
+    "Novel thrombospondin-1 transcript exhibits distinctive expression and activity in thyroid tumorigenesis: ONCOGENE. 42(22):1832~1842 (8)",
+    "Surgical outcomes in patients with low-risk papillary thyroid microcarcinoma from MAeSTro study: Immediate operation versus delayed operation following active surveillance: ANNALS OF SURGERY. 278(5):e1087~e1095 (10.1)",
+    "Progression of Low-Risk Papillary Thyroid Microcarcinoma During Active Surveillance: Interim Analysis of a Multicenter Prospective Cohort Study of Active Surveillance on Papillary Thyroid Microcarcinoma in Korea: THYROID. 32(11):1328~1336 (6.506)",
+    "A cross-sectional survey of patient treatment choice in a multicenter prospective cohort study on active surveillance of papillary thyroid microcarcinoma (MAeSTro): THYROID. 32(7):772~780 (6.506)",
+    "Active Surveillance Versus Immediate Surgery for Low-Risk Papillary Thyroid Microcarcinoma Patients in South Korea: A Cost-Minimization Analysis from the MAeSTro Study: THYROID. 32(6):648~656 (6.506)",
+    "Comparative study of gasless transaxillary, bilateral axillo-breast, unilateral axillo-breast with carbon dioxide insufflation, retroauricular, and transoral vestibular endoscopic thyroidectomy approaches in a single institute: a retrospective analysis and lessons learnt from experiences: CLINICAL AND EXPERIMENTAL OTORHINOLARYNGOLOGY. Online:Published (3.34)",
+    "Spade-Shaped Anastomosis after Laparoscopic Proximal Gastrectomy Using Double Suture Anchoring between the Posterior Wall of the Esophagus and the Anterior Wall of the Stomach (SPADE Operation): A Case Series: CANCERS. 14(2):379~ (6.575)",
+    "Diagnosis and management of malignant sublingual gland tumors: a narrative review: GLAND SURGERY. 10(12):3415~3423 (2.953)",
+    "Oral Commissure Lift: A Retrospective Analysis of Complication Rates and Overall Outcomes: AESTHETIC PLASTIC SURGERY. 45(6):2772~2780 (2.326)",
+    "A Personalized 3D-Printed Model for Obtaining Informed Consent Process for Thyroid Surgery: A Randomized Clinical Study Using a Deep Learning Approach with Mesh-Type 3D Modeling: JOURNAL OF PERSONALIZED MEDICINE. 11(6):574~ (4.945)",
+    "Quercetin Induces Anticancer Activity by Upregulating Pro-NAG-1/GDF15 in Differentiated Thyroid Cancer Cells: CANCERS. 13(12):3022~ (6.639)",
+    "A Multicenter, randomized, controlled trial for Assessing the usefulness of Suppressing Thyroid stimulating hormone target levels after thyroid lobEctomy in low to intermediate Risk thyroid cancer patients (MASTER): A Study Protocol: ENDOCRINOLOGY AND METABOLISM. 36(3):574~581 (4.01)",
+    "Wireless parathyroid detection device using autofluorescence and smart glasses: A preliminary study: TECHNOLOGY AND HEALTH CARE. Online:Published (1.285)",
+    "Ergonomic effects of medical augmented reality glasses in video?assisted surgery: SURGICAL ENDOSCOPY AND OTHER INTERVENTIONAL TECHNIQUES. Online:Published (4.584)",
+    "The Emergence of Oral Cavity Cancer and the Stabilization of Oropharyngeal Cancer: Recent Contrasting Epidemics in the South Korean Population: CANCER. 127(10):1638~1647 (6.86)",
+    "Factors Affecting Central Node Metastasis and Metastatic Lymph Node Ratio in Papillary Thyroid Cancer: OTOLARYNGOLOGY-HEAD AND NECK SURGERY. Online:Published (3.497)",
+    "Trans-chalcone suppresses tumor growth mediated at least in part by the induction of heme oxygenase-1 in breast cancer: Toxicological Research. 37(4):485~493 (0)",
+    "Mesh-Type Three-Dimensional (3D) Printing of Human Organs and Tumors: Fast, Cost-Effective, and Personalized Anatomic Modeling of Patient-Oriented Visual Aids: APPLIED SCIENCES-BASEL. 11(3):1047~ (2.679)",
+    "Reinforced-hydrogel encapsulated hMSCs towards brain injury treatment by trans-septal approach: BIOMATERIALS. 266:120413~ (10.317)",
+    "Effect of initial treatment choice on 2-year quality of life in patients with low-risk papillary thyroid microcarcinoma: JOURNAL OF CLINICAL ENDOCRINOLOGY & METABOLISM. Online:Published (5.399)",
+    "Singing voice range profile: new objective evaluation methods for voice change after thyroidectomy: CLINICAL OTOLARYNGOLOGY. Online:Published (2.197)",
+    "Prognostic Implication of SOX2 Expression Associated with p16 in Oropharyngeal Cancer: A Study of Consecutive Tissue Microarrays and TCGA: BIOLOGY-BASEL. 9(11):387~ (3.796)",
+    "Novel robot-assisted thyroidectomy by a transaxillary gasinsufflation approach (TAGA): a preliminary report: GLAND SURGERY. 9(5):1267~1277 (2.19)",
+    "Anti-proliferative activity of A. Oxyphylla and its bioactive constituent nootkatone in colorectal cancer cells: BMC CANCER. 20(1):881~ (3.15)",
+    "Prognostic significance of smoking and alcohol history in young age oral cavity cancer: ORAL DISEASES. Online:Published (2.613)",
+    "Omental Free-Shaped Flap Reinforcement on Anastomosis and Dissected Area (OFFROAD) Following Reconstruction after Gastrectomy: A Retrospective Case-Control Study: JOURNAL OF MINIMALLY INVASIVE SURGERY. 23(1):22~29 (0)",
+    "Spade-Shaped Anastomosis Following a Proximal Gastrectomy Using a Double Suture to Fix the Posterior Esophageal Wall to the Anterior Gastric Wall (SPADE Operation): Case-Control Study of Early Outcomes: JOURNAL OF GASTRIC CANCER. 20(1):72~80 (1.989)",
+    "Vocal Fold Reconstruction Using an Autologous Pedicled Fat Flap in a Rabbit Model: LARYNGOSCOPE. 130(7):1770~1774 (2.465)",
+    "Endoscope-Assisted Transoral Accessory Parotid Mass Excision: Multicenter Prospective Observational Study: LARYNGOSCOPE. 130(5):1218~1226 (2.465)",
+    "How I Do It: Midline Posterior Pharyngotomy for Resection of Postcricoid Cancer: The Laryngoscope. Online:Published (2.343)",
+    "Longitudinal Assessment of Quality of Life According to Treatment Options in Low-Risk Papillary Thyroid Microcarcinoma Patients: Active Surveillance or Immediate Surgery (Interim Analysis of MAeSTro): Thyroid. Online:Published (7.786)",
+    "PLAG1, SOX10, and Myb Expression in Benign and Malignant Salivary Gland Neoplasms: JOURNAL OF PATHOLOGY AND TRANSLATIONAL MEDICINE. 53(1):23~30 (0)",
+    "Robotic and Endoscopic Thyroid Surgery: Evolution and Advances: Clinical and Experimental Otorhinolaryngology. 12(1):1~11 (1.442)",
+    "Effect of wound massage on neck discomfort and voice changes after thyroidectomy: SURGERY. 164(5):965~971 (3.574)",
+    "Genomic characterization of clonal evolution during oropharyngeal carcinogenesis driven by human papillomavirus 16.: BMB REPORTS. 51(11):584~589 (3.085)",
+    "Study Protocol of Multicenter Prospective Cohort Study of Active Surveillance on Papillary Thyroid Microcarcinoma (MAeSTro): Endocrinology and metabolism. Online:Published (0)",
+    "Moonlighting Activity of Secreted Inflammation-Regulatory Proteins: Yonsei medical journal. 59(4):463~469 (1.564)",
+    "Long-term survival of patients with thyroid cancer according to the methods of tumor detection: A nationwide cohort study in Korea: PLos One. 13(4):e194743~e194743 (2.766)",
+    "Interaction between alcohol consumption and methylenetetrahydrofolate reductase polymorphisms in thyroid cancer risk: National Cancer Center cohort in Korea: Scientific reports. 8(1):4077~4077 (4.122)",
+    "Development and Evaluation of a Korean Version of a Thyroid Specific Quality-of-Life Questionnaire Scale in Thyroid Cancer Patient: Cancer Research And Treatment. 50(2):405~415 (3.772)",
+    "Genome-wide association and expression quantitative trait loci studies identify multiple susceptibility loci for thyroid cancer: Nature Communications. 8:15966~15966 (12.124)",
+    "Guidelines for the Surgical Management of Laryngeal Cancer: Korean Society of Thyroid-Head and Neck Surgery: Clinical and experimental otorhinolaryngology. 10(1):1~43 (1.149)",
+    "Tracheobronchial foreign body removal in infants who had very small airways: A prospective clinical trial: The Clinical Respiratory Journal. Online:Published (2.147)",
+    "Modification of facial artery myomucosal Flap: a novel perforator flap for upper aerodigestive tract reconstruction after head and neck cancer ablation: Clinical Otolaryngology. Online:Published (2.627)",
+    "Attitudes towards second opinion services in cancer care: a nationwide survey of oncologists in Korea: Japanese Journal of Clinical Oncology. 46(5):441~447 (1.889)",
+    "Genomic Copy Number Variations Characterize the Prognosis of Both P16-Positive and P16-Negative Oropharyngeal Squamous Cell Carcinoma After Curative Resection: Medicine. 94(50):e2187~e2187 (5.723)",
+    "Administration of Radioactive Iodine Therapy Within 1 Year After Total Thyroidectomy Does Not Affect Vocal Function.: Journal of nuclear medicine : official publication, Society of Nuclear Medicine.. 56(10):1480~1486 (6.16)",
+    "Voice Changes in Elderly Adults: Prevalence and the Effect of Social, Behavioral, and Health Status on Voice Quality: Journal of the American Geriatrics Society. 63(8):1608~1614 (4.572)",
+    "Identification of occult tumors by whole-specimen mapping in solitary papillary thyroid carcinoma.: Endocrine-Related Cancer. 22(4):679~686 (4.805)",
+    "Metachronous Second Primary Malignancies after Head and Neck Cancer in a Korean Cohort (1993-2010): PloS one. 10(7):0134160~0134160 (3.234)",
+    "Postoperative simultaneous integrated boost-intensity modulated radiation therapy for patients with locoregionally advanced papillary thyroid carcinoma: preliminary results of a phase II trial and propensity score analysis.: The Journal of clinical endocrinology and metabolism. 100(3):1009~1017 (6.209)",
+    "Development and Characterization of Six New Human Papillary Thyroid Carcinoma Cell Lines: The Journal of clinical endocrinology and metabolism. 100(2):E243~E252 (6.209)",
+    "Elevated Risks of Subsequent Primary Malignancies in Patients With Thyroid Cancer: A Nationwide, Population-Bsed Study in Korea: Cancer. 121(2):259~268 (5.068)",
+    "The influence of ramosetron on the analgesic effect of tramadol: Journal of Anesthesia & Clinical Research. 5:483~485 ()",
+    "Surgical Targeting of Recurrent Thyroid Cancer Using a Novel Mixture of 99m-Technetium Macroaggregated Albumin and Indocyanine Green: Surgical innovation. 21(6):622~629 (1.338)",
+    "Real-Time Video-Assisted Retrieval of Airway Foreign Body in Very Young Pediatric Patients.: Clinical and experimental otorhinolaryngology. 7(4):329~333 (0.835)",
+    "Human papillomavirus-related cell cycle markers can predict survival outcomes following a transoral lateral oropharyngectomy for tonsillar squamous cell carcinoma.: Journal of surgical oncology. 110(4):393~399 (2.843)",
+    "Risk factors for recurrence after therapeutic lateral neck dissection for primary papillary thyroid cancer.: Ann Surg Oncol. 21(6):1884~1890 (3.943)",
+    "Src inhibitors in suppression of papillary thyroid carcinoma growth: Head & neck. 36(3):375~384 (3.006)",
+    "Vocal fold augmentation with injectable polycaprolactone microspheres/pluronic F127 hydrogel: long-term in vivo study for the treatment of glottal insufficiency.: PLOS ONE. 9(1):e85512~e85512 (3.534)",
+    "Trends of human papillomavirus-related head and neck cancers in Korea: National cancer registry data.: Laryngoscope. 123(11):E30~E37 (1.979)",
+    "Midazolam induces cellular apoptosis in human cancer cells and inhibits tumor growth in xenograft mice.: Molecules and Cells. 36(3):219~226 (2.21)",
+    "Extent of thyroidectomy affects vocal and throat functions: A prospective observational study of lobectomy versus total thyroidectomy: Surgery. 154:611~620 (3.373)",
+    "Buccinator Myomucosal Flap for Reconstruction of Glossectomy Defects: Otolaryngology--head and neck surgery. 149(2):226~231 (1.625)",
+    "Lipid MALDI MS Profiling Accurately Distinguishes Papillary Thyroid Carcinoma from Normal Tissue: Journal of Proteomics and Bioinformatics. 6:65~71 (0)",
+    "Exclusive Endoscopic Resection of Nasopharyngeal Papillary Adenocarcinoma via Combined Transnasal and Transoral Approach: Clinical and Experimental Otorhinolaryngology. 6(1):48~51 (0.877)",
+    "Diagnostic and Therapeutic Approaches to Radioactive Iodine Refractory Differentiated Thyroid Cancer: Korean J Otorhinolaryngol-Head Neck Surg. 55:403~409 ()",
+    "Preoperative serum thyroglobulin as a useful predictive marker to differentiate follicular thyroid cancer from benign nodules in indeterminate nodules.: Journal of Korean medical science.. 27(9):1014~1018 (0.993)",
+    "Human papillomavirus in oropharyngeal squamous cell carcinomas in korea: Use of G1 cycle markers as new prognosticators.: Head & Neck. Online:Published (2.182)",
+    "Outcomes of Postoperative Simultaneous Modulated Accelerated Radiotherapy for Head-and-Neck Squamous Cell Carcinoma.: International journal of radiation oncology, biology, physics. 81(1):140~149 (4.503)",
+    "Embryonic-Natural Orifice Transumbilical Endoscopic Surgery (E-NOTES) for Myomectomy with Traction of Multi-directional Sutures: A New Surgical Approach.: Journal of Laparoendoscopic & Advanced Surgical Techniques. 21(1):35~37 (1.198)",
+    "The effect of external beam radiotherapy volume on locoregional control in patients with locoregionally advanced or recurrent nonanaplastic thyroid cancer: Radiation Oncology. 5:69~69 (0)",
+    "Clinical Outcomes Comparing Parenteral and Nasogastric Tube Nutrition After Laryngeal and Pharyngeal Cancer Surgery: Dysphagia. 24(4):378~386 (1.741)",
+    "Anterior cricoid split procedure with transposition of cricoid cartilage segment: The Journal of Laryngology & Otology. 123:1045~48 (0.796)",
+    "Nasal Tip Surgery Using a Modified Septal Extension Graft by Extended Marginal Incision: Plastic and Reconstructive Surgery. 123:343~352 (2.591)",
+    "Extent of Prophylactic Lymph Node Dissection in the Central Neck Area of the Patients with Papillary Thyroid Carcinoma: Comparison of Limited Versus Comprehensive Lymph Node Dissection in a 2-Year Safety Study: Annals of Surgical Oncology. 15:2020~2026 (3.917)",
+    "SMART (Simultaneous Modulated Accelerated RadioTherapy) for locally advanced nasopharyngeal carcinomas.: Head & Neck. 30:159~169 (2.007)",
+    "Pilomatricoma: Diagnostic pitfalls in PET/CT and fine-needle aspiration biopsy: Otolaryngology–Head and Neck Surgery. 137:845~846 (1.339)",
+    "Lingual alveolar soft part sarcoma tretated only by conservative resection: Int J Pediatr Otorhinolaryngol. 1:243~248 (0.846)",
+    "Fractionated Irradiation Leads to Restoration of Drug Sensitivity in MDR Cells that Correlates with Down-regulation of P-gp and DNA-Dependent Protein Kinase Activity: Radiation Research. 162:527~535 (3.208)"
+  ]
+}

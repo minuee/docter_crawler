@@ -1,0 +1,189 @@
+{
+  "hospital_cid": 256,
+  "bedoc_id": "A0067",
+  "bedoc_hospitalsite": "http://www.cmcep.or.kr/",
+  "bedoc_doctorname": "배시현",
+  "bedoc_deptname": "소화기내과",
+  "bedoc_hospitalname": "은평성모병원",
+  "hospital_name": "가톨릭대학교 은평성모병원",
+  "aiga_hid": "H11KR-11000002",
+  "hospital_site": "https://www.cmcep.or.kr/page/doctor/1267/D0001212",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 은평구 통일로 1021, (진관동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": false,
+  "saveDoctorDetailUrl": "https://www.cmcep.or.kr/page/doctor/1267/D0001212?doctorName=%EB%B0%B0%EC%8B%9C%ED%98%84&depthName=%EC%86%8C%ED%99%94%EA%B8%B0%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "https://www.cmcep.or.kr/api/attach/view/doctor/D0001212/profile/1",
+  "specialty": "간암, 간이식, 줄기세포치료, 간경변, 지방간질환, 간염",
+  "학력": [
+    {
+      "date": "1984~1990",
+      "content": "가톨릭대학교 의학 학사"
+    },
+    {
+      "date": "1992~1994",
+      "content": "가톨릭대학교 내과학 석사"
+    },
+    {
+      "date": "1994~2000",
+      "content": "가톨릭대학교 내과학 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "2023~현재",
+      "content": "은평성모병원 제 4대 병원장"
+    },
+    {
+      "date": "2020~현재",
+      "content": "아시아태평양 간학회(APASL)2022Seoul 사무총장"
+    },
+    {
+      "date": "2021~2023",
+      "content": "은평성모병원 대외협력부원장"
+    },
+    {
+      "date": "2021~2021",
+      "content": "은평성모병원 진료협력센터장"
+    }
+  ],
+  "수상": [
+    {
+      "date": "2018",
+      "content": "2018년 대한간학회-GSK 학술논문상 수상,  A comparative study of sorafenib and metronomic  chemotherapy for BCLC C"
+    },
+    {
+      "date": "2012",
+      "content": "2012년 대한간학회 최우수 논문상 수상, 제목: Differences in the patterns and outcomes of --"
+    },
+    {
+      "date": "2010",
+      "content": "7th APASL-STC 우수 논문상 수상,  제목: The response of reducing dose of Peginterferon alfa-2a in Koreans ---"
+    },
+    {
+      "date": "2010",
+      "content": "2010년 대한내과학회 우수 논문상 수상,  제목: Assessment of the Efficacy of reducing Peginterferon Alfa-2a and --"
+    }
+  ],
+  "학술": [
+    {
+      "date": "2021~현재",
+      "content": "대한간학회 이사장"
+    },
+    {
+      "date": "2021~현재",
+      "content": "대한의학회 세부·분과전문의 제도인증운영위원회 위원"
+    },
+    {
+      "date": "2020~현재",
+      "content": "2022아시아태평양 간학회(APASL) 조직위원회 사무총장"
+    },
+    {
+      "date": "2019~현재",
+      "content": "대한민국의학한림원 재무위원회 간사"
+    }
+  ],
+  "논문": [
+    "Anti-fibrotic effects of branched-chain amino acids on hepatic stellate cells (Korean J Intern Med., 교신저자)",
+    "The prognostic impact of psychiatric intervention on alcohol-associated liver disease: The UK Biobank cohort study (CLINICAL AND MOLECULAR HEPATOLOGY, 2024년 10월, 교신저자)",
+    "Incorporating ALBI Grade with Geriatric Nutritional Risk Index Enhances Hepatocellular Carcinoma Risk Stratification (LIVER CANCER, 2024년 10월, 교신저자)",
+    "Differential HBV replicative markers and covalently closed circular DNA transcription in immune-active chronic hepatitis B with and without HBeAg (LIVER INTERNATIONAL, 2024년 10월, 공동저자)",
+    "Chitinase 1: a novel therapeutic target in metabolic dysfunction-associated steatohepatitis (FRONTIERS IN IMMUNOLOGY, 2024년 09월, 교신저자)",
+    "Effect of Biliary Drainage on the Prognosis of Patients with Hepatocellular Carcinoma and Bile Duct Invasion (GUT AND LIVER, 2024년 09월, 공동저자)",
+    "Impact of Korean Military Service on the Prevalence of Steatotic Liver Disease: A Longitudinal Study of Pre-enlistment and In-Service Health Check-Ups (GUT AND LIVER, 2024년 09월, 교신저자)",
+    "The Impact of Histologic Portal T-Cell Density on the Clinical Outcomes in Hepatic Graft-versus-Host Disease and Autoimmune Liver Diseases (DIAGNOSTICS, 2024년 08월, 공동저자)"
+  ],
+  "저서": [
+    {
+      "date": null,
+      "content": "평화와함께 (가톨릭학원 단독)",
+      "issuer": null
+    },
+    {
+      "date": null,
+      "content": "생화학분자생물학회 소식 (생화학분자생물학회 단독)",
+      "issuer": null
+    },
+    {
+      "date": null,
+      "content": "liver update (liver update 단독)",
+      "issuer": null
+    },
+    {
+      "date": null,
+      "content": "간 초음파의 이해와 감별 포인트 (Medifo 단독)",
+      "issuer": null
+    },
+    {
+      "date": null,
+      "content": "재생의학총서(II) 성체줄기세포 및 세포 치료제 (한국조직공학 재생의학회 공동)",
+      "issuer": null
+    }
+  ],
+  "언론": [
+    {
+      "targetDate": "2021.09.10",
+      "type": "뉴스",
+      "text": "무엇이든 물어보세요:  방치하면 당뇨, 심혈관질환까지 지방간",
+      "url": "https://vod.kbs.co.kr/index.html?source=episode&sname=vod&stype=vod&program_code=T2000-0038&program_id=PS-2021077762-01-000&broadcast_complete_yn=N&local_station_code=00&section_code=05&section_sub_code=03"
+    },
+    {
+      "targetDate": "2021.09.10",
+      "type": "뉴스",
+      "text": "무엇이든 물어보세요: 당뇨병, 고지혈증, 뱃살. 간이 위험하다!",
+      "url": "https://vod.kbs.co.kr/index.html?source=episode&sname=vod&stype=vod&program_code=T2000-0038&program_id=PS-2021033152-01-000&broadcast_complete_yn=N&local_station_code=00&section_code=05&section_sub_code=03"
+    },
+    {
+      "targetDate": "2020.12.14",
+      "type": "뉴스",
+      "text": "[EBS 명의 스페셜] 간 건강을 지키는 법",
+      "url": "https://www.youtube.com/watch?v=85Bi9ggFYB4&feature=youtu.be"
+    },
+    {
+      "targetDate": "2020.12.14",
+      "type": "뉴스",
+      "text": "[내귀에닥터] 술 안 마셔도 걸리는 비알콜성 지방간 예방법",
+      "url": "https://www.youtube.com/watch?v=mwM2PJLZahU&feature=youtu.be"
+    },
+    {
+      "targetDate": "2020.12.14",
+      "type": "뉴스",
+      "text": "KBS 무엇이든 물어보세요-지방간은 간 질환의 첫번째 신호다",
+      "url": "https://youtu.be/tmlt1jawk2I"
+    },
+    {
+      "targetDate": "2020.12.14",
+      "type": "뉴스",
+      "text": "[내귀에닥터] 알콜성 지방간 피해 술 마시는 방법",
+      "url": "https://youtu.be/-49lF7txZVg"
+    },
+    {
+      "targetDate": "2020.05.06",
+      "type": "뉴스",
+      "text": "KBS 무엇이든 물어보세요 - 알고보면 시한폭탄 , 지방간이 위험하다!",
+      "url": "https://images.app.goo.gl/8SqpqCH1B1AwKzjt6"
+    },
+    {
+      "targetDate": "2020.05.06",
+      "type": "뉴스",
+      "text": "[간암명의] 은평성모병원 배시현 교수40대부터 간 검사 꼭 받으세요",
+      "url": "http://naver.me/xKGmgoBy"
+    },
+    {
+      "targetDate": "2019.03.30",
+      "type": "뉴스",
+      "text": "https://blog.naver.com/choebuja/221385361311",
+      "url": "https://blog.naver.com/choebuja/221385361311"
+    },
+    {
+      "targetDate": "2019.03.30",
+      "type": "뉴스",
+      "text": "C형간염 국가검진 필요,  안되면 ‘선별검사’ 만이라도”",
+      "url": "http://www.whosaeng.com/108649"
+    }
+  ]
+}

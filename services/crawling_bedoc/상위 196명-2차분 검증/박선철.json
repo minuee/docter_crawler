@@ -1,0 +1,104 @@
+{
+  "hospital_cid": 215,
+  "bedoc_id": "A8454",
+  "bedoc_hospitalsite": "http://www.paik.ac.kr/haeundae/",
+  "bedoc_doctorname": "박선철",
+  "bedoc_deptname": "정신건강의학과",
+  "bedoc_hospitalname": "해운대백병원",
+  "hospital_name": "한양대학교구리병원",
+  "aiga_hid": "H11KR-31000064",
+  "hospital_site": "https://guri.hyumc.com/guri/mediteam/mditeam.do?action=detail&searchCondition1=nmTagMediteam&searchCommonSeq=&searchCommonCd1=2216237&searchCommonCd2=111330&searchKeyword=%EB%B0%95%EC%84%A0%EC%B2%A0",
+  "site_type": "single",
+  "hospital_addr": "경기도 구리시 경춘로 153, (교문동)",
+  "isExist": true,
+  "isSearchType": "html_playwright",
+  "error": null,
+  "profileUrl": "http://www.paik.ac.kr/upload/ckfinder/images/photo_doctor/guri/0%EC%A0%95%EC%8B%A0%EA%B1%B4%EA%B0%95%EC%9D%98%ED%95%99%EA%B3%BC%20%EB%B0%95%EC%84%A0%EC%B2%A03.jpg",
+  "specialty": "우울장애, 불안장애, 노인정신의학",
+  "학력": [
+    {
+      "date": null,
+      "content": "한양대학교 의학사"
+    },
+    {
+      "date": null,
+      "content": "한양대학교 대학원 의학석사 (신경정신과학)"
+    },
+    {
+      "date": null,
+      "content": "한양대학교 대학원 의학박사 (신경정신과학)"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "한양대학교 구리병원 정신건강의학과 전공의"
+    },
+    {
+      "date": null,
+      "content": "한양대학교 구리병원 정신건강의학과 임상강사"
+    },
+    {
+      "date": null,
+      "content": "인제대학교 의과대학 정신건강의학과 조교수"
+    },
+    {
+      "date": null,
+      "content": "한양대학교 의과대학 정신건강의학과 부교수"
+    },
+    {
+      "date": null,
+      "content": "현) 한양대학교 의과대학 정신건강의학과 교수"
+    },
+    {
+      "date": null,
+      "content": "美 하버드의대 매사추세츠종합병원 방문학자"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "세계생물정신의학연합회 우울장애 전문위원, 환태평양정신의학회 저명회원, 한국보건의료연구원 의료기술재평가 자문위원, 대한의사협회 의학용어위원회 위원, 재단법인 정신건강재단 이사, 대한생물정신의학회 국제이사, 대한의료감정학회 무임소이사, Acta Psychiatrica Scandinavica 등 14개 국제학술지 편집위원 등"
+    }
+  ],
+  "수상": [
+    {
+      "date": null,
+      "content": "풀브라이트 교수 연구 장학 프로그램, 해양수산부장관 표창, 경기도지사 표창, 환인정신의학상, 룬드벡신경과학연구상, 아시아신경정신약물학회 우수연구상, 중앙정신의학상, 오츠카신진의학상, 한미수필문학상 등"
+    }
+  ],
+  "논문": [
+    "한빛사(한국을 빛낸 사람들) 5차례 등재: 국제학술지 133편, 국내학술지 42편, 저서 21편, 역서 5편"
+  ],
+  "언론": [
+    {
+      "targetDate": "2025.04.11",
+      "type": "NEWS",
+      "text": "한양대학교구리병원, 정신건강의학과 박선철 교수, '한빛사' 5번째 등재",
+      "url": "javascript:nttView('news', '13766')",
+      "issuer": "한양대학교구리병원"
+    },
+    {
+      "targetDate": "2025.03.25",
+      "type": "NEWS",
+      "text": "한양대학교구리병원, 박선철 교수, 학술지 『풀브라이트 크로니클』 편집위원 위촉",
+      "url": "javascript:nttView('news', '13689')",
+      "issuer": "한양대학교구리병원"
+    },
+    {
+      "targetDate": "2025.02.06",
+      "type": "NEWS",
+      "text": "한양대학교구리병원, 박선철 교수, 국제학술지 편집위원상 수상",
+      "url": "javascript:nttView('news', '13630')",
+      "issuer": "한양대학교구리병원"
+    },
+    {
+      "targetDate": "2024.06.04",
+      "type": "NEWS",
+      "text": "정신건강의학과 박선철 교수등 KMI한국의학연구소, 2024년 공모연구지원사업 과제 14건 선정",
+      "url": "javascript:nttView('news', '13289')",
+      "issuer": "한양대학교구리병원"
+    }
+  ],
+  "isAttend": true
+}
