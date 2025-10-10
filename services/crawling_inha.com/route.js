@@ -94,7 +94,7 @@ router.post('/step01', async function(req, res, next) {
     const SP1 = await crawlingCtrl.crwalingProcess02(P1.data[i].link, P1.data[i].deptName);
     console.log("SP1 size",_.size(SP1?.data));
 
-    if (!functions.isEmpty(SP1.data)) {
+    /* if (!functions.isEmpty(SP1.data)) {
       for (let i = 0; i < _.size(SP1.data); i++) {
         data.push({
           hid: HOSPITAL_ID,
@@ -115,7 +115,7 @@ router.post('/step01', async function(req, res, next) {
       }
     } else {
       console.log(`loop ${i} result is null.`);
-    }
+    } */
   }
 
   console.log(`검색된 진료과목수 : ${_.size(P1.data)}, 검색된 의사수 : ${_.size(data)}`);

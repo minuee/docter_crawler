@@ -89,8 +89,8 @@ router.post('/step01', async function(req, res, next) {
   // _.size(P1.data);
   for (let i = 0; i < _.size(SP1.data); i++) {
     await CS.wait(500);
-   
-    if (!functions.isEmpty(SP1.data[i].doctorName)) {
+    console.log(`loop ${i} link : ${SP1.data[i].url}, deptName : ${SP1.data[i].deptName}`);
+    /* if (!functions.isEmpty(SP1.data[i].doctorName)) {
       
       await CS.wait(200);
       const SP0 = await crawlingCtrl.get_rid_encrypt(SP1.data[i].doctorName, SP1.data[i].url);
@@ -124,7 +124,7 @@ router.post('/step01', async function(req, res, next) {
         url: SP1.data[i].url,
         profile_url :  SP1.data[i].profile_url
       })
-    }
+    } */
   }
 
   console.log(`검색된 진료과목수 : ${_.size(P1.data)}, 검색된 의사수 : ${_.size(data)}`);

@@ -89,8 +89,8 @@ router.post('/step01', async function(req, res, next) {
 
   // _.size(P1.data);
   for (let i = 0; i < _.size(P1.data); i++) {
-    //console.log("ddddd__Ddddx",i,P1.data[i]);
-    if (!functions.isEmpty(P1.data[i].doctorName)) {
+    console.log(`loop ${i} link : ${P1.data[i].link}, deptName : ${P1.data[i].deptName}`);
+    /* if (!functions.isEmpty(P1.data[i].doctorName)) {
       
         await CS.wait(200);
         const SP0 = await crawlingCtrl.get_rid_encrypt(P1.data[i].doctorName, P1.data[i].url);
@@ -156,7 +156,7 @@ router.post('/step01', async function(req, res, next) {
    
     } else {
       console.log(`loop ${i} result is null.`);
-    }
+    } */
     data.push({
       hid: HOSPITAL_ID,
       deptName : P1.data[i].deptName,

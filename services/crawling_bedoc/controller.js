@@ -433,12 +433,12 @@ module.exports = {
 
       // If multiple name matches, use Jaccard similarity on the address
       const jaccardSimilarity = (s1, s2) => {
-          if (!s1 || !s2) return 0;
-          const set1 = new Set(s1.toLowerCase().split(/\s+/).filter(word => word.length > 1));
-          const set2 = new Set(s2.toLowerCase().split(/\s+/).filter(word => word.length > 1));
-          const intersection = new Set([...set1].filter(x => set2.has(x)));
-          const union = new Set([...set1, ...set2]);
-          return union.size === 0 ? 0 : intersection.size / union.size;
+        if (!s1 || !s2) return 0;
+        const set1 = new Set(s1.toLowerCase().split(/\s+/).filter(word => word.length > 1));
+        const set2 = new Set(s2.toLowerCase().split(/\s+/).filter(word => word.length > 1));
+        const intersection = new Set([...set1].filter(x => set2.has(x)));
+        const union = new Set([...set1, ...set2]);
+        return union.size === 0 ? 0 : intersection.size / union.size;
       };
 
       let bestMatch = null;

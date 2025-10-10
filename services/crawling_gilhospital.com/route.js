@@ -101,7 +101,8 @@ router.post('/step01', async function(req, res, next) {
           doctorName: SP1.data[i].doctorName,
           url: SP1.data[i].url
         })
-        await CS.wait(200);
+        console.log(`hid: ${HOSPITAL_ID}, deptName: ${SP1.data[i].deptName}, doctorName: ${SP1.data[i].doctorName}, url: ${SP1.data[i].url}`)
+        /* await CS.wait(200);
         const SP0 = await crawlingCtrl.get_rid_encrypt(SP1.data[i].doctorName, SP1.data[i].url);
         //console.log("SP0",SP0.data);
         if (SP0.error) {
@@ -111,7 +112,7 @@ router.post('/step01', async function(req, res, next) {
         const tempRid = SP0.data[0].rid_encrypt;
 
         const SP2 = await crawlingCtrl.setCrawlingDoctorLink(tempRid, HOSPITAL_ID, SP1.data[i].deptName, SP1.data[i].doctorName, SP1.data[i].url);
-        if (SP2.error) console.log("DB upsert fail.");;
+        if (SP2.error) console.log("DB upsert fail.");; */
       }
     } else {
       console.log(`loop ${i} result is null.`);

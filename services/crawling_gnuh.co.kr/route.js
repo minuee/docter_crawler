@@ -90,9 +90,10 @@ router.post('/step01', async function(req, res, next) {
   // _.size(P1.data);
   for (let i = 0; i < _.size(P1.data); i++) {
     await CS.wait(500);
-    console.log("ddddd__Ddddx",P1.data[i].link);
+    
     let newLink = P1.data[i].link.replace("info","docList")
-    const SP1 = await crawlingCtrl.crwalingProcess02(newLink, P1.data[i].deptName);
+    console.log(`loop ${i} link : ${newLink}, deptName : ${P1.data[i].deptName}`);
+    /* const SP1 = await crawlingCtrl.crwalingProcess02(newLink, P1.data[i].deptName);
    
     if (!functions.isEmpty(SP1.data)) {
       for (let i = 0; i < _.size(SP1.data); i++) {
@@ -118,7 +119,7 @@ router.post('/step01', async function(req, res, next) {
       }
     } else {
       console.log(`loop ${i} result is null.`);
-    }
+    } */
   }
 
   console.log(`검색된 진료과목수 : ${_.size(P1.data)}, 검색된 의사수 : ${_.size(data)}`);

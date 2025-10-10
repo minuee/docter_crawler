@@ -85,7 +85,7 @@ router.post('/step01', async function(req, res) {
   const data = [];
   const r_url = `https://www.schmc.ac.kr/bucheon/dept/list.do?key=115`;
   const P1 = await crawlingCtrl.crwalingProcess01(r_url);
-  ///console.log("ddddd__Ddddx",_.size(P1?.data));
+  console.log("ddddd__Ddddx",_.size(P1?.data));
   
   if (P1.error) return res.json(TS.fail(P1.error));
   if (CS.isEmpty(P1.data)) { return res.json(TS.fail({ code: 'DATA_NULL', message: 'response data is null' })) }
@@ -97,7 +97,7 @@ router.post('/step01', async function(req, res) {
     const SP1 = await crawlingCtrl.crwalingProcess02(P1.data[i].link, P1.data[i].deptName, P1.data[i].linkDepthNo);
     console.log("SP1 size",_.size(SP1?.data));
 
-    if (!CS.isEmpty(SP1.data)) {
+    /* if (!CS.isEmpty(SP1.data)) {
       for (let i = 0; i < _.size(SP1.data); i++) {
         data.push({
           hid: HOSPITAL_ID,
@@ -118,7 +118,7 @@ router.post('/step01', async function(req, res) {
       }
     } else {
       console.log(`loop ${i} result is null.`);
-    }
+    } */
   }
 
 

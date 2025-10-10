@@ -585,13 +585,13 @@ router.get('/bedoc-save', async function(req, res) {
     const hospitalDirs = fs.readdirSync(dataDir, { withFileTypes: true }).filter(dirent => dirent.isDirectory()).map(dirent => dirent.name);
 
     for (const hospitalID of hospitalDirs) {
-      const doctorFiles = fs.readdirSync(path.join(dataDir, hospitalID)).filter(file => file.endsWith('.json') && !file.endsWith('_saved.json'));
-
+      const allDoctorFiles = fs.readdirSync(path.join(dataDir, hospitalID)).filter(file => file.endsWith('.json') && !file.endsWith('_final_saved.json'));
+      const doctorFiles = allDoctorFiles.slice(0, 10);
       for (const fileName of doctorFiles) {
         const filePath = path.join(dataDir, hospitalID, fileName);
         let doctorData = null; // Declare doctorData here
-        let doctorName = 'Unknown Doctor'; // Declare and initialize
-        let hospitalName = 'Unknown Hospital'; // Declare and initialize
+        let doctorName = ''; // Declare and initialize
+        let hospitalName = ''; // Declare and initialize
 
         try {
           const fileContent = fs.readFileSync(filePath, 'utf-8');
@@ -602,8 +602,8 @@ router.get('/bedoc-save', async function(req, res) {
             throw new Error('Parsed doctorData is null or undefined.');
           }
 
-          doctorName = doctorData.bedoc_doctorname || 'Unknown Doctor';
-          hospitalName = doctorData.hospital_name || 'Unknown Hospital';
+          doctorName = doctorData.bedoc_doctorname || '';
+          hospitalName = doctorData.hospital_name || '';
 
           const saveResult = await crawlingCtrl.saveDoctorDataToDb(doctorData);
           if (saveResult.success) {
@@ -619,9 +619,9 @@ router.get('/bedoc-save', async function(req, res) {
           errors.push(`File ${filePath} (Doctor: ${doctorName}, Hospital: ${hospitalName}): ${fileError.message}`);
         }
         // Rename the file to mark as saved
-        const newFilePath = path.join(dataDir, hospitalID, fileName.replace('_saved2.json', '_final_saved.json'));
+        const newFilePath = path.join(dataDir, hospitalID, fileName.replace('.json', '_final_saved.json'));
         fs.renameSync(filePath, newFilePath);
-        console.log(`Renamed ${fileName} to ${fileName.replace('_saved2.json', '_final_saved.json')}`);
+        console.log(`Renamed ${fileName} to ${fileName.replace('.json', '_final_saved.json')}`);
         await CS.wait(1000); //의사 1명당 1초씩 텀은 준다
       }
     }

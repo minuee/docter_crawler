@@ -84,7 +84,7 @@ router.post('/step01', async function(req, res) {
   const data = [];
   const r_url = `https://www.cmcism.or.kr/treatment/treatment_list`;
   const P1 = await crawlingCtrl.crwalingProcess01(r_url);
-  //console.log("ddddd__Ddddx",_.size(P1?.data));
+  console.log("ddddd__Ddddx",_.size(P1?.data));
   
   if (P1.error) return res.json(TS.fail(P1.error));
   if (CS.isEmpty(P1.data)) { return res.json(TS.fail({ code: 'DATA_NULL', message: 'response data is null' })) }
@@ -92,9 +92,9 @@ router.post('/step01', async function(req, res) {
   // _.size(P1.data);
   for (let i = 0; i < _.size(P1.data); i++) {
     await CS.wait(500);
-    //console.log("P1.data[i].link",P1.data[i].link);
+    console.log("P1.data[i].link",P1.data[i].link,P1.data[i].deptName);
     const SP1 = await crawlingCtrl.crwalingProcess02(P1.data[i].link, P1.data[i].deptName);
-    //console.log("SP1 size",_.size(SP1?.data));
+    console.log("SP1 size",_.size(SP1?.data));
     if (!CS.isEmpty(SP1.data)) {
       for (let i = 0; i < _.size(SP1.data); i++) {
         data.push({
@@ -103,7 +103,8 @@ router.post('/step01', async function(req, res) {
           doctorName: SP1.data[i].doctorName,
           url: SP1.data[i].url
         })
-        await CS.wait(200);
+        console.log(`hid: ${HOSPITAL_ID}, deptName: ${SP1.data[i].deptName}, doctorName: ${SP1.data[i].doctorName}, url: ${SP1.data[i].url}`)
+        /* await CS.wait(200);
         const SP0 = await crawlingCtrl.get_rid_encrypt(SP1.data[i].doctorName, SP1.data[i].url);
         if (SP0.error) {
           console.log("SP0 DB fail.");
@@ -113,7 +114,7 @@ router.post('/step01', async function(req, res) {
 
 
         const SP2 = await crawlingCtrl.setCrawlingDoctorLink(tempRid, HOSPITAL_ID, SP1.data[i].deptName, SP1.data[i].doctorName, SP1.data[i].url);
-        if (SP2.error) console.log("DB upsert fail.");;
+        if (SP2.error) console.log("DB upsert fail.");; */
       }
     } else {
       console.log(`loop ${i} result is null.`);

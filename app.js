@@ -126,7 +126,7 @@ class App {
 
     /* 경상, 울산, 부산권 */
     this.app.use('/v1/c/knuh.kr', require(`${global.appRoot}/services/crawling_knuh.kr/route`)); //경북대학교병원 
-    this.app.use('/v1/c/dongsan.dsmc.or.kr', require(`${global.appRoot}/services/crawling_dongsan.dsmc.or.kr/route`)); //경북대학교병원
+    this.app.use('/v1/c/dongsan.dsmc.or.kr', require(`${global.appRoot}/services/crawling_dongsan.dsmc.or.kr/route`)); //계명대학교동산병원
     this.app.use('/v1/c/dcmc.co.kr', require(`${global.appRoot}/services/crawling_dcmc.co.kr/route`)); //대구카톨릭대병원 
     this.app.use('/v1/c/yumc.ac.kr', require(`${global.appRoot}/services/crawling_yumc.ac.kr/route`)); //영남대학교병원
     this.app.use('/v1/c/knuch.kr', require(`${global.appRoot}/services/crawling_knuch.kr/route`)); //칠곡경북대학교병원 

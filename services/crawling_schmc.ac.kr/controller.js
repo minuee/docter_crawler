@@ -27,16 +27,21 @@ module.exports = {
       page.setDefaultNavigationTimeout(0);
       // Navigate to the website
       await page.goto(r_url);
-      // Get the page content
-      const htmlContent = await page.content();
-      const $ = cheerio.load(htmlContent);  
-      let dept = [];
-      ///console.log(`r_url: ${r_url} ${$('div.medi_index_wrap').attr('class')}`);
-      $('div.medi_index_wrap').find('ul > li').each((index, element) => {
+      // ✅ DOM에 해당 요소가 로드될 때까지 기다리기
+      await page.waitForSelector('div.medi_index_wrap li._item');
 
+      // ✅ 이제 렌더링된 HTML을 가져오기
+      const htmlContent = await page.content();
+      const $ = cheerio.load(htmlContent); 
+      
+      let dept = [];
+      console.log(`r_url: ${r_url} ${$('div.medi_index_wrap').attr('class')}`);
+      $('div.medi_index_wrap').find('ul > li').each((index, element) => {
+        console.log(`index: ${index}`);
         const deptName = $(element).find('div.hover_wrap > h5').text() ? $(element).find('div.hover_wrap > h5').text().trim() : '';
         const tmpLinkDepthNo = $(element).find('div.hover_wrap > span > a:nth-child(2)').attr('href') ? $(element).find('div.hover_wrap > span > a:nth-child(2)').attr('href').trim() : '';
         const linkDepthArray = tmpLinkDepthNo.split('=');
+        console.log(`linkDepthArray: ${linkDepthArray}`);
         if ( linkDepthArray.length > 2 ) {
           const link = `https://www.schmc.ac.kr/bucheon/doctr/list/selectIemList.json?lang=kor&hsptlCode=bucheon&deptNo=${linkDepthArray[2]}&searchText=`
           dept.push({ 
@@ -47,7 +52,7 @@ module.exports = {
         }
       });
 
-      //console.log(`size of dept: `,_.size(dept));
+      console.log(`size of dept: `,_.size(dept));
       await browser.close();
       return { error: null, data: dept };
     } catch (error) {
