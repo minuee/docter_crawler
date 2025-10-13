@@ -9,7 +9,12 @@ const crypto = require('crypto');
 const axios = require('axios');
 const cheerio = require('cheerio');
 const puppeteer = require('puppeteer');
+
 const _ = require('lodash');
+const functions = require(`${global.appRoot}/server/util/function`);
+
+const DATA_VERSION_ID = parseInt(process.env.DATA_VERSION_ID) ? parseInt(process.env.DATA_VERSION_ID) : 1;
+
 
 module.exports = {
 
@@ -34,11 +39,16 @@ module.exports = {
     $('span').empty();
     const dept = [];
     $('div.medipart_list ul li').each((index, element) => {
-      const name = $(element).find('div.deptinfo').text().trim();
+      //const name = $(element).find('div.deptinfo').text().trim();
+      const name = $(element).find('div.deptinfo')
+      .contents()               // 모든 자식 노드(텍스트 + 엘리먼트)
+      .filter(function() {
+        return this.nodeType === 3; // 텍스트 노드만 필터링
+      }).text().trim();
       const tempLink = $(element).find('div.deptlink a.doctor').attr('href');
       const link = _.replace(tempLink, '../', 'https://main.kbsmc.co.kr/main/');
       const info = {
-        name,
+        deptName : name,
         link,
       };
       dept.push(info);
@@ -69,16 +79,20 @@ module.exports = {
     // $('span').empty(); // 못날림 (이름과 진료과가 붙어있음)
     const doctors = [];
     $('ul.dr_list li').each((index, element) => {
-      const doctorName = $(element).find('div.info div.d_info div.name a').text().trim();
+      const doctorName = $(element).find('div.info div.d_info div.name a').find('span:first-child').text().trim();
       const deptName = $(element).find('div.info div.d_info div.name a span.part').text().trim();
       const tempLink = $(element).find('div.btn_area a.con_sbtn.blue_l').attr('href');
       const link = (CS.isEmpty(tempLink)) ? null : _.replace(tempLink, '/main/', 'https://main.kbsmc.co.kr/main/');
+      const profileUrlTmp = $(element).find('div.info div.photo').find("img").attr('src');
+      const profileUrl = `https://main.kbsmc.co.kr${profileUrlTmp}`
       // 의료진 정보를 객체로 저장
       const doctor = {
         doctorName: CS.removeMatchingWordFromEnd(doctorName, deptName),
         deptName: deptName,
         url: link,
+        profileUrl
       };
+      
       doctors.push(doctor);
     });
     return { error: error, data: doctors };
@@ -118,21 +132,62 @@ module.exports = {
       biography: [],
     };
 
-    $('div.section2 div.info_box2 dl.jsInfo').each((index1, element1) => {
+   /*  $('div.section2 div.info_box2 dl.jsInfo').each((index1, element1) => {
       $(element1).find('dt a').html('')
       const type = $(element1).find('dt').text().trim().replace(/\t/g, '').replace(/\n\n/g, '');
       $(element1).find('li').each((index2, liElement) => {
         const liText = $(liElement).text().trim().replace(/\t/g, '').replace(/\n\n/g, '');
         const tempLink = $(liElement).find('a').attr('href');
+        const liYear = $(liElement).find('span.year').text();
         const etc = {
           type: type,
+          year : liYear,
           text: (liText) ? liText : null,
           url: (tempLink) ? tempLink : null,
         };
         item.biography.push(etc);
       });
-    });
+    }); */
     // console.log(item);
+
+    $('div.section2 div.info_box2 dl.jsInfo').each((index1, dlElement) => {
+      const title = $(dlElement).find('dt').clone().children().remove().end().text().trim();
+      
+      if (title === '수상경력') {
+        $(dlElement).find('dd li').each((_, liElement) => {
+          const year = $(liElement).find('.year').text().trim();
+          const text = $(liElement).clone().children('.year').remove().end().text().trim();
+          console.log(`수상경력 : ${year}, ${text}`)
+          item.biography.push({ type: "수상", year, text });
+        });
+      }else if (title === '학력') {
+        $(dlElement).find('dd li').each((_, liElement) => {
+          const liText = $(liElement).text().trim().replace(/\t/g, '').replace(/\n\n/g, '');
+          console.log(`학력 : ${liText}`)
+          item.biography.push({ type: "학력", year : null, text : liText });
+        });
+      }else if (title === '경력') {
+        $(dlElement).find('dd li').each((_, liElement) => {
+          const liText = $(liElement).text().trim().replace(/\t/g, '').replace(/\n\n/g, '');
+          console.log(`경력 : ${liText}`)
+          item.biography.push({ type: "경력", year : null, text : liText });
+        });
+      }else if (title === '학회') {
+        $(dlElement).find('dd li').each((_, liElement) => {
+          const liText = $(liElement).text().trim().replace(/\t/g, '').replace(/\n\n/g, '');
+          console.log(`학회 : ${liText}`)
+          item.biography.push({ type: "학회", year : null, text : liText });
+        });
+      }else if (title === '언론기사') {
+        $(dlElement).find('dd li').each((_, liElement) => {
+          const issuer = $(liElement).find('.publisher').text().trim();
+          const liText = $(liElement).clone().children('.publisher').remove().end().text().trim();
+          console.log(`수상경력 : ${issuer}, ${liText}`)
+          item.biography.push({ type: "언론", issuer, text : liText });
+        });
+      }
+    });
+    
     return { error: error, data: item };
   },
 
@@ -183,8 +238,28 @@ module.exports = {
     return { error: error, data: item };
   },
 
-
   setCrawlingdoctorBasic: async (rid, hid, deptName, doctorName, specialty, profileimgurl) => {
+    
+    let result = null, error = null, DBCode = null, DBData = null
+    const query = `CALL UPDATE_DOCTOR_BASIC(?)`
+    // const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, specialty, profileimgurl]);
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, specialty, profileimgurl, '']);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    // console.log(RS)
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
+
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+
+  },
+
+  setCrawlingdoctorBasic_old: async (rid, hid, deptName, doctorName, specialty, profileimgurl) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL set_crawlingdoctor_basic(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, deptName, doctorName, specialty, profileimgurl]);
@@ -222,7 +297,27 @@ module.exports = {
   },
 
 
-  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url) => {
+  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url,profile_url,p_hName) => {
+
+    let result = null, error = null, DBCode = null, DBData = null
+    const query = `CALL set_doctor_basic_v3(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url,profile_url,p_hName,url]);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    // console.log(RS)
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
+
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+
+  },
+
+  setCrawlingDoctorLink_old: async (rid, hid, deptName, doctorName, url) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL SET_CRAWLING_DOCTOR_LINK(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, deptName, doctorName, url]);
@@ -263,6 +358,27 @@ module.exports = {
   },
 
   getCrawlingDoctorLink: async (hid) => {
+
+    let result = null, error = null, DBCode = null, DBData = null
+    const query = `CALL get_doctor_basic(?)`
+    console.log(`getCrawlingDoctorLink: ${hid} ${DATA_VERSION_ID}`);
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [hid, DATA_VERSION_ID]);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    // console.log(RS)
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
+
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+
+  },
+
+  getCrawlingDoctorLink_old : async (hid) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL GET_CRAWLING_DOCTOR_LINK(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [hid]);
@@ -299,7 +415,28 @@ module.exports = {
     return { error: error, data: result };
   },
 
+
   get_rid_encrypt: async (p_doctorName, p_refUrl) => {
+
+    console.log(`p_doctorName : ${p_doctorName}, p_refUrl : ${p_refUrl}`);
+    let result = null, error = null, DBCode = null, DBData = null
+    const query = `CALL set_rid(?) `
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [p_doctorName, p_refUrl]);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    // console.log(RS)
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
+
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+  },
+
+  get_rid_encrypt_old: async (p_doctorName, p_refUrl) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL get_rid_encrypt(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [p_doctorName, p_refUrl]);

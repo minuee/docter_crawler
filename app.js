@@ -137,6 +137,7 @@ class App {
     this.app.use('/v1/c/pnuh.or.kr', require(`${global.appRoot}/services/crawling_pnuh.or.kr/route`)); //부산대학교병원 
     this.app.use('/v1/c/paik.ac.kr', require(`${global.appRoot}/services/crawling_paik.ac.kr/route`)); //인제대부산백병원 
     this.app.use('/v1/c/uuh.ulsan.kr', require(`${global.appRoot}/services/crawling_uuh.ulsan.kr/route`)); //울산대학교병원
+    this.app.use('/v1/c/pnuyh.or.kr', require(`${global.appRoot}/services/crawling_pnuyh.or.kr/route`)); //양산부산대학교병원 
 
     /* 충청, 강원, 전라권 */
     this.app.use('/v1/c/cbnuh.or.kr', require(`${global.appRoot}/services/crawling_cbnuh.or.kr/route`)); //충북대학교병원
