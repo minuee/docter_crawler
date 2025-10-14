@@ -182,7 +182,7 @@ module.exports = {
         $(dlElement).find('dd li').each((_, liElement) => {
           const issuer = $(liElement).find('.publisher').text().trim();
           const liText = $(liElement).clone().children('.publisher').remove().end().text().trim();
-          console.log(`수상경력 : ${issuer}, ${liText}`)
+          console.log(`언론 : ${issuer}, ${liText}`)
           item.biography.push({ type: "언론", issuer, text : liText });
         });
       }
@@ -194,6 +194,54 @@ module.exports = {
 
   
   crwalingtreatise: async (url) => {
+    let result = null, error = null, DBCode = null
+    let DBData1 = null
+    let DBData2 = null
+    let Response = { status: null, data: null }
+    if (!url) {
+      return { error: true, data: null };
+    }
+    try {
+      Response = await axios.get(url, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0'
+        }
+      })
+    } catch (error) {
+      Error = error
+      console.log(`error on ${url} API return: ${error}`);
+    }
+    const $ = cheerio.load(Response.data);
+    const deptName = $('div.wsize p.part').first().text().trim();
+    const doctorName = $('div.wsize p.name').first().text().trim();
+    console.log(`doctorName ${doctorName} deptName: ${deptName}`);
+
+    let item = {
+      doctorName: doctorName,
+      deptName: deptName,
+      biography: [],
+    };
+
+
+    $('div.section2 div.info_box2 dl.jsInfo').each((index1, dlElement) => {
+      const title = $(dlElement).find('dt').clone().children().remove().end().text().trim();
+      
+      if (title === '논문') {
+        $(dlElement).find('dd li').each((_, liElement) => {
+          const liText = $(liElement).text().trim().replace(/\t/g, '').replace(/\n\n/g, '');
+          
+          if ( liText.length > 10 ) {
+            console.log(`논문 : ${liText}`)
+            item.biography.push({ type: "논문",  title : liText });
+          }
+        });
+      }
+    });
+    
+    return { error: error, data: item };
+  },
+
+  crwalingtreatise_old: async (url) => {
     let result = null, error = null, DBCode = null
     let DBData1 = null
     let DBData2 = null
@@ -277,8 +325,26 @@ module.exports = {
     return { error: error, data: result };
   },
 
-
   setCrawlingdoctorBiography: async (rid, hid, doctorName, jsondata) => {
+    
+    let result = null, error = null, DBCode = null, DBData = null
+    const query = `CALL SET_DOCTOR_CAREER(?)`
+    // const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, doctorName, jsondata]);
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, DATA_VERSION_ID, jsondata]);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
+
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+  },
+
+  setCrawlingdoctorBiography_old: async (rid, hid, doctorName, jsondata) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL set_crawlingdoctor_detail(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, doctorName, jsondata]);
@@ -336,6 +402,29 @@ module.exports = {
   },
 
   setCrawlingTreatise: async (rid, title, doi, journalName, authorRule, publicationDate, url,
+    abstract, keywords, impactFactor, totalCitations, referencesThesis,
+    doctorName, authorName, subjectClassification, publicationLocation) => {
+    let result = null, error = null, DBCode = null, DBData = null;
+    let rePublicationDate = await functions.formatPublishDate(publicationDate);
+    console.log(`setCrawlingTreatise: ${title}, ${rePublicationDate}, ${journalName}`)
+    const query = `CALL set_doctor_paper(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, DATA_VERSION_ID, doctorName, title, doi, journalName, authorRule, rePublicationDate, url,
+      abstract, keywords, impactFactor, totalCitations, authorName]);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    // console.log(RS)
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
+
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+  },
+  
+  setCrawlingTreatise_old: async (rid, title, doi, journalName, authorRule, publicationDate, url,
     abstract, keywords, impactFactor, totalCitations, referencesThesis,
     doctorName, authorName, subjectClassification, publicationLocation) => {
     let result = null, error = null, DBCode = null, DBData = null

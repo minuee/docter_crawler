@@ -1,4 +1,3 @@
-
 const config = require(`${global.appRoot}/server/config/configuration`);
 const crawlingCtrl = require(`${global.appRoot}/services/crawling_samsunghospital.com/controller`);
 const CS = require(`${global.appRoot}/server/util/util.casting`);
@@ -13,36 +12,32 @@ const crypto = require('crypto');
 const axios = require('axios');
 const cheerio = require('cheerio');
 const _ = require('lodash');
+const functions = require(`${global.appRoot}/server/util/function`);
 const router = asyncify(express.Router());
 module.exports = router;
 
 
-router.get('/healthcheck', async function(req, res) {    
-  const result = true;
-  if ( result ) { 
-    res.send({
-      'code': 200,
-      'message': '삼성서울병원 접속테스트',
-      'desc': 'success',
-      'data' : null 
-    });
-  }else{
-    res.send({
-      'code': 200,
-      'message': '삼성서울병원 접속테스트',
-      'desc': 'failed',
-      'data' : result
-    });
-  }
-});
-
 /**
  * @swagger
  *  /v1/c/samsunghospital.com/healthcheck:
- *    get:
+ *    post:
  *      summary: "접속 테스트"
  *      description: "서버에 접속이 됬는데 "
  *      tags: [samsunghospital.com-삼성서울병원]
+ *      produces:
+ *      parameters:
+ *        - name: "hid"
+ *          in: "body"
+ *          description: "input hospitalId"
+ *          required: true
+ *          type: "object"
+ *          schema:
+ *            type: object
+ *            properties:
+ *              hid:
+ *                type: string
+ *                description: "input hospitalId"
+ * 
  *      responses:
  *        "200":
  *          description: 접속 테스트
@@ -59,12 +54,71 @@ router.get('/healthcheck', async function(req, res) {
  *                            { "code": 1000, "message": "접속성공" }
  */
 
+router.post('/healthcheck', async (req, res, next) => {
+
+  const HOSPITAL_ID = 'H01KR-11000005';
+  const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
+  if ( ret.success === false ) {
+    return res.send(ret);
+  }
+
+  return res.send({
+    'code': 200,
+    'message': '삼성서울병원 접속테스트',
+    'desc': 'success',
+    'data' : req.body?.hid ? req.body.hid : null   
+  });
+    
+});
+
+
+/**
+ * @swagger
+ *  /v1/c/samsunghospital.com/step01:
+ *    post:
+ *      summary: "1단계  조회"
+ *      description: "삼성서울병원 정보를 가져와야 한다  "
+ *      tags: [samsunghospital.com-삼성서울병원]
+ *      produces:
+ *      parameters:
+ *        - name: "hid"
+ *          in: "body"
+ *          description: "input hospitalId"
+ *          required: true
+ *          type: "object"
+ *          schema:
+ *            type: object
+ *            properties:
+ *              hid:
+ *                type: string
+ *                description: "input hospitalId"
+ *      responses:
+ *        "200":
+ *          description: step01
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    users:
+ *                      type: object
+ *                      example:    
+ *                            { "code": 1000, "message": "작업성공" }
+ * 
+ */
+
+
 
 router.post('/step01', async (req, res, next) => {
-  const ip = req.clientIp;
-  // validation parameter
-  // if(CS.isEmpty(certKey)){return res.json(TS.fail({code: 'INSUFFICIENT_DATA', message: 'certKey'}))}
-  // db transaction
+  const HOSPITAL_ID = 'H01KR-11000005';
+  const HOSPITAL_NAME = '삼성서울병원';
+  const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
+  if ( ret.success === false ) {
+    return res.send(ret);
+  }
+
   const data = [];
   const P0 = await crawlingCtrl.setTimeStamp();
   let fakeTimestamp = P0.data
@@ -85,26 +139,28 @@ router.post('/step01', async (req, res, next) => {
     await CS.wait(5000);
     fakeTimestamp = (new Date(fakeTimestamp + 1)).getTime();
     const SP1 = await crawlingCtrl.crwalingProcess02(`http://www.samsunghospital.com/home/reservation/doctorInfoList.do?cPage=1&SW=&SUB_DEPT_YN=A&DP_CODE=${P1.data[i].value}&DP_TYPE=O&FLAG=Y&_=${fakeTimestamp}`);
-    // console.log(`Iteration ${i}: Result is ${SP1.data}`);
+    console.log(`http://www.samsunghospital.com/home/reservation/doctorInfoList.do?cPage=1&SW=&SUB_DEPT_YN=A&DP_CODE=${P1.data[i].value}&DP_TYPE=O&FLAG=Y&_=${fakeTimestamp}`);
     if (!CS.isEmpty(SP1.data)) {
-      for (let i = 0; i < _.size(SP1.data); i++) {
+      for (let j = 0; j < _.size(SP1.data); j++) {
         data.push({
-          hid: 'H01KR-11000005',
-          deptName: SP1.data[i].deptName,
-          doctorName: SP1.data[i].doctorName,
-          url: SP1.data[i].url
+          hid: HOSPITAL_ID,
+          deptName: SP1.data[j].deptName,
+          doctorName: SP1.data[j].doctorName,
+          url: SP1.data[j].url
         })
+        console.log(`doctorName : ${SP1.data[j].doctorName}, ,deptName : ${SP1.data[j].deptName},url : ${SP1.data[j].url},profileUrl : ${SP1.data[j].profileUrl}`)
         await CS.wait(300);
-        const SP2 = await crawlingCtrl.get_rid_encrypt(SP1.data[i].doctorName, SP1.data[i].url);
-        if (SP2.error) {
-          console.log("SP2 DB fail.");
-          return res.json(TS.fail("SP2 DB fail."));
+        if ( SP1.data[j].doctorName == '송윤미' && SP1.data[j].deptName == '가정의학과' ) {
+          const SP2 = await crawlingCtrl.get_rid_encrypt(SP1.data[j].doctorName, SP1.data[j].url);
+          if (SP2.error) {
+            console.log("SP2 DB fail.");
+            return res.json(TS.fail("SP2 DB fail."));
+          }
+          const tempRid = SP2.data[0].rid_encrypt
+          await CS.wait(300);
+          const SP3 = await crawlingCtrl.setCrawlingDoctorLink(tempRid, HOSPITAL_ID, SP1.data[j].deptName, SP1.data[j].doctorName, SP1.data[j].url, SP1.data[j].profileUrl,HOSPITAL_NAME);
+          if (SP3.error) console.log("SP3 DB upsert fail.");;
         }
-        const tempRid = SP2.data[0].rid_encrypt
-        await CS.wait(300);
-        const SP3 = await crawlingCtrl.setCrawlingDoctorLink(tempRid, 'H01KR-11000005', SP1.data[i].deptName, SP1.data[i].doctorName, SP1.data[i].url);
-        // const SP3 = await crawlingCtrl.setCrawlingDoctorLink('H01KR-11000010', SP1.data[i].deptName, SP1.data[i].doctorName, SP1.data[i].url);
-        if (SP3.error) console.log("SP3 DB upsert fail.");;
       }
     }
   }
@@ -115,19 +171,24 @@ router.post('/step01', async (req, res, next) => {
 
 /**
  * @swagger
- *  /v1/c/samsunghospital.com/step01:
+ *  /v1/c/samsunghospital.com/step02:
  *    post:
- *      summary: "1단계  조회"
+ *      summary: "2단계  조회"
  *      description: "삼성서울병원 정보를 가져와야 한다  "
  *      tags: [samsunghospital.com-삼성서울병원]
  *      produces:
  *      parameters:
- *        - name: "clientIp"
- *          in: "query"
- *          description: "input clientIp"
+ *        - name: "hid"
+ *          in: "body"
+ *          description: "input hospitalId"
  *          required: true
- *          type: "string"
- 
+ *          type: "object"
+ *          schema:
+ *            type: object
+ *            properties:
+ *              hid:
+ *                type: string
+ *                description: "input hospitalId"
  *      responses:
  *        "200":
  *          description: step01
@@ -141,16 +202,21 @@ router.post('/step01', async (req, res, next) => {
  *                    users:
  *                      type: object
  *                      example:    
- *                            { "code": 1000, "message": "접속성공" }
+ *                            { "code": 1000, "message": "작업성공" }
  * 
  */
 
 
+
+
 router.post('/step02', async (req, res, next) => {
-  const ip = req.clientIp;
-  // validation parameter
+  const HOSPITAL_ID = 'H01KR-11000005';
+  const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
+  if ( ret.success === false ) {
+    return res.send(ret);
+  }
   // db transaction
-  const P1 = await crawlingCtrl.getCrawlingDoctorLink('H01KR-11000005');
+  const P1 = await crawlingCtrl.getCrawlingDoctorLink(HOSPITAL_ID);
   console.log(_.size(P1.data))
   if (CS.isEmpty(_.size(P1.data))) { return res.json(TS.fail({ code: 'DATA_NULL', message: 'response data is null' })) }
   const doctorLinkTotal = _.size(P1.data)
@@ -158,14 +224,16 @@ router.post('/step02', async (req, res, next) => {
   // const loopSize = 1;
   for (let i = 0; i < loopSize; i++) {
     await CS.wait(10000);
-    const SP1 = await crawlingCtrl.crwalingProcess03(P1.data[i].url);
-    const doctorname = SP1.data.doctorName ? SP1.data.doctorName : null
-    const refUrl = P1.data[i].url ? P1.data[i].url : null
-    if (!doctorname || !refUrl) {
+    const SP1 = await crawlingCtrl.crwalingProcess03(P1.data[i].doctor_url);
+    const doctorName = P1.data[i].doctorname;
+    const deptName = P1.data[i].deptname;
+    const refUrl = P1.data[i].doctor_url;
+    const profileimgurl = P1.data[i].profileimgurl;
+    if (!doctorName || !refUrl) {
       break;
     }
     await CS.wait(300);
-    const SP2 = await crawlingCtrl.get_rid_encrypt(doctorname, refUrl);
+    /* const SP2 = await crawlingCtrl.get_rid_encrypt(doctorName, refUrl);
     if (SP2.error) {
       console.log("SP2 DB fail.");
       return res.json(TS.fail("SP2 DB fail."));
@@ -173,13 +241,13 @@ router.post('/step02', async (req, res, next) => {
     const tempRid = SP2.data[0].rid_encrypt
     if (CS.isEmpty(tempRid)) break;
     await CS.wait(300);
-    const SP3 = await crawlingCtrl.setCrawlingdoctorBasic(tempRid, 'H01KR-11000005', SP1.data.deptName, SP1.data.doctorName, SP1.data.specialty, SP1.data.profileImgUrl);
+    const SP3 = await crawlingCtrl.setCrawlingdoctorBasic(tempRid, HOSPITAL_ID, deptName, doctorName, SP1.data.specialty, profileimgurl);
     if (SP3.error) {
       console.log("SP3 DB fail.");
       return res.json(TS.fail("SP3 DB fail."));
     }
     await CS.wait(300);
-    const SP4 = await crawlingCtrl.setCrawlingdoctorBiography(tempRid, 'H01KR-11000005', SP1.data.doctorName, JSON.stringify(SP1.data.biography));
+    const SP4 = await crawlingCtrl.setCrawlingdoctorBiography(tempRid, HOSPITAL_ID, SP1.data.doctorName, JSON.stringify(SP1.data.biography));
     if (SP4.error) {
       console.log("SP4 DB fail.");
       return res.json(TS.fail("SP4 DB fail."));
@@ -216,149 +284,9 @@ router.post('/step02', async (req, res, next) => {
         }
       }
 
-    }
+    } */
   }
   let result = P1.data
   return res.json(TS.success(result));
 });
 
-
-/**
- * @swagger
- *  /v1/c/samsunghospital.com/step02:
- *    post:
- *      summary: "2단계 조회"
- *      description: "삼성서울병원 정보를 가져와야 한다  "
- *      tags: [samsunghospital.com-삼성서울병원]
- *      produces:
- *      parameters:
- *        - name: "clientIp"
- *          in: "query"
- *          description: "input clientIp"
- *          required: true
- *          type: "string"
- 
- *      responses:
- *        "200":
- *          description: step02
- *          content:
- *            application/json:
- *              schema:
- *                type: object
- *                properties:
- *                    ok:
- *                      type: boolean
- *                    users:
- *                      type: object
- *                      example:    
- *                            { "code": 1000, "message": "접속성공" }
- * 
- */
-
-router.post('/hospital/step03', async (req, res, next) => {
-  const ip = req.clientIp;
-  // validation parameter
-  // db transaction
-  const P1 = await crawlingCtrl.get_crawling_doctor_mssing_link('H01KR-11000005');
-  console.log(_.size(P1.data))
-  if (CS.isEmpty(_.size(P1.data))) { return res.json(TS.fail({ code: 'DATA_NULL', message: 'response data is null' })) }
-  const doctorLinkTotal = _.size(P1.data)
-
-  for (let i = 0; i < _.size(P1.data); i++) {
-    await CS.wait(10000);
-    const SP1 = await crawlingCtrl.crwalingProcess03(P1.data[i].url);
-    // console.log(P1.data[i].url)
-    const doctorname = SP1.data.doctorName ? SP1.data.doctorName : null
-    const refUrl = P1.data[i].url ? P1.data[i].url : null
-    if (!doctorname || !refUrl) {
-      break;
-    }
-    await CS.wait(300);
-    const SP2 = await crawlingCtrl.get_rid_encrypt(doctorname, refUrl);
-    if (SP2.error) {
-      console.log("SP2 DB fail.");
-      return res.json(TS.fail("SP2 DB fail."));
-    }
-    const tempRid = SP2.data[0].rid_encrypt
-    if (CS.isEmpty(tempRid)) break;
-    await CS.wait(300);
-    const SP3 = await crawlingCtrl.setCrawlingdoctorBasic(tempRid, 'H01KR-11000005', SP1.data.deptName, SP1.data.doctorName, SP1.data.specialty, SP1.data.profileImgUrl);
-    if (SP3.error) {
-      console.log("SP3 DB fail.");
-      return res.json(TS.fail("SP3 DB fail."));
-    }
-    await CS.wait(300);
-    const SP4 = await crawlingCtrl.setCrawlingdoctorBiography(tempRid, 'H01KR-11000005', SP1.data.doctorName, JSON.stringify(SP1.data.biography));
-    if (SP4.error) {
-      console.log("SP4 DB fail.");
-      return res.json(TS.fail("SP4 DB fail."));
-    }
-  }
-
-  let result = P1.data
-  return res.json(TS.success(result));
-});
-
-
-/**
- * @swagger
- *  /v1/c/samsunghospital.com/hospital/step03:
- *    post:
- *      summary: "병원 3단계 조회"
- *      description: "삼성서울병원 정보를 가져와야 한다  "
- *      tags: [samsunghospital.com-삼성서울병원]
- *      produces:
- *      parameters:
- *        - name: "clientIp"
- *          in: "query"
- *          description: "input clientIp"
- *          required: true
- *          type: "string"
- 
- *      responses:
- *        "200":
- *          description: hospital step03
- *          content:
- *            application/json:
- *              schema:
- *                type: object
- *                properties:
- *                    ok:
- *                      type: boolean
- *                    users:
- *                      type: object
- *                      example:    
- *                            { "code": 1000, "message": "접속성공" }
- * 
- */
-
-
-router.get('/info', AUTH.validation, async (req, res, next) => {
-  const ip = req.clientIp;
-  return res.json(TS.success(req.auth));
-});
-
-
-/**
- * @swagger
- *  /v1/c/samsunghospital.com/info:
- *    get:
- *      summary: "정보 조회(사용안하는 거 같음)"
- *      description: "삼성서울병원 정보를 가져와야 한다  "
- *      tags: [samsunghospital.com-삼성서울병원]
- *      responses:
- *        "200":
- *          description: info
- *          content:
- *            application/json:
- *              schema:
- *                type: object
- *                properties:
- *                    ok:
- *                      type: boolean
- *                    users:
- *                      type: object
- *                      example:    
- *                            { "code": 1000, "message": "접속성공" }
- * 
- */

@@ -133,7 +133,7 @@ router.post('/step01', async (req, res, next) => {
     if (!CS.isEmpty(SP1.data)) {
       for (let j = 0; j < _.size(SP1.data); j++) {
         console.log(`doctorName : ${SP1.data[j].doctorName}, deptName : ${SP1.data[j].deptName}`)
-        if ( SP1.data[j].deptName == '신경외과' && SP1.data[j].doctorName == '이종주' ) {
+        if ( SP1.data[j].doctorName !== '일반' ) {
           data.push({
             hid: HOSPITAL_ID,
             deptName: SP1.data[j].deptName,
@@ -216,7 +216,7 @@ router.post('/step02', async (req, res, next) => {
   console.log(_.size(P1.data))
   if (CS.isEmpty(_.size(P1.data))) { return res.json(TS.fail({ code: 'DATA_NULL', message: 'response data is null' })) }
   const doctorLinkTotal = _.size(P1.data)
-
+  const data = [];
   for (let i = 0; i < _.size(P1.data); i++) {
     await CS.wait(10000); // 10초정도로 - 부사장님 지시임! 꼭 지킬것
     const doctorName = P1.data[i].doctorname;
@@ -226,7 +226,7 @@ router.post('/step02', async (req, res, next) => {
     const SP1 = await crawlingCtrl.crwalingProcess03(refUrl);
     console.log(`SP1 : ${SP1.data.biography}`)
 
-    /* if (doctorName && refUrl) {
+    if (doctorName && refUrl) {
       await CS.wait(300);
       const SP2 = await crawlingCtrl.get_rid_encrypt(doctorName, refUrl);
       if (SP2.error) {
@@ -248,7 +248,9 @@ router.post('/step02', async (req, res, next) => {
         console.log("SP4 DB fail.");
         return res.json(TS.fail("SP4 DB fail."));
       }
-    } */
+
+      data.push({doctorName,deptName,refUrl})
+    }
   }
   console.log(`대상 의사수 : ${_.size(P1.data)}, 작업된 의사수 : ${_.size(data)}`);
   return res.send({
@@ -257,86 +259,6 @@ router.post('/step02', async (req, res, next) => {
     message: `대상 의사수 : ${_.size(P1.data)}, 작업된 의사수 : ${_.size(data)}`
   });
 });
-
-
-
-
-/**
- * @swagger
- *  /v1/c/kbsmc.co.kr/step03:
- *    post:
- *      summary: "3단계  조회"
- *      description: "강북삼성병원 정보를 가져와야 한다  "
- *      tags: [kbsmc.co.kr-강북삼성병원]
- *      produces:
- *      parameters:
- *        - name: "clientIp"
- *          in: "query"
- *          description: "input clientIp"
- *          required: true
- *          type: "string"
- 
- *      responses:
- *        "200":
- *          description: step03
- *          content:
- *            application/json:
- *              schema:
- *                type: object
- *                properties:
- *                    ok:
- *                      type: boolean
- *                    users:
- *                      type: object
- *                      example:    
- *                            { "code": 1000, "message": "접속성공" }
- * 
- */
-
-router.post('/step03', async (req, res, next) => {
-  const ip = req.clientIp;
-  const P1 = await crawlingCtrl.get_crawling_doctor_mssing_link('H01KR-11000001');
-  console.log(_.size(P1.data))
-  if (CS.isEmpty(_.size(P1.data))) { return res.json(TS.fail({ code: 'DATA_NULL', message: 'response data is null' })) }
-  const doctorLinkTotal = _.size(P1.data)
-
-  for (let i = 0; i < _.size(P1.data); i++) {
-    await CS.wait(10000); // 10초정도로 - 부사장님 지시임! 꼭 지킬것
-    const SP1 = await crawlingCtrl.crwalingProcess03(P1.data[i].url);
-    const doctorname = SP1.data.doctorName ? SP1.data.doctorName : null
-    const refUrl = P1.data[i].url ? P1.data[i].url : null
-    if (!doctorname || !refUrl) {
-      break;
-    }
-    await CS.wait(300);
-    const SP2 = await crawlingCtrl.get_rid_encrypt(doctorname, refUrl);
-    if (SP2.error) {
-      console.log("SP2 DB fail.");
-      return res.json(TS.fail("SP2 DB fail."));
-    }
-    const tempRid = SP2.data[0].rid_encrypt
-    if (CS.isEmpty(tempRid)) break;
-    await CS.wait(300);
-    const SP3 = await crawlingCtrl.setCrawlingdoctorBasic(tempRid, 'H01KR-11000001', SP1.data.deptName, SP1.data.doctorName, SP1.data.specialty, SP1.data.profileImgUrl);
-    if (SP3.error) {
-      console.log("SP3 DB fail.");
-      return res.json(TS.fail("SP3 DB fail."));
-    }
-    await CS.wait(200);
-    // console.log(SP1.data.biography)
-    const SP4 = await crawlingCtrl.setCrawlingdoctorBiography(tempRid, 'H01KR-11000001', SP1.data.doctorName, JSON.stringify(SP1.data.biography));
-    if (SP4.error) {
-      console.log("SP4 DB fail.");
-      return res.json(TS.fail("SP4 DB fail."));
-    }
-
-  }
-
-  let result = P1.data
-  return res.json(TS.success(result));
-});
-
-
 
 
 /**
@@ -378,6 +300,7 @@ router.post('/step03', async (req, res, next) => {
 
 
 router.post('/treatise', async (req, res, next) => {
+
   const HOSPITAL_ID = 'H01KR-11000001';
   const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
   if ( ret.success === false ) {
@@ -391,7 +314,8 @@ router.post('/treatise', async (req, res, next) => {
   // const loopSize = 1;
   for (let i = 0; i < loopSize; i++) {
     await CS.wait(5000); // 10초정도로 - 부사장님 지시임! 꼭 지킬것
-    const SP1 = await crawlingCtrl.crwalingtreatise(P1.data[i].url)
+    console.log(`P1.data[i].url ${P1.data[i].doctor_url}`)
+    const SP1 = await crawlingCtrl.crwalingtreatise(P1.data[i].doctor_url)
     if (_.size(SP1.data.biography) > 0) {
       await CS.wait(300);
       const tempRid = P1.data[i].rid

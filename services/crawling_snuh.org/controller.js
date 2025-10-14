@@ -5,18 +5,17 @@ const daoMysql = require(`${global.appRoot}/server/database/dao.mysql`);
 const moment = require('moment-timezone');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
-const https = require('https');
 const crypto = require('crypto');
 const axios = require('axios');
 const cheerio = require('cheerio');
 const puppeteer = require('puppeteer');
+
 const _ = require('lodash');
 const functions = require(`${global.appRoot}/server/util/function`);
 
+const DATA_VERSION_ID = parseInt(process.env.DATA_VERSION_ID) ? parseInt(process.env.DATA_VERSION_ID) : 1;
+
 module.exports = {
-
-
-
 
   setTimeStamp: async () => {
     let result = null, error = null, DBCode = null
@@ -85,7 +84,6 @@ module.exports = {
     }
     const $ = cheerio.load(Response.data);
     const jsonData = [];
-    // const link = _.replace(tempLink, '../', 'https://main.kbsmc.co.kr/main/');
     let lastPage = $('a.lastBtn').attr('href');
     lastPage = _.replace(lastPage, 'javascript:paginate(', '');
     lastPage = _.replace(lastPage, ')', '');
@@ -127,8 +125,9 @@ module.exports = {
       //const ProfileUrl = $(element).find('div.imgWrap a.btnType01').attr('href')
       const ProfileUrl = $(element).find('div.imgWrap a').attr('href')
       const fixedProfileUrl = _.replace(ProfileUrl, 'philosophy', 'career');
-      console.log(`crwalingProcess03 : pageIndex(${pageIndex}) >>>>>>>>>>> ${deptName} ${doctorName}`);
+      
       if ( !functions.isEmpty(doctorName)) {
+        console.log(`crwalingProcess03 : pageIndex(${pageIndex}) >>>>>>>>>>> ${deptName} ${doctorName}`);
         jsonData.push({
           doctorName: doctorName,
           deptName: deptName,
@@ -165,7 +164,9 @@ module.exports = {
     const doctorName = $('div.doctorInfo div.name strong').first().text().trim();
     const deptName = $('div.blogLinkWrap a.showPub1').first().text().trim();
     const profileImgUrl = $('div.feSlItem img').attr('src');
-    const specialty = $('div#pub1 p').contents().last().text().trim().replace(/\t/g, '').replace(/\n/g, '');
+    const specialty = $('div#pub1').find('div.doctor-concentration-wrap').find('p').text().trim().replace(/\t/g, '').replace(/\n/g, '');
+
+    console.log(`doctorName: ${doctorName}, deptName: ${deptName}, profileImgUrl: ${profileImgUrl}, specialty: ${specialty}`)
 
     const jsonData = [];
     // 학력 경력 날짜
@@ -176,9 +177,12 @@ module.exports = {
         const tds = $(element2).find('td');
         const year = $(tds[0]).text().trim();
         const text = $(tds[1]).text().trim().replace(/\t/g, '').replace(/\n/g, '');
+       
+        const strType = type == "경력 및 연수" ? "경력" : type == "학회활동" ? "학회" :  type;
+        console.log(`type : ${strType}, date : ${year}, text : ${text}`)
         jsonData.push({
-          type: type,
-          targetDate: year,
+          type: strType,
+          date: year,
           text: text
         });
       });
@@ -192,14 +196,31 @@ module.exports = {
       biography: jsonData,
     };
 
-    console.log(`item`);
-    console.log(item);
     return { error: error, data: item };
   },
 
-
-
   setCrawlingdoctorBasic: async (rid, hid, deptName, doctorName, specialty, profileimgurl) => {
+    
+    let result = null, error = null, DBCode = null, DBData = null
+    const query = `CALL UPDATE_DOCTOR_BASIC(?)`
+    // const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, specialty, profileimgurl]);
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, specialty, profileimgurl, '']);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    // console.log(RS)
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
+
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+
+  },
+
+  setCrawlingdoctorBasic_old: async (rid, hid, deptName, doctorName, specialty, profileimgurl) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL set_crawlingdoctor_basic(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, deptName, doctorName, specialty, profileimgurl]);
@@ -218,8 +239,26 @@ module.exports = {
   },
 
 
-
   setCrawlingdoctorBiography: async (rid, hid, doctorName, jsondata) => {
+    
+    let result = null, error = null, DBCode = null, DBData = null
+    const query = `CALL SET_DOCTOR_CAREER(?)`
+    // const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, doctorName, jsondata]);
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, DATA_VERSION_ID, jsondata]);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
+
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+  },
+
+  setCrawlingdoctorBiography_old: async (rid, hid, doctorName, jsondata) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL set_crawlingdoctor_detail(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, doctorName, jsondata]);
@@ -238,10 +277,29 @@ module.exports = {
   },
 
 
+  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url,profile_url,p_hName) => {
+
+    let result = null, error = null, DBCode = null, DBData = null;
+    const newDetaulUrl = url.replace("//","/");
+    const query = `CALL set_doctor_basic_v3(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url,profile_url,p_hName,newDetaulUrl]);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    // console.log(RS)
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
+
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+
+  },
 
 
-
-  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url) => {
+  setCrawlingDoctorLink_old: async (rid, hid, deptName, doctorName, url) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL SET_CRAWLING_DOCTOR_LINK(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, deptName, doctorName, url]);
@@ -259,10 +317,29 @@ module.exports = {
     return { error: error, data: result };
   },
 
-
-
-
   getCrawlingDoctorLink: async (hid) => {
+
+    let result = null, error = null, DBCode = null, DBData = null
+    const query = `CALL get_doctor_basic(?)`
+    console.log(`getCrawlingDoctorLink: ${hid} ${DATA_VERSION_ID}`);
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [hid, DATA_VERSION_ID]);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    // console.log(RS)
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
+
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+
+  },
+
+
+  getCrawlingDoctorLink_old: async (hid) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL GET_CRAWLING_DOCTOR_LINK(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [hid]);
@@ -301,8 +378,27 @@ module.exports = {
   },
 
 
-
   get_rid_encrypt: async (p_doctorName, p_refUrl) => {
+
+    console.log(`p_doctorName : ${p_doctorName}, p_refUrl : ${p_refUrl}`);
+    let result = null, error = null, DBCode = null, DBData = null
+    const query = `CALL set_rid(?) `
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [p_doctorName, p_refUrl]);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    // console.log(RS)
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
+
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+  },
+
+  get_rid_encrypt_old: async (p_doctorName, p_refUrl) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL get_rid_encrypt(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [p_doctorName, p_refUrl]);

@@ -17,27 +17,14 @@ let browser = null;
 
 module.exports = {
 
-  Process01: async () => {
+  crwalingProcess01: async () => {
     let result = null, Error, error = null, DBCode = null
     let DBData1 = null
     let DBData2 = null
     let Response = { status: null, data: null }
-    // const url01 = `https://med.khmc.or.kr/kr/treatment/department/list.do`;
     const url01 = `https://gs.severance.healthcare/gs/department/department.do`;
     
     console.log(`url01`, url01)
-    // try {
-    //   Response = await axios.get(url01, {
-    //     headers: {
-    //       'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-    //       // 'Cookie': '_fwb=180BkWbSApStpo6WmeE59Sq.1716537367549; __utma=171149434.1869919459.1716537368.1716537368.1716537368.1; __utmc=171149434; __utmz=171149434.1716537368.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _gid=GA1.3.1781820103.1716537368; _ga=GA1.1.1869919459.1716537368; _ga_LT9FD6NRDW=GS1.1.1716537368.1.0.1716537369.0.0.0; SCOUTER=x4la7sujboc428; org.springframework.web.servlet.i18n.CookieLocaleResolver.LOCALE=kr; language=kr; _fwb=180BkWbSApStpo6WmeE59Sq.1716537367549; __utmc=26925601; _voicemonjs.option_change_flag=false; _voicemonjs.ttsmode=false; _voicemonjs.controllbarType=1; _voicemonjs.controlbarPosition=BR; _voicemonjs.controlbarScreenZoom=3; _voicemonjs.controlbarContrastMode=0; _voicemonjs.controlbarContrast=1; _voicemonjs.controlbarZoom=3; _voicemonjs.controlbarZoomContrast=1; _voicemonjs.controlbarHighlight=1; _voicemonjs.controlbarHighlightColor=1; _voicemonjs.voiceVolume=M; _voicemonjs.voicePitch=M; _voicemonjs.voiceSpeed=M; _voicemonjs.zoomPanelmode=0; _voicemonjs.controlbarSkinColor=0054FF; _voicemonjs.cpanel_showmode=1; __utma=26925601.1869919459.1716537368.1716537373.1716537376.2; __utmz=26925601.1716537376.2.2.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided); JSESSIONID=AE25BB993ECFCBF9A11213D273DCD8A1.front1; wcs_bt=e770d73a88a274:1716539917; __utmt=1; __utmb=26925601.14.10.1716537376',
-    //       'Referer': 'https://gs.severance.healthcare/index.do'
-    //     }
-    //   })
-    // } catch (error) {
-    //   Error = error
-    //   console.log(`error on ${url01} API return: ${error}`);
-    // }
     browser = await puppeteer.launch();
     // Open a new page
     const page = await browser.newPage();
@@ -47,10 +34,7 @@ module.exports = {
     await page.waitForSelector('#content');
 
     const htmlContent = await page.content();
-
     const $ = cheerio.load(htmlContent);
-
-    // const appcontent = $('div#app').html();
 
     const optionsArray = [];
     $("#content-area > div.sev-card-results ul li").each((index, elem) => {
@@ -76,25 +60,9 @@ module.exports = {
   },
 
 
-  Process02: async (url) => {
+  crwalingProcess02: async (url) => {
     let result = null, Error, error = null, DBCode = null
-    // let DBData1 = null
-    // let DBData2 = null
-    // let Response = { status: null, data: null }
-    // const url = `https://med.khmc.or.kr/kr/treatment/department/list.do`;
-    
-    // try {
-    //   Response = await axios.get(url, {
-    //     headers: {
-    //       'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-    //       'Cookie': '_fwb=180BkWbSApStpo6WmeE59Sq.1716537367549; __utma=171149434.1869919459.1716537368.1716537368.1716537368.1; __utmc=171149434; __utmz=171149434.1716537368.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _gid=GA1.3.1781820103.1716537368; _ga=GA1.1.1869919459.1716537368; _ga_LT9FD6NRDW=GS1.1.1716537368.1.0.1716537369.0.0.0; SCOUTER=x4la7sujboc428; org.springframework.web.servlet.i18n.CookieLocaleResolver.LOCALE=kr; language=kr; _fwb=180BkWbSApStpo6WmeE59Sq.1716537367549; __utmc=26925601; _voicemonjs.option_change_flag=false; _voicemonjs.ttsmode=false; _voicemonjs.controllbarType=1; _voicemonjs.controlbarPosition=BR; _voicemonjs.controlbarScreenZoom=3; _voicemonjs.controlbarContrastMode=0; _voicemonjs.controlbarContrast=1; _voicemonjs.controlbarZoom=3; _voicemonjs.controlbarZoomContrast=1; _voicemonjs.controlbarHighlight=1; _voicemonjs.controlbarHighlightColor=1; _voicemonjs.voiceVolume=M; _voicemonjs.voicePitch=M; _voicemonjs.voiceSpeed=M; _voicemonjs.zoomPanelmode=0; _voicemonjs.controlbarSkinColor=0054FF; _voicemonjs.cpanel_showmode=1; __utma=26925601.1869919459.1716537368.1716537373.1716537376.2; __utmz=26925601.1716537376.2.2.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided); JSESSIONID=AE25BB993ECFCBF9A11213D273DCD8A1.front1; wcs_bt=e770d73a88a274:1716539917; __utmt=1; __utmb=26925601.14.10.1716537376',
-    //       'Referer': 'https://gs.severance.healthcare/index.do'
-    //     }
-    //   })
-    // } catch (error) {
-    //   Error = error
-    //   console.log(`error on ${url} API return: ${error}`);
-    // }
+
     console.log(`url`, url);
 
     const page = await browser.newPage();
@@ -102,16 +70,6 @@ module.exports = {
     await page.goto(url);
 
     await new Promise(r => setTimeout(r, 3000));
-
-    // try {
-    //   // await page.waitForSelector('.doctorList .dL_line .profile_box');
-    //   await page.waitForSelector('.container', { timeout: 5000 });
-    // } catch (e) {
-    //   error = `element(.profile_box) probably not exists at url(${url})`;
-    //   console.log(error);
-    //   return { error, data: null };
-    // }
-
 
     const htmlContent = await page.content();
 
@@ -125,19 +83,17 @@ module.exports = {
     $("#tab-content1 > div > ul > li").each((index, element) => {
 
       const doctorName = $(element).find("div > div.card-view > dl > dt").text().trim();
-
-      // <a href="javascript:void(0);" class="btn btn-lg btn-primary btn-round btn-block viewLink" data-emp="eXVoczIwMjBAKUApMuAmi1I3FPtqVaDKDRVIMXZvY8%2BXA5QndcsiOgEW0bE%3D" data-dept="205" data-insttcode="4"><i class="ico ico-doctor-white"></i><span class="ml-1">의료진소개</span></a>
-
       const dataEmp = $(element).find("div > div.card-back > div > a.btn.btn-lg.btn-primary.btn-round.btn-block.viewLink").attr('data-emp');
       const dataDept = $(element).find("div > div.card-back > div > a.btn.btn-lg.btn-primary.btn-round.btn-block.viewLink").attr('data-dept');
-
+      const profileUrlTmp = $(element).find("div > div.card-view").find("div.photo").find('img').attr('src');
       const link = `https://gs.severance.healthcare/gs/doctor/doctor-view.do?empNo=${dataEmp}&deptSeq=${dataDept}`;
 
       if(doctorName && link){
         doctorArray.push({
           deptName: deptName,
           doctorName: doctorName,
-          link
+          link,
+          profileUrl :profileUrlTmp ? `https://gs.severance.healthcare${profileUrlTmp}` : null
         });
       }
     });

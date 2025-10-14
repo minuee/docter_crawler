@@ -9,13 +9,17 @@ const crypto = require('crypto');
 const axios = require('axios');
 const cheerio = require('cheerio');
 const puppeteer = require('puppeteer');
+
 const _ = require('lodash');
+const functions = require(`${global.appRoot}/server/util/function`);
+
+const DATA_VERSION_ID = parseInt(process.env.DATA_VERSION_ID) ? parseInt(process.env.DATA_VERSION_ID) : 1;
 
 module.exports = {
 
 
 
-  Process01: async () => {
+  crwalingProcess01: async () => {
     let result = null, Error, error = null, DBCode = null
     let DBData1 = null
     let DBData2 = null
@@ -59,7 +63,7 @@ module.exports = {
   },
 
 
-  Process02: async (url) => {
+  crwalingProcess02: async (url) => {
     let result = null, Error, error = null, DBCode = null
     let DBData1 = null
     let DBData2 = null
@@ -82,7 +86,7 @@ module.exports = {
     // $('span').empty();
     const doctorArray = [];
     const deptName = $('div.tit_sectin div.inner h2').text().trim();
-
+    const profileUrlTmp = $('div.doctor_img').find('img').attr('src');
     $('li.profile_outer').each((index, item) => {
       //tit_sectin inner h2
       const doctorName = $(item).find('p.doctor_name span').first().text().trim();
@@ -94,17 +98,15 @@ module.exports = {
         doctorArray.push({
           deptName: deptName,
           doctorName: doctorName,
-          link: `https://med.khmc.or.kr/${link}`
+          link: `https://med.khmc.or.kr/${link}`,
+          profileUrl: profileUrlTmp ? `https://med.khmc.or.kr${profileUrlTmp}` : null
         });
       }
     });
     return { error: error, data: doctorArray };
   },
 
-
-
-
-  Process03: async (url) => {
+  crwalingProcess03: async (url) => {
     let result = null, Error, error = null, DBCode = null
     let DBData1 = null
     let DBData2 = null
@@ -140,7 +142,9 @@ module.exports = {
         // const endYear = year.split('~')[0].replace(' ', '') || year.replace(' ', '');
         
         const firstWord = title.split(' ')[0] || title;
-        const type = firstWord;
+        let type = firstWord;
+        if ( firstWord == '수상이력') type = "수상";
+        else if ( firstWord == '학회활동') type = "학회";
 
         let targetDate = $(element).find('th').text().trim();
 
@@ -158,9 +162,11 @@ module.exports = {
         }
         const text = $(element).find('td').text().trim();
 
-        data.push({ type, targetDate, text });
+        data.push({ type, date : targetDate, text });
 
-        jsonData.push({ type, targetDate, text });
+        jsonData.push({ type, date : targetDate, text });
+
+        console.log(`type : ${type}, date : ${targetDate}, text : ${text}`)
       });
       return data;
     };
@@ -206,6 +212,7 @@ module.exports = {
       publicationDate  = yearMatch ? parseInt(yearMatch[0]) : null;
       const title = $(element).find('td').text().trim();
       // treatise.push({publicationDate, title});
+      console.log("treatise title:",index, title);
       if(title){
         treatise.push({
           title: title,
@@ -285,141 +292,6 @@ module.exports = {
     const ts13Digit = makeTs.getTime();
     return { error: error, data: ts13Digit };
   },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-  crwalingProcess03: async (url) => {
-    let result = null, error = null, DBCode = null
-    let DBData1 = null
-    let DBData2 = null
-    let Response = { status: null, data: null }
-    if (!url) {
-      return { error: true, data: null };
-    }
-    try {
-      Response = await axios.get(url, {
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0',
-        }
-      })
-    } catch (error) {
-      Error = error
-      console.log(`error on ${url} API return: ${error}`);
-    }
-    const $ = cheerio.load(Response.data);
-    const jsonData = [];
-    const treatise = [];
-    $('div.doctor-paper-career table').each((index, element) => {
-      let type = null
-      type = $(element).find('caption').text().trim();
-      $('div.doctor-paper-career table tr').each((index2, element2) => {
-        const targetDate = $(element2).find('th').text().trim().replace(/\t/g, '').replace(/\n/g, '');
-        const text = $(element2).find('td').text().trim();
-        jsonData.push({
-          type: type,
-          targetDate: targetDate,
-          text: text
-        });
-      });
-    });
-    $('li.paper-list-item').each((index, element) => {
-      const paperNo = $(element).find('span.paper-default-info').text().trim();
-      const PaperName = $(element).find('strong.paper-name').text().trim();
-      const paperInfo = $(element).find('span.paper-default-info').text().trim();
-      const paperUrl = $(element).find('a.link-pubmed').attr('href')
-      const doiPattern = /\b10\.\d{4}\/\S+\b/;
-      const journalPattern = /^[^\d]+/;
-      const yearPattern = /\b\d{4}\b/;
-      const journalMatch = paperNo.match(journalPattern);
-      const journalName = journalMatch ? journalMatch[0].trim() : "Unknown Journal";
-      const yearMatch = paperNo.match(yearPattern);
-      const year = yearMatch ? parseInt(yearMatch[0]) : null;
-      const doiMatch = paperNo.match(doiPattern);
-      const doiNumber = doiMatch ? doiMatch[0] : null;
-      console.log("Journal Name:", journalName);
-      console.log("Year:", year);
-      console.log("doiMatch:", doiNumber);
-      if (PaperName) {
-        treatise.push({
-          title: PaperName,
-          doi: doiNumber,
-          journalName: journalName,
-          authorRule: null,
-          publicationDate: year ? `${year}-01-01 00:00:00` : null,
-          url: paperUrl,
-          authorName: paperInfo,
-          abstract: null,
-          keywords: null,
-          impactFactor: 0,
-          totalCitations: 0,
-          referencesThesis: null,
-          subjectClassification: null,
-          publicationLocation: null
-        })
-        // console.log("Extracted DOI:", doiNumber);
-      } else {
-        jsonData.push({
-          type: '논문',
-          No: paperNo,
-          text: PaperName,
-          Info: paperInfo,
-          Url: paperUrl
-        });
-      }
-
-    });
-    await CS.wait(100);
-    const deptName = $('h2.doctor-paper-info span.info-field').first().text().trim();
-    const doctorName = $('span[name="fullName"]').first().text().trim();
-    const sectionElement = $('#doctor-paper-section02');
-    const style = sectionElement.attr('style');
-    const profileImgUrl = style.match(/background-image: url\(['"]?([^'")]+)['"]?\)/)[1];
-    const specialty = $('div.doctor-paper-field dd').text().trim();
-
-    let item = {
-      doctorName: doctorName,
-      deptName: deptName,
-      specialty: specialty,
-      profileImgUrl: `http://www.samsunghospital.com/${profileImgUrl}`,
-      biography: jsonData,
-      treatise: treatise
-    };
-    return { error: error, data: item };
-  },
-
-
   setCrawlingdoctorBasic: async (rid, hid, deptName, doctorName, specialty, profileimgurl) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL set_crawlingdoctor_basic(?)`
@@ -482,12 +354,27 @@ module.exports = {
     return { error: error, data: result };
   },
 
+  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url,profile_url,p_hName) => {
 
+    let result = null, error = null, DBCode = null, DBData = null
+    const query = `CALL set_doctor_basic_v3(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url,profile_url,p_hName,url]);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    // console.log(RS)
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
 
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
 
+  },
 
-
-  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url) => {
+  setCrawlingDoctorLink_old: async (rid, hid, deptName, doctorName, url) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL SET_CRAWLING_DOCTOR_LINK(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, deptName, doctorName, url]);
@@ -505,10 +392,29 @@ module.exports = {
     return { error: error, data: result };
   },
 
-
-
-
   getCrawlingDoctorLink: async (hid) => {
+
+    let result = null, error = null, DBCode = null, DBData = null
+    const query = `CALL get_doctor_basic(?)`
+    console.log(`getCrawlingDoctorLink: ${hid} ${DATA_VERSION_ID}`);
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [hid, DATA_VERSION_ID]);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    // console.log(RS)
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
+
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+
+  },
+
+
+  getCrawlingDoctorLink_old: async (hid) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL GET_CRAWLING_DOCTOR_LINK(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [hid]);
@@ -547,6 +453,26 @@ module.exports = {
   },
 
   get_rid_encrypt: async (p_doctorName, p_refUrl) => {
+
+    console.log(`p_doctorName : ${p_doctorName}, p_refUrl : ${p_refUrl}`);
+    let result = null, error = null, DBCode = null, DBData = null
+    const query = `CALL set_rid(?) `
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [p_doctorName, p_refUrl]);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    // console.log(RS)
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
+
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+  },
+
+  get_rid_encrypt_old: async (p_doctorName, p_refUrl) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL get_rid_encrypt(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [p_doctorName, p_refUrl]);

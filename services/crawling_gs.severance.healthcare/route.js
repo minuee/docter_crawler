@@ -1,10 +1,10 @@
-
-const config = require(`../../server/config/configuration`);
-const ctrl = require(`./controller`);
-const CS = require(`../../server/util/util.casting`);
-const RM = require(`../../server/util/response.message`);
-const TS = require(`../../server/middleware/message.handler`);
-const AUTH = require(`../../server/middleware/auth.handler`);
+const config = require(`${global.appRoot}/server/config/configuration`);
+const crawlingCtrl = require(`${global.appRoot}/services/crawling_gs.severance.healthcare/controller`);
+const CS = require(`${global.appRoot}/server/util/util.casting`);
+const RM = require(`${global.appRoot}/server/util/response.message`);
+const TS = require(`${global.appRoot}/server/middleware/message.handler`);
+const AUTH = require(`${global.appRoot}/server/middleware/auth.handler`);
+const uploadProfileImage = require(`${global.appRoot}/server/middleware/s3.handler`);
 const express = require('express');
 const asyncify = require('express-asyncify');
 const moment = require('moment-timezone');
@@ -12,36 +12,33 @@ const crypto = require('crypto');
 const axios = require('axios');
 const cheerio = require('cheerio');
 const _ = require('lodash');
+const functions = require(`${global.appRoot}/server/util/function`);
 const router = asyncify(express.Router());
 module.exports = router;
 
 
-router.get('/healthcheck', async function(req, res) {    
-  const result = true;
-  if ( result ) { 
-    res.send({
-      'code': 200,
-      'message': '연대 강남세브란스병원 접속테스트',
-      'desc': 'success',
-      'data' : null 
-    });
-  }else{
-    res.send({
-      'code': 200,
-      'message': '연대 강남세브란스병원 접속테스트',
-      'desc': 'failed',
-      'data' : result
-    });
-  }
-});
 
 /**
  * @swagger
  *  /v1/c/gs.severance.healthcare/healthcheck:
- *    get:
+ *    post:
  *      summary: "접속 테스트"
  *      description: "서버에 접속이 됬는데 "
- *      tags: [gs.severance.healthcare-연대 강남세브란스병원]
+ *      tags: [gs.severance.healthcare-연대강남세브란스병원]
+ *      produces:
+ *      parameters:
+ *        - name: "hid"
+ *          in: "body"
+ *          description: "input hospitalId"
+ *          required: true
+ *          type: "object"
+ *          schema:
+ *            type: object
+ *            properties:
+ *              hid:
+ *                type: string
+ *                description: "input hospitalId"
+ * 
  *      responses:
  *        "200":
  *          description: 접속 테스트
@@ -58,13 +55,74 @@ router.get('/healthcheck', async function(req, res) {
  *                            { "code": 1000, "message": "접속성공" }
  */
 
+router.post('/healthcheck', async (req, res, next) => {
+
+  const HOSPITAL_ID = 'H01KR-11000009';
+  const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
+  if ( ret.success === false ) {
+    return res.send(ret);
+  }
+
+  return res.send({
+    'code': 200,
+    'message': '연대강남세브란스병원 접속테스트',
+    'desc': 'success',
+    'data' : req.body?.hid ? req.body.hid : null   
+  });
+    
+});
+
+
+/**
+ * @swagger
+ *  /v1/c/gs.severance.healthcare/step01:
+ *    post:
+ *      summary: "1단계  조회"
+ *      description: "연대강남세브란스병원 정보를 가져와야 한다  "
+ *      tags: [gs.severance.healthcare-연대강남세브란스병원]
+ *      produces:
+ *      parameters:
+ *        - name: "hid"
+ *          in: "body"
+ *          description: "input hospitalId"
+ *          required: true
+ *          type: "object"
+ *          schema:
+ *            type: object
+ *            properties:
+ *              hid:
+ *                type: string
+ *                description: "input hospitalId"
+ *      responses:
+ *        "200":
+ *          description: step01
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    users:
+ *                      type: object
+ *                      example:    
+ *                            { "code": 1000, "message": "작업성공" }
+ * 
+ */
+
+
 
 router.post('/step01', async (req, res, next) => {
-  const ip = req.clientIp;
+  const HOSPITAL_ID = 'H01KR-11000009';
+  const HOSPITAL_NAME = '연대강남세브란스병원';
+  const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
+  if ( ret.success === false ) {
+    return res.send(ret);
+  }
   // validation parameter
   let procCount = 0
   const data = [];
-  const SP1 = await ctrl.Process01()
+  const SP1 = await ctrl.crwalingProcess01()
   if (SP1) {
     console.log(`SP1.data`, SP1.data)
   }
@@ -76,10 +134,10 @@ router.post('/step01', async (req, res, next) => {
     const element = loopingData[index];
     procCount = procCount + 1
     if (element.link) {
-      const SP2 = await ctrl.Process02(element.link)
+      const SP2 = await ctrl.crwalingProcess02(element.link)
       if (SP2.data) {
         console.log(`SP2.data >> `, SP2.data)
-        for (let index = 0; index < _.size(SP2.data); index++) {
+        /* for (let index = 0; index < _.size(SP2.data); index++) {
           const element2 = SP2.data[index];
           // rid 만들기
           await CS.wait(300);
@@ -103,7 +161,7 @@ router.post('/step01', async (req, res, next) => {
           }else{
             console.log(`tempRid`, `가 없습니다.`)
           }
-        }
+        } */
       }
     }
   }
@@ -118,19 +176,24 @@ router.post('/step01', async (req, res, next) => {
 
 /**
  * @swagger
- *  /v1/c/gs.severance.healthcare/step01:
+ *  /v1/c/gs.severance.healthcare/step02:
  *    post:
- *      summary: "1단계  조회"
- *      description: "연대 강남세브란스병원 정보를 가져와야 한다  "
- *      tags: [gs.severance.healthcare-연대 강남세브란스병원]
+ *      summary: "2단계  조회"
+ *      description: "연대강남세브란스병원 정보를 가져와야 한다  "
+ *      tags: [gs.severance.healthcare-연대강남세브란스병원]
  *      produces:
  *      parameters:
- *        - name: "clientIp"
- *          in: "query"
- *          description: "input clientIp"
+ *        - name: "hid"
+ *          in: "body"
+ *          description: "input hospitalId"
  *          required: true
- *          type: "string"
- 
+ *          type: "object"
+ *          schema:
+ *            type: object
+ *            properties:
+ *              hid:
+ *                type: string
+ *                description: "input hospitalId"
  *      responses:
  *        "200":
  *          description: step01
@@ -144,7 +207,7 @@ router.post('/step01', async (req, res, next) => {
  *                    users:
  *                      type: object
  *                      example:    
- *                            { "code": 1000, "message": "접속성공" }
+ *                            { "code": 1000, "message": "작업성공" }
  * 
  */
 
@@ -238,37 +301,4 @@ router.post('/step02', async (req, res, next) => {
   return res.json(TS.success(result));
 });
 
-
-
-/**
- * @swagger
- *  /v1/c/gs.severance.healthcare/step02:
- *    post:
- *      summary: "2단계  조회"
- *      description: "연대 강남세브란스병원 정보를 가져와야 한다  "
- *      tags: [gs.severance.healthcare-연대 강남세브란스병원]
- *      produces:
- *      parameters:
- *        - name: "clientIp"
- *          in: "query"
- *          description: "input clientIp"
- *          required: true
- *          type: "string"
- 
- *      responses:
- *        "200":
- *          description: step02
- *          content:
- *            application/json:
- *              schema:
- *                type: object
- *                properties:
- *                    ok:
- *                      type: boolean
- *                    users:
- *                      type: object
- *                      example:    
- *                            { "code": 1000, "message": "접속성공" }
- * 
- */
 

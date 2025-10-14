@@ -102,7 +102,7 @@ class App {
     this.app.use('/v1/c/kuh.ac.kr', require(`${global.appRoot}/services/crawling_kuh.ac.kr/route`)); //건국대학교병원
     this.app.use('/v1/c/med.khmc.or.kr', require(`${global.appRoot}/services/crawling_med.khmc.or.kr/route`)); //경희대학교병원
     this.app.use('/v1/c/guro.kumc.or.kr', require(`${global.appRoot}/services/crawling_guro.kumc.or.kr/route`)); //고려대구로병원 
-    this.app.use('/v1/c/samsunghospitalcom', require(`${global.appRoot}/services/crawling_samsunghospital.com/route`)); //삼성서울병원
+    this.app.use('/v1/c/samsunghospital.com', require(`${global.appRoot}/services/crawling_samsunghospital.com/route`)); //삼성서울병원
     this.app.use('/v1/c/snuh.org', require(`${global.appRoot}/services/crawling_snuh.org/route`)); //서울대학교병원
     this.app.use('/v1/c/gs.severance.healthcare', require(`${global.appRoot}/services/crawling_gs.severance.healthcare/route`)); //연대강남세브란스병원
     this.app.use('/v1/c/severance.healthcare', require(`${global.appRoot}/services/crawling_severance.healthcare/route`)); //연대세브란스병원
