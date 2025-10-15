@@ -5,12 +5,17 @@ const daoMysql = require(`${global.appRoot}/server/database/dao.mysql`);
 const moment = require('moment-timezone');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
-const https = require('https');
 const crypto = require('crypto');
 const axios = require('axios');
 const cheerio = require('cheerio');
 const puppeteer = require('puppeteer');
+
 const _ = require('lodash');
+const functions = require(`${global.appRoot}/server/util/function`);
+
+const DATA_VERSION_ID = parseInt(process.env.DATA_VERSION_ID) ? parseInt(process.env.DATA_VERSION_ID) : 1;
+
+
 
 module.exports = {
 
@@ -28,6 +33,48 @@ module.exports = {
 
   crwalingProcess01: async () => {
     let result = null, error = null, DBCode = null
+    const url01 = `https://sev.severance.healthcare/sev/department/department.do`;
+    console.log(`url01 : ${url01}`);
+
+    let browser = null;
+    try {
+      browser = await puppeteer.launch();
+      const page = await browser.newPage();
+      await page.goto(url01, { waitUntil: 'networkidle2' });
+      await page.waitForSelector('div.sev-card-results ul.depart-list > li');
+      
+      const htmlContent = await page.content();
+      const $ = cheerio.load(htmlContent);
+      
+      const dept = [];
+      $('div.sev-card-results ul.depart-list > li').each((index, element) => {
+   
+        const name = $(element).find('a > div > span').text().trim();
+        const tempLink = $(element).find('a').attr('data-id');
+        const link = `https://sev.severance.healthcare/sev/department/department/${tempLink}.do`
+        const info = {
+          deptName : name,
+          link,
+        };
+        if (name && tempLink) {
+          dept.push(info);
+        }
+      });
+      return { error: null, data: dept };
+
+    } catch (e) {
+      error = e;
+      console.log(`error on ${url01} puppeteer process: ${e}`);
+      return { error: error, data: null };
+    } finally {
+      if (browser !== null) {
+        await browser.close();
+      }
+    }
+  },
+
+  crwalingProcess01_old: async () => {
+    let result = null, error = null, DBCode = null
     let DBData1 = null
     let DBData2 = null
     let Response = { status: null, data: null }
@@ -36,7 +83,7 @@ module.exports = {
       rejectUnauthorized: false
     });
 
-    const url01 = `https://sev.severance.healthcare/api/doctor/list.do?insttCode=2&tyCode=DP010100&seCode=&seq=&keyword=&page=1&pagePerNum=1000&isChoSung=N`;
+    const url01 = `https://sev.severance.healthcare/sev/department/department.do`;
     try {
       Response = await axios.get(url01, {
         httpsAgent: agent,
@@ -50,10 +97,60 @@ module.exports = {
       console.log(`error on ${url01} API return: ${error}`);
     }
 
-    return { error: error, data: Response.data.data.list };
+    return { error: error, data: Response?.data?.data?.list };
   },
 
-  crwalingProcess02: async (profile) => {
+  
+  crwalingProcess02: async (link) => {
+    let result = null, error = null, DBCode = null
+    let DBData1 = null
+    let DBData2 = null
+    let Response = { status: null, data: null }
+    console.log(`crwalingProcess02 : ${link}`);
+    if (!link) {
+      return { error: true, data: null };
+    }
+    let browser = null;
+    try {
+      browser = await puppeteer.launch();
+      const page = await browser.newPage();
+      await page.goto(link, { waitUntil: 'networkidle2' });
+      await page.waitForSelector('div.doctor-card-wrap ul',{ timeout: 5000 });
+      
+      const htmlContent = await page.content();
+      const $ = cheerio.load(htmlContent);
+    // 쓰레기 태그 날림
+      // $('span').empty(); // 못날림 (이름과 진료과가 붙어있음)
+      const doctors = [];
+      $('div.doctor-card-wrap ul').find("li").each((index, element) => {
+        const doctorName = $(element).find('div.doctor-card-box div.card-view dl').find('dt').text().trim();
+        const tempLinkEmp = $(element).find('div.doctor-card-box div.card-back').find("div.flip-btns").find('a:first-child').attr('data-emp');
+        const tempLinkDept = $(element).find('div.doctor-card-box div.card-back').find("div.flip-btns").find('a:first-child').attr('data-dept');
+        const link = `https://sev.severance.healthcare/sev/doctor/doctor-view.do?empNo=${tempLinkEmp}&deptSeq=${tempLinkDept}`
+        const profileUrlTmp =$(element).find('div.doctor-card-box div.card-view').find('div.photo > img').attr('src');
+        const profileUrl = `https://sev.severance.healthcare${profileUrlTmp}`
+        // 의료진 정보를 객체로 저장
+        const doctor = {
+          doctorName,
+          url: link,
+          profileUrl
+        };
+        console.log(`index: ${index}, doctorName: ${doctorName}, link: ${link}, profileUrl: ${profileUrl}`)
+        doctors.push(doctor);
+      });
+      return { error: error, data: doctors };
+    } catch (e) {
+      error = e;
+      console.log(`error on ${link} puppeteer process: ${e}`);
+      return { error: error, data: null };
+    } finally {
+      if (browser !== null) {
+        await browser.close();
+      }
+    }
+  },
+
+  crwalingProcess02_old: async (profile) => {
     let result = null, error = null, DBCode = null
     let DBData1 = null
     let DBData2 = null
@@ -68,12 +165,8 @@ module.exports = {
       specialty: specialty,
       url: fullUrl
     }
-
-
     return { error: error, data: item };
   },
-
-
 
   crwalingProcess03: async (url) => {
     let result = null, error = null, DBCode = null
@@ -83,22 +176,17 @@ module.exports = {
     if (!url) {
       return { error: true, data: null };
     }
-    const agent = new https.Agent({
-      rejectUnauthorized: false
-    });
+    let browser = null;
+    console.log(`crwalingProcess03 : ${url}`);
 
-    try {
-      Response = await axios.get(url, {
-        httpsAgent: agent,
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0',
-        }
-      })
-    } catch (error) {
-      // Error = error
-      console.log(`error on ${url} API return: ${error}`);
-    }
-    const $ = cheerio.load(Response.data);
+    browser = await puppeteer.launch();
+    const page = await browser.newPage();
+    await page.goto(url, { waitUntil: 'networkidle2' });
+    await page.waitForSelector('div.profile-intro',{ timeout: 5000 });
+    
+    const htmlContent = await page.content();
+    const $ = cheerio.load(htmlContent);
+
     const doctorName = $('h2.profile-name strong.name.nm').first().text().trim();
     const deptName = $('h2.profile-name span.department').first().text().trim();
     const profileImgUrl = $('div.profile-item img').attr('src');
@@ -111,11 +199,15 @@ module.exports = {
       type = $(element).find('dt.text-title').text().trim(); // 타입(학력 경력)
       $(element).find('dd ul li').each((index2, element2) => {
         const text = $(element2).text().trim(); // 내용
-        jsonData.push({
-          type: type,
-
-          text: text
-        });
+        console.log(`type: ${type}, text: ${text}`);
+        if ( type !== '진료분야') {
+          const strType = type == '학술활동' ? '학술' : type;
+          jsonData.push({
+            type: strType,
+            text: text
+          });
+        }
+        
       });
     });
 
@@ -140,26 +232,17 @@ module.exports = {
     if (!url) {
       return { error: true, data: null };
     }
-    const agent = new https.Agent({
-      rejectUnauthorized: false
-    });
-
+    let browser = null;
+    
     try {
-      Response = await axios.get(url, {
-        httpsAgent: agent,
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0',
-        }
-      })
-    } catch (error) {
-      // Error = error
-      console.log(`error on ${url} API return: ${error}`);
-    }
-
-    let $ = null
-
-    try {
-      $ = cheerio.load(Response.data);
+      console.log(`crwalingGetTreatiseLink : ${url}`);
+      browser = await puppeteer.launch();
+      const page = await browser.newPage();
+      await page.goto(url, { waitUntil: 'networkidle2' });
+      await page.waitForSelector('div.profile-intro',{ timeout: 5000 });
+      
+      const htmlContent = await page.content();
+      const $ = cheerio.load(htmlContent);
       const tempLink = $('ul.tab-list li a:contains("논문")').attr('href');
       const treatiseLink = tempLink ? tempLink : null
       console.log(`treatiseLink: ${treatiseLink}`);
@@ -233,24 +316,19 @@ module.exports = {
     if (!url) {
       return { error: true, data: null };
     }
-    const agent = new https.Agent({
-      rejectUnauthorized: false
-    });
-    // https://ir.ymlib.yonsei.ac.kr/researcher-profile?ep=791&type=1&page=1&offset=0
+
+    console.log(`crwalingProcess03 : ${url}`);
+
+    ;
     try {
-      Response = await axios.get(url, {
-        httpsAgent: agent,
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0',
-        }
-      })
-    } catch (error) {
-      // Error = error
-      console.log(`error on ${url} API return: ${error}`);
-    }
-    let $ = null
-    try {
-      $ = cheerio.load(Response.data);
+      let browser = null;
+      browser = await puppeteer.launch();
+      const page = await browser.newPage();
+      await page.goto(url, { waitUntil: 'networkidle2' });
+      await page.waitForSelector('div.list_tab',{ timeout: 5000 });
+      
+      const htmlContent = await page.content();
+      const $ = cheerio.load(htmlContent)
       let articlesCount = 0
       const articlesText = $('div.list_tab ul li:first-child span').text();
       articlesCount = parseInt(articlesText.match(/\((\d+)\)/)[1]);
@@ -271,33 +349,27 @@ module.exports = {
     if (!url) {
       return { error: true, data: null };
     }
-    const agent = new https.Agent({
-      rejectUnauthorized: false
-    });
-    // https://ir.ymlib.yonsei.ac.kr/researcher-profile?ep=791&type=1&page=1&offset=0
-    try {
-      Response = await axios.get(url, {
-        httpsAgent: agent,
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0',
-        }
-      })
-    } catch (error) {
-      // Error = error
-      console.log(`error on ${url} API return: ${error}`);
-    }
-
-    let $ = null
+    console.log(`crwalingProcess03 : ${url}`);
+    
 
     try {
-      $ = cheerio.load(Response.data);
+      let browser = null;
+      browser = await puppeteer.launch();
+      const page = await browser.newPage();
+      await page.goto(url, { waitUntil: 'networkidle2' });
+      await page.waitForSelector('table.list_tbl',{ timeout: 5000 });
+      
+      const htmlContent = await page.content();
+      const $ = cheerio.load(htmlContent)
       const arrLinks = []
       $('table.list_tbl tbody tr').each((index, element) => {
         const firstLink = $(element).find('td.alleft_td a').first().attr('href');
+        const title = $(element).find('td.alleft_td a').first().text().trim();
         items = {
+          title,
           url: `https://ir.ymlib.yonsei.ac.kr/${firstLink}`
         }
-        // console.log(firstLink);
+        console.log(`firstLink: ${items.title}`);
         arrLinks.push(items)
       });
 
@@ -336,26 +408,17 @@ module.exports = {
     if (!url) {
       return { error: true, data: null };
     }
-    const agent = new https.Agent({
-      rejectUnauthorized: false
-    });
-    // https://ir.ymlib.yonsei.ac.kr/researcher-profile?ep=791&type=1&page=1&offset=0
+    console.log(`crwalingProcess03 : ${url}`);
+   
     try {
-      Response = await axios.get(url, {
-        httpsAgent: agent,
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0',
-        }
-      })
-    } catch (error) {
-      // Error = error
-      console.log(`error on ${url} API return: ${error}`);
-    }
-    let $ = null
-
-
-    try {
-      $ = cheerio.load(Response.data);
+      let browser = null;
+      browser = await puppeteer.launch();
+      const page = await browser.newPage();
+      await page.goto(url, { waitUntil: 'networkidle2' });
+      await page.waitForSelector('p.view_title',{ timeout: 5000 });
+      
+      const htmlContent = await page.content();
+      const $ = cheerio.load(htmlContent)
       const treatise = []
       const PaperName = $('p.view_title').text().trim().replace(/\t/g, '').replace(/\n/g, '');
       let Titem = {
@@ -452,7 +515,29 @@ module.exports = {
     return { error: error, data: result };
   },
 
+
   setCrawlingdoctorBasic: async (rid, hid, deptName, doctorName, specialty, profileimgurl) => {
+    
+    let result = null, error = null, DBCode = null, DBData = null
+    const query = `CALL UPDATE_DOCTOR_BASIC(?)`
+    // const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, specialty, profileimgurl]);
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, specialty, profileimgurl, '']);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    // console.log(RS)
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
+
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+
+  },
+
+  setCrawlingdoctorBasic_old: async (rid, hid, deptName, doctorName, specialty, profileimgurl) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL set_crawlingdoctor_basic(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, deptName, doctorName, specialty, profileimgurl]);
@@ -470,10 +555,27 @@ module.exports = {
     return { error: error, data: result };
   },
 
-
-
-
   setCrawlingdoctorBiography: async (rid, hid, doctorName, jsondata) => {
+    
+    let result = null, error = null, DBCode = null, DBData = null
+    const query = `CALL SET_DOCTOR_CAREER(?)`
+    // const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, doctorName, jsondata]);
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, DATA_VERSION_ID, jsondata]);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
+
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+  },
+
+
+  setCrawlingdoctorBiography_old: async (rid, hid, doctorName, jsondata) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL set_crawlingdoctor_detail(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, doctorName, jsondata]);
@@ -492,9 +594,27 @@ module.exports = {
   },
 
 
+  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url,profile_url,p_hName) => {
 
+    let result = null, error = null, DBCode = null, DBData = null
+    const query = `CALL set_doctor_basic_v3(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url,profile_url,p_hName,url]);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    // console.log(RS)
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
 
-  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url) => {
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+
+  },
+
+  setCrawlingDoctorLink_old: async (rid, hid, deptName, doctorName, url) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL SET_CRAWLING_DOCTOR_LINK(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, deptName, doctorName, url]);
@@ -512,10 +632,29 @@ module.exports = {
     return { error: error, data: result };
   },
 
-
-
-
   getCrawlingDoctorLink: async (hid) => {
+
+    let result = null, error = null, DBCode = null, DBData = null
+    const query = `CALL get_doctor_basic(?)`
+    console.log(`getCrawlingDoctorLink: ${hid} ${DATA_VERSION_ID}`);
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [hid, DATA_VERSION_ID]);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    // console.log(RS)
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
+
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+
+  },
+
+
+  getCrawlingDoctorLink_old: async (hid) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL GET_CRAWLING_DOCTOR_LINK(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [hid]);
@@ -553,9 +692,27 @@ module.exports = {
     return { error: error, data: result };
   },
 
-
-
   get_rid_encrypt: async (p_doctorName, p_refUrl) => {
+
+    console.log(`p_doctorName : ${p_doctorName}, p_refUrl : ${p_refUrl}`);
+    let result = null, error = null, DBCode = null, DBData = null
+    const query = `CALL set_rid(?) `
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [p_doctorName, p_refUrl]);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    // console.log(RS)
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
+
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+  },
+
+  get_rid_encrypt_old: async (p_doctorName, p_refUrl) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL get_rid_encrypt(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [p_doctorName, p_refUrl]);

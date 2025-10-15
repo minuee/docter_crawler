@@ -122,55 +122,66 @@ router.post('/step01', async (req, res, next) => {
   // validation parameter
   let procCount = 0
   const data = [];
-  const SP1 = await ctrl.crwalingProcess01()
-  if (SP1) {
-    console.log(`SP1.data`, SP1.data)
-  }
+  const SP1 = await crawlingCtrl.crwalingProcess01()
+ 
   const loopingData = SP1.data
   let doctorCount = 0;
-  for (let index = 0; index < _.size(loopingData); index++) {
+  for (let tindex = 0; tindex < _.size(loopingData); tindex++) {
     
     await CS.wait(4000);
-    const element = loopingData[index];
+    const element = loopingData[tindex];
     procCount = procCount + 1
     if (element.link) {
-      const SP2 = await ctrl.crwalingProcess02(element.link)
+      const SP2 = await crawlingCtrl.crwalingProcess02(element.link)
       if (SP2.data) {
         console.log(`SP2.data >> `, SP2.data)
-        /* for (let index = 0; index < _.size(SP2.data); index++) {
+        for (let index = 0; index < _.size(SP2.data); index++) {
           const element2 = SP2.data[index];
           // rid 만들기
           await CS.wait(300);
-          const SP3 = await ctrl.get_rid_encrypt(element2.doctorName, element2.link);
-          if (SP3.error) {
-            console.log("SP3 DB fail.");
-            return res.json(TS.fail("SP3 DB fail."));
-          }
-          const tempRid = SP3.data[0].rid_encrypt
-          const hid = 'H01KR-11000009' // 이대
-          if(tempRid){
-            doctorCount++;
-            console.log(`tempRid`, tempRid)
-            await CS.wait(300);
-            const SP4 = await ctrl.setCrawlingDoctorLink(tempRid, hid, element2.deptName, element2.doctorName, element2.link)
-            if(SP4.data){
-              console.log(`입력완료`)
-            }else{
-              console.log(`입력실패`)
+          if ( element2.doctorName == '홍순원' && element2.deptName == '병리과' ) {
+            const SP3 = await crawlingCtrl.get_rid_encrypt(element2.doctorName, element2.link);
+            if (SP3.error) {
+              console.log("SP3 DB fail.");
+              return res.json(TS.fail("SP3 DB fail."));
             }
-          }else{
-            console.log(`tempRid`, `가 없습니다.`)
+            const tempRid = SP3.data[0].rid_encrypt;
+            if(tempRid){
+              doctorCount++;
+              console.log(`tempRid`, tempRid)
+              await CS.wait(300);
+              const SP4 = await crawlingCtrl.setCrawlingDoctorLink(tempRid, HOSPITAL_ID, element2.deptName, element2.doctorName, element2.link,element2.profileUrl,HOSPITAL_NAME)
+              if(SP4.data){
+                console.log(`입력완료`)
+              }else{
+                console.log(`입력실패`)
+              }
+
+              data.push({
+                hid: HOSPITAL_ID,
+                deptName: element2.deptName,
+                doctorName: element2.doctorName,
+                url: element2.link
+              })
+            }else{
+              console.log(`tempRid`, `가 없습니다.`)
+            }
           }
-        } */
+        }
       }
     }
   }
 
-  ctrl.closeBrowser();
+  crawlingCtrl.closeBrowser();
 
-  let result = procCount
-  return res.json(TS.success({deptCount: result, doctorCount}));
+  console.log(`검색된 진료과목수 : ${_.size(SP1.data)}, 검색된 의사수 : ${_.size(data)}`);
+  return res.send({
+    code : 200,
+    success: true,
+    message: `검색된 진료과목수 : ${_.size(SP1.data)}, 검색된 의사수 : ${_.size(data)}`
+  });
 });
+
 
 
 
@@ -213,15 +224,21 @@ router.post('/step01', async (req, res, next) => {
 
 
 router.post('/step02', async (req, res, next) => {
-  const ip = req.clientIp;
-  const P1 = await ctrl.getCrawlingDoctorLink('H01KR-11000009');
+  const HOSPITAL_ID = 'H01KR-11000009';
+  const HOSPITAL_NAME = '연대강남세브란스병원';
+  const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
+  if ( ret.success === false ) {
+    return res.send(ret);
+  }
+
+  const P1 = await crawlingCtrl.getCrawlingDoctorLink(HOSPITAL_ID);
   let totalCount = 0
   if (CS.isEmpty(_.size(P1.data))) { return res.json(TS.fail({ code: 'DATA_NULL', message: 'response data is null' })) }
   const loopSize = _.size(P1.data);
   console.log(`loopSize: `, loopSize)
 
   if( loopSize > 0 ) {
-    ctrl.openBrowser();
+    crawlingCtrl.openBrowser();
   }
 
   for (let i = 0; i < loopSize; i++) {
@@ -230,33 +247,35 @@ router.post('/step02', async (req, res, next) => {
     const item = P1.data[i]
     // rid, hid, deptname, doctorname, createdate, accessdate, count, isuse, url
     await CS.wait(4000);
-    const SP1 = await ctrl.Process03(item.url);
-    console.log(`SP1.data.basic.doctorName >>>>>>>>>>>>>>>`, SP1.data.basic.doctorName)
-    const doctorname = SP1.data.basic.doctorName ? SP1.data.basic.doctorName : null
-    const refUrl = item.url ? item.url : null
-    if (doctorname && refUrl) {
+    const SP1 = await crawlingCtrl.crwalingProcess03(item.doctor_url);
+
+    const doctorName = P1.data[i].doctorname;
+    const deptName = P1.data[i].deptname;
+    const refUrl = P1.data[i].doctor_url;
+    const profileimgurl = P1.data[i].profileimgurl;
+    if (doctorName && refUrl) {
       console.log(`here`)
       totalCount = totalCount + 1
 
       console.log('collection count', totalCount);
 
-      await CS.wait(300);
-      const SP2 = await ctrl.get_rid_encrypt(doctorname, refUrl);
+      /* await CS.wait(300);
+      const SP2 = await crawlingCtrl.get_rid_encrypt(doctorName, refUrl);
       if (SP2.error) {
         console.log("SP2 DB fail.");
         return res.json(TS.fail("SP2 DB fail."));
       }
   
-      const tempRid = SP2.data[0].rid_encrypt
+      const tempRid = SP2.data[0].rid_encrypt;
       await CS.wait(300);
-      const SP3 = await ctrl.setCrawlingdoctorBasic(tempRid, 'H01KR-11000009', SP1.data.basic.deptName, SP1.data.basic.doctorName, SP1.data.basic.specialty, SP1.data.basic.profileImgUrl);
+      const SP3 = await crawlingCtrl.setCrawlingdoctorBasic(tempRid,HOSPITAL_ID,deptName, doctorName, SP1.data.basic.specialty, profileimgurl);
       if (SP3.error) {
         console.log("SP3 DB fail.");
         return res.json(TS.fail("SP3 DB fail."));
       }
 
       await CS.wait(300);
-      const SP4 = await ctrl.setCrawlingdoctorBiography(tempRid, 'H01KR-11000009', SP1.data.basic.doctorName, JSON.stringify(SP1.data.detail));
+      const SP4 = await crawlingCtrl.setCrawlingdoctorBiography(tempRid, HOSPITAL_ID, doctorName, JSON.stringify(SP1.data.detail));
       if (SP4.error) {
         console.log("SP4 DB fail.");
         return res.json(TS.fail("SP4 DB fail."));
@@ -279,23 +298,23 @@ router.post('/step02', async (req, res, next) => {
             impactFactor: element.impactFactor? element.impactFactor : null,
             totalCitations: element.totalCitations? element.totalCitations : null,
             referencesThesis: element.referencesThesis? element.referencesThesis : null,
-            doctorName: doctorname,
+            doctorName: doctorName,
             authorName: element.authorName? element.authorName : null,
             subjectClassification: element.subjectClassification? element.subjectClassification: null,
             publicationLocation: element.publicationLocation? element.publicationLocation: null
           }
           await CS.wait(300);
-          const SP5 = await ctrl.setCrawlingTreatise(iD.rid, iD.title, iD.doi, iD.journalName, iD.authorRule, iD.publicationDate, iD.url, iD.abstract, iD.keywords, iD.impactFactor, iD.totalCitations, iD.referencesThesis, iD.doctorName, iD.authorName, iD.subjectClassification, iD.publicationLocation);
+          const SP5 = await crawlingCtrl.setCrawlingTreatise(iD.rid, iD.title, iD.doi, iD.journalName, iD.authorRule, iD.publicationDate, iD.url, iD.abstract, iD.keywords, iD.impactFactor, iD.totalCitations, iD.referencesThesis, iD.doctorName, iD.authorName, iD.subjectClassification, iD.publicationLocation);
           if (SP5.error) {
             console.log(`SP5 DB fail.`);
-            console.log(`Error on ${doctorname}`)
+            console.log(`Error on ${doctorName}`)
           }
         }
-      }
+      } */
     }
   }
 
-  ctrl.closeBrowser();
+  crawlingCtrl.closeBrowser();
   
   let result = totalCount
   return res.json(TS.success(result));
