@@ -218,7 +218,7 @@ router.post('/step02', async (req, res, next) => {
   const doctorLinkTotal = _.size(P1.data)
   const data = [];
   for (let i = 0; i < _.size(P1.data); i++) {
-    await CS.wait(10000); // 10초정도로 - 부사장님 지시임! 꼭 지킬것
+    await CS.wait(5000); // 10초정도로 - 부사장님 지시임! 꼭 지킬것
     const doctorName = P1.data[i].doctorname;
     const deptName = P1.data[i].deptname;
     const refUrl = P1.data[i].doctor_url;

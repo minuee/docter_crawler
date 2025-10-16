@@ -9,158 +9,161 @@ const crypto = require('crypto');
 const axios = require('axios');
 const cheerio = require('cheerio');
 const puppeteer = require('puppeteer');
-const _ = require('lodash');
 
+const _ = require('lodash');
+const functions = require(`${global.appRoot}/server/util/function`);
+
+const DATA_VERSION_ID = parseInt(process.env.DATA_VERSION_ID) ? parseInt(process.env.DATA_VERSION_ID) : 1;
 
 let browser = null;
 
 
 module.exports = {
 
-  Process01: async () => {
-    let result = null, Error, error = null, DBCode = null
-    let DBData1 = null
-    let DBData2 = null
-    let Response = { status: null, data: null }
-    // const url01 = `https://med.khmc.or.kr/kr/treatment/department/list.do`;
+  crwalingProcess01: async () => {
+    let error = null;
     const url01 = `https://seoul.hyumc.com/seoul/mediteam/mditeam.do`;
-    
-    console.log(`url01`, url01)
-    // try {
-    //   Response = await axios.get(url01, {
-    //     headers: {
-    //       'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-    //       // 'Cookie': '_fwb=180BkWbSApStpo6WmeE59Sq.1716537367549; __utma=171149434.1869919459.1716537368.1716537368.1716537368.1; __utmc=171149434; __utmz=171149434.1716537368.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _gid=GA1.3.1781820103.1716537368; _ga=GA1.1.1869919459.1716537368; _ga_LT9FD6NRDW=GS1.1.1716537368.1.0.1716537369.0.0.0; SCOUTER=x4la7sujboc428; org.springframework.web.servlet.i18n.CookieLocaleResolver.LOCALE=kr; language=kr; _fwb=180BkWbSApStpo6WmeE59Sq.1716537367549; __utmc=26925601; _voicemonjs.option_change_flag=false; _voicemonjs.ttsmode=false; _voicemonjs.controllbarType=1; _voicemonjs.controlbarPosition=BR; _voicemonjs.controlbarScreenZoom=3; _voicemonjs.controlbarContrastMode=0; _voicemonjs.controlbarContrast=1; _voicemonjs.controlbarZoom=3; _voicemonjs.controlbarZoomContrast=1; _voicemonjs.controlbarHighlight=1; _voicemonjs.controlbarHighlightColor=1; _voicemonjs.voiceVolume=M; _voicemonjs.voicePitch=M; _voicemonjs.voiceSpeed=M; _voicemonjs.zoomPanelmode=0; _voicemonjs.controlbarSkinColor=0054FF; _voicemonjs.cpanel_showmode=1; __utma=26925601.1869919459.1716537368.1716537373.1716537376.2; __utmz=26925601.1716537376.2.2.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided); JSESSIONID=AE25BB993ECFCBF9A11213D273DCD8A1.front1; wcs_bt=e770d73a88a274:1716539917; __utmt=1; __utmb=26925601.14.10.1716537376',
-    //       'Referer': 'https://seoul.hyumc.com/kr/index.do'
-    //     }
-    //   })
-    // } catch (error) {
-    //   Error = error
-    //   console.log(`error on ${url01} API return: ${error}`);
-    // }
-    browser = await puppeteer.launch();
-    // Open a new page
-    const page = await browser.newPage();
-    // Navigate to the website
-    await page.goto(url01);
+    console.log(`[START] crwalingProcess01 for url: ${url01}`);
 
-    await page.waitForSelector('#contents');
+    let browser = null;
+    let optionsArray = [];
+    try {
+        console.log('Launching puppeteer...');
+        browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox'] });
+        console.log('Puppeteer launched.');
 
-    const htmlContent = await page.content();
+        const page = await browser.newPage();
+        
+        // Set a common user agent
+        await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36');
 
-    const $ = cheerio.load(htmlContent);
+        // Auto-dismiss dialogs
+        page.on('dialog', async dialog => {
+            console.log(`Dialog message: ${dialog.message()}`);
+            await dialog.dismiss();
+        });
 
-    // const appcontent = $('div#app').html();
+        console.log('Navigating to page...');
+        await page.goto(url01, { waitUntil: 'networkidle2' });
+        console.log('Page navigated.');
 
-    const optionsArray = [];
-    $('.medicalTeam1 .categoryList_wrap .category section').each((index, item) => {
+        console.log('Waiting for selector...');
+        await page.waitForSelector('.categoryList_wrap', { timeout: 30000 });
+        console.log('Selector found.');
 
-      $(item).find('section.box ul li').each((idx, elem) => {
+        console.log('Evaluating page...');
+        optionsArray = await page.evaluate(() => {
+            const data = [];
+            const departmentElements = document.querySelectorAll('.categoryList_wrap section.category .box ul li');
+            departmentElements.forEach(elem => {
+                const anchor = elem.querySelector('a');
+                if (anchor) {
+                    const onclickValue = anchor.getAttribute('onclick');
+                    if (onclickValue) {
+                        const pattern = /hospMediofCentClick\('([0-9]+)','(.*)'\)/;
+                        const matches = onclickValue.match(pattern);
+                        if (matches && matches.length >= 3) {
+                            const dept_id = matches[1];
+                            const dept_name = matches[2];
+                            const link = `https://seoul.hyumc.com/seoul/mediteam/mditeam.do?action=detailList&searchCondition1=seqMediteam&searchCommonSeq=${dept_id}&searchHospCd=&searchKeyword=${dept_name}`;
+                            data.push({ title: dept_name, link });
+                        }
+                    }
+                }
+            });
+            return data;
+        });
+        console.log(`Evaluation complete. Found ${optionsArray.length} items.`);
 
-        const onclickValue = $(elem).find('a').attr('onclick');
-
-        const pattern = /hospMediofCentClick\('([0-9]+)','(.*)'\)/;
-        const matches = onclickValue.match(pattern);
-        const dept_id = matches[1];
-        const dept_name = matches[2];
-        console.log(`dr_sid`, dept_id);
-        console.log(`dept_cd`, dept_name);
-
-        const link = `https://seoul.hyumc.com/seoul/mediteam/mditeam.do?action=detailList&searchCondition1=seqMediteam&searchCommonSeq=${dept_id}&searchHospCd=&searchKeyword=${dept_name}`;
-        const title = dept_name;
-
-        console.log(`title`, title)
-        console.log(`link`, link)
-        if(title) {
-          optionsArray.push({
-            title,
-            link
-          });
+    } catch (e) {
+        console.error('An error occurred during crawling:', e);
+        error = e;
+    } finally {
+        if (browser) {
+            console.log('Closing browser.');
+            //await browser.close();
         }
-      })
-    });
+    }
 
-    page.close();
-
+    console.log('[END] crwalingProcess01');
     return { error: error, data: optionsArray };
   },
 
 
-  Process02: async (url) => {
-    let result = null, Error, error = null, DBCode = null
-    // let DBData1 = null
-    // let DBData2 = null
-    // let Response = { status: null, data: null }
-    // const url = `https://med.khmc.or.kr/kr/treatment/department/list.do`;
-    
-    // try {
-    //   Response = await axios.get(url, {
-    //     headers: {
-    //       'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-    //       'Cookie': '_fwb=180BkWbSApStpo6WmeE59Sq.1716537367549; __utma=171149434.1869919459.1716537368.1716537368.1716537368.1; __utmc=171149434; __utmz=171149434.1716537368.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _gid=GA1.3.1781820103.1716537368; _ga=GA1.1.1869919459.1716537368; _ga_LT9FD6NRDW=GS1.1.1716537368.1.0.1716537369.0.0.0; SCOUTER=x4la7sujboc428; org.springframework.web.servlet.i18n.CookieLocaleResolver.LOCALE=kr; language=kr; _fwb=180BkWbSApStpo6WmeE59Sq.1716537367549; __utmc=26925601; _voicemonjs.option_change_flag=false; _voicemonjs.ttsmode=false; _voicemonjs.controllbarType=1; _voicemonjs.controlbarPosition=BR; _voicemonjs.controlbarScreenZoom=3; _voicemonjs.controlbarContrastMode=0; _voicemonjs.controlbarContrast=1; _voicemonjs.controlbarZoom=3; _voicemonjs.controlbarZoomContrast=1; _voicemonjs.controlbarHighlight=1; _voicemonjs.controlbarHighlightColor=1; _voicemonjs.voiceVolume=M; _voicemonjs.voicePitch=M; _voicemonjs.voiceSpeed=M; _voicemonjs.zoomPanelmode=0; _voicemonjs.controlbarSkinColor=0054FF; _voicemonjs.cpanel_showmode=1; __utma=26925601.1869919459.1716537368.1716537373.1716537376.2; __utmz=26925601.1716537376.2.2.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided); JSESSIONID=AE25BB993ECFCBF9A11213D273DCD8A1.front1; wcs_bt=e770d73a88a274:1716539917; __utmt=1; __utmb=26925601.14.10.1716537376',
-    //       'Referer': 'https://seoul.hyumc.com/kr/index.do'
-    //     }
-    //   })
-    // } catch (error) {
-    //   Error = error
-    //   console.log(`error on ${url} API return: ${error}`);
-    // }
-    console.log(`url`, url);
+  crwalingProcess02: async (url) => {
+    let error = null;
+    console.log(`[START] crwalingProcess02 for url: ${url}`);
 
-    const page = await browser.newPage();
-    // Navigate to the website
-    await page.goto(url);
+    if (!url) {
+        return { error: 'URL is required', data: [] };
+    }
 
-    await new Promise(r => setTimeout(r, 3000));
+    let browser = null;
+    let doctorArray = [];
+    try {
+        browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox'] });
+        const page = await browser.newPage();
+        
+        await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36');
 
-    // try {
-    //   // await page.waitForSelector('.doctorList .dL_line .profile_box');
-    //   await page.waitForSelector('.container', { timeout: 5000 });
-    // } catch (e) {
-    //   error = `element(.profile_box) probably not exists at url(${url})`;
-    //   console.log(error);
-    //   return { error, data: null };
-    // }
+        await page.goto(url, { waitUntil: 'networkidle2' });
+        await page.waitForSelector('.doctorList_wrap', { timeout: 30000 });
 
+        doctorArray = await page.evaluate((pageUrl) => {
+            const doctors = [];
+            let deptName = '';
+            
+            const deptNameElement = document.querySelector('.text_searchResult > span');
+            if (deptNameElement) {
+                const match = deptNameElement.textContent.trim().match(/'(.*)'로 검색된 결과입니다./);
+                if (match) deptName = match[1];
+            }
 
-    const htmlContent = await page.content();
+            document.querySelectorAll('.doctorList_wrap > section.box').forEach(item => {
+                const nameElement = item.querySelector('.profile > .text > h4 > a');
+                const imgElement = item.querySelector('.profile > a .pic_img img');
 
-    const $ = cheerio.load(htmlContent);
+                if (!nameElement) return;
 
-    // const body = $('body').html();
+                const doctorName = nameElement.textContent.trim();
+                const onclickValue = nameElement.getAttribute('onclick');
+                
+                let profileUrl = null;
+                if (imgElement) {
+                    const src = imgElement.getAttribute('src');
+                    if (src) profileUrl = new URL(src, pageUrl).href;
+                }
 
-    const doctorArray = [];
-    let deptName = $('.searchForm_wrap h3.text_searchResult span').text().trim();
+                if (doctorName && onclickValue) {
+                    const pattern = /viewDoctor\('([0-9A-Za-z]+)', '([0-9A-Za-z]+)'\)/;
+                    const matches = onclickValue.match(pattern);
+                    if (matches && matches.length >= 3) {
+                        const dr_id = matches[1];
+                        const dept_id = matches[2];
+                        const link = `https://seoul.hyumc.com/seoul/mediteam/mditeam.do?action=detail&returnAction=list&currentPageNo=1&recordCountPerPage=8&searchCondition1=seqMediteam&searchCommonSeq=1&searchCommonCd1=${dr_id}&searchCommonCd2=${dept_id}&searchCondition2=all&searchKeyword=${deptName}&searchHospCd=&empyId=&bbsId=bestPartner&nttSeq=`;
+                        
+                        doctors.push({
+                            deptName,
+                            doctorName,
+                            link,
+                            profileUrl
+                        });
+                    }
+                }
+            });
+            return doctors;
+        }, url);
 
-    const pattern = /\'(.*)\'로 검색된 결과입니다./;
-    deptName = deptName.match(pattern)[1];
+    } catch (e) {
+        console.error('An error occurred during crawling process 02:', e);
+        error = e;
+    } finally {
+        if (browser) {
+            await browser.close();
+        }
+    }
 
-    $('.searchForm_wrap .doctorList_wrap section.box').each((index, item) => {
-      //tit_sectin inner h2
-      let doctorName = $(item).find('.profile > .text > h4 > a').text().trim();
-
-      const onclickValue = $(item).find('.profile > .text > h4 > a').attr('onclick')
-
-      const pattern = /viewDoctor\('([0-9A-Za-z]+)', '([0-9A-Za-z]+)'\)/;
-      const matches = onclickValue.match(pattern);
-      const dr_id = matches[1];
-      const dept_id = matches[2];
-      console.log(`dr_id`, dr_id);
-      console.log(`dept_id`, dept_id);
-
-      const link = `https://seoul.hyumc.com/seoul/mediteam/mditeam.do?action=detail&returnAction=list&currentPageNo=1&recordCountPerPage=8&searchCondition1=seqMediteam&searchCommonSeq=1&searchCommonCd1=${dr_id}&searchCommonCd2=${dept_id}&searchCondition2=all&searchKeyword=${deptName}&searchHospCd=&empyId=&bbsId=bestPartner&nttSeq=`;
-      
-      if(doctorName && link){
-        doctorArray.push({
-          deptName: deptName,
-          doctorName: doctorName,
-          link
-        });
-      }
-    });
-
-    page.close();
-    // browser.close();
+    console.log(`[END] crwalingProcess02. Found ${doctorArray.length} doctors.`);
     return { error: error, data: doctorArray };
   },
 
@@ -179,214 +182,139 @@ module.exports = {
   },  
 
 
-  Process03: async (url) => {
-    let result = null, Error, error = null, DBCode = null
+  crwalingProcess03: async (url) => {
+    let error = null;
+    let result = null;
+    console.log(`[START] Process03 for url: ${url}`);
 
-    let basic = {};
-    let detail = [];
-    const treatise = [];
+    if (!url) {
+        console.error('[ERROR] URL is required for Process03.');
+        return { error: 'URL is required', data: null };
+    }
 
-    const page = await browser.newPage();
-
+    let browser = null;
     try {
+        browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox'] });
+        const page = await browser.newPage();
+        // Listen for console events from inside the browser context
+        page.on('console', msg => console.log(`[BROWSER LOG] ${msg.text()}`));
+        await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36');
 
-      // let DBData1 = null
-      // let DBData2 = null
-      // let Response = { status: null, data: null }
-      // try {
-      //   Response = await axios.get(url, {
-      //     headers: {
-      //       'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-      //       'Cookie': '_fwb=180BkWbSApStpo6WmeE59Sq.1716537367549; __utma=171149434.1869919459.1716537368.1716537368.1716537368.1; __utmc=171149434; __utmz=171149434.1716537368.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _gid=GA1.3.1781820103.1716537368; _ga=GA1.1.1869919459.1716537368; _ga_LT9FD6NRDW=GS1.1.1716537368.1.0.1716537369.0.0.0; SCOUTER=x4la7sujboc428; org.springframework.web.servlet.i18n.CookieLocaleResolver.LOCALE=kr; language=kr; _fwb=180BkWbSApStpo6WmeE59Sq.1716537367549; __utmc=26925601; _voicemonjs.option_change_flag=false; _voicemonjs.ttsmode=false; _voicemonjs.controllbarType=1; _voicemonjs.controlbarPosition=BR; _voicemonjs.controlbarScreenZoom=3; _voicemonjs.controlbarContrastMode=0; _voicemonjs.controlbarContrast=1; _voicemonjs.controlbarZoom=3; _voicemonjs.controlbarZoomContrast=1; _voicemonjs.controlbarHighlight=1; _voicemonjs.controlbarHighlightColor=1; _voicemonjs.voiceVolume=M; _voicemonjs.voicePitch=M; _voicemonjs.voiceSpeed=M; _voicemonjs.zoomPanelmode=0; _voicemonjs.controlbarSkinColor=0054FF; _voicemonjs.cpanel_showmode=1; __utma=26925601.1869919459.1716537368.1716537373.1716537376.2; __utmz=26925601.1716537376.2.2.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided); JSESSIONID=AE25BB993ECFCBF9A11213D273DCD8A1.front1; wcs_bt=e770d73a88a274:1716539917; __utmt=1; __utmb=26925601.14.10.1716537376',
-      //       'Referer': 'https://med.khmc.or.kr/kr/main.do'
-      //     }
-      //   })
-      // } catch (error) {
-      //   Error = error
-      //   console.log(`error on ${url} API return: ${error}`);
-      // }
-      // const $ = cheerio.load(Response.data);
+        await page.goto(url, { waitUntil: 'networkidle2' });
+        await page.waitForSelector('.medicalTeam3', { timeout: 30000 });
 
-      
+        const extractedData = await page.evaluate(() => {
+            console.log('[EVAL] Starting extraction inside browser.');
+            const basic = {};
+            const detail = [];
+            const treatise = [];
 
-      // Navigate to the website
-      await page.goto(url);
+            try {
+          
+                const doctorNameEl = document.querySelector('.medicalTeam3 .details div h1:first-child');
+                const deptNameEl = document.querySelector('.medicalTeam3 .details div h1:nth-of-type(2)');
+                const specialtyEl = document.querySelector('.medicalTeam3 .details p:nth-of-type(1)');
+                const imageEl = document.querySelector("#contents .doctorFixed .top_banner_img img");
 
-      await page.waitForSelector('#contents');
+                basic.doctorName = doctorNameEl ? doctorNameEl.textContent.trim() : null;
+             
+                if (deptNameEl) {
+                    basic.deptName = deptNameEl.textContent.replace('교수', '').trim();
+                } else {
+                    basic.deptName = null;
+                }
+           
+                basic.specialty = specialtyEl ? specialtyEl.textContent.trim() : null;
+             
+                if (imageEl) {
+                    const src = imageEl.getAttribute('src');
+                    if (src) {
+                        basic.profileImgUrl = new URL(src, window.location.href).href;
+                    }
+                }
+                document.querySelectorAll('section.doctorHistory .indi_resume .doctor_roadmap .scroll > section').forEach((section, index) => {
+                    //console.log(`[EVAL] Processing history section ${index + 1}`);
+                    const typeEl = section.querySelector('h3');
+                    const contentEl = section.querySelector('p');
 
-      const htmlContent = await page.content();
+                    if (typeEl && contentEl) {
+                        let type = typeEl.textContent.trim();
+                        //console.log(`[EVAL] History type: ${type}`);
+                        const histories = contentEl.innerText.trim();
 
-      const $ = cheerio.load(htmlContent);
+                        if (histories) {
+                            const historyList = histories.split('\n').filter(line => line.trim() !== '');
+                            historyList.forEach(historyText => {
+                                let cleanHistory = historyText.replace(/-\s/g, '').trim();
+                                if (type === '수상' && cleanHistory === '논문') {
+                                    type = '논문';
+                                    return;
+                                }
+                                
+                                if (type === '논문') {
+                                    //console.log(`[EVAL] Found treatise: ${cleanHistory}`);
+                                    treatise.push({ type, targetDate: null, title: cleanHistory, url:'' });
+                                } else {
+                                    //console.log(`[EVAL] Found detail: ${cleanHistory}`);
+                                    detail.push({ type, targetDate: null, text: cleanHistory, url:'' });
+                                }
+                            });
+                        } 
+                    } 
+                });
+         
 
-      const body = $('body').html();
-
-      const info = [];
-      const jsonData = [];
-      let doctorName = $('.medicalTeam3 .details div h1:first').text().trim().replace(/\t/g, '').replace(/\n/g, '');
-      console.log(`doctorName`, doctorName);
-
-      const deptName = $('.medicalTeam3 .details div h1:nth-of-type(2)').text().trim().replace(/\t/g, '').replace(/\n/g, '');
-
-      const specialty = $('.medicalTeam3 .details p:nth-of-type(1)').text().trim();
-
-      const ImageUrl = $("#contents > div > div.doctorFixed > div > div.top_banner_img > img").attr('src');
-
-      basic = {
-        rid: null,
-        hid: null,
-        deptName: deptName,
-        doctorName: doctorName,
-        specialty: specialty,
-        profileImgUrl: ImageUrl ? `https://seoul.hyumc.com${ImageUrl}` :null
-      }
-
-      $('section.doctorHistory > .indi_resume > .doctor_roadmap > .scroll > section').each((index, element) => {
-
-        let type = $(element).find('h3').text().trim();
-        const histories = $(element).find('p').text().trim();
-
-        if(histories) {
-          const historyList = histories.replace(/-\s/g, '').split('\n');
-          historyList.forEach(history => {
-            if( type === '수상' && history === '논문' ) {
-              type = '논문';
-              return;
+            } catch (e) {
+                console.error('[EVAL] An error occurred inside evaluate:', e.message);
+                return { error: e.message };
             }
-            const targetDate = null;
-            let career;
-            if( type === '논문') {
-              career = { type, targetDate, title: history, url:''}
-              treatise.push(career)
-            }
-            else {
-              career = { type, targetDate, text: history, url:''}
-            }
-            console.log('career', career); 
-            jsonData.push(career);
-          })
+
+            return { basic, detail, treatise };
+        });
+        console.log('[DEBUG] Page evaluation finished.');
+
+        if (extractedData.error) {
+            throw new Error(`Error from page.evaluate: ${extractedData.error}`);
         }
-      })
-      detail = jsonData;
-     
-    }
-    catch(error) {
-      console.log('error', error);
-      console.log(`The crawling attempt from URL(${url}) has failed.`);
-    }
-    finally {
-      page.close();
+
+        result = extractedData;
+
+    } catch (e) {
+        console.error('An error occurred during Process03:', e);
+        error = e;
+    } finally {
+        if (browser) {
+            console.log('[DEBUG] Closing browser.');
+            await browser.close();
+        }
     }
 
-    result = {
-      basic: basic,
-      detail: detail,
-      treatise: treatise
-    }
+    console.log(`[END] Process03. Found basic info for ${result?.basic?.doctorName}.`);
     return { error: error, data: result };
   },
 
-
-  crwalingProcess03: async (url) => {
-    let result = null, error = null, DBCode = null
-    let DBData1 = null
-    let DBData2 = null
-    let Response = { status: null, data: null }
-    if (!url) {
-      return { error: true, data: null };
+  setCrawlingdoctorBasic: async (rid, hid, deptName, doctorName, specialty, profileimgurl) => {
+    
+    let result = null, error = null, DBCode = null, DBData = null
+    const query = `CALL UPDATE_DOCTOR_BASIC(?)`
+    // const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, specialty, profileimgurl]);
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, specialty, profileimgurl, '']);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
     }
-    try {
-      Response = await axios.get(url, {
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0',
-        }
-      })
-    } catch (error) {
-      Error = error
-      console.log(`error on ${url} API return: ${error}`);
-    }
-    const $ = cheerio.load(Response.data);
-    const jsonData = [];
-    const treatise = [];
-    $('div.doctor-paper-career table').each((index, element) => {
-      let type = null
-      type = $(element).find('caption').text().trim();
-      $('div.doctor-paper-career table tr').each((index2, element2) => {
-        const targetDate = $(element2).find('th').text().trim().replace(/\t/g, '').replace(/\n/g, '');
-        const text = $(element2).find('td').text().trim();
-        jsonData.push({
-          type: type,
-          targetDate: targetDate,
-          text: text
-        });
-      });
-    });
-    $('li.paper-list-item').each((index, element) => {
-      const paperNo = $(element).find('span.paper-default-info').text().trim();
-      const PaperName = $(element).find('strong.paper-name').text().trim();
-      const paperInfo = $(element).find('span.paper-default-info').text().trim();
-      const paperUrl = $(element).find('a.link-pubmed').attr('href')
-      const doiPattern = /\b10\.\d{4}\/\S+\b/;
-      const journalPattern = /^[^\d]+/;
-      const yearPattern = /\b\d{4}\b/;
-      const journalMatch = paperNo.match(journalPattern);
-      const journalName = journalMatch ? journalMatch[0].trim() : "Unknown Journal";
-      const yearMatch = paperNo.match(yearPattern);
-      const year = yearMatch ? parseInt(yearMatch[0]) : null;
-      const doiMatch = paperNo.match(doiPattern);
-      const doiNumber = doiMatch ? doiMatch[0] : null;
-      console.log("Journal Name:", journalName);
-      console.log("Year:", year);
-      console.log("doiMatch:", doiNumber);
-      if (PaperName) {
-        treatise.push({
-          title: PaperName,
-          doi: doiNumber,
-          journalName: journalName,
-          authorRule: null,
-          publicationDate: year ? `${year}-01-01 00:00:00` : null,
-          url: paperUrl,
-          authorName: paperInfo,
-          abstract: null,
-          keywords: null,
-          impactFactor: 0,
-          totalCitations: 0,
-          referencesThesis: null,
-          subjectClassification: null,
-          publicationLocation: null
-        })
-        // console.log("Extracted DOI:", doiNumber);
-      } else {
-        jsonData.push({
-          type: '논문',
-          No: paperNo,
-          text: PaperName,
-          Info: paperInfo,
-          Url: paperUrl
-        });
-      }
+    // console.log(RS)
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
 
-    });
-    await CS.wait(100);
-    const deptName = $('h2.doctor-paper-info span.info-field').first().text().trim();
-    const doctorName = $('span[name="fullName"]').first().text().trim();
-    const sectionElement = $('#doctor-paper-section02');
-    const style = sectionElement.attr('style');
-    const profileImgUrl = style.match(/background-image: url\(['"]?([^'")]+)['"]?\)/)[1];
-    const specialty = $('div.doctor-paper-field dd').text().trim();
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
 
-    let item = {
-      doctorName: doctorName,
-      deptName: deptName,
-      specialty: specialty,
-      profileImgUrl: `http://www.samsunghospital.com/${profileImgUrl}`,
-      biography: jsonData,
-      treatise: treatise
-    };
-    return { error: error, data: item };
   },
 
-
-  setCrawlingdoctorBasic: async (rid, hid, deptName, doctorName, specialty, profileimgurl) => {
+  setCrawlingdoctorBasic_old: async (rid, hid, deptName, doctorName, specialty, profileimgurl) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL set_crawlingdoctor_basic(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, deptName, doctorName, specialty, profileimgurl]);
@@ -404,9 +332,26 @@ module.exports = {
     return { error: error, data: result };
   },
 
-
-
   setCrawlingdoctorBiography: async (rid, hid, doctorName, jsondata) => {
+    
+    let result = null, error = null, DBCode = null, DBData = null
+    const query = `CALL SET_DOCTOR_CAREER(?)`
+    // const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, doctorName, jsondata]);
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, DATA_VERSION_ID, jsondata]);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
+
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+  },
+
+  setCrawlingdoctorBiography_old: async (rid, hid, doctorName, jsondata) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL set_crawlingdoctor_detail(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, doctorName, jsondata]);
@@ -424,9 +369,30 @@ module.exports = {
     return { error: error, data: result };
   },
 
-
-
   setCrawlingTreatise: async (rid, title, doi, journalName, authorRule, publicationDate, url,
+    abstract, keywords, impactFactor, totalCitations, referencesThesis,
+    doctorName, authorName, subjectClassification, publicationLocation) => {
+    let result = null, error = null, DBCode = null, DBData = null;
+    let rePublicationDate = await functions.formatPublishDate(publicationDate);
+    console.log(`setCrawlingTreatise: ${title}, ${rePublicationDate}, ${journalName}`)
+    const query = `CALL set_doctor_paper(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, DATA_VERSION_ID, doctorName, title, doi, journalName, authorRule, rePublicationDate, url,
+      abstract, keywords, impactFactor, totalCitations, authorName]);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    // console.log(RS)
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
+
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+  },
+
+  setCrawlingTreatise_old: async (rid, title, doi, journalName, authorRule, publicationDate, url,
     abstract, keywords, impactFactor, totalCitations, referencesThesis,
     doctorName, authorName, subjectClassification, publicationLocation) => {
     let result = null, error = null, DBCode = null, DBData = null
@@ -447,13 +413,28 @@ module.exports = {
     result = DBData
     return { error: error, data: result };
   },
+  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url,profile_url,p_hName) => {
 
+    console.log(`dddd`,rid, hid, deptName, doctorName, url,profile_url,p_hName)
+    let result = null, error = null, DBCode = null, DBData = null
+    const query = `CALL set_doctor_basic_v3(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url,profile_url,p_hName,url]);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    // console.log(RS)
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
 
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
 
+  },
 
-
-
-  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url) => {
+  setCrawlingDoctorLink_old: async (rid, hid, deptName, doctorName, url) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL SET_CRAWLING_DOCTOR_LINK(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, deptName, doctorName, url]);
@@ -471,10 +452,29 @@ module.exports = {
     return { error: error, data: result };
   },
 
-
-
-
   getCrawlingDoctorLink: async (hid) => {
+
+    let result = null, error = null, DBCode = null, DBData = null
+    const query = `CALL get_doctor_basic(?)`
+    console.log(`getCrawlingDoctorLink: ${hid} ${DATA_VERSION_ID}`);
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [hid, DATA_VERSION_ID]);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    // console.log(RS)
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
+
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+
+  },
+
+
+  getCrawlingDoctorLink_old: async (hid) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL GET_CRAWLING_DOCTOR_LINK(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [hid]);
@@ -513,8 +513,10 @@ module.exports = {
   },
 
   get_rid_encrypt: async (p_doctorName, p_refUrl) => {
+
+    console.log(`p_doctorName : ${p_doctorName}, p_refUrl : ${p_refUrl}`);
     let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL get_rid_encrypt(?)`
+    const query = `CALL set_rid(?) `
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [p_doctorName, p_refUrl]);
     if (DBError) {
       console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
@@ -529,7 +531,6 @@ module.exports = {
     result = DBData
     return { error: error, data: result };
   },
-
 
   get_rid_decrypt: async (p_txt) => {
     let result = null, error = null, DBCode = null, DBData = null

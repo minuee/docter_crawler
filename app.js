@@ -82,7 +82,7 @@ class App {
   getRouting() {
 
     this.app.use('/logout', (req, res) => {
-      res.status(401).send('Logged out')
+      res.status(401).send('Logged out');
     });
 
     this.app.use('/healthcheck', (req, res) => {
@@ -161,7 +161,9 @@ class App {
 
     this.app.use('/v1/c/crawling_bedoc', require(`${global.appRoot}/services/crawling_bedoc/route`)); // 베닥병원 수집
 
-  }
+    this.app.use('/v1/c/crawling_did_link', require(`${global.appRoot}/services/crawling_did_link/route`)); // 3차병원 DID 작업
+
+    }
 
   errorHandler() {
     this.app.use((req, res, _) => {

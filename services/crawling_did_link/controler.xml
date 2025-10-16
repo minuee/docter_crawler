@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="controler">  
+
+    <select id="select_new_doctor_list">
+        SELECT 
+            b.jsondata as info,h.baseName as hospitalname,
+            a.hid,a.deptname,a.doctorname,specialties,a.rid_long
+        FROM
+            doctor_basic a LEFT JOIN doctor_career b ON a.rid = b.rid
+            LEFT JOIN hospital h ON a.hid = h.hid
+        WHERE 
+            a.hid = #{search_hid} and is_active  = 2  and a.data_version_id  = #{search_data_version_id}
+        ORDER BY a.deptname , a.doctorname
+        LIMIT 5
+    </select>
+
+    <select id="select_new_doctor_samename_list">
+        SELECT 
+            b.jsondata as info,h.baseName as hospitalname,
+            a.hid,a.deptname,a.doctorname,specialties,a.rid_long
+        FROM
+            doctor_basic a LEFT JOIN doctor_career b ON a.rid = b.rid
+            LEFT JOIN hospital h ON a.hid = h.hid
+        WHERE 
+            a.deptname = #{search_deptname} and a.doctorname = #{search_doctorname} 
+            and a.rid not in ( #{pass_rid} ) and a.data_version_id in ( 1,2 )
+        ORDER BY a.deptname , a.doctorname
+    </select>
+
+    
+    <update id="hospital_aiga_detailurl_update">
+        UPDATE doctor_basic 
+        SET 
+            new_doctor_url = #{foundProfileUrl},
+            new_hospitalname = #{findHospitalName}
+        WHERE rid_long = #{rid_long} 
+    </update>
+
+</mapper>

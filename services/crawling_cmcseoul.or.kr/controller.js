@@ -5,13 +5,15 @@ const daoMysql = require(`${global.appRoot}/server/database/dao.mysql`);
 const moment = require('moment-timezone');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
-const https = require('https');
 const crypto = require('crypto');
 const axios = require('axios');
 const cheerio = require('cheerio');
 const puppeteer = require('puppeteer');
+
 const _ = require('lodash');
-const { isJSON } = require('../../server/util/util.casting');
+const functions = require(`${global.appRoot}/server/util/function`);
+const { isJSON } = require(`${global.appRoot}/server/util/util.casting`);
+const DATA_VERSION_ID = parseInt(process.env.DATA_VERSION_ID) ? parseInt(process.env.DATA_VERSION_ID) : 1;
 
 module.exports = {
 
@@ -83,6 +85,7 @@ module.exports = {
         const txtDept = option.text();
         const txtValue = option.attr('value');
         jsonData.push({ txtDept, txtValue });
+        console.log(`https://www.cmcseoul.or.kr/api/doctor?deptClsf=A&deptCd=${txtValue}&drName=&orderType=`);
         jsonData2.push(`https://www.cmcseoul.or.kr/api/doctor?deptClsf=A&deptCd=${txtValue}&drName=&orderType=`);
       }
     });
@@ -105,11 +108,14 @@ module.exports = {
     const page = await browser.newPage();
     await page.goto(url);
     const htmlContent = await page.content();
+
+    console.log(`crwalingProcess02 : ${url}`)
+
     // Load the HTML content into Cheerio
     // const pageTitle = $('title').text();
     // console.log('Page title:', pageTitle);
     const $ = cheerio.load(htmlContent);
-    const txtHtml = $(`pre`).text().trim()
+    const txtHtml = $(`pre`).text().trim();
     if (isJSON(txtHtml)) {
       jsonData = txtHtml
     } else {
@@ -141,10 +147,7 @@ module.exports = {
     if (!url) {
       return { error: true, data: null };
     }
-    // const agent = new https.Agent({
-    //   rejectUnauthorized: false
-    // });
-    //https://www.snuh.org/blog/65868/career.do?hsp_cd=
+ 
     const contentType = 'application/json;charset=UTF-8'
     const referer = url.replace('api', 'page')
     console.log(`referer========================`)
@@ -166,15 +169,15 @@ module.exports = {
     // const $ = cheerio.load(Response.data);
     const resData = Response.data
     // 쓰레기 태그 날림
-    // $('span').empty(); // 못날림 (이름과 진료과가 붙어있음)
-
+ 
     const doctorName = resData.drName
     const deptName = resData.doctorDept.deptNm
     const specialty = resData.doctorDept.special
     const drNo = resData.drNo
     const profileimgurl = `https://www.cmcseoul.or.kr/api/attach/view/doctor/${drNo}/profile/1`
-
-    let jsonData = new Array()
+    console.log(` doctorName : ${doctorName}, deptName : ${deptName}, specialty : ${specialty}, drNo : ${drNo}, profileimgurl : ${profileimgurl}`)
+    let jsonData = new Array();
+    let jsonPaper = new Array()
     // console.log(resData)
     for (let index = 0; index < _.size(resData.doctorDetail.doctorRecordList); index++) {
       const element = resData.doctorDetail.doctorRecordList[index];
@@ -188,6 +191,7 @@ module.exports = {
         endYear: element.endYear,
         approvalYn: element.approvalYn,
       }
+      console.log(` 1, ${index} : ${JSON.stringify(item)} `)
       jsonData.push(item)
     }
 
@@ -204,7 +208,8 @@ module.exports = {
         postedMonth: element.postedMonth,
         approvalYn: element.approvalYn,
       }
-      jsonData.push(item)
+      console.log(` 2, ${index} : ${JSON.stringify(item)} `)
+      jsonPaper.push(item)
 
     }
 
@@ -221,6 +226,7 @@ module.exports = {
         publishMonth: element.publishMonth,
         approvalYn: element.approvalYn,
       }
+      console.log(` 3, ${index} : ${JSON.stringify(item)} `)
       jsonData.push(item)
 
     }
@@ -234,6 +240,7 @@ module.exports = {
         link: element.link,
         newsClsfText: element.newsClsfText
       }
+      console.log(` 4, ${index} : ${JSON.stringify(item)} `)
       jsonData.push(item)
 
     }
@@ -243,6 +250,7 @@ module.exports = {
       specialty: specialty,
       profileImgUrl: `${profileimgurl}`,
       biography: jsonData,
+      paper : jsonPaper
     };
 
     // console.log(`resData`);
@@ -351,6 +359,29 @@ module.exports = {
   setCrawlingTreatise: async (rid, title, doi, journalName, authorRule, publicationDate, url,
     abstract, keywords, impactFactor, totalCitations, referencesThesis,
     doctorName, authorName, subjectClassification, publicationLocation) => {
+    let result = null, error = null, DBCode = null, DBData = null;
+    let rePublicationDate = await functions.formatPublishDate(publicationDate);
+    console.log(`setCrawlingTreatise: ${title}, ${rePublicationDate}, ${journalName}`)
+    const query = `CALL set_doctor_paper(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, DATA_VERSION_ID, doctorName, title, doi, journalName, authorRule, rePublicationDate, url,
+      abstract, keywords, impactFactor, totalCitations, authorName]);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    // console.log(RS)
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
+
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+  },
+
+  setCrawlingTreatise_old: async (rid, title, doi, journalName, authorRule, publicationDate, url,
+    abstract, keywords, impactFactor, totalCitations, referencesThesis,
+    doctorName, authorName, subjectClassification, publicationLocation) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL set_crawlingdoctor_treatise(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, title, doi, journalName, authorRule, publicationDate, url,
@@ -380,6 +411,27 @@ module.exports = {
     * *********************************************************************************************/
 
   setCrawlingdoctorBasic: async (rid, hid, deptName, doctorName, specialty, profileimgurl) => {
+    
+    let result = null, error = null, DBCode = null, DBData = null
+    const query = `CALL UPDATE_DOCTOR_BASIC(?)`
+    // const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, specialty, profileimgurl]);
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, specialty, profileimgurl, '']);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    // console.log(RS)
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
+
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+
+  },
+
+  setCrawlingdoctorBasic_old: async (rid, hid, deptName, doctorName, specialty, profileimgurl) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL set_crawlingdoctor_basic(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, deptName, doctorName, specialty, profileimgurl]);
@@ -406,6 +458,25 @@ module.exports = {
     * *********************************************************************************************/
 
   setCrawlingdoctorBiography: async (rid, hid, doctorName, jsondata) => {
+    
+    let result = null, error = null, DBCode = null, DBData = null
+    const query = `CALL SET_DOCTOR_CAREER(?)`
+    // const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, doctorName, jsondata]);
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, DATA_VERSION_ID, jsondata]);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
+
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+  },
+
+  setCrawlingdoctorBiography_old: async (rid, hid, doctorName, jsondata) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL set_crawlingdoctor_detail(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, doctorName, jsondata]);
@@ -432,7 +503,27 @@ module.exports = {
   * 크롤링 타겟리스트 데이터 베이스 저장
   * *********************************************************************************************/
 
-  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url) => {
+  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url,profile_url,p_hName) => {
+
+    let result = null, error = null, DBCode = null, DBData = null
+    const query = `CALL set_doctor_basic_v3(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url,profile_url,p_hName,url]);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    // console.log(RS)
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
+
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+
+  },
+
+  setCrawlingDoctorLink_old: async (rid, hid, deptName, doctorName, url) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL SET_CRAWLING_DOCTOR_LINK(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, deptName, doctorName, url]);
@@ -460,6 +551,28 @@ module.exports = {
   * *********************************************************************************************/
 
   getCrawlingDoctorLink: async (hid) => {
+
+    let result = null, error = null, DBCode = null, DBData = null
+    const query = `CALL get_doctor_basic(?)`
+    console.log(`getCrawlingDoctorLink: ${hid} ${DATA_VERSION_ID}`);
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [hid, DATA_VERSION_ID]);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    // console.log(RS)
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
+
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+
+  },
+
+
+  getCrawlingDoctorLink_old: async (hid) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL GET_CRAWLING_DOCTOR_LINK(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [hid]);
@@ -511,6 +624,26 @@ module.exports = {
   * *********************************************************************************************/
 
   get_rid_encrypt: async (p_doctorName, p_refUrl) => {
+
+    console.log(`p_doctorName : ${p_doctorName}, p_refUrl : ${p_refUrl}`);
+    let result = null, error = null, DBCode = null, DBData = null
+    const query = `CALL set_rid(?) `
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [p_doctorName, p_refUrl]);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    // console.log(RS)
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
+
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+  },
+
+  get_rid_encrypt_old: async (p_doctorName, p_refUrl) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL get_rid_encrypt(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [p_doctorName, p_refUrl]);
