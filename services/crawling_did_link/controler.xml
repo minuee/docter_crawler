@@ -4,18 +4,57 @@
 
     <select id="select_new_doctor_list">
         SELECT 
-            b.jsondata as info,h.baseName as hospitalname,
-            a.hid,a.deptname,a.doctorname,specialties,a.rid_long
+            a.rid_long,a.hid,h.baseName as hospitalname,a.deptname,a.doctorname,specialties,a.doctor_url,
+            b.jsondata as info
         FROM
             doctor_basic a LEFT JOIN doctor_career b ON a.rid = b.rid
             LEFT JOIN hospital h ON a.hid = h.hid
         WHERE 
             a.hid = #{search_hid} and is_active  = 2  and a.data_version_id  = #{search_data_version_id}
         ORDER BY a.deptname , a.doctorname
-        LIMIT 5
+        LIMIT 100
     </select>
 
     <select id="select_new_doctor_samename_list">
+        SELECT 
+             a.rid_long,a.hid,h.baseName as hospitalname,a.deptname,a.doctorname,specialties,a.doctor_url,
+            b.jsondata as info
+        FROM
+            doctor_basic a LEFT JOIN doctor_career b ON a.rid = b.rid
+            LEFT JOIN hospital h ON a.hid = h.hid
+        WHERE 
+            a.deptname = #{search_deptname} and a.doctorname = #{search_doctorname} 
+            and a.rid_long not in ( #{pass_rid_long} ) and a.data_version_id in ( 1,2 )
+        ORDER BY a.deptname , a.doctorname
+    </select>
+
+    
+    <update id="update_new_doctor_for_doctorbasictable">
+        UPDATE doctor_basic 
+        SET 
+            prev_rid = #{target_rid_long},
+            updateAt = now()
+        WHERE rid_long = #{search_rid_long} 
+    </update>
+
+    <update id="update_new_doctor_for_doctortable">
+        UPDATE doctor
+        SET 
+            rid = #{search_rid_long},
+            is_active = 1,
+            updateAt = now()
+        WHERE rid_long = #{target_rid_long} 
+    </update>
+
+    <update id="update_new_doctor_for_patientreviewtable">
+        UPDATE patient_review_evaluation 
+        SET 
+            rid = #{search_rid_long},
+            updateAt = now()
+        WHERE rid_long = #{target_rid_long} 
+    </update>
+
+    <select id="select_notexist_doctor_list">
         SELECT 
             b.jsondata as info,h.baseName as hospitalname,
             a.hid,a.deptname,a.doctorname,specialties,a.rid_long
@@ -23,18 +62,13 @@
             doctor_basic a LEFT JOIN doctor_career b ON a.rid = b.rid
             LEFT JOIN hospital h ON a.hid = h.hid
         WHERE 
-            a.deptname = #{search_deptname} and a.doctorname = #{search_doctorname} 
-            and a.rid not in ( #{pass_rid} ) and a.data_version_id in ( 1,2 )
+            a.hid = #{search_hid} and is_active  = 0  and a.data_version_id in ( 1,2 )
         ORDER BY a.deptname , a.doctorname
+        LIMIT 5
     </select>
 
-    
-    <update id="hospital_aiga_detailurl_update">
-        UPDATE doctor_basic 
-        SET 
-            new_doctor_url = #{foundProfileUrl},
-            new_hospitalname = #{findHospitalName}
-        WHERE rid_long = #{rid_long} 
+    <update id="update_notexist_doctor_list">
+        UPDATE doctor SET is_active = 0, updateAt = now() WHERE rid_long = #{search_rid_long} 
     </update>
 
 </mapper>
