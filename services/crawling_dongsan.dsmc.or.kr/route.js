@@ -69,10 +69,12 @@ router.post('/healthcheck', async function(req, res) {
 router.post('/step01', async function(req, res, next) {  
 
   const HOSPITAL_ID = 'H01KR-47000002';
+  const HOSPITAL_NAME = '계명대학교동산병원';
   const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
   if ( ret.success === false ) {
     return res.send(ret);
   }
+  
 
   const data = [];
   const r_url = `https://dongsan.dsmc.or.kr:49870/content/02depart/01_01.php`;
@@ -86,31 +88,33 @@ router.post('/step01', async function(req, res, next) {
   for (let i = 0; i < _.size(P1.data); i++) {
     await CS.wait(500);
     console.log(`loop ${i} link : ${P1.data[i].link}, deptName : ${P1.data[i].deptName}`);
-    /* const SP1 = await crawlingCtrl.crwalingProcess02(P1.data[i].link, P1.data[i].deptName);
+    const SP1 = await crawlingCtrl.crwalingProcess02(P1.data[i].link, P1.data[i].deptName);
    
     if (!functions.isEmpty(SP1.data)) {
       for (let i = 0; i < _.size(SP1.data); i++) {
-        data.push({
-          hid: HOSPITAL_ID,
-          deptName: SP1.data[i].deptName,
-          doctorName: SP1.data[i].doctorName,
-          url: SP1.data[i].url
-        })
-        await CS.wait(200);
-        const SP0 = await crawlingCtrl.get_rid_encrypt(SP1.data[i].doctorName, SP1.data[i].url);
-        //console.log("SP0",SP0.data);
-        if (SP0.error) {
-          console.log("SP0 DB fail.");
-          return res.json(TS.fail("SP0 DB fail."));
-        }
-        const tempRid = SP0.data[0].rid_encrypt;
+        if ( SP1.data[i].deptName == "가정의학과" && SP1.data[i].doctorName == "김대현") {
+          data.push({
+            hid: HOSPITAL_ID,
+            deptName: SP1.data[i].deptName,
+            doctorName: SP1.data[i].doctorName,
+            url: SP1.data[i].url
+          })
+          await CS.wait(200);
+          const SP0 = await crawlingCtrl.get_rid_encrypt(SP1.data[i].doctorName, SP1.data[i].url);
+          //console.log("SP0",SP0.data);
+          if (SP0.error) {
+            console.log("SP0 DB fail.");
+            return res.json(TS.fail("SP0 DB fail."));
+          }
+          const tempRid = SP0.data[0].rid_encrypt;
 
-        const SP2 = await crawlingCtrl.setCrawlingDoctorLink(tempRid, HOSPITAL_ID, SP1.data[i].deptName, SP1.data[i].doctorName, SP1.data[i].url, SP1.data[i].profile_url);
-        if (SP2.error) console.log("DB upsert fail.");;
+          const SP2 = await crawlingCtrl.setCrawlingDoctorLink(tempRid, HOSPITAL_ID, SP1.data[i].deptName, SP1.data[i].doctorName, SP1.data[i].url,  SP1.data[i].profileUrl,HOSPITAL_NAME);
+          if (SP2.error) console.log("DB upsert fail.");
+        }
       }
     } else {
       console.log(`loop ${i} result is null.`);
-    } */
+    }
   }
 
   console.log(`검색된 진료과목수 : ${_.size(P1.data)}, 검색된 의사수 : ${_.size(data)}`);
@@ -221,7 +225,7 @@ router.post('/step02', async (req, res, next) => {
         const SP1_press2 = await crawlingCtrl.crwalingProcess03_press2(refUrl_press2, SP1_book.data);
         const tempRid = doctorRid;
         //console.log(`check data: ${SP1_press2.data.biography} ${refUrl} ${deptName} ${tempRid}`);
-        if (CS.isEmpty(tempRid)) break;
+        /* if (CS.isEmpty(tempRid)) break;
         await CS.wait(300);
         const SP3 = await crawlingCtrl.setCrawlingdoctorBasic(tempRid, HOSPITAL_ID, deptName, doctorName, SP1_press2.data.specialty, profileimgurl);
         if (SP3.error) {
@@ -234,7 +238,7 @@ router.post('/step02', async (req, res, next) => {
         if (SP4.error) {
           console.log("SP4 DB fail.");
           return res.json(TS.fail("SP4 DB fail."));
-        }
+        } */
 
         data.push({
           hid: HOSPITAL_ID,
@@ -324,7 +328,7 @@ router.post('/treatise', async (req, res, next) => {
       await CS.wait(300);
       const tempRid = P1.data[i].rid
       if (CS.isEmpty(tempRid)) break;
-      for (let index = 0; index < _.size(SP1.data.biography); index++) {
+      /* for (let index = 0; index < _.size(SP1.data.biography); index++) {
         const element = SP1.data.biography[index];
         const iD = {
           rid: tempRid,
@@ -350,7 +354,7 @@ router.post('/treatise', async (req, res, next) => {
           console.log(`Error on ${P1.data[i].doctorName}`)
         }
         article++;
-      }
+      } */
     }
   }
   return res.send({

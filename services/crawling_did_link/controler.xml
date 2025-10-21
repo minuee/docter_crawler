@@ -4,7 +4,7 @@
 
     <select id="select_new_doctor_list">
         SELECT 
-            a.rid_long,a.hid,h.baseName as hospitalname,a.deptname,a.doctorname,specialties,a.doctor_url,
+            a.rid_long,a.hid,h.baseName as hospitalname,a.deptname,a.doctorname,specialties,a.doctor_url,a.profileimgurl,
             b.jsondata as info
         FROM
             doctor_basic a LEFT JOIN doctor_career b ON a.rid = b.rid
@@ -17,7 +17,7 @@
 
     <select id="select_new_doctor_samename_list">
         SELECT 
-             a.rid_long,a.hid,h.baseName as hospitalname,a.deptname,a.doctorname,specialties,a.doctor_url,
+             a.rid_long,a.hid,h.baseName as hospitalname,a.deptname,a.doctorname,specialties,a.doctor_url,a.profileimgurl,
             b.jsondata as info
         FROM
             doctor_basic a LEFT JOIN doctor_career b ON a.rid = b.rid

@@ -138,7 +138,8 @@ module.exports = {
         const doctorName = $(element).find('div.doctor_cont').find('p.doctor_name > span:first-child').text() ? $(element).find('div.doctor_cont').find('p.doctor_name > span:first-child').text() : '';
         const doctorNo = $(element).find('div.doctor_cont').find('div.doctor_cont_inner > a').attr('data-no') ? $(element).find('div.doctor_cont').find('div.doctor_cont_inner > a').attr('data-no') : 0;
         const tmpLink = `https://ansan.kumc.or.kr/kr/doctor-department/doctor/view.do?drNo=${doctorNo}`;
-      
+        const profileUrlTmp = $(element).find('div.doctor_img').find('img').attr('src');
+        const profileUrl = profileUrlTmp ? `https://ansan.kumc.or.kr/kr${profileUrlTmp}` : "";
         console.log(`Adding doctor list: ${index} ${doctorName} ${doctorNo} ${tmpLink}`); // 디버깅을 위한 로그
         
         if ( doctorNo > 0 && !functions.isEmpty(doctorName) && !functions.isEmpty(deptName)) {
@@ -146,6 +147,7 @@ module.exports = {
             doctorName,
             deptName,
             url: tmpLink,
+            profileUrl
           };
           doctors.push(doctor); 
 
@@ -194,12 +196,43 @@ module.exports = {
       //await page.waitForSelector("._careerIemContainer");
       await CS.wait(1000);
       await page.keyboard.press('ArrowUp');
+
+      // 페이지에 있는 모든 '더보기' 버튼을 찾아 클릭합니다.
+      console.log("페이지에 있는 모든 '더보기' 버튼을 찾아서 클릭합니다.");
+      await page.evaluate(async () => {
+          const allMoreButtons = Array.from(document.querySelectorAll("a")).filter(link => link.textContent.includes('더보기'));
+          console.log(`총 ${allMoreButtons.length}개의 '더보기' 버튼을 찾았습니다.`);
+          for (const button of allMoreButtons) {
+              try {
+                  button.click();
+              } catch (e) {
+                  console.log('사라졌거나 클릭할 수 없는 \'더보기\' 버튼입니다.');
+              }
+          }
+      });
+      // evaluate 내에서 발생한 클릭으로 인한 비동기 작업(네트워크 로드 등)이 완료되기를 기다리기 위해 추가 대기 시간을 줍니다.
+      await new Promise(resolve => setTimeout(resolve, 3000));
+      console.log("모든 '더보기' 버튼 클릭 시도를 완료했습니다.");
       const htmlContent = await page.content();
       const $ = cheerio.load(htmlContent);  
 
 
       const profileImgUrl = $('div.container > div').find("img").attr('src') ? $('div.container > div').find("img").attr('src') : '';
-      let tmpSpecialty = $('div.doctorwrap').find('ul.clear').find('li.field_contents').text() ? $('div.doctorwrap').find('ul.clear').find('li.field_contents').text().trim()  : '';
+      let tmpSpecialty = $('div.doctorwrap')
+      .find('li.field_title')
+      .filter((i, el) => $(el).text().trim() === '전문진료분야') // 정확히 매칭
+      .parent('ul') // 부모 ul
+      .find('li.field_contents') // ul 안의 field_contents만
+      .first() // 혹시 여러개 있을 수 있으므로 첫 번째만
+      .text() 
+      ? $('div.doctorwrap')
+      .find('li.field_title')
+      .filter((i, el) => $(el).text().trim() === '전문진료분야') // 정확히 매칭
+      .parent('ul') // 부모 ul
+      .find('li.field_contents') // ul 안의 field_contents만
+      .first() // 혹시 여러개 있을 수 있으므로 첫 번째만
+      .text().trim()  
+      : '';
       // 진료분야를 json화 한다
       let specialtyJson = tmpSpecialty.split(",");
       //console.log(`specialtyJson: ${JSON.stringify(specialtyJson)}`);
@@ -211,15 +244,16 @@ module.exports = {
         biography: [],
       };
       //const smaple = $('#_careerContainer').find('._careerIem:first-child > td').text();
-      //console.log(`_press: ${smaple}`);
+      console.log(`_press: ${JSON.stringify(item)}`);
 
-      $('#line2').find("div.doc_info01_table > table").find('tbody > tr').each((index, dtElement) => {
+      $('#line2').find("p.info_tit:contains('학력')").next("div.doc_info01_table").find('table > tbody > tr').each((index, dtElement) => {
         
         const dtYearText = $(dtElement).find('th').text() ? $(dtElement).find('th').text() : '';
         const dtText = $(dtElement).find('td').text() ? $(dtElement).find('td').text() : '';
  
         if ( !functions.isEmpty(dtText) ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+          console.log(`학력 tmpText: ${tmpText}`)
           item.biography.push({
             targetDate : dtYearText,
             type: "학력",
@@ -230,22 +264,34 @@ module.exports = {
         }
       });
 
-      $('#line2').find("div.tab_ui").find("div.tab_cont > ul > li:first-child").find('table').find("tbody > tr").each((index, dtElement) => {
-        
-        const dtYearText = $(dtElement).find('th').text() ? $(dtElement).find('th').text() : '';
-        const dtText = $(dtElement).find('td').text() ? $(dtElement).find('td').text() : '';
+      $('#line2').find('div.tab_ui').find('div.tab_cont').find('table').each((index, dtTopElement) => {
+        // caption 태그의 텍스트만 비교해야 함
+        const captionText = $(dtTopElement).find('caption').text().trim();
 
-        if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-          item.biography.push({
-            targetDate : dtYearText,
-            type: "경력",
-            text: tmpText,
-            url: null,
-            issuer:null
-          });
+        if (captionText === '의료진 경력 정보') {
+          // 해당 caption이 "의료진 경력 정보"인 테이블만 탐색
+          $(dtTopElement)
+            .find('tbody > tr')
+            .each((i, dtElement) => {
+              const dtYearText = $(dtElement).find('th').text().trim();
+              const dtText = $(dtElement).find('td').text().trim();
+
+              if (dtText) {
+                const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replace(/\r/g, '');
+                console.log(`경력 tmpText: ${tmpText}`);
+
+                item.biography.push({
+                  targetDate: dtYearText,
+                  type: '경력',
+                  text: tmpText,
+                  url: null,
+                  issuer: null,
+                });
+              }
+            });
         }
       });
+
 
       $('#line2').find("div.tab_ui").find("div.tab_cont > ul > li:nth-child(2)").find('table').find("tbody > tr").each((index, dtElement) => {
         
@@ -254,6 +300,7 @@ module.exports = {
 
         if ( !functions.isEmpty(dtText) ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+          console.log(`학회 tmpText: ${tmpText}`)
           item.biography.push({
             targetDate : dtYearText,
             type: "학회",
@@ -264,13 +311,14 @@ module.exports = {
         }
       });
 
-      $('#line3').find("div.tab_ui").find("div.tab_cont > ul > li:first-child").find('table').find("tbody > tr").each((index, dtElement) => {
+      /* $('#line3').find("div.tab_ui").find("div.tab_cont > ul > li:first-child").find('table').find("tbody > tr").each((index, dtElement) => {
         
         const dtYearText = $(dtElement).find('th').text() ? $(dtElement).find('th').text() : '';
         const dtText = $(dtElement).find('td').find("a > span:nth-child(2)").text() ? $(dtElement).find('td').find("a > span:nth-child(2)").text() : '';
 
         if ( !functions.isEmpty(dtText) ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+          console.log(`눈문 tmpText: ${tmpText}`)
           item.biography.push({
             targetDate : dtYearText,
             type: "눈문",
@@ -279,7 +327,7 @@ module.exports = {
             issuer:null
           });
         }
-      });
+      }); */
 
       $('#line3').find("div.tab_ui").find("div.tab_cont > ul > li:nth-child(2)").find('table').find("tbody > tr").each((index, dtElement) => {
         
@@ -288,6 +336,7 @@ module.exports = {
 
         if ( !functions.isEmpty(dtText) ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+          console.log(`저서 tmpText: ${tmpText}`)
           item.biography.push({
             targetDate : dtYearText,
             type: "저서",
@@ -305,6 +354,7 @@ module.exports = {
 
         if ( !functions.isEmpty(dtText) ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+          console.log(`수상 tmpText: ${tmpText}`)
           item.biography.push({
             targetDate : dtYearText,
             type: "수상",
@@ -323,6 +373,7 @@ module.exports = {
 
         if ( !functions.isEmpty(dtText) ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+          console.log(`언론 tmpText: ${tmpText}`)
           item.biography.push({
             targetDate : dtYearText,
             type: "언론",
@@ -367,6 +418,23 @@ module.exports = {
       //await page.waitForSelector("._careerIemContainer");
       await CS.wait(1000);
       await page.keyboard.press('ArrowUp');
+
+      // 페이지에 있는 모든 '더보기' 버튼을 찾아 클릭합니다.
+      console.log("페이지에 있는 모든 '더보기' 버튼을 찾아서 클릭합니다.");
+      await page.evaluate(async () => {
+          const allMoreButtons = Array.from(document.querySelectorAll("a")).filter(link => link.textContent.includes('더보기'));
+          console.log(`총 ${allMoreButtons.length}개의 '더보기' 버튼을 찾았습니다.`);
+          for (const button of allMoreButtons) {
+              try {
+                  button.click();
+              } catch (e) {
+                  console.log('사라졌거나 클릭할 수 없는 \'더보기\' 버튼입니다.');
+              }
+          }
+      });
+      // evaluate 내에서 발생한 클릭으로 인한 비동기 작업(네트워크 로드 등)이 완료되기를 기다리기 위해 추가 대기 시간을 줍니다.
+      await new Promise(resolve => setTimeout(resolve, 3000));
+      console.log("모든 '더보기' 버튼 클릭 시도를 완료했습니다.");
       const htmlContent = await page.content();
       const $ = cheerio.load(htmlContent);  
       
@@ -477,11 +545,11 @@ module.exports = {
     return { error: error, data: result };
   },
 
-  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url) => {
+  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url,profile_url,p_hName) => {
 
     let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL set_doctor_basic(?)`
-    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url]);
+    const query = `CALL set_doctor_basic_v3(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url,profile_url,p_hName,url]);
     if (DBError) {
       console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
       return { error: DBError, data: null };

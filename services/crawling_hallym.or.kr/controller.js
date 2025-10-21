@@ -91,20 +91,22 @@ module.exports = {
       const $ = cheerio.load(htmlContent); 
 
       const doctors = [];
-      $('table.dor_sch_list').find('tbody > tr > td').each((index, element) => {
-        const doctorName = $(element).find('a:first-child > div').text() ? $(element).find('a:first-child > div').text().trim() : '';
-        const detailLink = $(element).find('a:first-child').attr('href') ? $(element).find('a:first-child').attr('href') : '';
+      $('table.dor_sch_list').find('tbody > tr').each((index, element) => {
+        const doctorName = $(element).find('td:first-child').find('a:first-child > div').text() ? $(element).find('td:first-child').find('a:first-child > div').text().trim() : '';
+        const detailLink = $(element).find('td:first-child').find('a:first-child').attr('href') ? $(element).find('td:first-child').find('a:first-child').attr('href') : '';
         //console.log(`detailLink: ${detailLink},doctorName: ${doctorName}`);
         let tmpLink = null;
         if ( !functions.isEmpty(detailLink) ) {
           tmpLink =  `https://hallym.hallym.or.kr/${detailLink}`;
         }
+        const profileUrl = null;
         console.log(`Adding doctor list: ${index} ${doctorName} ${deptName} ${tmpLink}`); // 디버
         if ( !functions.isEmpty(doctorName) && !functions.isEmpty(detailLink) ) {
           const doctor = {
             doctorName,
             deptName,
             url: tmpLink,
+            profileUrl
           };
           doctors.push(doctor); 
         }
@@ -405,7 +407,6 @@ module.exports = {
       const tmpArr = $('#tab_con02').find('div.tab01_inner').find('div.thesis_list').html();
       if ( !functions.isEmpty(tmpArr) ) {
         const tmpArr2 = tmpArr.trimStart().trimEnd();
-        console.log(`tmpArr2 : ${tmpArr2}`)
         const arr = await tmpArr2.split("<br><br>");
         console.log(`arr : ${arr},  ${typeof arr}`)
         if ( arr?.length > 0 ) {
@@ -537,11 +538,11 @@ module.exports = {
     return { error: error, data: result };
   },
 
-  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url) => {
+  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url,profile_url,p_hName) => {
 
     let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL set_doctor_basic(?)`
-    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url]);
+    const query = `CALL set_doctor_basic_v3(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url,profile_url,p_hName,url]);
     if (DBError) {
       console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
       return { error: DBError, data: null };

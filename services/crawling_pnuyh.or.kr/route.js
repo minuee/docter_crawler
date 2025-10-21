@@ -118,6 +118,7 @@ router.post('/healthcheck', async function(req, res) {
 router.post('/step01', async function(req, res, next) {  
 
   const HOSPITAL_ID = 'H01KR-48000004';
+  const HOSPITAL_NAME = '양산부산대학교병원';
   const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
   if ( ret.success === false ) {
     return res.send(ret);

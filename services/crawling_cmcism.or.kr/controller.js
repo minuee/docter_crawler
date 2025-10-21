@@ -37,7 +37,7 @@ module.exports = {
             //검색된 상세페이지링크주소를  의료진 페이지로 변경
             const link = `https://www.cmcism.or.kr${tmlLink.replace('treatment_info','treatment_team').trim()}`;
             const deptName = tmpeDeptName.trim();
-            //console.log(`Adding department: ${tmpeDeptName} with link: ${link}`); // 디버깅을 위한 로그
+            console.log(`Adding department: ${tmpeDeptName} with link: ${link}`); // 디버깅을 위한 로그
             dept.push({ 
               deptName,
               link,
@@ -76,16 +76,24 @@ module.exports = {
     const $ = cheerio.load(Response.data);
 
     const doctors = [];
-    $('div.select_list_wrap > ul > li').each((index, element) => {
-      const doctorName = $(element).find('div.doc_info > div.doc_name > a:first-child > strong').text() ?$(element).find('div.doc_info > div.doc_name > a:first-child > strong').text() : '';
-      const detailLink = $(element).find('div.doc_list_wrap > a').attr('href') ? $(element).find('div.doc_list_wrap > a').attr('href') : '';
-      console.log(`Adding doctor list: ${index} ${doctorName} ${deptName} ${detailLink}`); // 디버깅을 위한 로그
-      const doctor = {
-        doctorName,
-        deptName,
-        url: detailLink,
-      };
-      doctors.push(doctor); 
+    $('div.team_list > div').each((index, element) => {
+      const doctorName = $(element).find('div.right_view > p:first-child > a').contents()
+      .filter(function () {
+        return this.type === "text";
+      }).text().trim();;
+      const detailLinkTmp = $(element).find('div.right_view > p:first-child > a').attr("id");
+      const detailLink = detailLinkTmp ? `${link.replace("#", "")}more&${detailLinkTmp.replace("btn_open_", "")}` : '';
+      const profileUrlTmp = $(element).find('a > img').attr('src') ? $(element).find('a > img').attr('src') : '';
+      const profileUrl = profileUrlTmp ? `https://www.cmcism.or.kr${profileUrlTmp}` : '';
+      console.log(`Adding doctor list: ${index} ${doctorName} ${deptName} ${detailLink} ${profileUrl}`); // 디버깅을 위한 로그
+      if ( !CS.isEmpty(detailLink) && !CS.isEmpty(doctorName) ) {
+        const doctor = {
+          doctorName,
+          deptName,
+          url: detailLink,
+        };
+        doctors.push(doctor); 
+      }
     });
     return { error: error, data: doctors };
   },
@@ -131,7 +139,7 @@ module.exports = {
 
     // 진료분야를 json화 한다
     let specialtyJson = tmpSpecialty.split(",");
-    //console.log(`specialtyJson: ${JSON.stringify(specialtyJson)}`);
+    console.log(`specialtyJson: ${JSON.stringify(specialtyJson)}`);
 
   
     let item = {
@@ -143,7 +151,7 @@ module.exports = {
 
     $(`#layer_pop_${doctor_id}`).find(`#tab${doctor_id}_2 > dl:first-child dd`).each((index, dtElement) => {
       const dtText = $(dtElement).text() ? $(dtElement).text().trim() : '';
-      //console.log(`경력: ${dtText}`);
+      console.log(`경력: ${dtText}`);
       if ( !functions.isEmpty(dtText) ) {
         const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
         item.biography.push({
@@ -158,7 +166,7 @@ module.exports = {
 
     $(`#layer_pop_${doctor_id}`).find(`#tab${doctor_id}_2 > dl:nth-child(2) dd`).each((index, dtElement) => {
       const dtText = $(dtElement).text() ? $(dtElement).text().trim() : '';
-      //console.log(`학력: ${dtText}`);
+      console.log(`학력: ${dtText}`);
       if ( !functions.isEmpty(dtText) ) {
         const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
         item.biography.push({
@@ -173,7 +181,7 @@ module.exports = {
 
     $(`#layer_pop_${doctor_id}`).find(`#tab${doctor_id}_2 > dl:nth-child(3) dd`).each((index, dtElement) => {
       const dtText = $(dtElement).text() ? $(dtElement).text().trim() : '';
-      //console.log(`학회활동 : ${dtText}`);
+      console.log(`학회활동 : ${dtText}`);
       if ( !functions.isEmpty(dtText) ) {
         const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
         item.biography.push({
@@ -206,7 +214,7 @@ module.exports = {
       const textIssuer = $(dtElement).find('td:nth-child(3)').text() ? $(dtElement).find('td:nth-child(3)').text().trim() : '';
       const textDate = $(dtElement).find('td:nth-child(4)').text() ? $(dtElement).find('td:nth-child(4)').text().trim() : '';
       const textUrl = $(dtElement).find('td:nth-child(2) > a').attr('href') ? $(dtElement).find('td:nth-child(2) > a').attr('href').trim() : '';
-      console.log(`textTitle: ${textTitle} ${textIssuer} ${textDate} ${textUrl}`);
+      //console.log(`textTitle: ${textTitle} ${textIssuer} ${textDate} ${textUrl}`);
 
       if ( !functions.isEmpty(textTitle) ) {
         const tmpText = textTitle.trim().replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
@@ -226,7 +234,7 @@ module.exports = {
       const textIssuer = $(dtElement).find('td:nth-child(3)').text() ? $(dtElement).find('td:nth-child(3)').text().trim() : '';
       const textDate = $(dtElement).find('td:nth-child(4)').text() ? $(dtElement).find('td:nth-child(4)').text().trim() : '';
       const textUrl = $(dtElement).find('td:nth-child(2) > a').attr('href') ? $(dtElement).find('td:nth-child(2) > a').attr('href').trim() : '';
-      console.log(`textTitle: ${textTitle} ${textIssuer} ${textDate} ${textUrl}`);
+      //console.log(`textTitle: ${textTitle} ${textIssuer} ${textDate} ${textUrl}`);
 
       if ( !functions.isEmpty(textTitle) ) {
         const tmpText = textTitle.trim().replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
@@ -338,10 +346,11 @@ module.exports = {
 
 
 
-  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url) => {
+  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url,profile_url,p_hName) => {
+
     let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL set_doctor_basic(?)`
-    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url]);
+    const query = `CALL set_doctor_basic_v3(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url,profile_url,p_hName,url]);
     if (DBError) {
       console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
       return { error: DBError, data: null };
@@ -354,6 +363,7 @@ module.exports = {
     console.log(error)
     result = DBData
     return { error: error, data: result };
+
   },
 
   setCrawlingTreatise: async (rid, title, doi, journalName, authorRule, publicationDate, url,

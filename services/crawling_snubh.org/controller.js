@@ -94,11 +94,13 @@ module.exports = {
         const tmpDoctorName = doctorName.split(' ')[0];
         const link = `https://www.snubh.org/medical/drIntroduce.do?DP_TP=O&DP_CD=${params?.sDpCdDtl}&sDpCdDtl=FM&sDrSid=${params?.sDrSid}&sDrStfNo=${params?.sDrStfNo}&sDpTp=O`;
         console.log(`doctorName:${tmpDoctorName} detailLink:${link}`);
-
+        const profileUrlTmp = $(element).find('div.bh_doctor_img_n').find('img').attr('src') ? $(element).find('div.bh_doctor_img_n').find('img').attr('src') : "";
+        const profileUrl = profileUrlTmp ? `https://www.snubh.org${profileUrlTmp}` : "";
         const doctor = {
           doctorName : tmpDoctorName,
           deptName,
           url: link,
+          profileUrl
         };
         doctors.push(doctor); 
       });
@@ -161,7 +163,7 @@ module.exports = {
       const profileImgUrl = $('div.slick-track').find('.slick-slide:first-child').find('img:first-child').attr('src') ? $('div.slick-track').find('.slick-slide:first-child').find('img:first-child').attr('src') : '';
       console.log(`profileImgUrl: ${profileImgUrl} `);
       let tmpSpecialty = $('div.doc_profile_wrap').find("div.doc_info_wrap").find('dl.part_box').find('dd.part_dec').text() ? $('div.doc_profile_wrap').find("div.doc_info_wrap").find('dl.part_box').find('dd.part_dec').text()  : '';
-      console.log(`tmpSpecialty: ${tmpSpecialty}`);
+      console.log(`tmpSpecialty: ${tmpSpecialty.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '')}`);
       // 진료분야를 json화 한다
       let specialtyJson = tmpSpecialty.trim().split(",");
       //console.log(`specialtyJson: ${JSON.stringify(specialtyJson)}`);
@@ -169,7 +171,7 @@ module.exports = {
       // 학력 경력
       
       let item = {
-        specialty: functions.isEmpty(tmpSpecialty) ? "" : tmpSpecialty.trim(),
+        specialty: functions.isEmpty(tmpSpecialty) ? "" : tmpSpecialty.trim().replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, ''),
         specialtyJson: functions.isEmpty(tmpSpecialty) ? "" : specialtyJson,
         profileImgUrl: functions.isEmpty(profileImgUrl) ? "" : `https://www.snubh.org/${profileImgUrl}`,
         biography: [],
@@ -353,12 +355,11 @@ module.exports = {
     return { error: error, data: result };
   },
 
+  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url,profile_url,p_hName) => {
 
-
-  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url) => {
     let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL set_doctor_basic(?)`
-    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url]);
+    const query = `CALL set_doctor_basic_v3(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url,profile_url,p_hName,url]);
     if (DBError) {
       console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
       return { error: DBError, data: null };
@@ -371,6 +372,7 @@ module.exports = {
     console.log(error)
     result = DBData
     return { error: error, data: result };
+
   },
 
   setCrawlingTreatise: async (rid, title, doi, journalName, authorRule, publicationDate, url,

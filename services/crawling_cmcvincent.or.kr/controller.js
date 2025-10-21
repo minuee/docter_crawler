@@ -14,7 +14,7 @@ const _ = require('lodash');
 const functions = require(`${global.appRoot}/server/util/function`);
 
 const DATA_VERSION_ID = parseInt(process.env.DATA_VERSION_ID) ? parseInt(process.env.DATA_VERSION_ID) : 1;
-
+const sleep = (ms) => new Promise((res) => setTimeout(res, ms));
 
 module.exports = {
 
@@ -100,13 +100,16 @@ module.exports = {
         const detailLink = $(element).find('div.doc_info > div > a:first-child').attr('href') ? $(element).find('div.doc_info > div > a:first-child').attr('href') : '';
        
         const tmpLink =  "https://www.cmcvincent.or.kr" + detailLink;
-      
-        console.log(`Adding doctor list: ${index} ${doctorName} ${deptName} ${detailLink}`); // 디버
+        const profileUrlTmp =  $(element).find('div.doc_list_wrap').find("a:first-child").find("span > img").attr('src') ? $(element).find('div.doc_list_wrap').find("a:first-child").find("span > img").attr('src') : '';
+        const profileUrl = `https://www.cmcvincent.or.kr${profileUrlTmp}`;
+
+        console.log(`Adding doctor list: ${index} ${doctorName} ${deptName} ${detailLink} ${profileUrl}`); // 디버
         if ( !functions.isEmpty(doctorName) && !functions.isEmpty(detailLink) ) {
           const doctor = {
             doctorName,
             deptName,
             url: tmpLink,
+            profileUrl
           };
           doctors.push(doctor); 
         }
@@ -183,6 +186,7 @@ module.exports = {
         if ( !functions.isEmpty(dtText) ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
           const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+          console.log(`학력: ${tmpDtYearText} ${tmpText}`)
           item.biography.push({
             targetDate : tmpDtYearText,
             type: "학력",
@@ -201,7 +205,7 @@ module.exports = {
         if ( !functions.isEmpty(dtText) ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
           const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-          
+          console.log(`경력: ${tmpDtYearText} ${tmpText}`)
           item.biography.push({
             targetDate : tmpDtYearText,
             type: "경력",
@@ -220,6 +224,7 @@ module.exports = {
         if ( !functions.isEmpty(dtText) ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
           const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+          console.log(`연수: ${tmpDtYearText} ${tmpText}`)
           item.biography.push({
             targetDate : tmpDtYearText,
             type: "연수",
@@ -238,6 +243,7 @@ module.exports = {
         if ( !functions.isEmpty(dtText) ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
           const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+          console.log(`수상: ${tmpDtYearText} ${tmpText}`)
           item.biography.push({
             targetDate : tmpDtYearText,
             type: "수상",
@@ -256,6 +262,7 @@ module.exports = {
         if ( !functions.isEmpty(dtText) ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
           const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+          console.log(`학회: ${tmpDtYearText} ${tmpText}`)
           item.biography.push({
             targetDate : tmpDtYearText,
             type: "학회",
@@ -274,6 +281,7 @@ module.exports = {
  
         if ( !functions.isEmpty(dtText) ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+          console.log(`연구분야: ${tmpText}`)
           item.biography.push({
             targetDate : dtYearText,
             type: "연구분야",
@@ -292,6 +300,7 @@ module.exports = {
         if ( !functions.isEmpty(dtText) ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
           const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+          console.log(`저서: ${tmpDtYearText} ${tmpText}`)
           item.biography.push({
             targetDate : tmpDtYearText,
             type: "저서",
@@ -311,6 +320,7 @@ module.exports = {
         if ( !functions.isEmpty(dtText) ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
           const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+          console.log(`언론: ${tmpDtYearText} ${tmpText}`)
           item.biography.push({
             targetDate : tmpDtYearText,
             type: "언론",
@@ -333,68 +343,117 @@ module.exports = {
   },
 
   crwalingtreatise: async (url) => {
-    let result = null, error = null, DBCode = null
-    let DBData1 = null
-    let DBData2 = null
-    let Response = { status: null, data: null }
-    console.log(`crwalingProcess03: ${url}`); 
-    
-    if (!url) {
-      return { error: true, data: null };
-    }
+    let browser;
+    if (!url) return { error: true, data: null };
+  
     try {
-      const browser = await puppeteer.launch();
-        // Open a new page
+      console.log(`crwalingtreatise: ${url}`);
+      browser = await puppeteer.launch({ headless: true });
       const page = await browser.newPage();
       page.setDefaultNavigationTimeout(0);
-      //await page.waitForSelector('.inner');
-      // Navigate to the website
-      await page.goto(url,{waitUntil: "domcontentloaded"});
-      await page.setViewport({
-          width: 1200,
-          height: 800
+  
+      await page.goto(url, { waitUntil: 'domcontentloaded' });
+  
+      // 스크롤해서 lazy-load 유도
+      await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+      await puppeteerSleep(1000);
+  
+      // 1) "논문" 탭 찾고 클릭 (페이지 내 모든 <a> 순회로 안전하게 찾기)
+      const treatiseTabFound = await page.evaluate(() => {
+        const anchors = Array.from(document.querySelectorAll('a'));
+        const tab = anchors.find(a => (a.textContent || '').trim() === '논문');
+        if (tab) {
+          tab.click();
+          return true;
+        }
+        return false;
       });
-
-      await page.keyboard.press('ArrowDown')
-      //await page.waitForSelector("._careerIemContainer");
-      await CS.wait(1000);
-      await page.keyboard.press('ArrowUp');
+  
+      if (!treatiseTabFound) {
+        console.log(`No treatise tab found on ${url}. Skipping.`);
+        return { error: null, data: { biography: [] } };
+      }
+  
+      // 탭 클릭 후 컨텐츠 로드 대기
+      await puppeteerSleep(1000);
+  
+      // 2) 기다려서 `div.thesis_list`가 생기는지 확인
+      try {
+        await page.waitForSelector('div.thesis_list', { timeout: 5000 });
+      } catch (e) {
+        console.log(`Treatise section not found on ${url}. Skipping.`);
+        return { error: null, data: { biography: [] } };
+      }
+  
+      // 3) "더보기" 버튼들을 반복 클릭 — Puppeteer 환경에서 동작하도록 page.evaluate 사용
+      let clickedAny = false;
+      while (true) {
+        const clickedCount = await page.evaluate(() => {
+          const section = document.querySelector('div.thesis_list');
+          if (!section) return 0;
+          // 후보 셀렉터들을 모아 검사
+          const candidates = Array.from(section.querySelectorAll('span.profile_view_more a, span.more_btn a, a, button'));
+          let cnt = 0;
+          candidates.forEach(el => {
+            const txt = (el.textContent || '').trim();
+            // "더보기" 텍스트를 포함하면 클릭
+            if (txt.includes('더보기') || txt.includes('더 보기')) {
+              try { el.click(); cnt++; } catch (e) { /* ignore */ }
+            }
+          });
+          return cnt;
+        });
+  
+        if (clickedCount > 0) {
+          clickedAny = true;
+          await puppeteerSleep(1000);; // 클릭 후 로드 대기
+        } else {
+          break;
+        }
+      }
+  
+      // 4) 모든 동적 로딩이 끝났다고 판단하고 HTML을 가져와 cheerio로 파싱
       const htmlContent = await page.content();
-      const $ = cheerio.load(htmlContent);  
-      
-      let item = {
-        biography: [],
-      };
-
-      $('div.thesis_list').find("div.list_wrap").find('ul > li').each((index, dtElement) => {
-        
-        const dtYearText = '';
-        const dtText = $(dtElement).find('div.info_wrap').find('div.title > p').text() ? $(dtElement).find('div.info_wrap').find('div.title > p').text() : '';  
-        console.log(`논문: ${dtYearText} ${dtText}`);
-        if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-          const etc = {
+      const $ = cheerio.load(htmlContent);
+  
+      const item = { biography: [] };
+  
+      // doctorId 추출 시도
+      let doctorId = $('input[name="p_doc_id"]').val();
+      if (!doctorId) {
+        const urlParts = url.split('/');
+        doctorId = urlParts.pop() || urlParts.pop();
+      }
+      if (!doctorId) {
+        console.warn('Could not parse doctorId, continuing without it.');
+      } else {
+        item.doctorId = doctorId;
+      }
+  
+      // 5) 논문 리스트 추출
+      $('div.thesis_list').find('div.list_wrap').find('ul > li').each((index, li) => {
+        const dtText = $(li).find('div.info_wrap').find('div.title > p').text() || '';
+        const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\r/g, '').trim();
+        if (tmpText) {
+          console.log(`논문: ${tmpText}`);
+          item.biography.push({
             type: '논문',
             title: tmpText,
             url: null,
-          };
-          item.biography.push(etc);
+          });
         }
       });
-
-    
-      await browser.close();
-      return { error: error, data: item };
-
-    } catch (error) {
-      Error = error;
-      console.log(`error on ${url} API return: ${error}`);
-      await browser.close();
-      return { error: error, data: [] };
+  
+      return { error: null, data: item };
+    } catch (err) {
+      console.error(`error on ${url}:`, err);
+      return { error: err, data: [] };
+    } finally {
+      if (browser) {
+        try { await browser.close(); } catch (e) { /* ignore close error */ }
+      }
     }
-
   },
-
   setCrawlingdoctorBasic: async (rid, hid, deptName, doctorName, specialty, profileimgurl) => {
     
     let result = null, error = null, DBCode = null, DBData = null
@@ -471,11 +530,11 @@ module.exports = {
     return { error: error, data: result };
   },
 
-  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url) => {
+  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url,profile_url,p_hName) => {
 
     let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL set_doctor_basic(?)`
-    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url]);
+    const query = `CALL set_doctor_basic_v3(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url,profile_url,p_hName,url]);
     if (DBError) {
       console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
       return { error: DBError, data: null };
@@ -490,6 +549,7 @@ module.exports = {
     return { error: error, data: result };
 
   },
+
 
   setCrawlingDoctorLink_old: async (rid, hid, deptName, doctorName, url) => {
     let result = null, error = null, DBCode = null, DBData = null

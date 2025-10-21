@@ -74,6 +74,7 @@ router.post('/healthcheck', async function(req, res) {
 router.post('/step01', async function(req, res, next) {  
 
   const HOSPITAL_ID = 'H01KR-41000008';
+  const HOSPITAL_NAME = '아주대학교병원';
   const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
   if ( ret.success === false ) {
     return res.send(ret);
@@ -91,31 +92,33 @@ router.post('/step01', async function(req, res, next) {
   for (let i = 0; i < _.size(P1.data) ; i++) {
     await CS.wait(500);
     console.log(`loop ${i} link : ${P1.data[i].link}, deptName : ${P1.data[i].deptName}`);
-    /* const SP1 = await crawlingCtrl.crwalingProcess02(P1.data[i].link, P1.data[i].deptName);
+    const SP1 = await crawlingCtrl.crwalingProcess02(P1.data[i].link, P1.data[i].deptName);
    
     if (!functions.isEmpty(SP1.data)) {
       for (let i = 0; i < _.size(SP1.data); i++) {
-        data.push({
-          hid: HOSPITAL_ID,
-          deptName: SP1.data[i].deptName,
-          doctorName: SP1.data[i].doctorName,
-          url: SP1.data[i].url
-        })
-        await CS.wait(200);
-        const SP0 = await crawlingCtrl.get_rid_encrypt(SP1.data[i].doctorName, SP1.data[i].url);
-        //console.log("SP0",SP0.data);
-        if (SP0.error) {
-          console.log("SP0 DB fail.");
-          return res.json(TS.fail("SP0 DB fail."));
-        }
-        const tempRid = SP0.data[0].rid_encrypt;
+        if ( SP1.data[i].deptName == "가정의학과" && SP1.data[i].doctorName == "김광민") {
+          data.push({
+            hid: HOSPITAL_ID,
+            deptName: SP1.data[i].deptName,
+            doctorName: SP1.data[i].doctorName,
+            url: SP1.data[i].url
+          })
+          await CS.wait(200);
+          const SP0 = await crawlingCtrl.get_rid_encrypt(SP1.data[i].doctorName, SP1.data[i].url);
+          //console.log("SP0",SP0.data);
+          if (SP0.error) {
+            console.log("SP0 DB fail.");
+            return res.json(TS.fail("SP0 DB fail."));
+          }
+          const tempRid = SP0.data[0].rid_encrypt;
 
-        const SP2 = await crawlingCtrl.setCrawlingDoctorLink(tempRid, HOSPITAL_ID, SP1.data[i].deptName, SP1.data[i].doctorName, SP1.data[i].url);
-        if (SP2.error) console.log("DB upsert fail.");;
+          const SP2 = await crawlingCtrl.setCrawlingDoctorLink(tempRid, HOSPITAL_ID, SP1.data[i].deptName, SP1.data[i].doctorName, SP1.data[i].url,SP1.data[i].profileUrl,HOSPITAL_NAME);
+          if (SP2.error) console.log("DB upsert fail.");;
+        }
       }
     } else {
       console.log(`loop ${i} result is null.`);
-    } */
+    }
   }
 
   console.log(`result: ${_.size(P1.data)}`);
@@ -191,7 +194,7 @@ router.post('/step02', async (req, res, next) => {
     if (doctorName && refUrl && refUrl.indexOf("http") !== -1) {
       const SP1 = await crawlingCtrl.crwalingProcess03(refUrl);
       //console.log("SP1 size",_.size(SP1?.data));
-      await CS.wait(300);
+      /* await CS.wait(300);
       const SP2 = await crawlingCtrl.get_rid_encrypt(doctorName, refUrl);
       if (SP2.error) {
         console.log("SP2 DB fail.");
@@ -212,7 +215,7 @@ router.post('/step02', async (req, res, next) => {
       if (SP4.error) {
         console.log("SP4 DB fail.");
         return res.json(TS.fail("SP4 DB fail."));
-      }
+      } */
 
       data.push({
         hid: HOSPITAL_ID,
@@ -291,7 +294,7 @@ router.post('/treatise', async (req, res, next) => {
     if (_.size(SP1.data.biography) > 0) {
       await CS.wait(300);
       const tempRid = P1.data[i].rid
-      if (CS.isEmpty(tempRid)) break;
+      /* if (CS.isEmpty(tempRid)) break;
       for (let index = 0; index < _.size(SP1.data.biography); index++) {
         const element = SP1.data.biography[index];
         const iD = {
@@ -318,7 +321,7 @@ router.post('/treatise', async (req, res, next) => {
           console.log(`Error on ${P1.data[i].doctorName}`)
         }
         article++;
-      }
+      } */
     }
   }
   return res.send({

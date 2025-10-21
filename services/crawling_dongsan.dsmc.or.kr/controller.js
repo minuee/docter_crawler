@@ -71,7 +71,14 @@ module.exports = {
     console.log(`link: ${url} ${deptName}`);
 
     try {
-      const browser = await puppeteer.launch();
+      const browser = await puppeteer.launch({
+        headless: true,
+        args: [
+          '--no-sandbox',
+          '--disable-setuid-sandbox',
+          '--ignore-certificate-errors', // ✅ SSL 인증서 오류 무시
+        ],
+      });
         // Open a new page
       const page = await browser.newPage();
       page.setDefaultNavigationTimeout(0);
@@ -110,7 +117,7 @@ module.exports = {
             doctorName,
             deptName,
             url: tmpLink,
-            profile_url : tmpProfileUrl
+            profileUrl : tmpProfileUrl
           };
           doctors.push(doctor); 
         }
@@ -188,18 +195,33 @@ module.exports = {
         const dtYearText = $(dtElement).find('dt').text() ? $(dtElement).find('dt').text().trim()  : '';
         const dtText = $(dtElement).find('dd > ul > li:first-child').text() ? $(dtElement).find('dd > ul > li:first-child').text().trim()  : '';
 
-        console.log(`경력 : ${dtText}`)
+       
         if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-          const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-          item.biography.push({
-            targetDate : tmpDtYearText,
-            type: "경력",
-            text: tmpText,
-            url: null,
-            issuer:null
-          });
-        }
+          if (dtText.includes('학사') || dtText.includes('석사') || dtText.includes('박사') || dtText.includes('졸업') || dtText.includes('수료')) {
+            console.log(`학력 : ${dtText}`)
+            const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+            const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+            item.biography.push({
+              targetDate : tmpDtYearText,
+              type: "학력",
+              text: tmpText,
+              url: null,
+              issuer:null
+            });
+          }else{
+            console.log(`경력 : ${dtText}`)
+            const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+            const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+            item.biography.push({
+              targetDate : tmpDtYearText,
+              type: "경력",
+              text: tmpText,
+              url: null,
+              issuer:null
+            });
+          }
+          }
+          
       });
 
 
@@ -558,11 +580,11 @@ module.exports = {
     return { error: error, data: result };
   },
 
-  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url,profile_url) => {
+  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url,profile_url,p_hName) => {
 
     let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL set_doctor_basic_v2(?)`
-    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url, profile_url]);
+    const query = `CALL set_doctor_basic_v3(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url,profile_url,p_hName,url]);
     if (DBError) {
       console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
       return { error: DBError, data: null };

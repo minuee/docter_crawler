@@ -88,16 +88,17 @@ module.exports = {
       $('div.doctor_box > dl').each((index, element) => {
         const doctorName = $(element).find('dd').find('div.name_box > p.name').text() ? $(element).find('dd').find('div.name_box > p.name').text().trim() : '';
         const detailLink = $(element).find('dd').find('div.name_box > ul > li > a').attr('href') ? $(element).find('dd').find('div.name_box > ul > li > a').attr('href') : '';
-        let link = `https://www.knuch.kr:442${detailLink}`;
-        if ( detailLink.indexOf("http") == -1 ) {
-          link = tmpLink;
-        }
-        console.log(`doctorName:${doctorName} detailLink:${link}`);
+        let link = detailLink ? `https://www.knuch.kr:442${detailLink}` : "";
+       
+        const profileUrlTmp = $(element).find('dt.pic').find('img').attr('src') ? $(element).find('dt.pic').find('img').attr('src') : '';
+        const profileUrl = profileUrlTmp ? `https://www.knuch.kr:442${profileUrlTmp}` : '';
+        console.log(`doctorName:${doctorName} detailLink:${link}, profileUrl:${profileUrl}`);
         if ( !functions.isEmpty(doctorName) && !functions.isEmpty(link) && doctorName != '일반의사') {
           const doctor = {
             doctorName : doctorName,
             deptName,
             url: link,
+            profileUrl
           };
           doctors.push(doctor); 
         }
@@ -664,10 +665,11 @@ module.exports = {
 
 
 
-  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url) => {
+  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url,profile_url,p_hName) => {
+
     let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL set_doctor_basic(?)`
-    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url]);
+    const query = `CALL set_doctor_basic_v3(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url,profile_url,p_hName,url]);
     if (DBError) {
       console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
       return { error: DBError, data: null };
@@ -680,6 +682,7 @@ module.exports = {
     console.log(error)
     result = DBData
     return { error: error, data: result };
+
   },
 
   setCrawlingTreatise: async (rid, title, doi, journalName, authorRule, publicationDate, url,

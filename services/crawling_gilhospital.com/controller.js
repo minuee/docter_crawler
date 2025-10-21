@@ -92,11 +92,14 @@ module.exports = {
       if ( tmpLink.indexOf("http") == -1 ) {
         tmpLink =  "https://www.gilhospital.com" + tmpLink;
       }
+      const profileUrlTmp =  $(element).find('div.thumb > a').find('img').attr('src') ? $(element).find('div.thumb > a').find('img').attr('src'): '';
+      const profileUrl = profileUrlTmp ? `https://www.gilhospital.com${profileUrlTmp}` : "";
       console.log(`Adding doctor list: ${index} ${doctorName} ${deptName} ${detailLink}`); // 디버깅을 위한 로그
       const doctor = {
         doctorName,
         deptName,
         url: tmpLink,
+        profileUrl
       };
       doctors.push(doctor); 
     });
@@ -162,6 +165,7 @@ module.exports = {
  
         if ( !functions.isEmpty(dtText) ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+          console.log(`학력: ${dtYearText} ${tmpText}`)
           item.biography.push({
             targetDate : dtYearText,
             type: "학력",
@@ -179,6 +183,7 @@ module.exports = {
 
         if ( !functions.isEmpty(dtText) ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+          console.log(`경력: ${dtYearText} ${tmpText}`)
           item.biography.push({
             targetDate : dtYearText,
             type: "경력",
@@ -189,16 +194,17 @@ module.exports = {
         }
       });
 
-      $('div.table-story').find("table > caption:contains('학회/할술활동')").parents('table').find('tbody > tr').each((index, dtElement) => {
+      $('div.table-story').find("table > caption:contains('학회/학술활동')").parents('table').find('tbody > tr').each((index, dtElement) => {
         
         const dtYearText = $(dtElement).find('th').text() ? $(dtElement).find('th').text() : '';
         const dtText = $(dtElement).find('td').text() ? $(dtElement).find('td').text() : '';
   
         if ( !functions.isEmpty(dtText) ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+          console.log(`학회: ${dtYearText} ${tmpText}`)
           item.biography.push({
             targetDate : dtYearText,
-            type: "학회/할술활동",
+            type: "학회",
             text: tmpText,
             url: null,
             issuer:null
@@ -214,6 +220,7 @@ module.exports = {
     
         if ( !functions.isEmpty(dtText) ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+          console.log(`언론: ${dtYearText} ${tmpText}`)
           item.biography.push({
             targetDate : dtYearText,
             type: "언론",
@@ -224,16 +231,17 @@ module.exports = {
         }
       });
 
-      $('div.thesis').find("table > caption:contains('눈문 및 저서')").parents('table').find('tbody > tr').each((index, dtElement) => {
+      $('.section-thesis').find('div.thesis').find("table").find('tbody > tr').each((index, dtElement) => {
         
         const dtYearText = $(dtElement).find('th').text() ? $(dtElement).find('th').text() : '';
         const dtText = $(dtElement).find('td').text() ? $(dtElement).find('td').text() : '';
     
         if ( !functions.isEmpty(dtText) ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+          console.log(`저서: ${dtYearText} ${tmpText}`)
           item.biography.push({
             targetDate : dtYearText,
-            type: "논문",
+            type: "저서",
             text: tmpText,
             url: null,
             issuer:null
@@ -292,8 +300,7 @@ module.exports = {
       //console.log(`_press: ${smaple}`);
 
 
-      $('div.thesis').find("table > caption:contains('논문 및 저서')").parents('table').find('tbody > tr').each((index, dtElement) => {
-        
+      $('.section-thesis').find('div.thesis').find("table").find('tbody > tr').each((index, dtElement) => {
         const dtYearText = $(dtElement).find('th').text() ? $(dtElement).find('th').text() : '';
         const dtText = $(dtElement).find('td').text() ? $(dtElement).find('td').text() : '';  
         console.log(`논문: ${dtYearText} ${dtText}`);
@@ -397,11 +404,11 @@ module.exports = {
     return { error: error, data: result };
   },
 
-  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url) => {
-
+  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url,profile_url,p_hName) => {
+    console.log(`p_hName: ${p_hName}`)
     let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL set_doctor_basic(?)`
-    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url]);
+    const query = `CALL set_doctor_basic_v3(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url,profile_url,p_hName,url]);
     if (DBError) {
       console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
       return { error: DBError, data: null };

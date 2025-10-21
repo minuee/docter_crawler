@@ -63,7 +63,7 @@ router.get('/healthcheck', async function(req, res) {
  * @swagger
  *  /v1/c/crawling_did_link/find-past:
  *    post:
- *      summary: "1단계  조회"
+ *      summary: "과거 이력 동일의사정보 찾기"
  *      description: "동일인의 과거정보를 찾는다"
  *      tags: [crawling_did_link-3차병원 DID작업]
  *      produces:
@@ -150,17 +150,17 @@ router.post('/find-past', async function(req, res) {
         //console.log(`summaryData2 : ${summaryData2}`);
         if ( summaryData2 != null ) {
 
-          //if ( summaryData?.doctorname == "동재준" ) {
+          if ( summaryData?.doctorname == "동재준" ) {
             const SP1 = await doctorCompare.findMatchingDoctor(summaryData,summaryData2);
             if (!CS.isEmpty(SP1)) {
               //console.log(`SP1result : ${SP1.result}, matchDoctor : ${SP1.matchDoctor}, score : ${SP1.score}`)
             }
-          //}
+          }
           // AI 분석을 위한 요청 파일 생성
-          /* try {
+          try {
             const timestamp = new Date().toISOString().replace(/[-:T.Z]/g, '').slice(0, 14);
             const fileName = `ai_analysis_request_${timestamp}_${summaryData.doctorname}.json`;
-            const dirPath = path.join(__dirname, 'data');
+            const dirPath = path.join(__dirname, `data/${HOSPITAL_ID}`);
             const filePath = path.join(dirPath, fileName);
 
             const analysisData = {
@@ -173,15 +173,15 @@ router.post('/find-past', async function(req, res) {
 
           } catch (e) {
             console.error(`[AI 분석 요청 파일 생성 실패] rid: ${summaryData.rid}, error: ${e.message}`);
-          } */
+          }
 
         } else {
           /* 동일한 이름의 의사가 없으므로 단계 패스 */
           console.log(`[신규 추정] 대상: ${summaryData.doctorname}(${summaryData.deptname}, rid:${summaryData.rid}) -> 시스템에 동명이인이 없습니다.`);
-          /* try {
+          try {
             const timestamp = new Date().toISOString().replace(/[-:T.Z]/g, '').slice(0, 14);
             const fileName = `ai_analysis_request_${timestamp}_${summaryData.doctorname}_notmatch.json`;
-            const dirPath = path.join(__dirname, 'data');
+            const dirPath = path.join(__dirname, `data/${HOSPITAL_ID}`);
             const filePath = path.join(dirPath, fileName);
 
             fs.writeFileSync(filePath, JSON.stringify(summaryData, null, 2));
@@ -189,7 +189,7 @@ router.post('/find-past', async function(req, res) {
 
           } catch (e) {
             console.error(`[AI 분석 요청 파일 생성 실패] rid: ${summaryData.rid}, error: ${e.message}`);
-          } */
+          }
           NonUpdateDoctorList.push(summaryData);
         }
       }
@@ -212,9 +212,9 @@ router.post('/find-past', async function(req, res) {
  * @swagger
  *  /v1/c/crawling_did_link/update-notexist:
  *    post:
- *      summary: "1단계  조회"
+ *      summary: "제거대상의 관련 정보를 업데이트"
  *      description: "제거대상의 관련 정보를 업데이트한다"
- *      tags: [crawling_did_link-3차병원 제거대상 업데이트]
+ *      tags: [crawling_did_link-3차병원 DID작업]
  *      produces:
  *      parameters:
  *        - name: "hid"

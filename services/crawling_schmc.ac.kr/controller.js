@@ -47,7 +47,7 @@ module.exports = {
           dept.push({ 
             deptName,
             link,
-            linkDepthNo : linkDepthArray[2]
+            linkDepthNo : linkDepthArray[2],
           });
         }
       });
@@ -87,11 +87,12 @@ module.exports = {
         const retData =  response.data.data;
         for (let i = 0; i < retData.length; i++) {
           const docLink = `https://www.schmc.ac.kr/bucheon/doctr/home.do?key=2947&doctrNo=${retData[i].doctrNo}`
-          //console.log(`item: ${retData[i].doctrNm} ${retData[i].deptNm} ${docLink}`);
+          //console.log(`item: ${JSON.stringify(retData[i])} ${docLink}`);
           tmpDoctors.push({
             doctorName: retData[i].doctrNm,
             deptName: retData[i].deptNm,
-            url: docLink
+            url: docLink,
+            profileUrl : null
           });
         }
         return tmpDoctors;
@@ -165,8 +166,9 @@ module.exports = {
     $('#_careerContainer').find("div._careerContainer:first-child").find('._careerIem').each((index, dtElement) => {
       
       const dtText = $(dtElement).find('td').text() ? $(dtElement).find('td').text() : '';
-      console.log(`경력: ${dtText}`);
-      if ( !functions.isEmpty(dtText) && dtText.indexOf("졸업") != -1) { //졸업이 있을때믄 학력으로 표시 
+     
+      if (dtText.includes('학사') || dtText.includes('석사') || dtText.includes('박사') || dtText.includes('졸업') || dtText.includes('수료')) {
+        console.log(`학력: ${dtText}`);
         const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
         item.biography.push({
           targetDate : null,
@@ -176,6 +178,7 @@ module.exports = {
           issuer:null
         });
       }else{
+        console.log(`경력: ${dtText}`);
         const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
         item.biography.push({
           targetDate : null,
@@ -332,10 +335,11 @@ module.exports = {
     return { error: error, data: result };
   },
 
-  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url) => {
+  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url,profile_url,p_hName) => {
+
     let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL set_doctor_basic(?)`
-    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url]);
+    const query = `CALL set_doctor_basic_v3(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url,profile_url,p_hName,url]);
     if (DBError) {
       console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
       return { error: DBError, data: null };
@@ -348,7 +352,9 @@ module.exports = {
     console.log(error)
     result = DBData
     return { error: error, data: result };
+
   },
+
 
   setCrawlingTreatise: async (rid, title, doi, journalName, authorRule, publicationDate, url,
     abstract, keywords, impactFactor, totalCitations, referencesThesis,

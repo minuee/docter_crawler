@@ -208,99 +208,84 @@ module.exports = {
       const targetData1 = $('#content_body').find("h3:contains('학력')").next('p').next('div.subbox').html();
       //console.log(`targetData2: ${targetData1}`);
       if ( targetData1 ) {
-        //const targetData2_re = targetData2.replaceAll("(","").replaceAll(")","");
-        const lines = targetData1.includes("<br>") ? targetData1.split("<br>") : targetData1.split("\n");
-        //console.log(`lines: ${lines}`);
+        const cleanText = targetData1.replace(/<br\s*\/?>/gi, '\n'); // 모든 <br>을 개행으로 변환
+        const lines = cleanText.split('\n').map(line => line.trim()).filter(Boolean);
+
         lines.forEach((dtElement, index) => {
-          //console.log(`dtText: ${index}, ${dtElement}`);
-          const dtYearText = '';
-          //const dtText = $(dtElement).text() ? $(dtElement).text().trim()  : '';
           
-          if ( !functions.isEmpty(dtElement) && dtElement?.length > 10 ) {
-            console.log(`학력: ${dtElement?.length}, ${dtElement}`);
-            //const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-            const tmpDtYearText = dtYearText;
-            item.biography.push({
-              targetDate : tmpDtYearText,
-              type: "학력",
-              text: dtElement,
-              url: null,
-              issuer:null
-            });
-          }
+          const match = functions.splitPeriodAndText(dtElement);
+          const targetDate = match ? match.period : null;
+          const titleText = match ? match.text : dtElement;
+          console.log(`학력 ${index}: ${targetDate} ${titleText}`);
+          item.biography.push({
+            targetDate: targetDate,
+            type: "학력",
+            text: titleText,
+            url: null,
+            issuer: null
+          });
         });
       }
 
       const targetData2 = $('#content_body').find("h3:contains('경력')").next('p').next('div.subbox').html();
       //console.log(`targetData2: ${targetData2}`);
       if ( targetData2 ) {
-        //const targetData2_re = targetData2.replaceAll("(","").replaceAll(")","");
-        const lines = targetData2.includes("<br>") ? targetData2.split("<br>") : targetData2.split("\n");
-        //console.log(`lines: ${lines}`);
+        const cleanText = targetData2.replace(/<br\s*\/?>/gi, '\n'); // 모든 <br>을 개행으로 변환
+        const lines = cleanText.split('\n').map(line => line.trim()).filter(Boolean);
+
         lines.forEach((dtElement, index) => {
-          //console.log(`dtText: ${index}, ${dtElement}`);
-          const dtYearText = '';
-          //const dtText = $(dtElement).text() ? $(dtElement).text().trim()  : '';
-          
-          if ( !functions.isEmpty(dtElement) && dtElement?.length > 10 ) {
-            console.log(`경력: ${dtElement?.length}, ${dtElement}`);
-            //const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-            const tmpDtYearText = dtYearText;
-            item.biography.push({
-              targetDate : tmpDtYearText,
-              type: "경력",
-              text: dtElement,
-              url: null,
-              issuer:null
-            });
-          }
+
+          const match = functions.splitPeriodAndText(dtElement);
+          const targetDate = match ? match.period : null;
+          const titleText = match ? match.text : dtElement;
+          console.log(`경력 ${index}: ${targetDate} ${titleText}`);
+          item.biography.push({
+            targetDate: targetDate,
+            type: "경력",
+            text: titleText,
+            url: null,
+            issuer: null
+          });
         });
       }
 
       const targetData3 = $('#content_body').find("h3:contains('수상경력')").next('p').next('div.subbox').html();
       if ( targetData3 ) {
-        const lines = targetData3.includes("<br>") ? targetData3.split("<br>") : targetData3.split("\n");
-        //console.log(`lines: ${lines}`);
+        const cleanText = targetData3.replace(/<br\s*\/?>/gi, '\n'); // 모든 <br>을 개행으로 변환
+        const lines = cleanText.split('\n').map(line => line.trim()).filter(Boolean);
+
         lines.forEach((dtElement, index) => {
-          //console.log(`dtText: ${index}, ${dtElement}`);
-          const dtYearText = '';
-          //const dtText = $(dtElement).text() ? $(dtElement).text().trim()  : '';
           
-          if ( !functions.isEmpty(dtElement) && dtElement?.length > 10 ) {
-            console.log(`수상: ${dtElement?.length}, ${dtElement}`);
-            //const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-            const tmpDtYearText = dtYearText;
-            item.biography.push({
-              targetDate : tmpDtYearText,
-              type: "수상",
-              text: dtElement,
-              url: null,
-              issuer:null
-            });
-          }
+          const match = functions.splitPeriodAndText(dtElement);
+          const targetDate = match ? match.period : null;
+          const titleText = match ? match.text : dtElement;
+          console.log(`수상 ${index}: ${targetDate} ${titleText}`);
+          item.biography.push({
+            targetDate: targetDate,
+            type: "수상",
+            text: titleText,
+            url: null,
+            issuer: null
+          });
         });
       }else{
         const targetData3_2 = $('#content_body').find("h3:contains('수상경력')").next('div.subbox').html();
         if ( targetData3_2 ) {
-          const lines = targetData3_2.includes("<br>") ? targetData3_2.split("<br>") : targetData3_2.split("\n");
-          //console.log(`lines: ${lines}`);
+          const cleanText = targetData3_2.replace(/<br\s*\/?>/gi, '\n'); // 모든 <br>을 개행으로 변환
+          const lines = cleanText.split('\n').map(line => line.trim()).filter(Boolean);
+
           lines.forEach((dtElement, index) => {
-            //console.log(`dtText: ${index}, ${dtElement}`);
-            const dtYearText = '';
-            //const dtText = $(dtElement).text() ? $(dtElement).text().trim()  : '';
-            
-            if ( !functions.isEmpty(dtElement) && dtElement?.length > 10 ) {
-              console.log(`수상: ${dtElement?.length}, ${dtElement}`);
-              //const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-              const tmpDtYearText = dtYearText;
-              item.biography.push({
-                targetDate : tmpDtYearText,
-                type: "수상",
-                text: dtElement,
-                url: null,
-                issuer:null
-              });
-            }
+            const match = functions.splitPeriodAndText(dtElement);
+            const targetDate = match ? match.period : null;
+            const titleText = match ? match.text : dtElement;
+            console.log(`수상2 ${index}: ${targetDate} ${titleText}`);
+            item.biography.push({
+              targetDate: targetDate,
+              type: "수상",
+              text: titleText,
+              url: null,
+              issuer: null
+            });
           });
         }
       }
@@ -368,7 +353,7 @@ module.exports = {
       let item = {
         biography: [],
       };
-
+      let collecting = false;
       let isTreatiseCount = 0;
       $('#content_body').find("h3:contains('주요 저서 및 논문')").next('div.subbox').find("ul > li").each((index, dtElement) => {
       
@@ -489,11 +474,11 @@ module.exports = {
   },
 
 
-  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url,profile_url) => {
+  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url,profile_url,p_hName) => {
 
     let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL set_doctor_basic_v2(?)`
-    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url,profile_url]);
+    const query = `CALL set_doctor_basic_v3(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url,profile_url,p_hName,url]);
     if (DBError) {
       console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
       return { error: DBError, data: null };

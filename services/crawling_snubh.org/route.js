@@ -39,7 +39,7 @@ router.post('/healthcheck', async function(req, res) {
  *    post:
  *      summary: "접속 테스트"
  *      description: "서버에 접속이 됬는데 "
- *      tags: [snubh.org-분당 서울대병원]
+ *      tags: [snubh.org-분당서울대학교병원]
  *      produces:
  *      parameters:
  *        - name: "hid"
@@ -74,10 +74,12 @@ router.post('/healthcheck', async function(req, res) {
 router.post('/step01', async function(req, res, next) {  
 
   const HOSPITAL_ID = 'H01KR-41000007';
+  const HOSPITAL_NAME = '분당서울대학교병원';
   const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
   if ( ret.success === false ) {
     return res.send(ret);
   }
+  
 
   const data = [];
   const r_url = `https://www.snubh.org/medical/deptList.do`;
@@ -91,31 +93,33 @@ router.post('/step01', async function(req, res, next) {
   for (let i = 0; i < _.size(P1.data) ; i++) {
     await CS.wait(500);
     console.log(`loop ${i} link : ${P1.data[i].link}, deptName : ${P1.data[i].deptName}`);
-    /* const SP1 = await crawlingCtrl.crwalingProcess02(P1.data[i].link, P1.data[i].deptName);
+    const SP1 = await crawlingCtrl.crwalingProcess02(P1.data[i].link, P1.data[i].deptName);
     console.log("SP1 size",_.size(SP1?.data));
 
     if (!functions.isEmpty(SP1.data)) {
       for (let i = 0; i < _.size(SP1.data); i++) {
-        data.push({
-          hid: HOSPITAL_ID,
-          deptName: SP1.data[i].deptName,
-          doctorName: SP1.data[i].doctorName,
-          url: SP1.data[i].url
-        })
-        await CS.wait(200);
-        const SP0 = await crawlingCtrl.get_rid_encrypt(SP1.data[i].doctorName, SP1.data[i].url);
-        if (SP0.error) {
-          console.log("SP0 DB fail.");
-          return res.json(TS.fail("SP0 DB fail."));
-        }
-        const tempRid = SP0.data[0].rid_encrypt;
+        if ( SP1.data[i].deptName == "가정의학과" && SP1.data[i].doctorName == "이기헌") {
+          data.push({
+            hid: HOSPITAL_ID,
+            deptName: SP1.data[i].deptName,
+            doctorName: SP1.data[i].doctorName,
+            url: SP1.data[i].url
+          })
+          await CS.wait(200);
+          const SP0 = await crawlingCtrl.get_rid_encrypt(SP1.data[i].doctorName, SP1.data[i].url);
+          if (SP0.error) {
+            console.log("SP0 DB fail.");
+            return res.json(TS.fail("SP0 DB fail."));
+          }
+          const tempRid = SP0.data[0].rid_encrypt;
 
-        const SP2 = await crawlingCtrl.setCrawlingDoctorLink(tempRid, HOSPITAL_ID, SP1.data[i].deptName, SP1.data[i].doctorName, SP1.data[i].url);
-        if (SP2.error) console.log("DB upsert fail.");;
+          const SP2 = await crawlingCtrl.setCrawlingDoctorLink(tempRid, HOSPITAL_ID, SP1.data[i].deptName, SP1.data[i].doctorName, SP1.data[i].url, SP1.data[i].profileUrl,HOSPITAL_NAME);
+          if (SP2.error) console.log("DB upsert fail.");
+        }
       }
     } else {
       console.log(`loop ${i} result is null.`);
-    } */
+    }
   }
 
   console.log(`검색된 진료과목수 : ${_.size(P1.data)}, 검색된 의사수 : ${_.size(data)}`);
@@ -133,7 +137,7 @@ router.post('/step01', async function(req, res, next) {
  *    post:
  *      summary: "1단계  조회"
  *      description: "분당 서울대병원 정보를 가져와야 한다  "
- *      tags: [snubh.org-분당 서울대병원]
+ *      tags: [snubh.org-분당서울대학교병원]
  *      produces:
  *      parameters:
  *        - name: "hid"
@@ -191,7 +195,7 @@ router.post('/step02', async (req, res, next) => {
     if (doctorName && refUrl) {
       const SP1 = await crawlingCtrl.crwalingProcess03(refUrl);
       console.log("SP1 size",_.size(SP1?.data));
-      await CS.wait(300);
+      /* await CS.wait(300);
       const SP2 = await crawlingCtrl.get_rid_encrypt(doctorName, refUrl);
       if (SP2.error) {
         console.log("SP2 DB fail.");
@@ -212,7 +216,7 @@ router.post('/step02', async (req, res, next) => {
       if (SP4.error) {
         console.log("SP4 DB fail.");
         return res.json(TS.fail("SP4 DB fail."));
-      }
+      } */
 
       data.push({
         hid: HOSPITAL_ID,
@@ -238,7 +242,7 @@ router.post('/step02', async (req, res, next) => {
  *    post:
  *      summary: "2단계  조회"
  *      description: "분당 서울대병원 정보를 가져와야 한다  "
- *      tags: [snubh.org-분당 서울대병원]
+ *      tags: [snubh.org-분당서울대학교병원]
  *      produces:
  *      parameters:
  *        - name: "hid"
@@ -269,95 +273,6 @@ router.post('/step02', async (req, res, next) => {
  * 
  */
 
-router.post('/step03', async (req, res, next) => {
-  const HOSPITAL_ID = 'H01KR-41000007';
-  const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
-  if ( ret.success === false ) {
-    return res.send(ret);
-  }
-
-  const P1 = await crawlingCtrl.get_crawling_doctor_mssing_link(HOSPITAL_ID);
-  console.log(_.size(P1.data))
-  if (CS.isEmpty(_.size(P1.data))) { return res.json(TS.fail({ code: 'DATA_NULL', message: 'response data is null' })) }
-  const doctorLinkTotal = _.size(P1.data)
-
-  for (let i = 0; i < _.size(P1.data); i++) {
-    const doctorName = P1.data[i].doctorname;
-    const deptName = P1.data[i].deptname;
-    const refUrl = P1.data[i].doctor_url
-    
-    if (doctorName && refUrl) {
-      await CS.wait(10000); // 10초정도로 - 부사장님 지시임! 꼭 지킬것
-      const SP1 = await crawlingCtrl.crwalingProcess03(refUrl);
-     
-      await CS.wait(300);
-      const SP2 = await crawlingCtrl.get_rid_encrypt(doctorName, refUrl);
-      if (SP2.error) {
-        console.log("SP2 DB fail.");
-        return res.json(TS.fail("SP2 DB fail."));
-      }
-      const tempRid = SP2.data[0].rid_encrypt
-      if (CS.isEmpty(tempRid)) break;
-      await CS.wait(300);
-      const SP3 = await crawlingCtrl.setCrawlingdoctorBasic(tempRid, HOSPITAL_ID, deptName, doctorName, SP1.data.specialty, SP1.data.profileImgUrl);
-      if (SP3.error) {
-        console.log("SP3 DB fail.");
-        return res.json(TS.fail("SP3 DB fail."));
-      }
-      await CS.wait(200);
-      // console.log(SP1.data.biography)
-      const SP4 = await crawlingCtrl.setCrawlingdoctorBiography(tempRid, HOSPITAL_ID, doctorName, JSON.stringify(SP1.data.biography));
-      if (SP4.error) {
-        console.log("SP4 DB fail.");
-        return res.json(TS.fail("SP4 DB fail."));
-      }
-    }
-  }
-
-  let result = P1.data
-  return res.json(TS.success(result));
-});
-
-
-
-/**
- * @swagger
- *  /v1/c/snubh.org/step03:
- *    post:
- *      summary: "3단계 조회 - 놓친 데이터 추가 작업(사용안함)"
- *      description: "분당 서울대병원 정보를 가져와야 한다  "
- *      tags: [snubh.org-분당 서울대병원]
- *      produces:
- *      parameters:
- *        - name: "hid"
- *          in: "body"
- *          description: "input hospitalId"
- *          required: true
- *          type: "object"
- *          schema:
- *            type: object
- *            properties:
- *              hid:
- *                type: string
- *                description: "input hospitalId"
- *      responses:
- *        "200":
- *          description: step03
- *          content:
- *            application/json:
- *              schema:
- *                type: object
- *                properties:
- *                    ok:
- *                      type: boolean
- *                    users:
- *                      type: object
- *                      example:    
- *                            { "code": 1000, "message": "작업성공" }
- * 
- */
-
-
 router.post('/treatise', async (req, res, next) => {
   const HOSPITAL_ID = 'H01KR-41000007';
   const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
@@ -380,7 +295,7 @@ router.post('/treatise', async (req, res, next) => {
     if (_.size(SP1.data.biography) > 0) {
       await CS.wait(300);
       const tempRid = P1.data[i].rid
-      if (CS.isEmpty(tempRid)) break;
+      /* if (CS.isEmpty(tempRid)) break;
       for (let index = 0; index < _.size(SP1.data.biography); index++) {
         const element = SP1.data.biography[index];
         const iD = {
@@ -407,7 +322,7 @@ router.post('/treatise', async (req, res, next) => {
           console.log(`Error on ${P1.data[i].doctorName}`)
         }
         article++;
-      }
+      } */
     }
   }
 
@@ -427,7 +342,7 @@ router.post('/treatise', async (req, res, next) => {
  *    post:
  *      summary: "논문 조회"
  *      description: "분당 서울대병원 정보를 가져와야 한다  "
- *      tags: [snubh.org-분당 서울대병원]
+ *      tags: [snubh.org-분당서울대학교병원]
  *      produces:
  *      parameters:
  *        - name: "hid"
@@ -455,36 +370,5 @@ router.post('/treatise', async (req, res, next) => {
  *                      type: object
  *                      example:    
  *                            { "code": 1000, "message": "작업성공" }
- * 
- */
-
-router.get('/info', AUTH.validation, async (req, res, next) => {
-  const ip = req.clientIp;
-  return res.json(TS.success(req.auth));
-});
-
-
-
-/**
- * @swagger
- *  /v1/c/snubh.org/info:
- *    get:
- *      summary: "정보 조회(사용안하는 거 같음)"
- *      description: "분당 서울대병원 정보를 가져와야 한다  "
- *      tags: [snubh.org-분당 서울대병원]
- *      responses:
- *        "200":
- *          description: info
- *          content:
- *            application/json:
- *              schema:
- *                type: object
- *                properties:
- *                    ok:
- *                      type: boolean
- *                    users:
- *                      type: object
- *                      example:    
- *                            { "code": 1000, "message": "접속성공" }
  * 
  */

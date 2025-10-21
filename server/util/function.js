@@ -12,6 +12,22 @@ functions.prototype.isNull = function(data,replace){
     return data === undefined ? replace : data;
 };
 
+functions.prototype.puppeteerSleep = function(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+functions.prototype.splitPeriodAndText = function(str) {
+    if (!str) return { period: null, text: null };
+  
+    const clean = str.trim();
+    const match = clean.match(/^([\d.\s~\-]+)?(.*)$/);
+  
+    return {
+      period: match && match[1] ? match[1].trim() : null,
+      text: match && match[2] ? match[2].trim() : null,
+    };
+}
+
 functions.prototype.getTodayformatDate = function(){
     const ddate = new Date();
     let month = '' + (ddate.getMonth() + 1);

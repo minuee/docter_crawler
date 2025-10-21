@@ -100,12 +100,15 @@ module.exports = {
           const matches = detailLink.match(/'(\d+)'/g).map(num => num.replace(/'/g, ''));
           tmpLink =  `https://hosp.ajoumc.or.kr/doctor/profViewPop.do?deptNo=${matches[0]}&profNo=${matches[1]}`;
         }
+        const profileUrlTmp = $(element).find('div.info').find('div.img').find('img').attr('src') ? $(element).find('div.info').find('div.img').find('img').attr('src') : '';
+        const profileUrl = profileUrlTmp ? `https://hosp.ajoumc.or.kr${profileUrlTmp}` : '';
         console.log(`Adding doctor list: ${index} ${doctorName} ${deptName} ${tmpLink}`); // 디버
         if ( !functions.isEmpty(doctorName) && !functions.isEmpty(detailLink) ) {
           const doctor = {
             doctorName,
             deptName,
             url: tmpLink,
+            profileUrl
           };
           doctors.push(doctor); 
         }
@@ -157,10 +160,10 @@ module.exports = {
       const $ = cheerio.load(htmlContent);  
       // $(`#layer_pop_${doctor_id}`).attr('disabled', 'disabled').css('display', 'block');
       const profileImgUrl = $('div.doc_details_img').find("div.swiper-wrapper > div.swiper-slide:first-child > span > img").attr('src') ? $('div.doc_details_img').find("div.swiper-wrapper > div.swiper-slide:first-child > span > img").attr('src') : '';
-      let tmpSpecialty = $('div.doc_details_box').find('div.tit_w').find('dl > dd').text() ? $('div.doc_details_box').find('div.tit_w').find('dl > dd').text().trim() : '';
+      let tmpSpecialty = $('div.doc_details_box').find('div.tit_w').find('dl').find('dt:contains("전문분야")').next('dd').text() ? $('div.doc_details_box').find('div.tit_w').find('dl').find('dt:contains("전문분야")').next('dd').text().trim() : '';
       // 진료분야를 json화 한다
       let specialtyJson = tmpSpecialty.split(",");
-      //console.log(`specialtyJson: ${JSON.stringify(specialtyJson)}`);
+      console.log(`specialtyJson: ${JSON.stringify(specialtyJson)}`);
       // 학력 경력
       let item = {
         specialty: tmpSpecialty.replaceAll(/\n|\r|/g, ''),
@@ -177,13 +180,14 @@ module.exports = {
         const dtText = $(dtElement).find('span').text() ? $(dtElement).find('span').text().trim() : '';
  
         if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-          const tmpDtYearText = dtYearText;
+          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '').replaceAll(/\n|\r|\s*/g, '');
+          const match = functions.splitPeriodAndText(tmpText);
+          const tmpDtYearText = dtYearText ? dtYearText : match ? match.period : null;
           console.log(`학력 : ${tmpDtYearText} ${tmpText}`)
           item.biography.push({
             targetDate : tmpDtYearText,
             type: "학력",
-            text: tmpText,
+            text: match ? match.text : tmpText,
             url: null,
             issuer:null
           });
@@ -196,13 +200,14 @@ module.exports = {
         const dtText = $(dtElement).find('span').text() ? $(dtElement).find('span').text().trim() : '';
  
         if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-          const tmpDtYearText = dtYearText;
+          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '').replaceAll(/\n|\r|\s*/g, '');
+          const match = functions.splitPeriodAndText(tmpText);
+          const tmpDtYearText = dtYearText ? dtYearText : match ? match.period : null;
           console.log(`경력 : ${tmpDtYearText} ${tmpText}`)
           item.biography.push({
             targetDate : tmpDtYearText,
             type: "경력",
-            text: tmpText,
+            text: match ? match.text : tmpText,
             url: null,
             issuer:null
           });
@@ -215,13 +220,14 @@ module.exports = {
         const dtText = $(dtElement).find('span').text() ? $(dtElement).find('span').text().trim() : '';
  
         if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-          const tmpDtYearText = dtYearText;
+          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '').replaceAll(/\n|\r|\s*/g, '');
+          const match = functions.splitPeriodAndText(tmpText);
+          const tmpDtYearText = dtYearText ? dtYearText : match ? match.period : null;
           console.log(`저서 : ${tmpDtYearText} ${tmpText}`)
           item.biography.push({
             targetDate : tmpDtYearText,
             type: "저서",
-            text: tmpText,
+            text: match ? match.text : tmpText,
             url: null,
             issuer:null
           });
@@ -235,10 +241,10 @@ module.exports = {
         const dtUrl = $(dtElement).find('ul > li:nth-child(3) > span > a').attr('href') ? $(dtElement).find('ul > li:nth-child(3) > span > a').attr('href').trim() : '';
  
         if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '').replaceAll(/\n|\r|\s*/g, '');
           const tmpDtYearText = dtYearText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
           const tmpDtIssuerText = dtIssuerText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-          console.log(`학력 : ${tmpDtYearText} ${tmpText} ${tmpDtIssuerText}`)
+          console.log(`언론 : ${tmpDtYearText} ${tmpText} ${tmpDtIssuerText}`)
           item.biography.push({
             targetDate : tmpDtYearText,
             type: "언론",
@@ -262,74 +268,75 @@ module.exports = {
   },
 
   crwalingtreatise: async (url) => {
-    let result = null, error = null, DBCode = null;
-    let Response = { status: null, data: null }
-    console.log(`crwalingtreatise: ${url}`); 
-    
-    if (!url) {
-      return { error: true, data: null };
-    }
+    let result = null, error = null;
+    console.log(`crwalingtreatise: ${url}`);
+  
+    if (!url) return { error: true, data: null };
+  
+    const browser = await puppeteer.launch({ headless: true });
+    const page = await browser.newPage();
+    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36');
+    page.setDefaultNavigationTimeout(0);
+  
     try {
-      const browser = await puppeteer.launch();
-        // Open a new page
-      const page = await browser.newPage();
-      page.setDefaultNavigationTimeout(0);
-      
-      //await page.waitForSelector('.inner');
-      // Navigate to the website
-      await page.goto(url,{waitUntil: "domcontentloaded"});
-      await page.setViewport({
-          width: 1200,
-          height: 800
+      await page.goto(url, { waitUntil: "domcontentloaded" });
+      await page.setViewport({ width: 1200, height: 800 });
+  
+      // 📌 논문 탭 링크 추출
+      const treatiseLink = await page.evaluate(() => {
+        const el = document.querySelector("#paperMobTab > a");
+        return el ? el.href : null;
       });
-      const openWindow = await page.waitForSelector("#paperMobTab > a",{timeout:3000}).catch(()=> console.log("paperMobTab Cannot read properties of null"));
-      console.log(`openWindow: ${openWindow}`); 
-      if ( openWindow != undefined) {
-        await openWindow.evaluate(el => el.click()),
-        await page.waitForSelector("#paperMobArea",{timeout:3000}).catch(()=> console.log("paperMobArea Cannot read properties of null"));
+  
+      if (!treatiseLink) {
+        console.log("paperMobTab 링크를 찾을 수 없습니다.");
+        await browser.close();
+        return { error: "No paperMobTab found", data: [] };
       }
-      await page.keyboard.press('ArrowDown')
-      //await page.waitForSelector("._careerIemContainer");
-      await CS.wait(1000);
-      await page.keyboard.press('ArrowUp');
-      const htmlContent = await page.content();
-      const $ = cheerio.load(htmlContent);  
-      // $(`#layer_pop_${doctor_id}`).attr('disabled', 'disabled').css('display', 'block');
-
-      //const redirectUrl = $("div.doc_details_tab_w").find("ul > li.paperMobArea")
-      //if ( )
-
-      // 학력 경력
-      let item = {
-        biography: [],
-      };
-    
-      $('#paperArea > ul > li:nth-child(1)').find('ul.list_basic > li').each((index, dtElement) => {
-        const dtText = $(dtElement).find('span').text() ? $(dtElement).find('span').text().trim() : '';
-        console.log(`논문: ${dtText}`);
-        if ( !functions.isEmpty(dtText)) {
-          const tmpText = dtText.trim().replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-          const etc = {
-            type: '논문',
-            title: (tmpText) ? tmpText : '',
+  
+      // 📌 논문 페이지 이동
+      let finalTreatiseUrl = treatiseLink.includes("&type=16")
+        ? treatiseLink
+        : `${treatiseLink}&type=16`;
+  
+      console.log(`finalTreatiseUrl: ${finalTreatiseUrl}`);
+      await page.goto(finalTreatiseUrl, { waitUntil: "networkidle2" });
+  
+      // 📌 list_tbl 로드될 때까지 기다림
+      await page.waitForSelector(".list_tbl tbody tr", { timeout: 20000 });
+  
+      // 📌 혹시 스크롤 필요하면
+      await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+      await new Promise((r) => setTimeout(r, 1000));
+  
+      // 📌 HTML 파싱
+      const html = await page.content();
+      const $ = cheerio.load(html);
+  
+      const item = { biography: [] };
+  
+      $(".list_tbl tbody tr").each((_, el) => {
+        const title = $(el).find("td:nth-child(3) a").text().trim();
+        if (title) {
+          console.log(`논문: ${title}`);
+          item.biography.push({
+            type: "논문",
+            title,
             url: null,
-          };
-          item.biography.push(etc);
+          });
         }
       });
-
-      
+  
+      console.log(`총 ${item.biography.length}개의 논문 발견`);
+  
       await browser.close();
-      return { error: error, data: item };
-
-    } catch (error) {
-      Error = error;
-      console.log(`error on ${url} API return: ${error}`);
+      return { error: null, data: item };
+    } catch (err) {
+      console.error(`error on ${url} : ${err}`);
       await browser.close();
-      return { error: error, data: [] };
+      return { error: err.message, data: [] };
     }
-
-  },
+  },  
 
   setCrawlingdoctorBasic: async (rid, hid, deptName, doctorName, specialty, profileimgurl) => {
     
@@ -407,11 +414,11 @@ module.exports = {
     return { error: error, data: result };
   },
 
-  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url) => {
+  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url,profile_url,p_hName) => {
 
     let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL set_doctor_basic(?)`
-    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url]);
+    const query = `CALL set_doctor_basic_v3(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url,profile_url,p_hName,url]);
     if (DBError) {
       console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
       return { error: DBError, data: null };
