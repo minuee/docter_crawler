@@ -169,7 +169,7 @@ module.exports = {
       const htmlContent = await page.content();
       const $ = cheerio.load(htmlContent);  
       let tmpSpecialty = $('div.profile_wrap').find('div.profile_txt').find('p.pro_subject').text() ? $('div.profile_wrap').find('div.profile_txt').find('p.pro_subject').text().trim() : '';
-      ///console.log(`specialtyJson: ${tmpSpecialty}`);
+      console.log(`specialtyJson: ${tmpSpecialty}`);
       // 진료분야를 json화 한다
       let specialtyJson = tmpSpecialty.split(",");
       
@@ -515,11 +515,12 @@ module.exports = {
   },
 
 
-  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url,profile_url) => {
+
+  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url,profile_url,p_hName) => {
 
     let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL set_doctor_basic_v2(?)`
-    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url,profile_url]);
+    const query = `CALL set_doctor_basic_v3(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url,profile_url,p_hName,url]);
     if (DBError) {
       console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
       return { error: DBError, data: null };

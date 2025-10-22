@@ -74,6 +74,7 @@ router.post('/healthcheck', async function(req, res) {
 router.post('/step01', async function(req, res, next) {  
 
   const HOSPITAL_ID = 'H01KR-48000008';
+  const HOSPITAL_NAME = '학교법인성균관대학삼성창원병원';
   const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
   if ( ret.success === false ) {
     return res.send(ret);
@@ -86,12 +87,18 @@ router.post('/step01', async function(req, res, next) {
   
   if (P1.error) return res.json(TS.fail(P1.error));
   if (functions.isEmpty(P1.data)) { return res.json(TS.fail({ code: 'DATA_NULL', message: 'response data is null' })) }
-
+  //https://smc.skku.edu/doctor/main/main.do?mId=1&doctorNo=3
+  //https://smc.skku.edu/doctor/main/main.do?mId=1
   // _.size(P1.data);
   for (let i = 0; i < _.size(P1.data); i++) {
-    console.log(`loop ${i} link : ${P1.data[i].link}, deptName : ${P1.data[i].deptName}`);
-    /* if (!functions.isEmpty(P1.data[i].doctorName)) {
-      
+    console.log(`loop ${i} url : ${P1.data[i].url}, deptName : ${P1.data[i].deptName}, doctorName : ${P1.data[i].doctorName}`);
+    if (!functions.isEmpty(P1.data[i].doctorName)) {
+      data.push({
+        hid: HOSPITAL_ID,
+        deptName : P1.data[i].deptName,
+        doctorName : P1.data[i].doctorName
+      })
+      if ( P1.data[i].deptName == "소화기내과" && P1.data[i].doctorName == "김광민") {
         await CS.wait(200);
         const SP0 = await crawlingCtrl.get_rid_encrypt(P1.data[i].doctorName, P1.data[i].url);
         //console.log("SP0",SP0.data);
@@ -101,12 +108,12 @@ router.post('/step01', async function(req, res, next) {
         }
         const tempRid = SP0.data[0].rid_encrypt;
         //console.log("tempRid",tempRid);
-        const SP2 = await crawlingCtrl.setCrawlingDoctorLink(tempRid, HOSPITAL_ID, P1.data[i].deptName, P1.data[i].doctorName, P1.data[i].url);
+        const SP2 = await crawlingCtrl.setCrawlingDoctorLink(tempRid, HOSPITAL_ID, P1.data[i].deptName, P1.data[i].doctorName, P1.data[i].url, null, HOSPITAL_NAME);
         if (SP2.error) console.log("DB upsert fail.");;
         // console.log("SP2",SP2);
         if (functions.isEmpty(tempRid)) break;
-        await CS.wait(300);
-        const SP3 = await crawlingCtrl.setCrawlingdoctorBasic(tempRid, HOSPITAL_ID,  P1.data[i].deptName, P1.data[i].doctorName, P1.data[i].career.specialty, P1.data[i].career.profileImgUrl);
+        /* await CS.wait(300);
+        const SP3 = await crawlingCtrl.setCrawlingdoctorBasic(tempRid, HOSPITAL_ID,  P1.data[i].deptName, P1.data[i].doctorName, P1.data[i].career.specialty, P1.data[i].career.profileImgUrl,HOSPITAL_NAME);
         //console.log("SP3",SP3);
         if (SP3.error) {
           console.log("SP3 DB fail.");
@@ -150,18 +157,13 @@ router.post('/step01', async function(req, res, next) {
               console.log(`Error on ${P1.data[i].doctorName}`)
             }
           }
-        }
-        
-       
-   
+        } */
+
+      }
     } else {
       console.log(`loop ${i} result is null.`);
-    } */
-    data.push({
-      hid: HOSPITAL_ID,
-      deptName : P1.data[i].deptName,
-      doctorName : P1.data[i].doctorName
-    })
+    }
+    
   }
 
   console.log(`검색된 의사수 : ${_.size(data)}`);

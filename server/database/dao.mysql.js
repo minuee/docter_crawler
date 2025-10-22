@@ -10,9 +10,12 @@ module.exports = {
     let DBconn
     let DBError = null;
     const pool = poolPromise;
+    console.log(`process.env.MYSQL_HOST :${process.env.MYSQL_HOST}`)
+    console.log(`process.env.MYSQL_USER :${process.env.MYSQL_USER}`)
+    console.log(`process.env.MYSQL_PASSWORD :${process.env.MYSQL_PASSWORD}`)
     try {
         DBconn = await pool.getConnection();
-        console.log(`> Pool connection`);
+        //console.log(`> Pool connection : ${DBconn}`);
         //console.log(`> LCL : ${moment.utc(new Date().toISOString()).tz("Asia/Seoul").format()}`);
         //console.time(`> Query ${spName} ${info} executetime : `); 
         try {

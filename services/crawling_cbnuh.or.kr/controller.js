@@ -76,6 +76,11 @@ module.exports = {
       const page = await browser.newPage();
       page.setDefaultNavigationTimeout(0);
 
+      page.on('dialog', async dialog => {
+        console.log(`Dialog message: ${dialog.message()}`);
+        await dialog.dismiss();
+      });
+
       await page.goto(url,{waitUntil: "domcontentloaded"});
       await page.setViewport({
           width: 1200,
@@ -177,7 +182,7 @@ module.exports = {
           $(sectionElement).find('div.edu_con').find('ul > li').each((index, liElement) => {
             const dtText = $(liElement).text().trim();
             if ( !functions.isEmpty(dtText)  && dtText?.length > 6) {
-              if (dtText.match(/(학사|석사|박사)/)) {
+              if (dtText.includes('졸업') || dtText.includes('석사') || dtText.includes('박사') || dtText.includes('학사') ) {
                 const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
                 console.log(`학력 ${tmpText}`);
                 item.biography.push({
@@ -430,11 +435,12 @@ module.exports = {
   },
 
 
-  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url,profile_url) => {
+  
+  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url,profile_url,p_hName) => {
 
     let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL set_doctor_basic_v2(?)`
-    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url,profile_url]);
+    const query = `CALL set_doctor_basic_v3(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url,profile_url,p_hName,url]);
     if (DBError) {
       console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
       return { error: DBError, data: null };

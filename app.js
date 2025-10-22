@@ -139,7 +139,6 @@ class App {
     this.app.use('/v1/c/gnuh.co.kr', require(`${global.appRoot}/services/crawling_gnuh.co.kr/route`)); //경상국립대학교병원  - H01KR-48000007
     this.app.use('/v1/c/smc.skku.edu', require(`${global.appRoot}/services/crawling_smc.skku.edu/route`)); //성균관대 삼성창원병원  - H01KR-48000008
   
-
     /* 충청, 강원, 전라권 */
     this.app.use('/v1/c/cbnuh.or.kr', require(`${global.appRoot}/services/crawling_cbnuh.or.kr/route`)); //충북대학교병원 - H01KR-43000001
     this.app.use('/v1/c/dkuh.co.kr', require(`${global.appRoot}/services/crawling_dkuh.co.kr/route`)); //단국대학교병원 - H01KR-44000001
@@ -159,9 +158,7 @@ class App {
 
     // this.app.use('/v1/c/pubmed_firstauthor', require(`${global.appRoot}/services/pubmed_firstauthor/route`)); // 제1저자 처 
     this.app.use('/v1/c/open.go.kr', require(`${global.appRoot}/services/openAPI_data.go.kr/route`)); // 공공데이터
-
     this.app.use('/v1/c/crawling_bedoc', require(`${global.appRoot}/services/crawling_bedoc/route`)); // 베닥병원 수집
-
     this.app.use('/v1/c/crawling_did_link', require(`${global.appRoot}/services/crawling_did_link/route`)); // 3차병원 DID 작업
 
     }

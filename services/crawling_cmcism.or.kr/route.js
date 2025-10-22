@@ -134,7 +134,7 @@ router.post('/step01', async function(req, res) {
   // _.size(P1.data);
   for (let i = 0; i < _.size(P1.data); i++) {
     await CS.wait(500);
-    console.log("P1.data[i].link",P1.data[i].link,P1.data[i].deptName);
+    console.log("P1.data[i].link",P1.data[i].link,P1.data[i].deptName,P1.data[i].doctorName);
     const SP1 = await crawlingCtrl.crwalingProcess02(P1.data[i].link, P1.data[i].deptName);
     console.log("SP1 size",_.size(SP1?.data));
   
@@ -226,7 +226,7 @@ router.post('/step02', async (req, res, next) => {
   const data = [];
   for (let i = 0; i < _.size(P1.data); i++) {
     await CS.wait(10000); // 10초정도로 - 부사장님 지시임! 꼭 지킬것
-
+    console.log(`doctorName : ${P1.data[i].doctorname} ${P1.data[i].doctor_url}`)
     const doctorName = P1.data[i].doctorname;
     const deptName = P1.data[i].deptname;
     const refUrl = P1.data[i].doctor_url;

@@ -388,7 +388,8 @@ module.exports = {
   }, 
 
   getCrawlingDoctorLink: async (hid) => {
-    let result = null, error = null, DBCode = null, DBData = null
+    let result = null, error = null, DBCode = null, DBData = null;
+    console.log(`hid: ${hid},DATA_VERSION: ${DATA_VERSION_ID}`)
     const query = `CALL get_doctor_basic(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [hid,DATA_VERSION_ID]);
     if (DBError) {

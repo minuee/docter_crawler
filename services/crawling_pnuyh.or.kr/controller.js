@@ -28,14 +28,15 @@ module.exports = {
       const $ = cheerio.load(htmlContent);  
       let dept = [];
 
-      $('div.grp_list').find('div.grp').each((index, element) => {
+
+      $('#tab_d').find('ul.grp_unit01').each((index, element) => {
   
-        $(element).find('ul > li').each((subIndex, subElement) => {
+        $(element).find('li').each((subIndex, subElement) => {
           
           const deptName = $(subElement).find('h4').text()  ? $(subElement).find('h4').text().trim()  : '';
           const tmpLink = $(subElement).find('div.btn').find('a:eq(0)').attr('href') ? $(subElement).find('div.btn').find('a:eq(0)').attr('href') : '';
           
-          console.log(`deptName: ${deptName} ${tmpLink}`);
+          ////console.log(`deptName: ${deptName} ${tmpLink}`);
           if ( !functions.isEmpty(tmpLink) && !functions.isEmpty(deptName) ) {
             //const reNameLink = tmpLink.replace("department-info","medical-team-info");
             const link = `https://www.pnuyh.or.kr${tmpLink}`;
@@ -88,7 +89,7 @@ module.exports = {
       const doctors = [];
       $('div.team_ct').find('ul.team_list > li').each((index, element) => {
         const doctorName = $(element).find('div.team_doctor').find('strong').text() ? $(element).find('div.team_doctor').find('strong').text().replace(/\(.*\)/g, '').trim() : '';
-        const detailLink = $(element).find('div.team_doctor').find('div.btn > a').attr('href') ? $(element).find('div.team_doctor').find('div.btn > a').attr('href') : '';
+        const detailLink = $(element).find('div.team_doctor').find('div.dbwrap > a').attr('href') ? $(element).find('div.team_doctor').find('div.dbwrap > a').attr('href') : '';
         const doctorProfileUrl = $(element).find('div.team_doctor').find('img').attr('src') ? $(element).find('div.team_doctor').find('img').attr('src')  : '';
         let tmpLink = null;
         let tmpProfileUrl = null;
@@ -153,8 +154,8 @@ module.exports = {
       await page.keyboard.press('ArrowUp');
       const htmlContent = await page.content();
       const $ = cheerio.load(htmlContent);  
-      let tmpSpecialty = $('#container').find('div.teamIntro_doctor').find('div.mInfo').find('dl > dd').text() ? $('#container').find('div.teamIntro_doctor').find('div.mInfo').find('dl > dd').text().trim() : '';
-      console.log(`specialtyJson: ${tmpSpecialty}`);
+      let tmpSpecialty = $('#container').find('.mInfo').find('.field').find('span').text() ? $('#container').find('.mInfo').find('.field').find('span').text().trim() : '';
+      console.log(`specialtyJson: ${tmpSpecialty} ${tmpSpecialty.replaceAll(/\n|\r|/g, '')}`);
       // 진료분야를 json화 한다
       let specialtyJson = tmpSpecialty.split(",");
       
@@ -186,7 +187,7 @@ module.exports = {
             
         const dtYearText =  $(dtElement).find("th").text() ? $(dtElement).find("th").text().trim() : '';
         const dtText = $(dtElement).find("td.txtL").text() ? $(dtElement).find("td.txtL").text().trim() : '';
-        console.log(`경력 ${dtText}`);
+        console.log(`경력 ${dtYearText} ${dtText}`);
         if ( !functions.isEmpty(dtText) && dtText?.length > 10 ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
           item.biography.push({
@@ -203,7 +204,7 @@ module.exports = {
             
         const dtYearText =  $(dtElement).find("th").text() ? $(dtElement).find("th").text().trim() : '';
         const dtText = $(dtElement).find("td.txtL").text() ? $(dtElement).find("td.txtL").text().trim() : '';
-        console.log(`학회 ${dtText}`);
+        console.log(`학회 ${dtYearText} ${dtText}`);
         if ( !functions.isEmpty(dtText) && dtText?.length > 10  ) {
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
           item.biography.push({
@@ -386,11 +387,12 @@ module.exports = {
   },
 
 
-  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url,profile_url) => {
+
+  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url,profile_url,p_hName) => {
 
     let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL set_doctor_basic_v2(?)`
-    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url,profile_url]);
+    const query = `CALL set_doctor_basic_v3(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url,profile_url,p_hName,url]);
     if (DBError) {
       console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
       return { error: DBError, data: null };

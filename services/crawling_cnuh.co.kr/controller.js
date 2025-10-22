@@ -251,8 +251,8 @@ module.exports = {
           });
         }else if (title.includes('학회')) {
           $(sectionElement).find("strong:contains('학회활동')").next('div').find('div').each((index, liElement) => {
-            const subTitle = $(sectionElement).find('em').text().trim();
-            if (subTitle.includes('학회활동')) { 
+            //const subTitle = $(sectionElement).find('em').text().trim();
+            //if (subTitle.includes('학회활동')) { 
               $(liElement).find("ul > li").each((index, insideLiElement) => {
                 const dtText = $(insideLiElement).text().trim();
                 if ( !functions.isEmpty(dtText)  && dtText?.length > 6) {
@@ -268,12 +268,12 @@ module.exports = {
                   });
                 }
               })
-            }
+            //}
           });
         }else if (title.includes('수상')) {
           $(sectionElement).find("strong:contains('수상내역 및 기타')").next('div').find('div').each((index, liElement) => {
-            const subTitle = $(sectionElement).find('em').text().trim();
-            if (subTitle.includes('수상내역')) { 
+            //const subTitle = $(sectionElement).find('em').text().trim();
+            //if (subTitle.includes('수상내역')) { 
               $(liElement).find("ul > li").each((index, insideLiElement) => {
                 const dtText = $(insideLiElement).text().trim();
                 if ( !functions.isEmpty(dtText)  && dtText?.length > 6) {
@@ -289,7 +289,7 @@ module.exports = {
                   });
                 }
               })
-            }
+            //}
           });
         }
       });
@@ -431,11 +431,13 @@ module.exports = {
   },
 
 
-  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url,profile_url) => {
+  
+
+  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url,profile_url,p_hName) => {
 
     let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL set_doctor_basic_v2(?)`
-    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url,profile_url]);
+    const query = `CALL set_doctor_basic_v3(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url,profile_url,p_hName,url]);
     if (DBError) {
       console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
       return { error: DBError, data: null };

@@ -35,17 +35,76 @@ module.exports = {
       const $ = cheerio.load(htmlContent);  
       let dept = [];
       console.log(`r_url: ${r_url} `);
+      const iconElements = $('#sort').find('div.obj div.col').find('div.item').toArray();
+      for (const element of iconElements) {
+       
+        const deptName = $(element).find('a').find("div.inner").find('div.card--body').find('strong.title').text() ? $(element).find('a').find("div.inner").find('div.card--body').find('strong.title').text().trim() : '';
+        const tmpLink = $(element).find("a").attr('href') ? $(element).find("a").attr('href')  : '';
+        
+        
+        if ( !functions.isEmpty(tmpLink) && !functions.isEmpty(deptName) ) {
+          const link = `https://www.jbuh.co.kr${tmpLink}`;
+          let reDeptname = deptName;
+          if (deptName.includes("간담췌이식혈관외과(간담췌외과)")) {
+            reDeptname = "간담췌·이식혈관외과(간담췌이식외과)";
+          } else if (deptName.includes("간담췌이식혈관외과(혈관이식외과)")) {
+            reDeptname = "간담췌·이식혈관외과(혈관이식외과)";
+          } else if (deptName.includes("내분비대사내과")) {
+            reDeptname = "내분비 · 대사내과";
+          } else if (deptName.includes("소화기외과(대장항문외과)")) {
+            reDeptname = "소화기(대장항문)외과";
+          } else if (deptName.includes("소화기외과(위장관외과)")) {
+            reDeptname = "소화기(위장관)외과";
+          } else if (deptName.includes("유방갑상선외과")) {
+            reDeptname = "유방 · 갑상선외과";
+          } else if (deptName.includes("혈액종양내과")) {
+            reDeptname = "혈액 · 종양내과";
+          } else if (deptName.includes("호흡기알레르기내과")) {
+            reDeptname = "호흡기 · 알레르기내과";
+          }
+          console.log(`deptName: ${reDeptname} ${link}`);
+          dept.push({ 
+            deptName : reDeptname,
+            link,
+          });
+        }
+      }
+      console.log(`size of doctors: `,_.size(dept));
+      await browser.close();
+      return { error: null, data: dept };
+    } catch (error) {
+      console.log(`error on ${r_url} API return: ${error}`);
+      await browser.close();
+      return { error: error, data: [] };
+    }
+  },
+  crwalingProcess01_old: async (r_url) => {
+    
+    try {
+ 
+      // Launch a headless browser
+      const browser = await puppeteer.launch();
+      // Open a new page
+      const page = await browser.newPage();
+      page.setDefaultNavigationTimeout(0);
+      // Navigate to the website
+      await page.goto(r_url);
+      // Get the page content
+      const htmlContent = await page.content();
+      const $ = cheerio.load(htmlContent);  
+      let dept = [];
+      console.log(`r_url: ${r_url} `);
 
-      const iconElements = $('div.text_content').find('div.icon_box').find('div.icon').toArray();
+      const iconElements = $('#sort').find('div.obj div.col').find('div.item').toArray();
       const doctors = [];
       for (const element of iconElements) {
        
-        const deptName = $(element).find('a').find("span").text() ? $(element).find('a').find("span").text().trim() : '';
-        const tmpLink = $(element).find("a").attr('onclick') ? $(element).find("a").attr('onclick')  : '';
+        const deptName = $(element).find('a').find("div.inner").find('div.card--body').find('strong.title').text() ? $(element).find('a').find("div.inner").find('div.card--body').find('strong.title').text().trim() : '';
+        const tmpLink = $(element).find("a").attr('href') ? $(element).find("a").attr('href')  : '';
         
         console.log(`deptName: ${deptName} ${tmpLink}`);
         if ( !functions.isEmpty(tmpLink) && !functions.isEmpty(deptName) ) {
-          const regex = /doctorsearch_dept\('([^']+)'\);/;
+          const regex = /doctorsearch_dept\('([^\']+)'\);/;
           const match = tmpLink.match(regex);
           
           if (match) {
@@ -78,7 +137,7 @@ module.exports = {
               if ( !functions.isEmpty(doctorName) && !functions.isEmpty(detailLink) ) {
                 //console.log(`doctorName: ${doctorName}, detailLink: ${detailLink}, doctorProfileUrl: ${doctorProfileUrl}`); // IMID 출력
                 //console.log(`detailLink: ${detailLink}`); // detailLink 값 확인
-                const regex2 = /openpopN\('([^']+)','([^']+)','([^']+)','([^']+)','([^']+)'\)/; // ; 제거
+                const regex2 = /openpopN\('([^\']+)',\'([^\']+)',\'([^\']+)',\'([^\']+)',\'([^\']+)'\)/; // ; 제거
                 const match2 = detailLink.match(regex2);
                // detailLink 값 확인
                 if (match2) {
@@ -117,8 +176,6 @@ module.exports = {
                     let specialtyJson = null;
                     let specialty = null;
                     const tmpSpecialty = $_DocSub('div.doctorInfo').find("#pdoct1").find('p').find('strong').remove().end().find('br').remove().end().text();
-                   
-                    
 
                     if ( !functions.isEmpty(tmpSpecialty) ) {
                       specialty = tmpSpecialty.replaceAll(/\n|\r|/g, '').trim();
@@ -217,7 +274,7 @@ module.exports = {
                     await CS.wait(1000);
                     await newPage.close();
                   }
-                } 
+                }
               }
             }
             await CS.wait(1000);
@@ -237,6 +294,69 @@ module.exports = {
   },
 
   crwalingProcess02: async (url,deptName) => {
+    let result = null, error = null, DBCode = null;
+    if (functions.isEmpty(url)) {
+      return { error: true, data: [] };
+    }
+
+    console.log(`url: ${url} ${deptName}`);
+    try{
+
+      const browser = await puppeteer.launch();
+        // Open a new page
+      const page = await browser.newPage();
+      page.setDefaultNavigationTimeout(0);
+
+      await page.goto(url,{waitUntil: "domcontentloaded"});
+      await page.setViewport({
+          width: 1200,
+          height: 800
+      });
+
+      await page.keyboard.press('ArrowDown')
+      //await page.waitForSelector("._careerIemContainer");
+      await CS.wait(1000);
+      await page.keyboard.press('ArrowUp');
+      const htmlContent = await page.content();
+      const $ = cheerio.load(htmlContent); 
+
+      const doctors = [];
+      $('div.doctor-list > div.dl-inner').find('div.dl-item').each((index, element) => {
+        const doctorName = $(element).find('div.dl-top').find("div.dl-text-box").find('div.dl-name-wrap').find('strong.dl-name').text() ? $(element).find('div.dl-top').find("div.dl-text-box").find('div.dl-name-wrap').find('strong.dl-name').text().trim() : '';
+        const detailLink = $(element).find('div.dl-bottom').find('div.dl-buttonBox').find("div.dl-buttonbox-item:first-child").find('a').attr('href') ? $(element).find('div.dl-bottom').find('div.dl-buttonBox').find("div.dl-buttonbox-item:first-child").find('a').attr('href') : '';
+        const doctorProfileUrl = $(element).find('div.dl-top').find('div.img-inner').find('img').attr('src') ? $(element).find('div.dl-top').find('div.img-inner').find('img').attr('src') : '';
+        let tmpLink = null;
+        let tmpProfileUrl = null;
+        if ( !functions.isEmpty(detailLink) ) {
+          tmpLink =  `https://www.jbuh.co.kr${detailLink}`;
+        }
+        if ( !functions.isEmpty(doctorProfileUrl) ) {
+          tmpProfileUrl =  `https://www.jbuh.co.kr${doctorProfileUrl}`;
+        }
+        const doctorName2 = doctorName.replace("교수","").trim();
+        console.log(`Adding doctor list: ${doctorName2} ${deptName} ${tmpProfileUrl} ${tmpLink}`); // 디버
+        if ( !functions.isEmpty(doctorName2) && !functions.isEmpty(tmpLink) ) {
+          const doctor = {
+            doctorName : doctorName2,
+            deptName,
+            url: tmpLink,
+            profile_url : tmpProfileUrl
+          };
+          doctors.push(doctor); 
+        }
+      });
+   
+      console.log(`doctors:${doctors.length}`);
+      return { error: error, data: doctors };
+
+    } catch (error) {
+      Error = error;
+      console.log(`error on ${url} API return: ${error}`);
+      await browser.close();
+      return { error: error, data: [] };
+    }
+  },
+  crwalingProcess02_old: async (url,deptName) => {
     let result = null, error = null, DBCode = null;
     if (functions.isEmpty(url)) {
       return { error: true, data: [] };
@@ -302,17 +422,15 @@ module.exports = {
 
   crwalingProcess03: async (url) => {
     let result = null, error = null, DBCode = null
-    let DBData1 = null
-    let DBData2 = null
-    let Response = { status: null, data: null }
+    let browser;
+    //const url = params.url;
     console.log(`crwalingProcess03: ${url}`); 
    
     if (!url) {
       return { error: true, data: null };
     }
-   
     try {
-      const browser = await puppeteer.launch();
+      browser = await puppeteer.launch();
         // Open a new page
       const page = await browser.newPage();
       page.setDefaultNavigationTimeout(0);
@@ -325,30 +443,44 @@ module.exports = {
           height: 800
       });
 
-      await page.keyboard.press('ArrowDown')
-      //await page.waitForSelector("._careerIemContainer");
-      await CS.wait(500);
-      await page.keyboard.press('ArrowUp');
       const htmlContent = await page.content();
-      const $ = cheerio.load(htmlContent);  
-      let tmpSpecialty = $('#section0').find('div.d_info').find('p.part').text() ? $('#section0').find('div.d_info').find('p.part').text().trim() : '';
+      const $ = cheerio.load(htmlContent);
+      let tmpSpecialty = $('div.mtInfo').find('div.info-con').find('p.conText').text() ? $('div.mtInfo').find('div.info-con').find('p.conText').text().trim() : '';
       console.log(`specialtyJson: ${tmpSpecialty}`);
       // 진료분야를 json화 한다
       let specialtyJson = tmpSpecialty.split(",");
-      
+
       // 학력 경력
       let item = {
         specialty: tmpSpecialty.replaceAll(/\n|\r|/g, ''),
         specialtyJson: specialtyJson,
         biography: [],
       };
-     
-      $('#section1').find('div.d_career').find("h2.title:contains('학력/경력')").next('ul').find('li').each((j, pEl) => {
-        const dtText = $(pEl).text() ? $(pEl).text().trim().substring(0,500): '';
+
+      $('div.content-area').find('#group1').find('ul.content-list').find('li').each((j, pEl) => {
+        const dtText = $(pEl).find('p.tit').text() ? $(pEl).find('p.tit').text().trim().substring(0,500): '';
         const dtYearText = '';
-        
+
         if ( !functions.isEmpty(dtText)  && dtText?.length > 6) {
-          
+
+          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+          console.log(`학력 ${dtYearText} ${tmpText}`);
+          item.biography.push({
+            targetDate : dtYearText,
+            type: "학력",
+            text: tmpText,
+            url: null,
+            issuer:null
+          });
+        }
+      });
+
+      $('div.content-area').find('#group2').find('ul.content-list').find('li').each((j, pEl) => {
+        const dtText = $(pEl).find('p.tit').text() ? $(pEl).find('p.tit').text().trim().substring(0,500): '';
+        const dtYearText = '';
+
+        if ( !functions.isEmpty(dtText)  && dtText?.length > 6) {
+
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
           console.log(`경력 ${dtYearText} ${tmpText}`);
           item.biography.push({
@@ -360,13 +492,14 @@ module.exports = {
           });
         }
       });
-
-      $('#section1').find('div.d_career').find("h2.title:contains('학회활동')").next('ul').find('div > div > li').each((j, pEl) => {
-        const dtText = $(pEl).text() ? $(pEl).text().trim().substring(0,500): '';
+      console.log('group3 count:', $('div.content-area').find('#group3').find('ul.content-list').find('li').length);
+      $('div.content-area').find('#group3').find('ul.content-list').find('li').each((j, pEl) => {
+        const dtText = $(pEl).find('p.tit').text() ? $(pEl).find('p.tit').text().trim() : '';
+        console.log(`학회 ${dtText}`);
         const dtYearText = '';
-        
-        if ( !functions.isEmpty(dtText)  && dtText?.length > 6) {
-          
+
+        if ( dtText) {
+
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
           console.log(`학회 ${dtYearText} ${tmpText}`);
           item.biography.push({
@@ -379,12 +512,13 @@ module.exports = {
         }
       });
 
-      $('#section2').find('div.paper_list').find("ul").find('#li_books').find('#div_books > ul > div > div > li').each((j, pEl) => {
-        const dtText = $(pEl).text() ? $(pEl).text().trim().substring(0,500): '';
+      console.log('group4 count:', $('div.content-area').find('#group4').find('ul.content-list').find('li').length);
+      $('div.content-area').find('#group4').find('ul.content-list').find('li').each((j, pEl) => {
+        const dtText = $(pEl).find('p.tit').text() ? $(pEl).find('p.tit').text().trim().substring(0,500): '';
         const dtYearText = '';
-        
-        if ( !functions.isEmpty(dtText)  && dtText?.length > 6) {
-          
+
+        if ( dtText ) {
+
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
           console.log(`저서 ${dtYearText} ${tmpText}`);
           item.biography.push({
@@ -397,35 +531,14 @@ module.exports = {
         }
       });
 
-      $('#section2').find('div.paper_list').find("ul").find('#li_news').find('ul > li').each((j, pEl) => {
-        const dtText = $(pEl).find("a > p.title").text() ? $(pEl).find("a > p.title").text().trim().substring(0,500): '';
-        const dtYearText = $(pEl).find("a > p.date").text() ? $(pEl).find("a > p.date").text().trim().substring(0,500): '';
-        const dtIssueText = $(pEl).find("a > p.press").text() ? $(pEl).find("a > p.press").text().trim().substring(0,500): '';
-        const dtLinkText = $(pEl).find("a").attr('href') ? $(pEl).find("a").attr('href') : '';
-        
-        if ( !functions.isEmpty(dtText)  && dtText?.length > 6) {
-          
-          const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-          console.log(`언론 ${dtYearText} ${tmpText}`);
-          item.biography.push({
-            targetDate : dtYearText,
-            type: "언론",
-            text: tmpText,
-            url: dtLinkText,
-            issuer:dtIssueText
-          });
-        }
-      });
-        
-      await CS.wait(500);
-      
       await browser.close();
       return { error: error, data: item };
 
     } catch (error) {
-      Error = error;
       console.log(`error on ${url} API return: ${error}`);
-      await browser.close();
+      if (browser) {
+        await browser.close();
+      }
       return { error: error, data: [] };
     }
   },
@@ -441,22 +554,40 @@ module.exports = {
       return { error: true, data: null };
     }
     try {
-      const browser = await puppeteer.launch();
+      const browser = await puppeteer.launch({ headless: true });
         // Open a new page
       const page = await browser.newPage();
       page.setDefaultNavigationTimeout(0);
       //await page.waitForSelector('.inner');
       // Navigate to the website
-      await page.goto(url,{waitUntil: "domcontentloaded"});
+      await page.goto(url,{waitUntil: "networkidle2"});
+      await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.5993.90 Safari/537.36');
       await page.setViewport({
           width: 1200,
           height: 800
       });
+      const ua = await page.evaluate(() => navigator.userAgent);
+      console.log(ua);
+      await functions.puppeteerSleep(2000);
+      let prevHeight;
+      while (true) {
+        prevHeight = await page.evaluate('document.body.scrollHeight');
+        await page.evaluate('window.scrollTo(0, document.body.scrollHeight)');
+        await functions.puppeteerSleep(1000);
+        let newHeight = await page.evaluate('document.body.scrollHeight');
+        if (newHeight === prevHeight) break; // 더 이상 로딩 안됨
+      }
+      const lis = await page.$$eval('#group4 li', els => els.map(el => el.textContent));
+      console.log(lis.length); // 15
+      //await page.keyboard.press('ArrowDown')
+      await page.waitForSelector("#group4");
+      //await CS.wait(1000);
+      //await page.keyboard.press('ArrowUp');
+      const isReact = await page.evaluate(() => !!window.React || !!window.__REACT_DEVTOOLS_GLOBAL_HOOK__);
+      const isVue = await page.evaluate(() => !!window.Vue);
+      const isAngular = await page.evaluate(() => !!window.angular);
 
-      await page.keyboard.press('ArrowDown')
-      //await page.waitForSelector("._careerIemContainer");
-      await CS.wait(1000);
-      await page.keyboard.press('ArrowUp');
+      console.log({ isReact, isVue, isAngular });
       const htmlContent = await page.content();
       const $ = cheerio.load(htmlContent);  
       
@@ -464,21 +595,22 @@ module.exports = {
         biography: [],
       };
 
-      $('#section2').find('div.paper_list').find("ul").find('#li_books').find('#div_books > ul > div > div > li').each((j, pEl) => {
-        const dtText = $(pEl).text() ? $(pEl).text().trim().substring(0,500): '';
+      console.log('group4 count:', $('div.content-area').find('#group4').find('ul').find('li').length);
+      $('div.content-area').find('#group4').find('ul').find('li').each((j, pEl) => {
+        const dtText = $(pEl).find('p.tit').text() ? $(pEl).find('p.tit').text().trim().substring(0,500): '';
         const dtYearText = '';
         
         if ( !functions.isEmpty(dtText)  && dtText?.length > 6) {
           
           const tmpText = dtText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
-          console.log(`저서 ${dtYearText} ${tmpText}`);
+          console.log(`논문 ${dtYearText} ${tmpText}`);
           item.biography.push({
-            type: '논문',
+            publicationDate : dtYearText,
+            type: "논문",
             title: tmpText,
             url: null,
-            publicationDate : null,
-            journalName : null
-          }) 
+            journalName:null
+          });
         }
       });
 
@@ -538,11 +670,11 @@ module.exports = {
   },
 
 
-  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url,profile_url) => {
+  setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url,profile_url,p_hName,originalUrl) => {
 
     let result = null, error = null, DBCode = null, DBData = null
-    const query = `CALL set_doctor_basic_v2(?)`
-    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url,profile_url]);
+    const query = `CALL set_doctor_basic_v3(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, url,profile_url,p_hName,originalUrl]);
     if (DBError) {
       console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
       return { error: DBError, data: null };
@@ -632,7 +764,7 @@ module.exports = {
     }
     // console.log(RS)
     DBCode = _.get(RS[0][0], 'RETURNCODE', null)
-    DBData = _.get(RS, [1], [])
+    DBData = _.get(RS, [1_0], [])
 
     error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
     console.log(error)
@@ -697,6 +829,3 @@ module.exports = {
   },
 
 }
-
-
-
