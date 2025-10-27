@@ -133,7 +133,7 @@ router.post('/step01', async (req, res, next) => {
     if (!CS.isEmpty(SP1.data)) {
       for (let j = 0; j < _.size(SP1.data); j++) {
         console.log(`doctorName : ${SP1.data[j].doctorName}, deptName : ${P1.data[i].deptName}, url : ${SP1.data[j].url}`)
-        if ( SP1.data[j].doctorName == '강희택' && P1.data[i].deptName == "가정의학과") {
+        //if ( SP1.data[j].doctorName == '강희택' && P1.data[i].deptName == "가정의학과") {
           data.push({
             hid: HOSPITAL_ID,
             deptName: P1.data[i].deptName,
@@ -151,7 +151,7 @@ router.post('/step01', async (req, res, next) => {
 
           const SP2 = await crawlingCtrl.setCrawlingDoctorLink(tempRid, HOSPITAL_ID, P1.data[i].deptName, SP1.data[j].doctorName, SP1.data[j].url, SP1.data[j].profileUrl,HOSPITAL_NAME);
           if (SP2.error) console.log("DB upsert fail.");
-        }
+        //}
       }
     } else {
       console.log(`loop ${i} result is null.`);

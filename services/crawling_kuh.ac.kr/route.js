@@ -132,7 +132,7 @@ router.post('/step01', async (req, res, next) => {
         for (let index = 0; index < _.size(SP2.data); index++) {
           const element2 = SP2.data[index];
           console.log(`doctorName : ${element2.doctorName}, deptName : ${element2.deptName}`)
-          if ( element2.doctorName == "최재경" && element2.deptName == "가정의학과") {
+          //if ( element2.doctorName == "최재경" && element2.deptName == "가정의학과") {
             // rid 만들기
             await CS.wait(300);
             const SP3 = await crawlingCtrl.get_rid_encrypt(element2.doctorName, element2.link);
@@ -150,17 +150,15 @@ router.post('/step01', async (req, res, next) => {
               }else{
                 console.log(`입력실패`)
               }
-            }else{
-              console.log(`tempRid`, `가 없습니다.`)
             }
             data.push({
               hid: HOSPITAL_ID,
-              deptName: SP1.data[j].deptName,
-              doctorName: SP1.data[j].doctorName,
-              url: SP1.data[j].url
+              deptName: element2.deptName,
+              doctorName: element2.doctorName,
+              url: element2.link
             })
           }
-        }
+        //}
       }
     }
   }
@@ -239,7 +237,7 @@ router.post('/step02', async (req, res, next) => {
       totalCount = totalCount + 1
       //  console.log(`SP1.data >>> `, SP1.data)
 
-      /* await CS.wait(300);
+      await CS.wait(300);
       const SP2 = await crawlingCtrl.get_rid_encrypt(doctorName, refUrl);
       if (SP2.error) {
         console.log("SP2 DB fail.");
@@ -260,7 +258,7 @@ router.post('/step02', async (req, res, next) => {
       if (SP4.error) {
         console.log("SP4 DB fail.");
         return res.json(TS.fail("SP4 DB fail."));
-      } */
+      }
     }
     await CS.wait(5000);
   }
@@ -341,7 +339,7 @@ router.post('/treatise', async (req, res, next) => {
       const tempRid = P1.data[i].rid
       if (CS.isEmpty(tempRid)) break;
  
-      /* const treastise = SP1.data.biography;
+      const treastise = SP1.data.biography;
       if(_.size(treastise) > 0){
         for (let index = 0; index < _.size(treastise); index++) {
           const element = treastise[index];
@@ -370,7 +368,7 @@ router.post('/treatise', async (req, res, next) => {
             console.log(`Error on ${doctorname}`)
           }
         }
-      } */
+      }
 
     }
     await CS.wait(5000);

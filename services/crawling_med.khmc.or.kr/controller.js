@@ -292,7 +292,29 @@ module.exports = {
     const ts13Digit = makeTs.getTime();
     return { error: error, data: ts13Digit };
   },
+
   setCrawlingdoctorBasic: async (rid, hid, deptName, doctorName, specialty, profileimgurl) => {
+    
+    let result = null, error = null, DBCode = null, DBData = null
+    const query = `CALL UPDATE_DOCTOR_BASIC(?)`
+    // const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, DATA_VERSION_ID, deptName, doctorName, specialty, profileimgurl]);
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, specialty, profileimgurl, '']);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    // console.log(RS)
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
+
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+
+  },
+
+  setCrawlingdoctorBasic_old: async (rid, hid, deptName, doctorName, specialty, profileimgurl) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL set_crawlingdoctor_basic(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, deptName, doctorName, specialty, profileimgurl]);
@@ -310,9 +332,26 @@ module.exports = {
     return { error: error, data: result };
   },
 
-
-
   setCrawlingdoctorBiography: async (rid, hid, doctorName, jsondata) => {
+    
+    let result = null, error = null, DBCode = null, DBData = null
+    const query = `CALL SET_DOCTOR_CAREER(?)`
+    // const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, doctorName, jsondata]);
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, DATA_VERSION_ID, jsondata]);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
+
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+  },
+
+  setCrawlingdoctorBiography_old: async (rid, hid, doctorName, jsondata) => {
     let result = null, error = null, DBCode = null, DBData = null
     const query = `CALL set_crawlingdoctor_detail(?)`
     const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, hid, doctorName, jsondata]);
@@ -330,9 +369,30 @@ module.exports = {
     return { error: error, data: result };
   },
 
-
-
   setCrawlingTreatise: async (rid, title, doi, journalName, authorRule, publicationDate, url,
+    abstract, keywords, impactFactor, totalCitations, referencesThesis,
+    doctorName, authorName, subjectClassification, publicationLocation) => {
+    let result = null, error = null, DBCode = null, DBData = null;
+    let rePublicationDate = await functions.formatPublishDate(publicationDate);
+    console.log(`setCrawlingTreatise: ${title}, ${rePublicationDate}, ${journalName}`)
+    const query = `CALL set_doctor_paper(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, DATA_VERSION_ID, doctorName, title, doi, journalName, authorRule, rePublicationDate, url,
+      abstract, keywords, impactFactor, totalCitations, authorName]);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    // console.log(RS)
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
+
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+  },
+
+  setCrawlingTreatise_old: async (rid, title, doi, journalName, authorRule, publicationDate, url,
     abstract, keywords, impactFactor, totalCitations, referencesThesis,
     doctorName, authorName, subjectClassification, publicationLocation) => {
     let result = null, error = null, DBCode = null, DBData = null

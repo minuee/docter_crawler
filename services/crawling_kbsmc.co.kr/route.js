@@ -120,7 +120,7 @@ router.post('/step01', async (req, res, next) => {
   }
   const data = [];
   const P1 = await crawlingCtrl.crwalingProcess01();
-  console.log(_.size(P1.data))
+  console.log(`step01 : ${_.size(P1.data)}`)
   if (P1.error) return res.json(TS.fail(P1.error));
   if (CS.isEmpty(P1.data)) { return res.json(TS.fail({ code: 'DATA_NULL', message: 'response data is null' })) }
 
@@ -172,7 +172,7 @@ router.post('/step01', async (req, res, next) => {
  * @swagger
  *  /v1/c/kbsmc.co.kr/step02:
  *    post:
- *      summary: "1단계  조회"
+ *      summary: "2단계  조회"
  *      description: "강북삼성병원 정보를 가져와야 한다  "
  *      tags: [kbsmc.co.kr-강북삼성병원]
  *      produces:
@@ -213,7 +213,7 @@ router.post('/step02', async (req, res, next) => {
   }
 
   const P1 = await crawlingCtrl.getCrawlingDoctorLink(HOSPITAL_ID);
-  console.log(_.size(P1.data))
+  console.log(`step02: ${_.size(P1.data)}`)
   if (CS.isEmpty(_.size(P1.data))) { return res.json(TS.fail({ code: 'DATA_NULL', message: 'response data is null' })) }
   const doctorLinkTotal = _.size(P1.data)
   const data = [];
@@ -224,7 +224,7 @@ router.post('/step02', async (req, res, next) => {
     const refUrl = P1.data[i].doctor_url;
     const profileimgurl = P1.data[i].profileimgurl;
     const SP1 = await crawlingCtrl.crwalingProcess03(refUrl);
-    console.log(`SP1 : ${SP1.data.biography}`)
+    console.log(`doctorName : ${doctorName}, deptName : ${deptName}, refUrl : ${refUrl}, profileimgurl : ${profileimgurl}`)
 
     if (doctorName && refUrl) {
       await CS.wait(300);
@@ -232,7 +232,7 @@ router.post('/step02', async (req, res, next) => {
       if (SP2.error) {
         console.log("SP2 DB fail.");
         return res.json(TS.fail("SP2 DB fail."));
-      }
+      } 
       const tempRid = SP2.data[0].rid_encrypt
       if (CS.isEmpty(tempRid)) break;
       await CS.wait(300);

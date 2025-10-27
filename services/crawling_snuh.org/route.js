@@ -127,7 +127,7 @@ router.post('/step01', async (req, res, next) => {
 
   
   for (let i = 0; i < _.size(P1.data); i++) {
-    await CS.wait(10000);
+    await CS.wait(4000);
     const SP1 = await crawlingCtrl.crwalingProcess02(P1.data[i]);
     console.log(`Iteration ${P1.data[i]}: Paging size ${SP1.data}`);
 
@@ -149,7 +149,7 @@ router.post('/step01', async (req, res, next) => {
             url: SP2.data[iii].url
           })
           console.log(`doctorName : ${SP2.data[iii].doctorName}, deptName : ${SP2.data[iii].deptName}, url : ${SP2.data[iii].url}`)
-          if ( SP2.data[iii].doctorName == "임재준" && SP2.data[iii].deptName == "호흡기내과" ) {
+          //if ( SP2.data[iii].doctorName == "임재준" && SP2.data[iii].deptName == "호흡기내과" ) {
             const SP3 = await crawlingCtrl.get_rid_encrypt(SP2.data[iii].doctorName, SP2.data[iii].url);
             if (SP3.error) {
               console.log("SP3 DB fail.");
@@ -159,7 +159,7 @@ router.post('/step01', async (req, res, next) => {
             await CS.wait(300);
             const SP4 = await crawlingCtrl.setCrawlingDoctorLink(tempRid, HOSPITAL_ID, SP2.data[iii].deptName, SP2.data[iii].doctorName, SP2.data[iii].url, null, HOSPITAL_NAME);
             if (SP4.error) console.log("SP4 DB upsert fail.");
-          }
+          //}
         }
       }
     }
@@ -226,14 +226,14 @@ router.post('/step02', async (req, res, next) => {
   const loopSize = _.size(P1.data);
   let data = [];
   for (let i = 0; i < loopSize; i++) {
-    await CS.wait(10000);
+    await CS.wait(4000);
     const SP1 = await crawlingCtrl.crwalingProcess04(P1.data[i].doctor_url);
     const doctorName = P1.data[i].doctorname;
     const deptName = P1.data[i].deptname;
     const refUrl = P1.data[i].doctor_url;
     if (doctorName && refUrl) {
 
-      /* await CS.wait(300);
+      await CS.wait(300);
       const SP2 = await crawlingCtrl.get_rid_encrypt(doctorName, refUrl);
       if (SP2.error) {
         console.log("SP2 DB fail.");
@@ -254,7 +254,7 @@ router.post('/step02', async (req, res, next) => {
       if (SP4.error) {
         console.log("SP4 DB fail.");
         return res.json(TS.fail("SP4 DB fail."));
-      } */
+      }
 
       data.push({doctorName,deptName,refUrl})
     }
@@ -265,4 +265,115 @@ router.post('/step02', async (req, res, next) => {
     success: true,
     message: `대상 의사수 : ${_.size(P1.data)}, 작업된 의사수 : ${_.size(data)}`
   });
+});
+
+
+
+/**
+ * @swagger
+ *  /v1/c/snuh.org/treatise:
+ *    post:
+ *      summary: "3단계  조회"
+ *      description: "서울대학교병원 정보를 가져와야 한다  "
+ *      tags: [snuh.org-서울대학교병원]
+ *      produces:
+ *      parameters:
+ *        - name: "hid"
+ *          in: "body"
+ *          description: "input hospitalId"
+ *          required: true
+ *          type: "object"
+ *          schema:
+ *            type: object
+ *            properties:
+ *              hid:
+ *                type: string
+ *                description: "input hospitalId"
+ *      responses:
+ *        "200":
+ *          description: step01
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    users:
+ *                      type: object
+ *                      example:    
+ *                            { "code": 1000, "message": "작업성공" }
+ * 
+ */
+
+
+
+router.post('/treatise', async (req, res, next) => {
+  const HOSPITAL_ID = 'H01KR-11000006';
+  const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
+  if ( ret.success === false ) {
+    return res.send(ret);
+  }
+
+  const P1 = await crawlingCtrl.getCrawlingDoctorLink(HOSPITAL_ID);
+  console.log(`total sie: ${_.size(P1.data)}`)
+  if (CS.isEmpty(_.size(P1.data))) { return res.json(TS.fail({ code: 'DATA_NULL', message: 'response data is null' })) }
+  const loopSize = _.size(P1.data);
+  //const loopSize = 10;
+  let article = 0;
+  for (let i = 0; i < loopSize; i++) {
+    await CS.wait(5000); // 10초정도로 - 부사장님 지시임! 꼭 지킬것
+    const doctorName = P1.data[i].doctorname;
+    const deptName = P1.data[i].deptname;
+    const refUrl = P1.data[i].doctor_url;
+    const output = refUrl.replace(/\/\/blog\/(\d+)\/career\.do/, '/blog/$1/philosophy.do');
+    console.log(`output : ${output}`);
+    /* if ( 
+      output != 'https://www.snuh.org/blog/00921/philosophy.do' 
+      && output != "https://www.snuh.org/blog/00952/philosophy.do" 
+      && output != "https://www.snuh.org/blog/01017/philosophy.do" 
+      && output != "https://www.snuh.org/blog/01079/philosophy.do"
+    ) { */
+      const SP1 = await crawlingCtrl.crwalingtreatise(output)
+      if (_.size(SP1.data.biography) > 0) {
+        await CS.wait(300);
+        const tempRid = P1.data[i].rid
+        if (CS.isEmpty(tempRid)) break;
+        for (let index = 0; index < _.size(SP1.data.biography); index++) {
+          const element = SP1.data.biography[index];
+          const iD = {
+            rid: tempRid,
+            title: element.title,
+            doi: null,
+            journalName: null,
+            authorRule: null,
+            publicationDate: null,
+            url: null,
+            abstract: null,
+            keywords: null,
+            impactFactor: null,
+            totalCitations: null,
+            referencesThesis: null,
+            doctorName: doctorName,
+            authorName: null,
+            subjectClassification: null,
+            publicationLocation: null
+          }
+          const SP6 = await crawlingCtrl.setCrawlingTreatise(iD.rid, iD.title, iD.doi, iD.journalName, iD.authorRule, iD.publicationDate, iD.url, iD.abstract, iD.keywords, iD.impactFactor, iD.totalCitations, iD.referencesThesis, iD.doctorName, iD.authorName, iD.subjectClassification, iD.publicationLocation);
+          if (SP6.error) {
+            console.log(`SP6 DB fail.`);
+            console.log(`Error on ${P1.data[i].doctorName}`)
+          }
+          article++;
+        }
+     // }
+    }
+    
+  }
+  return res.send({
+    code : 200,
+    success: true,
+    message: `대상 의사수 : ${_.size(P1.data)}, 수집된 논문수 : ${article}`
+  });
+
 });

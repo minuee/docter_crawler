@@ -199,6 +199,193 @@ module.exports = {
     return { error: error, data: item };
   },
 
+  crwalingtreatise: async (url) => {
+    let result = null, error = null, DBCode = null
+    let DBData1 = null
+    let DBData2 = null
+    let Response = { status: null, data: null }
+    console.log(`crwalingProcess03: ${url}`); 
+    
+    if (!url) {
+      return { error: true, data: null };
+    }
+    try {
+      const browser = await puppeteer.launch({headless:true});
+        // Open a new page
+      const page = await browser.newPage();
+
+      // ⚠️ 페이지 이동 전 미리 dialog 감지 설정
+      page.on('dialog', async (dialog) => {
+        console.log(`🔔 알림창 감지됨: ${dialog.message()}`);
+        await dialog.dismiss(); // 또는 dialog.accept();
+      });
+      page.setDefaultNavigationTimeout(0);
+      //await page.waitForSelector('.inner');
+      // Navigate to the website
+      await page.goto(url,{waitUntil: "domcontentloaded"});
+      await page.setViewport({
+          width: 1200,
+          height: 800
+      });
+
+      await page.keyboard.press('ArrowDown')
+      //await page.waitForSelector("._careerIemContainer");
+      await CS.wait(1000);
+      await page.keyboard.press('ArrowUp');
+
+      // 페이지에 있는 모든 '더보기' 버튼을 찾아 클릭합니다.
+      console.log("페이지에 있는 모든 '더보기' 버튼을 찾아서 클릭합니다.");
+      console.log("페이지 내 '더보기' 버튼을 반복적으로 클릭합니다.");
+
+      let clickCount = 0;
+      const maxAttempts = 20; // 안전장치: 무한루프 방지용
+
+      while (true) {
+        try {
+          // evaluate 블록 내부에서 현재 페이지의 상태 확인 및 클릭 수행
+          const result = await page.evaluate(async () => {
+            const findVisibleMoreButton = () => {
+              // 모든 버튼 중 텍스트가 '더보기'를 포함한 것 찾기
+              const buttons = Array.from(document.querySelectorAll('button'));
+              for (const btn of buttons) {
+                const raw = (btn.innerText || btn.textContent || '').replace(/\u00A0/g, ' ');
+                const text = raw.replace(/\s+/g, ' ').trim();
+                if (/더보기/.test(text)) {
+                  const style = window.getComputedStyle(btn);
+                  const rect = btn.getBoundingClientRect();
+                  const visible =
+                    style.display !== 'none' &&
+                    style.visibility !== 'hidden' &&
+                    style.opacity !== '0' &&
+                    rect.width > 0 &&
+                    rect.height > 0 &&
+                    !btn.disabled;
+                  if (visible) return btn;
+                }
+              }
+              return null;
+            };
+
+            const button = findVisibleMoreButton();
+            if (!button) return { clicked: false };
+
+            try {
+              button.click();
+              return { clicked: true };
+            } catch (e) {
+              console.log("클릭 실패:", e.message);
+              return { clicked: false };
+            }
+          });
+
+          if (!result.clicked) {
+            console.log("더 이상 '더보기' 버튼이 없습니다. 종료합니다.");
+            break;
+          }
+
+          clickCount++;
+          console.log(`${clickCount}번째 '더보기' 버튼 클릭 완료.`);
+
+          /* page.on('dialog', async dialog => {
+            console.log(`알림창 감지됨: ${dialog.message()}`);
+            await dialog.dismiss(); // 또는 dialog.accept();
+            break;
+          }); */
+          // 로드 기다림 (네트워크 지연이나 렌더링 시간 고려)
+          await functions.puppeteerSleep(700);
+
+        } catch (e) {
+          console.log(`⚠️ 클릭 중 오류 발생: ${e.message}`);
+          // alert 때문에 멈춘 경우를 대비해 대기 후 재시도
+          await functions.puppeteerSleep(700);
+          continue;
+        }
+        
+        // 안전장치
+        if (clickCount >= maxAttempts) {
+          console.log(`최대 ${maxAttempts}회 클릭 후 종료합니다 (무한루프 방지).`);
+          break;
+        }
+
+      }
+
+      console.log(`총 ${clickCount}회 '더보기' 클릭 완료.`);
+     
+      const htmlContent = await page.content();
+      const $ = cheerio.load(htmlContent);  
+      
+      let item = {
+        biography: [],
+      };
+
+      $('#paperConArea').find('li').each((index, dtElement) => {
+
+        const $label = $(dtElement).find('p.blogCont-history-date:contains("제목")');
+        if ($label.length > 0) {
+          const $content = $label.next('div.blogCont-history-content-wrap').find('p.blogCont-history-content');
+          const titleText = $content.text().trim().replace(/\s+/g, ' ');
+          
+          if (titleText) {
+            console.log(`논문: ${titleText}`);
+            item.biography.push({
+              type: '논문',
+              title: titleText,
+              url: null,
+              publicationDate: null,
+              journalName: null
+            });
+          }
+        }
+
+        /* const titleText = $(dtElement).find('p.blogCont-history-date:contains("제목")').next('div.blogCont-history-content-wrap').find('p.blogCont-history-content').text().trim();
+        if ( !functions.isEmpty(titleText)  && titleText?.length > 6) {
+          
+          const title = titleText.replace(/\t/g, '').replace(/\n/g, '').replaceAll(/\n|\r|/g, '');
+          console.log(`논문 ${title}`);
+          item.biography.push({
+            type: '논문',
+            title: title,
+            url: null,
+            publicationDate : null,
+            journalName : null
+          })   
+        } */
+
+      })
+
+      await browser.close();
+      return { error: error, data: item };
+
+    } catch (error) {
+      Error = error;
+      console.log(`error on ${url} API return: ${error}`);
+      await browser.close();
+      return { error: error, data: [] };
+    }
+
+  },
+
+  setCrawlingTreatise: async (rid, title, doi, journalName, authorRule, publicationDate, url,
+    abstract, keywords, impactFactor, totalCitations, referencesThesis,
+    doctorName, authorName, subjectClassification, publicationLocation) => {
+    let result = null, error = null, DBCode = null, DBData = null
+    const query = `CALL set_doctor_paper(?)`
+    const { DBError = null, RS = null } = await daoMysql.spCall(query, [rid, DATA_VERSION_ID, doctorName, title, doi, journalName, authorRule, publicationDate, url,
+      abstract, keywords, impactFactor, totalCitations, authorName]);
+    if (DBError) {
+      console.log(`error on ${query} DBError return: ${JSON.stringify(DBError)}`);
+      return { error: DBError, data: null };
+    }
+    // console.log(RS)
+    DBCode = _.get(RS[0][0], 'RETURNCODE', null)
+    DBData = _.get(RS, [1], [])
+
+    error = (DBCode == 'TRANSACTION_SUCCESS') ? null : _.get(RM, DBCode, RM.UNEXPECTED_CODE)
+    console.log(error)
+    result = DBData
+    return { error: error, data: result };
+  },
+
   setCrawlingdoctorBasic: async (rid, hid, deptName, doctorName, specialty, profileimgurl) => {
     
     let result = null, error = null, DBCode = null, DBData = null

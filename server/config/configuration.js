@@ -1,3 +1,4 @@
+require('dotenv').config();
 // export
 const config = {
   thisServer: {
@@ -14,11 +15,11 @@ const config = {
   },
   database: {
     mysql: {
-      host: process.env.MYSQL_HOST || 'localhost'
+      host: process.env.MYSQL_HOST || '3.37.250.53'
       ,port: process.env.MYSQL_PORT || '3306'
       ,database: process.env.MYSQL_DATABASE || 'aiga2025'
-      ,user: process.env.MYSQL_USER || 'root'
-      ,password: process.env.MYSQL_PASSWORD || '1234'
+      ,user: process.env.MYSQL_USER || 'nohsungnam'
+      ,password: process.env.MYSQL_PASSWORD || 'kormedi1234'
       ,charset: 'utf8mb4'
       ,multipleStatements: false
       ,waitForConnections: true
@@ -71,7 +72,5 @@ const config = {
     etag: false
   },
 }
-
-
 
 module.exports = config;

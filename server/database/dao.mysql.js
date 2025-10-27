@@ -10,9 +10,9 @@ module.exports = {
     let DBconn
     let DBError = null;
     const pool = poolPromise;
-    console.log(`process.env.MYSQL_HOST :${process.env.MYSQL_HOST}`)
-    console.log(`process.env.MYSQL_USER :${process.env.MYSQL_USER}`)
-    console.log(`process.env.MYSQL_PASSWORD :${process.env.MYSQL_PASSWORD}`)
+    //console.log(`process.env.MYSQL_HOST :${process.env.MYSQL_HOST}`)
+    //console.log(`process.env.MYSQL_DATABASE :${process.env.MYSQL_DATABASE}`)
+    //console.log(`process.env.MYSQL_USER :${process.env.MYSQL_USER}`)
     try {
         DBconn = await pool.getConnection();
         //console.log(`> Pool connection : ${DBconn}`);

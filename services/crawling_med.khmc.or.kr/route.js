@@ -138,7 +138,7 @@ router.post('/step01', async (req, res, next) => {
           // rid 만들기
           await CS.wait(300);
           console.log(`doctorName : ${SP2.data[index2].doctorName}, deptName : ${SP2.data[index2].deptName}`)
-          if ( SP2.data[index2].doctorName == '원장원' && SP2.data[index2].deptName == '가정의학과' ) {
+          //if ( SP2.data[index2].doctorName == '원장원' && SP2.data[index2].deptName == '가정의학과' ) {
             const SP3 = await crawlingCtrl.get_rid_encrypt(element2.doctorName, element2.link);
             if (SP3.error) {
               console.log("SP3 DB fail.");
@@ -158,7 +158,7 @@ router.post('/step01', async (req, res, next) => {
             }else{
               console.log(`tempRid`, `가 없습니다.`)
             }
-          }
+          //}
         }
       }
     }
@@ -228,7 +228,7 @@ router.post('/step02', async (req, res, next) => {
     const deptName = P1.data[i].deptname;
     const refUrl = P1.data[i].doctor_url;
     const profileimgurl = P1.data[i].profileimgurl;
-    /* if (doctorName && refUrl) {
+    if (doctorName && refUrl) {
       console.log(`here`)
       totalCount = totalCount + 1
 
@@ -254,7 +254,7 @@ router.post('/step02', async (req, res, next) => {
         return res.json(TS.fail("SP4 DB fail."));
       }
  
-      const treastise = SP1.data.treatise
+      const treastise = SP1.data.treatise;
       if(_.size(treastise) > 0){
         for (let index = 0; index < _.size(treastise); index++) {
           const element = treastise[index];
@@ -271,7 +271,7 @@ router.post('/step02', async (req, res, next) => {
             impactFactor: null,
             totalCitations: null,
             referencesThesis: null,
-            doctorName: doctorname,
+            doctorName: doctorName,
             authorName: element.authorName? element.authorName : null,
             subjectClassification: element.subjectClassification? element.subjectClassification: null,
             publicationLocation: element.publicationLocation? element.publicationLocation: null
@@ -280,11 +280,11 @@ router.post('/step02', async (req, res, next) => {
           const SP5 = await crawlingCtrl.setCrawlingTreatise(iD.rid, iD.title, iD.doi, iD.journalName, iD.authorRule, iD.publicationDate, iD.url, iD.abstract, iD.keywords, iD.impactFactor, iD.totalCitations, iD.referencesThesis, iD.doctorName, iD.authorName, iD.subjectClassification, iD.publicationLocation);
           if (SP5.error) {
             console.log(`SP5 DB fail.`);
-            console.log(`Error on ${doctorname}`)
+            console.log(`Error on ${doctorName}`)
           }
         }
       }
-    } */
+    }
   }
   let result = totalCount
   return res.json(TS.success(result));

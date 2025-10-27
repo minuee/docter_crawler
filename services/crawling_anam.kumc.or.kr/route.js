@@ -139,7 +139,7 @@ router.post('/step01', async (req, res, next) => {
           // rid 만들기
           await CS.wait(300);
           console.log(`doctorName : ${element2.doctorName}, deptName : ${element2.deptName}`)
-          if ( element2.doctorName == '김양현' && element2.deptName == '가정의학과' ) {
+          //if ( element2.doctorName == '김양현' && element2.deptName == '가정의학과' ) {
             const SP3 = await crawlingCtrl.get_rid_encrypt(element2.doctorName, element2.link);
             if (SP3.error) {
               console.log("SP3 DB fail.");
@@ -167,7 +167,7 @@ router.post('/step01', async (req, res, next) => {
               console.log(`tempRid`, `가 없습니다.`)
             }
           }
-        }
+        //}
       }
     }
   }
@@ -253,7 +253,7 @@ router.post('/step02', async (req, res, next) => {
       totalCount = totalCount + 1
 
       await CS.wait(300);
-      /*
+      
       const SP2 = await crawlingCtrl.get_rid_encrypt(doctorName, refUrl);
       if (SP2.error) {
         console.log("SP2 DB fail.");
@@ -304,7 +304,7 @@ router.post('/step02', async (req, res, next) => {
             console.log(`Error on ${doctorName}`)
           }
         }
-      } */
+      }
       data.push({doctorName,deptName,refUrl})
     }
   }

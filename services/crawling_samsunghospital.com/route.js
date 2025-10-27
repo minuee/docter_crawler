@@ -150,7 +150,7 @@ router.post('/step01', async (req, res, next) => {
         })
         console.log(`doctorName : ${SP1.data[j].doctorName}, ,deptName : ${SP1.data[j].deptName},url : ${SP1.data[j].url},profileUrl : ${SP1.data[j].profileUrl}`)
         await CS.wait(300);
-        if ( SP1.data[j].doctorName == '송윤미' && SP1.data[j].deptName == '가정의학과' ) {
+        //if ( SP1.data[j].doctorName == '송윤미' && SP1.data[j].deptName == '가정의학과' ) {
           const SP2 = await crawlingCtrl.get_rid_encrypt(SP1.data[j].doctorName, SP1.data[j].url);
           if (SP2.error) {
             console.log("SP2 DB fail.");
@@ -160,7 +160,7 @@ router.post('/step01', async (req, res, next) => {
           await CS.wait(300);
           const SP3 = await crawlingCtrl.setCrawlingDoctorLink(tempRid, HOSPITAL_ID, SP1.data[j].deptName, SP1.data[j].doctorName, SP1.data[j].url, SP1.data[j].profileUrl,HOSPITAL_NAME);
           if (SP3.error) console.log("SP3 DB upsert fail.");;
-        }
+        //}
       }
     }
   }
@@ -223,7 +223,7 @@ router.post('/step02', async (req, res, next) => {
   const loopSize = _.size(P1.data);
   // const loopSize = 1;
   for (let i = 0; i < loopSize; i++) {
-    await CS.wait(10000);
+    await CS.wait(4000);
     const SP1 = await crawlingCtrl.crwalingProcess03(P1.data[i].doctor_url);
     const doctorName = P1.data[i].doctorname;
     const deptName = P1.data[i].deptname;
@@ -233,7 +233,7 @@ router.post('/step02', async (req, res, next) => {
       break;
     }
     await CS.wait(300);
-    /* const SP2 = await crawlingCtrl.get_rid_encrypt(doctorName, refUrl);
+    const SP2 = await crawlingCtrl.get_rid_encrypt(doctorName, refUrl);
     if (SP2.error) {
       console.log("SP2 DB fail.");
       return res.json(TS.fail("SP2 DB fail."));
@@ -261,20 +261,20 @@ router.post('/step02', async (req, res, next) => {
         const iD = {
           rid: tempRid,
           title: element.title,
-          doi: element.doi,
-          journalName: element.journalName,
-          authorRule: element.authorRule,
-          publicationDate: element.publicationDate,
-          url: element.url,
-          abstract: element.abstract,
-          keywords: element.keywords,
-          impactFactor: element.impactFactor,
-          totalCitations: element.totalCitations,
-          referencesThesis: element.referencesThesis,
+          doi: null,
+          journalName: null,
+          authorRule: null,
+          publicationDate: null,
+          url: null,
+          abstract: null,
+          keywords: null,
+          impactFactor: null,
+          totalCitations: null,
+          referencesThesis: null,
           doctorName: SP1.data.doctorName,
-          authorName: element.authorName,
-          subjectClassification: element.subjectClassification,
-          publicationLocation: element.publicationLocation
+          authorName: null,
+          subjectClassification: null,
+          publicationLocation: null
         }
         await CS.wait(300);
         const SP5 = await crawlingCtrl.setCrawlingTreatise(iD.rid, iD.title, iD.doi, iD.journalName, iD.authorRule, iD.publicationDate, iD.url, iD.abstract, iD.keywords, iD.impactFactor, iD.totalCitations, iD.referencesThesis, iD.doctorName, iD.authorName, iD.subjectClassification, iD.publicationLocation);
@@ -284,7 +284,7 @@ router.post('/step02', async (req, res, next) => {
         }
       }
 
-    } */
+    }
   }
   let result = P1.data
   return res.json(TS.success(result));

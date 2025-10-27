@@ -172,7 +172,7 @@ module.exports = {
           console.log(`경력 : ${liText}`)
           item.biography.push({ type: "경력", year : null, text : liText });
         });
-      }else if (title === '학회') {
+      }else if (title === '학회활동') {
         $(dlElement).find('dd li').each((_, liElement) => {
           const liText = $(liElement).text().trim().replace(/\t/g, '').replace(/\n\n/g, '');
           console.log(`학회 : ${liText}`)

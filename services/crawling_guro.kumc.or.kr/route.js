@@ -138,7 +138,7 @@ router.post('/step01', async (req, res, next) => {
           console.log(`doctorName : ${element2.doctorName}, deptName : ${element2.deptName}`)
           // rid 만들기
           await CS.wait(300);
-          if ( element2.doctorName !== '일반의'  && element2.doctorName == '최윤선' && element2.deptName == '가정의학과'  ) {
+          if ( element2.doctorName !== '일반의' ) {
              const SP3 = await crawlingCtrl.get_rid_encrypt(element2.doctorName, element2.link);
             if (SP3.error) {
               console.log("SP3 DB fail.");
@@ -237,7 +237,7 @@ router.post('/step02', async (req, res, next) => {
       console.log(`here`)
       totalCount = totalCount + 1
 
-      /* await CS.wait(300);
+      await CS.wait(300);
       const SP2 = await crawlingCtrl.get_rid_encrypt(doctorName, refUrl);
       if (SP2.error) {
         console.log("SP2 DB fail.");
@@ -276,7 +276,7 @@ router.post('/step02', async (req, res, next) => {
             impactFactor: null,
             totalCitations: null,
             referencesThesis: null,
-            doctorName: doctorname,
+            doctorName: doctorName,
             authorName: null,
             subjectClassification: null,
             publicationLocation:null
@@ -285,10 +285,10 @@ router.post('/step02', async (req, res, next) => {
           const SP5 = await crawlingCtrl.setCrawlingTreatise(iD.rid, iD.title, iD.doi, iD.journalName, iD.authorRule, iD.publicationDate, iD.url, iD.abstract, iD.keywords, iD.impactFactor, iD.totalCitations, iD.referencesThesis, iD.doctorName, iD.authorName, iD.subjectClassification, iD.publicationLocation);
           if (SP5.error) {
             console.log(`SP5 DB fail.`);
-            console.log(`Error on ${doctorname}`)
+            console.log(`Error on ${doctorName}`)
           }
         }
-      } */
+      }
     }
   }
 
