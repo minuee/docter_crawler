@@ -14,6 +14,11 @@ const cheerio = require('cheerio');
 const _ = require('lodash');
 const functions = require(`${global.appRoot}/server/util/function`);
 const router = asyncify(express.Router());
+
+const puppeteer = require('puppeteer-extra');
+const StealthPlugin = require('puppeteer-extra-plugin-stealth');
+puppeteer.use(StealthPlugin());
+
 module.exports = router;
 
 
@@ -138,7 +143,7 @@ router.post('/step01', async (req, res, next) => {
           // rid 만들기
           await CS.wait(300);
           console.log(`doctorName : ${element2.doctorName}, deptName : ${element2.deptName}`)
-          if ( element2.doctorName == '박훈기' && element2.deptName == '가정의학과' ) {
+          //if ( element2.doctorName == '박훈기' && element2.deptName == '가정의학과' ) {
             const SP3 = await crawlingCtrl.get_rid_encrypt(element2.doctorName, element2.link);
             if (SP3.error) {
               console.log("SP3 DB fail.");
@@ -158,7 +163,7 @@ router.post('/step01', async (req, res, next) => {
             }else{
               console.log(`tempRid`, `가 없습니다.`)
             }
-          } 
+          //} 
         }
       }
     }
@@ -235,7 +240,7 @@ router.post('/step02', async (req, res, next) => {
     // rid, hid, deptname, doctorname, createdate, accessdate, count, isuse, url
     await CS.wait(4000);
     const SP1 = await crawlingCtrl.crwalingProcess03(item.doctor_url);
-    /* console.log(`SP1.data.basic.doctorName >>>>>>>>>>>>>>>`, SP1.data.basic.doctorName)
+    console.log(`SP1.data.basic.doctorName >>>>>>>>>>>>>>>`, SP1.data.basic.doctorName)
     const doctorName = P1.data[i].doctorname;
     const deptName = P1.data[i].deptname;
     const refUrl = P1.data[i].doctor_url;
@@ -298,7 +303,7 @@ router.post('/step02', async (req, res, next) => {
         }
       }
       data.push({doctorName,deptName,refUrl})
-    } */
+    }
   }
 
   crawlingCtrl.closeBrowser();
@@ -311,4 +316,166 @@ router.post('/step02', async (req, res, next) => {
   });
 });
 
+/**
+ * @swagger
+ *  /v1/c/seoul.hyumc.com/step02_new:
+ *    post:
+ *      summary: "2단계  조회"
+ *      description: "한양대학교병원 정보를 가져와야 한다  "
+ *      tags: [seoul.hyumc.com-한양대학교병원]
+ *      produces:
+ *      parameters:
+ *        - name: "hid"
+ *          in: "body"
+ *          description: "input hospitalId"
+ *          required: true
+ *          type: "object"
+ *          schema:
+ *            type: object
+ *            properties:
+ *              hid:
+ *                type: string
+ *                description: "input hospitalId"
+ *      responses:
+ *        "200":
+ *          description: step01
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    users:
+ *                      type: object
+ *                      example:    
+ *                            { "code": 1000, "message": "작업성공" }
+ * 
+ */
 
+
+router.post('/step02_new', async (req, res, next) => {
+  const HOSPITAL_ID = 'H01KR-11000014';
+  const HOSPITAL_NAME = '한양대학교병원';
+  const LOGIN_URL = 'https://www.hyumc.com/seoul/login.do?returnUrl=';
+
+  const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
+  if ( ret.success === false ) {
+    return res.send(ret);
+  }
+
+  const browser = await puppeteer.launch({ headless: false });
+  
+  try {
+    // Semi-automated login
+    const loginPage = await browser.newPage();
+    await loginPage.goto(LOGIN_URL);
+    
+    console.log('================================================================================');
+    console.log('Браузер 열렸습니다. 로그인 페이지에서 수동으로 로그인 후, 이 터미널로 돌아와 Enter 키를 누르세요.');
+    console.log('================================================================================');
+
+    await new Promise(resolve => process.stdin.once('data', resolve));
+    
+    console.log('로그인 완료. 크롤링을 시작합니다...');
+    await loginPage.close();
+
+    // Main crawling logic
+    const P1 = await crawlingCtrl.getCrawlingDoctorLink(HOSPITAL_ID);
+    if (CS.isEmpty(_.size(P1.data))) { 
+      return res.json(TS.fail({ code: 'DATA_NULL', message: 'response data is null' })) 
+    }
+    let totalCount = 0;
+    const loopSize = _.size(P1.data);
+    console.log(`loopSize: `, loopSize)
+    const data = [];
+    for (let i = 0; i < loopSize; i++) {
+      const item = P1.data[i];
+      await CS.wait(4000);
+
+      // Use the new controller function with the shared browser instance
+      const SP1 = await crawlingCtrl.crwalingProcess03_new(browser, item.doctor_url);
+      
+      if (SP1.error || !SP1.data || !SP1.data.basic.doctorName) {
+        console.log(`Failed to crawl doctor info for url: ${item.doctor_url}. Skipping.`);
+        continue;
+      }
+
+      console.log(`SP1.data.basic.doctorName >>>>>>>>>>>>>>>`, SP1.data.basic.doctorName)
+      const doctorName = P1.data[i].doctorname;
+      const deptName = P1.data[i].deptname;
+      const refUrl = P1.data[i].doctor_url;
+      
+      // ... (The rest of the DB logic is the same as step02)
+      console.log(`here`)
+      totalCount = totalCount + 1
+
+      console.log('collection count', totalCount);
+
+      await CS.wait(300);
+      const SP2 = await crawlingCtrl.get_rid_encrypt(doctorName, refUrl);
+      if (SP2.error) {
+        console.log("SP2 DB fail.");
+        return res.json(TS.fail("SP2 DB fail."));
+      }
+  
+      const tempRid = SP2.data[0].rid_encrypt
+      await CS.wait(300);
+      const SP3 = await crawlingCtrl.setCrawlingdoctorBasic(tempRid,HOSPITAL_ID, deptName, doctorName, SP1.data.basic.specialty, SP1.data.basic.profileImgUrl);
+      if (SP3.error) {
+        console.log("SP3 DB fail.");
+        return res.json(TS.fail("SP3 DB fail."));
+      }
+
+      await CS.wait(300);
+      const SP4 = await crawlingCtrl.setCrawlingdoctorBiography(tempRid,HOSPITAL_ID, doctorName, JSON.stringify(SP1.data.detail));
+      if (SP4.error) {
+        console.log("SP4 DB fail.");
+        return res.json(TS.fail("SP4 DB fail."));
+      }
+ 
+      const treastise = SP1.data.treatise
+      if(_.size(treastise) > 0){
+        for (let index = 0; index < _.size(treastise); index++) {
+          const element = treastise[index];
+          const iD = {
+            rid: tempRid,
+            title: element.title,
+            doi: element.doi? element.doi : null,
+            journalName: element.journalName? element.journalName : null,
+            authorRule: element.authorRule? element.authorRule : null,
+            publicationDate: element.publicationDate? element.publicationDate : null,
+            url: element.url? element.url : null,
+            abstract: element.abstract? element.abstract : null,
+            keywords: element.keywords? element.keywords : null,
+            impactFactor: element.impactFactor? element.impactFactor : null,
+            totalCitations: element.totalCitations? element.totalCitations : null,
+            referencesThesis: element.referencesThesis? element.referencesThesis : null,
+            doctorName: doctorName,
+            authorName: element.authorName? element.authorName : null,
+            subjectClassification: element.subjectClassification? element.subjectClassification: null,
+            publicationLocation: element.publicationLocation? element.publicationLocation: null
+          }
+          await CS.wait(300);
+          const SP5 = await crawlingCtrl.setCrawlingTreatise(iD.rid, iD.title, iD.doi, iD.journalName, iD.authorRule, iD.publicationDate, iD.url, iD.abstract, iD.keywords, iD.impactFactor, iD.totalCitations, iD.referencesThesis, iD.doctorName, iD.authorName, iD.subjectClassification, iD.publicationLocation);
+          if (SP5.error) {
+            console.log(`SP5 DB fail.`);
+            console.log(`Error on ${doctorName}`)
+          }
+        }
+      }
+      data.push({doctorName,deptName,refUrl})
+    }
+  } finally {
+    if (browser) {
+      await browser.close();
+    }
+  }
+  
+  console.log(`대상 의사수 : ${_.size(P1.data)}, 작업된 의사수 : ${_.size(data)}`);
+  return res.send({
+    code : 200,
+    success: true,
+    message: `대상 의사수 : ${_.size(P1.data)}, 작업된 의사수 : ${_.size(data)}`
+  });
+});

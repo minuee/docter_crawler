@@ -238,7 +238,7 @@ module.exports = {
       console.log("페이지 내 '더보기' 버튼을 반복적으로 클릭합니다.");
 
       let clickCount = 0;
-      const maxAttempts = 20; // 안전장치: 무한루프 방지용
+      const maxAttempts = 50; // 안전장치: 무한루프 방지용
 
       while (true) {
         try {

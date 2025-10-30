@@ -179,49 +179,120 @@ module.exports = {
     let browser = null;
     console.log(`crwalingProcess03 : ${url}`);
 
-    browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    await page.goto(url, { waitUntil: 'networkidle2' });
-    await page.waitForSelector('div.profile-intro',{ timeout: 5000 });
-    
-    const htmlContent = await page.content();
-    const $ = cheerio.load(htmlContent);
+    try {
+      browser = await puppeteer.launch();
+      const page = await browser.newPage();
+      await page.goto(url, { waitUntil: 'networkidle2' });
+      await page.waitForSelector('div.profile-intro',{ timeout: 5000 });
+      
+      const htmlContent = await page.content();
+      const $ = cheerio.load(htmlContent);
 
-    const doctorName = $('h2.profile-name strong.name.nm').first().text().trim();
-    const deptName = $('h2.profile-name span.department').first().text().trim();
-    const profileImgUrl = $('div.profile-item img').attr('src');
-    const specialty = $('p.medical-subject').text().trim();
+      const doctorName = $('h2.profile-name strong.name.nm').first().text().trim();
+      const deptName = $('h2.profile-name span.department').first().text().trim();
+      const profileImgUrl = $('div.profile-item img').attr('src');
+      const specialty = $('p.medical-subject').text().trim();
 
-    const jsonData = [];
+      const jsonData = [];
 
-    $('div.profile-intro dl').each((index, element) => {
-      let type = null
-      type = $(element).find('dt.text-title').text().trim(); // 타입(학력 경력)
-      $(element).find('dd ul li').each((index2, element2) => {
-        const text = $(element2).text().trim(); // 내용
-        console.log(`type: ${type}, text: ${text}`);
-        if ( type !== '진료분야') {
-          const strType = type == '학술활동' ? '학술' : type;
-          jsonData.push({
-            type: strType,
-            text: text
-          });
-        }
-        
+      $('div.profile-intro dl').each((index, element) => {
+        let type = null
+        type = $(element).find('dt.text-title').text().trim(); // 타입(학력 경력)
+        $(element).find('dd ul li').each((index2, element2) => {
+          const text = $(element2).text().trim(); // 내용
+          console.log(`type: ${type}, text: ${text}`);
+          if ( type !== '진료분야') {
+            const strType = type == '학술활동' ? '학술' : type;
+            jsonData.push({
+              type: strType,
+              text: text
+            });
+          }
+          
+        });
       });
-    });
 
-    let item = {
-      doctorName: doctorName,
-      deptName: deptName,
-      specialty: specialty,
-      profileImgUrl: `https://sev.severance.healthcare${profileImgUrl}`,
-      biography: jsonData,
-    };
+      let item = {
+        doctorName: doctorName,
+        deptName: deptName,
+        specialty: specialty,
+        profileImgUrl: `https://sev.severance.healthcare${profileImgUrl}`,
+        biography: jsonData,
+      };
 
-    console.log(`item`);
-    console.log(item);
-    return { error: error, data: item };
+      console.log(`item`);
+      console.log(item);
+      return { error: error, data: item };
+    } catch (e) {
+      error = e;
+    if (browser !== null) {
+        await browser.close();
+      }
+    }
+  },
+
+  crwalingProcess03_new: async (browser, url) => {
+    let result = null, error = null, DBCode = null
+    let DBData1 = null
+    let DBData2 = null
+    let Response = { status: null, data: null }
+    if (!url) {
+      return { error: true, data: null };
+    }
+    
+    console.log(`crwalingProcess03_new : ${url}`);
+    const page = await browser.newPage();
+    try {
+        await page.goto(url, { waitUntil: 'networkidle2' });
+        await page.waitForSelector('div.profile-intro',{ timeout: 5000 });
+        
+        const htmlContent = await page.content();
+        const $ = cheerio.load(htmlContent);
+
+        const doctorName = $('h2.profile-name strong.name.nm').first().text().trim();
+        const deptName = $('h2.profile-name span.department').first().text().trim();
+        const profileImgUrl = $('div.profile-item img').attr('src');
+        const specialty = $('p.medical-subject').text().trim();
+
+        const jsonData = [];
+
+        $('div.profile-intro dl').each((index, element) => {
+          let type = null
+          type = $(element).find('dt.text-title').text().trim(); // 타입(학력 경력)
+          $(element).find('dd ul li').each((index2, element2) => {
+            const text = $(element2).text().trim(); // 내용
+            console.log(`type: ${type}, text: ${text}`);
+            if ( type !== '진료분야') {
+              const strType = type == '학술활동' ? '학술' : type;
+              jsonData.push({
+                type: strType,
+                text: text
+              });
+            }
+            
+          });
+        });
+
+        let item = {
+          doctorName: doctorName,
+          deptName: deptName,
+          specialty: specialty,
+          profileImgUrl: `https://sev.severance.healthcare${profileImgUrl}`,
+          biography: jsonData,
+        };
+
+        console.log(`item`);
+        console.log(item);
+        return { error: error, data: item };
+    } catch (e) {
+        error = e;
+        console.log(`error on ${url} puppeteer process: ${e}`);
+        return { error: error, data: null };
+    } finally {
+        if (page !== null) {
+            await page.close();
+        }
+    }
   },
 
   crwalingGetTreatiseLink: async (url) => {
@@ -247,8 +318,44 @@ module.exports = {
       const treatiseLink = tempLink ? tempLink : null
       console.log(`treatiseLink: ${treatiseLink}`);
       return { error: error, data: treatiseLink };
-    } catch (error) {
+    } catch (e) {
+      error = e;
       return { error: error, data: null };
+    } finally {
+      if (browser !== null) {
+        await browser.close();
+      }
+    }
+  },
+
+  crwalingGetTreatiseLink_new: async (browser, url) => {
+    let result = null, error = null, DBCode = null
+    let DBData1 = null
+    let DBData2 = null
+    let Response = { status: null, data: null }
+    if (!url) {
+      return { error: true, data: null };
+    }
+    
+    const page = await browser.newPage();
+    try {
+      console.log(`crwalingGetTreatiseLink_new : ${url}`);
+      await page.goto(url, { waitUntil: 'networkidle2' });
+      await page.waitForSelector('div.profile-intro',{ timeout: 5000 });
+      
+      const htmlContent = await page.content();
+      const $ = cheerio.load(htmlContent);
+      const tempLink = $('ul.tab-list li a:contains("논문")').attr('href');
+      const treatiseLink = tempLink ? tempLink : null
+      console.log(`treatiseLink: ${treatiseLink}`);
+      return { error: error, data: treatiseLink };
+    } catch (e) {
+      error = e;
+      return { error: error, data: null };
+    } finally {
+      if (page !== null) {
+        await page.close();
+      }
     }
   },
 
@@ -317,11 +424,10 @@ module.exports = {
       return { error: true, data: null };
     }
 
-    console.log(`crwalingProcess03 : ${url}`);
+    console.log(`getTreatiseLinkTotalCount : ${url}`);
 
-    ;
+    let browser = null;
     try {
-      let browser = null;
       browser = await puppeteer.launch();
       const page = await browser.newPage();
       await page.goto(url, { waitUntil: 'networkidle2' });
@@ -334,8 +440,46 @@ module.exports = {
       articlesCount = parseInt(articlesText.match(/\((\d+)\)/)[1]);
       console.log(`articlesCount: ${articlesCount}`);
       return { error: error, data: articlesCount };
-    } catch (error) {
+    } catch (e) {
+      error = e;
       return { error: error, data: null };
+    } finally {
+      if (browser !== null) {
+        await browser.close();
+      }
+    }
+  },
+
+  getTreatiseLinkTotalCount_new: async (browser, url) => {
+    let result = null, error = null, DBCode = null
+    let DBData1 = null
+    let DBData2 = null
+    let Response = { status: null, data: null }
+    if (!url) {
+      return { error: true, data: null };
+    }
+
+    console.log(`getTreatiseLinkTotalCount_new : ${url}`);
+
+    const page = await browser.newPage();
+    try {
+      await page.goto(url, { waitUntil: 'networkidle2' });
+      await page.waitForSelector('div.list_tab',{ timeout: 5000 });
+      
+      const htmlContent = await page.content();
+      const $ = cheerio.load(htmlContent)
+      let articlesCount = 0
+      const articlesText = $('div.list_tab ul li:first-child span').text();
+      articlesCount = parseInt(articlesText.match(/\((\d+)\)/)[1]);
+      console.log(`articlesCount: ${articlesCount}`);
+      return { error: error, data: articlesCount };
+    } catch (e) {
+      error = e;
+      return { error: error, data: null };
+    } finally {
+      if (page !== null) {
+        await page.close();
+      }
     }
   },
 
@@ -349,11 +493,10 @@ module.exports = {
     if (!url) {
       return { error: true, data: null };
     }
-    console.log(`crwalingProcess03 : ${url}`);
+    console.log(`getTreatiseDetail : ${url}`);
     
-
+    let browser = null;
     try {
-      let browser = null;
       browser = await puppeteer.launch();
       const page = await browser.newPage();
       await page.goto(url, { waitUntil: 'networkidle2' });
@@ -375,8 +518,55 @@ module.exports = {
 
 
       return { error: error, data: arrLinks };
-    } catch (error) {
+    } catch (e) {
+      error = e;
       return { error: error, data: null };
+    } finally {
+      if (browser !== null) {
+        await browser.close();
+      }
+    }
+  },
+
+  getTreatiseDetail_new: async (browser, url) => {
+    let result = null, error = null, DBCode = null
+    let DBData1 = null
+    let DBData2 = null
+    let items = null
+    let Response = { status: null, data: null }
+    if (!url) {
+      return { error: true, data: null };
+    }
+    console.log(`getTreatiseDetail_new : ${url}`);
+    
+    const page = await browser.newPage();
+    try {
+      await page.goto(url, { waitUntil: 'networkidle2' });
+      await page.waitForSelector('table.list_tbl',{ timeout: 5000 });
+      
+      const htmlContent = await page.content();
+      const $ = cheerio.load(htmlContent)
+      const arrLinks = []
+      $('table.list_tbl tbody tr').each((index, element) => {
+        const firstLink = $(element).find('td.alleft_td a').first().attr('href');
+        const title = $(element).find('td.alleft_td a').first().text().trim();
+        items = {
+          title,
+          url: `https://ir.ymlib.yonsei.ac.kr/${firstLink}`
+        }
+        console.log(`firstLink: ${items.title}`);
+        arrLinks.push(items)
+      });
+
+
+      return { error: error, data: arrLinks };
+    } catch (e) {
+      error = e;
+      return { error: error, data: null };
+    } finally {
+      if (page !== null) {
+        await page.close();
+      }
     }
   },
 
@@ -408,10 +598,10 @@ module.exports = {
     if (!url) {
       return { error: true, data: null };
     }
-    console.log(`crwalingProcess03 : ${url}`);
+    console.log(`setTreatiseDetail : ${url}`);
    
+    let browser = null;
     try {
-      let browser = null;
       browser = await puppeteer.launch();
       const page = await browser.newPage();
       await page.goto(url, { waitUntil: 'networkidle2' });
@@ -485,8 +675,106 @@ module.exports = {
 
 
       return { error: error, data: Titem };
-    } catch (error) {
+    } catch (e) {
+      error = e;
       return { error: error, data: null };
+    } finally {
+      if (browser !== null) {
+        await browser.close();
+      }
+    }
+  },
+
+  setTreatiseDetail_new: async (browser, url) => {
+    let result = null, error = null, DBCode = null
+    let DBData1 = null
+    let DBData2 = null
+    let Response = { status: null, data: null }
+    if (!url) {
+      return { error: true, data: null };
+    }
+    console.log(`setTreatiseDetail_new : ${url}`);
+   
+    const page = await browser.newPage();
+    try {
+      await page.goto(url, { waitUntil: 'networkidle2' });
+      await page.waitForSelector('p.view_title',{ timeout: 5000 });
+      
+      const htmlContent = await page.content();
+      const $ = cheerio.load(htmlContent)
+      const treatise = []
+      const PaperName = $('p.view_title').text().trim().replace(/\t/g, '').replace(/\n/g, '');
+      let Titem = {
+        title: PaperName ? PaperName : null,
+        doi: null,
+        journalName: null,
+        authorRule: null,
+        publicationDate: null,
+        url: null,
+        authorName: null,
+        abstract: null,
+        keywords: null,
+        impactFactor: 0,
+        totalCitations: 0,
+        referencesThesis: null,
+        subjectClassification: null,
+        publicationLocation: null
+      }
+
+
+      $('dl.row_dl').each((index, element) => {
+        const dtText = $(element).find('dt').text().trim();
+        if (dtText === 'Authors') {
+          const ddText = $(element).find('dd').text().trim();
+          console.log(`Text: ${ddText}`);
+          Titem.authorName = ddText ? ddText : null
+        }
+        if (dtText === 'Journal Title') {
+          const ddText = $(element).find('dd').text().trim();
+          console.log(`Text: ${ddText}`);
+          Titem.journalName = ddText ? ddText : null
+        }
+        if (dtText === 'Keywords') {
+          const ddText = $(element).find('dd').text().trim();
+          console.log(`Text: ${ddText}`);
+          Titem.keywords = ddText ? ddText : null
+        }
+        if (dtText === 'Abstract') {
+          const ddText = $(element).find('dd').text().trim();
+          console.log(`Text: ${ddText}`);
+          Titem.abstract = ddText ? ddText : null
+        }
+        if (dtText === 'URI') {
+          const ddText = $(element).find('dd').text().trim();
+          console.log(`Text: ${ddText}`);
+          Titem.url = ddText ? ddText : null
+        }
+        //
+        if (dtText === 'Issue Date') {
+          const ddText = $(element).find('dd').text().trim();
+          console.log(`Text: ${ddText}`);
+
+          if (CS.YYYY_MM_DD(ddText)) {
+            Titem.publicationDate = CS.YYYY_MM_DD(ddText)
+          }
+        }
+        if (dtText === 'DOI') {
+          const ddText = $(element).find('dd').text().trim();
+          console.log(`Text: ${ddText}`);
+          Titem.doi = ddText ? ddText : null
+        }
+      });
+      console.log(Titem);
+
+
+      return { error: error, data: Titem };
+    } catch (e) {
+      error = e;
+      return { error: error, data: null };
+    } finally {
+      if (page !== null) {
+        await page.close();
+      }
     }
   },
 

@@ -8,7 +8,10 @@ const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
 const axios = require('axios');
 const cheerio = require('cheerio');
-const puppeteer = require('puppeteer');
+const fs = require('fs');
+const puppeteer = require('puppeteer-extra');
+const StealthPlugin = require('puppeteer-extra-plugin-stealth');
+puppeteer.use(StealthPlugin());
 
 const _ = require('lodash');
 const functions = require(`${global.appRoot}/server/util/function`);
@@ -26,13 +29,14 @@ module.exports = {
     console.log(`[START] crwalingProcess01 for url: ${url01}`);
 
     let browser = null;
+    let page = null; // Declare page outside the try block
     let optionsArray = [];
     try {
         console.log('Launching puppeteer...');
         browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox'] });
         console.log('Puppeteer launched.');
 
-        const page = await browser.newPage();
+        page = await browser.newPage(); // Assign to the outer-scoped page
         
         // Set a common user agent
         await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36');
@@ -44,7 +48,7 @@ module.exports = {
         });
 
         console.log('Navigating to page...');
-        await page.goto(url01, { waitUntil: 'networkidle2' });
+        await page.goto(url01, { waitUntil: 'domcontentloaded' });
         console.log('Page navigated.');
 
         console.log('Waiting for selector...');
@@ -77,11 +81,27 @@ module.exports = {
 
     } catch (e) {
         console.error('An error occurred during crawling:', e);
+        if (page) {
+            try {
+                const timestamp = new Date().toISOString().replace(/:/g, '-');
+                const screenshotPath = `error_screenshot_${timestamp}.png`;
+                const htmlPath = `error_page_${timestamp}.html`;
+                
+                console.log(`Saving screenshot to ${screenshotPath}`);
+                await page.screenshot({ path: screenshotPath, fullPage: true });
+                
+                console.log(`Saving HTML content to ${htmlPath}`);
+                const htmlContent = await page.content();
+                fs.writeFileSync(htmlPath, htmlContent);
+            } catch (debugError) {
+                console.error('Error occurred during debug file saving:', debugError);
+            }
+        }
         error = e;
     } finally {
         if (browser) {
             console.log('Closing browser.');
-            //await browser.close();
+            await browser.close();
         }
     }
 
@@ -91,80 +111,114 @@ module.exports = {
 
 
   crwalingProcess02: async (url) => {
-    let error = null;
-    console.log(`[START] crwalingProcess02 for url: ${url}`);
+    const MAX_RETRIES = 2;
+    let lastError = null;
 
     if (!url) {
         return { error: 'URL is required', data: [] };
     }
 
-    let browser = null;
-    let doctorArray = [];
-    try {
-        browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox'] });
-        const page = await browser.newPage();
-        
-        await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36');
+    for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+        console.log(`[START] crwalingProcess02 for url: ${url} (Attempt ${attempt}/${MAX_RETRIES})`);
+        let browser = null;
+        let page = null;
 
-        await page.goto(url, { waitUntil: 'networkidle2' });
-        await page.waitForSelector('.doctorList_wrap', { timeout: 30000 });
-
-        doctorArray = await page.evaluate((pageUrl) => {
-            const doctors = [];
-            let deptName = '';
+        try {
+            browser = await puppeteer.launch({ headless : false,args: ['--no-sandbox', '--disable-setuid-sandbox'] });
+            page = await browser.newPage();
             
-            const deptNameElement = document.querySelector('.text_searchResult > span');
-            if (deptNameElement) {
-                const match = deptNameElement.textContent.trim().match(/'(.*)'로 검색된 결과입니다./);
-                if (match) deptName = match[1];
+            await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36');
+
+            await page.goto(url, { waitUntil: 'domcontentloaded' });
+            
+            await page.waitForSelector('.doctorList_wrap', { 
+              visible: true,
+              timeout: 30000 
+            });
+
+            await page.waitForFunction(() => {
+              const el = document.querySelector('.doctorList_wrap');
+              return el && el.children.length > 0; // Wait for the list to be populated
+            }, { timeout: 30000 });
+
+            const doctorArray = await page.evaluate((pageUrl) => {
+                const doctors = [];
+                let deptName = '';
+                
+                const deptNameElement = document.querySelector('.text_searchResult > span');
+                if (deptNameElement) {
+                    const match = deptNameElement.textContent.trim().match(/'(.*)'로 검색된 결과입니다./);
+                    if (match) deptName = match[1];
+                }
+
+                document.querySelectorAll('.doctorList_wrap > section.box').forEach(item => {
+                    const nameElement = item.querySelector('.profile > .text > h4 > a');
+                    const imgElement = item.querySelector('.profile > a .pic_img img');
+
+                    if (!nameElement) return;
+
+                    const doctorName = nameElement.textContent.trim();
+                    const onclickValue = nameElement.getAttribute('onclick');
+                    
+                    let profileUrl = null;
+                    if (imgElement) {
+                        const src = imgElement.getAttribute('src');
+                        if (src) profileUrl = new URL(src, pageUrl).href;
+                    }
+
+                    if (doctorName && onclickValue) {
+                        const pattern = /viewDoctor\('([0-9A-Za-z]+)', '([0-9A-Za-z]+)'\)/;
+                        const matches = onclickValue.match(pattern);
+                        if (matches && matches.length >= 3) {
+                            const dr_id = matches[1];
+                            const dept_id = matches[2];
+                            const link = `https://seoul.hyumc.com/seoul/mediteam/mditeam.do?action=detail&returnAction=list&currentPageNo=1&recordCountPerPage=8&searchCondition1=seqMediteam&searchCommonSeq=1&searchCommonCd1=${dr_id}&searchCommonCd2=${dept_id}&searchCondition2=all&searchKeyword=${deptName}&searchHospCd=&empyId=&bbsId=bestPartner&nttSeq=`;
+                            
+                            doctors.push({
+                                deptName,
+                                doctorName,
+                                link,
+                                profileUrl
+                            });
+                        }
+                    }
+                });
+                return doctors;
+            }, url);
+
+            console.log(`[END] crwalingProcess02. Found ${doctorArray.length} doctors on attempt ${attempt}.`);
+            if (browser) await browser.close();
+            return { error: null, data: doctorArray }; // Success
+
+        } catch (e) {
+            lastError = e;
+            console.error(`Attempt ${attempt} failed: ${e.message}`);
+
+            if (page) {
+                try {
+                    const timestamp = new Date().toISOString().replace(/:/g, '-');
+                    const urlIdentifier = url.replace(/[^a-zA-Z0-9]/g, '_').slice(-50);
+                    const screenshotPath = `error_p02_screenshot_${urlIdentifier}_${timestamp}_attempt${attempt}.png`;
+                    console.log(`Saving screenshot to ${screenshotPath}`);
+                    await page.screenshot({ path: screenshotPath, fullPage: true });
+                } catch (debugError) {
+                    console.error('Error during screenshot:', debugError);
+                }
             }
 
-            document.querySelectorAll('.doctorList_wrap > section.box').forEach(item => {
-                const nameElement = item.querySelector('.profile > .text > h4 > a');
-                const imgElement = item.querySelector('.profile > a .pic_img img');
-
-                if (!nameElement) return;
-
-                const doctorName = nameElement.textContent.trim();
-                const onclickValue = nameElement.getAttribute('onclick');
-                
-                let profileUrl = null;
-                if (imgElement) {
-                    const src = imgElement.getAttribute('src');
-                    if (src) profileUrl = new URL(src, pageUrl).href;
-                }
-
-                if (doctorName && onclickValue) {
-                    const pattern = /viewDoctor\('([0-9A-Za-z]+)', '([0-9A-Za-z]+)'\)/;
-                    const matches = onclickValue.match(pattern);
-                    if (matches && matches.length >= 3) {
-                        const dr_id = matches[1];
-                        const dept_id = matches[2];
-                        const link = `https://seoul.hyumc.com/seoul/mediteam/mditeam.do?action=detail&returnAction=list&currentPageNo=1&recordCountPerPage=8&searchCondition1=seqMediteam&searchCommonSeq=1&searchCommonCd1=${dr_id}&searchCommonCd2=${dept_id}&searchCondition2=all&searchKeyword=${deptName}&searchHospCd=&empyId=&bbsId=bestPartner&nttSeq=`;
-                        
-                        doctors.push({
-                            deptName,
-                            doctorName,
-                            link,
-                            profileUrl
-                        });
-                    }
-                }
-            });
-            return doctors;
-        }, url);
-
-    } catch (e) {
-        console.error('An error occurred during crawling process 02:', e);
-        error = e;
-    } finally {
-        if (browser) {
-            await browser.close();
+            if (attempt < MAX_RETRIES) {
+                await new Promise(resolve => setTimeout(resolve, 30000)); // Wait 3s before retrying
+            }
+        } finally {
+            if (browser && browser.isConnected()) {
+                await browser.close();
+            }
         }
     }
 
-    console.log(`[END] crwalingProcess02. Found ${doctorArray.length} doctors.`);
-    return { error: error, data: doctorArray };
+    // If all retries fail, return the last error
+    console.error(`All ${MAX_RETRIES} attempts failed for url: ${url}.`);
+    return { error: lastError, data: [] };
   },
 
 
@@ -183,49 +237,180 @@ module.exports = {
 
 
   crwalingProcess03: async (url) => {
-    let error = null;
-    let result = null;
-    console.log(`[START] Process03 for url: ${url}`);
+    const MAX_RETRIES = 2;
+    let lastError = null;
 
     if (!url) {
         console.error('[ERROR] URL is required for Process03.');
         return { error: 'URL is required', data: null };
     }
 
-    let browser = null;
+    for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+        console.log(`[START] Process03 for url: ${url} (Attempt ${attempt}/${MAX_RETRIES})`);
+        let browser = null;
+        let page = null;
+        let result = null;
+
+        try {
+            browser = await puppeteer.launch({ headless : false, args: ['--no-sandbox', '--disable-setuid-sandbox'] });
+            page = await browser.newPage();
+
+            // Handle alerts automatically
+            page.on('dialog', async dialog => {
+                console.log(`Automatically dismissing dialog: ${dialog.message()}`);
+                await dialog.dismiss();
+            });
+
+            await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36');
+
+            // Set Referer to appear more human-like
+            const urlParams = new URLSearchParams(new URL(url).search);
+            const dept_id = urlParams.get('searchCommonCd2');
+            if (dept_id) {
+                const refererUrl = `https://seoul.hyumc.com/seoul/mediteam/mditeam.do?action=detailList&searchCondition1=seqMediteam&searchCommonSeq=${dept_id}`;
+                await page.setExtraHTTPHeaders({
+                    'Referer': refererUrl
+                });
+                console.log(`Set Referer to: ${refererUrl}`);
+            }
+
+            await page.goto(url, { waitUntil: 'domcontentloaded' });
+            await page.waitForSelector('.medicalTeam3', { timeout: 30000 });
+
+            const extractedData = await page.evaluate(() => {
+                console.log('[EVAL] Starting extraction inside browser.');
+                const basic = {};
+                const detail = [];
+                const treatise = [];
+
+                try {
+                    const doctorNameEl = document.querySelector('.medicalTeam3 .details div h1:first-child');
+                    const deptNameEl = document.querySelector('.medicalTeam3 .details div h1:nth-of-type(2)');
+                    const specialtyEl = document.querySelector('.medicalTeam3 .details p:nth-of-type(1)');
+                    const imageEl = document.querySelector("#contents .doctorFixed .top_banner_img img");
+
+                    basic.doctorName = doctorNameEl ? doctorNameEl.textContent.trim() : null;
+
+                    if (deptNameEl) {
+                        basic.deptName = deptNameEl.textContent.replace('교수', '').trim();
+                    } else {
+                        basic.deptName = null;
+                    }
+
+                    basic.specialty = specialtyEl ? specialtyEl.textContent.trim() : null;
+
+                    if (imageEl) {
+                        const src = imageEl.getAttribute('src');
+                        if (src) {
+                            basic.profileImgUrl = new URL(src, window.location.href).href;
+                        }
+                    }
+                    document.querySelectorAll('section.doctorHistory .indi_resume .doctor_roadmap .scroll > section').forEach((section, index) => {
+                        const typeEl = section.querySelector('h3');
+                        const contentEl = section.querySelector('p');
+
+                        if (typeEl && contentEl) {
+                            let type = typeEl.textContent.trim();
+                            const histories = contentEl.innerText.trim();
+
+                            if (histories) {
+                                const historyList = histories.split('\n').filter(line => line.trim() !== '');
+                                historyList.forEach(historyText => {
+                                    let cleanHistory = historyText.replace(/-\s/g, '').trim();
+                                    if (type === '수상' && cleanHistory === '논문') {
+                                        type = '논문';
+                                        return;
+                                    }
+                                    
+                                    if (type === '논문') {
+                                        treatise.push({ type, targetDate: null, title: cleanHistory, url:'' });
+                                    } else {
+                                        detail.push({ type, targetDate: null, text: cleanHistory, url:'' });
+                                    }
+                                });
+                            }
+                        }
+                    });
+                } catch (e) {
+                    console.error('[EVAL] An error occurred inside evaluate:', e.message);
+                    return { error: e.message };
+                }
+
+                return { basic, detail, treatise };
+            });
+
+            if (extractedData.error) {
+                throw new Error(`Error from page.evaluate: ${extractedData.error}`);
+            }
+
+            result = extractedData;
+            console.log(`[END] Process03. Found basic info for ${result?.basic?.doctorName}.`);
+            return { error: null, data: result }; // Success
+
+        } catch (e) {
+            lastError = e;
+            console.error(`Attempt ${attempt} failed: ${e.message}`);
+            if (attempt < MAX_RETRIES) {
+                await new Promise(resolve => setTimeout(resolve, 3000)); // Wait 3s before retrying
+            }
+        } finally {
+            if (browser) {
+                console.log('[DEBUG] Force closing browser.');
+                if (browser.process() != null) {
+                    browser.process().kill('SIGKILL');
+                }
+            }
+        }
+    }
+
+    // If all retries fail, return the last error
+    console.error(`All ${MAX_RETRIES} attempts failed for url: ${url}.`);
+    return { error: lastError, data: null };
+  },
+
+  crwalingProcess03_new: async (browser, url) => {
+    if (!url) {
+        return { error: 'URL is required', data: null };
+    }
+
+    let page = null;
     try {
-        browser = await puppeteer.launch({ args: ['--no-sandbox', '--disable-setuid-sandbox'] });
-        const page = await browser.newPage();
-        // Listen for console events from inside the browser context
+        page = await browser.newPage();
+
+        page.on('dialog', async dialog => {
+            console.log(`Automatically dismissing dialog: ${dialog.message()}`);
+            await dialog.dismiss();
+        });
+
         page.on('console', msg => console.log(`[BROWSER LOG] ${msg.text()}`));
         await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36');
 
-        await page.goto(url, { waitUntil: 'networkidle2' });
+        const urlParams = new URLSearchParams(new URL(url).search);
+        const dept_id = urlParams.get('searchCommonCd2');
+        if (dept_id) {
+            const refererUrl = `https://seoul.hyumc.com/seoul/mediteam/mditeam.do?action=detailList&searchCondition1=seqMediteam&searchCommonSeq=${dept_id}`;
+            await page.setExtraHTTPHeaders({ 'Referer': refererUrl });
+        }
+
+        await page.goto(url, { waitUntil: 'domcontentloaded' });
         await page.waitForSelector('.medicalTeam3', { timeout: 30000 });
 
         const extractedData = await page.evaluate(() => {
-            console.log('[EVAL] Starting extraction inside browser.');
             const basic = {};
             const detail = [];
             const treatise = [];
-
             try {
-          
                 const doctorNameEl = document.querySelector('.medicalTeam3 .details div h1:first-child');
                 const deptNameEl = document.querySelector('.medicalTeam3 .details div h1:nth-of-type(2)');
                 const specialtyEl = document.querySelector('.medicalTeam3 .details p:nth-of-type(1)');
                 const imageEl = document.querySelector("#contents .doctorFixed .top_banner_img img");
-
                 basic.doctorName = doctorNameEl ? doctorNameEl.textContent.trim() : null;
-             
                 if (deptNameEl) {
                     basic.deptName = deptNameEl.textContent.replace('교수', '').trim();
                 } else {
                     basic.deptName = null;
                 }
-           
                 basic.specialty = specialtyEl ? specialtyEl.textContent.trim() : null;
-             
                 if (imageEl) {
                     const src = imageEl.getAttribute('src');
                     if (src) {
@@ -233,15 +418,11 @@ module.exports = {
                     }
                 }
                 document.querySelectorAll('section.doctorHistory .indi_resume .doctor_roadmap .scroll > section').forEach((section, index) => {
-                    //console.log(`[EVAL] Processing history section ${index + 1}`);
                     const typeEl = section.querySelector('h3');
                     const contentEl = section.querySelector('p');
-
                     if (typeEl && contentEl) {
                         let type = typeEl.textContent.trim();
-                        //console.log(`[EVAL] History type: ${type}`);
                         const histories = contentEl.innerText.trim();
-
                         if (histories) {
                             const historyList = histories.split('\n').filter(line => line.trim() !== '');
                             historyList.forEach(historyText => {
@@ -250,47 +431,35 @@ module.exports = {
                                     type = '논문';
                                     return;
                                 }
-                                
                                 if (type === '논문') {
-                                    //console.log(`[EVAL] Found treatise: ${cleanHistory}`);
                                     treatise.push({ type, targetDate: null, title: cleanHistory, url:'' });
                                 } else {
-                                    //console.log(`[EVAL] Found detail: ${cleanHistory}`);
                                     detail.push({ type, targetDate: null, text: cleanHistory, url:'' });
                                 }
                             });
-                        } 
-                    } 
+                        }
+                    }
                 });
-         
-
             } catch (e) {
-                console.error('[EVAL] An error occurred inside evaluate:', e.message);
                 return { error: e.message };
             }
-
             return { basic, detail, treatise };
         });
-        console.log('[DEBUG] Page evaluation finished.');
 
         if (extractedData.error) {
             throw new Error(`Error from page.evaluate: ${extractedData.error}`);
         }
 
-        result = extractedData;
+        return { error: null, data: extractedData };
 
     } catch (e) {
-        console.error('An error occurred during Process03:', e);
-        error = e;
+        console.error(`crwalingProcess03_new failed for url: ${url}. Error: ${e.message}`);
+        return { error: e, data: null };
     } finally {
-        if (browser) {
-            console.log('[DEBUG] Closing browser.');
-            await browser.close();
+        if (page) {
+            await page.close();
         }
     }
-
-    console.log(`[END] Process03. Found basic info for ${result?.basic?.doctorName}.`);
-    return { error: error, data: result };
   },
 
   setCrawlingdoctorBasic: async (rid, hid, deptName, doctorName, specialty, profileimgurl) => {
