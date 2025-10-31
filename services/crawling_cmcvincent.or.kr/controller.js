@@ -356,7 +356,7 @@ module.exports = {
   
       // 스크롤해서 lazy-load 유도
       await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
-      await puppeteerSleep(1000);
+      await functions.puppeteerSleep(1000);
   
       // 1) "논문" 탭 찾고 클릭 (페이지 내 모든 <a> 순회로 안전하게 찾기)
       const treatiseTabFound = await page.evaluate(() => {
@@ -375,7 +375,7 @@ module.exports = {
       }
   
       // 탭 클릭 후 컨텐츠 로드 대기
-      await puppeteerSleep(1000);
+      await functions.puppeteerSleep(1000);
   
       // 2) 기다려서 `div.thesis_list`가 생기는지 확인
       try {
@@ -406,7 +406,7 @@ module.exports = {
   
         if (clickedCount > 0) {
           clickedAny = true;
-          await puppeteerSleep(1000);; // 클릭 후 로드 대기
+          await functions.puppeteerSleep(1000);; // 클릭 후 로드 대기
         } else {
           break;
         }

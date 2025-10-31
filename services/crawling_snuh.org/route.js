@@ -13,6 +13,7 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const _ = require('lodash');
 const functions = require(`${global.appRoot}/server/util/function`);
+const puppeteer = require('puppeteer');
 const router = asyncify(express.Router());
 module.exports = router;
 
@@ -376,4 +377,122 @@ router.post('/treatise', async (req, res, next) => {
     message: `대상 의사수 : ${_.size(P1.data)}, 수집된 논문수 : ${article}`
   });
 
+});
+
+
+/**
+ * @swagger
+ *  /v1/c/snuh.org/treatise_new:
+ *    post:
+ *      summary: "3단계  조회 (puppeteer)"
+ *      description: "서울대학교병원 정보를 가져와야 한다 (puppeteer)"
+ *      tags: [snuh.org-서울대학교병원]
+ *      produces:
+ *      parameters:
+ *        - name: "hid"
+ *          in: "body"
+ *          description: "input hospitalId"
+ *          required: true
+ *          type: "object"
+ *          schema:
+ *            type: object
+ *            properties:
+ *              hid:
+ *                type: string
+ *                description: "input hospitalId"
+ *      responses:
+ *        "200":
+ *          description: step01
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    users:
+ *                      type: object
+ *                      example:
+ *                            { "code": 1000, "message": "작업성공" }
+ *
+ */
+
+
+router.post('/treatise_new', async (req, res, next) => {
+  const HOSPITAL_ID = 'H01KR-11000006';
+  const ret = await functions.checkHospitalId(HOSPITAL_ID, req, res);
+  if (ret.success === false) {
+    return res.send(ret);
+  }
+
+  const browser = await puppeteer.launch({ headless: true });
+  try {
+    const P1 = await crawlingCtrl.getCrawlingDoctorLink(HOSPITAL_ID);
+    console.log(`total size: ${_.size(P1.data)}`)
+    if (CS.isEmpty(_.size(P1.data))) {
+      return res.json(TS.fail({ code: 'DATA_NULL', message: 'response data is null' }))
+    }
+    const loopSize = _.size(P1.data);
+    let article = 0;
+    for (let i = 0; i < loopSize; i++) {
+        await CS.wait(5000); // 10초정도로 - 부사장님 지시임! 꼭 지킬것
+        const doctorName = P1.data[i].doctorname;
+        const deptName = P1.data[i].deptname;
+        const refUrl = P1.data[i].doctor_url;
+        const output = refUrl.replace(/\/\/blog\/(\d+)\/career\.do/, '/blog/$1/philosophy.do');
+        console.log(`output : ${output}`);
+        
+        try {
+            const SP1 = await crawlingCtrl.crwalingtreatise_new(browser, output)
+            if (_.size(SP1.data.biography) > 0) {
+                await CS.wait(300);
+                const tempRid = P1.data[i].rid
+                if (CS.isEmpty(tempRid)) continue;
+
+                for (let index = 0; index < _.size(SP1.data.biography); index++) {
+                    const element = SP1.data.biography[index];
+                    const iD = {
+                        rid: tempRid,
+                        title: element.title,
+                        doi: null,
+                        journalName: null,
+                        authorRule: null,
+                        publicationDate: null,
+                        url: null,
+                        abstract: null,
+                        keywords: null,
+                        impactFactor: null,
+                        totalCitations: null,
+                        referencesThesis: null,
+                        doctorName: doctorName,
+                        authorName: null,
+                        subjectClassification: null,
+                        publicationLocation: null
+                    }
+                    const SP6 = await crawlingCtrl.setCrawlingTreatise(iD.rid, iD.title, iD.doi, iD.journalName, iD.authorRule, iD.publicationDate, iD.url, iD.abstract, iD.keywords, iD.impactFactor, iD.totalCitations, iD.referencesThesis, iD.doctorName, iD.authorName, iD.subjectClassification, iD.publicationLocation);
+                    if (SP6.error) {
+                        console.log(`SP6 DB fail.`);
+                        console.log(`Error on ${P1.data[i].doctorName}`)
+                    }
+                    article++;
+                }
+            }
+        } catch (e) {
+            console.log(`Error processing doctor: ${doctorName} with url: ${output}`);
+            console.error(e);
+        }
+    }
+    return res.send({
+      code: 200,
+      success: true,
+      message: `대상 의사수 : ${_.size(P1.data)}, 수집된 논문수 : ${article}`
+    });
+  } catch (error) {
+    console.error(error);
+    return res.json(TS.fail({ code: 'CRAWLING_ERROR', message: error.message }));
+  } finally {
+    if (browser) {
+      await browser.close();
+    }
+  }
 });

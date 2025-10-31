@@ -559,66 +559,68 @@ router.post('/treatise_new', async (req, res, next) => {
     for (let i = 0; i < loopSize; i++) {
       await CS.wait(1000);
       const SP1 = await crawlingCtrl.crwalingGetTreatiseLink_new(browser, P1.data[i].doctor_url);
-      if (SP1.data) {
-        const tempRid = P1.data[i].rid;
-        if (!CS.isEmpty(tempRid)) {
-          await CS.wait(300);
-          // delete old traetise
-          console.log(`tempCount: ${tempCount} - treatiseUrl: ${SP1.data}`)
-          const SP2 = await crawlingCtrl.getTreatiseLinkTotalCount_new(browser, SP1.data);
-          console.log(`SP2.data (total cnt)======================================,${SP2.data}`)
-          let treatiseTotalcount = 0
-          let treatiseTotalPage = 0
-          let pageSize = 50
-          let page = 1
-          let offset = 0
-          if (SP2.data) {
-            treatiseTotalcount = SP2.data
-            treatiseTotalPage = Math.ceil((treatiseTotalcount / pageSize))
+      try{
+        if (SP1.data) {
+          const tempRid = P1.data[i].rid;
+          if (!CS.isEmpty(tempRid)) {
+            await CS.wait(300);
+            // delete old traetise
+            console.log(`tempCount: ${tempCount} - treatiseUrl: ${SP1.data}`)
+            const SP2 = await crawlingCtrl.getTreatiseLinkTotalCount_new(browser, SP1.data);
+            console.log(`SP2.data (total cnt)======================================,${SP2.data}`)
+            let treatiseTotalcount = 0
+            let treatiseTotalPage = 0
+            let pageSize = 50
+            let page = 1
+            let offset = 0
+            if (SP2.data) {
+              treatiseTotalcount = SP2.data
+              treatiseTotalPage = Math.ceil((treatiseTotalcount / pageSize))
 
-            for (let index = 0; index < treatiseTotalPage; index++) {
-              await CS.wait(1000);
-              const tUrl = `${SP1.data}&type=1&page=${index + 1}&offset=${pageSize * (index)}`;
-              const IP = await crawlingCtrl.getTreatiseDetail_new(browser, tUrl);
-              const TSize = _.size(IP.data)
-              console.log(`TSize: ${TSize}`)
-              if (TSize) {
-                for (let index2 = 0; index2 < TSize; index2++) {
-                  const element = IP.data[index2];
-                  await CS.wait(2000);
-                  if (element) {
-                    if (element.url) {
-                      tempCount = tempCount + 1
-                      const TS = await crawlingCtrl.setTreatiseDetail_new(browser, element.url)
-                      if (TS.error) {
-                        console.log(`TS.error : ${TS.error}`)
-                      } else {
-                        const element = TS.data;
-                        console.log(`TS.element : ${element}`)
-                        const iD = {
-                          rid: tempRid,
-                          title: element.title,
-                          doi: element.doi,
-                          journalName: element.journalName,
-                          authorRule: element.authorRule,
-                          publicationDate: element.publicationDate,
-                          url: element.url,
-                          abstract: element.abstract,
-                          keywords: element.keywords,
-                          impactFactor: element.impactFactor,
-                          totalCitations: element.totalCitations,
-                          referencesThesis: element.referencesThesis,
-                          doctorName: P1.data[i].doctorname,
-                          authorName: element.authorName,
-                          subjectClassification: element.subjectClassification,
-                          publicationLocation: element.publicationLocation
-                        }
-                        await CS.wait(300);
-                        const SP6 = await crawlingCtrl.setCrawlingTreatise(iD.rid, iD.title, iD.doi, iD.journalName, iD.authorRule, iD.publicationDate, iD.url, iD.abstract, iD.keywords, iD.impactFactor, iD.totalCitations, iD.referencesThesis, iD.doctorName, iD.authorName, iD.subjectClassification, iD.publicationLocation);
-                        if (SP6.error) {
-                          console.log(`SP6 DB fail.`);
-                          console.log(`Error on ${SP1.data.doctorName}`)
-                          // return res.json(TS.fail("SP5 DB fail."));
+              for (let index = 0; index < treatiseTotalPage; index++) {
+                await CS.wait(1000);
+                const tUrl = `${SP1.data}&type=1&page=${index + 1}&offset=${pageSize * (index)}`;
+                const IP = await crawlingCtrl.getTreatiseDetail_new(browser, tUrl);
+                const TSize = _.size(IP.data)
+                console.log(`TSize: ${TSize}`)
+                if (TSize) {
+                  for (let index2 = 0; index2 < TSize; index2++) {
+                    const element = IP.data[index2];
+                    await CS.wait(2000);
+                    if (element) {
+                      if (element.url) {
+                        tempCount = tempCount + 1
+                        const TS = await crawlingCtrl.setTreatiseDetail_new(browser, element.url)
+                        if (TS.error) {
+                          console.log(`TS.error : ${TS.error}`)
+                        } else {
+                          const element = TS.data;
+                          console.log(`TS.element : ${element}`)
+                          const iD = {
+                            rid: tempRid,
+                            title: element.title,
+                            doi: element.doi,
+                            journalName: element.journalName,
+                            authorRule: element.authorRule,
+                            publicationDate: element.publicationDate,
+                            url: element.url,
+                            abstract: element.abstract,
+                            keywords: element.keywords,
+                            impactFactor: element.impactFactor,
+                            totalCitations: element.totalCitations,
+                            referencesThesis: element.referencesThesis,
+                            doctorName: P1.data[i].doctorname,
+                            authorName: element.authorName,
+                            subjectClassification: element.subjectClassification,
+                            publicationLocation: element.publicationLocation
+                          }
+                          await CS.wait(300);
+                          const SP6 = await crawlingCtrl.setCrawlingTreatise(iD.rid, iD.title, iD.doi, iD.journalName, iD.authorRule, iD.publicationDate, iD.url, iD.abstract, iD.keywords, iD.impactFactor, iD.totalCitations, iD.referencesThesis, iD.doctorName, iD.authorName, iD.subjectClassification, iD.publicationLocation);
+                          if (SP6.error) {
+                            console.log(`SP6 DB fail.`);
+                            console.log(`Error on ${SP1.data.doctorName}`)
+                            // return res.json(TS.fail("SP5 DB fail."));
+                          }
                         }
                       }
                     }
@@ -628,6 +630,9 @@ router.post('/treatise_new', async (req, res, next) => {
             }
           }
         }
+      }catch(e){
+        console.log(`Error on ${SP1.data.doctorName}`)
+        console.log(e)
       }
     }
     let result = tempCount

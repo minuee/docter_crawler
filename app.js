@@ -114,7 +114,7 @@ class App {
     this.app.use('/v1/c/seoul.hyumc.com', require(`${global.appRoot}/services/crawling_seoul.hyumc.com/route`)); //한양대학교병원 - H01KR-11000014
 
     /* 경기서북부부권 */
-    this.app.use('/v1/c/cmcism.or.kr', require(`${global.appRoot}/services/crawling_cmcism.or.kr/route`)); //카톨릭대 인천 성모병원 - H01KR-41000001
+    this.app.use('/v1/c/cmcism.or.kr', require(`${global.appRoot}/services/crawling_cmcism.or.kr/route`)); //카톨릭대 인천성모병원 - H01KR-41000001
     this.app.use('/v1/c/schmc.ac.kr', require(`${global.appRoot}/services/crawling_schmc.ac.kr/route`)); //순천향대학교부속부천병원 - H01KR-41000002
     this.app.use('/v1/c/gilhospital.com', require(`${global.appRoot}/services/crawling_gilhospital.com/route`)); //가천대길병원 - H01KR-41000003
     this.app.use('/v1/c/inha.com', require(`${global.appRoot}/services/crawling_inha.com/route`)); //인하대부속병원 - H01KR-41000004
