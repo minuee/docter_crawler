@@ -96,7 +96,7 @@ router.post('/step01', async function(req, res, next) {
    
     if (!functions.isEmpty(SP1.data)) {
       for (let i = 0; i < _.size(SP1.data); i++) {
-        if ( SP1.data[i].deptName == "가정의학과" && SP1.data[i].doctorName == "김종구") {
+        //if ( SP1.data[i].deptName == "가정의학과" && SP1.data[i].doctorName == "김종구") {
           data.push({
             hid: HOSPITAL_ID,
             deptName: SP1.data[i].deptName,
@@ -116,7 +116,7 @@ router.post('/step01', async function(req, res, next) {
           const SP2 = await crawlingCtrl.setCrawlingDoctorLink(tempRid, HOSPITAL_ID, SP1.data[i].deptName, SP1.data[i].doctorName, SP1.data[i].url,SP1.data[i].profile_url,HOSPITAL_NAME);
           if (SP2.error) console.log("DB upsert fail.");;
 
-          /* await CS.wait(300);
+          await CS.wait(300);
           const SP3 = await crawlingCtrl.setCrawlingdoctorBasic(tempRid, HOSPITAL_ID, SP1.data[i].deptName, SP1.data[i].doctorName, SP1.data[i].specialty, SP1.data[i].profile_url);
           if (SP3.error) {
             console.log("SP3 DB fail.");
@@ -128,8 +128,8 @@ router.post('/step01', async function(req, res, next) {
           if (SP4.error) {
             console.log("SP4 DB fail.");
             return res.json(TS.fail("SP4 DB fail."));
-          } */
-        }
+          }
+        //}
       }
     } else {
       console.log(`loop ${i} result is null.`);

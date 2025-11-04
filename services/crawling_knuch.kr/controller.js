@@ -39,7 +39,7 @@ module.exports = {
         const tmpLink = $(element).find('a').attr('href') ? $(element).find('a').attr('href'): '' ; 
         
         if ( !functions.isEmpty(tmpLink) ) {
-          const link = `https://www.knuch.kr:442${tmpLink}`;
+          const link = tmpLink.indexOf('http') == -1 ? `https://www.knuch.kr:442${tmpLink}` : tmpLink;
           console.log(`tmpLinkDepthNo:${deptName} ${link}`);
           dept.push({ 
             deptName,

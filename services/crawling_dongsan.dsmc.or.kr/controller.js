@@ -142,14 +142,25 @@ module.exports = {
     let DBData2 = null
     let Response = { status: null, data: null }
     console.log(`crwalingProcess03: ${url}`); 
-
+    let browser = null;
     try{
    
       if (!url) {
         return { error: true, data: null };
       }
     
-      const browser = await puppeteer.launch();
+      browser = await puppeteer.launch({
+        //headless:false,
+        args: [
+          '--disable-gpu',
+          '--disable-dev-shm-usage',
+          '--disable-setuid-sandbox',
+          '--no-first-run',
+          '--no-sandbox',
+          '--no-zygote',
+          '--single-process',
+      ]
+      });
         // Open a new page
       const page = await browser.newPage();
       page.setDefaultNavigationTimeout(0);
@@ -266,10 +277,9 @@ module.exports = {
         
       await browser.close();
       return { error: error, data: item };
-    }catch(e){
-      Error = error;
+    }catch(error){
       console.log(`error on ${url} API return: ${error}`);
-      await browser.close();
+      await browser?.close();
       return { 
         error: error, 
         data: {
@@ -474,6 +484,7 @@ module.exports = {
     if (!url) {
       return { error: true, data: null };
     }
+    let browser = null;
     try {
       let error = null;
       console.log(`crwalingtreatise: ${url}`); 
@@ -482,7 +493,7 @@ module.exports = {
         return { error: true, data: null };
       }
     
-      const browser = await puppeteer.launch();
+      browser = await puppeteer.launch();
         // Open a new page
       const page = await browser.newPage();
       page.setDefaultNavigationTimeout(0);
@@ -532,9 +543,8 @@ module.exports = {
       return { error: error, data: item };
 
     } catch (error) {
-      Error = error;
       console.log(`error on ${url} API return: ${error}`);
-      await browser.close();
+      await browser?.close();
       return { error: error, data: [] };
     }
 

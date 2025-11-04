@@ -98,7 +98,7 @@ router.post('/step01', async function(req, res, next) {
         deptName : P1.data[i].deptName,
         doctorName : P1.data[i].doctorName
       })
-      if ( P1.data[i].deptName == "소화기내과" && P1.data[i].doctorName == "김광민") {
+      //if ( P1.data[i].deptName == "소화기내과" && P1.data[i].doctorName == "김광민") {
         await CS.wait(200);
         const SP0 = await crawlingCtrl.get_rid_encrypt(P1.data[i].doctorName, P1.data[i].url);
         //console.log("SP0",SP0.data);
@@ -112,7 +112,7 @@ router.post('/step01', async function(req, res, next) {
         if (SP2.error) console.log("DB upsert fail.");;
         // console.log("SP2",SP2);
         if (functions.isEmpty(tempRid)) break;
-        /* await CS.wait(300);
+        await CS.wait(300);
         const SP3 = await crawlingCtrl.setCrawlingdoctorBasic(tempRid, HOSPITAL_ID,  P1.data[i].deptName, P1.data[i].doctorName, P1.data[i].career.specialty, P1.data[i].career.profileImgUrl,HOSPITAL_NAME);
         //console.log("SP3",SP3);
         if (SP3.error) {
@@ -157,9 +157,9 @@ router.post('/step01', async function(req, res, next) {
               console.log(`Error on ${P1.data[i].doctorName}`)
             }
           }
-        } */
+        }
 
-      }
+      //}
     } else {
       console.log(`loop ${i} result is null.`);
     }

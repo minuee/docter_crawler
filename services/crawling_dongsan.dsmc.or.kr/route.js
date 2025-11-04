@@ -92,7 +92,7 @@ router.post('/step01', async function(req, res, next) {
    
     if (!functions.isEmpty(SP1.data)) {
       for (let i = 0; i < _.size(SP1.data); i++) {
-        if ( SP1.data[i].deptName == "가정의학과" && SP1.data[i].doctorName == "김대현") {
+        //if ( SP1.data[i].deptName == "가정의학과" && SP1.data[i].doctorName == "김대현") {
           data.push({
             hid: HOSPITAL_ID,
             deptName: SP1.data[i].deptName,
@@ -110,7 +110,7 @@ router.post('/step01', async function(req, res, next) {
 
           const SP2 = await crawlingCtrl.setCrawlingDoctorLink(tempRid, HOSPITAL_ID, SP1.data[i].deptName, SP1.data[i].doctorName, SP1.data[i].url,  SP1.data[i].profileUrl,HOSPITAL_NAME);
           if (SP2.error) console.log("DB upsert fail.");
-        }
+        //}
       }
     } else {
       console.log(`loop ${i} result is null.`);
@@ -188,74 +188,91 @@ router.post('/step02', async (req, res, next) => {
       const deptName = P1.data[i].deptname;
       const refUrl = P1.data[i].doctor_url;
       const profileimgurl = P1.data[i].profileimgurl;
-
-      if (doctorName && refUrl && refUrl.indexOf("http") !== -1) {
-        const SP1 = await crawlingCtrl.crwalingProcess03(refUrl);
-        await CS.wait(300);
-        //저서는 따로 진행
-        const refUrl_book = refUrl.replace('doctor_view.php','doctor_view03.php')
-        const SP1_book = await crawlingCtrl.crwalingProcess03_book(refUrl_book, SP1.data);
-        await CS.wait(300);
-        //언론는 따로 진행
-        const refUrl_press = refUrl.replace('doctor_view.php','doctor_view06.php')
-        const SP1_press = await crawlingCtrl.crwalingProcess03_press(refUrl_press, SP1_book.data);
-        console.log(`dtText 1111: ${JSON.stringify(SP1_press)}`)
-        if ( SP1_press?.data?.length > 0 ) {
-          const pressData = SP1_press.data;
-          pressData.forEach(dtElement => {
-            const dtText = dtElement[1] ? dtElement[1].trim() : '';
-            const dtDateText = dtElement[4] ? dtElement[4].trim() : '';
-            if ( !functions.isEmpty(dtText) ) {
-              console.log(`dtText 33333: ${dtText}`)
-              const etc = {
-                targetDate : dtDateText,
-                type: "언론",
-                text: dtText,
-                url: '',
-                issuer:''
-              };
-              SP1_book.data.biography.push(etc);
+      
+        if (doctorName && refUrl && refUrl.indexOf("http") !== -1) {
+          let SP1_book = null;
+          const SP1 = await crawlingCtrl.crwalingProcess03(refUrl);
+          await CS.wait(300);
+          //저서는 따로 진행
+          try{
+            const refUrl_book = refUrl.replace('doctor_view.php','doctor_view03.php')
+            SP1_book = await crawlingCtrl.crwalingProcess03_book(refUrl_book, SP1.data);
+            await CS.wait(300);
+          }catch(error){
+            console.log(`doctor_view03 : ${error}`);
+          }
+          
+          try{
+            //언론는 따로 진행
+            const refUrl_press = refUrl.replace('doctor_view.php','doctor_view06.php')
+            const SP1_press = await crawlingCtrl.crwalingProcess03_press(refUrl_press, SP1_book?.data);
+            if ( SP1_press?.data?.length > 0 ) {
+              const pressData = SP1_press.data;
+              pressData.forEach(dtElement => {
+                const dtText = dtElement[1] ? dtElement[1].trim() : '';
+                const dtDateText = dtElement[4] ? dtElement[4].trim() : '';
+                if ( !functions.isEmpty(dtText) ) {
+                  const etc = {
+                    targetDate : dtDateText,
+                    type: "언론",
+                    text: dtText,
+                    url: '',
+                    issuer:''
+                  };
+                  SP1_book.data.biography.push(etc);
+                }
+              })
             }
+          }catch(error){
+            console.log(`doctor_view06 : ${error}`);
+          }
+          //console.log(`dtText 33SP1_press.data333: ${JSON.stringify(SP1_book.data.biography)}`)
+          //언론는 따로 진행
+          let specialtyNew = null;
+          let biographyNew = null;
+          try{
+            const refUrl_press2 = refUrl.replace('doctor_view.php','doctor_view08.php')
+            const SP1_press2 = await crawlingCtrl.crwalingProcess03_press2(refUrl_press2, SP1_book?.data);
+            specialtyNew = SP1_press2.data.specialty ? SP1_press2.data.specialty : null;
+            biographyNew = SP1_press2.data.biography ? JSON.stringify(SP1_press2.data.biography) : null;
+          }catch(error){
+            console.log(`doctor_view08 : ${error}`);
+          }
+          const tempRid = doctorRid;
+          //console.log(`check data: ${SP1_press2.data.biography} ${refUrl} ${deptName} ${tempRid}`);
+          if (CS.isEmpty(tempRid)) break;
+          await CS.wait(300);
+          
+          const SP3 = await crawlingCtrl.setCrawlingdoctorBasic(tempRid, HOSPITAL_ID, deptName, doctorName, specialtyNew, profileimgurl);
+          if (SP3.error) {
+            console.log("SP3 DB fail.");
+            return res.json(TS.fail("SP3 DB fail."));
+          }
+          await CS.wait(300);
+    
+          const SP4 = await crawlingCtrl.setCrawlingdoctorBiography(tempRid, HOSPITAL_ID, doctorName, biographyNew);
+          if (SP4.error) {
+            console.log("SP4 DB fail.");
+            return res.json(TS.fail("SP4 DB fail."));
+          }
+
+          data.push({
+            hid: HOSPITAL_ID,
+            deptName,
+            doctorName,
+            url: refUrl
           })
         }
-
-        //console.log(`dtText 33SP1_press.data333: ${JSON.stringify(SP1_book.data.biography)}`)
-        //언론는 따로 진행
-        const refUrl_press2 = refUrl.replace('doctor_view.php','doctor_view08.php')
-        const SP1_press2 = await crawlingCtrl.crwalingProcess03_press2(refUrl_press2, SP1_book.data);
-        const tempRid = doctorRid;
-        //console.log(`check data: ${SP1_press2.data.biography} ${refUrl} ${deptName} ${tempRid}`);
-        /* if (CS.isEmpty(tempRid)) break;
-        await CS.wait(300);
-        const SP3 = await crawlingCtrl.setCrawlingdoctorBasic(tempRid, HOSPITAL_ID, deptName, doctorName, SP1_press2.data.specialty, profileimgurl);
-        if (SP3.error) {
-          console.log("SP3 DB fail.");
-          return res.json(TS.fail("SP3 DB fail."));
-        }
-        await CS.wait(300);
-  
-        const SP4 = await crawlingCtrl.setCrawlingdoctorBiography(tempRid, HOSPITAL_ID, doctorName, JSON.stringify(SP1_press2.data.biography));
-        if (SP4.error) {
-          console.log("SP4 DB fail.");
-          return res.json(TS.fail("SP4 DB fail."));
-        } */
-
-        data.push({
-          hid: HOSPITAL_ID,
-          deptName,
-          doctorName,
-          url: refUrl
-        })
-      }
+      
     }
     console.log(`대상 의사수 : ${_.size(P1.data)}, 작업된 의사수 : ${_.size(data)}`);
-    let result = _.size(P1.data);
+
     return res.send({
       code : 200,
       success: true,
       message: `대상 의사수 : ${_.size(P1.data)}, 작업된 의사수 : ${_.size(data)}`
     });
-  }catch(e) {
+  }catch(error) {
     console.log(error);
     return res.send({
       code : 200,
@@ -322,39 +339,43 @@ router.post('/treatise', async (req, res, next) => {
     const deptName = P1.data[i].deptname;
     const refUrl = P1.data[i].doctor_url;
     const refUrl_treatise= refUrl.replace('doctor_view.php','doctor_view02.php')
-    const SP1 = await crawlingCtrl.crwalingtreatise(refUrl_treatise)
-    if (_.size(SP1.data.biography) > 0) {
-      //console.log(`total sie: ${JSON.stringify(SP1.data.biography)}`)
-      await CS.wait(300);
-      const tempRid = P1.data[i].rid
-      if (CS.isEmpty(tempRid)) break;
-      /* for (let index = 0; index < _.size(SP1.data.biography); index++) {
-        const element = SP1.data.biography[index];
-        const iD = {
-          rid: tempRid,
-          title: element.title,
-          doi: null,
-          journalName: functions.isEmpty(element.journalName) ? '' : element.journalName,
-          authorRule: null,
-          publicationDate:  functions.isEmpty(element.publicationDate) ? '' : element.publicationDate,
-          url: null,
-          abstract: null,
-          keywords: null,
-          impactFactor: null,
-          totalCitations: null,
-          referencesThesis: null,
-          doctorName: doctorName,
-          authorName: null,
-          subjectClassification: null,
-          publicationLocation: null
+    try{
+      const SP1 = await crawlingCtrl.crwalingtreatise(refUrl_treatise)
+      if (_.size(SP1.data.biography) > 0) {
+        //console.log(`total sie: ${JSON.stringify(SP1.data.biography)}`)
+        await CS.wait(300);
+        const tempRid = P1.data[i].rid
+        if (CS.isEmpty(tempRid)) break;
+        for (let index = 0; index < _.size(SP1.data.biography); index++) {
+          const element = SP1.data.biography[index];
+          const iD = {
+            rid: tempRid,
+            title: element.title,
+            doi: null,
+            journalName: functions.isEmpty(element.journalName) ? '' : element.journalName,
+            authorRule: null,
+            publicationDate:  functions.isEmpty(element.publicationDate) ? '' : element.publicationDate,
+            url: null,
+            abstract: null,
+            keywords: null,
+            impactFactor: null,
+            totalCitations: null,
+            referencesThesis: null,
+            doctorName: doctorName,
+            authorName: null,
+            subjectClassification: null,
+            publicationLocation: null
+          }
+          const SP6 = await crawlingCtrl.setCrawlingTreatise(iD.rid, iD.title, iD.doi, iD.journalName, iD.authorRule, iD.publicationDate, iD.url, iD.abstract, iD.keywords, iD.impactFactor, iD.totalCitations, iD.referencesThesis, iD.doctorName, iD.authorName, iD.subjectClassification, iD.publicationLocation);
+          if (SP6.error) {
+            console.log(`SP6 DB fail.`);
+            console.log(`Error on ${P1.data[i].doctorName}`)
+          }
+          article++;
         }
-        const SP6 = await crawlingCtrl.setCrawlingTreatise(iD.rid, iD.title, iD.doi, iD.journalName, iD.authorRule, iD.publicationDate, iD.url, iD.abstract, iD.keywords, iD.impactFactor, iD.totalCitations, iD.referencesThesis, iD.doctorName, iD.authorName, iD.subjectClassification, iD.publicationLocation);
-        if (SP6.error) {
-          console.log(`SP6 DB fail.`);
-          console.log(`Error on ${P1.data[i].doctorName}`)
-        }
-        article++;
-      } */
+      }
+    }catch(error){
+      console.log(`treatise : ${error}`);
     }
   }
   return res.send({

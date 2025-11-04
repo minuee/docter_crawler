@@ -91,7 +91,7 @@ router.post('/step01', async function(req, res, next) {
 
     if (!functions.isEmpty(SP1.data)) {
       for (let i = 0; i < _.size(SP1.data); i++) {
-        if ( SP1.data[i].deptName == "가정의학과" && SP1.data[i].doctorName == "고혜진") {
+        //if ( SP1.data[i].deptName == "가정의학과" && SP1.data[i].doctorName == "고혜진") {
           data.push({
             hid: HOSPITAL_ID,
             deptName: SP1.data[i].deptName,
@@ -108,7 +108,7 @@ router.post('/step01', async function(req, res, next) {
 
           const SP2 = await crawlingCtrl.setCrawlingDoctorLink(tempRid, HOSPITAL_ID, SP1.data[i].deptName, SP1.data[i].doctorName, SP1.data[i].url, SP1.data[i].profileUrl,HOSPITAL_NAME);
           if (SP2.error) console.log("DB upsert fail.");
-        }
+        //}
       }
     } else {
       console.log(`loop ${i} result is null.`);
@@ -202,7 +202,7 @@ router.post('/step02', async (req, res, next) => {
         console.log("SP2 DB fail.");
         return res.json(TS.fail("SP2 DB fail."));
       }
-      /* const tempRid = SP2.data[0].rid_encrypt
+      const tempRid = SP2.data[0].rid_encrypt
       console.log(`check data: ${doctorName} ${refUrl} ${deptName} ${tempRid}`);
       if (CS.isEmpty(tempRid)) break;
       await CS.wait(300);
@@ -217,7 +217,7 @@ router.post('/step02', async (req, res, next) => {
       if (SP4.error) {
         console.log("SP4 DB fail.");
         return res.json(TS.fail("SP4 DB fail."));
-      } */
+      }
 
       data.push({
         hid: HOSPITAL_ID,
@@ -300,7 +300,7 @@ router.post('/treatise', async (req, res, next) => {
       await CS.wait(300);
       const tempRid = P1.data[i].rid
       if (CS.isEmpty(tempRid)) break;
-      /* for (let index = 0; index < _.size(SP1.data.biography); index++) {
+      for (let index = 0; index < _.size(SP1.data.biography); index++) {
         const element = SP1.data.biography[index];
         const iD = {
           rid: tempRid,
@@ -326,7 +326,7 @@ router.post('/treatise', async (req, res, next) => {
           console.log(`Error on ${P1.data[i].doctorName}`)
         }
         article++;
-      } */
+      }
     }
   }
 
