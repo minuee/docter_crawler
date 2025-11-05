@@ -381,7 +381,6 @@ module.exports = {
       return { error: error, data: item };
 
     } catch (error) {
-      Error = error;
       console.log(`error on ${url} API return: ${error}`);
       await browser.close();
       return { error: error, data: [] };

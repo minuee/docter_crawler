@@ -204,7 +204,8 @@ router.post('/treatise', async (req, res, next) => {
   for (let i = 0; i < _.size(P1.data); i++) {
     await CS.wait(500);
     console.log("ddddd__Ddddx",P1.data[i].link);
-    const SP1 = await crawlingCtrl.crwalingProcess02(P1.data[i].link, P1.data[i].deptName);
+    try{
+      const SP1 = await crawlingCtrl.crwalingProcess02(P1.data[i].link, P1.data[i].deptName);
    
     if (!functions.isEmpty(SP1.data)) {
       for (let i = 0; i < _.size(SP1.data); i++) {
@@ -225,40 +226,44 @@ router.post('/treatise', async (req, res, next) => {
         const tempRid = SP0.data[0].rid_encrypt;
 
        
-       if (_.size(SP1.data[i].paper) > 0) {
-        await CS.wait(300);
-        for (let index = 0; index < _.size(SP1.data[i].paper); index++) {
-          const element = SP1.data[i].paper[index];
-          const iD = {
-            rid: tempRid,
-            title: element.title,
-            doi: null,
-            journalName: functions.isEmpty(element.journalName) ? '' : element.journalName,
-            authorRule: null,
-            publicationDate: functions.isEmpty(element.publicationDate) ? '' : element.publicationDate,
-            url: null,
-            abstract: null,
-            keywords: null,
-            impactFactor: null,
-            totalCitations: null,
-            referencesThesis: null,
-            doctorName: SP1.data[i].doctorName,
-            authorName: null,
-            subjectClassification: null,
-            publicationLocation: null
+        if (_.size(SP1.data[i].paper) > 0) {
+          await CS.wait(300);
+          for (let index = 0; index < _.size(SP1.data[i].paper); index++) {
+            const element = SP1.data[i].paper[index];
+            const iD = {
+              rid: tempRid,
+              title: element.title,
+              doi: null,
+              journalName: functions.isEmpty(element.journalName) ? '' : element.journalName,
+              authorRule: null,
+              publicationDate: functions.isEmpty(element.publicationDate) ? '' : element.publicationDate,
+              url: null,
+              abstract: null,
+              keywords: null,
+              impactFactor: null,
+              totalCitations: null,
+              referencesThesis: null,
+              doctorName: SP1.data[i].doctorName,
+              authorName: null,
+              subjectClassification: null,
+              publicationLocation: null
+            }
+            const SP6 = await crawlingCtrl.setCrawlingTreatise(iD.rid, iD.title, iD.doi, iD.journalName, iD.authorRule, iD.publicationDate, iD.url, iD.abstract, iD.keywords, iD.impactFactor, iD.totalCitations, iD.referencesThesis, iD.doctorName, iD.authorName, iD.subjectClassification, iD.publicationLocation);
+            if (SP6.error) {
+              console.log(`SP6 DB fail.`);
+              console.log(`Error on ${P1.data[i].doctorName}`)
+            }
+            article++;
           }
-          const SP6 = await crawlingCtrl.setCrawlingTreatise(iD.rid, iD.title, iD.doi, iD.journalName, iD.authorRule, iD.publicationDate, iD.url, iD.abstract, iD.keywords, iD.impactFactor, iD.totalCitations, iD.referencesThesis, iD.doctorName, iD.authorName, iD.subjectClassification, iD.publicationLocation);
-          if (SP6.error) {
-            console.log(`SP6 DB fail.`);
-            console.log(`Error on ${P1.data[i].doctorName}`)
-          }
-          article++;
         }
-      }
       }
     } else {
       console.log(`loop ${i} result is null.`);
     }
+    }catch(e){
+      console.log(`crwalingProcess02 erorr : ${e}`);
+    }
+    
   }
 
   return res.send({
