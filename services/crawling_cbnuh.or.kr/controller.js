@@ -67,11 +67,11 @@ module.exports = {
     if (functions.isEmpty(url)) {
       return { error: true, data: [] };
     }
-
+    let browser = null;
     console.log(`url: ${url} ${deptName}`);
     try{
 
-      const browser = await puppeteer.launch();
+      browser = await puppeteer.launch();
         // Open a new page
       const page = await browser.newPage();
       page.setDefaultNavigationTimeout(0);
@@ -124,7 +124,6 @@ module.exports = {
       return { error: error, data: doctors };
 
     } catch (error) {
-      Error = error;
       console.log(`error on ${url} API return: ${error}`);
       await browser.close();
       return { error: error, data: [] };
@@ -142,8 +141,9 @@ module.exports = {
       return { error: true, data: null };
     }
    
+    let browser = null;
     try {
-      const browser = await puppeteer.launch();
+      browser = await puppeteer.launch();
         // Open a new page
       const page = await browser.newPage();
       page.setDefaultNavigationTimeout(0);
@@ -281,7 +281,6 @@ module.exports = {
       return { error: error, data: item };
 
     } catch (error) {
-      Error = error;
       console.log(`error on ${url} API return: ${error}`);
       await browser.close();
       return { error: error, data: [] };
@@ -298,8 +297,9 @@ module.exports = {
     if (!url) {
       return { error: true, data: null };
     }
+    let browser = null;
     try {
-      const browser = await puppeteer.launch();
+      browser = await puppeteer.launch();
         // Open a new page
       const page = await browser.newPage();
       page.setDefaultNavigationTimeout(0);
@@ -385,7 +385,6 @@ module.exports = {
       return { error: error, data: item };
 
     } catch (error) {
-      Error = error;
       console.log(`error on ${url} API return: ${error}`);
       await browser.close();
       return { error: error, data: [] };

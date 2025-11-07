@@ -18,6 +18,7 @@
             sigungu_code,
             sigungu_code_name,
             eupmyeon,
+            doctor_counts,
             open_date,
             created_at
         ) VALUES (
@@ -35,6 +36,7 @@
             #{h_sgguCd},
             #{h_sgguCdNm},
             #{h_emdongNm},
+            #{h_mdeptSdrCnt},
             #{h_estbDd},
             NOW()
         )
@@ -51,6 +53,7 @@
             sigungu_code = #{h_sgguCd},
             sigungu_code_name = #{h_sgguCdNm},
             eupmyeon = #{h_emdongNm},
+            doctor_counts = #{h_mdeptSdrCnt},
             open_date = #{h_estbDd},
             updated_at = NOW()
     </insert>

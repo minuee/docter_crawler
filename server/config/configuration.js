@@ -14,6 +14,24 @@ const config = {
     apiVersion: 0.1,
   },
   database: {
+    mysql_local: {
+      host: process.env.MYSQL_HOST_LOCAL || 'localhost'
+      ,port: process.env.MYSQL_PORT_LOCAL || '3306'
+      ,database: process.env.MYSQL_DATABASE_LOCAL || 'aiga2025'
+      ,user: process.env.MYSQL_USER_LOCAL || 'root'
+      ,password: process.env.MYSQL_PASSWORD_LOCAL || '1234'
+      ,charset: 'utf8mb4'
+      ,multipleStatements: false
+      ,waitForConnections: true
+      //,connectionLimit: 16
+      ,queueLimit: 0
+      ,typeCast: function (field, next) {
+        if (field.type == 'VAR_STRING') {
+            return field.string();
+        }
+        return next();
+      },
+    },
     mysql: {
       host: process.env.MYSQL_HOST || '3.37.250.53'
       ,port: process.env.MYSQL_PORT || '3306'

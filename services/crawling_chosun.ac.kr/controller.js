@@ -66,11 +66,11 @@ module.exports = {
     if (functions.isEmpty(url)) {
       return { error: true, data: [] };
     }
-
+    let browser = null
     console.log(`url: ${url} ${deptName}`);
     try{
 
-      const browser = await puppeteer.launch();
+      browser = await puppeteer.launch();
       //const browser = await puppeteer.launch({ headless: false, slowMo: 50 });
         // Open a new page
       const page = await browser.newPage();
@@ -126,7 +126,6 @@ module.exports = {
       return { error: error, data: doctors };
 
     } catch (error) {
-      Error = error;
       console.log(`error on ${url} API return: ${error}`);
       await browser.close();
       return { error: error, data: [] };
@@ -143,13 +142,13 @@ module.exports = {
     let DBData2 = null
     let Response = { status: null, data: null }
     console.log(`crwalingProcess03: ${url}`); 
-   
+    let browser = null; 
     if (!url) {
       return { error: true, data: null };
     }
    
     try {
-      const browser = await puppeteer.launch();
+      browser = await puppeteer.launch();
         // Open a new page
       const page = await browser.newPage();
       page.setDefaultNavigationTimeout(0);
@@ -287,7 +286,6 @@ module.exports = {
       return { error: error, data: item };
 
     } catch (error) {
-      Error = error;
       console.log(`error on ${url} API return: ${error}`);
       await browser.close();
       return { error: error, data: [] };
@@ -377,12 +375,12 @@ module.exports = {
     let DBData2 = null
     let Response = { status: null, data: null }
     console.log(`crwalingProcess03: ${url}`); 
-    
+    let browser = null; 
     if (!url) {
       return { error: true, data: null };
     }
     try {
-      const browser = await puppeteer.launch();
+      browser = await puppeteer.launch();
         // Open a new page
       const page = await browser.newPage();
       page.setDefaultNavigationTimeout(0);
@@ -435,7 +433,6 @@ module.exports = {
       return { error: error, data: item };
 
     } catch (error) {
-      Error = error;
       console.log(`error on ${url} API return: ${error}`);
       await browser.close();
       return { error: error, data: [] };

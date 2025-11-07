@@ -515,6 +515,7 @@ module.exports = {
           h_emdongNm : item?.emdongNm == undefined ? null : item?.emdongNm,
           h_ykiho : item?.ykiho == undefined ? null : item?.ykiho,
           h_estbDd : item?.estbDd == undefined ? null : item?.estbDd,
+          h_mdeptSdrCnt : item?.mdeptSdrCnt == undefined ? 0 : item?.mdeptSdrCnt,
         }; 
         const format = { language: "sql", indent: "  " };
         const query = mybatisMapper.getStatement(
@@ -523,12 +524,12 @@ module.exports = {
             param,
             format
         );
-        //console.log(`query : ${query}`)
+        console.log(`query : ${query}`)
         const { DBError = null, RS = null } = await daoMysql.spCall(query);
         const ret = await  functions.myBatisResult(DBError,RS)
         return { success: true, data: ret };
     }catch(e){
-        console.error(`error : ${e}`)
+        console.error(`saveToDatabase error : ${e}`)
         return { success : false,error: e, data: [] };
     }
 

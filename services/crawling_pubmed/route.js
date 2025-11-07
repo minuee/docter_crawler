@@ -246,7 +246,7 @@ router.post('/pubmed', async (req, res, next) => {
       }
 
     } // for loop end
-
+    console.log(`processCount : ${processCount}`)
     return res.json(TS.success(processCount));
   }catch(e){
     console.error(`error 1111: ${e}`)
