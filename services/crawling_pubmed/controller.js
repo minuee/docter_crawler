@@ -121,7 +121,7 @@ module.exports = {
       });
       await page.setViewport({ width: 1080, height: 1024 });
       await page.goto(url,{ timeout: 3000, waitUntil: "domcontentloaded" });
-      await CS.wait(3000)
+      await CS.wait(1500) // 3초에서 1.5초로 변경 2025.11.10
       console.log(`before start`);
 
       let content1 = null

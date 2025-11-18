@@ -15,6 +15,20 @@
             <if test="hid != null">
                 AND db.hid = #{hid}
             </if>
+            and dp.paper_id &gt; ( 
+                SELECT 
+                    case when max(dp.paper_id) then max(dp.paper_id) else 0 end  as max_paper 
+                FROM 
+                    doctor_paper dp INNER JOIN doctor_basic db ON dp.rid = db.rid
+                WHERE
+                    1=1 and dp.title IS NOT NULL and dp.pmid IS not NULL
+                    <if test="version_id != null">
+                        AND dp.data_version_id = #{version_id}
+                    </if>
+                    <if test="hid != null">
+                        AND db.hid = #{hid}
+                    </if>
+            )
         ORDER BY dp.paper_id asc
     </select>
 

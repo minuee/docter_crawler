@@ -12,7 +12,7 @@
         WHERE 
             a.hid = #{search_hid} and is_active  = 2  and a.data_version_id  = #{search_data_version_id}
         ORDER BY a.deptname , a.doctorname
-        LIMIT 100
+        LIMIT 300
     </select>
 
     <select id="select_new_doctor_samename_list">
@@ -23,8 +23,7 @@
             doctor_basic a LEFT JOIN doctor_career b ON a.rid = b.rid
             LEFT JOIN hospital h ON a.hid = h.hid
         WHERE 
-            a.deptname = #{search_deptname} and a.doctorname = #{search_doctorname} 
-            and a.rid_long not in ( #{pass_rid_long} ) and a.data_version_id in ( 1,2 )
+            a.doctorname = #{search_doctorname} and a.rid_long not in ( #{pass_rid_long} ) and a.data_version_id in ( 1,2 )
         ORDER BY a.deptname , a.doctorname
     </select>
 
@@ -69,6 +68,32 @@
 
     <update id="update_notexist_doctor_list">
         UPDATE doctor SET is_active = 0, updateAt = now() WHERE rid_long = #{search_rid_long} 
+    </update>
+
+    <select id="select_doctor_id_by_rid_long">
+        SELECT doctor_id FROM doctor WHERE rid_long = #{search_rid_long}
+    </select>
+
+    <insert id="insert_new_doctor">
+        INSERT INTO doctor (
+            rid_long,
+            rid,
+            name,
+            is_active,
+            data_version_id
+            createAt
+        ) values (
+            #{search_rid_long},
+            UNHEX(LEFT(SHA2(#{search_rid_long}, 256), 32)),
+            #{search_doctorname},
+            1,
+            #{search_data_version_id},
+            now()
+        )
+    </insert>
+
+    <update id="update_doctor_basic_did">
+        UPDATE doctor_basic SET doctor_id = #{doctor_id} , updateAt = now() WHERE rid_long = #{search_rid_long} 
     </update>
 
 </mapper>

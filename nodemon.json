@@ -2,6 +2,7 @@
   "ignore": [
     "services/crawling_bedoc/data/*",
     "services/crawling_did_link/data/*",
+    "services/crawling_did_link/completedata/*",
     "services/crawling_bedoc/saved_data/*",
     "services/crawling_bedoc/saved_data2/*",
     "ecosystem.config.js"

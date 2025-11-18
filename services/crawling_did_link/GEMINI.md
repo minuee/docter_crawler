@@ -42,4 +42,73 @@
 *   3단계에서 선택된 잠정 후보와 대상 의사의 정보를 최종 비교합니다.
 *   만약 **대상 의사와 잠정 후보 모두의 `info` 필드 문자열 길이가 10 미만**이라면, 정보 부족으로 최종 판정을 **"매칭 실패"**로 내립니다.
 *   그렇지 않은 경우, 잠정 후보를 **최종 결과로 확정**합니다.
+
+### 최종 결과 확정 시 파일 포맷 (AI 에이전트용)
+
+`summaryData2`에서 `summaryData`의 과거 이력에 해당하는 의사 1명을 최종적으로 찾아 확정했을 경우, 해당 파일(`ai_analysis_request_..._의사이름.json`)에 `isResult` 객체를 추가하여 최종 결과를 명시해야 합니다.
+
+*   **`isResult` 객체 구조:**
+    ```json
+    "isResult": {
+        "result": "match",
+        "userInfo": {
+          // 여기에 매칭된 과거 이력 의사의 모든 정보 (summaryData2[0]의 내용)
+          "info": "[...]",
+          "hospitalname": "...",
+          "hid": "...",
+          "deptname": "...",
+          "doctorname": "...",
+          "specialties": "...",
+          "rid_long": "..."
+        }
+    }
+    ```
+*   **적용 예시:**
+    ```json
+    {
+      "summaryData": { ... },
+      "summaryData2": [ ... ],
+      "isResult": {
+        "result": "match",
+        "userInfo": {
+          // 매칭된 과거 이력 의사의 정보
+        }
+      }
+      // ...
+    }
+    ```
+
+## 수동 분석 후 처리 규칙 (AI 에이전트용)
+
+`find-past` API를 통해 생성된 매칭 대상 파일(예: `ai_analysis_request_..._의사이름.json`)을 AI가 분석한 결과, `summaryData2` 목록에 적합한 과거 이력이 없다고 판단될 경우, 다음 두 단계를 반드시 수행해야 합니다.
+
+1.  **파일명 변경:**
+    *   분석한 파일의 이름 끝에 `_notmatch`를 추가하여 `..._notmatch.json`으로 변경합니다.
+    *   **예시:** `..._박영주.json` -> `..._박영주_notmatch.json`
+
+2.  **JSON 포맷 수정:**
+    *   파일명만 바꾸면 포맷이 달라 후속 API(`save-notmatch`) 처리 시 오류가 발생합니다.
+    *   파일을 열어 최상위 객체인 `summaryData`와 `summaryData2` 래퍼(wrapper)를 제거하고, `summaryData` 객체 안에 있던 내용만 남도록 파일을 덮어써야 합니다.
+    *   **수정 전 (잘못된 포맷):**
+        ```json
+        {
+          "summaryData": {
+            "rid_long": "...",
+            "hid": "...",
+            ...
+          },
+          "summaryData2": [ ... ]
+        }
+        ```
+    *   **수정 후 (올바른 포맷):**
+        ```json
+        {
+          "rid_long": "...",
+          "hid": "...",
+          ...
+        }
+        ```
+
+이 두 가지 작업이 완료되어야 해당 의사가 신규 의사로서 정상적으로 데이터베이스에 등록될 수 있습니다.
+
 호출은 curl -X POST -H "Content-Type: application/json" -d '{"hid": "H01KR-11000001"}' http://localhost:1200/v1/c/crawling_did_link/find-past  로서 매번 hid는 변경이 되니 참고해야 한다 

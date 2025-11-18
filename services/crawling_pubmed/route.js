@@ -118,8 +118,8 @@ router.post('/pubmed', async (req, res, next) => {
       console.log(`step 2 > ${url}`)
       if(functions.isEmpty(url) ) {
 
-        await CS.wait(1500)
-        console.log(`wait for 1500ms`);
+        await CS.wait(1000)
+        console.log(`wait for 1000ms`);
 
         if( !functions.isEmpty(P1.data[i].paper_url) ) {
           const SPX = await crawlingCtrl.pubmedCheck1(P1.data[i].paper_url);
@@ -162,7 +162,7 @@ router.post('/pubmed', async (req, res, next) => {
         continue;
       }
 
-      await CS.wait(1000)
+      await CS.wait(700)
       SP0 = await crawlingCtrl.puppeteerLoad2(url);
       if (SP0.data) {
         if (_.get(SP0, 'data.content1', null)) {
@@ -212,7 +212,7 @@ router.post('/pubmed', async (req, res, next) => {
               console.warn('No authors found.');
           }
         }
-        await CS.wait(1500)
+        await CS.wait(700)
         console.log(`wait for 1500ms`);
         const TS2 = await crawlingCtrl.getCitesCount(url)
         if(TS2.data){
