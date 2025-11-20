@@ -259,7 +259,7 @@ router.post('/step02', async (req, res, next) => {
         return res.json(TS.fail("SP4 DB fail."));
       }
  
-      const treastise = SP1.data.treatise
+      /* const treastise = SP1.data.treatise;
       if(_.size(treastise) > 0){
         for (let index = 0; index < _.size(treastise); index++) {
           const element = treastise[index];
@@ -288,7 +288,7 @@ router.post('/step02', async (req, res, next) => {
             console.log(`Error on ${doctorName}`)
           }
         }
-      }
+      } */
     }
   }
 

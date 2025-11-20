@@ -4,7 +4,7 @@
 
     <select id="select_new_doctor_list">
         SELECT 
-            a.rid_long,a.hid,h.baseName as hospitalname,a.deptname,a.doctorname,specialties,a.doctor_url,a.profileimgurl,
+            a.rid_long,a.hid,h.baseName as hospitalname,a.deptname,a.doctorname,specialties,a.doctor_url,a.profileimgurl,a.data_version_id,
             b.jsondata as info
         FROM
             doctor_basic a LEFT JOIN doctor_career b ON a.rid = b.rid
@@ -15,15 +15,26 @@
         LIMIT 300
     </select>
 
-    <select id="select_new_doctor_samename_list">
+    <select id="select_doctor_by_rid_long">
         SELECT 
-             a.rid_long,a.hid,h.baseName as hospitalname,a.deptname,a.doctorname,specialties,a.doctor_url,a.profileimgurl,
+            a.rid_long,a.hid,h.baseName as hospitalname,a.deptname,a.doctorname,specialties,a.doctor_url,a.profileimgurl,a.data_version_id,
             b.jsondata as info
         FROM
             doctor_basic a LEFT JOIN doctor_career b ON a.rid = b.rid
             LEFT JOIN hospital h ON a.hid = h.hid
         WHERE 
-            a.doctorname = #{search_doctorname} and a.rid_long not in ( #{pass_rid_long} ) and a.data_version_id in ( 1,2 )
+            a.rid_long = #{search_rid_long}
+    </select>
+
+    <select id="select_new_doctor_samename_list">
+        SELECT 
+             a.rid_long,a.hid,h.baseName as hospitalname,a.deptname,a.doctorname,specialties,a.doctor_url,a.profileimgurl,a.data_version_id,
+            b.jsondata as info
+        FROM
+            doctor_basic a LEFT JOIN doctor_career b ON a.rid = b.rid
+            LEFT JOIN hospital h ON a.hid = h.hid
+        WHERE 
+            a.doctorname LIKE CONCAT(#{search_doctorname}, '%') and a.rid_long not in ( #{pass_rid_long} ) and a.data_version_id in ( 1,2 )
         ORDER BY a.deptname , a.doctorname
     </select>
 
@@ -70,6 +81,66 @@
         UPDATE doctor SET is_active = 0, updateAt = now() WHERE rid_long = #{search_rid_long} 
     </update>
 
+    <insert id="insert_doctor_basic_log">
+        INSERT INTO doctor_basic_logs (
+            rid_long, 
+            rid, 
+            hid, 
+            deptname, 
+            doctorname,
+            memo, 
+            createAt 
+        )
+        VALUES (
+            #{search_rid_long},
+            UNHEX(LEFT(SHA2(#{search_rid_long}, 256), 32)),
+            #{search_hid},
+            #{search_deptname},
+            #{search_doctorname},
+            #{search_memo},
+            NOW()
+        )
+    </insert>
+
+    <update id="update_old_doctor_is_active">
+        UPDATE doctor
+        SET is_active = 0,
+            updateAt = NOW()
+        WHERE rid_long = #{search_rid_long}
+    </update>
+
+    <update id="update_doctor_for_new_doctor">
+        UPDATE doctor SET
+            rid_long = #{search_rid_long},
+            rid = UNHEX(LEFT(SHA2(#{search_rid_long}, 256), 32)),
+            name = #{search_doctorname},
+            is_active = 1,
+            data_version_id = #{search_data_version_id},
+            updateAt = NOW()
+        WHERE doctor_id = #{doctorId}
+    </update>
+
+    <update id="update_doctor_basic_for_new_doctor">
+        UPDATE doctor_basic 
+        SET 
+            doctor_id = #{doctorId},
+            prev_rid = #{target_rid_long},
+            updateAt = now()
+        WHERE rid_long = #{search_rid_long} 
+    </update>
+
+    <update id="update_new_doctor_parient_from_old_doctor">
+        UPDATE 
+            patient_review_evaluation 
+        SET 
+            rid_long = #{search_rid_long},
+            rid = UNHEX(LEFT(SHA2(#{search_rid_long}, 256), 32)),
+            new_hospital = #{search_hospital},
+            new_department = #{search_deptname},
+            updateAt = now() 
+        WHERE rid_long = #{target_rid_long} 
+    </update>
+
     <select id="select_doctor_id_by_rid_long">
         SELECT doctor_id FROM doctor WHERE rid_long = #{search_rid_long}
     </select>
@@ -80,7 +151,7 @@
             rid,
             name,
             is_active,
-            data_version_id
+            data_version_id,
             createAt
         ) values (
             #{search_rid_long},

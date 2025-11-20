@@ -1,0 +1,100 @@
+{
+  "summaryData": {
+    "rid_long": "7F690F0DFBC97CF0EAB01E83B0005B8C882A897973923A06F14E377DEB4B53B4EB09370262CB6A12395135D0C43085AAE5143319F074D1B06783C045A6A9B0E1937BC3821FCA40210FB87D8B4880371111C86DC35AD8392FD2261A3F7AA251BC",
+    "hid": "H01KR-11000005",
+    "hospitalname": "삼성서울병원",
+    "deptname": "응급의학과",
+    "doctorname": "이현정",
+    "specialties": "",
+    "doctor_url": "http://www.samsunghospital.com/home/reservation/common/doctorProfile.do?DR_NO=3556",
+    "profileimgurl": "http://www.samsunghospital.com/upload/deptdoctors/1729823191519_0275925.jpg",
+    "data_version_id": 4,
+    "info": "[{\"type\":\"학력\",\"date\":\"2019.02\",\"text\":\"순청향대학교 대학원 의학과 박사\"},{\"type\":\"학력\",\"date\":\"2015.02\",\"text\":\"순천향대학교 대학원 의학과 석사\"},{\"type\":\"학력\",\"date\":\"2003.02\",\"text\":\"이화여자대학교 의학과\"},{\"type\":\"경력\",\"date\":\"2024.06 ~현재\",\"text\":\"삼성서울병원 응급의학과 소아응급실 전담교수\"},{\"type\":\"경력\",\"date\":\"2020.03 ~ 2024.05\",\"text\":\"순천향대학교 천안병원 부교수\"},{\"type\":\"경력\",\"date\":\"2011.08 ~ 2020.02\",\"text\":\"순천향대학교 천안병원 조교수\"},{\"type\":\"경력\",\"date\":\"2004.03 ~ 2008.02\",\"text\":\"아주대학교병원 레지던트\"},{\"type\":\"경력\",\"date\":\"2003.03 ~ 2004.02\",\"text\":\"아주대학교병원 인턴\"}]"
+  },
+  "summaryData2": [
+    {
+      "rid_long": "4090465898E1623D2B75C8F4515E5B213B439EA0631FC7CCC886F0CC79FFB55B9FE3A3198DFAA2EDDF712ED190B26372D718EEA37085DD146C1B58606F537587",
+      "hid": "H01KR-11000013",
+      "hospitalname": "학교법인가톨릭학원가톨릭대학교서울성모병원",
+      "deptname": "건강증진의학과",
+      "doctorname": "이현정",
+      "specialties": null,
+      "doctor_url": "https://www.cmcseoul.or.kr/api/doctor/1060/D0001278",
+      "profileimgurl": "https://www.cmcseoul.or.kr/api/attach/view/doctor/D0001278/profile/1",
+      "data_version_id": 1,
+      "info": "[{\"type\":\"학력\",\"langType\":\"KO\",\"targetDate\":\"2000 2006\",\"text\":\"가톨릭대학교 의학 학사\",\"recordType\":\"A\",\"staYear\":\"2000\",\"endYear\":\"2006\",\"approvalYn\":\"Y\"},{\"type\":\"경력\",\"langType\":\"KO\",\"targetDate\":\"2006 2007\",\"text\":\"가톨릭중앙의료원  인턴\",\"recordType\":\"B\",\"staYear\":\"2006\",\"endYear\":\"2007\",\"approvalYn\":\"Y\"},{\"type\":\"학력\",\"langType\":\"KO\",\"targetDate\":\"2010 2012\",\"text\":\"가톨릭대학교 의학 석사\",\"recordType\":\"A\",\"staYear\":\"2010\",\"endYear\":\"2012\",\"approvalYn\":\"Y\"},{\"type\":\"경력\",\"langType\":\"KO\",\"targetDate\":\"2007 2011\",\"text\":\"가톨릭중앙의료원 내과 레지던트\",\"recordType\":\"B\",\"staYear\":\"2007\",\"endYear\":\"2011\",\"approvalYn\":\"Y\"},{\"type\":\"학력\",\"langType\":\"KO\",\"targetDate\":\"2012 2014\",\"text\":\"가톨릭대학교 의학 박사\",\"recordType\":\"A\",\"staYear\":\"2012\",\"endYear\":\"2014\",\"approvalYn\":\"Y\"},{\"type\":\"경력\",\"langType\":\"KO\",\"targetDate\":\"2011 2013\",\"text\":\"여의도 성모 병원 임상강사\",\"recordType\":\"B\",\"staYear\":\"2011\",\"endYear\":\"2013\",\"approvalYn\":\"Y\"}]"
+    },
+    {
+      "rid_long": "4090465898E1623D2B75C8F4515E5B21401AA169F103BBD4E5E1DEE02C9F53AA96B7C94DFD500E99FE3F793374EC418D138594572CA3B50B5712D9F91A90D9ABC5E6871B2244F6268818862020D90331",
+      "hid": "H01KR-11000007",
+      "hospitalname": "고려대학교의과대학부속구로병원",
+      "deptname": "내분비내과",
+      "doctorname": "이현정",
+      "specialties": "당뇨병, 갑상선 질환, 골다공증",
+      "doctor_url": "https://guro.kumc.or.kr/kr/doctor-department/doctor/view.do?drNo=8120",
+      "profileimgurl": "https://guro.kumc.or.kr/displayFile.do?name=20221230.1454.31.585.png",
+      "data_version_id": 1,
+      "info": "[]"
+    },
+    {
+      "rid_long": "4090465898E1623D2B75C8F4515E5B21691EBA55A564F80D9130C9DAED6095B28C021E750573637C51F08A507E6DE40C401FD9733E73359ABCE3B870BC5B00EBD30013A289D25C2DE3EC7ADA6172DB677D3B102FDB4BAA89C4BC7BD02ECB3C6F",
+      "hid": "H01KR-11000015",
+      "hospitalname": "이화여자대학교의과대학부속서울병원",
+      "deptname": "마취통증의학과",
+      "doctorname": "이현정",
+      "specialties": "소아마취, 일반마취, 부위마취, 노인마취, 신경외과 마취",
+      "doctor_url": "https://seoul.eumc.ac.kr/doctor/basicInfo.do?dr_sid=041535&dept_cd=ANO",
+      "profileimgurl": "https://seoul.eumc.ac.kr/upload/doctor/info/0ffc8832e9a14b63a32179698c391f3c.jpg",
+      "data_version_id": 1,
+      "info": "[{\"type\":\"학력사항\",\"text\":[\"이화여자대학교 의학전문대학원 졸업\"],\"url\":\"\"},{\"type\":\"교육 및 연구경력\",\"targetDate\":\"2019-현재\",\"text\":\" 이대서울병원 마취통증의학과 임상조교수\",\"url\":\"\"},{\"type\":\"교육 및 연구경력\",\"targetDate\":\"2015-2019\",\"text\":\" 이대목동병원 마취통증의학과 전공의\",\"url\":\"\"},{\"type\":\"기타 학술 관련 경력\",\"targetDate\":\"2015\",\"text\":\" 대한마취통증의학회 정회원\",\"url\":\"\"}]"
+    },
+    {
+      "rid_long": "4090465898E1623D2B75C8F4515E5B2183E9CA62CAE4244FF184F15A465EB730E00F95D3381CDB47D6D76CC7CDAD91A89922D23BC151371B6543808C75358C81CAF7F0C2B78EAF5965A91856FD5F5FC97D3B102FDB4BAA89C4BC7BD02ECB3C6F",
+      "hid": "H01KR-48000003",
+      "hospitalname": "부산대학교병원",
+      "deptname": "마취통증의학과",
+      "doctorname": "이현정",
+      "specialties": "이식마취, 중환자관리",
+      "doctor_url": "https://www.pnuh.or.kr/pnuh/medical/doctor-info.do?tCode=AN&dno=065756",
+      "profileimgurl": "https://www.pnuh.or.kr/app/pnuh/doctor/attach/image/065756_profilePhoto_1693321200000.do",
+      "data_version_id": 2,
+      "info": "[{\"targetDate\":\"\",\"type\":\"학력\",\"text\":\"부산대학교 의과대학 졸업\",\"url\":null,\"issuer\":null},{\"targetDate\":\"현재\",\"type\":\"학력\",\"text\":\"부산대학교 대학원 의학박사\",\"url\":null,\"issuer\":null},{\"targetDate\":\"\",\"type\":\"경력\",\"text\":\"STANFORD UNIVERSITY 연수\",\"url\":null,\"issuer\":null},{\"targetDate\":\"현재\",\"type\":\"경력\",\"text\":\"부산대학교병원 마취통증의학과 교수\",\"url\":null,\"issuer\":null}]"
+    },
+    {
+      "rid_long": "4090465898E1623D2B75C8F4515E5B215AD9887FC5F792292DD9E7396DEE1EE7DA078110E69F780EAFB386586F5CA38A36EB41C05B182AC48E871FF0FE2B85C12EF8B76887E5C187813D5308BA19D6F931DEF40BCD01F74B2BA16F69375AF0B1",
+      "hid": "H01KR-47000001",
+      "hospitalname": "경북대학교병원",
+      "deptname": "산부인과",
+      "doctorname": "이현정",
+      "specialties": "부인종양학, 자궁내막증, 로봇수술",
+      "doctor_url": "https://www.knuh.kr/content/01treatment/08_doctor01.asp?m_num=229294&ct_idx=240",
+      "profileimgurl": "https://www.snubh.org//data/dr_list/이현정 교수님 사진.jpg",
+      "data_version_id": 2,
+      "info": "[{\"targetDate\":\"\",\"type\":\"경력\",\"text\":\"· 2005.3 ~ 2006.2 : 경북대학교병원 산부인과 임상교수\",\"url\":null,\"issuer\":null},{\"targetDate\":\"\",\"type\":\"경력\",\"text\":\"· 2006.3 ~ 2017.2 : 대구파티마병원 산부인과 과장\",\"url\":null,\"issuer\":null},{\"targetDate\":\"\",\"type\":\"경력\",\"text\":\"· 2015.8 ~ 2016.7 : 미국 Duke대학 산부인과 부인종양센타 연수\",\"url\":null,\"issuer\":null},{\"targetDate\":\"\",\"type\":\"경력\",\"text\":\"· 2003년 대한산부인과학회 젊은 산부인과 의사상 수상\",\"url\":null,\"issuer\":null},{\"targetDate\":\"\",\"type\":\"언론\",\"text\":\"자궁경부암조기발견을위한검진방법-경북대병원산부인과이현정교수\",\"url\":null,\"issuer\":null}]"
+    },
+    {
+      "rid_long": "4090465898E1623D2B75C8F4515E5B21213788E1B21655D65BF3CD2801F56863050C69EB5884013D22CCCF7758A94A53B3FD6CA28D1DBF855E539DA245FE56D5",
+      "hid": "H01KR-11000006",
+      "hospitalname": "서울대학교병원",
+      "deptname": "소화기내과",
+      "doctorname": "이현정",
+      "specialties": "대장용종, 대장암, 직장암, 염증성 장질환(크론병, 궤양성대장염), 치료내시경",
+      "doctor_url": "https://www.snuh.org//blog/01144/career.do",
+      "profileimgurl": "https://www.snuh.org/upload/med/dr/3defaf6166cf424697546eed8472efb7.jpg",
+      "data_version_id": 1,
+      "info": "[{\"type\":\"학력\",\"date\":\"2011 ~ 2016\",\"text\":\"연세대학교 대학원 의학박사\"},{\"type\":\"학력\",\"date\":\"2008 ~ 2010\",\"text\":\"연세대학교 대학원 의학석사\"},{\"type\":\"학력\",\"date\":\"2000 ~ 2006\",\"text\":\"연세대학교 의과대학 의학사\"},{\"type\":\"경력\",\"date\":\"2024. 3. ~ 현재\",\"text\":\"서울대학교병원 소화기내과 부교수\"},{\"type\":\"경력\",\"date\":\"2020. 3. ~ 2024. 2.\",\"text\":\"서울대학교병원 소화기내과 조교수\"},{\"type\":\"경력\",\"date\":\"2017. 9. ~ 2020. 2.\",\"text\":\"서울대학교병원 소화기내과 임상부교수\"},{\"type\":\"경력\",\"date\":\"2017. 3. ~ 2017. 8.\",\"text\":\"서울대학교병원 소화기내과 진료조교수\"},{\"type\":\"경력\",\"date\":\"2014. 9. ~ 2017. 2.\",\"text\":\"연세대학교 의과대학 세브란스병원 소화기내과 임상조교수\"},{\"type\":\"경력\",\"date\":\"2014. 4. ~ 2014. 8.\",\"text\":\"연세대학교 의과대학 강남세브란스체크업 임상조교수\"},{\"type\":\"경력\",\"date\":\"2012. 3. ~ 2014. 2.\",\"text\":\"연세대학교 의과대학 세브란스병원 소화기내과 임상연구조교수\"},{\"type\":\"경력\",\"date\":\"2011. 3. ~ 2012. 2.\",\"text\":\"연세대학교 의과대학 세브란스병원 소화기내과 전임의\"},{\"type\":\"경력\",\"date\":\"2007. 3. ~ 2011. 2.\",\"text\":\"연세대학교 의과대학 세브란스병원 내과 전공의\"},{\"type\":\"경력\",\"date\":\"2006. 3. ~ 2007. 2.\",\"text\":\"연세대학교 의과대학 세브란스병원 인턴\"}]"
+    },
+    {
+      "rid_long": "4090465898E1623D2B75C8F4515E5B21DDEB90109780F80835604F44B734F338D11E8251318ED10C73DF55D7A4A514C4D5C52942505D654CA2FD83A575BE5CEBF8D3C1509C7AA1260B26ADC24C4696D3",
+      "hid": "H01KR-11000003",
+      "hospitalname": "경희대학교병원",
+      "deptname": "종양혈액내과",
+      "doctorname": "이현정",
+      "specialties": "2025.10.27 15:36",
+      "doctor_url": "https://med.khmc.or.kr//kr/treatment/doctor/27008/profile.do",
+      "profileimgurl": null,
+      "data_version_id": 1,
+      "info": "[{\"type\":\"학력\",\"date\":\"\",\"text\":\"서울대대학원 의학과 박사\"},{\"type\":\"학력\",\"date\":\"\",\"text\":\"서울대대학원 의학과 석사\"},{\"type\":\"학력\",\"date\":\"\",\"text\":\"서울대학교 의학과 학사\"},{\"type\":\"경력\",\"date\":\"2025 ~ 현재\",\"text\":\"경희대학교병원 종양혈액내과 부교수\"},{\"type\":\"경력\",\"date\":\"\",\"text\":\"경희대학교병원 종양혈액내과 임상부교수\"},{\"type\":\"경력\",\"date\":\"\",\"text\":\"동국대학교병원 혈액종양내과 조교수\"},{\"type\":\"경력\",\"date\":\"\",\"text\":\"서울대학교병원 혈액종양내과 전임의\"},{\"type\":\"경력\",\"date\":\"\",\"text\":\"서울대학교병원 내과 전공의\"},{\"type\":\"경력\",\"date\":\"\",\"text\":\"서울대학교병원 수련의\"},{\"type\":\"학회\",\"date\":\"\",\"text\":\"대한혈액학회 정회원\"},{\"type\":\"학회\",\"date\":\"\",\"text\":\"대한조혈모세포이식학회 정회원\"},{\"type\":\"학회\",\"date\":\"\",\"text\":\"대한암학회 정회원\"},{\"type\":\"학회\",\"date\":\"\",\"text\":\"대한항암요법연구회 정회원\"},{\"type\":\"학회\",\"date\":\"\",\"text\":\"대한내과학회 정회원\"},{\"type\":\"학회\",\"date\":\"\",\"text\":\"한국유전체학회 정회원\"},{\"type\":\"학회\",\"date\":\"\",\"text\":\"American Society of Hematology Member\"},{\"type\":\"학회\",\"date\":\"\",\"text\":\"American Society of Clinical Oncology Member\"},{\"type\":\"학회\",\"date\":\"\",\"text\":\"International Myeloma Society Member\"},{\"type\":\"저서\",\"date\":\"undefined.undefined\",\"text\":\"다발골수종은 어떤 병인가요?\"}]"
+    }
+  ]
+}

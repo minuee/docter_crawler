@@ -1,0 +1,43 @@
+{
+  "summaryData": {
+    "rid_long": "61BCC133178D98C85D2B34433CB7E00838A34E0CA7FA1EE0D89451A4AD25DB2A96B7C94DFD500E99FE3F793374EC418D138594572CA3B50B5712D9F91A90D9AB8AB974F9ADC9A8666F7F4FBAB283C851",
+    "hid": "H01KR-11000004",
+    "hospitalname": "학교법인 고려중앙학원 고려대학교의과대학부속병원(안암병원)",
+    "deptname": "혈액내과",
+    "doctorname": "김창곤",
+    "specialties": "일반혈액질환",
+    "doctor_url": "https://anam.kumc.or.kr/kr/doctor-department/doctor/view.do?drNo=8751",
+    "profileimgurl": "https://anam.kumc.or.kr/displayFile.do?drNo=8751",
+    "data_version_id": 4,
+    "info": "[{\"type\":\"학력\",\"date\":\"2020 ~ 2024\",\"text\":\"한국과학기술원 의과학대학원 박사\",\"url\":\"\"},{\"type\":\"학력\",\"date\":\"2017 ~ 2019\",\"text\":\"순천향대학교 의학과 석사\",\"url\":\"\"},{\"type\":\"학력\",\"date\":\"2009 ~ 2015\",\"text\":\"순천향대학교 의학과 학사\",\"url\":\"\"},{\"type\":\"경력\",\"date\":\"2025 ~ 현재\",\"text\":\"고려대학교 안암병원 혈액종양내과 임상진료조교수\",\"url\":\"\"},{\"type\":\"경력\",\"date\":\"2024 ~ 2025\",\"text\":\"삼성서울병원 혈액종양내과 전임의\",\"url\":\"\"},{\"type\":\"경력\",\"date\":\"2016 ~ 2020\",\"text\":\"순천향대학교병원 내과 전공의\",\"url\":\"\"},{\"type\":\"경력\",\"date\":\"2015 ~ 2016\",\"text\":\"순천향대학교병원 인턴\",\"url\":\"\"},{\"type\":\"학회활동\",\"date\":\"\",\"text\":\"조회된 학회가 없습니다.\",\"url\":\"\"}]"
+  },
+  "summaryData2": [
+    {
+      "rid_long": "039AB36BBC408E7CA0099A6AE97A1D08882A897973923A06F14E377DEB4B53B4EB09370262CB6A12395135D0C43085AAE5143319F074D1B06783C045A6A9B0E1937BC3821FCA40210FB87D8B4880371199ABDB8292C4CF62A49FA41AD1AB8581",
+      "hid": "H01KR-11000005",
+      "hospitalname": "삼성서울병원",
+      "deptname": "혈액종양내과",
+      "doctorname": "김창곤",
+      "specialties": "혈액 및 종양 질환",
+      "doctor_url": "http://www.samsunghospital.com/home/reservation/common/doctorProfile.do?DR_NO=3418",
+      "profileimgurl": "http://www.samsunghospital.com//_newhome/ui/home/static/img/doctor-paper/default_bg_section02.jpg",
+      "data_version_id": 1,
+      "info": "[{\"type\":\"학력\",\"targetDate\":\"2024.02\",\"text\":\"한국과학기술원\"},{\"type\":\"학력\",\"targetDate\":\"2019.08\",\"text\":\"순천향대학교 의과대학 의학석사\"},{\"type\":\"학력\",\"targetDate\":\"2015.02\",\"text\":\"순천향대학교 의과대학 의학사\"},{\"type\":\"학력\",\"targetDate\":\"2024.03 ~현재\",\"text\":\"삼성서울병원 혈액종양내과 임상강사\"},{\"type\":\"학력\",\"targetDate\":\"2016.03 ~ 2020.02\",\"text\":\"순천향대구미병원 내과 레지던트\"},{\"type\":\"학력\",\"targetDate\":\"2015.03 ~ 2016.02\",\"text\":\"순천향대서울병원 인턴\"},{\"type\":\"경력\",\"targetDate\":\"2024.02\",\"text\":\"한국과학기술원\"},{\"type\":\"경력\",\"targetDate\":\"2019.08\",\"text\":\"순천향대학교 의과대학 의학석사\"},{\"type\":\"경력\",\"targetDate\":\"2015.02\",\"text\":\"순천향대학교 의과대학 의학사\"},{\"type\":\"경력\",\"targetDate\":\"2024.03 ~현재\",\"text\":\"삼성서울병원 혈액종양내과 임상강사\"},{\"type\":\"경력\",\"targetDate\":\"2016.03 ~ 2020.02\",\"text\":\"순천향대구미병원 내과 레지던트\"},{\"type\":\"경력\",\"targetDate\":\"2015.03 ~ 2016.02\",\"text\":\"순천향대서울병원 인턴\"}]"
+    }
+  ],
+  "isResult": {
+    "result": "match",
+    "userInfo":{
+      "rid_long": "039AB36BBC408E7CA0099A6AE97A1D08882A897973923A06F14E377DEB4B53B4EB09370262CB6A12395135D0C43085AAE5143319F074D1B06783C045A6A9B0E1937BC3821FCA40210FB87D8B4880371199ABDB8292C4CF62A49FA41AD1AB8581",
+      "hid": "H01KR-11000005",
+      "hospitalname": "삼성서울병원",
+      "deptname": "혈액종양내과",
+      "doctorname": "김창곤",
+      "specialties": "혈액 및 종양 질환",
+      "doctor_url": "http://www.samsunghospital.com/home/reservation/common/doctorProfile.do?DR_NO=3418",
+      "profileimgurl": "http://www.samsunghospital.com//_newhome/ui/home/static/img/doctor-paper/default_bg_section02.jpg",
+      "data_version_id": 1,
+      "info": "[{\"type\":\"학력\",\"targetDate\":\"2024.02\",\"text\":\"한국과학기술원\"},{\"type\":\"학력\",\"targetDate\":\"2019.08\",\"text\":\"순천향대학교 의과대학 의학석사\"},{\"type\":\"학력\",\"targetDate\":\"2015.02\",\"text\":\"순천향대학교 의과대학 의학사\"},{\"type\":\"학력\",\"targetDate\":\"2024.03 ~현재\",\"text\":\"삼성서울병원 혈액종양내과 임상강사\"},{\"type\":\"학력\",\"targetDate\":\"2016.03 ~ 2020.02\",\"text\":\"순천향대구미병원 내과 레지던트\"},{\"type\":\"학력\",\"targetDate\":\"2015.03 ~ 2016.02\",\"text\":\"순천향대서울병원 인턴\"},{\"type\":\"경력\",\"targetDate\":\"2024.02\",\"text\":\"한국과학기술원\"},{\"type\":\"경력\",\"targetDate\":\"2019.08\",\"text\":\"순천향대학교 의과대학 의학석사\"},{\"type\":\"경력\",\"targetDate\":\"2015.02\",\"text\":\"순천향대학교 의과대학 의학사\"},{\"type\":\"경력\",\"targetDate\":\"2024.03 ~현재\",\"text\":\"삼성서울병원 혈액종양내과 임상강사\"},{\"type\":\"경력\",\"targetDate\":\"2016.03 ~ 2020.02\",\"text\":\"순천향대구미병원 내과 레지던트\"},{\"type\":\"경력\",\"targetDate\":\"2015.03 ~ 2016.02\",\"text\":\"순천향대서울병원 인턴\"}]"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "summaryData": {
+    "rid_long": "699D235F178115E53A57DE81BE9D2AD3882A897973923A06F14E377DEB4B53B4EB09370262CB6A12395135D0C43085AAE5143319F074D1B06783C045A6A9B0E1937BC3821FCA40210FB87D8B48803711715F828625691A4B506601A9421DB397",
+    "hid": "H01KR-11000005",
+    "hospitalname": "삼성서울병원",
+    "deptname": "병리과",
+    "doctorname": "안혜선",
+    "specialties": "소화기병리, 비뇨병리의학",
+    "doctor_url": "http://www.samsunghospital.com/home/reservation/common/doctorProfile.do?DR_NO=3700",
+    "profileimgurl": "http://www.samsunghospital.com/_newhome/ui/_component/static/img/default/default-profile02.png",
+    "data_version_id": 4
+  },
+  "summaryData2": [
+    {
+      "rid_long": "8BF86412C85BA4D2EDDFE54BE590C8AAFE9A4D068C3B6368E9C5C9AFDBF009D84CC1BC90AEE47FC2F92677758811B6F389B0A74ED79B50F0BB7ACEA2D0BD88C92E8698A289570DFBB782C1CA45A9F6CB486ECBA2E38570ED56515BBFC49DE840",
+      "hid": "H01KR-11000012",
+      "hospitalname": "이화여자대학교의과대학부속목동병원",
+      "deptname": "병리과",
+      "doctorname": "안혜선",
+      "specialties": "세포병리, 일반(염증성병변, 양성종양) 및 위대장수술병리",
+      "doctor_url": "https://mokdong.eumc.ac.kr/doctor/basicInfo.do?dr_sid=1019483&dept_cd=PA",
+      "profileimgurl": "https://mokdong.eumc.ac.kr/upload/doctor/info/8df769eee8054200bcccfdce83868d2f.jpg",
+      "data_version_id": 1
+    }
+  ],
+  "isResult": {
+    "result": "match",
+    "userInfo": {
+      "rid_long": "8BF86412C85BA4D2EDDFE54BE590C8AAFE9A4D068C3B6368E9C5C9AFDBF009D84CC1BC90AEE47FC2F92677758811B6F389B0A74ED79B50F0BB7ACEA2D0BD88C92E8698A289570DFBB782C1CA45A9F6CB486ECBA2E38570ED56515BBFC49DE840",
+      "hid": "H01KR-11000012",
+      "hospitalname": "이화여자대학교의과대학부속목동병원",
+      "deptname": "병리과",
+      "doctorname": "안혜선",
+      "specialties": "세포병리, 일반(염증성병변, 양성종양) 및 위대장수술병리",
+      "doctor_url": "https://mokdong.eumc.ac.kr/doctor/basicInfo.do?dr_sid=1019483&dept_cd=PA",
+      "profileimgurl": "https://mokdong.eumc.ac.kr/upload/doctor/info/8df769eee8054200bcccfdce83868d2f.jpg",
+      "data_version_id": 1
+    }
+  }
+}

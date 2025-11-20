@@ -1,0 +1,43 @@
+{
+  "summaryData": {
+    "rid_long": "96ABDCDAB34641924CB00BD451A0D419213788E1B21655D65BF3CD2801F568637D79F6E42EC57E1153940DF7ABB6A141B3FD6CA28D1DBF855E539DA245FE56D5",
+    "hid": "H01KR-11000006",
+    "hospitalname": "서울대학교병원",
+    "deptname": "응급의학과",
+    "doctorname": "권운용",
+    "specialties": "응급 중환자의학",
+    "doctor_url": "https://www.snuh.org//blog/01273/career.do",
+    "profileimgurl": "https://www.snuh.org/asset/img/blog/img_newDefaultDocPhoto.jpg",
+    "data_version_id": 4,
+    "info": "[{\"type\":\"학력\",\"date\":\"2006 ~ 2008\",\"text\":\"서울대학교 의과대학원 의학박사\"},{\"type\":\"학력\",\"date\":\"2003 ~ 2005\",\"text\":\"강원대학교 의과대학원 의학석사\"},{\"type\":\"학력\",\"date\":\"1990 ~ 1997\",\"text\":\"서울대학교 의과대학 의학과\"},{\"type\":\"경력\",\"date\":\"2020. 7. ~ 현재\",\"text\":\"서울대학교병원 응급의학과장\"},{\"type\":\"경력\",\"date\":\"2014 ~ 현재\",\"text\":\"서울대학교병원 부교수\"},{\"type\":\"경력\",\"date\":\"2007 ~ 2014\",\"text\":\"서울대학교병원 조교수\"}]"
+  },
+  "summaryData2": [
+    {
+      "rid_long": "96ABDCDAB34641924CB00BD451A0D419213788E1B21655D65BF3CD2801F56863FC23320B8273A285042AA8BCA75DB02BB3FD6CA28D1DBF855E539DA245FE56D5",
+      "hid": "H01KR-11000006",
+      "hospitalname": "서울대학교병원",
+      "deptname": "응급의학과",
+      "doctorname": "권운용",
+      "specialties": "응급 중환자의학",
+      "doctor_url": "https://www.snuh.org//blog/65499/career.do",
+      "profileimgurl": "https://www.snuh.org/asset/img/blog/img_newDefaultDocPhoto.jpg",
+      "data_version_id": 1,
+      "info": "[{\"type\":\"학력\",\"targetDate\":\"2006 ~ 2008\",\"text\":\"서울대학교 의과대학원 의학박사\"},{\"type\":\"학력\",\"targetDate\":\"2003 ~ 2005\",\"text\":\"강원대학교 의과대학원 의학석사\"},{\"type\":\"학력\",\"targetDate\":\"1990 ~ 1997\",\"text\":\"서울대학교 의과대학 의학과\"},{\"type\":\"경력 및 연수\",\"targetDate\":\"2020. 7. ~ 현재\",\"text\":\"서울대학교병원 응급의학과장\"},{\"type\":\"경력 및 연수\",\"targetDate\":\"2014 ~ 현재\",\"text\":\"서울대학교병원 부교수\"},{\"type\":\"경력 및 연수\",\"targetDate\":\"2007 ~ 2014\",\"text\":\"서울대학교병원 조교수\"}]"
+    }
+  ],
+  "isResult": {
+    "result": "match",
+    "userInfo": {
+      "rid_long": "96ABDCDAB34641924CB00BD451A0D419213788E1B21655D65BF3CD2801F56863FC23320B8273A285042AA8BCA75DB02BB3FD6CA28D1DBF855E539DA245FE56D5",
+      "hid": "H01KR-11000006",
+      "hospitalname": "서울대학교병원",
+      "deptname": "응급의학과",
+      "doctorname": "권운용",
+      "specialties": "응급 중환자의학",
+      "doctor_url": "https://www.snuh.org//blog/65499/career.do",
+      "profileimgurl": "https://www.snuh.org/asset/img/blog/img_newDefaultDocPhoto.jpg",
+      "data_version_id": 1,
+      "info": "[{\"type\":\"학력\",\"targetDate\":\"2006 ~ 2008\",\"text\":\"서울대학교 의과대학원 의학박사\"},{\"type\":\"학력\",\"targetDate\":\"2003 ~ 2005\",\"text\":\"강원대학교 의과대학원 의학석사\"},{\"type\":\"학력\",\"targetDate\":\"1990 ~ 1997\",\"text\":\"서울대학교 의과대학 의학과\"},{\"type\":\"경력 및 연수\",\"targetDate\":\"2020. 7. ~ 현재\",\"text\":\"서울대학교병원 응급의학과장\"},{\"type\":\"경력 및 연수\",\"targetDate\":\"2014 ~ 현재\",\"text\":\"서울대학교병원 부교수\"},{\"type\":\"경력 및 연수\",\"targetDate\":\"2007 ~ 2014\",\"text\":\"서울대학교병원 조교수\"}]"
+    }
+  }
+}

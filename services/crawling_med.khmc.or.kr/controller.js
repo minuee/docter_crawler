@@ -131,8 +131,8 @@ module.exports = {
 
     doctorName = doctorName.replace(' 교수', '');
 
-    const specialty = $('div.doc_fieldline ul.f_l.ml15').find('li').first().text().trim().replace(/\t/g, '').replace(/\n/g, '');
-
+    const specialty = $('div.doc_fieldline').find('div.clearfix').last().find('ul.f_l.ml15 li').first().text().trim().replace(/\t/g, '').replace(/\n/g, '');
+    console.log(`doctorName : ${doctorName}, specialty : ${specialty}`)
     const extractSectionData = (title) => {
       const section = $(`h4:contains(${title})`).closest('.info_box');
       const data = [];
@@ -171,11 +171,11 @@ module.exports = {
       return data;
     };
 
-    const education = extractSectionData('학력');
-    const career = extractSectionData('경력 및 연수');
-    const activities = extractSectionData('학회활동');
-    const publications = extractSectionData('저서');
-    const awards = extractSectionData('수상이력');
+    //const education = extractSectionData('학력');
+    //const career = extractSectionData('경력 및 연수');
+    //const activities = extractSectionData('학회활동');
+    //const publications = extractSectionData('저서');
+    //const awards = extractSectionData('수상이력');
     
     const styleContent = $('style').html();
     const regex = /background:\s*url\('([^']+)'\)\s*no-repeat;/g;
@@ -204,7 +204,7 @@ module.exports = {
     // console.log("Journal Name:", journalName);
     // console.log("Year:", year);
 
-    $('#tab-treatise div.mt20.table_type01.bk.wide:not(.academic) tbody tr').each((index, element) => {
+    /* $('#tab-treatise div.mt20.table_type01.bk.wide:not(.academic) tbody tr').each((index, element) => {
       let publicationDate = null
       publicationDate = $(element).find('th').text().trim();
       const yearPattern = /\b\d{4}\b/;
@@ -231,7 +231,7 @@ module.exports = {
           publicationLocation: null
         })
       }
-    });
+    }); */
     
     result = {
       basic: basic,

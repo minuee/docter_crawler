@@ -1,0 +1,54 @@
+{
+  "summaryData": {
+    "rid_long": "89E0FD979ABC5A984A90001597D4E13F882A897973923A06F14E377DEB4B53B4EB09370262CB6A12395135D0C43085AAE5143319F074D1B06783C045A6A9B0E1937BC3821FCA40210FB87D8B4880371161B3646500F4F04FBB0C46818210139D",
+    "hid": "H01KR-11000005",
+    "hospitalname": "삼성서울병원",
+    "deptname": "유방외과분과",
+    "doctorname": "김기조",
+    "specialties": "",
+    "doctor_url": "http://www.samsunghospital.com/home/reservation/common/doctorProfile.do?DR_NO=3558",
+    "profileimgurl": "http://www.samsunghospital.com/_newhome/ui/_component/static/img/default/default-profile02.png",
+    "data_version_id": 4,
+    "info": "[]"
+  },
+  "summaryData2": [
+    {
+      "rid_long": "5629CBA02A2DA916F1BAFB84256F10186AC9BB03A7658ECFB3EC2DB48A28487CDF412760A32B62394F058972E3A2819AE14A5249F0C04C380ECFB2AB207CB25A",
+      "hid": "H01KR-41000005",
+      "hospitalname": "가톨릭대학교 성빈센트병원",
+      "deptname": "류마티스내과",
+      "doctorname": "김기조",
+      "specialties": "강직성척추염, 류마티스관절염, 통풍, 루푸스, 경피증",
+      "doctor_url": "https://www.cmcvincent.or.kr/page/doctor/33/D0000049",
+      "profileimgurl": "https://www.cmcvincent.or.kr//api/attach/view/doctor/D0000049/profile/1",
+      "data_version_id": 2
+    },
+    {
+      "rid_long": "89E0FD979ABC5A984A90001597D4E13F882A897973923A06F14E377DEB4B53B4EB09370262CB6A12395135D0C43085AAE5143319F074D1B06783C045A6A9B0E1937BC3821FCA40210FB87D8B4880371176C3D22A507D3B0ED88288810874C19C",
+      "hid": "H01KR-11000005",
+      "hospitalname": "삼성서울병원",
+      "deptname": "유방외과분과",
+      "doctorname": "김기조",
+      "specialties": "",
+      "doctor_url": "http://www.samsunghospital.com/home/reservation/common/doctorProfile.do?DR_NO=3467",
+      "profileimgurl": "http://www.samsunghospital.com//_newhome/ui/home/static/img/doctor-paper/default_bg_section02.jpg",
+      "data_version_id": 1,
+      "info": "[]"
+    }
+  ],
+  "isResult": {
+    "result": "match",
+    "userInfo": {
+      "rid_long": "89E0FD979ABC5A984A90001597D4E13F882A897973923A06F14E377DEB4B53B4EB09370262CB6A12395135D0C43085AAE5143319F074D1B06783C045A6A9B0E1937BC3821FCA40210FB87D8B4880371176C3D22A507D3B0ED88288810874C19C",
+      "hid": "H01KR-11000005",
+      "hospitalname": "삼성서울병원",
+      "deptname": "유방외과분과",
+      "doctorname": "김기조",
+      "specialties": "",
+      "doctor_url": "http://www.samsunghospital.com/home/reservation/common/doctorProfile.do?DR_NO=3467",
+      "profileimgurl": "http://www.samsunghospital.com//_newhome/ui/home/static/img/doctor-paper/default_bg_section02.jpg",
+      "data_version_id": 1,
+      "info": "[]"
+    }
+  }
+}

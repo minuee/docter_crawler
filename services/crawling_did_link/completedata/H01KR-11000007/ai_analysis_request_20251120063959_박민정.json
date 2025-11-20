@@ -1,0 +1,52 @@
+{
+  "summaryData": {
+    "rid_long": "5764CD88447445B94E7656B1DAA37305401AA169F103BBD4E5E1DEE02C9F53AA96B7C94DFD500E99FE3F793374EC418D138594572CA3B50B5712D9F91A90D9ABC5FAEAA94438E062E61445D752271203",
+    "hid": "H01KR-11000007",
+    "hospitalname": "고려대학교의과대학부속구로병원",
+    "deptname": "심혈관센터(순환기)",
+    "doctorname": "박민정",
+    "specialties": "심장질환, 심장판막질환, 심부전, 고지혈증, 심장초음파, 심근병증",
+    "doctor_url": "https://guro.kumc.or.kr/kr/doctor-department/doctor/view.do?drNo=8733",
+    "profileimgurl": "https://guro.kumc.or.kr/displayFile.do?name=20250424.1626.05.470.png",
+    "data_version_id": 4,
+    "info": "[]"
+  },
+  "summaryData2": [
+    {
+      "rid_long": "5764CD88447445B94E7656B1DAA3730538A34E0CA7FA1EE0D89451A4AD25DB2A96B7C94DFD500E99FE3F793374EC418D138594572CA3B50B5712D9F91A90D9ABE108282C8A8FD76D0354F95A83DD4B1E",
+      "hid": "H01KR-11000004",
+      "hospitalname": "학교법인 고려중앙학원 고려대학교의과대학부속병원(안암병원)",
+      "deptname": "소아청소년과",
+      "doctorname": "박민정",
+      "specialties": "",
+      "doctor_url": "https://anam.kumc.or.kr/kr/doctor-department/doctor/view.do?drNo=8669",
+      "profileimgurl": "https://anam.kumc.or.kr/displayFile.do?drNo=8669",
+      "data_version_id": 1
+    },
+    {
+      "rid_long": "B8454F46A823B7EC248E4FCB718DFA24882A897973923A06F14E377DEB4B53B4EB09370262CB6A12395135D0C43085AAE5143319F074D1B06783C045A6A9B0E1937BC3821FCA40210FB87D8B488037111B936EAEC2769267F7976641BBA3FB2D",
+      "hid": "H01KR-11000005",
+      "hospitalname": "삼성서울병원",
+      "deptname": "순환기내과",
+      "doctorname": "박민정",
+      "specialties": "심부전, 심장이식, 심근질환, 심근염, 좌심실보조장치(LVAD), 아밀로이드증, 고혈압, 고지혈증(고콜레스테롤혈증)",
+      "doctor_url": "http://www.samsunghospital.com/home/reservation/common/doctorProfile.do?DR_NO=2664",
+      "profileimgurl": "http://www.samsunghospital.com//upload/deptdoctors/1680656696388_0878513.jpg",
+      "data_version_id": 1
+      }
+  ],
+  "isResult": {
+    "result": "match",
+    "userInfo": {
+      "rid_long": "B8454F46A823B7EC248E4FCB718DFA24882A897973923A06F14E377DEB4B53B4EB09370262CB6A12395135D0C43085AAE5143319F074D1B06783C045A6A9B0E1937BC3821FCA40210FB87D8B488037111B936EAEC2769267F7976641BBA3FB2D",
+      "hid": "H01KR-11000005",
+      "hospitalname": "삼성서울병원",
+      "deptname": "순환기내과",
+      "doctorname": "박민정",
+      "specialties": "심부전, 심장이식, 심근질환, 심근염, 좌심실보조장치(LVAD), 아밀로이드증, 고혈압, 고지혈증(고콜레스테롤혈증)",
+      "doctor_url": "http://www.samsunghospital.com/home/reservation/common/doctorProfile.do?DR_NO=2664",
+      "profileimgurl": "http://www.samsunghospital.com//upload/deptdoctors/1680656696388_0878513.jpg",
+      "data_version_id": 1
+    }
+  }
+}

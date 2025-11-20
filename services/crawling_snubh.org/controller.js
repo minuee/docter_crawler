@@ -295,7 +295,7 @@ module.exports = {
         const dtText = $(dtElement).find('p.title').text() ? $(dtElement).find('p.title').text().trim() : '';  
         console.log(`논문: ${dtYearText} ${dtText}`);
         if ( !functions.isEmpty(dtText) ) {
-          const tmpText = dtText.trim().replaceAll(/\t/g, '').replaceAll(/\n/g, '').replaceAll(/\n|\r|\s*/g, '');
+          const tmpText = dtText.trim().replaceAll(/\t/g, '').replaceAll(/\n/g, '').replaceAll(/\n|\r/g, '');
           const etc = {
             type: '논문',
             title: tmpText,

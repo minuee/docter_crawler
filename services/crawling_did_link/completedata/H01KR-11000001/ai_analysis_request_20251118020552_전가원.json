@@ -1,0 +1,41 @@
+{
+  "summaryData": {
+    "rid_long": "0DE535F453A280B152C9BF4390BEE1E20E7D8D9B3C6E00B3C221172596C119DD7CBB0CEACB5C1C66C1BD4133D10A0D59F844059F1A2D05975A65106D31BD2611D334785DF0E5171D9CD364D42ABA8E0EFCB755400254A69595A86B4FD43478F5",
+    "hid": "H01KR-11000001",
+    "hospitalname": "강북삼성병원",
+    "deptname": "소아청소년과",
+    "doctorname": "전가원",
+    "specialties": "",
+    "doctor_url": "https://main.kbsmc.co.kr/main/doctor/view.do?md_idx=508&mp_idx=11&mc_idx=",
+    "profileimgurl": "hhttps://main.kbsmc.co.kr/data/doctor/%EC%86%8C%EC%95%84_%EC%A0%84%EA%B0%80%EC%9B%90.png",
+    "data_version_id" : 4,
+    "info": "[]"
+  },
+  "summaryData2": [
+    {
+      "rid_long": "0DE535F453A280B152C9BF4390BEE1E2ED70AE13ECAC432A8559994B764E041B271F7A58271D5FF4E01C818C20EFB53C759FEF63ECA1E1C80CE761845FF8284C439FE8A3ECA28D5825681CA2230A792D",
+      "hid": "H01KR-41000004",
+      "hospitalname": "인하대학교의과대학부속병원",
+      "deptname": "소아청소년과",
+      "doctorname": "전가원",
+      "specialties": "신생아, 미숙아",
+      "doctor_url": "https://www.inha.com/page/department/medicine/doctor/114144",
+      "profileimgurl": "https://www.inha.com//assets/attach/view/doctor/114144/profile",
+      "data_version_id" : 1
+      }
+  ],
+  "isResult": {
+    "result": "match",
+    "userInfo": {
+      "rid_long": "0DE535F453A280B152C9BF4390BEE1E2ED70AE13ECAC432A8559994B764E041B271F7A58271D5FF4E01C818C20EFB53C759FEF63ECA1E1C80CE761845FF8284C439FE8A3ECA28D5825681CA2230A792D",
+      "hid": "H01KR-41000004",
+      "hospitalname": "인하대학교의과대학부속병원",
+      "deptname": "소아청소년과",
+      "doctorname": "전가원",
+      "specialties": "신생아, 미숙아",
+      "doctor_url": "https://www.inha.com/page/department/medicine/doctor/114144",
+      "profileimgurl": "https://www.inha.com//assets/attach/view/doctor/114144/profile",
+      "data_version_id" : 1
+      }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "summaryData": {
+    "rid_long": "E91D98FD51891DD865AEB3D607E08B29882A897973923A06F14E377DEB4B53B4EB09370262CB6A12395135D0C43085AAE5143319F074D1B06783C045A6A9B0E1937BC3821FCA40210FB87D8B48803711E6A4722DBA3B1CF6ACF2F470BB20345D",
+    "hid": "H01KR-11000005",
+    "hospitalname": "삼성서울병원",
+    "deptname": "외과",
+    "doctorname": "최정원",
+    "specialties": "",
+    "doctor_url": "http://www.samsunghospital.com/home/reservation/common/doctorProfile.do?DR_NO=3678",
+    "profileimgurl": "http://www.samsunghospital.com/_newhome/ui/_component/static/img/default/default-profile02.png",
+    "data_version_id": 4,
+    "info": "[]"
+  },
+  "summaryData2": [
+    {
+      "rid_long": "E91D98FD51891DD865AEB3D607E08B29882A897973923A06F14E377DEB4B53B4EB09370262CB6A12395135D0C43085AAE5143319F074D1B06783C045A6A9B0E1937BC3821FCA40210FB87D8B48803711BB667ADE676F55D5D366215FFFA147A3",
+      "hid": "H01KR-11000005",
+      "hospitalname": "삼성서울병원",
+      "deptname": "신경외과",
+      "doctorname": "최정원",
+      "specialties": "악성뇌종양, 뇌교종, 전이성뇌종양, 뇌수막종, 뇌종양, 감마나이프",
+      "doctor_url": "http://www.samsunghospital.com/home/reservation/common/doctorProfile.do?DR_NO=1819",
+      "profileimgurl": "http://www.samsunghospital.com/upload/deptdoctors/1531371978358_0919330.jpg",
+      "data_version_id": 1,
+      "info": "[{\"type\":\"학력\",\"date\":\"2018.02\",\"text\":\"서울대학교 대학원 의학과 박사 (뇌신경과학 전공)\"},{\"type\":\"학력\",\"date\":\"2013.02\",\"text\":\"서울대학교 대학원 의학과 석사 (신경외과학 전공)\"},{\"type\":\"학력\",\"date\":\"2004.02\",\"text\":\"서울대학교 의과대학 졸업\"},{\"type\":\"경력\",\"date\":\"2022.03 ~현재\",\"text\":\"성균관대학교 의과대학 신경외과학교실 부교수,삼성서울병원 신경외과 부교수\"},{\"type\":\"경력\",\"date\":\"2018.03 ~ 2022.02\",\"text\":\"성균관대학교 의과대학 신경외과학교실 조교수,삼성서울병원 신경외과 조교수\"},{\"type\":\"경력\",\"date\":\"2015.03 ~ 2018.02\",\"text\":\"삼성서울병원 신경외과 진료조교수\"},{\"type\":\"경력\",\"date\":\"2012.05 ~ 2015.02\",\"text\":\"서울대학교병원 신경외과 임상강사\"},{\"type\":\"경력\",\"date\":\"2009.04 ~ 2012.04\",\"text\":\"제주도 서귀포의료원 신경외과 공중보건의사\"},{\"type\":\"경력\",\"date\":\"2005.03 ~ 2009.02\",\"text\":\"서울대학교병원 신경외과 전공의 과정 수료\"},{\"type\":\"경력\",\"date\":\"2004.03 ~ 2005.02\",\"text\":\"서울대학교병원 인턴 과정 수료\"}]"
+    },
+    {
+      "rid_long": "E91D98FD51891DD865AEB3D607E08B29882A897973923A06F14E377DEB4B53B4EB09370262CB6A12395135D0C43085AAE5143319F074D1B06783C045A6A9B0E1937BC3821FCA40210FB87D8B4880371152E1F86DA5087996C4D227345C15B149",
+      "hid": "H01KR-11000005",
+      "hospitalname": "삼성서울병원",
+      "deptname": "응급의학과",
+      "doctorname": "최정원",
+      "specialties": "",
+      "doctor_url": "http://www.samsunghospital.com/home/reservation/common/doctorProfile.do?DR_NO=3502",
+      "profileimgurl": "http://www.samsunghospital.com//_newhome/ui/home/static/img/doctor-paper/default_bg_section02.jpg",
+      "data_version_id": 1,
+      "info": "[]"
+    }
+  ]
+}

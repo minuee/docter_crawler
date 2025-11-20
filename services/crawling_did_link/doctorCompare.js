@@ -48,14 +48,15 @@ function compareHistory(infoA, infoB, threshold = 0.6) { // 기준값 0.7 -> 0.6
   const entriesB = rawEntriesB.map(s => normalize(s)).filter(s => s);
 
   if (entriesA.length === 0 || entriesB.length === 0) {
-    return { matchCount: 0, similarity: 0, entriesA, entriesB };
+    return { matchCount: 0, similarity: 0, matchedEntries: [], entriesA, entriesB };
   }
 
   let matchedBIndices = new Set();
   let matchCount = 0;
+  let matchedEntries = [];
 
   for (const entryA of entriesA) {
-    let bestMatch = { score: 0, index: -1 };
+    let bestMatch = { score: 0, index: -1, matchedTextB: '' };
 
     for (let i = 0; i < entriesB.length; i++) {
       if (matchedBIndices.has(i)) continue;
@@ -64,6 +65,7 @@ function compareHistory(infoA, infoB, threshold = 0.6) { // 기준값 0.7 -> 0.6
       if (currentScore > bestMatch.score) {
         bestMatch.score = currentScore;
         bestMatch.index = i;
+        bestMatch.matchedTextB = rawEntriesB[i]; // 원본 텍스트 저장
       }
     }
 
@@ -71,12 +73,17 @@ function compareHistory(infoA, infoB, threshold = 0.6) { // 기준값 0.7 -> 0.6
       matchCount++;
       if (bestMatch.index !== -1) {
         matchedBIndices.add(bestMatch.index);
+        matchedEntries.push({
+          entryA: entryA,
+          entryB: bestMatch.matchedTextB,
+          score: bestMatch.score
+        });
       }
     }
   }
 
   const similarity = matchCount / Math.max(entriesA.length, entriesB.length);
-  return { matchCount, similarity, entriesA, entriesB };
+  return { matchCount, similarity, matchedEntries, entriesA, entriesB };
 }
 
 
@@ -182,26 +189,96 @@ async function findMatchingDoctor(summaryData, summaryData2Array) {
     return { result: "not match", matchDoctor: null, score: null };
   }
 
-  const detailed = summaryData2Array.map(cand => ({
-      doctor: cand,
-      ...scoreBreakdown(summaryData, cand)
-  }));
-
-  const matched = detailed.filter(d => d.score >= 4);
-
-  if (matched.length === 0) {
-    console.log("\n결과: not match (4점 이상 후보 없음)");
-    if (detailed.length > 0) {
-      const bestNonMatch = detailed.sort((a,b) => b.score - a.score)[0];
-      console.log(`(참고: 최고 점수 후보: ${bestNonMatch.doctor?.hospitalname}:${bestNonMatch.doctor?.doctorname}, 점수: ${bestNonMatch.score.toFixed(2)})`);
+  // 0단계: 동일 병원(hospitalname, hid) 최우선 매칭
+  for (const candidate of summaryData2Array) {
+    if (normalize(summaryData.hospitalname) === normalize(candidate.hospitalname) &&
+        normalize(summaryData.hid) === normalize(candidate.hid)) {
+      console.log(`\n결과: match (0단계: 동일 병원/HID 매칭) -> ${candidate?.hospitalname}:${candidate?.doctorname}`);
+      return { result: "match", matchDoctor: candidate, score: 5, debug: { step: 0, reason: "Exact hospital and HID match" } };
     }
+  }
+
+  // 1단계: 진료과(deptname) 필터링
+  let candidatesStep1 = summaryData2Array.filter(candidate =>
+    normalize(summaryData.deptname) === normalize(candidate.deptname)
+  );
+
+  if (candidatesStep1.length === 0) {
+    console.log("\n결과: not match (1단계: 진료과 매칭 실패)");
     return { result: "not match", matchDoctor: null, score: null };
   }
 
-  const best = matched.sort((a,b) => b.score - a.score)[0];
+  // 2단계: 진료분야(specialties) 유사도 필터링
+  if (candidatesStep1.length > 1) { // 후보가 1명 이하면 필터링 불필요
+    let maxSpecialtiesSimilarity = -1;
+    const candidatesWithSimilarity = candidatesStep1.map(candidate => {
+      const { similarity } = setSimilarity(summaryData.specialties, candidate.specialties);
+      maxSpecialtiesSimilarity = Math.max(maxSpecialtiesSimilarity, similarity);
+      return { candidate, similarity };
+    });
 
-  console.log(`\n결과: match -> best candidate: ${best.doctor?.hospitalname}:${best.doctor?.doctorname}, score: ${best.score.toFixed(2)}`);
-  return { result: "match", matchDoctor: best.doctor, score: best.score, debug: best };
+    candidatesStep1 = candidatesWithSimilarity
+      .filter(item => item.similarity === maxSpecialtiesSimilarity)
+      .map(item => item.candidate);
+  }
+
+  if (candidatesStep1.length === 0) {
+    console.log("\n결과: not match (2단계: 진료분야 유사도 필터링 실패)");
+    return { result: "not match", matchDoctor: null, score: null };
+  }
+
+  // 3단계: 상세 정보(info) 내용 유사도 및 기간 일치 필터링
+  let candidatesStep2 = candidatesStep1; // 2단계에서 넘어온 후보들
+
+  let candidatesWithInfoMatch = [];
+  for (const candidate of candidatesStep2) {
+    const historyComparison = compareHistory(summaryData.info, candidate.info);
+    if (historyComparison.matchCount > 0) { // 최소 1개 이상 일치
+      candidatesWithInfoMatch.push({ candidate, historyComparison });
+    }
+  }
+
+  if (candidatesWithInfoMatch.length === 0) {
+    console.log("\n결과: not match (3단계: 상세 정보 매칭 실패)");
+    return { result: "not match", matchDoctor: null, score: null };
+  }
+
+  let finalCandidatesStep3 = [];
+  if (candidatesWithInfoMatch.length === 1) {
+    finalCandidatesStep3 = [candidatesWithInfoMatch[0].candidate];
+  } else {
+    // 후보가 2명 이상이면, 가장 많은 학력/경력 항목이 겹치는 후보 선택
+    candidatesWithInfoMatch.sort((a, b) => b.historyComparison.matchCount - a.historyComparison.matchCount);
+    const maxMatchCount = candidatesWithInfoMatch[0].historyComparison.matchCount;
+    finalCandidatesStep3 = candidatesWithInfoMatch
+      .filter(item => item.historyComparison.matchCount === maxMatchCount)
+      .map(item => item.candidate);
+
+    // 만약 여전히 여러 명이라면, 첫 번째 후보를 선택 (기간 일치 판단은 현재 단순화)
+    if (finalCandidatesStep3.length > 1) {
+      console.log("3단계: 여러 후보가 남았지만, 기간 일치 판단이 복잡하여 첫 번째 후보를 선택합니다.");
+      finalCandidatesStep3 = [finalCandidatesStep3[0]];
+    }
+  }
+
+  if (finalCandidatesStep3.length === 0) {
+    console.log("\n결과: not match (3단계: 최종 후보 선택 실패)");
+    return { result: "not match", matchDoctor: null, score: null };
+  }
+
+  // 4단계: 최소 정보량 원칙 (최종 판별)
+  const finalCandidate = finalCandidatesStep3[0]; // 3단계에서 선택된 잠정 후보
+
+  const summaryDataInfoLength = summaryData.info ? summaryData.info.length : 0;
+  const finalCandidateInfoLength = finalCandidate.info ? finalCandidate.info.length : 0;
+
+  if (summaryDataInfoLength < 10 && finalCandidateInfoLength < 10) {
+    console.log("\n결과: not match (4단계: 정보량 부족)");
+    return { result: "not match", matchDoctor: null, score: null };
+  }
+
+  console.log(`\n결과: match (4단계 통과, 최종 확정) -> ${finalCandidate?.hospitalname}:${finalCandidate?.doctorname}`);
+  return { result: "match", matchDoctor: finalCandidate, score: 4, debug: { step: 4, reason: "Final confirmation" } };
 }
 
 

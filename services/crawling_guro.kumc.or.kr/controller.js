@@ -8,7 +8,7 @@ const bcrypt = require('bcryptjs');
 const crypto = require('crypto');
 const axios = require('axios');
 const cheerio = require('cheerio');
-const puppeteer = require('puppeteer');
+const { chromium } = require('playwright');
 
 const _ = require('lodash');
 const functions = require(`${global.appRoot}/server/util/function`);
@@ -102,7 +102,7 @@ module.exports = {
     //   Error = error
     //   console.log(`error on ${url01} API return: ${error}`);
     // }
-    browser = await puppeteer.launch();
+    browser = await chromium.launch();
     // Open a new page
     const page = await browser.newPage();
     // Navigate to the website
@@ -205,7 +205,7 @@ module.exports = {
 
   openBrowser: async (option) => {
     if( !browser ) {
-      browser = await puppeteer.launch(option);
+      browser = await chromium.launch(option);
     }
   },
 
@@ -218,191 +218,136 @@ module.exports = {
 
 
   crwalingProcess03: async (url) => {
-    let result = null, Error, error = null, DBCode = null
-
+    let result = null;
+    let error = null;
     let basic = {};
     let detail = [];
     const treatise = [];
-
     const page = await browser.newPage();
 
     try {
+        await page.goto(url, { waitUntil: 'networkidle' });
+        await page.waitForSelector('.container');
 
-  // Navigate to the website
-      await page.goto(url);
-
-      await page.waitForSelector('.container');
-
-      // const elements = await page.$$('div.linebutton a[href^="javascript:;"]');
-      const elements = [
-        'div.section.section02.doc_info01 .tab_ui .tab_cont ul li:first-child a',
-        'div.section.section03.doc_info01 .tab_ui .tab_cont ul li:first-child .linebutton > a',
-        'div.section.section03.doc_info01 > .doc_info01_table .linebutton a',
-        'div.section.section04.doc_info01 .tab_ui .tab_cont ul li:first-child .linebutton a',
-      ];
-
-      console.log(`element count: ${elements.length}`)
-      for (let i = 0; i < elements.length; i++) {
-
-        const element = await page.$(elements[i]);
-
-          
-        if (element) {
-          // 요소가 화면에 보이도록 스크롤
-          await page.evaluate((el) => el.scrollIntoView({ behavior: 'smooth', block: 'center' }), element);
-          await new Promise((resolve) => setTimeout(resolve, 1000)) // 스크롤 후 대기 시간 추가;
-
-          try {
-            // 요소가 클릭 가능한지 확인
-            // await page.waitForSelector('div.linebutton a[href^="javascript:;"]', { visible: true });
-            await element.click();
-          } catch (error) {
-            console.error(`${i+1}번째 클릭할 수 없는 요소:`, error);
-          }
-
-          await new Promise((resolve) => setTimeout(resolve, 1000)) // 스크롤 후 대기 시간 추가;
-        }
-      }
-
-      await new Promise((resolve) => setTimeout(resolve, 3000))
-
-      const academy = await page.$('div.section.section02.doc_info01 .tab_ui .tab ul li:nth-of-type(2) a');
-      await page.evaluate((el) => el.scrollIntoView({ behavior: 'smooth', block: 'center' }), academy);
-      await new Promise((resolve) => setTimeout(resolve, 1000)) // 스크롤 후 대기 시간 추가;
-      await page.waitForSelector('div.section.section02.doc_info01 .tab_ui .tab ul li:nth-of-type(2) a', { visible: true });
-      await academy.click();
-
-      // const element = elements[1];
-      const element = await page.$('div.section.section02.doc_info01 .tab_ui .tab_cont ul li:nth-of-type(2) a');
-
-      if (element) {
-        // 요소가 화면에 보이도록 스크롤
-        await page.evaluate((el) => el.scrollIntoView({ behavior: 'smooth', block: 'center' }), element);
-        await new Promise((resolve) => setTimeout(resolve, 1000)) // 스크롤 후 대기 시간 추가;
-
-        try {
-          // 요소가 클릭 가능한지 확인
-          // await page.waitForSelector('div.linebutton a[href^="javascript:;"]', { visible: true });
-          await element.click();
-        } catch (error) {
-          console.error(`클릭할 수 없는 요소:`, error);
+        // 모든 '더보기' 버튼 클릭
+        const moreButtons = await page.locator('div.linebutton a:text("더보기")').all();
+        for (const button of moreButtons) {
+            try {
+                if (await button.isVisible()) {
+                    await button.click({ timeout: 1000 });
+                    await page.waitForTimeout(200); // 클릭 후 짧은 대기
+                }
+            } catch (e) {
+                // 클릭 오류는 무시하고 계속 진행
+            }
         }
 
-        await new Promise((resolve) => setTimeout(resolve, 1000)) // 스크롤 후 대기 시간 추가;
-      }
+        // '학회활동' 탭 클릭
+        const academyTab = await page.locator('div.section.section02.doc_info01 .tab_ui .tab ul li:nth-of-type(2) a');
+        if (await academyTab.isVisible()) {
+            await academyTab.click();
+            await page.waitForTimeout(500);
 
-
-      const htmlContent = await page.content();
-
-      const $ = cheerio.load(htmlContent);
-
-      const body = $('body').html();
-
-      const info = [];
-      const jsonData = [];
-      const deptName = $('div.doc_titline ul li:first').text().trim().replace(/\t/g, '').replace(/\n/g, '');
-      let doctorName = $('div.doc_titline ul li:first').next().text().trim().replace(/\t/g, '').replace(/\n/g, '');
-
-      const specialty = $('div.tabmo_show ul li:first').next().text().trim().replace(/\t/g, '').replace(/\n/g, '');
-
-
-      let type = $('div.section.section02 p').text().trim();
-      $('div.section.section02 > .doc_info01_table tbody tr').each((index, element) => {
-        const targetDate = $(element).find('th').text().trim();
-        const text = $(element).find('td').text().trim();
-        if(text) {
-          console.log(`type ${type}, text : ${text}`)
-          jsonData.push({ type, targetDate, text, url:''});
+            // 학회활동 섹션의 '더보기' 버튼이 있다면 클릭
+            const academyMoreButton = await page.locator('div.section.section02.doc_info01 .tab_ui .tab_cont ul li:nth-of-type(2) .linebutton a');
+            if (await academyMoreButton.isVisible()) {
+                try {
+                    await academyMoreButton.click({ timeout: 1000 });
+                    await page.waitForTimeout(200);
+                } catch (e) {}
+            }
         }
-      })
-
-      type = '경력';
-      $('div.section.section02 .tab_ui ul li:nth-of-type(1) tbody tr').each((index, element) => {
-        const targetDate = $(element).find('th').text().trim();
-        const text = $(element).find('td').text().trim();
-        if(text) {
-          console.log(`type ${type}, text : ${text}`)
-          jsonData.push({ type, targetDate, text, url:''});
+        
+        // '저서' 탭 클릭
+        const bookTab = await page.locator('div.section.section03 .tab_ui .tab ul li:nth-of-type(2) a');
+        if (await bookTab.isVisible()) {
+            await bookTab.click();
+            await page.waitForTimeout(500);
         }
-      })
 
-      type = '학회활동';
-      $('div.section.section02 .tab_ui .tab_cont ul li:nth-of-type(2) tbody tr').each((index, element) => {
-        const targetDate = $(element).find('th').text().trim();
-        const text = $(element).find('td').text().trim();
-        if(text) {
-          console.log(`type ${type}, text : ${text}`)
-          jsonData.push({ type : '학회', targetDate, text, url:''});
-        }
-      })    
+        const htmlContent = await page.content();
+        const $ = cheerio.load(htmlContent);
 
-      /* type = '논문';
-      $('div.section.section03 > .tab_ui ul li:nth-of-type(1) tbody tr').each((index, element) => {
-        const targetDate = $(element).find('th').text().trim();
-        const journal = $(element).find('td .research span:first').text().trim();
-        const text = $(element).find('td .research span:first').next().text().trim();
-        if(text) {
-          console.log(`type ${type}, text : ${text}`)
-          jsonData.push({ type, targetDate, text, journal, url:''});
-        }
-      }) */
+        const deptName = $('div.doc_titline ul li:first').text().trim().replace(/\s+/g, ' ');
+        const doctorName = $('div.doc_titline ul li:nth-child(2)').text().trim().replace(/\s+/g, ' ');
+        const specialty = $('div.tabmo_show ul li:nth-child(2)').text().trim().replace(/\s+/g, ' ');
+        const ImageUrl = $('.doctor_img img').attr('src');
+        
+        basic = {
+            rid: null,
+            hid: null,
+            deptName: deptName,
+            doctorName: doctorName,
+            specialty: specialty,
+            profileImgUrl: ImageUrl ? `https://guro.kumc.or.kr${ImageUrl}` : ''
+        };
 
-      $('div.section.section03 > .tab_ui ul li:nth-of-type(1) tbody tr').each((index, element) => {
-        const text = $(element).find('td .research span:first').next().text().trim();
-        if(text) {
-          console.log(`type 논문, text : ${text}`)
-          treatise.push({
-            title: text,
-          })
-        }
-      })
+        const jsonData = [];
 
-      type = '수상내역';
-      $('div.section.section03 > .doc_info01_table tbody tr').each((index, element) => {
-        const targetDate = $(element).find('th').text().trim();
-        const text = $(element).find('td span').text().trim();
-        if(text) {
-          console.log(`type ${type}, text : ${text}`)
-          jsonData.push({ type : "수상", targetDate, text, url:''});
-        }
-      })
+        // 학력
+        $('div.section.section02 > .doc_info01_table tbody tr').each((index, element) => {
+            const targetDate = $(element).find('th').text().trim();
+            const text = $(element).find('td').text().trim();
+            if(text) jsonData.push({ type: '학력', targetDate, text, url:''});
+        });
 
-      type = '언론보도';
-      $('div.section.section04 .doc_info01_table tbody tr').each((index, element) => {
-        const targetDate = $(element).find('th').text().trim();
-        const text = $(element).find('td .research a').text().trim();
-        const url = $(element).find('td .research a').attr('href');
-        if(text) {
-          console.log(`type ${type}, text : ${text}`)
-          jsonData.push({ type : "언론", targetDate, text, url});
-        }
-      })    
+        // 경력
+        $('div.section.section02 .tab_ui ul li:nth-of-type(1) tbody tr').each((index, element) => {
+            const targetDate = $(element).find('th').text().trim();
+            const text = $(element).find('td').text().trim();
+            if(text) jsonData.push({ type: '경력', targetDate, text, url:''});
+        });
 
-      const ImageUrl = $('.doctor_img img').attr('src');
+        // 학회활동
+        $('div.section.section02 .tab_ui .tab_cont ul li:nth-of-type(2) tbody tr').each((index, element) => {
+            const targetDate = $(element).find('th').text().trim();
+            const text = $(element).find('td').text().trim();
+            if(text) jsonData.push({ type : '학회', targetDate, text, url:''});
+        });
 
-      basic = {
-        rid: null,
-        hid: null,
-        deptName: deptName,
-        doctorName: doctorName,
-        specialty: specialty,
-        profileImgUrl: `https://guro.kumc.or.kr${ImageUrl}`
-      }
-    }
-    catch(error) {
-      console.log(`The crawling attempt from URL(${url}) has failed.`);
-    }
-    finally {
-      page.close();
+        // 논문
+        $('div.section.section03 > .tab_ui ul li:nth-of-type(1) tbody tr').each((index, element) => {
+            const text = $(element).find('td .research span').eq(1).text().trim();
+            if(text) treatise.push({ title: text });
+        });
+        
+        // 저서
+        $('div.section.section03 > .tab_ui ul li:nth-of-type(2) tbody tr').each((index, element) => {
+            const text = $(element).find('td').text().trim();
+            if(text) jsonData.push({ type: '저서', targetDate: '', text, url:''});
+        });
+
+        // 수상
+        $('div.section.section03 > .doc_info01_table tbody tr').each((index, element) => {
+            const targetDate = $(element).find('th').text().trim();
+            const text = $(element).find('td span').text().trim();
+            if(text) jsonData.push({ type : "수상", targetDate, text, url:''});
+        });
+
+        // 언론보도
+        $('div.section.section04 .doc_info01_table tbody tr').each((index, element) => {
+            const targetDate = $(element).find('th').text().trim();
+            const text = $(element).find('td .research a').text().trim();
+            const url = $(element).find('td .research a').attr('href');
+            if(text) jsonData.push({ type : "언론", targetDate, text, url});
+        });
+        
+        detail = jsonData;
+
+    } catch (e) {
+        error = `The crawling attempt from URL(${url}) has failed: ${e.message}`;
+        console.error(error);
+    } finally {
+        await page.close();
     }
 
     result = {
-      basic: basic,
-      detail: detail,
-      treatise: treatise
-    }
+        basic: basic,
+        detail: detail,
+        treatise: treatise
+    };
     return { error: error, data: result };
-  },
+},
 
 
   Process04: async (fakeTimestamp) => {
