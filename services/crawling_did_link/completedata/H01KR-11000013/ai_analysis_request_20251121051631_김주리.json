@@ -1,0 +1,42 @@
+{
+  "summaryData": {
+    "rid_long": "74F99FFF32F1AC1564963BA65124CD4B3B439EA0631FC7CCC886F0CC79FFB55B9FE3A3198DFAA2EDDF712ED190B263721D532338B0A9D0482BAECD9C2CDE84D8",
+    "hid": "H01KR-11000013",
+    "hospitalname": "학교법인가톨릭학원가톨릭대학교서울성모병원",
+    "deptname": "입원의학과",
+    "doctorname": "김주리",
+    "specialties": null,
+    "doctor_url": "https://www.cmcseoul.or.kr/api/doctor/1477/D0001650",
+    "profileimgurl": "https://www.cmcseoul.or.kr/api/attach/view/doctor/D0001650/profile/1",
+    "data_version_id": 4,
+    "info": "[{\"type\":\"학력\",\"langType\":\"KO\",\"targetDate\":\"2006 2010\",\"text\":\"서울대학교 생명과학 학사\",\"recordType\":\"A\",\"staYear\":\"2006\",\"endYear\":\"2010\",\"approvalYn\":\"Y\"},{\"type\":\"학력\",\"langType\":\"KO\",\"targetDate\":\"2010 2014\",\"text\":\"가톨릭대학교 의학 석사\",\"recordType\":\"A\",\"staYear\":\"2010\",\"endYear\":\"2014\",\"approvalYn\":\"Y\"},{\"type\":\"학력\",\"langType\":\"KO\",\"targetDate\":\"2014 2015\",\"text\":\"가톨릭중앙의료원 인턴\",\"recordType\":\"B\",\"staYear\":\"2014\",\"endYear\":\"2015\",\"approvalYn\":\"Y\"},{\"type\":\"학력\",\"langType\":\"KO\",\"targetDate\":\"2015 2019\",\"text\":\"가톨릭중앙의료원 내과 레지던트\",\"recordType\":\"B\",\"staYear\":\"2015\",\"endYear\":\"2019\",\"approvalYn\":\"Y\"},{\"type\":\"학력\",\"langType\":\"KO\",\"targetDate\":\"2019 2022\",\"text\":\"서울성모병원 종양내과 임상강사\",\"recordType\":\"B\",\"staYear\":\"2019\",\"endYear\":\"2022\",\"approvalYn\":\"Y\"},{\"type\":\"학력\",\"langType\":\"KO\",\"targetDate\":\"2022 2025\",\"text\":\"서울성모병원 종양내과 임상진료조교수\",\"recordType\":\"B\",\"staYear\":\"2022\",\"endYear\":\"2025\",\"approvalYn\":\"Y\"},{\"type\":\"학력\",\"langType\":\"KO\",\"targetDate\":\"2025 현재\",\"text\":\"서울성모병원 입원의학과 임상진료조교수\",\"recordType\":\"B\",\"staYear\":\"2025\",\"endYear\":\"현재\",\"approvalYn\":\"Y\"}]"
+  },
+  "summaryData2": [
+    {
+      "rid_long": "74F99FFF32F1AC1564963BA65124CD4B3B439EA0631FC7CCC886F0CC79FFB55B9FE3A3198DFAA2EDDF712ED190B263728684CD318480276823DD0F7A10033E2F",
+      "hid": "H01KR-11000013",
+      "hospitalname": "학교법인가톨릭학원가톨릭대학교서울성모병원",
+      "deptname": "종양내과",
+      "doctorname": "김주리",
+      "specialties": "두경부암, 악성흑색종, 폐암, 갑상선암, 원발불명암",
+      "doctor_url": "https://www.cmcseoul.or.kr/api/doctor/162/D0001650",
+      "profileimgurl": "https://www.cmcseoul.or.kr/api/attach/view/doctor/D0001650/profile/1",
+      "data_version_id": 1,
+      "info": "[{\"type\":\"학력\",\"langType\":\"KO\",\"targetDate\":\"2006 2010\",\"text\":\"서울대학교 생명과학 학사\",\"recordType\":\"A\",\"staYear\":\"2006\",\"endYear\":\"2010\",\"approvalYn\":\"Y\"},{\"type\":\"경력\",\"langType\":\"KO\",\"targetDate\":\"2014 2015\",\"text\":\"가톨릭중앙의료원 인턴\",\"recordType\":\"B\",\"staYear\":\"2014\",\"endYear\":\"2015\",\"approvalYn\":\"Y\"},{\"type\":\"학회활동\",\"langType\":\"KO\",\"targetDate\":\"2019 \",\"text\":\"대한암학회\",\"recordType\":\"F\",\"staYear\":\"2019\",\"endYear\":\"\",\"approvalYn\":\"Y\"},{\"type\":\"학력\",\"langType\":\"KO\",\"targetDate\":\"2010 2014\",\"text\":\"가톨릭대학교 의학 석사\",\"recordType\":\"A\",\"staYear\":\"2010\",\"endYear\":\"2014\",\"approvalYn\":\"Y\"},{\"type\":\"경력\",\"langType\":\"KO\",\"targetDate\":\"2015 2019\",\"text\":\"가톨릭중앙의료원 내과 레지던트\",\"recordType\":\"B\",\"staYear\":\"2015\",\"endYear\":\"2019\",\"approvalYn\":\"Y\"},{\"type\":\"학회활동\",\"langType\":\"KO\",\"targetDate\":\"2019 \",\"text\":\"대한종양내과학회\",\"recordType\":\"F\",\"staYear\":\"2019\",\"endYear\":\"\",\"approvalYn\":\"Y\"},{\"type\":\"경력\",\"langType\":\"KO\",\"targetDate\":\"2019 2022\",\"text\":\"서울성모병원 종양내과 임상강사\",\"recordType\":\"B\",\"staYear\":\"2019\",\"endYear\":\"2022\",\"approvalYn\":\"Y\"},{\"type\":\"학회활동\",\"langType\":\"KO\",\"targetDate\":\"2019 \",\"text\":\"대한항암요법연구회\",\"recordType\":\"F\",\"staYear\":\"2019\",\"endYear\":\"\",\"approvalYn\":\"Y\"},{\"type\":\"경력\",\"langType\":\"KO\",\"targetDate\":\"2022 \",\"text\":\"서울성모병원 종양내과 임상진료조교수\",\"recordType\":\"B\",\"staYear\":\"2022\",\"endYear\":\"\",\"approvalYn\":\"Y\"},{\"type\":\"논문\",\"langType\":\"KO\",\"targetDate\":\"2022 11\",\"title\":\"Differential RNA expression of immune-related genes and tumor cell proximity from intratumoral M1 macrophages in acral lentiginous melanomas treated with PD-1 blockade\",\"journalName\":\"BIOCHIMICA ET BIOPHYSICA ACTA-MOLECULAR BASIS OF DISEASE\",\"authorRule\":\"공동저자\",\"postedYear\":\"2022\",\"postedMonth\":\"11\",\"approvalYn\":\"Y\"},... [truncated]"    }
+  ],
+  "isResult": {
+    "result": "match",
+    "userInfo": {
+      "rid_long": "74F99FFF32F1AC1564963BA65124CD4B3B439EA0631FC7CCC886F0CC79FFB55B9FE3A3198DFAA2EDDF712ED190B263728684CD318480276823DD0F7A10033E2F",
+      "hid": "H01KR-11000013",
+      "hospitalname": "학교법인가톨릭학원가톨릭대학교서울성모병원",
+      "deptname": "종양내과",
+      "doctorname": "김주리",
+      "specialties": "두경부암, 악성흑색종, 폐암, 갑상선암, 원발불명암",
+      "doctor_url": "https://www.cmcseoul.or.kr/api/doctor/162/D0001650",
+      "profileimgurl": "https://www.cmcseoul.or.kr/api/attach/view/doctor/D0001650/profile/1",
+      "data_version_id": 1,
+      "info": "[{\"type\":\"학력\",\"langType\":\"KO\",\"targetDate\":\"2006 2010\",\"text\":\"서울대학교 생명과학 학사\",\"recordType\":\"A\",\"staYear\":\"2006\",\"endYear\":\"2010\",\"approvalYn\":\"Y\"},{\"type\":\"경력\",\"langType\":\"KO\",\"targetDate\":\"2014 2015\",\"text\":\"가톨릭중앙의료원 인턴\",\"recordType\":\"B\",\"staYear\":\"2014\",\"endYear\":\"2015\",\"approvalYn\":\"Y\"},{\"type\":\"학회활동\",\"langType\":\"KO\",\"targetDate\":\"2019 \",\"text\":\"대한암학회\",\"recordType\":\"F\",\"staYear\":\"2019\",\"endYear\":\"\",\"approvalYn\":\"Y\"},{\"type\":\"학력\",\"langType\":\"KO\",\"targetDate\":\"2010 2014\",\"text\":\"가톨릭대학교 의학 석사\",\"recordType\":\"A\",\"staYear\":\"2010\",\"endYear\":\"2014\",\"approvalYn\":\"Y\"},{\"type\":\"경력\",\"langType\":\"KO\",\"targetDate\":\"2015 2019\",\"text\":\"가톨릭중앙의료원 내과 레지던트\",\"recordType\":\"B\",\"staYear\":\"2015\",\"endYear\":\"2019\",\"approvalYn\":\"Y\"},{\"type\":\"학회활동\",\"langType\":\"KO\",\"targetDate\":\"2019 \",\"text\":\"대한종양내과학회\",\"recordType\":\"F\",\"staYear\":\"2019\",\"endYear\":\"\",\"approvalYn\":\"Y\"},{\"type\":\"경력\",\"langType\":\"KO\",\"targetDate\":\"2019 2022\",\"text\":\"서울성모병원 종양내과 임상강사\",\"recordType\":\"B\",\"staYear\":\"2019\",\"endYear\":\"2022\",\"approvalYn\":\"Y\"},{\"type\":\"학회활동\",\"langType\":\"KO\",\"targetDate\":\"2019 \",\"text\":\"대한항암요법연구회\",\"recordType\":\"F\",\"staYear\":\"2019\",\"endYear\":\"\",\"approvalYn\":\"Y\"},{\"type\":\"경력\",\"langType\":\"KO\",\"targetDate\":\"2022 \",\"text\":\"서울성모병원 종양내과 임상진료조교수\",\"recordType\":\"B\",\"staYear\":\"2022\",\"endYear\":\"\",\"approvalYn\":\"Y\"},{\"type\":\"논문\",\"langType\":\"KO\",\"targetDate\":\"2022 11\",\"title\":\"Differential RNA expression of immune-related genes and tumor cell proximity from intratumoral M1 macrophages in acral lentiginous melanomas treated with PD-1 blockade\",\"journalName\":\"BIOCHIMICA ET BIOPHYSICA ACTA-MOLECULAR BASIS OF DISEASE\",\"authorRule\":\"공동저자\",\"postedYear\":\"2022\",\"postedMonth\":\"11\",\"approvalYn\":\"Y\"},... [truncated]"
+    }
+  }
+}

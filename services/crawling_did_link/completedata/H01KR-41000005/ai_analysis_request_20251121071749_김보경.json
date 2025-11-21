@@ -1,0 +1,62 @@
+{
+  "summaryData": {
+    "rid_long": "91349A20027E50E769324158232E9D966AC9BB03A7658ECFB3EC2DB48A28487CDF412760A32B62394F058972E3A2819AA594DB2AE5ACE704905D299CF36949EA",
+    "hid": "H01KR-41000005",
+    "hospitalname": "가톨릭대학교 성빈센트병원",
+    "deptname": "가정의학과",
+    "doctorname": "김보경",
+    "specialties": "평생건강관리, 성인병관리, 노인병, 통증",
+    "doctor_url": "https://www.cmcvincent.or.kr/page/doctor/2/D0002337",
+    "profileimgurl": "https://www.cmcvincent.or.kr//api/attach/view/doctor/D0002337/profile/1",
+    "data_version_id": 4
+  },
+  "summaryData2": [
+    {
+      "rid_long": "91349A20027E50E769324158232E9D96186B22D8C9AE4B29F4F085DD93051B4663CF4B655EE4D42813FBFEDE40E44814CC034A041F8F175B82D5D49A946746B46917F87F11473A33FC577CD0A893D5EC",
+      "hid": "H01KR-48000006",
+      "hospitalname": "학교법인 울산공업학원 울산대학교병원",
+      "deptname": "건강의학과",
+      "doctorname": "김보경",
+      "specialties": "건강증진,만성질환관리",
+      "doctor_url": "https://www.uuh.ulsan.kr/kr/index.php?pCode=doctor&idx=438",
+      "profileimgurl": "https://www.uuh.ulsan.kr/_Data/MediTeamData/aa47f4969f74f8fbddf7c62a63865b2b.png",
+      "data_version_id": 2
+    },
+    {
+      "rid_long": "91349A20027E50E769324158232E9D960E7D8D9B3C6E00B3C221172596C119DD7CBB0CEACB5C1C66C1BD4133D10A0D5998E9D97A8BF81323E697B34D7D1BA2625D2171DA6A42FEA6FF4FEC3D00FD1CCDFCB755400254A69595A86B4FD43478F5",
+      "hid": "H01KR-11000001",
+      "hospitalname": "강북삼성병원",
+      "deptname": "안과",
+      "doctorname": "김보경",
+      "specialties": "백내장, 각막, 라섹",
+      "doctor_url": "https://main.kbsmc.co.kr/main/doctor/view.do?md_idx=275&mp_idx=17&mc_idx=",
+      "profileimgurl": "https://main.kbsmc.co.kr/data/doctor/thum/283.jpg",
+      "data_version_id": 1
+    },
+    {
+      "rid_long": "91349A20027E50E769324158232E9D966AC9BB03A7658ECFB3EC2DB48A28487CDF412760A32B62394F058972E3A2819AA594DB2AE5ACE704905D299CF36949EA",
+      "hid": "H01KR-41000005",
+      "hospitalname": "가톨릭대학교 성빈센트병원",
+      "deptname": "호스피스완화의학과",
+      "doctorname": "김보경",
+      "specialties": "호스피스완화의학, 노인병, 통증",
+      "doctor_url": "https://www.cmcvincent.or.kr/page/doctor/286/D0002337",
+      "profileimgurl": "https://www.cmcvincent.or.kr//api/attach/view/doctor/D0002337/profile/1",
+      "data_version_id": 2
+    }
+  ],
+  "isResult": {
+    "result": "match",
+    "userInfo": {
+      "rid_long": "91349A20027E50E769324158232E9D966AC9BB03A7658ECFB3EC2DB48A28487CDF412760A32B62394F058972E3A2819AA594DB2AE5ACE704905D299CF36949EA",
+      "hid": "H01KR-41000005",
+      "hospitalname": "가톨릭대학교 성빈센트병원",
+      "deptname": "호스피스완화의학과",
+      "doctorname": "김보경",
+      "specialties": "호스피스완화의학, 노인병, 통증",
+      "doctor_url": "https://www.cmcvincent.or.kr/page/doctor/286/D0002337",
+      "profileimgurl": "https://www.cmcvincent.or.kr//api/attach/view/doctor/D0002337/profile/1",
+      "data_version_id": 2
+    }
+  }
+}

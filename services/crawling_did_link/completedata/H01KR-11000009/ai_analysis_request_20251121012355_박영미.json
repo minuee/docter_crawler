@@ -1,0 +1,43 @@
+{
+  "summaryData": {
+    "rid_long": "87DCE93D1141E21C9B27709E56B559BC8EEAF1FA8A0C8573AA582DA6B1942D02FA92E2CD8A6ABB3C90A6C6A2E3C2FCD865461340411C31F0C36DDFE12E1CFAB785055BC1EFE787BDAFE2E5FCE51E168BD46F2B62DC5D2D39043A116215191F715419D5C571EC0E7617944AF7F378F0C29DFE471080424FA9668C8ADF41F50F1C2D21519A825921081EFC867AE22612D8AF572935AB6E990537DDCB120875CC27",
+    "hid": "H01KR-11000009",
+    "hospitalname": "연세대학교의과대학 강남세브란스병원",
+    "deptname": "소아청소년과",
+    "doctorname": "박영미",
+    "specialties": "",
+    "doctor_url": "https://gs.severance.healthcare/gs/doctor/doctor-view.do?empNo=eXVoczIwMjBAKUApM%2Bkzi0EWEsxOVaDKDRhJMxIYjVujjzjdlphfFuxtxXI%3D&deptSeq=194",
+    "profileimgurl": null,
+    "data_version_id": 4,
+    "info": "[]"
+  },
+  "summaryData2": [
+    {
+      "rid_long": "87DCE93D1141E21C9B27709E56B559BCA7341FC4791182F44EF9238B330F98193F245B85FF97F88D96E4DE19DF150C210E7E18266DF231AA2F20A043E887E682DB7442F22A4FC5B26B2F5647FF240939ECD285330ED79058C50406745644082D",
+      "hid": "H01KR-11000011",
+      "hospitalname": "중앙대학교병원",
+      "deptname": "소아청소년과",
+      "doctorname": "박영미",
+      "specialties": "신생아, 영.유아, 예방접종, 육아상담",
+      "doctor_url": "https://ch.cauhs.or.kr/home/medical/profView.do?deptNo=217&profNo=1077&empNo=01647",
+      "profileimgurl": "https://www.kuh.ac.kr/_upload/profImg/0344768c-7a8c-4f02-9278-665245028913",
+      "data_version_id": 1,
+      "info": "[{\"type\":\"학력\",\"text\":\"제주대학교 의학전문대학원 의학석사\",\"url\":null},{\"type\":\"경력 및 연수\",\"text\":\"중앙대학교병원 소아청소년과 임상조교수\",\"url\":null},{\"type\":\"경력 및 연수\",\"text\":\"강릉아산병원 임상전임강사\",\"url\":null},{\"type\":\"경력 및 연수\",\"text\":\"강릉/서울아산병원 임상강사\",\"url\":null},{\"type\":\"경력 및 연수\",\"text\":\"세종충남대학교병원 촉탁의\",\"url\":null},{\"type\":\"경력 및 연수\",\"text\":\"탄방엠블병원 원장\",\"url\":null},{\"type\":\"경력 및 연수\",\"text\":\"대전을지대학교병원 레지던트\",\"url\":null}]"
+    }
+  ],
+  "isResult" : {
+    "result" : "match",
+    "userInfo" : {
+      "rid_long": "87DCE93D1141E21C9B27709E56B559BCA7341FC4791182F44EF9238B330F98193F245B85FF97F88D96E4DE19DF150C210E7E18266DF231AA2F20A043E887E682DB7442F22A4FC5B26B2F5647FF240939ECD285330ED79058C50406745644082D",
+      "hid": "H01KR-11000011",
+      "hospitalname": "중앙대학교병원",
+      "deptname": "소아청소년과",
+      "doctorname": "박영미",
+      "specialties": "신생아, 영.유아, 예방접종, 육아상담",
+      "doctor_url": "https://ch.cauhs.or.kr/home/medical/profView.do?deptNo=217&profNo=1077&empNo=01647",
+      "profileimgurl": "https://www.kuh.ac.kr/_upload/profImg/0344768c-7a8c-4f02-9278-665245028913",
+      "data_version_id": 1,
+      "info": "[{\"type\":\"학력\",\"text\":\"제주대학교 의학전문대학원 의학석사\",\"url\":null},{\"type\":\"경력 및 연수\",\"text\":\"중앙대학교병원 소아청소년과 임상조교수\",\"url\":null},{\"type\":\"경력 및 연수\",\"text\":\"강릉아산병원 임상전임강사\",\"url\":null},{\"type\":\"경력 및 연수\",\"text\":\"강릉/서울아산병원 임상강사\",\"url\":null},{\"type\":\"경력 및 연수\",\"text\":\"세종충남대학교병원 촉탁의\",\"url\":null},{\"type\":\"경력 및 연수\",\"text\":\"탄방엠블병원 원장\",\"url\":null},{\"type\":\"경력 및 연수\",\"text\":\"대전을지대학교병원 레지던트\",\"url\":null}]"
+    }
+  }
+}

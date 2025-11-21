@@ -1,0 +1,43 @@
+{
+  "summaryData": {
+    "rid_long": "40DED3A23E183DD1C0CA6E6E5A927C43A7341FC4791182F44EF9238B330F98193F245B85FF97F88D96E4DE19DF150C210E7E18266DF231AA2F20A043E887E68231FDF3BDCA4C3B9122A41338937F30C00A456C52E434A5DFD406184F4DD1EACC",
+    "hid": "H01KR-11000011",
+    "hospitalname": "중앙대학교병원",
+    "deptname": "내분비내과",
+    "doctorname": "손희준",
+    "specialties": "당뇨병, 이상지질혈증, 갑상선질환, 갑상선암, 부갑상선 질환, 골다공증, 부신 질환, 뇌하수체 질환",
+    "doctor_url": "https://ch.cauhs.or.kr/home/medical/profView.do?deptNo=193&profNo=1281&empNo=01939",
+    "profileimgurl": "https://ch.cauhs.or.kr/_upload/profImg/7bc8c57d-5651-4e8c-a124-dde249af87dd",
+    "data_version_id": 4,
+    "info": "[{\"type\":\"학력\",\"text\":\"아주대학교 대학원 의학과 석사\",\"url\":null},{\"type\":\"학력\",\"text\":\"아주대학교 의학대학 학사\",\"url\":null},{\"type\":\"경력\",\"text\":\"중앙대학교병원 내분비내과 임상조교수\",\"url\":null},{\"type\":\"경력\",\"text\":\"서울대학교병원 내분비내과 진료교수\",\"url\":null},{\"type\":\"경력\",\"text\":\"서울대학교병원 내분비내과 임상강사\",\"url\":null},{\"type\":\"경력\",\"text\":\"아주대학교병원 내과 레지던트\",\"url\":null},{\"type\":\"경력\",\"text\":\"아주대학교병원 인턴\",\"url\":null}]"
+  },
+  "summaryData2": [
+    {
+      "rid_long": "40DED3A23E183DD1C0CA6E6E5A927C43213788E1B21655D65BF3CD2801F568630D99763E64448C5E7F6D629144D2B18EB3FD6CA28D1DBF855E539DA245FE56D5",
+      "hid": "H01KR-11000006",
+      "hospitalname": "서울대학교병원",
+      "deptname": "내분비대사내과",
+      "doctorname": "손희준",
+      "specialties": "비만, 고지혈증, 당뇨병, 대사증후군",
+      "doctor_url": "https://www.snuh.org//blog/83613/career.do",
+      "profileimgurl": "https://www.snuh.org/upload/med/dr/f4b82bc00fa74b9e9eafe87526f49596.jpg",
+      "data_version_id": 1,
+      "info": "[{\"type\":\"학력\",\"targetDate\":\"2023. ~ 현재\",\"text\":\"서울대학교 의과대학 중개의학 박사\"},{\"type\":\"학력\",\"targetDate\":\"2020. ~ 2023.\",\"text\":\"아주대학교 의과대학 의학과 석사\"},{\"type\":\"학력\",\"targetDate\":\"2012. ~ 2018.\",\"text\":\"아주대학교 의과대학 의학과 학사\"},{\"type\":\"학회활동\",\"targetDate\":\"2023. ~ 현재\",\"text\":\"대한내분비학회 정회원\"},{\"type\":\"학회활동\",\"targetDate\":\"2023. ~ 현재\",\"text\":\"대한당뇨병학회 정회원\"}]"
+    }
+  ],
+  "isResult": {
+    "result": "match",
+    "userInfo": {
+      "rid_long": "40DED3A23E183DD1C0CA6E6E5A927C43213788E1B21655D65BF3CD2801F568630D99763E64448C5E7F6D629144D2B18EB3FD6CA28D1DBF855E539DA245FE56D5",
+      "hid": "H01KR-11000006",
+      "hospitalname": "서울대학교병원",
+      "deptname": "내분비대사내과",
+      "doctorname": "손희준",
+      "specialties": "비만, 고지혈증, 당뇨병, 대사증후군",
+      "doctor_url": "https://www.snuh.org//blog/83613/career.do",
+      "profileimgurl": "https://www.snuh.org/upload/med/dr/f4b82bc00fa74b9e9eafe87526f49596.jpg",
+      "data_version_id": 1,
+      "info": "[{\"type\":\"학력\",\"targetDate\":\"2023. ~ 현재\",\"text\":\"서울대학교 의과대학 중개의학 박사\"},{\"type\":\"학력\",\"targetDate\":\"2020. ~ 2023.\",\"text\":\"아주대학교 의과대학 의학과 석사\"},{\"type\":\"학력\",\"targetDate\":\"2012. ~ 2018.\",\"text\":\"아주대학교 의과대학 의학과 학사\"},{\"type\":\"학회활동\",\"targetDate\":\"2023. ~ 현재\",\"text\":\"대한내분비학회 정회원\"},{\"type\":\"학회활동\",\"targetDate\":\"2023. ~ 현재\",\"text\":\"대한당뇨병학회 정회원\"}]"
+    }
+  }
+}

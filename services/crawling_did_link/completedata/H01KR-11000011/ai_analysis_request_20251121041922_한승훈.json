@@ -1,0 +1,55 @@
+{
+  "summaryData": {
+    "rid_long": "E2635AB12938AB9DED2B8261C7634E1BA7341FC4791182F44EF9238B330F98193F245B85FF97F88D96E4DE19DF150C210E7E18266DF231AA2F20A043E887E68218423856A98FA28145CA3DA7A17837BD386C80D733F3B8C5380E6F7691FBDABC",
+    "hid": "H01KR-11000011",
+    "hospitalname": "중앙대학교병원",
+    "deptname": "소아청소년과",
+    "doctorname": "한승훈",
+    "specialties": "소아응급",
+    "doctor_url": "https://ch.cauhs.or.kr/home/medical/profView.do?deptNo=217&profNo=1258&empNo=01896",
+    "profileimgurl": "https://ch.cauhs.or.kr/_upload/profImg/1f9059fb-f082-4acc-8bc4-68ef5e1f17b9",
+    "data_version_id": 4,
+    "info": "[{\"type\":\"학력\",\"text\":\"가톨릭대학교 대학원 의학박사\",\"url\":null},{\"type\":\"학력\",\"text\":\"가톨릭대학교 대학원 의학석사\",\"url\":null},{\"type\":\"학력\",\"text\":\"가톨릭대학교 의과대학 학사\",\"url\":null},{\"type\":\"경력\",\"text\":\"중앙대학교병원 소아청소년과 임상진료교수\",\"url\":null},{\"type\":\"경력\",\"text\":\"고려대학교 구로병원 진료교수\",\"url\":null},{\"type\":\"경력\",\"text\":\"가톨릭대학교 여의도 성모병원 레지던트\",\"url\":null},{\"type\":\"경력\",\"text\":\"가톨릭대학교 성모자애병원 인턴\",\"url\":null}]"
+  },
+  "summaryData2": [
+    {
+      "rid_long": "E2635AB12938AB9DED2B8261C7634E1B401AA169F103BBD4E5E1DEE02C9F53AA96B7C94DFD500E99FE3F793374EC418D138594572CA3B50B5712D9F91A90D9AB64D25320F78D9A379DCDEC2F60701F4B",
+      "hid": "H01KR-11000007",
+      "hospitalname": "고려대학교의과대학부속구로병원",
+      "deptname": "응급의학과",
+      "doctorname": "한승훈",
+      "specialties": "소아 응급의학",
+      "doctor_url": "https://guro.kumc.or.kr/kr/doctor-department/doctor/view.do?drNo=8296",
+      "profileimgurl": "https://guro.kumc.or.kr/displayFile.do?name=20230530.1458.20.000.png",
+      "data_version_id": 1,
+      "info": "[{\"type\":\"학력\",\"targetDate\":\"1993 ~ 1996\",\"text\":\"가톨릭대학교 의과대학 의학과 박사\",\"url\":\"\"},{\"type\":\"학력\",\"targetDate\":\"1991 ~ 1993\",\"text\":\"가톨릭대학교 의과대학 의학과 석사\",\"url\":\"\"},{\"type\":\"학력\",\"targetDate\":\"1977 ~ 1983\",\"text\":\"가톨릭대학교 의과대학 의학과 학사\",\"url\":\"\"},{\"type\":\"경력\",\"targetDate\":\"\",\"text\":\"조회된 경력이 없습니다.\",\"url\":\"\"},{\"type\":\"학회활동\",\"targetDate\":\"\",\"text\":\"조회된 학회가 없습니다.\",\"url\":\"\"}]"
+    },
+    {
+      "rid_long": "E2635AB12938AB9DED2B8261C7634E1B6AC9BB03A7658ECFB3EC2DB48A28487CDF412760A32B62394F058972E3A2819A6D526F2D330A1D9E7AC4D13D91E5D16D",
+      "hid": "H01KR-41000005",
+      "hospitalname": "가톨릭대학교 성빈센트병원",
+      "deptname": "치과",
+      "doctorname": "한승훈",
+      "specialties": "치아 보존치료, 미백치료, 근관치료, 미세치근단 수술",
+      "doctor_url": "https://www.cmcvincent.or.kr/page/doctor/173/D0000639",
+      "profileimgurl": "https://www.cmcvincent.or.kr//api/attach/view/doctor/D0000639/profile/1",
+      "data_version_id": 2,
+      "info": "[{\"targetDate\":\"1990~1996\",\"type\":\"학력\",\"text\":\"연세대학교 치의학 학사\",\"url\":null,\"issuer\":null},{\"targetDate\":\"2010~2012\",\"type\":\"학력\",\"text\":\"연세대학교 치의학 치의학석사\",\"url\":null,\"issuer\":null},{\"targetDate\":\"2009~2014\",\"type\":\"경력\",\"text\":\"강북삼성병원 치과 부교수(임상)\",\"url\":null,\"issuer\":null},{\"targetDate\":\"2004~2008\",\"type\":\"경력\",\"text\":\"연세화이트치과의원  개업의\",\"url\":null,\"issuer\":null},{\"targetDate\":\"1997~1999\",\"type\":\"경력\",\"text\":\"연세대의료원 보존과 레지던트\",\"url\":null,\"issuer\":null},{\"targetDate\":\"1996~1997\",\"type\":\"경력\",\"text\":\"연세대의료원 보존과 인턴\",\"url\":null,\"issuer\":null}]"
+    }
+  ],
+  "isResult": {
+    "result": "match",
+    "userInfo": {
+      "rid_long": "E2635AB12938AB9DED2B8261C7634E1B401AA169F103BBD4E5E1DEE02C9F53AA96B7C94DFD500E99FE3F793374EC418D138594572CA3B50B5712D9F91A90D9AB64D25320F78D9A379DCDEC2F60701F4B",
+      "hid": "H01KR-11000007",
+      "hospitalname": "고려대학교의과대학부속구로병원",
+      "deptname": "응급의학과",
+      "doctorname": "한승훈",
+      "specialties": "소아 응급의학",
+      "doctor_url": "https://guro.kumc.or.kr/kr/doctor-department/doctor/view.do?drNo=8296",
+      "profileimgurl": "https://guro.kumc.or.kr/displayFile.do?name=20230530.1458.20.000.png",
+      "data_version_id": 1,
+      "info": "[{\"type\":\"학력\",\"targetDate\":\"1993 ~ 1996\",\"text\":\"가톨릭대학교 의과대학 의학과 박사\",\"url\":\"\"},{\"type\":\"학력\",\"targetDate\":\"1991 ~ 1993\",\"text\":\"가톨릭대학교 의과대학 의학과 석사\",\"url\":\"\"},{\"type\":\"학력\",\"targetDate\":\"1977 ~ 1983\",\"text\":\"가톨릭대학교 의과대학 의학과 학사\",\"url\":\"\"},{\"type\":\"경력\",\"targetDate\":\"\",\"text\":\"조회된 경력이 없습니다.\",\"url\":\"\"},{\"type\":\"학회활동\",\"targetDate\":\"\",\"text\":\"조회된 학회가 없습니다.\",\"url\":\"\"}]"
+    }
+  }
+}

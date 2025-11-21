@@ -11,8 +11,9 @@
             LEFT JOIN hospital h ON a.hid = h.hid
         WHERE 
             a.hid = #{search_hid} and is_active  = 2  and a.data_version_id  = #{search_data_version_id}
+            and a.doctor_id is null
         ORDER BY a.deptname , a.doctorname
-        LIMIT 300
+        LIMIT 120 OFFSET 0
     </select>
 
     <select id="select_doctor_by_rid_long">
@@ -35,6 +36,9 @@
             LEFT JOIN hospital h ON a.hid = h.hid
         WHERE 
             a.doctorname LIKE CONCAT(#{search_doctorname}, '%') and a.rid_long not in ( #{pass_rid_long} ) and a.data_version_id in ( 1,2 )
+            and a.rid not in (
+                SELECT rid FROM doctor_basic_logs 
+            )
         ORDER BY a.deptname , a.doctorname
     </select>
 

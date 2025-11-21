@@ -1,0 +1,43 @@
+{
+  "summaryData": {
+    "rid_long": "FF00E47EBFAB1BA5AF01A36179E537915582D97F18A0F1625769DC6BD8C26A56BB4676E1EC5E843EA71D4266E5AAE1C4F6A0266F4C39E8B1BCBDCA43999EC10626829D5A5E95408722AC82721DFE91A7E22A9F589EF7DA7E01824B93366B3AABFBD5E392AB5F87F68614D68AD44207FC72E1BC67C32289A0A9DA4C4415534073A4643C09FF98399DDF68BBD0BA1436DEC49D6DE558DDD5B88888CD2EE2AC76E4",
+    "hid": "H01KR-11000008",
+    "hospitalname": "연세대학교의과대학세브란스병원",
+    "deptname": "핵의학과",
+    "doctorname": "차종태",
+    "specialties": "갑상선 암 수술 후 동위원소",
+    "doctor_url": "https://sev.severance.healthcare/sev/doctor/doctor-view.do?empNo=eXVoczIwMjBAKUApNOkOi3sSFOBqVaDODRhJMZxn8PVyPDCYRDgWuvLuZKc%3D&deptSeq=95",
+    "profileimgurl": "https://sev.severance.healthcare/common/file/downloadFile.do?fileseq=eXVoczIwMjBAKUAp6WmIVum5yFHYMqqFDBZPNSbvmhtzLFxCjoapMfiDkvzB%2BV0Mnf20oUliLPXUvS0c8Ty187%2BBiI5hA6WQG%2Bei7foc1Av4BxzNCnU%2B15huLBNeexx%2F0eJgPfDCh55iKiY1371d0Umy5kCGqepXjaXoOb5Vy3UXghxEmoNGl%2BABvp9uNtZDFkdtK7JaFj83Day%2ByS2nZ5SKleRmLrfWFpef%2FAuKvAP8ZhzM",
+    "data_version_id": 4,
+    "info": "[]"
+  },
+  "summaryData2": [
+    {
+      "rid_long": "FF00E47EBFAB1BA5AF01A36179E53791401AA169F103BBD4E5E1DEE02C9F53AA96B7C94DFD500E99FE3F793374EC418D138594572CA3B50B5712D9F91A90D9AB74C04BE3CC911C9C8494E20DE525B674",
+      "hid": "H01KR-11000007",
+      "hospitalname": "고려대학교의과대학부속구로병원",
+      "deptname": "핵의학과",
+      "doctorname": "차종태",
+      "specialties": "",
+      "doctor_url": "https://guro.kumc.or.kr/kr/doctor-department/doctor/view.do?drNo=8647",
+      "profileimgurl": "https://guro.kumc.or.kr/displayFile.do?name=20240408.0904.54.184.png",
+      "data_version_id": 1,
+      "info": "[{\"type\":\"학력\",\"targetDate\":\"2016 ~ 2018\",\"text\":\"연세대학교 의학과 석사\",\"url\":\"\"},{\"type\":\"학력\",\"targetDate\":\"2009 ~ 2013\",\"text\":\"연세대학교 의학과 학사\",\"url\":\"\"},{\"type\":\"학력\",\"targetDate\":\"2007 ~ 2009\",\"text\":\"연세대학교 의예과\",\"url\":\"\"},{\"type\":\"경력\",\"targetDate\":\"2021 ~ 2023\",\"text\":\"세브란스병원 핵의학과 임상강사\",\"url\":\"\"},{\"type\":\"경력\",\"targetDate\":\"2014 ~ 2018\",\"text\":\"세브란스병원 핵의학 레지던트\",\"url\":\"\"},{\"type\":\"경력\",\"targetDate\":\"2013 ~ 2014\",\"text\":\"세브란스병원 인턴\",\"url\":\"\"},{\"type\":\"학회활동\",\"targetDate\":\"\",\"text\":\"조회된 학회가 없습니다.\",\"url\":\"\"}]"
+    }
+  ],
+  "isResult" : {
+    "result" : "match",
+    "userInfo" : {
+      "rid_long": "FF00E47EBFAB1BA5AF01A36179E53791401AA169F103BBD4E5E1DEE02C9F53AA96B7C94DFD500E99FE3F793374EC418D138594572CA3B50B5712D9F91A90D9AB74C04BE3CC911C9C8494E20DE525B674",
+      "hid": "H01KR-11000007",
+      "hospitalname": "고려대학교의과대학부속구로병원",
+      "deptname": "핵의학과",
+      "doctorname": "차종태",
+      "specialties": "",
+      "doctor_url": "https://guro.kumc.or.kr/kr/doctor-department/doctor/view.do?drNo=8647",
+      "profileimgurl": "https://guro.kumc.or.kr/displayFile.do?name=20240408.0904.54.184.png",
+      "data_version_id": 1,
+      "info": "[{\"type\":\"학력\",\"targetDate\":\"2016 ~ 2018\",\"text\":\"연세대학교 의학과 석사\",\"url\":\"\"},{\"type\":\"학력\",\"targetDate\":\"2009 ~ 2013\",\"text\":\"연세대학교 의학과 학사\",\"url\":\"\"},{\"type\":\"학력\",\"targetDate\":\"2007 ~ 2009\",\"text\":\"연세대학교 의예과\",\"url\":\"\"},{\"type\":\"경력\",\"targetDate\":\"2021 ~ 2023\",\"text\":\"세브란스병원 핵의학과 임상강사\",\"url\":\"\"},{\"type\":\"경력\",\"targetDate\":\"2014 ~ 2018\",\"text\":\"세브란스병원 핵의학 레지던트\",\"url\":\"\"},{\"type\":\"경력\",\"targetDate\":\"2013 ~ 2014\",\"text\":\"세브란스병원 인턴\",\"url\":\"\"},{\"type\":\"학회활동\",\"targetDate\":\"\",\"text\":\"조회된 학회가 없습니다.\",\"url\":\"\"}]"
+    }
+  }
+}

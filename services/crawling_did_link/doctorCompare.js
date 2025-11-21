@@ -18,9 +18,87 @@ function extractInfoEntries(infoStr) {
       return parsed.map(item => item.text || "");
     }
   } catch (e) {
+    // If not JSON, assume it's plain text and split by new line
     return infoStr.split('\n');
   }
-  return [infoStr];
+  return [infoStr]; // Fallback for single string
+}
+
+// info 필드에서 과거 근무 병원 및 진료과 정보를 추출하는 헬퍼 함수
+function extractPastEmployment(infoStr) {
+  const pastEmployments = [];
+  const entries = extractInfoEntries(infoStr);
+
+  const hospitalKeywords = ['병원', '의원', '클리닉', '센터', '의료원', '대학']; // '대학' 추가
+  const deptKeywords = ['과', '진료과', '클리닉']; // 진료과 키워드
+
+  for (const entry of entries) {
+    let hospitalName = '';
+    let deptName = '';
+
+    // 병원명 추출 시도 (가장 긴 매칭 우선)
+    let bestHospitalMatch = { name: '', index: -1 };
+    for (const keyword of hospitalKeywords) {
+      const regex = new RegExp(`([^\\s]{2,})${keyword}`, 'g'); // 최소 2글자 이상 + 키워드
+      let match;
+      while ((match = regex.exec(entry)) !== null) {
+        // 더 긴 매치 또는 더 앞선 매치를 선호
+        if (match[1].length > bestHospitalMatch.name.length || (match[1].length === bestHospitalMatch.name.length && match.index < bestHospitalMatch.index)) {
+          bestHospitalMatch = { name: match[1] + keyword, index: match.index };
+        }
+      }
+    }
+    if (bestHospitalMatch.name) {
+      hospitalName = bestHospitalMatch.name.trim();
+    }
+
+
+    // 진료과 추출 시도 (가장 긴 매칭 우선)
+    let bestDeptMatch = { name: '', index: -1 };
+    for (const keyword of deptKeywords) {
+      const regex = new RegExp(`([^\\s]{1,})${keyword}`, 'g'); // 최소 1글자 이상 + 키워드
+      let match;
+      while ((match = regex.exec(entry)) !== null) {
+        if (match[1].length > bestDeptMatch.name.length || (match[1].length === bestDeptMatch.name.length && match.index < bestDeptMatch.index)) {
+          bestDeptMatch = { name: match[1] + keyword, index: match.index };
+        }
+      }
+    }
+    if (bestDeptMatch.name) {
+      deptName = bestDeptMatch.name.trim();
+    }
+    
+    // "근무", "재직" 등의 키워드가 포함된 경우 과거 이력으로 간주
+    const workKeywordMatch = /(근무|재직|역임|원장|부원장|과장|전문의|수련|연수|수료|졸업)/.test(entry);
+
+    if (hospitalName || deptName || workKeywordMatch) {
+      pastEmployments.push({
+        hospitalname: hospitalName,
+        deptname: deptName,
+        entry: entry // 원본 항목도 함께 저장
+      });
+    }
+  }
+  return pastEmployments;
+}
+
+// 텍스트에서 날짜 범위 (예: 2008-2015, 2008~2015, 2008)를 추출하는 헬퍼 함수
+function extractDateRanges(text) {
+  const years = [];
+  // YYYY-YYYY 또는 YYYY~YYYY 패턴
+  const rangeRegex = /(\d{4})[~-](\d{4})/;
+  let match;
+  while ((match = rangeRegex.exec(text)) !== null) {
+    years.push({ start: parseInt(match[1]), end: parseInt(match[2]) });
+    text = text.substring(0, match.index) + text.substring(match.index + match[0].length); // Remove matched part
+  }
+
+  // YYYY 단일 연도 패턴
+  const singleYearRegex = /\b(\d{4})\b/g;
+  while ((match = singleYearRegex.exec(text)) !== null) {
+    years.push({ start: parseInt(match[1]), end: parseInt(match[1]) });
+  }
+  return years;
 }
 
 // 집합 기반 유사도(Jaccard) 계산 (e.g., 진료 분야)
@@ -55,37 +133,71 @@ function compareHistory(infoA, infoB, threshold = 0.6) { // 기준값 0.7 -> 0.6
   let matchCount = 0;
   let matchedEntries = [];
 
-  for (const entryA of entriesA) {
-    let bestMatch = { score: 0, index: -1, matchedTextB: '' };
+  // 기간이 겹치거나 선행하는지 확인하는 헬퍼 함수
+  const checkDateOverlap = (datesA, datesB) => {
+    if (datesA.length === 0 || datesB.length === 0) return false;
 
-    for (let i = 0; i < entriesB.length; i++) {
-      if (matchedBIndices.has(i)) continue;
+    for (const dARange of datesA) {
+      for (const dBRange of datesB) {
+        // A의 기간이 B의 기간보다 선행하거나 (B.start <= A.end)
+        // A의 기간과 B의 기간이 겹치는지 (A.start <= B.end && A.end >= B.start)
+        // 여기서는 A(summaryData)가 과거 이력이므로 dBRange의 end가 dARange의 start보다 커야 함.
+        // 즉, 후보의 학력/경력 기간이 summaryData의 학력/경력 기간보다 선행하거나 겹치는 부분이 있어야 함.
+        if (dBRange.end < dARange.start) { // 후보의 기간이 summaryData의 기간보다 완전히 선행
+          return true;
+        }
+        if (dARange.start <= dBRange.end && dARange.end >= dBRange.start) { // 기간이 겹침
+          return true;
+        }
+      }
+    }
+    return false;
+  };
 
-      const currentScore = stringSimilarity.compareTwoStrings(entryA, entriesB[i]);
-      if (currentScore > bestMatch.score) {
+  for (let i = 0; i < rawEntriesA.length; i++) {
+    const entryA = entriesA[i];
+    const rawEntryA = rawEntriesA[i];
+    const datesA = extractDateRanges(rawEntryA);
+
+    let bestMatch = { score: 0, index: -1, matchedTextB: '', dateOverlap: false };
+
+    for (let j = 0; j < rawEntriesB.length; j++) {
+      if (matchedBIndices.has(j)) continue;
+
+      const entryB = entriesB[j];
+      const rawEntryB = rawEntriesB[j];
+      const datesB = extractDateRanges(rawEntryB);
+
+      const currentScore = stringSimilarity.compareTwoStrings(entryA, entryB);
+      const hasDateOverlap = checkDateOverlap(datesA, datesB);
+
+      // 내용 유사도가 높고, 기간 겹침/선행 조건도 만족하는 경우
+      if (currentScore > bestMatch.score && hasDateOverlap) {
         bestMatch.score = currentScore;
-        bestMatch.index = i;
-        bestMatch.matchedTextB = rawEntriesB[i]; // 원본 텍스트 저장
+        bestMatch.index = j;
+        bestMatch.matchedTextB = rawEntryB;
+        bestMatch.dateOverlap = true;
       }
     }
 
-    if (bestMatch.score >= threshold) {
+    if (bestMatch.score >= threshold && bestMatch.dateOverlap) {
       matchCount++;
       if (bestMatch.index !== -1) {
         matchedBIndices.add(bestMatch.index);
         matchedEntries.push({
-          entryA: entryA,
+          entryA: rawEntryA,
           entryB: bestMatch.matchedTextB,
-          score: bestMatch.score
+          score: bestMatch.score,
+          dateOverlap: bestMatch.dateOverlap
         });
       }
     }
   }
 
+  // 유사도 계산은 매칭된 항목 수 / 둘 중 더 많은 항목 수
   const similarity = matchCount / Math.max(entriesA.length, entriesB.length);
   return { matchCount, similarity, matchedEntries, entriesA, entriesB };
 }
-
 
 function scoreBreakdown(d1, d2) {
   console.log('\n--- DEBUGGING scoreBreakdown V-FINAL ---');

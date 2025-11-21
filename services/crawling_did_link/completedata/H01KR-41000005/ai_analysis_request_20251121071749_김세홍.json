@@ -1,0 +1,40 @@
+{
+  "summaryData": {
+    "rid_long": "6375418C7E921125F824E0E19E0905816AC9BB03A7658ECFB3EC2DB48A28487CDF412760A32B62394F058972E3A2819AE7D1B3137B266721E87061291221BC02",
+    "hid": "H01KR-41000005",
+    "hospitalname": "가톨릭대학교 성빈센트병원",
+    "deptname": "가정의학과",
+    "doctorname": "김세홍",
+    "specialties": "노인병, 통증, 비만, 가족상담, 특이증상,홈케어(가정간호)",
+    "doctor_url": "https://www.cmcvincent.or.kr/page/doctor/2/D0001233",
+    "profileimgurl": "https://www.cmcvincent.or.kr//api/attach/view/doctor/D0001233/profile/1",
+    "data_version_id": 4
+  },
+  "summaryData2": [
+    {
+      "rid_long": "6375418C7E921125F824E0E19E0905816AC9BB03A7658ECFB3EC2DB48A28487CDF412760A32B62394F058972E3A2819AF27664D4BA5AE2A9F8A874208E623C2B",
+      "hid": "H01KR-41000005",
+      "hospitalname": "가톨릭대학교 성빈센트병원",
+      "deptname": "호스피스완화의학과",
+      "doctorname": "김세홍",
+      "specialties": "호스피스완화의학, 노인병, 통증, 암예방, 특이증상",
+      "doctor_url": "https://www.cmcvincent.or.kr/page/doctor/286/D0001233",
+      "profileimgurl": "https://www.cmcvincent.or.kr//api/attach/view/doctor/D0001233/profile/1",
+      "data_version_id": 2
+    }
+  ],
+  "isResult" : {
+    "result" : "match",
+    "userInfo" : {
+      "rid_long": "6375418C7E921125F824E0E19E0905816AC9BB03A7658ECFB3EC2DB48A28487CDF412760A32B62394F058972E3A2819AF27664D4BA5AE2A9F8A874208E623C2B",
+      "hid": "H01KR-41000005",
+      "hospitalname": "가톨릭대학교 성빈센트병원",
+      "deptname": "호스피스완화의학과",
+      "doctorname": "김세홍",
+      "specialties": "호스피스완화의학, 노인병, 통증, 암예방, 특이증상",
+      "doctor_url": "https://www.cmcvincent.or.kr/page/doctor/286/D0001233",
+      "profileimgurl": "https://www.cmcvincent.or.kr//api/attach/view/doctor/D0001233/profile/1",
+      "data_version_id": 2
+    }
+  }
+}
