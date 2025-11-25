@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="sql">  
+
+    <select id="select_doctor_career_data">
+        SELECT
+            dc.jsondata,db.rid_long,db.hid,db.doctorname
+        FROM 
+            doctor_career dc INNER JOIN doctor_basic db ON dc.rid = db.rid
+        WHERE
+            1=1 AND ( db.data_version_id = #{search_version_id} OR db.data_version_id_update = #{search_version_id} )
+            <if test="search_hid != null">
+                AND db.hid = #{search_hid}
+            </if>
+            <if test="search_rid_long != null">
+                AND dc.rid_long = #{search_rid_long}
+            </if>
+        ORDER BY db.createAt
+    </select>
+
+    <update id="update_doctor_career_updatedate">
+        UPDATE 
+            doctor_career
+        SET 
+            education = #{educations_str},
+            career = #{careers_str},
+            etc = #{etcs_str},
+            updateAt = now()
+        WHERE 
+            rid_long = #{target_rid_long}
+    </update>
+
+    <select id="select_doctor_revert_career_data">
+        SELECT
+            dc.education,dc.career ,dc.etc ,db.rid_long,db.hid,db.doctorname
+        FROM 
+            doctor_career dc INNER JOIN doctor_basic db ON dc.rid = db.rid
+        WHERE
+            1=1  AND dc.rid_long = #{search_rid_long}
+        LIMIT 1
+    </select>
+
+    <update id="update_doctor_revert_career_updatedate">
+        UPDATE 
+            doctor_career
+        SET 
+            jsondata = #{jsondata_str},
+            updateAt = now()
+        WHERE 
+            rid_long = #{target_rid_long}
+    </update>
+
+</mapper>

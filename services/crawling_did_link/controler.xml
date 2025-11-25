@@ -13,7 +13,7 @@
             a.hid = #{search_hid} and is_active  = 2  and a.data_version_id  = #{search_data_version_id}
             and a.doctor_id is null
         ORDER BY a.deptname , a.doctorname
-        LIMIT 120 OFFSET 0
+        LIMIT 200 OFFSET 0
     </select>
 
     <select id="select_doctor_by_rid_long">
@@ -42,6 +42,16 @@
         ORDER BY a.deptname , a.doctorname
     </select>
 
+    <select id="select_new_doctor_list_etc">
+        SELECT 
+            a.rid_long,a.hid,h.baseName as hospitalname,a.deptname,a.doctorname,specialties,a.doctor_url,a.profileimgurl,a.data_version_id
+        FROM
+            doctor_basic a LEFT JOIN hospital h ON a.hid = h.hid
+        WHERE 
+            a.doctor_id is null AND a.is_active  = 2  AND a.data_version_id = #{search_data_version_id}
+        ORDER BY a.deptname , a.doctorname
+        LIMIT 1 
+    </select>
     
     <update id="update_new_doctor_for_doctorbasictable">
         UPDATE doctor_basic 

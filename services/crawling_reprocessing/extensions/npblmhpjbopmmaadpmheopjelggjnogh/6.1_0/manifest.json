@@ -1,0 +1,20 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "background.js" ]
+   },
+   "content_scripts": [ {
+      "js": [ "jquery-3.5.1.min.js", "db.js", "main.js" ],
+      "matches": [ "*://pubmed.ncbi.nlm.nih.gov/*" ]
+   } ],
+   "description": "Shows impact factors/JCR quartile, filter search results by impact factors/JCR quartile, and more",
+   "icons": {
+      "128": "icon_128.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjB39LyqZFahTrEtWkhOsFHasyzIJ9572JYS6wuUaSJJgnsW0VUXDMdwJz3isOakVv4fz/8wmei1hXr5bi1BzKpireBCW2oGjeCV+svD3S8dnNlfO0b++42zpEvpvfsTG3YEarGNoq78rmV36QEdlT2a8X5wjdz7fUGO8nXunqcBUgobsaa+R36DqM7LBfVoHoQbjwxKJ6Fh5/88VI9XhQcibQXXgUhudoYcPrcjACqEbZ8s1D8Fv8KXnxsT4F71fqh1eivLeDs1Js6/k7/qRjY8m8DIBp7imFzA7+zkNXoYFRo/YsQPG/DvwnMdvT9MaGevqUPFEdQGApbFN3zAbhwIDAQAB",
+   "manifest_version": 2,
+   "name": "Pubmed Impact Factor",
+   "permissions": [ "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "6.1"
+}

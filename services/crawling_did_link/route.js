@@ -123,14 +123,14 @@ router.post('/find-past', async function(req, res) {
    
     const { DBError = null, RS = null } = await daoMysql.spCall(query);  
     const ret = await  functions.myBatisResult(DBError,RS);
-        for ( let i = 0; i < ret?.data.length ; i++ ) {
+      for ( let i = 0; i < ret?.data.length ; i++ ) {
       const summaryData = ret.data[i];
       totalDoctorCount++;
       console.log(`hid : ${summaryData?.hid},deptname : ${summaryData?.deptname},doctorname : ${summaryData?.doctorname}`)
       if ( summaryData != null ) {
         const param2 = {
           pass_rid_long : summaryData?.rid_long,
-          search_doctorname : summaryData?.doctorname,
+          search_doctorname : summaryData?.doctorname.replace("교수","").trim(),
           search_deptname : summaryData?.deptname
         }; 
         const format2 = { language: "sql", indent: "  " };
@@ -318,26 +318,13 @@ router.post('/find-past-resume', async function(req, res) {
 /**
  * @swagger
  *  /v1/c/crawling_did_link/update-notexist:
- *    post:
- *      summary: "제거대상의 관련 정보를 업데이트"
- *      description: "제거대상의 관련 정보를 업데이트한다"
+ *    get:
+ *      summary: "예외처리 - 신규 did 부여"
+ *      description: "예외처리 - 신규 did 부여 "
  *      tags: [crawling_did_link-3차병원 DID작업]
- *      produces:
- *      parameters:
- *        - name: "hid"
- *          in: "body"
- *          description: "input hospitalId"
- *          required: true
- *          type: "object"
- *          schema:
- *            type: object
- *            properties:
- *              hid:
- *                type: string
- *                description: "input hospitalId"
  *      responses:
  *        "200":
- *          description: step01
+ *          description: 접속 테스트
  *          content:
  *            application/json:
  *              schema:
@@ -348,78 +335,95 @@ router.post('/find-past-resume', async function(req, res) {
  *                    users:
  *                      type: object
  *                      example:    
- *                            { "code": 1000, "message": "작업성공" }
- * 
+ *                            { "code": 1000, "message": "접속성공" }
  */
 
-router.post('/update-notexist', async function(req, res) {
-
-  const HOSPITAL_ID = req.body.hid;
-  if (CS.isEmpty(HOSPITAL_ID)) { 
-    return res.json(TS.fail({ code: 'DATA_NULL', message: 'response data is null' })) 
-  }
+router.get('/update-notexist', async function(req, res) {
   //mapper 경로
   mybatisMapper.createMapper([`${global.appRoot}/services/crawling_did_link/controler.xml`]);
   let totalDoctorCount = 0;
-  let UpdateDcotorList = [];
-  let NonUpdateDoctorList = [];
+  const UpdateDcotorList = [];
   try {
   
     const param = {
-      search_hid : HOSPITAL_ID,
       search_data_version_id : DATA_VERSION_ID
     }; 
     const format = { language: "sql", indent: "  " };
     const query = mybatisMapper.getStatement(
         "controler",
-        "select_notexist_doctor_list",
+        "select_new_doctor_list_etc",
         param,
         format
     );
    
     const { DBError = null, RS = null } = await daoMysql.spCall(query);  
     const ret = await  functions.myBatisResult(DBError,RS);
-
+    
     for ( let i = 0; i < ret?.data.length ; i++ ) {
       const summaryData = ret.data[i];
       totalDoctorCount++;
       console.log(`hid : ${summaryData?.hid},deptname : ${summaryData?.deptname},doctorname : ${summaryData?.doctorname}`)
       if ( summaryData != null ) {
-        const param2 = {
-          search_rid : summaryData?.rid,
-          search_rid_long : summaryData?.rid_long
-        }; 
-        const format2 = { language: "sql", indent: "  " };
-        const query2 = mybatisMapper.getStatement(
-            "controler",
-            "update_notexist_doctor_list",
-            param2 ,
-            format2
-        );
+        try {
+          let doctorId = null;
 
-        const { DBError = null, RS = null } = await daoMysql.spCall(query2);
+          const insertParam = {
+            search_data_version_id : summaryData?.data_version_id || DATA_VERSION_ID,
+            search_rid_long: summaryData.rid_long,
+            search_doctorname: summaryData.doctorname
+          };
+          const insertQuery = mybatisMapper.getStatement("controler", "insert_new_doctor", insertParam, format);
+          
+          console.log(` -> [Step 2: INSERT] Executing for ${summaryData.doctorname}...`);
+          const { DBError: insertDBError, RS: insertRS } = await daoMysql.spCall(insertQuery);
+          console.log(` -> [Step 2: INSERT] Done.`);
+          const insertRet = await functions.myBatisResult(insertDBError, insertRS);
 
-        const ret2 = await  functions.myBatisResult(DBError,RS)
-        if ( ret2?.success) {
-          UpdateDcotorList.push(summaryData);
-        }else{
-          NonUpdateDoctorList.push(summaryData);
+          if (insertRet.success && insertRet.data.insertId) {
+            doctorId = insertRet.data.insertId;
+            console.log(`    - New Doctor ID created: ${doctorId}`);
+          } else {
+            throw new Error('Failed to insert new doctor or get insertId.');
+          }
+
+          if (doctorId) {
+
+            // 3. doctor_basic 테이블에 doctor_id 업데이트
+            const updateDidParam = { doctor_id: doctorId, search_rid_long: summaryData.rid_long };
+            const updateDidQuery = mybatisMapper.getStatement("controler", "update_doctor_basic_did", updateDidParam, format);
+
+            console.log(` -> [Step 3: UPDATE] Executing for ${summaryData.doctorname}...`);
+            const { DBError: updateDidDBError, RS: updateDidRS } = await daoMysql.spCall(updateDidQuery);
+            console.log(` -> [Step 3: UPDATE] Done.`);
+            const updateDidRet = await functions.myBatisResult(updateDidDBError, updateDidRS);
+
+            if (updateDidRet.success) {
+              console.log(`    - Successfully updated doctor_basic.`);
+            } else {
+              throw new Error('Failed to update doctor_basic_did.');
+            }
+          } else {
+            throw new Error('Failed to get doctor_id.');
+          }
+          
+        } catch (e) {
+          console.error(`[AI 분석 요청 파일 생성 실패] doctorname: ${summaryData.doctorname}, error: ${e.message}`);
         }
+        UpdateDcotorList.push(summaryData);
         
       }
     }
-    console.log(`검색된 의사수 : ${totalDoctorCount}, 찾아낸 의사수 : ${_.size(UpdateDcotorList)}, 없는 의사수 : ${_.size(NonUpdateDoctorList)}`);
+    console.log(`[작업 완료] 총 ${totalDoctorCount}명의 의사를 처리했습니다.`);
     return res.send({
       code: 200,
       success: true,
-      message: `검색된 의사수 : ${totalDoctorCount}, 찾아낸 의사수 : ${_.size(UpdateDcotorList)}, 없는 의사수 : ${_.size(NonUpdateDoctorList)}`
+      message: `Successfully processed ${totalDoctorCount}`
     });
   } catch (error) {
     console.error('Error in  :', error.message);
     res.status(500).send('An error occurred during the get all hid process: ' + error.message);
   }
 });
-
 
 
 /**
@@ -550,6 +554,7 @@ router.post('/save-notmatch', async function(req, res) {
           failedDoctors.push({ name: summaryData.doctorname, rid_long: summaryData.rid_long, reason: `Error at step: ${step} - ${e.message}` });
         }
       }
+      await CS.wait(500);
     }
 
     return res.send({
@@ -765,6 +770,7 @@ router.post('/save-match', async function(req, res) {
           failedDoctors.push({ name: (doctorData.summaryData.doctorname || file), reason: e.message });
         }
       }
+      await CS.wait(500);
     }
 
     return res.send({

@@ -1,0 +1,16 @@
+{
+   "browser_action": {
+      "default_icon": "icon.png"
+   },
+   "content_scripts": [ {
+      "js": [ "script.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   } ],
+   "description": "Get Altmetric score for research papers in Google Scholar and Pubmed search results ",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoAxaF/6VFMhons0FSFduqHTvooDhzv14MpNLHn/Y3jHc+58YtUPWHKuxjIMTn0eyF1M6JqGYz3yu+ETQzNDNmLXx3rNDaiCNp/UWQNuM0fyoVD5C0kFLE8arFt1DECelQTlXNItaNRu4ljdSMv7Yoew318R07pFgBIv1/VtehTGIwUQkIOqPj/D3OjZp2rjCBaGLl0oT/gaMK6VfCUeaDPPHedXA7EHe8BSD6Cv5RuHr5JoQBIXtxNayP4tpxrOLVDymfM/tmhKD1xxOi0gRRRyzoT0mQYmzcERNPWnlp1OmNG3gtWndj5tKxuIfcVxpyA+xewReFi+9zVqtV7AHuQIDAQAB",
+   "manifest_version": 3,
+   "name": "Altmetric for Pubmed and Google Scholar",
+   "permissions": [ "http://*/*", "https://*/*" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.2"
+}
