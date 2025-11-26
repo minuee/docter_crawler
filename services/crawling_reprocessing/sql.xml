@@ -30,6 +30,74 @@
             rid_long = #{target_rid_long}
     </update>
 
+    <select id="select_doctor_basic_standard">
+        SELECT
+            db.deptname,db.specialties,db.rid_long,db.hid,db.doctorname
+        FROM 
+            doctor_basic db
+        WHERE
+            1=1 AND ( db.data_version_id = #{search_version_id} OR db.data_version_id_update = #{search_version_id} )
+            <if test="search_hid != null">
+                AND db.hid = #{search_hid}
+            </if>
+            <if test="search_rid_long != null">
+                AND db.rid_long = #{search_rid_long}
+            </if>
+        ORDER BY db.createAt
+    </select>
+
+    <update id="update_doctor_basic_standard">
+        UPDATE 
+            doctor_basic
+        SET 
+            standard_dpt = #{target_find_depth},
+            standard_spec = #{target_fiund_dept_specialtys},
+            updateAt = now()
+        WHERE 
+            paper_id = #{target_paper_id}
+    </update>
+
+    <select id="select_doctor_basic_specialty">
+        SELECT
+            db.standard_spec,db.rid_long,db.hid,db.doctorname,db.doctor_id
+        FROM 
+            doctor_basic db
+        WHERE
+            1=1 AND ( db.data_version_id = #{search_version_id} OR db.data_version_id_update = #{search_version_id} )
+            AND db.standard_spec IS NOT NULL AND db.doctor_id IS NOT NULL
+            <if test="search_hid != null">
+                AND db.hid = #{search_hid}
+            </if>
+            <if test="search_rid_long != null">
+                AND db.rid_long = #{search_rid_long}
+            </if>
+        ORDER BY db.createAt
+    </select>
+
+    <select id="select_specialty_id">
+        SELECT
+            a.specialty_id
+        FROM 
+            specialty a
+        WHERE
+            1=1 AND a.specialty = #{search_specialty}
+        LIMIT 1
+    </select>
+
+    <insert id="update_doctor_basic_specialty">
+        INSERT INTO doctor_specialty (
+            specialty_id,
+            doctor_id,
+            created_at
+        ) VALUES (
+            #{target_specialty_id},
+            #{target_doctor_id},
+            NOW()
+        )
+        ON DUPLICATE KEY UPDATE
+            specialty_id = specialty_id
+    </insert>
+
     <select id="select_doctor_revert_career_data">
         SELECT
             dc.education,dc.career ,dc.etc ,db.rid_long,db.hid,db.doctorname
@@ -48,6 +116,71 @@
             updateAt = now()
         WHERE 
             rid_long = #{target_rid_long}
+    </update>
+
+
+    <select id="select_doctor_pubmed_authors_treatise">
+        SELECT
+            dp.paper_id,dp.doctorName,dp.authors
+        FROM 
+            doctor_paper dp INNER JOIN doctor_basic db ON dp.rid = db.rid
+        WHERE
+            1=1 and dp.title IS NOT NULL and dp.pmid IS NOT NULL and authors IS NOT NULL
+            <if test="search_version_id != null">
+                AND dp.data_version_id = #{search_version_id}
+            </if>
+            <if test="search_hid != null">
+                AND db.hid = #{search_hid}
+            </if>
+        ORDER BY dp.paper_id asc
+    </select>
+
+    <update id="update_doctor_pubmed_authors_treatise">
+        UPDATE 
+            doctor_paper
+        SET 
+            authors = #{str_athors},
+            updateAt = now()
+        WHERE 
+            paper_id = #{target_paper_id}
+    </update>
+
+    <select id="select_doctor_pubmed_find_first_authors">
+        SELECT
+            dp.paper_id,dp.doctorName,dp.firstAuthors
+        FROM 
+            doctor_paper dp INNER JOIN doctor_basic db ON dp.rid = db.rid
+        WHERE
+            1=1 and dp.doctorName IS NOT NULL and dp.pmid IS NOT NULL and firstAuthors IS NOT NULL AND isFirstAuthor IS NULL 
+            <if test="search_version_id != null">
+                AND dp.data_version_id = #{search_version_id}
+            </if>
+            <if test="search_hid != null">
+                AND db.hid = #{search_hid}
+            </if>
+        ORDER BY dp.paper_id asc
+        LIMIT 15000 OFFSET 3600
+    </select>
+
+    <update id="update_doctor_pubmed_find_first_authors">
+        UPDATE 
+            doctor_paper
+        SET 
+            isFirstAuthor = true,
+            doctor_name_kor_to_eng_list = #{doctor_name_kor_to_eng_list},
+            updateAt = now()
+        WHERE 
+            paper_id = #{target_paper_id}
+    </update>
+
+    <update id="update_doctor_pubmed_find_first_authors_null">
+        UPDATE 
+            doctor_paper
+        SET 
+            doctor_name_kor_to_eng_list = #{doctor_name_kor_to_eng_list},
+            updateAt = now()
+        WHERE 
+            paper_id = #{target_paper_id}
     </update>
 
 </mapper>

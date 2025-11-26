@@ -6,6 +6,9 @@
     "services/crawling_bedoc/saved_data/*",
     "services/crawling_bedoc/saved_data2/*",
     "services/crawling_reprocessing/completedata/*",
+    "services/crawling_reprocessing/completedata2/*",
+    "services/crawling_reprocessing/completedata3/*",
+    "services/crawling_reprocessing/*",
     "ecosystem.config.js"
   ]
 }
