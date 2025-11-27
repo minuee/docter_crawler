@@ -1,0 +1,16 @@
+{
+  "successData": [
+    {
+      "rid_long": "581C8619BE0BD4B13B741F5C2B4C59C00E7D8D9B3C6E00B3C221172596C119DD7CBB0CEACB5C1C66C1BD4133D10A0D59AE184BEFB28BA7D1C09A82BAE90EFBA046C46C71B0F967D9167ED1B7D85368EBFCB755400254A69595A86B4FD43478F5",
+      "doctorName": "이길준",
+      "deptname": "이비인후과",
+      "origin_specialties": "두경부외과 (두경부암, 두경부 종양, 갑상선암, 음성질환, 두경부 양성질환), 두경부 로봇수술",
+      "matched_specialties": [
+        "갑상선암",
+        "음성질환"
+      ]
+    }
+  ],
+  "failData": [],
+  "nullData": []
+}

@@ -1,0 +1,65 @@
+{
+  "counting": {
+    "totalCount": 10,
+    "processSuccessCount": 3,
+    "processFailCount": 0,
+    "processNullCount": 0,
+    "processNotMatchCount": 7
+  },
+  "successData": [
+    {
+      "paper_id": 437823,
+      "doctorName": "한정우",
+      "firstAuthors": "Jung Woo Han"
+    },
+    {
+      "paper_id": 438242,
+      "doctorName": "김동언",
+      "firstAuthors": "Dong-Eon Kim, Inki Moon"
+    },
+    {
+      "paper_id": 438316,
+      "doctorName": "박준상",
+      "firstAuthors": "Jun-Sang Park"
+    }
+  ],
+  "failData": [],
+  "notMatchData": [
+    {
+      "paper_id": 437821,
+      "doctorName": "한정우",
+      "firstAuthors": "Hyo Song Park"
+    },
+    {
+      "paper_id": 437822,
+      "doctorName": "한정우",
+      "firstAuthors": "Sun Young Jang"
+    },
+    {
+      "paper_id": 438252,
+      "doctorName": "김정철",
+      "firstAuthors": "Jung Chul Kim, Byungsoo Ahn, Eunhyang Park, Jung-Yun Lee"
+    },
+    {
+      "paper_id": 438253,
+      "doctorName": "김정철",
+      "firstAuthors": "Jung Chul Kim"
+    },
+    {
+      "paper_id": 438254,
+      "doctorName": "김정철",
+      "firstAuthors": "Jung Chul Kim"
+    },
+    {
+      "paper_id": 438273,
+      "doctorName": "김천기",
+      "firstAuthors": "J E Jarvis"
+    },
+    {
+      "paper_id": 438304,
+      "doctorName": "최덕현",
+      "firstAuthors": "Sung Wan Chun"
+    }
+  ],
+  "nullData": []
+}

@@ -261,7 +261,7 @@ router.post('/step02', async (req, res, next) => {
           impactFactor: element.impactFactor,
           totalCitations: element.totalCitations,
           referencesThesis: element.referencesThesis,
-          doctorName: element.doctorName,
+          doctorName: doctorName,
           authorName: element.authorName,
           subjectClassification: element.subjectClassification,
           publicationLocation: element.publicationLocation

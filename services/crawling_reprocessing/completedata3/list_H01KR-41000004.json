@@ -1,0 +1,270 @@
+{
+  "counting": {
+    "totalCount": 51,
+    "processSuccessCount": 14,
+    "processFailCount": 0,
+    "processNullCount": 0,
+    "processNotMatchCount": 37
+  },
+  "successData": [
+    {
+      "paper_id": 439539,
+      "doctorName": "추성필",
+      "firstAuthors": "Sung Pil Choo, Hyunji Park"
+    },
+    {
+      "paper_id": 439540,
+      "doctorName": "추성필",
+      "firstAuthors": "Sung Pil Choo"
+    },
+    {
+      "paper_id": 439548,
+      "doctorName": "강호원",
+      "firstAuthors": "Ho Won Kang"
+    },
+    {
+      "paper_id": 439554,
+      "doctorName": "강호원",
+      "firstAuthors": "Ho Won Kang"
+    },
+    {
+      "paper_id": 439561,
+      "doctorName": "강현욱",
+      "firstAuthors": "Hyun-Uk Kang"
+    },
+    {
+      "paper_id": 439562,
+      "doctorName": "강현욱",
+      "firstAuthors": "Hyun-Uk Kang"
+    },
+    {
+      "paper_id": 439563,
+      "doctorName": "강현욱",
+      "firstAuthors": "Hyun-Uk Kang"
+    },
+    {
+      "paper_id": 439565,
+      "doctorName": "강현욱",
+      "firstAuthors": "Hyun-Uk Kang"
+    },
+    {
+      "paper_id": 439566,
+      "doctorName": "한주홍",
+      "firstAuthors": "Joo Hong Han"
+    },
+    {
+      "paper_id": 439567,
+      "doctorName": "박소미",
+      "firstAuthors": "Somi Park"
+    },
+    {
+      "paper_id": 439571,
+      "doctorName": "백남선",
+      "firstAuthors": "Nam-Seon Beck"
+    },
+    {
+      "paper_id": 439573,
+      "doctorName": "백남선",
+      "firstAuthors": "Nam-Seon Beck"
+    },
+    {
+      "paper_id": 439574,
+      "doctorName": "백남선",
+      "firstAuthors": "Nam-Seon Beck"
+    },
+    {
+      "paper_id": 439595,
+      "doctorName": "진영주",
+      "firstAuthors": "Young-Joo Jin"
+    }
+  ],
+  "failData": [],
+  "notMatchData": [
+    {
+      "paper_id": 439534,
+      "doctorName": "김경민",
+      "firstAuthors": "Joonho Byun"
+    },
+    {
+      "paper_id": 439535,
+      "doctorName": "김경민",
+      "firstAuthors": "Tae-Min Cheon"
+    },
+    {
+      "paper_id": 439537,
+      "doctorName": "김경민",
+      "firstAuthors": "Yun-Sik Dho, Byeong Cheol Lee"
+    },
+    {
+      "paper_id": 439538,
+      "doctorName": "김경민",
+      "firstAuthors": "Yeajina Lee, Tamrin Chowdhury"
+    },
+    {
+      "paper_id": 439541,
+      "doctorName": "박지선",
+      "firstAuthors": "Eun-Young Joo"
+    },
+    {
+      "paper_id": 439542,
+      "doctorName": "박소연",
+      "firstAuthors": "SeoYeon Chung"
+    },
+    {
+      "paper_id": 439543,
+      "doctorName": "박소연",
+      "firstAuthors": "SeungCheor Lee"
+    },
+    {
+      "paper_id": 439544,
+      "doctorName": "박소연",
+      "firstAuthors": "SeungCheor Lee"
+    },
+    {
+      "paper_id": 439545,
+      "doctorName": "강호원",
+      "firstAuthors": "Dong-Oh Lee, Dong Yeon Lee"
+    },
+    {
+      "paper_id": 439547,
+      "doctorName": "강호원",
+      "firstAuthors": "Dae-Yoo Kim"
+    },
+    {
+      "paper_id": 439549,
+      "doctorName": "강호원",
+      "firstAuthors": "Dae-Yoo Kim"
+    },
+    {
+      "paper_id": 439550,
+      "doctorName": "강호원",
+      "firstAuthors": "Yeo-Hon Yun"
+    },
+    {
+      "paper_id": 439551,
+      "doctorName": "강호원",
+      "firstAuthors": "Dong-Oh Lee"
+    },
+    {
+      "paper_id": 439553,
+      "doctorName": "강호원",
+      "firstAuthors": "Linying Cao"
+    },
+    {
+      "paper_id": 439555,
+      "doctorName": "강호원",
+      "firstAuthors": "Byung-Ho Yoon"
+    },
+    {
+      "paper_id": 439556,
+      "doctorName": "강호원",
+      "firstAuthors": "Yun Jae Cho"
+    },
+    {
+      "paper_id": 439557,
+      "doctorName": "강호원",
+      "firstAuthors": "Ashima Choudhry"
+    },
+    {
+      "paper_id": 439558,
+      "doctorName": "강호원",
+      "firstAuthors": "Dong-Oh Lee"
+    },
+    {
+      "paper_id": 439559,
+      "doctorName": "강호원",
+      "firstAuthors": "Ji Young Jeon"
+    },
+    {
+      "paper_id": 439560,
+      "doctorName": "강호원",
+      "firstAuthors": "Dong Yeon Lee"
+    },
+    {
+      "paper_id": 439564,
+      "doctorName": "강현욱",
+      "firstAuthors": "Byung-Moon Choi, Seok Hwan Lee"
+    },
+    {
+      "paper_id": 439568,
+      "doctorName": "양수철",
+      "firstAuthors": "Su Cheol Yang"
+    },
+    {
+      "paper_id": 439569,
+      "doctorName": "양수철",
+      "firstAuthors": "Kun Hwang"
+    },
+    {
+      "paper_id": 439570,
+      "doctorName": "양수철",
+      "firstAuthors": "Kun Hwang"
+    },
+    {
+      "paper_id": 439572,
+      "doctorName": "백남선",
+      "firstAuthors": "Sae-Yong Hong"
+    },
+    {
+      "paper_id": 439575,
+      "doctorName": "백남선",
+      "firstAuthors": "Jucunú J Elias Chitio"
+    },
+    {
+      "paper_id": 439576,
+      "doctorName": "백남선",
+      "firstAuthors": "Eunyong Ahn"
+    },
+    {
+      "paper_id": 439578,
+      "doctorName": "백남선",
+      "firstAuthors": "Jongho Im"
+    },
+    {
+      "paper_id": 439579,
+      "doctorName": "백남선",
+      "firstAuthors": "Saverio Caini"
+    },
+    {
+      "paper_id": 439580,
+      "doctorName": "백남선",
+      "firstAuthors": "Se-Eun Park"
+    },
+    {
+      "paper_id": 439583,
+      "doctorName": "백남선",
+      "firstAuthors": "N S Beck"
+    },
+    {
+      "paper_id": 439585,
+      "doctorName": "백남선",
+      "firstAuthors": "M R Oh"
+    },
+    {
+      "paper_id": 439590,
+      "doctorName": "류정선",
+      "firstAuthors": "Jun Hyeok Lim"
+    },
+    {
+      "paper_id": 439591,
+      "doctorName": "류정선",
+      "firstAuthors": "Hong-Tae Kim"
+    },
+    {
+      "paper_id": 439592,
+      "doctorName": "진영주",
+      "firstAuthors": "Won-Mook Choi"
+    },
+    {
+      "paper_id": 439593,
+      "doctorName": "진영주",
+      "firstAuthors": "Jung Hee Kim"
+    },
+    {
+      "paper_id": 439594,
+      "doctorName": "진영주",
+      "firstAuthors": "Won Sohn"
+    }
+  ],
+  "nullData": []
+}

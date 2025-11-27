@@ -1,0 +1,70 @@
+{
+  "counting": {
+    "totalCount": 11,
+    "processSuccessCount": 2,
+    "processFailCount": 0,
+    "processNullCount": 0,
+    "processNotMatchCount": 9
+  },
+  "successData": [
+    {
+      "paper_id": 497339,
+      "doctorName": "조성일",
+      "firstAuthors": "Sung Il Cho"
+    },
+    {
+      "paper_id": 497341,
+      "doctorName": "조성일",
+      "firstAuthors": "Sung Il Cho"
+    }
+  ],
+  "failData": [],
+  "notMatchData": [
+    {
+      "paper_id": 497333,
+      "doctorName": "김가희",
+      "firstAuthors": "Gahee Kim"
+    },
+    {
+      "paper_id": 497334,
+      "doctorName": "김가희",
+      "firstAuthors": "Gahee Kim"
+    },
+    {
+      "paper_id": 497335,
+      "doctorName": "김가희",
+      "firstAuthors": "Sanghoon Lee"
+    },
+    {
+      "paper_id": 497336,
+      "doctorName": "김가희",
+      "firstAuthors": "S Lee"
+    },
+    {
+      "paper_id": 497337,
+      "doctorName": "김가희",
+      "firstAuthors": "Jina Lee, Ki Wook Yun"
+    },
+    {
+      "paper_id": 497340,
+      "doctorName": "조성일",
+      "firstAuthors": "Gi-Sung Nam"
+    },
+    {
+      "paper_id": 497342,
+      "doctorName": "윤형준",
+      "firstAuthors": "Eun Hyun Seo"
+    },
+    {
+      "paper_id": 497343,
+      "doctorName": "윤형준",
+      "firstAuthors": "Seonjae Lee"
+    },
+    {
+      "paper_id": 497344,
+      "doctorName": "윤형준",
+      "firstAuthors": "Han Seul Kim"
+    }
+  ],
+  "nullData": []
+}

@@ -1,0 +1,232 @@
+{
+  "counting": {
+    "totalCount": 44,
+    "processSuccessCount": 0,
+    "processFailCount": 0,
+    "processSameCount": 44
+  },
+  "successData": [],
+  "failData": [],
+  "sameData": [
+    {
+      "paper_id": 493256,
+      "doctorName": "박지훈",
+      "authors": "Dae-Kyung Kwak, Sun-Hee Bang, Sung-Jae Lee, Ji-Hun Park, Je-Hyun Yoo"
+    },
+    {
+      "paper_id": 493257,
+      "doctorName": "박지훈",
+      "authors": "Jihye Kim, Jihun Park, Seok Woo Kim, Jae-Keun Oh, Moon Soo Park, Young-Woo Kim, Tae-Hwan Kim"
+    },
+    {
+      "paper_id": 493258,
+      "doctorName": "김마로",
+      "authors": "Maro Kim, Dongbum Suh, Jin Hee Lee, Hyuksool Kwon, Yujin Choi, Joo Jeong, Sola Kim, Soyun Hwang, Joong Wan Park, You Hwan Jo"
+    },
+    {
+      "paper_id": 493259,
+      "doctorName": "김마로",
+      "authors": "Maro Kim, Jin Hee Lee, Young Ho Kwak, Hyun Kyung Kim, Hyuksool Kwon, Dongbum Suh, Do Kyun Kim, Ha Ni Lee, Jin Hee Kim, Jie Hee Jue, Soyun Hwang"
+    },
+    {
+      "paper_id": 493260,
+      "doctorName": "박소희",
+      "authors": "So Hee Park, Jung Eun Seol, Do Hyeong Kim, Hyojin Kim"
+    },
+    {
+      "paper_id": 493262,
+      "doctorName": "박소희",
+      "authors": "Jung Eun Seol, So Hee Park, Hyojin Kim"
+    },
+    {
+      "paper_id": 493263,
+      "doctorName": "박소희",
+      "authors": "Jung Eun Seol, Do Hyeong Kim, So Hee Park, Gyeong Je Cho, Hyojin Kim"
+    },
+    {
+      "paper_id": 493268,
+      "doctorName": "채수봉",
+      "authors": "Su Bong Chae, Jae Wook Yang, Young Jin Kim"
+    },
+    {
+      "paper_id": 493269,
+      "doctorName": "채수봉",
+      "authors": "Su Bong Chae, Jung Lim Kim"
+    },
+    {
+      "paper_id": 493273,
+      "doctorName": "김동근",
+      "authors": "Dong Geun Kim, Seok Hyun Bae, Dong Ju Kim, Jong Suk Lee, Kwangsic Joo, Sang Jun Park, Se Joon Woo, Kyu Hyung Park"
+    },
+    {
+      "paper_id": 493275,
+      "doctorName": "김동근",
+      "authors": "Seungmin Noh, Hye Kyoung Hong, Dong Geun Kim, Hwajun Jeong, Sung Jun Lim, Jin-Young Kim, Se Joon Woo, Hongsoo Choi"
+    },
+    {
+      "paper_id": 493276,
+      "doctorName": "김동근",
+      "authors": "Dong Ju Kim, Dong Geun Kim, Hyun Duck Kwak, Jae Yong Jang, Yong-Sok Ji, Seung Hyun Lee, Eun Kyoung Lee, Kyu Hyung Park, Jae Hui Kim, Jun Sung Lee, Yumi Song, Seong Taeck Kim, Min Ho Shin, Min Kim, Sang Jun Park, Kwangsic Joo, Min Sagong, Christopher Seungkyu Lee, Se Joon Woo"
+    },
+    {
+      "paper_id": 493277,
+      "doctorName": "김동근",
+      "authors": "Dong Geun Kim, Da Yun Lee, Se Joon Woo, Kyu Hyung Park, Sang Jun Park"
+    },
+    {
+      "paper_id": 493280,
+      "doctorName": "김동근",
+      "authors": "Dong Ju Kim, Dong Geun Kim, Kyu Hyung Park"
+    },
+    {
+      "paper_id": 493281,
+      "doctorName": "김동근",
+      "authors": "Dong Geun Kim, Kwangsic Joo, Jinu Han, Mihyun Choi, Seong-Woo Kim, Kyu Hyung Park, Sang Jun Park, Christopher Seungkyu Lee, Suk Ho Byeon, Se Joon Woo"
+    },
+    {
+      "paper_id": 493282,
+      "doctorName": "김동근",
+      "authors": "Dong Geun Kim, Chang Ki Yoon, Hyun Woong Kim, Sang Joon Lee"
+    },
+    {
+      "paper_id": 493289,
+      "doctorName": "정해웅",
+      "authors": "Sung-Tae Kim, Jin Wook Baek, Won Hee Lee, Kun Soo Lee, Wi Hyun Kwon, Seyoung Pyo, Hae Woong Jeong, Young Gyun Jeong"
+    },
+    {
+      "paper_id": 493290,
+      "doctorName": "정해웅",
+      "authors": "Jin Wook Baek, Chae Wook Huh, Young Jin Heo, Min Wook Yoo, Soon Chan Kwon, O Ki Kwon, Hae Woong Jeong, Sung Tae Kim, Sung-Chul Jin"
+    },
+    {
+      "paper_id": 493291,
+      "doctorName": "정해웅",
+      "authors": "S-T Kim, J W Baek, S-C Jin, J H Park, J S Kim, H Y Kim, H W Jeong, Y G Jeong"
+    },
+    {
+      "paper_id": 493293,
+      "doctorName": "정해웅",
+      "authors": "Jin Wook Baek, Sung-Chul Jin, Sung-Tae Kim, Young Jin Heo, Ji Yeon Han, Jung Hwa Seo, Sung Hwa Paeng, Jung Soo Kim, Hae Woong Jeong, Young-Gyun Jeong"
+    },
+    {
+      "paper_id": 493294,
+      "doctorName": "정해웅",
+      "authors": "Y J Heo, H W Jeong, J W Baek, S T Kim, Y G Jeong, J Y Lee, S-C Jin"
+    },
+    {
+      "paper_id": 493295,
+      "doctorName": "정해웅",
+      "authors": "D Kim, Y J Heo, H W Jeong, J W Baek, J-Y Han, J Y Lee, S-C Jin, H J Baek"
+    },
+    {
+      "paper_id": 493296,
+      "doctorName": "정해웅",
+      "authors": "Sang-Bae Ko, Hong-Kyun Park, Byung Moon Kim, Ji Hoe Heo, Joung-Ho Rha, Sun U Kwon, Jong S Kim, Byung-Chul Lee, Sang Hyun Suh, Cheolkyu Jung, Hae Woong Jeong, Dong-Hun Kang, Hee-Joon Bae, Byung-Woo Yoon, Keun-Sik Hong"
+    },
+    {
+      "paper_id": 493297,
+      "doctorName": "정해웅",
+      "authors": "Young Jin Heo, Hae Woong Jeong, Donghyun Kim, Jin Wook Baek, Tae Hong Lee, Lee Hwangbo, Shang Hun Shin"
+    },
+    {
+      "paper_id": 493298,
+      "doctorName": "정해웅",
+      "authors": "Jin Wook Baek, Sung-Chul Jin, Sung-Tae Kim, Hae Woong Jeong, Young Gyun Jeong, Young Jin Heo, Ji Yeon Han, Donghyun Kim, Jung Hyun Park, Soon Chan Kwon, Eun Suk Park, Taehee Shin, Tae Hong Lee, Sang Weon Lee, Seung Kug Baik"
+    },
+    {
+      "paper_id": 493299,
+      "doctorName": "정해웅",
+      "authors": "Dong Hyuk Lee, Seung Hwan Kim, Hyungon Lee, Su Bin Kim, Dongah Lee, Young Jin Heo, Jin Wook Baek, Hye Jin Kim, Jung-Soo Kim, Jung Hyun Park, Hae Woong Jeong, Hae Yu Kim, Sung-Chul Jin"
+    },
+    {
+      "paper_id": 493301,
+      "doctorName": "정해웅",
+      "authors": "Min Ha Kwag, Jin Young Park, Hae Woong Jeong, Ji Yeon Han, Jong Heon Lim, Young Seon Kim, Jung Won Park"
+    },
+    {
+      "paper_id": 493304,
+      "doctorName": "정해웅",
+      "authors": "Juwhan Lee, Sung-Tae Kim, Yong Woo Shim, Jin Wook Back, Jung Hae Ko, Won Hee Lee, Sung Hwa Paeng, Se Young Pyo, Young Jin Heo, Hae Woong Jeong, Young Gyun Jeong"
+    },
+    {
+      "paper_id": 493305,
+      "doctorName": "정해웅",
+      "authors": "Min Ha Kwag, Jin Young Park, Hae Woong Jeong, Ji Yeon Han, Jong Heon Lim, Young Seon Kim, Jung Won Park"
+    },
+    {
+      "paper_id": 493306,
+      "doctorName": "정해웅",
+      "authors": "Seung Hwan Kim, Hyungon Lee, Su Bin Kim, Sung Tae Kim, Jin Wook Baek, Young Jin Heo, Hae Woong Jeong, Hye Jin Kim, Jung Hyun Park, Jung-Soo Kim, Sung-Chul Jin"
+    },
+    {
+      "paper_id": 493307,
+      "doctorName": "정해웅",
+      "authors": "Jin Wook Baek, Young Jin Heo, Sung Tae Kim, Jung Hwa Seo, Hae Woong Jeong, Eung-Gyu Kim"
+    },
+    {
+      "paper_id": 493308,
+      "doctorName": "정해웅",
+      "authors": "Donghyun Kim, Young Jin Heo, Hae Woong Jeong, Jin Wook Baek, Gi Won Shin, Sung-Chul Jin, Hye Jin Baek, Kyeong Hwa Ryu, Kang Soo Kim, InSeong Kim"
+    },
+    {
+      "paper_id": 493309,
+      "doctorName": "정해웅",
+      "authors": "Yong Woo Shim, Jung Hyun Park, Sung-Tae Kim, Jin Wook Baek, Hyun Gon Lee, Jung Hae Ko, Sung Hwa Paeng, Se Young Pyo, Sung-Chul Jin, Hae Woong Jeong, Young Gyun Jeong"
+    },
+    {
+      "paper_id": 493310,
+      "doctorName": "정해웅",
+      "authors": "Young Jin Heo, Hae Woong Jeong, Donghyun Kim, Jin Wook Baek, Ji-Yeon Han, Hye Jung Choo, Sung Tae Kim, Young Gyun Jeong, Sung-Chul Jin"
+    },
+    {
+      "paper_id": 493312,
+      "doctorName": "정해웅",
+      "authors": "Minji Shin, Young Jin Heo, Donghyun Kim, Hae Woong Jeong, Jin Wook Baek, Ha Young Park"
+    },
+    {
+      "paper_id": 493313,
+      "doctorName": "정해웅",
+      "authors": "H J Baek, Y J Heo, D Kim, S Y Yun, J W Baek, H W Jeong, H J Choo, J Y Lee, S-I Oh"
+    },
+    {
+      "paper_id": 493314,
+      "doctorName": "정해웅",
+      "authors": "Su Young Yun, Hye Jung Choo, Hae Woong Jeong, Sun Joo Lee"
+    },
+    {
+      "paper_id": 493315,
+      "doctorName": "정해웅",
+      "authors": "Young Jin Heo, Donghyun Kim, Hae Woong Jeong, Jin Wook Baek, Da Som Kim, Gi Won Shin, Ji-Yeon Han, Sung Tae Kim, Young Gyun Jeong"
+    },
+    {
+      "paper_id": 493317,
+      "doctorName": "정해웅",
+      "authors": "Heecheol Park, Jin Wook Baek, Hae Woong Jeong, Young Jin Heo, Suyoung Yun, Ji-Yeon Han"
+    },
+    {
+      "paper_id": 493318,
+      "doctorName": "정해웅",
+      "authors": "Sung-Tae Kim, Sung-Chul Jin, Hae Woong Jeong, Jin Wook Baek, Young Gyun Jeong"
+    },
+    {
+      "paper_id": 493319,
+      "doctorName": "정해웅",
+      "authors": "Yong-Hwan Cho, Jaehyung Choi, Chae-Wook Huh, Chang Hyeun Kim, Chul Hoon Chang, Soon Chan Kwon, Young Woo Kim, Seung Hun Sheen, Sukh Que Park, Jun Kyeung Ko, Sung-Kon Ha, Hae Woong Jeong, Hyen Seung Kang, Clinical Practice Guideline Committee of the Korean Neuroendovascular Society"
+    },
+    {
+      "paper_id": 493320,
+      "doctorName": "정해웅",
+      "authors": "Jinwook Baek, Hae Woong Jeong, Young Jin Heo, Suyoung Yun, Myongjin Kang, Byungjun Kim, Eui Jong Kim, Soo Mee Lim, Boeun Lee"
+    },
+    {
+      "paper_id": 493321,
+      "doctorName": "정해웅",
+      "authors": "Jinwook Baek, Hae Woong Jeong, Ji-Yeon Han, Young Jin Heo, Sooyoung Yun, Won Hee Lee, Sung Tae Kim"
+    },
+    {
+      "paper_id": 493324,
+      "doctorName": "김성진",
+      "authors": "Jung-Joon Moon, Ho-Sook Kim, Joo-Cheol Shim, Jung-Mee Ahn, Do-Un Jung, Dong-Jin Kim, Hye-Eun Jeong, Eun-Young Kim, Dong-Wook Jeon, Sung-Jin Kim, Jae-Gook Shin"
+    }
+  ]
+}

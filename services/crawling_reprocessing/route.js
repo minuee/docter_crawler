@@ -288,9 +288,9 @@ router.post('/make-resume', async (req, res, next) => {
 
 /**
  * @swagger
- *  /v1/c/crawling_reporcessing/make-standard':
+ *  /v1/c/crawling_reporcessing/make-standard:
  *    post:
- *      summary: "병원데이터 후가공 - 진료과목과세부진료분야 설정"
+ *      summary: "병원데이터 후가공 - 진료과목과세부진료분야 설정(부사장님 작업영영 사용중지"
  *      description: "수집된 의사 진료과목과세부진료분야 설정 "
  *      tags: [병원데이터 후가공]
  *      produces:
@@ -438,8 +438,8 @@ router.post('/make-standard', async (req, res, next) => {
 
         if (matchedSpecialties.length > 0) {
           const param2 = {
-            target_find_depth : JSON.stringify([deptname]),
-            target_specialties: JSON.stringify(matchedSpecialties),
+            target_find_depth : [deptname],//JSON.stringify([deptname]),
+            target_specialties: matchedSpecialties,//JSON.stringify(matchedSpecialties),
             target_rid_long: rid_long
           }; 
           const format2 = { language: "sql", indent: "  " };
@@ -527,7 +527,7 @@ router.post('/make-standard', async (req, res, next) => {
 
 /**
  * @swagger
- *  /v1/c/crawling_reporcessing/make-doctor-specialty':
+ *  /v1/c/crawling_reporcessing/make-doctor-specialty:
  *    post:
  *      summary: "병원데이터 후가공 - doctor id에 specialty id 부여 작업"
  *      description: "수집된 의사 doctor id에 specialty id 부여 작업 "
@@ -566,10 +566,224 @@ router.post('/make-standard', async (req, res, next) => {
 
 router.post('/make-doctor-specialty', async (req, res, next) => {
  
-  const data_version_id = req.body.data_version_id;
-  const hid = req.body.hid;
+  const { data_version_id, hid } = req.body;
+  console.log(`data_version_id : ${data_version_id}, hid : ${hid}`);
 
-  console.log(`data_version_id : ${data_version_id}, hid : ${hid}`)
+  let totalCount = 0;
+  let processCount = 0;
+  let processNullCount = 0;
+  let processFailCount = 0;
+  const successData = [];
+  const failData = [];
+  const nullData = [];
+
+  const parseSpecialties = (specialties) => {
+    if (!specialties) return [];
+    // Define characters considered 'valid': Korean, English, numbers, whitespace
+    const validCharRegex = /^[ㄱ-ㅎㅏ-ㅣ가-힣a-zA-Z0-9\s]*$/;
+
+    let parsedSpecs = [];
+    try {
+      const parsed = JSON.parse(specialties);
+      if (Array.isArray(parsed)) {
+        parsedSpecs = parsed;
+      } else if (typeof parsed === 'string') {
+        parsedSpecs = parsed.split(',');
+      }
+    } catch (e) {
+      if (typeof specialties === 'string') {
+        parsedSpecs = specialties.split(',');
+      }
+    }
+
+    return parsedSpecs
+      .map(s => s.trim()) // Trim whitespace from each specialty
+      .filter(s => {
+        // Apply the new filtering rules
+        if (!s) return false; // Filter out empty strings
+        if (s.length >= 10) return false; // Filter out strings 10 characters or longer
+        if (!validCharRegex.test(s)) return false; // Filter out strings with special characters
+        return true; // Keep strings that pass all filters
+      });
+  };
+  
+  try {
+    mybatisMapper.createMapper([`${global.appRoot}/services/crawling_reprocessing/sql.xml`]);
+    const format = { language: "sql", indent: "  " };
+
+    // 1. Fetch all doctors for the given hospital
+    const param = { search_version_id: data_version_id, search_hid: hid };
+    const query = mybatisMapper.getStatement("sql", "select_doctor_basic_specialty", param, format);
+    const { DBError, RS } = await daoMysql.spCall(query);
+    if (DBError) throw new Error(DBError);
+
+    totalCount = _.size(RS);
+    console.log(`Total doctors fetched: ${totalCount}`);
+    const doctors = RS;
+
+    // 2. Collect all unique specialty names from all doctors
+    const allSpecialtyNames = new Set();
+    doctors.forEach(doctor => {
+      if (doctor.specialties) {
+        const specs = parseSpecialties(doctor.specialties);
+        specs.forEach(spec => allSpecialtyNames.add(spec));
+      }
+    });
+
+    if (allSpecialtyNames.size === 0) {
+      console.log("No specialties found to process.");
+      return res.send({ code: 200, success: true, message: "No specialties found to process." });
+    }
+
+    // 3. Bulk fetch existing specialty IDs
+    const specialtyNamesArray = Array.from(allSpecialtyNames);
+    const selectParam = { specialty_names: specialtyNamesArray };
+    const selectQuery = mybatisMapper.getStatement("sql", "select_specialties_by_names", selectParam, format);
+    const { RS: existingSpecialtiesRS } = await daoMysql.spCall(selectQuery);
+
+    const specialtyNameToIdMap = new Map();
+    existingSpecialtiesRS.forEach(spec => {
+      specialtyNameToIdMap.set(spec.specialty, spec.specialty_id);
+    });
+
+    // 4. Identify new specialties and bulk-insert them
+    const newSpecialtyNames = specialtyNamesArray.filter(name => !specialtyNameToIdMap.has(name));
+
+    if (newSpecialtyNames.length > 0) {
+      console.log(`Found ${newSpecialtyNames.length} new specialties to create:`, newSpecialtyNames);
+      const insertNewParam = { new_specialty_names: newSpecialtyNames };
+      const insertNewQuery = mybatisMapper.getStatement("sql", "insert_new_specialties", insertNewParam, format);
+      const { DBError: insertNewDBError } = await daoMysql.spCall(insertNewQuery);
+      if (insertNewDBError) throw new Error("Failed to bulk-insert new specialties.");
+
+      // 5. Fetch the new IDs and add them to the map
+      const selectNewParam = { specialty_names: newSpecialtyNames };
+      const selectNewQuery = mybatisMapper.getStatement("sql", "select_specialties_by_names", selectNewParam, format);
+      const { RS: newSpecialtiesRS } = await daoMysql.spCall(selectNewQuery);
+      newSpecialtiesRS.forEach(spec => {
+        specialtyNameToIdMap.set(spec.specialty, spec.specialty_id);
+      });
+    }
+
+    // 6. Prepare all doctor-specialty mappings
+    const mappings = [];
+    doctors.forEach(doctor => {
+      if (!doctor.doctor_id) {
+        console.log(`[FAIL-NO_DATA] Doctor ${doctor.doctorname} has no doctor_id.`);
+        nullData.push({ doctor_id: null, doctorName: doctor.doctorname, reason: "Doctor has no doctor_id." });
+        return;
+      }
+      const specs = parseSpecialties(doctor.specialties);
+      if (specs.length === 0) {
+        console.log(`[FAIL-NO_DATA] doctor: ${doctor.doctorname}`);
+        nullData.push({ doctor_id: doctor.doctor_id, doctorName: doctor.doctorname, reason: "specialties is empty for this doctor." });
+        return;
+      }
+
+      specs.forEach(specialtiesTitle => {
+        const specialty_id = specialtyNameToIdMap.get(specialtiesTitle);
+        if (specialty_id) {
+          mappings.push({ doctor_id: doctor.doctor_id, specialty_id });
+        } else {
+          console.log(`[FAIL-NOT_FOUND] Specialty '${specialtiesTitle}' for doctor '${doctor.doctorname}' could not be found or created.`);
+          failData.push({ doctor_id: doctor.doctor_id, doctorName: doctor.doctorname, specialtiesTitle, reason: "Specialty ID could not be resolved." });
+        }
+      });
+    });
+
+    processNullCount = nullData.length;
+    processFailCount = failData.length;
+
+    // 7. Bulk insert all mappings
+    if (mappings.length > 0) {
+      console.log(`Preparing to insert ${mappings.length} doctor-specialty mappings.`);
+      const mappingParam = { mappings };
+      const mappingQuery = mybatisMapper.getStatement("sql", "insert_doctor_specialty_mappings", mappingParam, format);
+      const { DBError: mappingDBError, RS: mappingRS } = await daoMysql.spCall(mappingQuery);
+
+      if (mappingDBError) {
+        throw new Error("Failed to bulk-insert doctor-specialty mappings.");
+      }
+      
+      // Since ON DUPLICATE KEY does not increment affectedRows for existing keys,
+      // we'll count the number of intended mappings as the success count.
+      processCount = mappings.length; 
+      mappings.forEach(m => {
+        successData.push({ doctor_id: m.doctor_id, specialty_id: m.specialty_id });
+      });
+    }
+
+    const outputDir = path.join(__dirname, 'completedata5');
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
+    const outputFilePath = path.join(outputDir, `list_${hid}.json`);
+    const outputData = { 
+      counting : {
+        totalCount,
+        processCount,
+        processNullCount,
+        processFailCount
+      },
+      successData, 
+      failData, nullData 
+    };
+    fs.writeFileSync(outputFilePath, JSON.stringify(outputData, null, 2));
+
+    const message = `processCount : ${processCount},processFailCount : ${processFailCount},processNullCount : ${processNullCount}`;
+    console.log(message);
+    return res.send({ code: 200, success: true, message });
+
+  }catch(e){
+    console.error(`error in make-doctor-specialty: ${e}`)
+    return res.json(TS.fail("Processing doctor specialties failed."));
+  }
+});
+
+
+
+
+/**
+ * @swagger
+ *  /v1/c/crawling_reporcessing/sns-match-doctor:
+ *    post:
+ *      summary: "병원데이터 후가공 - sns평가 정보의 dodctor정보 매칭"
+ *      description: "수sns평가 정보의 dodctor정보 매칭 "
+ *      tags: [병원데이터 후가공]
+ *      produces:
+ *      parameters:
+ *       - in: "body"
+ *         name: "input"
+ *         description: "data_version_id필수"
+ *         schema:
+ *           type: object
+ *           required:
+ *             - data_version_id
+ *           properties:
+ *             data_version_id:
+ *               type: string
+ *      responses:
+ *        "200":
+ *          description: 병원데이터 후가공 
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    users:
+ *                      type: object
+ *                      example:    
+ *                            { "code": 1000, "message": "접속성공" }
+ */
+
+
+router.post('/sns-match-doctor', async (req, res, next) => {
+ 
+  const data_version_id = req.body.data_version_id;
+
+  console.log(`data_version_id : ${data_version_id}`);
 
   let totalCount = 0;
   let processCount = 0;
@@ -578,20 +792,19 @@ router.post('/make-doctor-specialty', async (req, res, next) => {
   const successData = [];
   const failData = [];
   const nullData = [];
+  const hospitalCache = new Map();
   
   try{
     //mapper 경로
     mybatisMapper.createMapper([`${global.appRoot}/services/crawling_reprocessing/sql.xml`]);
 
     const param = {
-      search_rid_long : null,//'1FB50436AB3F03B126FBE3C89166EA1638A34E0CA7FA1EE0D89451A4AD25DB2A96B7C94DFD500E99FE3F793374EC418D138594572CA3B50B5712D9F91A90D9ABB4F67A5695BD5EEF417CEDA64AF3EC03',
-      search_version_id : data_version_id,
-      search_hid : hid
+      search_version_id : data_version_id
     }; 
     const format = { language: "sql", indent: "  " };
     const query = mybatisMapper.getStatement(
       "sql",
-      "select_doctor_basic_specialty",
+      "select_sns_match_doctor",
       param,
       format
     );
@@ -605,24 +818,23 @@ router.post('/make-doctor-specialty', async (req, res, next) => {
       data : RS
     };
     for (let i = 0; i < totalCount; i++) {
-      const rid_long = P1.data[i].rid_long;
-      const doctor_id = P1.data[i].doctor_id;
-      const deptname = P1.data[i].deptname;
-      const doctorName = P1.data[i].doctorname;
-      const standard_spec = P1.data[i].standard_spec;
-      console.log(`target ${i}번째 doctorName > ${doctorName}, deptname : ${deptname}, standard_spec : ${standard_spec}`)
+      let doctorname = P1.data[i].doctorname;
+      let hospital = P1.data[i].hospital;
+      const review_eval_id = P1.data[i].review_eval_id;
+      console.log(`target ${i+1}번째 doctorname > ${doctorname}, hospital : ${hospital}, review_eval_id : ${review_eval_id}`)
 
-      if(!functions.isEmpty(standard_spec)) {
-        const standardSpecList = JSON.parse(standard_spec);
-        for( const specialtiesTitle of standardSpecList ) {
+      if(!functions.isEmpty(doctorname) && !functions.isEmpty(hospital) ) {
+        const hospitalKey = hospital.replace(/\s/g, '');
+        let matchedHospitalInfo = hospitalCache.get(hospitalKey);
+
+        if (matchedHospitalInfo === undefined) {
           const selectSpecParam = {
-            search_specialty : specialtiesTitle
+            search_hospital : hospitalKey
           }; 
           const selectSpecFormat = { language: "sql", indent: "  " };
-          // NOTE: "controler"는 mybatis 네임스페이스 오타일 수 있습니다. (e.g. "sql")
           const selectSpecQuery = mybatisMapper.getStatement(
-              "controler",
-              "select_specialty_id",
+              "sql",
+              "select_hospital_hid",
               selectSpecParam,
               selectSpecFormat
           );
@@ -630,20 +842,46 @@ router.post('/make-doctor-specialty', async (req, res, next) => {
           const { DBError: selectSpecDBError, RS: selectSpecRS } = await daoMysql.spCall(selectSpecQuery);
           const selectSpecRet = await functions.myBatisResult(selectSpecDBError, selectSpecRS);
         
-          const matchedSpecialtyInfo = selectSpecRet.data?.length > 0 ? selectSpecRet.data : null;
-       
-          if (matchedSpecialtyInfo) { // Null 체크 강화
-            const specialty_id = matchedSpecialtyInfo[0]?.specialty_id;
+          matchedHospitalInfo = selectSpecRet.data?.length > 0 ? selectSpecRet.data : null;
+          hospitalCache.set(hospitalKey, matchedHospitalInfo);
+        }
+      
+        if (matchedHospitalInfo) { // Null 체크 강화
+          const standard_name = matchedHospitalInfo[0]?.standard_name;
+          const standard_hid= matchedHospitalInfo[0]?.hid;
 
-            if (specialty_id) {
+          if (standard_name && standard_hid ) {
+
+            const selectDoctorBasicParam = {
+              search_doctorname :  doctorname,
+              search_hospital : standard_name
+            }; 
+            const selectDoctorBasicFormat = { language: "sql", indent: "  " };
+            const selectDoctorBasicQuery = mybatisMapper.getStatement(
+                "sql",
+                "select_doctor_basic_info",
+                selectDoctorBasicParam,
+                selectDoctorBasicFormat
+            );
+    
+            const { DBError: selectDoctorBasicDBError, RS: selectDoctorBasicRS } = await daoMysql.spCall(selectDoctorBasicQuery);
+            const selectDoctorBasicRet = await functions.myBatisResult(selectDoctorBasicDBError, selectDoctorBasicRS);
+          
+            const matchedDoctorInfo = selectDoctorBasicRet.data?.length > 0 ? selectDoctorBasicRet.data : null;
+
+            if (matchedDoctorInfo) { // Null 체크 강화
+              const match_rid = matchedDoctorInfo[0]?.rid;
+              const match_rid_long= matchedDoctorInfo[0]?.rid_long;
               const updateParam = {
-                target_specialty_id : specialty_id,
-                target_doctor_id : doctor_id
+                match_rid,
+                match_rid_long,
+                match_hospital : standard_name,
+                target_review_eval_id : review_eval_id
               }; 
               const updateFormat = { language: "sql", indent: "  " };
               const updateQuery = mybatisMapper.getStatement(
                 "sql",
-                "update_doctor_basic_specialty",
+                "update_sns_match_doctor",
                 updateParam,
                 updateFormat
               );
@@ -652,51 +890,55 @@ router.post('/make-doctor-specialty', async (req, res, next) => {
               const updateRet = await functions.myBatisResult(updateDBError, updateRS);
               
               if (updateRet.success) {
-                console.log(`[SUCCESS] Linked doctor: ${doctorName} with specialty: '${specialtiesTitle}' (ID: ${specialty_id})`);
+                console.log(`[SUCCESS] Linked doctor: ${doctorname} with hospital: '${hospital}' (ID: ${review_eval_id})`);
                 processCount++;
                 successData.push({
-                  doctor_id,
-                  doctorName,
-                  specialty_id,
-                  specialtiesTitle
+                  review_eval_id,
+                  doctorname,
+                  hospital
                 });
               } else {
-                console.log(`[FAIL-DB_UPDATE] Doctor: ${doctorName}, Specialty: ${specialtiesTitle}`);
+                console.log(`[FAIL-DB_UPDATE] Doctor: ${doctorname}, hospital: ${hospital}`);
                 processFailCount++;
                 failData.push({
-                  doctor_id,
-                  doctorName,
-                  specialtiesTitle
+                  review_eval_id,
+                  doctorname,
+                  hospital,
                 });
               }
             } else {
-              console.log(`[FAIL-NO_ID] Specialty '${specialtiesTitle}' found but has no ID.`);
-              processFailCount++;
-              failData.push({ doctor_id, doctorName, specialtiesTitle, reason: "Found specialty but it has no ID" });
+                console.log(`[FAIL-DOCTOR_NOT_FOUND] Doctor '${doctorname}' not found at hospital '${standard_name}'.`);
+                processFailCount++;
+                failData.push({ review_eval_id, doctorname, hospital, reason: "Doctor not found at the specified hospital" });
             }
           } else {
-            console.log(`[FAIL-NOT_FOUND] Specialty '${specialtiesTitle}' not found in master DB.`);
+            console.log(`[FAIL-NO_HOSPITAL_ID] review_eval_id '${review_eval_id}', hospital '${hospital}' found but has no hid.`);
             processFailCount++;
-            failData.push({ doctor_id, doctorName, specialtiesTitle, reason: "Specialty not found in master DB" });
+            failData.push({ review_eval_id, doctorname, hospital, reason: "Hospital found but standard_name or hid is missing" });
           }
+        } else {
+          console.log(`[FAIL-HOSPITAL_NOT_FOUND] review_eval_id '${review_eval_id}', hospital '${hospital}' not found in master DB.`);
+          processFailCount++;
+          failData.push({ review_eval_id, doctorname, hospital, reason: "Hospital not found" });
         }
+      
       } else {
-        console.log(`[FAIL-NO_DATA] doctor: ${doctorName}`);
+        console.log(`[FAIL-NO_DATA] doctor or hospital name is empty for review_eval_id: ${review_eval_id}`);
         processNullCount++;
         nullData.push({
-          doctor_id,
-          doctorName,
-          reason: "standard_spec is empty for this doctor."
+          review_eval_id,
+          doctorname,
+          hospital
         });
       }
       await CS.wait(500); // 0.5초 딜레이 시킨다
     } // for loop end
 
-    const outputDir = path.join(__dirname, 'completedata4');
+    const outputDir = path.join(__dirname, 'completedata6');
     if (!fs.existsSync(outputDir)) {
       fs.mkdirSync(outputDir, { recursive: true });
     }
-    const outputFilePath = path.join(outputDir, `list_${hid}.json`);
+    const outputFilePath = path.join(outputDir, `list_ver_${data_version_id}.json`);
     const outputData = {
       successData,
       failData,
@@ -711,11 +953,11 @@ router.post('/make-doctor-specialty', async (req, res, next) => {
     });
   }catch(e){
     console.error(`error 1111: ${e}`)
-    return res.json(TS.fail("논문 수집 DB fail."));
+    return res.json(TS.fail("SNS 매칭 처리 DB fail."));
   }
 });
 
- 
+
 /**
  * @swagger
  *  /v1/c/crawling_reporcessing/make-revert:

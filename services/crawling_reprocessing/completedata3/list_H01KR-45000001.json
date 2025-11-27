@@ -1,0 +1,325 @@
+{
+  "counting": {
+    "totalCount": 62,
+    "processSuccessCount": 8,
+    "processFailCount": 0,
+    "processNullCount": 0,
+    "processNotMatchCount": 54
+  },
+  "successData": [
+    {
+      "paper_id": 496072,
+      "doctorName": "석승한",
+      "firstAuthors": "Seung-Han Suk"
+    },
+    {
+      "paper_id": 496079,
+      "doctorName": "박현영",
+      "firstAuthors": "Hyunyoung Park"
+    },
+    {
+      "paper_id": 496130,
+      "doctorName": "변정태",
+      "firstAuthors": "Jeong Tae Byoun"
+    },
+    {
+      "paper_id": 496131,
+      "doctorName": "변정태",
+      "firstAuthors": "Jeong Tae Byoun"
+    },
+    {
+      "paper_id": 496132,
+      "doctorName": "변정태",
+      "firstAuthors": "Jeong Tae Byoun"
+    },
+    {
+      "paper_id": 496133,
+      "doctorName": "변정태",
+      "firstAuthors": "Jeong Tae Byoun"
+    },
+    {
+      "paper_id": 496134,
+      "doctorName": "변정태",
+      "firstAuthors": "Jeong Tae Byoun"
+    },
+    {
+      "paper_id": 496146,
+      "doctorName": "김영서",
+      "firstAuthors": "Young Seo Kim"
+    }
+  ],
+  "failData": [],
+  "notMatchData": [
+    {
+      "paper_id": 496039,
+      "doctorName": "이철",
+      "firstAuthors": "Hayoung Lee"
+    },
+    {
+      "paper_id": 496040,
+      "doctorName": "이철",
+      "firstAuthors": "Eunsung Park"
+    },
+    {
+      "paper_id": 496042,
+      "doctorName": "이철",
+      "firstAuthors": "Hayoung Lee"
+    },
+    {
+      "paper_id": 496043,
+      "doctorName": "조은영",
+      "firstAuthors": "Seung Ju Song"
+    },
+    {
+      "paper_id": 496045,
+      "doctorName": "조은영",
+      "firstAuthors": "Chang Hun Lee"
+    },
+    {
+      "paper_id": 496046,
+      "doctorName": "조은영",
+      "firstAuthors": "Hyung Joon Kim, Ju Hyun Kim"
+    },
+    {
+      "paper_id": 496047,
+      "doctorName": "조은영",
+      "firstAuthors": "Hoon Gil Jo"
+    },
+    {
+      "paper_id": 496048,
+      "doctorName": "조은영",
+      "firstAuthors": "Chang Hun Lee, Hoon Gil Jo"
+    },
+    {
+      "paper_id": 496049,
+      "doctorName": "조은영",
+      "firstAuthors": "Dong Hyun Sinn"
+    },
+    {
+      "paper_id": 496050,
+      "doctorName": "조은영",
+      "firstAuthors": "Seong Woo Kim"
+    },
+    {
+      "paper_id": 496055,
+      "doctorName": "석승한",
+      "firstAuthors": "Hyun Goo Kang"
+    },
+    {
+      "paper_id": 496059,
+      "doctorName": "석승한",
+      "firstAuthors": "Yang-Ki Minn"
+    },
+    {
+      "paper_id": 496060,
+      "doctorName": "석승한",
+      "firstAuthors": "Hyunyoung Park"
+    },
+    {
+      "paper_id": 496063,
+      "doctorName": "석승한",
+      "firstAuthors": "Sang Won Han"
+    },
+    {
+      "paper_id": 496066,
+      "doctorName": "석승한",
+      "firstAuthors": "Y K Minn"
+    },
+    {
+      "paper_id": 496067,
+      "doctorName": "석승한",
+      "firstAuthors": "Sang Won Han"
+    },
+    {
+      "paper_id": 496069,
+      "doctorName": "석승한",
+      "firstAuthors": "Yang-Ki Minn"
+    },
+    {
+      "paper_id": 496070,
+      "doctorName": "석승한",
+      "firstAuthors": "Yong Tae Kwak"
+    },
+    {
+      "paper_id": 496073,
+      "doctorName": "석승한",
+      "firstAuthors": "Yong Tae Kwak"
+    },
+    {
+      "paper_id": 496074,
+      "doctorName": "박현영",
+      "firstAuthors": "Hyun Jeong Han"
+    },
+    {
+      "paper_id": 496076,
+      "doctorName": "박현영",
+      "firstAuthors": "J H Park"
+    },
+    {
+      "paper_id": 496080,
+      "doctorName": "박현영",
+      "firstAuthors": "Cheng-Chang Yen"
+    },
+    {
+      "paper_id": 496085,
+      "doctorName": "이학승",
+      "firstAuthors": "Young Seo Kim"
+    },
+    {
+      "paper_id": 496092,
+      "doctorName": "이학승",
+      "firstAuthors": "Sun-Young Oh"
+    },
+    {
+      "paper_id": 496094,
+      "doctorName": "정진성",
+      "firstAuthors": "Seung Jae Lee"
+    },
+    {
+      "paper_id": 496096,
+      "doctorName": "정진성",
+      "firstAuthors": "Hyun Goo Kang"
+    },
+    {
+      "paper_id": 496098,
+      "doctorName": "정진성",
+      "firstAuthors": "Min Jeong Wang"
+    },
+    {
+      "paper_id": 496100,
+      "doctorName": "이상학",
+      "firstAuthors": "A B Makar"
+    },
+    {
+      "paper_id": 496101,
+      "doctorName": "이상학",
+      "firstAuthors": "Hyun Goo Kang"
+    },
+    {
+      "paper_id": 496102,
+      "doctorName": "이상학",
+      "firstAuthors": "SangHak Yi"
+    },
+    {
+      "paper_id": 496103,
+      "doctorName": "이상학",
+      "firstAuthors": "Hyun Goo Kang"
+    },
+    {
+      "paper_id": 496104,
+      "doctorName": "이상학",
+      "firstAuthors": "SangHak Yi"
+    },
+    {
+      "paper_id": 496105,
+      "doctorName": "이상학",
+      "firstAuthors": "Min Jeong Wang"
+    },
+    {
+      "paper_id": 496106,
+      "doctorName": "이상학",
+      "firstAuthors": "Min Jeong Wang"
+    },
+    {
+      "paper_id": 496107,
+      "doctorName": "이상학",
+      "firstAuthors": "Min Ju Kang"
+    },
+    {
+      "paper_id": 496108,
+      "doctorName": "이상학",
+      "firstAuthors": "San Hak Yi"
+    },
+    {
+      "paper_id": 496109,
+      "doctorName": "이상학",
+      "firstAuthors": "SangHak Yi"
+    },
+    {
+      "paper_id": 496112,
+      "doctorName": "전형구",
+      "firstAuthors": "Seong-Hun Kim"
+    },
+    {
+      "paper_id": 496113,
+      "doctorName": "전형구",
+      "firstAuthors": "Hyung Ku Chon"
+    },
+    {
+      "paper_id": 496114,
+      "doctorName": "전형구",
+      "firstAuthors": "Hyung Ku Chon, Yun Chae Lee"
+    },
+    {
+      "paper_id": 496115,
+      "doctorName": "전형구",
+      "firstAuthors": "Eunae Cho"
+    },
+    {
+      "paper_id": 496117,
+      "doctorName": "전형구",
+      "firstAuthors": "Hyung Ku Chon"
+    },
+    {
+      "paper_id": 496118,
+      "doctorName": "전형구",
+      "firstAuthors": "Hyung Ku Chon"
+    },
+    {
+      "paper_id": 496119,
+      "doctorName": "전형구",
+      "firstAuthors": "Dongwook Oh"
+    },
+    {
+      "paper_id": 496120,
+      "doctorName": "전형구",
+      "firstAuthors": "Hyung Ku Chon"
+    },
+    {
+      "paper_id": 496121,
+      "doctorName": "전형구",
+      "firstAuthors": "Dong-Won Ahn"
+    },
+    {
+      "paper_id": 496122,
+      "doctorName": "전형구",
+      "firstAuthors": "Hyung Ku Chon"
+    },
+    {
+      "paper_id": 496123,
+      "doctorName": "전형구",
+      "firstAuthors": "Yun Chae Lee"
+    },
+    {
+      "paper_id": 496124,
+      "doctorName": "전형구",
+      "firstAuthors": "Yoon Suk Lee"
+    },
+    {
+      "paper_id": 496125,
+      "doctorName": "전형구",
+      "firstAuthors": "Sung Yong Han"
+    },
+    {
+      "paper_id": 496126,
+      "doctorName": "전형구",
+      "firstAuthors": "Hyung Ku Chon"
+    },
+    {
+      "paper_id": 496127,
+      "doctorName": "전형구",
+      "firstAuthors": "Seong-Hun Kim"
+    },
+    {
+      "paper_id": 496128,
+      "doctorName": "전형구",
+      "firstAuthors": "Yun Chae Lee"
+    },
+    {
+      "paper_id": 496129,
+      "doctorName": "김민규",
+      "firstAuthors": "Jae Kyun Park"
+    }
+  ],
+  "nullData": []
+}

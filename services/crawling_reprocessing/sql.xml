@@ -37,6 +37,7 @@
             doctor_basic db
         WHERE
             1=1 AND ( db.data_version_id = #{search_version_id} OR db.data_version_id_update = #{search_version_id} )
+            and db.standard_dpt IS NULL AND db.doctorname = '이길준'
             <if test="search_hid != null">
                 AND db.hid = #{search_hid}
             </if>
@@ -51,20 +52,20 @@
             doctor_basic
         SET 
             standard_dpt = #{target_find_depth},
-            standard_spec = #{target_fiund_dept_specialtys},
+            standard_spec = #{target_specialties},
             updateAt = now()
         WHERE 
-            paper_id = #{target_paper_id}
+            rid_long = #{target_rid_long}
     </update>
 
     <select id="select_doctor_basic_specialty">
         SELECT
-            db.standard_spec,db.rid_long,db.hid,db.doctorname,db.doctor_id
+            db.specialties,db.rid_long,db.hid,db.doctorname,db.doctor_id
         FROM 
             doctor_basic db
         WHERE
             1=1 AND ( db.data_version_id = #{search_version_id} OR db.data_version_id_update = #{search_version_id} )
-            AND db.standard_spec IS NOT NULL AND db.doctor_id IS NOT NULL
+            AND db.specialties IS NOT NULL AND db.doctor_id IS NOT NULL AND db.doctorname in ('이길준','김병익','홍석진','은영희')
             <if test="search_hid != null">
                 AND db.hid = #{search_hid}
             </if>
@@ -84,16 +85,51 @@
         LIMIT 1
     </select>
 
+    <insert id="insert_specialty_id">
+        INSERT INTO specialty (
+            specialty,
+            createAt
+        ) values (
+            #{new_specialty},
+            now()
+        )
+    </insert>
+
     <insert id="update_doctor_basic_specialty">
         INSERT INTO doctor_specialty (
             specialty_id,
             doctor_id,
-            created_at
+            createAt
         ) VALUES (
             #{target_specialty_id},
             #{target_doctor_id},
             NOW()
         )
+        ON DUPLICATE KEY UPDATE
+            specialty_id = specialty_id
+    </insert>
+
+    <select id="select_specialties_by_names" resultType="map">
+        SELECT specialty_id, specialty
+        FROM specialty
+        WHERE specialty IN
+        <foreach item="item" index="index" collection="specialty_names" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </select>
+
+    <insert id="insert_new_specialties">
+        INSERT INTO specialty (specialty, createAt) VALUES
+        <foreach item="item" index="index" collection="new_specialty_names" open="" separator="," close="">
+            (#{item}, NOW())
+        </foreach>
+    </insert>
+
+    <insert id="insert_doctor_specialty_mappings">
+        INSERT INTO doctor_specialty (doctor_id, specialty_id, createAt) VALUES
+        <foreach item="item" index="index" collection="mappings" open="" separator="," close="">
+            (#{item.doctor_id}, #{item.specialty_id}, NOW())
+        </foreach>
         ON DUPLICATE KEY UPDATE
             specialty_id = specialty_id
     </insert>
@@ -159,7 +195,6 @@
                 AND db.hid = #{search_hid}
             </if>
         ORDER BY dp.paper_id asc
-        LIMIT 15000 OFFSET 3600
     </select>
 
     <update id="update_doctor_pubmed_find_first_authors">
@@ -181,6 +216,72 @@
             updateAt = now()
         WHERE 
             paper_id = #{target_paper_id}
+    </update>
+
+     <select id="select_doctor_revert_career_data">
+        SELECT
+            dc.doctorname,dc.hospital
+        FROM 
+            patient_review_evaluation dc
+        WHERE
+            1=1  AND dc.data_version_id = '1' AND dc.rid is null 
+    </select>
+
+    <select id="select_hospital_hid">
+        SELECT
+            a.standard_name, a.hid
+        FROM 
+            hospital_alias a
+        WHERE
+            a.alias_name = #{search_hospital}
+        ORDER BY a.hid
+        LIMIT 1
+    </select>
+
+    <select id="select_hospital_hid">
+        SELECT
+            a.rid, a.rid_long
+        FROM 
+            doctor_baisc a
+        WHERE
+            a.doctorname = #{search_doctorname} and a.hid = #{search_hospital}
+        LIMIT 1
+    </select>
+
+    <update id="update_sns_match_doctor">
+        UPDATE 
+            patient_review_evaluation
+        SET 
+            rid = #{match_rid},
+            rid_long = #{match_rid_long},
+            new_hospital = #{match_hospital},
+            updateAt = now()
+        WHERE 
+            review_eval_id = #{target_review_eval_id}
+    </update>
+
+    <select id="select_doctor_basic_prev_doctor">
+         SELECT
+            db.doctorname,db.hid,db.prev_rid,pre.doctorname,pre.review_eval_id
+        FROM 
+            doctor_basic db
+            LEFT JOIN patient_review_evaluation pre on db.rid = pre.rid
+        WHERE
+            1=1  AND db.data_version_id = #{search_version_id} AND db.prev_rid is not null
+            AND pre.doctorname is not null
+    </select>
+
+    <update id="update_doctor_basic_prev_doctor">
+        UPDATE 
+            patient_review_evaluation
+        SET 
+            rid = #{match_rid},
+            rid_long = #{match_rid_long},
+            new_hospital = #{match_hospital},
+            new_department = #{match_department},
+            updateAt = now()
+        WHERE 
+            review_eval_id = #{target_review_eval_id}
     </update>
 
 </mapper>

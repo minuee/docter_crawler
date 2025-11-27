@@ -1,0 +1,942 @@
+{
+  "counting": {
+    "totalCount": 186,
+    "processSuccessCount": 0,
+    "processFailCount": 0,
+    "processSameCount": 186
+  },
+  "successData": [],
+  "failData": [],
+  "sameData": [
+    {
+      "paper_id": 493328,
+      "doctorName": "김선휴",
+      "authors": "Song Yi Park, Sun Hyu Kim, Byungho Choi"
+    },
+    {
+      "paper_id": 493329,
+      "doctorName": "김선휴",
+      "authors": "Song Yi Park, Sun Hyu Kim, Byungho Choi"
+    },
+    {
+      "paper_id": 493330,
+      "doctorName": "김선휴",
+      "authors": "Sun Hyu Kim, Hyeji Lee"
+    },
+    {
+      "paper_id": 493331,
+      "doctorName": "김선휴",
+      "authors": "Song Yi Park, Byungho Choi, Sun Hyu Kim"
+    },
+    {
+      "paper_id": 493332,
+      "doctorName": "김선휴",
+      "authors": "Jung Jun Kim, Sun Hyu Kim, Sangyup Chung, Byeong Ju Park, Soobeom Park, Song Yi Park"
+    },
+    {
+      "paper_id": 493334,
+      "doctorName": "김선휴",
+      "authors": "Song Yi Park, Daesung Lim, Seong Chun Kim, Ji Ho Ryu, Yong Hwan Kim, Byungho Choi, Sun Hyu Kim"
+    },
+    {
+      "paper_id": 493335,
+      "doctorName": "김선휴",
+      "authors": "Song Yi Park, Daesung Lim, Seong Chun Kim, Ji Ho Ryu, Yong Hwan Kim, Byungho Choi, Sun Hyu Kim"
+    },
+    {
+      "paper_id": 493336,
+      "doctorName": "김선휴",
+      "authors": "Sangyup Chung, Sun-Hyu Kim, Byeong-Ju Park, Soobeom Park"
+    },
+    {
+      "paper_id": 493337,
+      "doctorName": "김선휴",
+      "authors": "Song-Yi Park, Sun-Hyu Kim"
+    },
+    {
+      "paper_id": 493338,
+      "doctorName": "김선휴",
+      "authors": "Soobeom Park, Sun Hyu Kim"
+    },
+    {
+      "paper_id": 493339,
+      "doctorName": "김선휴",
+      "authors": "Song Yi Park, Daesung Lim, Seong Chun Kim, Ji Ho Ryu, Yong Hwan Kim, Byungho Choi, Sun Hyu Kim"
+    },
+    {
+      "paper_id": 493340,
+      "doctorName": "김선휴",
+      "authors": "Sun Hyu Kim, Sunpyo Kim, Gyu Chong Cho, Ji Hwan Lee, Eun Jung Park, Duk Hee Lee"
+    },
+    {
+      "paper_id": 493341,
+      "doctorName": "김선휴",
+      "authors": "Eun Seog Hong, Sun Hyu Kim, Woo Youn Kim, Ryeok Ahn, Jung Seok Hong"
+    },
+    {
+      "paper_id": 493346,
+      "doctorName": "김선휴",
+      "authors": "Jinhae Jun, Ji Hwan Lee, Juhee Han, Sun Hyu Kim, Sunpyo Kim, Gyu Chong Cho, Eun Jung Park, Duk Hee Lee, Ju Young Hong, Min Joung Kim"
+    },
+    {
+      "paper_id": 493347,
+      "doctorName": "김선휴",
+      "authors": "Sung Oh Hwang, Sun Hyu Kim, Hyun Kim, Yong Soo Jang, Pei Ge Zhao, Kang Hyun Lee, Han Joo Choi, Tae Yong Shin"
+    },
+    {
+      "paper_id": 493350,
+      "doctorName": "윤선근",
+      "authors": "Se Yun Kim, Jiwook Lee, Sun Geon Yoon, Min Soo Kim"
+    },
+    {
+      "paper_id": 493352,
+      "doctorName": "윤선근",
+      "authors": "HeeSeung Noh, Sun Geon Yoon, Kyunghak Choi, Kyu-Hyouck Kyung, Min Soo Kim"
+    },
+    {
+      "paper_id": 493353,
+      "doctorName": "윤선근",
+      "authors": "Sun Geon Yoon, Kyunghak Choi, Kyu-Hyouck Kyung, Min Soo Kim"
+    },
+    {
+      "paper_id": 493354,
+      "doctorName": "윤선근",
+      "authors": "Sun Geon Yoon, Hyung Chang Lee, Sang-Min Lee"
+    },
+    {
+      "paper_id": 493355,
+      "doctorName": "윤선근",
+      "authors": "Sungjeep Kim, Kyunghak Choi, Min Ae Keum, Min Soo Kim, Sun Geon Yoon, Kyu-Hyouck Kyoung"
+    },
+    {
+      "paper_id": 493357,
+      "doctorName": "윤선근",
+      "authors": "Sun Geon Yoon, Min Su Kim, Soon Chan Kwon, In Uk Lyo, Hong Bo Sim"
+    },
+    {
+      "paper_id": 493358,
+      "doctorName": "윤선근",
+      "authors": "Sun Geon Yoon, Sung-Chul Jin, Seung Hwan Kim, Kyoung Dong Jeon, Doo Young Kim, Sun-Il Lee, Hae Woong Jeong"
+    },
+    {
+      "paper_id": 493359,
+      "doctorName": "유경돈",
+      "authors": "Seong Min Lee, Saram Lee, Kyu Hyeon Kim, Daehan Kim, Seong Joon Park, Kyu Hong Kim, Sunhwa Lee, Eunjin Bae, Kyung Don Yoo, Jae Wook Lee, Joong Yull Park, Yon Su Kim, Ran-Hui Cha, Seung Hee Yang"
+    },
+    {
+      "paper_id": 493360,
+      "doctorName": "유경돈",
+      "authors": "Woo Yeong Park, Eunjin Bae, Hui-Seung Lee, Chi-Yeon Lim, Jang-Hee Cho, Byung Chul Yu, Miyeun Han, Sang Heon Song, Gang-Jee Ko, Jae Won Yang, Sungjin Chung, Yu Ah Hong, Young Youl Hyun, In O Sun, Hyunsuk Kim, Won Min Hwang, Sung Joon Shin, Soon Hyo Kwon, Kyung Don Yoo"
+    },
+    {
+      "paper_id": 493361,
+      "doctorName": "유경돈",
+      "authors": "Eunmi Jo, Ji Eun Kim, Ji In Park, Seong Han Yun, Kyung Don Yoo, Yunmi Kim, Eun Young Seong, Sang Heon Song, Ju Han Kim, Hoseok Koo, Hyo Jin Kim"
+    },
+    {
+      "paper_id": 493362,
+      "doctorName": "유경돈",
+      "authors": "In O Sun, Hui-Seung Lee, Chiyeon Lim, Eunjin Bae, Young Youl Hyun, Sungjin Chung, Soon Hyo Kwon, Jang-Hee Cho, Kyung Don Yoo, Woo Yeong Park, Hyunsuk Kim, Byung Chul Yu, Gang-Jee Ko, Jae Won Yang, Won Min Hwang, Sang Heon Song, Sung Joon Shin, Yu Ah Hong"
+    },
+    {
+      "paper_id": 493363,
+      "doctorName": "유경돈",
+      "authors": "Inae Lee, Junhyug Noh, Yaerim Kim, Jung Nam An, Jae Yoon Park, Yong Chul Kim, Jeonghwan Lee, Jung Pyo Lee, Jong Soo Lee, Kyungho Choi, Kyung Don Yoo"
+    },
+    {
+      "paper_id": 493364,
+      "doctorName": "유경돈",
+      "authors": "Kyung Sun Park, Yong-Giun Kim, Gyung-Min Park, Kyung Don Yoo, Hojong Park, Sang Jun Park, Jongha Park, Shin-Jae Kim, Jong Soo Lee"
+    },
+    {
+      "paper_id": 493365,
+      "doctorName": "유경돈",
+      "authors": "Yumi Jang, Seong Geun Kim, Sua Lee, Hyun Ho Oh, Nara Shin, Young-Ki Lee, Kyung Don Yoo"
+    },
+    {
+      "paper_id": 493366,
+      "doctorName": "유경돈",
+      "authors": "AJin Cho, Seon A Jeong, Hayne Cho Park, Hye Eun Yoon, Jungeon Kim, Young-Ki Lee, Kyung Don Yoo, Korean Society of Nephrology Disaster Preparedness and Response Committee"
+    },
+    {
+      "paper_id": 493367,
+      "doctorName": "유경돈",
+      "authors": "Junhyug Noh, Sun Young Park, Wonho Bae, Kangil Kim, Jang-Hee Cho, Jong Soo Lee, Shin-Wook Kang, Yong-Lim Kim, Yon Su Kim, Chun Soo Lim, Jung Pyo Lee, Kyung Don Yoo"
+    },
+    {
+      "paper_id": 493368,
+      "doctorName": "유경돈",
+      "authors": "Kyung Don Yoo, Sunhwa Lee, Hayne Cho Park, Won Min Hwang, Jung Pyo Lee, Adrian Liew, Ali Abu-Alfa, Hyeong Cheon Park, Young-Ki Lee"
+    },
+    {
+      "paper_id": 493369,
+      "doctorName": "유경돈",
+      "authors": "Seung Hye Chu, Eun Hee Park, Haekyung Lee, Yu Ah Hong, Woo Yeong Park, Jang-Hee Cho, In O Sun, Won Min Hwang, Soon Hyo Kwon, Jin Seok Jeon, Hyunjin Noh, Kyung Don Yoo, Hyoungnae Kim"
+    },
+    {
+      "paper_id": 493370,
+      "doctorName": "유경돈",
+      "authors": "Kyung Don Yoo, Chia-Ter Chao, Jung Pyo Lee, Ali K Abu-Alfa"
+    },
+    {
+      "paper_id": 493371,
+      "doctorName": "유경돈",
+      "authors": "Jeong-Hoon Lim, Soie Kwon, Yu Jin Seo, Young Hoon Kim, Hyunwook Kwon, Yon Su Kim, Hajeong Lee, Yong-Lim Kim, Chan-Duck Kim, Sun-Hee Park, Deokbi Hwang, Woo-Sung Yun, Hyung-Kee Kim, Seung Huh, Jong Soo Lee, Kyung Don Yoo, Jong Cheol Jeong, Jeonghwan Lee, Jung Pyo Lee, Jang-Hee Cho"
+    },
+    {
+      "paper_id": 493372,
+      "doctorName": "유경돈",
+      "authors": "Jihyun Yang, Hui Seung Lee, Chi-Yeon Lim, Hyunsuk Kim, Sungjin Chung, Soon Hyo Kwon, Jang-Hee Cho, Kyung Don Yoo, Woo Yeong Park, In O Sun, Byung Chul Yu, Gang-Jee Ko, Jae Won Yang, Won Min Hwang, Sang Heon Song, Sung Joon Shin, Yu Ah Hong, Eunjin Bae, Young Youl Hyun"
+    },
+    {
+      "paper_id": 493373,
+      "doctorName": "유경돈",
+      "authors": "Kyung Don Yoo, Chia-Ter Chao"
+    },
+    {
+      "paper_id": 493374,
+      "doctorName": "유경돈",
+      "authors": "AJin Cho, Seon A Jeong, Hayne Cho Park, Do Hyoung Kim, Kyung Don Yoo, Hye Eun Yoon, Yang Gyun Kim, Young-Ki Lee, Korean Society of Nephrology Disaster Preparedness and Response Committee"
+    },
+    {
+      "paper_id": 493375,
+      "doctorName": "유경돈",
+      "authors": "Young-Ki Lee, Seon A Jeong, Hayne Cho Park, Do Hyoung Kim, Kyung Don Yoo, Hye Eun Yoon, Yang Gyun Kim, Ajin Cho"
+    },
+    {
+      "paper_id": 493376,
+      "doctorName": "유경돈",
+      "authors": "Byung Min Ye, Seongmin Kang, Woo Yeong Park, Jang-Hee Cho, Byung Chul Yu, Miyeun Han, Sang Heon Song, Gang-Jee Ko, Jae Won Yang, Sungjin Chung, Yu Ah Hong, Young Youl Hyun, Eunjin Bae, In O Sun, Hyunsuk Kim, Won Min Hwang, Sung Joon Shin, Soon Hyo Kwon, Seo Rin Kim, Kyung Don Yoo"
+    },
+    {
+      "paper_id": 493377,
+      "doctorName": "유경돈",
+      "authors": "Yohan Park, Ji Won Lee, Se-Hee Yoon, Sung-Ro Yun, Hyunsuk Kim, Eunjin Bae, Young Youl Hyun, Sungjin Chung, Soon Hyo Kwon, Jang-Hee Cho, Kyung Don Yoo, Woo Yeong Park, In O Sun, Byung Chul Yu, Gang-Jee Ko, Jae Won Yang, Sang Heon Song, Sung Joon Shin, Yu Ah Hong, Won Min Hwang"
+    },
+    {
+      "paper_id": 493378,
+      "doctorName": "유경돈",
+      "authors": "Kyung Don Yoo, Mi-Yeon Yu, Kyu Hong Kim, Seongmin Lee, EunHee Park, Seongmin Kang, Doo-Ho Lim, Yeonhee Lee, Jeongin Song, Soie Kown, Yong Chul Kim, Dong Ki Kim, Jong Soo Lee, Yon Su Kim, Seung Hee Yang"
+    },
+    {
+      "paper_id": 493379,
+      "doctorName": "유경돈",
+      "authors": "Je Hun Song, Eun Hee Park, Jinsuk Bae, Soon Hyo Kwon, Jang-Hee Cho, Byung Chul Yu, Miyeun Han, Sang Heon Song, Gang-Jee Ko, Jae Won Yang, Sungjin Chung, Yu Ah Hong, Young Youl Hyun, Eunjin Bae, In O Sun, Hyunsuk Kim, Won Min Hwang, Sung Joon Shin, Woo Yeong Park, Hyoungnae Kim, Kyung Don Yoo"
+    },
+    {
+      "paper_id": 493380,
+      "doctorName": "유경돈",
+      "authors": "Jinsuk Bae, Hyuk Huh, Minji Noh, Seongmin Kang, Eun Hee Park, Je Hun Song, Kyung Sun Park, Jong Ha Park, Jong Soo Lee, Hyuknam Kwon, Hoseok Koo, Kyung Don Yoo"
+    },
+    {
+      "paper_id": 493381,
+      "doctorName": "유경돈",
+      "authors": "Soie Kwon, Yong Chul Kim, Hyunwook Kwon, Jang-Hee Cho, Chan-Duck Kim, Hyung-Eun Son, Jong-Cheol Jeong, In Mok Jung, Kyung Don Yoo, Yeonjin Kim, Woojoo Lee, Jong Soo Lee, Hajeong Lee, Chun Soo Lim, Yon Su Kim, Young Hoon Kim, Jung Pyo Lee"
+    },
+    {
+      "paper_id": 493382,
+      "doctorName": "유경돈",
+      "authors": "Kyung Don Yoo, Junhyug Noh, Wonho Bae, Jung Nam An, Hyung Jung Oh, Harin Rhee, Eun Young Seong, Seon Ha Baek, Shin Young Ahn, Jang-Hee Cho, Dong Ki Kim, Dong-Ryeol Ryu, Sejoong Kim, Chun Soo Lim, Jung Pyo Lee, Korean Association for the Study of Renal Anemia and Artificial Intelligence (KARAI), Sung Gyun Kim, Gang Jee Ko, Jung Tak Park, Tae Ik Chang, Sungjin Chung, Sang Ho Lee, Bum Soon Choi, Jin Seok Jeon, Sangheon Song, Dae Eun Choi, Woo Kyung Jung"
+    },
+    {
+      "paper_id": 493383,
+      "doctorName": "유경돈",
+      "authors": "Hyo Jin Kim, Munki Choo, Hyuk Nam Kwon, Kyung Don Yoo, Yunmi Kim, Bodokhsuren Tsogbadrakh, Eunjeong Kang, Sunghyouk Park, Kook-Hwan Oh"
+    },
+    {
+      "paper_id": 493384,
+      "doctorName": "유경돈",
+      "authors": "Hyunsuk Kim, Mun Jung Ko, Chi-Yeon Lim, Eunjin Bae, Young Youl Hyun, Sungjin Chung, Soon Hyo Kwon, Jang-Hee Cho, Kyung Don Yoo, Woo Yeong Park, In O Sun, Byung Chul Yu, Gang-Jee Ko, Jae Won Yang, Won Min Hwang, Sang Heon Song, Sung Joon Shin, Yu Ah Hong"
+    },
+    {
+      "paper_id": 493385,
+      "doctorName": "유경돈",
+      "authors": "Yeonhee Lee, Jangwook Lee, Minkyoung Park, Areum Seo, Kyu Hyeon Kim, Seonmi Kim, Minjung Kang, Eunjeong Kang, Kyung Don Yoo, Sunhwa Lee, Dong Ki Kim, Kook-Hwan Oh, Yon Su Kim, Kwon Wook Joo, Seung Hee Yang"
+    },
+    {
+      "paper_id": 493386,
+      "doctorName": "유경돈",
+      "authors": "Min Woo Kang, Yaerim Kim, Inae Lee, Hyunwoong Park, Jae Yoon Park, Jung Nam An, Kyung Don Yoo, Yong Chul Kim, Na-Youn Park, Younglim Kho, Kyungho Choi, Jung Pyo Lee, Jeonghwan Lee"
+    },
+    {
+      "paper_id": 493387,
+      "doctorName": "유경돈",
+      "authors": "Je Hun Song, Hyuk Huh, Eunjin Bae, Jeonghwan Lee, Jung Pyo Lee, Jong Soo Lee, Gwang Sil Kim, Kyung Don Yoo"
+    },
+    {
+      "paper_id": 493388,
+      "doctorName": "유경돈",
+      "authors": "Yeonhee Lee, Kyung Don Yoo, Seon Ha Baek, Yang Gyun Kim, Hyo Jin Kim, Ji Young Ryu, Jin Hyuk Paek, Sang Heon Suh, Se Won Oh, Jeonghwan Lee, Jong Hyun Jhee, Jin-Soon Suh, Eun Mi Yang, Young Ho Park, Yae Lim Kim, Miyoung Choi, Kook-Hwan Oh, Sejoong Kim"
+    },
+    {
+      "paper_id": 493389,
+      "doctorName": "유경돈",
+      "authors": "Yeonhee Lee, Kyung Don Yoo, Seon Ha Baek, Yang Gyun Kim, Hyo Jin Kim, Ji Young Ryu, Jin Hyuk Paek, Sang Heon Suh, Se Won Oh, Jeonghwan Lee, Jong Hyun Jhee, Jin-Soon Suh, Eun Mi Yang, Young Ho Park, Yae Lim Kim, Miyoung Choi, Kook-Hwan Oh, Sejoong Kim"
+    },
+    {
+      "paper_id": 493390,
+      "doctorName": "유경돈",
+      "authors": "Jeong-Hoon Lim, Soie Kwon, Yena Jeon, Young Hoon Kim, Hyunwook Kwon, Yon Su Kim, Hajeong Lee, Yong-Lim Kim, Chan-Duck Kim, Sun-Hee Park, Jong Soo Lee, Kyung Don Yoo, Hyung Eun Son, Jong Cheol Jeong, Jeonghwan Lee, Jung Pyo Lee, Jang-Hee Cho"
+    },
+    {
+      "paper_id": 493391,
+      "doctorName": "유경돈",
+      "authors": "Eun Ji Lee, Hojong Park, Sang Jun Park, Hong Rae Cho, Kyung Sun Park, Jongha Park, Kyung Don Yoo, Jong Soo Lee, Misung Kim, Hee Jeong Cha"
+    },
+    {
+      "paper_id": 493392,
+      "doctorName": "유경돈",
+      "authors": "Jae Yoon Park, Kyung Don Yoo, Eunjin Bae, Kyu Hong Kim, Jae Wook Lee, Sung Joon Shin, Jong Soo Lee, Yon Su Kim, Seung Hee Yang"
+    },
+    {
+      "paper_id": 493393,
+      "doctorName": "유경돈",
+      "authors": "Ji Yong Jung, Kyung Don Yoo, Eunjeong Kang, Hee Gyung Kang, Su Hyun Kim, Hyoungnae Kim, Hyo Jin Kim, Tae-Jin Park, Sang Heon Suh, Jong Cheol Jeong, Ji-Young Choi, Young-Hwan Hwang, Miyoung Choi, Yae Lim Kim, Kook-Hwan Oh, Clinical Practice Guideline Work Group"
+    },
+    {
+      "paper_id": 493394,
+      "doctorName": "유경돈",
+      "authors": "Ji Yong Jung, Kyung Don Yoo, Eunjeong Kang, Hee Gyung Kang, Su Hyun Kim, Hyoungnae Kim, Hyo Jin Kim, Tae-Jin Park, Sang Heon Suh, Jong Cheol Jeong, Ji-Young Choi, Young-Hwan Hwang, Miyoung Choi, Yae Lim Kim, Kook-Hwan Oh, Korean Society of Nephrology Clinical Practice Guideline Work Group"
+    },
+    {
+      "paper_id": 493395,
+      "doctorName": "유경돈",
+      "authors": "Kyung Don Yoo, Hyung Jung Oh, Sehoon Park, Min Woo Kang, Yong Chul Kim, Jae Yoon Park, Jeonghwan Lee, Jong Soo Lee, Dong Ki Kim, Chun Soo Lim, Yon Su Kim, Jung Pyo Lee, Korean Association for the study of Renal Anemia and artificial Intelligence (KARAI)"
+    },
+    {
+      "paper_id": 493396,
+      "doctorName": "유경돈",
+      "authors": "Eunjin Bae, Michael V Rocco, Jeonghwan Lee, Jae Yoon Park, Yong Chul Kim, Kyung Don Yoo, Eun Young Kim, Dong Jun Park, Chun Soo Lim, Yon Su Kim, Jung Pyo Lee"
+    },
+    {
+      "paper_id": 493397,
+      "doctorName": "유경돈",
+      "authors": "Byung Chul Yu, Miyeun Han, Gang-Jee Ko, Jae Won Yang, Soon Hyo Kwon, Sungjin Chung, Yu Ah Hong, Young Youl Hyun, Jang-Hee Cho, Kyung Don Yoo, Eunjin Bae, Woo Yeong Park, In O Sun, Dongryul Kim, Hyunsuk Kim, Won Min Hwang, Sang Heon Song, Sung Joon Shin"
+    },
+    {
+      "paper_id": 493398,
+      "doctorName": "유경돈",
+      "authors": "Soojin Kim, Jung Tak Park, Sung Joon Shin, Jae Hyun Chang, Kyung Don Yoo, Jung Pyo Lee, Dong-Ryeol Ryu, Soontae An, Sejoong Kim"
+    },
+    {
+      "paper_id": 493399,
+      "doctorName": "유경돈",
+      "authors": "Yaerim Kim, Inae Lee, Jeonghwan Lee, Jae Yoon Park, Jung Nam An, Kyung Don Yoo, Yong Chul Kim, Woo Yeong Park, Kyubok Jin, Younglim Kho, Myoungsoon You, Dong Ki Kim, Kyungho Choi, Jung Pyo Lee"
+    },
+    {
+      "paper_id": 493400,
+      "doctorName": "유경돈",
+      "authors": "Hyeong-Joon Kim, Hye Hyeon Kim, Hosuk Ku, Kyung Don Yoo, Suehyun Lee, Ji In Park, Hyo Jin Kim, Kyeongmin Kim, Moon Kyung Chung, Kye Hwa Lee, Ju Han Kim"
+    },
+    {
+      "paper_id": 493401,
+      "doctorName": "유경돈",
+      "authors": "Jung Nam An, Seungwon Ryu, Yong Chul Kim, Kyung Don Yoo, Jangwook Lee, Hye Young Kim, Hajeong Lee, Jung Pyo Lee, Jae Wook Lee, Un Sil Jeon, Dong Ki Kim, Yon Su Kim, Seung Hee Yang"
+    },
+    {
+      "paper_id": 493402,
+      "doctorName": "유경돈",
+      "authors": "Yunmi Kim, Seong Han Yun, Hoseok Koo, Subin Hwang, Hyo Jin Kim, Sunhwa Lee, Hyunjeong Baek, Hye Hyeon Kim, Kye Hwa Lee, Ju Han Kim, Ji In Park, Kyung Don Yoo"
+    },
+    {
+      "paper_id": 493403,
+      "doctorName": "유경돈",
+      "authors": "Ji Eun Kim, Dohyun Han, Jin Seon Jeong, Jong Joo Moon, Hyun Kyung Moon, Sunhwa Lee, Yong Chul Kim, Kyung Don Yoo, Jae Wook Lee, Dong Ki Kim, Young Joo Kwon, Yon Su Kim, Seung Hee Yang"
+    },
+    {
+      "paper_id": 493404,
+      "doctorName": "유경돈",
+      "authors": "Kyung Don Yoo, Jung Nam An, Yong Chul Kim, Jeonghwan Lee, Kwon-Wook Joo, Yun Kyu Oh, Yon Su Kim, Chun Soo Lim, Sohee Oh, Jung Pyo Lee"
+    },
+    {
+      "paper_id": 493405,
+      "doctorName": "유경돈",
+      "authors": "Hayne Cho Park, Do Hyoung Kim, Kyung Don Yoo, Yang-Gyun Kim, Sang-Ho Lee, Hye Eun Yoon, Dong Ki Kim, Seong Nam Kim, Myeong Sung Kim, Yoon Chul Jung, Yon Su Kim, Young-Ki Lee, Korean Society of Nephrology COVID-19 Task Force Team"
+    },
+    {
+      "paper_id": 493406,
+      "doctorName": "유경돈",
+      "authors": "Junhyug Noh, Kyung Don Yoo, Wonho Bae, Jong Soo Lee, Kangil Kim, Jang-Hee Cho, Hajeong Lee, Dong Ki Kim, Chun Soo Lim, Shin-Wook Kang, Yong-Lim Kim, Yon Su Kim, Gunhee Kim, Jung Pyo Lee"
+    },
+    {
+      "paper_id": 493407,
+      "doctorName": "유경돈",
+      "authors": "A Jin Cho, Hong-Seock Lee, Young-Ki Lee, Hee Jung Jeon, Hayne Cho Park, Da-Wun Jeong, Yang-Gyun Kim, Sang-Ho Lee, Chang-Hee Lee, Kyung Don Yoo, Ae Kyeong Wong"
+    },
+    {
+      "paper_id": 493408,
+      "doctorName": "유경돈",
+      "authors": "Kyung Don Yoo, Ran-Hui Cha, Sunhwa Lee, Ji Eun Kim, Kyu Hong Kim, Jong Soo Lee, Dong Ki Kim, Yon Su Kim, Seung Hee Yang"
+    },
+    {
+      "paper_id": 493409,
+      "doctorName": "유경돈",
+      "authors": "Hayne Cho Park, Sang-Ho Lee, Juhee Kim, Do Hyoung Kim, AJin Cho, Hee Jung Jeon, Jieun Oh, Jung-Woo Noh, Da-Wun Jeong, Yang-Gyun Kim, Chang-Hee Lee, Kyung Don Yoo, Young-Ki Lee"
+    },
+    {
+      "paper_id": 493410,
+      "doctorName": "유경돈",
+      "authors": "Hyo Jin Kim, Ji In Park, Kyung Don Yoo, Yunmi Kim, Hyunjeong Baek, Sung Ho Kim, Taehoon Chang, Hye Hyeon Kim, Kye Hwa Lee, Seungsik Hwang, Clara Tammy Kim, Hoseok Koo, Ju Han Kim"
+    },
+    {
+      "paper_id": 493411,
+      "doctorName": "유경돈",
+      "authors": "Yaerim Kim, Mi-Yeon Yu, Kyung Don Yoo, Chang Wook Jeong, Hyeon Hoe Kim, Sang-Il Min, Jongwon Ha, Yunhee Choi, Ah Ryoung Ko, Jae Moon Yun, Sang Min Park, Seung Hee Yang, Dong Ki Kim, Kook-Hwan Oh, Kwon Wook Joo, Curie Ahn, Yon Su Kim, Hajeong Lee"
+    },
+    {
+      "paper_id": 493412,
+      "doctorName": "유경돈",
+      "authors": "Kyung Don Yoo, Clara Tammy Kim, Soie Kwon, Jeonghwan Lee, Yun Kyu Oh, Shin-Wook Kang, Chul Woo Yang, Yong-Lim Kim, Yon Su Kim, Chun Soo Lim, Jung Pyo Lee"
+    },
+    {
+      "paper_id": 493413,
+      "doctorName": "유경돈",
+      "authors": "Sunhwa Lee, Kyung Don Yoo, Jung Nam An, Yun Kyu Oh, Chun Soo Lim, Yon Su Kim, Jung Pyo Lee"
+    },
+    {
+      "paper_id": 493414,
+      "doctorName": "유경돈",
+      "authors": "Kyung Don Yoo, Hyo Jin Kim, Yunmi Kim, Jae Yoon Park, Sung Joon Shin, Seung Hyeok Han, Dong Ki Kim, Chun Soo Lim, Yon Su Kim"
+    },
+    {
+      "paper_id": 493415,
+      "doctorName": "유경돈",
+      "authors": "Kyung Don Yoo, Hajeong Lee, Yaerim Kim, Sehoon Park, Joong Shin Park, Joon Seok Hong, Chang Wook Jeong, Hyeon Hoe Kim, Jung Pyo Lee, Dong Ki Kim, Kook-Hwan Oh, Kwon Wook Joo, Yon Su Kim"
+    },
+    {
+      "paper_id": 493416,
+      "doctorName": "유경돈",
+      "authors": "Chi-Yeon Lim, Jae Yoon Park, Do Yeun Kim, Kyung Don Yoo, Hyo Jin Kim, Yunmi Kim, Sung Joon Shin"
+    },
+    {
+      "paper_id": 493417,
+      "doctorName": "유경돈",
+      "authors": "Hyo Jin Kim, Yunmi Kim, Sejoong Kim, Ho Jun Chin, Hajeong Lee, Jung Pyo Lee, Dong Ki Kim, Kook-Hwan Oh, Kwon Wook Joo, Yon Su Kim, Deuk-Young Nah, Sung Joon Shin, Kyung Soo Kim, Jae Yoon Park, Kyung Don Yoo"
+    },
+    {
+      "paper_id": 493418,
+      "doctorName": "유경돈",
+      "authors": "Yunmi Kim, Kyung Don Yoo, Hyo Jin Kim, Junga Koh, Yeonsil Yu, Young Joo Kwon, Gheun-Ho Kim, Tae-Hyun Yoo, Joongyub Lee, Dong-Chan Jin, Bum Soon Choi, Yeong Hoon Kim, Kook-Hwan Oh"
+    },
+    {
+      "paper_id": 493419,
+      "doctorName": "유경돈",
+      "authors": "Kun Kug Choi, Seung Hyuk Kim, Kyung Don Yoo, Hyo Jin Kim, Ji In Park, Subin Hwang, Ho Jun Chin, Ho Suk Ku"
+    },
+    {
+      "paper_id": 493420,
+      "doctorName": "유경돈",
+      "authors": "Seung Seok Han, Mi-Yeon Yu, Kyung Don Yoo, Jung Pyo Lee, Dong Ki Kim, Yon Su Kim, Seung Hee Yang"
+    },
+    {
+      "paper_id": 493421,
+      "doctorName": "유경돈",
+      "authors": "Kyung Don Yoo, Clara Tammy Kim, Yunmi Kim, Hyo Jin Kim, Jae Yoon Park, Ji In Park, Yun Kyu Oh, Shin-Wook Kang, Chul Woo Yang, Yong-Lim Kim, Yon Su Kim, Chun Soo Lim, Jung Pyo Lee, Clinical Research Center of End Stage Renal Disease Investigators"
+    },
+    {
+      "paper_id": 493422,
+      "doctorName": "유경돈",
+      "authors": "Jae Yoon Park, Chi-Yeon Lim, Gloria Puurveen, Do Yeun Kim, Jae Hang Lee, Han Ho Do, Kyung Soo Kim, Kyung Don Yoo, Hyo Jin Kim, Yunmi Kim, Sung Joon Shin"
+    },
+    {
+      "paper_id": 493423,
+      "doctorName": "유경돈",
+      "authors": "Hayne Cho Park, Young-Ki Lee, Kyung Don Yoo, Hee Jung Jeon, Seung Jun Kim, Ajin Cho, Jacob Lee, Yang-Gyun Kim, Sang-Ho Lee, Sang-Oh Lee"
+    },
+    {
+      "paper_id": 493425,
+      "doctorName": "유경돈",
+      "authors": "Hayne Cho Park, Young-Ki Lee, Sang-Ho Lee, Kyung Don Yoo, Hee Jung Jeon, Dong-Ryeol Ryu, Seong Nam Kim, Seung Hwan Sohn, Rho Won Chun, Kyu Bok Choi, Korean Society of Nephrology MERS-CoV Task Force Team"
+    },
+    {
+      "paper_id": 493426,
+      "doctorName": "유경돈",
+      "authors": "Eunjin Bae, Ran-Hui Cha, Yong C Kim, Jung N An, Dong K Kim, Kyung D Yoo, Su M Lee, Myoung-Hee Kim, Jung T Park, Shin-Wook Kang, Jae Y Park, Chun S Lim, Yon S Kim, Seung H Yang, Jung P Lee"
+    },
+    {
+      "paper_id": 493427,
+      "doctorName": "유경돈",
+      "authors": "Sunhwa Lee, Eunjeong Kang, Kyung Don Yoo, Yunhee Choi, Dong Ki Kim, Kwon Wook Joo, Seung Hee Yang, Yong-Lim Kim, Shin-Wook Kang, Chul Woo Yang, Nam Ho Kim, Yon Su Kim, Hajeong Lee"
+    },
+    {
+      "paper_id": 493428,
+      "doctorName": "유경돈",
+      "authors": "Jae Yoon Park, Kyung Don Yoo, Yong Chul Kim, Dong Ki Kim, Kwon Wook Joo, Shin-Wook Kang, Chul Woo Yang, Nam-Ho Kim, Yong-Lim Kim, Chun-Soo Lim, Yon Su Kim, Jung Pyo Lee"
+    },
+    {
+      "paper_id": 493429,
+      "doctorName": "유경돈",
+      "authors": "Dae Myung Kim, Jin Hee Hong, Sun Young Kim, Kyung Don Yoo, Ji Young Seo, Kun Joo Rhee, Byung Ok Kim, Choong Won Goh, Kyoung Min Park, Jeong Hoon Kim, Jae Hak Huh, Hyun-Jung Kim, Young Sup Byun"
+    },
+    {
+      "paper_id": 493430,
+      "doctorName": "유경돈",
+      "authors": "Jung Nam An, Kyung Don Yoo, Jin Ho Hwang, Hack-Lyoung Kim, Sang-Hyun Kim, Seung Hee Yang, Jin Hyuk Kim, Dong Ki Kim, Yun Kyu Oh, Yon Su Kim, Chun Soo Lim, Jung Pyo Lee"
+    },
+    {
+      "paper_id": 493431,
+      "doctorName": "유경돈",
+      "authors": "Jung Nam An, Young Hoon Kim, Jun-Bean Park, Jin Ho Hwang, Kyung Don Yoo, Jae Yoon Park, Clara Tammy Kim, Hack-Lyoung Kim, Yong-Jin Kim, Duck-Jong Han, Chun Soo Lim, Yon Su Kim, Jung Pyo Lee"
+    },
+    {
+      "paper_id": 493432,
+      "doctorName": "유경돈",
+      "authors": "Hajeong Lee, Kyung Don Yoo, Yun Kyu Oh, Dong Ki Kim, Kook-Hwan Oh, Kwon Wook Joo, Yon Su Kim, Curie Ahn, Jin Suk Han, Chun Soo Lim"
+    },
+    {
+      "paper_id": 493433,
+      "doctorName": "유경돈",
+      "authors": "Hajeong Lee, Jae Wook Lee, Kyung Don Yoo, Joo-Yeon Yoo, Jung Pyo Lee, Dong Ki Kim, Ho Jun Chin, Yon Su Kim, Seung Hee Yang"
+    },
+    {
+      "paper_id": 493435,
+      "doctorName": "유경돈",
+      "authors": "Kyung Don Yoo, Junhyug Noh, Hajeong Lee, Dong Ki Kim, Chun Soo Lim, Young Hoon Kim, Jung Pyo Lee, Gunhee Kim, Yon Su Kim"
+    },
+    {
+      "paper_id": 493436,
+      "doctorName": "유경돈",
+      "authors": "Kyung Don Yoo, Jung Pyo Lee, Su Mi Lee, Jae Yoon Park, Hajeong Lee, Dong Ki Kim, Shin-Wook Kang, Chul Woo Yang, Yong-Lim Kim, Chun Soo Lim, Kwon Wook Joo, Yon Su Kim"
+    },
+    {
+      "paper_id": 493437,
+      "doctorName": "유경돈",
+      "authors": "Sehoon Park, Kyung Don Yoo, Joong Shin Park, Joon-Seok Hong, Seungdon Baek, Su-Kil Park, Ho Jun Chin, Ki Young Na, Yunhee Choi, Dong Ki Kim, Kook-Hwan Oh, Kwon Wook Joo, Yon Su Kim, Hajeong Lee"
+    },
+    {
+      "paper_id": 493438,
+      "doctorName": "유경돈",
+      "authors": "Kyung Don Yoo, Hyung-Jin Yoon, Seung-Sik Hwang, Nam Ju Heo, Ho Jun Chin, Seung Hee Yang, Kwon Wook Joo, Yon Su Kim, Hajeong Lee"
+    },
+    {
+      "paper_id": 493439,
+      "doctorName": "유경돈",
+      "authors": "Se Hwan Yeo, Jae Hoon Kwak, Yeo Un Kim, Jin Suk Lee, Hyo Jin Kim, Kyoung Hwa Park, Jung Sook Lee, Gyoung Yim Ha, Jeong Ho Lee, Jun Yeop Lee, Kyung Don Yoo"
+    },
+    {
+      "paper_id": 493440,
+      "doctorName": "유경돈",
+      "authors": "Kyung Don Yoo, Clara Tammy Kim, Myoung-Hee Kim, Junhyug Noh, Gunhee Kim, Ho Kim, Jung Nam An, Jae Yoon Park, Hyunjeong Cho, Kyoung Hoon Kim, Hyunwook Kim, Dong-Ryeol Ryu, Dong Ki Kim, Chun Soo Lim, Yon Su Kim, Jung Pyo Lee"
+    },
+    {
+      "paper_id": 493441,
+      "doctorName": "유경돈",
+      "authors": "Kyung Don Yoo, Soohee Kang, Yunhee Choi, Seung Hee Yang, Nam Ju Heo, Ho Jun Chin, Kook-Hwan Oh, Kwon Wook Joo, Yon Su Kim, Hajeong Lee"
+    },
+    {
+      "paper_id": 493442,
+      "doctorName": "유경돈",
+      "authors": "K D Yoo, J N An, C T Kim, J H Cho, C D Kim, S K Park, D W Chae, Y K Oh, C S Lim, Y S Kim, Y H Kim, J P Lee"
+    },
+    {
+      "paper_id": 493443,
+      "doctorName": "채강희",
+      "authors": "Ganghee Chae, Eun Jae Ko, Sei Won Lee, Hyun Jung Kim, Sang Gyu Kwak, Donghwi Park, Seung Won Ra"
+    },
+    {
+      "paper_id": 493444,
+      "doctorName": "채강희",
+      "authors": "Ganghee Chae, Yea Eun Park, Yong Pil Chong, Hyun Joo Lee, Tae Sun Shim, Kyung-Wook Jo"
+    },
+    {
+      "paper_id": 493445,
+      "doctorName": "채강희",
+      "authors": "Donghyun Lee, Ganghee Chae, Jin Hyoung Kim, Seung Won Ra, Kwang Won Seo, Yangjin Jegal, Jong Joon Ahn, Taehoon Lee"
+    },
+    {
+      "paper_id": 493446,
+      "doctorName": "채강희",
+      "authors": "Hyung Jun Park, Jin-Young Huh, Ganghee Chae, Myeong Geun Choi"
+    },
+    {
+      "paper_id": 493447,
+      "doctorName": "채강희",
+      "authors": "Junghyun Kim, Ganghee Chae, Won-Young Kim, Chi-Ryang Chung, Young-Jae Cho, Jinwoo Lee, Yangjin Jegal, Joon-Sung Joh, Tae Yun Park, Jung Hwa Hwang, Bo Da Nam, Hee-Young Yoon, Jin Woo Song"
+    },
+    {
+      "paper_id": 493448,
+      "doctorName": "채강희",
+      "authors": "Won-Young Kim, Sun-Young Jung, Jeong-Yeon Kim, Ganghee Chae, Junghyun Kim, Joon-Sung Joh, Tae Yun Park, Ae-Rin Baek, Yangjin Jegal, Chi Ryang Chung, Jinwoo Lee, Young-Jae Cho, Joo Hun Park, Jung Hwa Hwang, Jin Woo Song"
+    },
+    {
+      "paper_id": 493449,
+      "doctorName": "채강희",
+      "authors": "Ju Hyun Oh, Ganghee Chae, Jin Woo Song"
+    },
+    {
+      "paper_id": 493450,
+      "doctorName": "채강희",
+      "authors": "Hee Yun Seol, Ganghee Chae, Jin Hyoung Kim, Yun Seong Kim, Seong Hoon Yoon, Taehoon Lee"
+    },
+    {
+      "paper_id": 493451,
+      "doctorName": "채강희",
+      "authors": "Jung-Wan Yoo, Won-Young Kim, Chi Ryang Chung, Young-Jae Cho, Jinwoo Lee, Yangjin Jegal, Junghyun Kim, Joon-Sung Joh, Tae Yun Park, Ae-Rin Baek, Joo Hun Park, Ganghee Chae, Jung Hwa Hwang, Jin Woo Song"
+    },
+    {
+      "paper_id": 493452,
+      "doctorName": "강동윤",
+      "authors": "Dong Yeop Lee, Sang-Bong Lee, Kyoung-Min Lim, Yun-Jung Choi, Dong Yoon Kang"
+    },
+    {
+      "paper_id": 493453,
+      "doctorName": "강동윤",
+      "authors": "Cheolkyung Sin, Dong Yeop Lee, Hyeyeong Kim, Hyeon-Su Im, Su-Jin Koh, Dong Yoon Kang"
+    },
+    {
+      "paper_id": 493455,
+      "doctorName": "강동윤",
+      "authors": "Hyein Kang, Chang Kyung Kang, Jae Hyoung Im, Yoonsook Cho, Dong Yoon Kang, Ju-Yeun Lee"
+    },
+    {
+      "paper_id": 493457,
+      "doctorName": "강동윤",
+      "authors": "Jae Hyoung Im, Dong Yeop Lee, Ji Hyeon Baek, Se Ju Lee, Sungtaek Jung, Eunjung Kim, Dong Yoon Kang, Jin-Soo Lee"
+    },
+    {
+      "paper_id": 493459,
+      "doctorName": "강동윤",
+      "authors": "Seon Choe, Suehyun Lee, Chan Hee Park, Jeong Hoon Lee, Hyo Jung Kim, Sun-Ju Byeon, Jeong-Hee Choi, Hyeon-Jong Yang, Da Woon Sim, Bum-Joo Cho, Hoseok Koo, Min-Gyu Kang, Ji Bong Jeong, In Young Choi, Sae-Hoon Kim, Woo Jin Kim, Jae-Woo Jung, Sang-Hoon Lhee, Young-Jin Ko, Hye-Kyung Park, Dong Yoon Kang, Ju Han Kim"
+    },
+    {
+      "paper_id": 493460,
+      "doctorName": "강동윤",
+      "authors": "Dong Yeop Lee, Dong Yoon Kang, Eunjung Kim, Se-Joo Lee, Ji Hyeon Baek, Jin-Soo Lee, Mi Youn Park, Jae Hyoung Im"
+    },
+    {
+      "paper_id": 493461,
+      "doctorName": "강동윤",
+      "authors": "Soyoung Park, Dong Yoon Kang, Hyungwoo Ahn, Namwoo Kim, Jeong-Hwa Yoon, Bo Ram Yang"
+    },
+    {
+      "paper_id": 493463,
+      "doctorName": "강동윤",
+      "authors": "Yoon Hae Ahn, Dong Yoon Kang, Soo-Been Park, Hyun Hwa Kim, Hyun Jee Kim, Ga-Yoon Park, Soon-Ho Yoon, Young-Hun Choi, Suh Young Lee, Hye-Ryun Kang"
+    },
+    {
+      "paper_id": 493464,
+      "doctorName": "강동윤",
+      "authors": "Dong Yoon Kang, Hyunah Kim, SooJeong Ko, HyungMin Kim, Jiwon Shinn, Min-Gyu Kang, Sun-Ju Byeon, Jeong-Hee Choi, Soo-Yong Shin, Hun-Sung Kim"
+    },
+    {
+      "paper_id": 493465,
+      "doctorName": "강동윤",
+      "authors": "Dong Yoon Kang, Suh-Young Lee, Yoon Hae Ahn, Soon Ho Yoon, Young Hoon Choi, Whal Lee, Hye-Ryun Kang"
+    },
+    {
+      "paper_id": 493469,
+      "doctorName": "강동윤",
+      "authors": "Dong Yoon Kang, James Yun, Suh-Young Lee, Young-Il Koh, Da Woon Sim, Sujeong Kim, Young Hee Nam, Jung-Won Park, Sae Hoon Kim, Young-Min Ye, Hye-Kyung Park, Min-Hye Kim, Young-Koo Jee, Jae-Woo Jung, Min-Suk Yang, Sang-Heon Kim, Jun Kyu Lee, Cheol-Woo Kim, Gyu Young Hur, Mi-Yeong Kim, Seoung Ju Park, Yong Eun Kwon, Jeong-Hee Choi, Joo-Hee Kim, Sang Hyon Kim, Hyen O La, Min-Gyu Kang, Chan Sun Park, Sang Min Lee, Yi Yeong Jeong, Hee-Kyoo Kim, Hyun Jung Jin, Jae-Won Jeong, Jaechun Lee, Yong Won Lee, Seung Eun Lee, Myoung Shin Kim, Hye-Ryun Kang, Korean Severe Cutaneous Adverse Reactions Consortium"
+    },
+    {
+      "paper_id": 493471,
+      "doctorName": "강동윤",
+      "authors": "Soo Jie Chung, Dong Yoon Kang, Whal Lee, Seung Bok Lee, Sujeong Kim, Seung-Eun Lee, Da Woon Sim, Min-Gyu Kang, Kyung Hee Park, Jae-Woo Jung, James Yun, Hye-Ryun Kang"
+    },
+    {
+      "paper_id": 493472,
+      "doctorName": "강동윤",
+      "authors": "Min Jae Cha, Dong Yoon Kang, Whal Lee, Soon Ho Yoon, Young Hun Choi, Jun Soo Byun, Jongmin Lee, Yun-Hyeon Kim, Ki Seok Choo, Bum Sang Cho, Kyung Nyeo Jeon, Jae-Woo Jung, Hye-Ryun Kang"
+    },
+    {
+      "paper_id": 493479,
+      "doctorName": "강동윤",
+      "authors": "Dong Yoon Kang, Kyung-Min Ahn, Hye-Ryun Kang, Sang-Heon Cho"
+    },
+    {
+      "paper_id": 493481,
+      "doctorName": "강동윤",
+      "authors": "Dong-Yoon Kang, Soyoung Park, Chul-Woo Rhee, Ye-Jee Kim, Nam-Kyong Choi, Joongyub Lee, Byung-Joo Park"
+    },
+    {
+      "paper_id": 493482,
+      "doctorName": "이정환",
+      "authors": "Jeonghwan Lee, Jangho Park, Jukab Lee, Joon-Ho Ahn, Chang Sun Sim, Kukju Kweon, Hyo-Won Kim"
+    },
+    {
+      "paper_id": 493483,
+      "doctorName": "방지현",
+      "authors": "Ji Hyun Bang, Sang Hwa Kim, Chun Soo Park, Jeong-Jun Park, Tae-Jin Yun"
+    },
+    {
+      "paper_id": 493484,
+      "doctorName": "방지현",
+      "authors": "Ji Hyun Bang, Chun Soo Park, Jeong-Jun Park, Tae-Jin Yun, Jae Suk Baek, Jeong Jin Yu, Young-Hwue Kim, Jae-Kon Ko"
+    },
+    {
+      "paper_id": 493485,
+      "doctorName": "방지현",
+      "authors": "Ji Hyun Bang, Jeong-Jun Park, Hyun Woo Goo"
+    },
+    {
+      "paper_id": 493486,
+      "doctorName": "김욱주",
+      "authors": "Wook-Joo Kim, Jae Hyoung Kim, Youngchai Ko, Jung Hyun Park, Mi Hwa Yang, Myung Suk Jang, Moon-Ku Han, Sang Yun Kim, Seong Ho Park, Hee-Joon Bae"
+    },
+    {
+      "paper_id": 493487,
+      "doctorName": "김욱주",
+      "authors": "Wook-Joo Kim, Youngchai Ko, Mi Hwa Yang, Sun-Hye Im, Jung Hyun Park, Jisung Lee, Juneyoung Lee, Moon-Ku Han, Hee-Joon Bae"
+    },
+    {
+      "paper_id": 493488,
+      "doctorName": "김욱주",
+      "authors": "J H Park, Y Ko, W-J Kim, M S Jang, M H Yang, M-K Han, C-W Oh, S H Park, Jisung Lee, Juneyoung Lee, H-J Bae, P B Gorelick"
+    },
+    {
+      "paper_id": 493489,
+      "doctorName": "김욱주",
+      "authors": "Youngchai Ko, Wook-Joo Kim, Myung Suk Jang, Mi Hwa Yang, Jung Hyun Park, Sang Il Choi, Eun Ju Chun, Soo Joo Lee, Moon-Ku Han, Hee-Joon Bae"
+    },
+    {
+      "paper_id": 493490,
+      "doctorName": "김욱주",
+      "authors": "Jihoon Kang, Youngchai Ko, Jung Hyun Park, Wook-Joo Kim, Myung Suk Jang, Mi Hwa Yang, JiSung Lee, Juneyoung Lee, Moon-Ku Han, Philip B Gorelick, Hee-Joon Bae"
+    },
+    {
+      "paper_id": 493491,
+      "doctorName": "김욱주",
+      "authors": "Jihoon Kang, Nayoung Kim, Chang W Oh, O-Ki Kwon, Chol K Jung, Wook-Joo Kim, Jung H Park, Youngchai Ko, Won-Young Noh, Min U Jang, Jeong-Ho Hong, Ji S Lee, Juneyoung Lee, Myung S Jang, Mi H Yang, Moon-Ku Han, Hee-Joon Bae"
+    },
+    {
+      "paper_id": 493492,
+      "doctorName": "김욱주",
+      "authors": "Jong-Won Chung, Su Hyun Park, Nayoung Kim, Wook-Joo Kim, Jung Hyun Park, Youngchai Ko, Mi Hwa Yang, Myung Suk Jang, Moon-Ku Han, Cheolkyu Jung, Jae Hyoung Kim, Chang Wan Oh, Hee-Joon Bae"
+    },
+    {
+      "paper_id": 493494,
+      "doctorName": "김욱주",
+      "authors": "Beom Joon Kim, Moon-Ku Han, Tai Hwan Park, Sang-Soon Park, Kyung Bok Lee, Byung-Chul Lee, Kyung-Ho Yu, Mi Sun Oh, Jae Kwan Cha, Dae-Hyun Kim, Jun Lee, Soo Joo Lee, Youngchai Ko, Jong-Moo Park, Kyusik Kang, Yong-Jin Cho, Keun-Sik Hong, Joon-Tae Kim, Jay Chol Choi, Dong-Eog Kim, Dong-Ick Shin, Wook-Joo Kim, Juneyoung Lee, Ji Sung Lee, Byung-Woo Yoon, Philip B Gorelick, Hee-Joon Bae"
+    },
+    {
+      "paper_id": 493496,
+      "doctorName": "김욱주",
+      "authors": "Wook Joo Kim, Jong Moo Park, Kyusik Kang, Yong Jin Cho, Keun Sik Hong, Soo Joo Lee, Youngchai Ko, Kyung Bok Lee, Tai Hwan Park, Jun Lee, Jae Kwan Cha, Dae Hyun Kim, Kyung Ho Yu, Byung Chul Lee, Mi Sun Oh, Juneyoung Lee, Jisung Lee, Myung Suk Jang, Moon Ku Han, Hee Joon Bae"
+    },
+    {
+      "paper_id": 493497,
+      "doctorName": "김욱주",
+      "authors": "Joon-Tae Kim, Man-Seok Park, Kang-Ho Choi, Ki-Hyun Cho, Beom Joon Kim, Moon-Ku Han, Tai Hwan Park, Sang-Soon Park, Kyung Bok Lee, Byung-Chul Lee, Kyung-Ho Yu, Mi Sun Oh, Jae Kwan Cha, Dae-Hyun Kim, Hyun-Wook Nah, Jun Lee, Soo Joo Lee, Young-Chai Ko, Jae Guk Kim, Jong-Moo Park, Kyusik Kang, Yong-Jin Cho, Keun-Sik Hong, Jay Chol Choi, Dong-Eog Kim, Wi-Sun Ryu, Dong-Ick Shin, Min-Ju Yeo, Wook-Joo Kim, Juneyoung Lee, Ji Sung Lee, Jeffrey L Saver, Hee-Joon Bae"
+    },
+    {
+      "paper_id": 493498,
+      "doctorName": "김욱주",
+      "authors": "Sang-Hwa Lee, Beom Joon Kim, Moon-Ku Han, Tai Hwan Park, Kyung Bok Lee, Byung-Chul Lee, Kyung-Ho Yu, Mi Sun Oh, Jae Kwan Cha, Dae-Hyun Kim, Hyun-Wook Nah, Jun Lee, Soo Joo Lee, Youngchai Ko, Jae Guk Kim, Jong-Moo Park, Kyusik Kang, Yong-Jin Cho, Keun-Sik Hong, Jay Chol Choi, Joon-Tae Kim, Kangho Choi, Dong-Eog Kim, Wi-Sun Ryu, Wook-Joo Kim, Dong-Ick Shin, Minju Yeo, Juneyoung Lee, Ji Sung Lee, Philip B Gorelick, Hee-Joon Bae"
+    },
+    {
+      "paper_id": 493500,
+      "doctorName": "김욱주",
+      "authors": "Jay Chol Choi, Ji Sung Lee, Tai Hwan Park, Yong-Jin Cho, Jong-Moo Park, Kyusik Kang, Kyung Bok Lee, Soo Joo Lee, Jae Guk Kim, Jun Lee, Man-Seok Park, Kang-Ho Choi, Joon-Tae Kim, Kyung-Ho Yu, Byung-Chul Lee, Mi-Sun Oh, Jae-Kwan Cha, Dae-Hyun Kim, Hyun-Wook Nah, Dong-Eog Kim, Wi-Sun Ryu, Beom Joon Kim, Hee-Joon Bae, Wook-Joo Kim, Dong-Ick Shin, Min-Ju Yeo, Sung Il Sohn, Jeong-Ho Hong, Juneyoung Lee, Keun-Sik Hong"
+    },
+    {
+      "paper_id": 493501,
+      "doctorName": "김욱주",
+      "authors": "Nobuaki Yamamoto, Junichiro Satomi, Yuishin Izumi, Yuki Yamamoto, Izumi Yamaguchi, Takahiro Furukawa, Shinji Nagahiro, Ryuji Kaji"
+    },
+    {
+      "paper_id": 493502,
+      "doctorName": "김욱주",
+      "authors": "Hye Jung Lee, Ji Sung Lee, Jay Chol Choi, Yong-Jin Cho, Beom Joon Kim, Hee-Joon Bae, Dong-Eog Kim, Wi-Sun Ryu, Jae-Kwan Cha, Dae Hyun Kim, Hyun-Wook Nah, Kang-Ho Choi, Joon-Tae Kim, Man-Seok Park, Jeong-Ho Hong, Sung Il Sohn, Kyusik Kang, Jong-Moo Park, Wook-Joo Kim, Jun Lee, Dong-Ick Shin, Min-Ju Yeo, Kyung Bok Lee, Jae Guk Kim, Soo Joo Lee, Byung-Chul Lee, Mi Sun Oh, Kyung-Ho Yu, Tai Hwan Park, Juneyoung Lee, Keun-Sik Hong"
+    },
+    {
+      "paper_id": 493504,
+      "doctorName": "김욱주",
+      "authors": "Beom Joon Kim, Yong-Jin Cho, Keun-Sik Hong, Jun Lee, Joon-Tae Kim, Kang Ho Choi, Tai Hwan Park, Sang-Soon Park, Jong-Moo Park, Kyusik Kang, Soo Joo Lee, Jae Guk Kim, Jae-Kwan Cha, Dae-Hyun Kim, Hyun-Wook Nah, Byung-Chul Lee, Kyung-Ho Yu, Mi-Sun Oh, Dong-Eog Kim, Wi-Sun Ryu, Jay Chol Choi, Wook-Joo Kim, Dong-Ick Shin, Min-Ju Yeo, Sung Il Sohn, Jeong-Ho Hong, Ji Sung Lee, Juneyoung Lee, Moon-Ku Han, Philip B Gorelick, Hee-Joon Bae"
+    },
+    {
+      "paper_id": 493506,
+      "doctorName": "김욱주",
+      "authors": "Jun Yup Kim, Kyusik Kang, Jihoon Kang, Jaseong Koo, Dae-Hyun Kim, Beom Joon Kim, Wook-Joo Kim, Eung-Gyu Kim, Jae Guk Kim, Jeong-Min Kim, Joon-Tae Kim, Chulho Kim, Hyun-Wook Nah, Kwang-Yeol Park, Moo-Seok Park, Jong-Moo Park, Jong-Ho Park, Tai Hwan Park, Hong-Kyun Park, Woo-Keun Seo, Jung Hwa Seo, Tae-Jin Song, Seong Hwan Ahn, Mi-Sun Oh, Hyung Geun Oh, Sungwook Yu, Keon-Joo Lee, Kyung Bok Lee, Kijeong Lee, Sang-Hwa Lee, Soo Joo Lee, Min Uk Jang, Jong-Won Chung, Yong-Jin Cho, Kang-Ho Choi, Jay Chol Choi, Keun-Sik Hong, Yang-Ha Hwang, Seong-Eun Kim, Ji Sung Lee, Jimi Choi, Min Sun Kim, Ye Jin Kim, Jinmi Seok, Sujung Jang, Seokwan Han, Hee Won Han, Jin Hyuk Hong, Hyori Yun, Juneyoung Lee, Hee-Joon Bae"
+    },
+    {
+      "paper_id": 493507,
+      "doctorName": "김욱주",
+      "authors": "Nicolle Cassola, Jose Cc Baptista-Silva, Luis Cu Nakano, Carolina Dq Flumignan, Ricardo Sesso, Vladimir Vasconcelos, Nelson Carvas Junior, Ronald Lg Flumignan"
+    },
+    {
+      "paper_id": 493510,
+      "doctorName": "김욱주",
+      "authors": "Keon-Joo Lee, Beom Joon Kim, Moon-Ku Han, Joon-Tae Kim, Kang-Ho Choi, Dong-Ick Shin, Min-Ju Yeo, Jae-Kwan Cha, Dae-Hyun Kim, Hyun-Wook Nah, Dong-Eog Kim, Wi-Sun Ryu, Jong-Moo Park, Kyusik Kang, Soo Joo Lee, Jae Guk Kim, Mi-Sun Oh, Kyung-Ho Yu, Byung-Chul Lee, Keun-Sik Hong, Yong-Jin Cho, Jay Chol Choi, Tai Hwan Park, Sang-Soon Park, Jee-Hyun Kwon, Wook-Joo Kim, Jun Lee, Ji Sung Lee, Juneyoung Lee, Philip B Gorelick, Hee-Joon Bae, on the behalf of the CRCS-K (Clinical Research Collaboration for Stroke in Korea) Investigators"
+    },
+    {
+      "paper_id": 493511,
+      "doctorName": "김욱주",
+      "authors": "Dagyeong Lee, In Young Cho, Won Hyuk Chang, Jung Eun Yoo, Hea Lim Choi, Junhee Park, Dong Wook Shin, Kyungdo Han"
+    },
+    {
+      "paper_id": 493512,
+      "doctorName": "김욱주",
+      "authors": "Hong-Kyun Park, Ji Sung Lee, Keun-Sik Hong, Yong-Jin Cho, Jong-Moo Park, Kyusik Kang, Soo Joo Lee, Jae Guk Kim, Jae-Kwan Cha, Dae-Hyun Kim, Hyun-Wook Nah, Moon-Ku Han, Beom Joon Kim, Tai Hwan Park, Sang-Soon Park, Kyung Bok Lee, Jun Lee, Byung-Chul Lee, Kyung-Ho Yu, Mi Sun Oh, Joon-Tae Kim, Kang-Ho Choi, Dong-Eog Kim, Wi-Sun Ryu, Jay Chol Choi, Jee-Hyun Kwon, Wook-Joo Kim, Dong-Ick Shin, Sung Il Sohn, Jeong-Ho Hong, Juneyoung Lee, Philip B Gorelick, Hee-Joon Bae"
+    },
+    {
+      "paper_id": 493513,
+      "doctorName": "김욱주",
+      "authors": "Jun Young Chang, Ji Sung Lee, Beom Joon Kim, Joon-Tae Kim, Jun Lee, Jae Kwan Cha, Dae-Hyun Kim, Yong-Jin Cho, Keun-Sik Hong, Soo Joo Lee, Jong-Moo Park, Byung-Chul Lee, Mi Sun Oh, Dong-Eog Kim, Kyung Bok Lee, Tae Hwan Park, Jay Chol Choi, Dong-Ick Shin, Wook-Joo Kim, Sung-Il Sohn, Hee-Joon Bae, Moon-Ku Han"
+    },
+    {
+      "paper_id": 493516,
+      "doctorName": "김욱주",
+      "authors": "Hak-Loh Lee, Joon-Tae Kim, Ji Sung Lee, Man-Seok Park, Kang-Ho Choi, Ki-Hyun Cho, Beom Joon Kim, Jong-Moo Park, Kyusik Kang, Soo Joo Lee, Jae Guk Kim, Jae-Kwan Cha, Dae-Hyun Kim, Tai Hwan Park, Sang-Soon Park, Kyung Bok Lee, Jun Lee, Keun-Sik Hong, Yong-Jin Cho, Hong-Kyun Park, Byung-Chul Lee, Kyung-Ho Yu, Mi Sun Oh, Dong-Eog Kim, Wi-Sun Ryu, Jay Chol Choi, Jee-Hyun Kwon, Wook-Joo Kim, Dong-Ick Shin, Sung Il Sohn, Jeong-Ho Hong, Juneyoung Lee, Hee-Joon Bae"
+    },
+    {
+      "paper_id": 493517,
+      "doctorName": "김욱주",
+      "authors": "Keon-Joo Lee, Seong-Eun Kim, Jun Yup Kim, Jihoon Kang, Beom Joon Kim, Moon-Ku Han, Kang-Ho Choi, Joon-Tae Kim, Dong-Ick Shin, Jae-Kwan Cha, Dae-Hyun Kim, Dong-Eog Kim, Wi-Sun Ryu, Jong-Moo Park, Kyusik Kang, Jae Guk Kim, Soo Joo Lee, Mi-Sun Oh, Kyung-Ho Yu, Byung-Chul Lee, Hong-Kyun Park, Keun-Sik Hong, Yong-Jin Cho, Jay Chol Choi, Sung Il Sohn, Jeong-Ho Hong, Moo-Seok Park, Tai Hwan Park, Sang-Soon Park, Kyung Bok Lee, Jee-Hyun Kwon, Wook-Joo Kim, Jun Lee, Ji Sung Lee, Juneyoung Lee, Philip B Gorelick, Hee-Joon Bae, CRCS‐K Registry Investigators"
+    },
+    {
+      "paper_id": 493518,
+      "doctorName": "김욱주",
+      "authors": "Hyunsoo Kim, Joon-Tae Kim, Ji Sung Lee, Beom Joon Kim, Jong-Moo Park, Kyusik Kang, Soo Joo Lee, Jae Guk Kim, Jae-Kwan Cha, Dae-Hyun Kim, Tai Hwan Park, Sang-Soon Park, Kyung Bok Lee, Jun Lee, Keun-Sik Hong, Yong-Jin Cho, Hong-Kyun Park, Byung-Chul Lee, Kyung-Ho Yu, Mi Sun Oh, Dong-Eog Kim, Wi-Sun Ryu, Jay Chol Choi, Jee-Hyun Kwon, Wook-Joo Kim, Dong-Ick Shin, Sung Il Sohn, Jeong-Ho Hong, Man-Seok Park, Kang-Ho Choi, Ki-Hyun Cho, Juneyoung Lee, Hee-Joon Bae"
+    },
+    {
+      "paper_id": 493519,
+      "doctorName": "김욱주",
+      "authors": "Dawn M Bravata, Laura J Myers, Mathew Reeves, Eric M Cheng, Fitsum Baye, Susan Ofner, Edward J Miech, Teresa Damush, Jason J Sico, Alan Zillich, Michael Phipps, Linda S Williams, Seemant Chaturvedi, Jason Johanning, Zhangsheng Yu, Anthony J Perkins, Ying Zhang, Greg Arling"
+    },
+    {
+      "paper_id": 493520,
+      "doctorName": "김욱주",
+      "authors": "Jun Young Chang, Wook-Joo Kim, Jee Hyun Kwon, Ji Sung Lee, Beom Joon Kim, Joon-Tae Kim, Jun Lee, Jae Kwan Cha, Dae-Hyun Kim, Yong-Jin Cho, Keun-Sik Hong, Soo Joo Lee, Jong-Moo Park, Byung-Chul Lee, Mi Sun Oh, Sang-Hwa Lee, Chulho Kim, Dong-Eog Kim, Kyung Bok Lee, Tai Hwan Park, Jay Chol Choi, Dong-Ick Shin, Sung-Il Sohn, Jeong-Ho Hong, Hee-Joon Bae, Moon-Ku Han"
+    },
+    {
+      "paper_id": 493521,
+      "doctorName": "김욱주",
+      "authors": "Keon-Joo Lee, Beom Joon Kim, Moon-Ku Han, Joon-Tae Kim, Kang Ho Choi, Dong-Ick Shin, Jae-Kwan Cha, Dae-Hyun Kim, Dong-Eog Kim, Wi-Sun Ryu, Jong-Moo Park, Kyusik Kang, Soo Joo Lee, Mi-Sun Oh, Kyung-Ho Yu, Byung-Chul Lee, Keun-Sik Hong, Yong-Jin Cho, Jay Chol Choi, Tai Hwan Park, Sang-Soon Park, Jee-Hyun Kwon, Wook-Joo Kim, Jun Lee, Sung Il Sohn, Jeong-Ho Hong, Kyung Bok Lee, Ji Sung Lee, Juneyoung Lee, Philip B Gorelick, Hee-Joon Bae, Clinical Research Collaboration for Stroke in Korea (CRCS‐K) Investigators"
+    },
+    {
+      "paper_id": 493522,
+      "doctorName": "김욱주",
+      "authors": "Kohei Wakabayashi, Naoko Ikeda, Katsuya Kajimoto, Yuichiro Minami, Takehiko Keida, Kuniya Asai, Ryo Munakata, Koji Murai, Yasushi Sakata, Hiroshi Suzuki, Teruo Takano, Naoki Sato, ATTEND investigators"
+    },
+    {
+      "paper_id": 493523,
+      "doctorName": "김욱주",
+      "authors": "Keon-Joo Lee, Beom Joon Kim, Moon-Ku Han, Joon-Tae Kim, Kang-Ho Choi, Dong-Ick Shin, Jae-Kwan Cha, Dae-Hyun Kim, Dong-Eog Kim, Wi-Sun Ryu, Jong-Moo Park, Kyusik Kang, Soo Joo Lee, Jae Guk Kim, Mi-Sun Oh, Kyung-Ho Yu, Byung-Chul Lee, Keun-Sik Hong, Yong-Jin Cho, Jay Chol Choi, Tai Hwan Park, Sang-Soon Park, Kyung Bok Lee, Jee-Hyun Kwon, Wook-Joo Kim, Sung Il Sohn, Jeong-Ho Hong, Jun Lee, Ji Sung Lee, Juneyoung Lee, Philip B Gorelick, Hee-Joon Bae, CRCS‐K (Clinical Research Collaboration for Stroke in Korea) Investigators"
+    },
+    {
+      "paper_id": 493524,
+      "doctorName": "김욱주",
+      "authors": "Hee-Joon Bae, CRCS-K Investigators, Jun Yup Kim, Jihoon Kang, Beom Joon Kim, Moon-Ku Han, Kang-Ho Choi, Joon-Tae Kim, Man-Seok Park, Ki-Hyun Cho, Baik Kyun Kim, Kyu Sun Yum, Dong-Ick Shin, Dae-Hyun Kim, Jae-Kwan Cha, Dong-Seok Gwak, Wi-Sun Ryu, Dong-Eog Kim, Jong-Moo Park, Yong Soo Kim, Kyusik Kang, Jae Guk Kim, Soo Joo Lee, Minwoo Lee, Mi-Sun Oh, Kyung-Ho Yu, Byung-Chul Lee, Hong-Kyun Park, Yong-Jin Cho, Keun-Sik Hong, Chul-Hoo Kang, Joong-Goo Jang, Jay Chol Choi, Seong Hwa Jang, Hyungjong Park, Jeong-Ho Hong, Sung-Il Sohn, Tai Hwan Park, Sang-Soon Park, Wook-Joo Kim, Jee-Hyun Kwon, Kyung Bok Lee, Doo Hyuk Kwon, Jun Lee, Keon-Joo Lee, Sang-Hwa Lee, Chulho Kim, Hae-Bong Jeong, Kwang Yeol Park, Ji Sung Lee, Juneyoung Lee"
+    },
+    {
+      "paper_id": 493527,
+      "doctorName": "김욱주",
+      "authors": "Hong-Kyun Park, Keon-Joo Lee, Jong-Moo Park, Kyusik Kang, Soo Joo Lee, Jae Guk Kim, Jae-Kwan Cha, Dae-Hyun Kim, Moon-Ku Han, Jihoon Kang, Beom Joon Kim, Tai Hwan Park, Moo-Seok Park, Kyung Bok Lee, Jun Lee, Keun-Sik Hong, Yong-Jin Cho, Byung-Chul Lee, Kyung-Ho Yu, Mi Sun Oh, Joon-Tae Kim, Kang-Ho Choi, Dong-Eog Kim, Wi-Sun Ryu, Jay Chol Choi, Jee-Hyun Kwon, Wook-Joo Kim, Dong-Ick Shin, Sung Il Sohn, Jeong-Ho Hong, Juneyoung Lee, Kyunghoon Lee, Junghan Song, Joon Seol Bae, Hyun Sub Cheong, Stéphanie Debette, Hee-Joon Bae"
+    },
+    {
+      "paper_id": 493529,
+      "doctorName": "김욱주",
+      "authors": "Joon-Tae Kim, Jihoon Kang, Beom Joon Kim, Jun Yup Kim, Moon-Ku Han, Ki-Hyun Cho, Man-Seok Park, Kang-Ho Choi, Jong-Moo Park, Kyusik Kang, Yong Soo Kim, Soo Joo Lee, Jae Guk Kim, Jae-Kwan Cha, Dae-Hyun Kim, Tai Hwan Park, Sang-Soon Park, Jin Kyo Choi, Kyungbok Lee, Kwang-Yeol Park, Hae-Bong Jeong, Jun Lee, Doo Hyuk Kwon, Yong-Jin Cho, Keun-Sik Hong, Hong-Kyun Park, Byung-Chul Lee, Kyung-Ho Yu, Mi Sun Oh, Minwoo Lee, Dong-Eog Kim, Dong-Seok Gwak, Jay Chol Choi, Joong-Goo Kim, Chul-Hoo Kang, Jee-Hyun Kwon, Wook-Joo Kim, Dong-Ick Shin, Kyu Sun Yum, Sung Il Sohn, Jeong-Ho Hong, Hyungjong Park, Chulho Kim, Sang-Hwa Lee, Juneyoung Lee, Philip B Gorelick, Bo Norrving, Hee-Joon Bae"
+    },
+    {
+      "paper_id": 493530,
+      "doctorName": "김욱주",
+      "authors": "Jonguk Kim, Jun Yup Kim, Jihoon Kang, Beom Joon Kim, Moon-Ku Han, Jeong-Yoon Lee, Tai Hwan Park, Keon-Joo Lee, Joon-Tae Kim, Kang-Ho Choi, Jong-Moo Park, Kyusik Kang, Soo Joo Lee, Jae Guk Kim, Jae-Kwan Cha, Dae-Hyun Kim, Kyungbok Lee, Jun Lee, Keun-Sik Hong, Yong-Jin Cho, Hong-Kyun Park, Byung-Chul Lee, Kyung-Ho Yu, Mi-Sun Oh, Dong-Eog Kim, Wi-Sun Ryu, Jay Chol Choi, Jee-Hyun Kwon, Wook-Joo Kim, Dong-Ick Shin, Kyu Sun Yum, Sung Il Sohn, Jeong-Ho Hong, Sang-Hwa Lee, Ji Sung Lee, Juneyoung Lee, Philip B Gorelick, Hee-Joon Bae"
+    },
+    {
+      "paper_id": 493531,
+      "doctorName": "김욱주",
+      "authors": "Jun Young Chang, Ji Sung Lee, Wook-Joo Kim, Jee Hyun Kwon, Beom Joon Kim, Joon-Tae Kim, Jun Lee, Jae Kwan Cha, Dae-Hyun Kim, Yong-Jin Cho, Keun-Sik Hong, Soo Joo Lee, Jong-Moo Park, Kyusik Kang, Byung-Chul Lee, Kyung-Ho Yu, Sang-Hwa Lee, Chulho Kim, Kwang-Yeol Park, Dong-Eog Kim, Kyungbok Lee, Tai Hwan Park, Jay Chol Choi, Dong-Ick Shin, Sung-Il Sohn, Hee-Joon Bae, Moon-Ku Han, CRCS‐K‐NIH (Clinical Research Collaboration for Stroke in Korea‐National Institutes of Health) investigators"
+    },
+    {
+      "paper_id": 493532,
+      "doctorName": "김욱주",
+      "authors": "Joon-Tae Kim, Ji Sung Lee, Hyunsoo Kim, Beom Joon Kim, Keon-Joo Lee, Jong-Moo Park, Kyusik Kang, Soo Joo Lee, Jae Guk Kim, Jae-Kwan Cha, Dae-Hyun Kim, Tai Hwan Park, Kyungbok Lee, Jun Lee, Keun-Sik Hong, Yong-Jin Cho, Hong-Kyun Park, Byung-Chul Lee, Kyung-Ho Yu, Mi Sun Oh, Dong-Eog Kim, Jay Chol Choi, Jee-Hyun Kwon, Wook-Joo Kim, Dong-Ick Shin, Kyu Sun Yum, Sung Il Sohn, Jeong-Ho Hong, Sang-Hwa Lee, Man-Seok Park, Wi-Sun Ryu, Kwang-Yeol Park, Juneyoung Lee, Jeffrey L Saver, Hee-Joon Bae"
+    },
+    {
+      "paper_id": 493534,
+      "doctorName": "김욱주",
+      "authors": "Ahro Kim, Jee Hyun Kwon, Chan-Hyuk Lee, Wook-Joo Kim"
+    },
+    {
+      "paper_id": 493536,
+      "doctorName": "이은미",
+      "authors": "Eunmi Lee, Hyunjo Lee"
+    },
+    {
+      "paper_id": 493537,
+      "doctorName": "이은미",
+      "authors": "Eunmi Lee, Minjee Kim, Kyu-Hyouck Kyoung, Jin Yong Jun"
+    },
+    {
+      "paper_id": 493538,
+      "doctorName": "이은미",
+      "authors": "Eun Mi Lee, Tae Hoon Lee, Ol Lim Park, Jung Gwon Nam"
+    },
+    {
+      "paper_id": 493540,
+      "doctorName": "이은미",
+      "authors": "Ji Yun Park, Jee Hyun Kwon, Wook Joo Kim, Sun Young Kim, Eun Mi Lee, Hui Jun Yang, Byeong Su Park, Kwang Dong Choi"
+    },
+    {
+      "paper_id": 493541,
+      "doctorName": "이은미",
+      "authors": "Gaku Ichihara, Mayu Iida, Eri Watanabe, Tomoya Fujie, Toshiyuki Kaji, Eunmi Lee, Yangho Kim"
+    },
+    {
+      "paper_id": 493545,
+      "doctorName": "이은미",
+      "authors": "J-M Lee, H-J Yang, J-H Kwon, W-J Kim, S-Y Kim, E-M Lee, J-Y Park, Y C Weon, S H Park, B-J Gwon, J-C Ryu, S-T Lee, H-J Kim, B Jeon"
+    },
+    {
+      "paper_id": 493546,
+      "doctorName": "이은미",
+      "authors": "Eunmi Lee, Ji Eun Park, Mayu Iida, Tomoya Fujie, Toshiyuki Kaji, Gaku Ichihara, Young Cheol Weon, Yangho Kim"
+    },
+    {
+      "paper_id": 493547,
+      "doctorName": "이은미",
+      "authors": "Ga Young Park, Taekyung Kim, Jinsick Park, Eun Mi Lee, Han Uk Ryu, Sun I Kim, In Young Kim, Joong Koo Kang, Dong Pyo Jang, Masud Husain"
+    },
+    {
+      "paper_id": 493548,
+      "doctorName": "이은미",
+      "authors": "Su Hyun Han, Eun Mi Lee, Eun Ju Choi, Han Uk Ryu, Joong Koo Kang, Jong Woo Chung"
+    },
+    {
+      "paper_id": 493549,
+      "doctorName": "이은미",
+      "authors": "Joong Koo Kang, Eun Mi Lee, Dajeong Kim, Seong Hye Lee, Taekyung Kim, Young Min Park, Jinsick Park, Sun I Kim, In Young Kim, Dong Pyo Jang"
+    },
+    {
+      "paper_id": 493550,
+      "doctorName": "이은미",
+      "authors": "Ga Young Park, Eun Mi Lee, Min-Soo Seo, Yoo-Jin Seo, Jungsu S Oh, Woo-Chan Son, Ki Soo Kim, Jae Seung Kim, Joong Koo Kang, Kyung-Sun Kang"
+    },
+    {
+      "paper_id": 493551,
+      "doctorName": "이은미",
+      "authors": "Eun Mi Lee, Joong Koo Kang, Sang Joon Kim, Seok Ho Hong, Tae Sung Ko, Sang Ahm Lee, Do Heui Lee, Jung Kyo Lee"
+    },
+    {
+      "paper_id": 493552,
+      "doctorName": "이은미",
+      "authors": "Jinsick Park, Hojong Lee, Taekyung Kim, Ga Young Park, Eun Mi Lee, Seunghee Baek, Jeonghun Ku, In Young Kim, Sun I Kim, Dong Pyo Jang, Joong Koo Kang"
+    },
+    {
+      "paper_id": 493553,
+      "doctorName": "이은미",
+      "authors": "Eun Mi Lee, Joong Koo Kang, Jungsu S Oh, Jae Seung Kim, Yong-Wook Shin, Chang-Yoon Kim"
+    },
+    {
+      "paper_id": 493554,
+      "doctorName": "이은미",
+      "authors": "Sung Suk Oh, Yeji Han, Jongho Lee, Seong Dae Yun, Joong Koo Kang, Eun Mi Lee, Hyo Woon Yoon, Jun-Young Chung, HyunWook Park"
+    },
+    {
+      "paper_id": 493555,
+      "doctorName": "이은미",
+      "authors": "Eun Mi Lee, Joong Koo Kang, Ga Young Park, Jung Su Oh, Jae Seung Kim"
+    },
+    {
+      "paper_id": 493556,
+      "doctorName": "이은미",
+      "authors": "Gha-Hyun Lee, Min Ju Kim, Eun Mi Lee, Cheon Sik Kim, Sang-Ahm Lee"
+    },
+    {
+      "paper_id": 493560,
+      "doctorName": "이은미",
+      "authors": "Eun Mi Lee, Ga Young Park, Ki Chun Im, Sang Tae Kim, Chul-Woong Woo, Jin Hwa Chung, Ki Soo Kim, Jae Seung Kim, Young-Min Shon, Yeong In Kim, Joong Koo Kang"
+    }
+  ]
+}

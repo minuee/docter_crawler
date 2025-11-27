@@ -1,0 +1,2326 @@
+{
+  "counting": {
+    "totalCount": 462,
+    "processSuccessCount": 37,
+    "processFailCount": 0,
+    "processNullCount": 7,
+    "processNotMatchCount": 418
+  },
+  "successData": [
+    {
+      "paper_id": 494013,
+      "doctorName": "성태윤",
+      "firstAuthors": "Tae-Yun Sung"
+    },
+    {
+      "paper_id": 494074,
+      "doctorName": "윤대성",
+      "firstAuthors": "Dae-Sung Yoon"
+    },
+    {
+      "paper_id": 494467,
+      "doctorName": "강영우",
+      "firstAuthors": "Hyeon Woong Yang"
+    },
+    {
+      "paper_id": 494578,
+      "doctorName": "이상억",
+      "firstAuthors": "Sang Eok Lee"
+    },
+    {
+      "paper_id": 494593,
+      "doctorName": "성낙송",
+      "firstAuthors": "Nak Song Sung"
+    },
+    {
+      "paper_id": 494602,
+      "doctorName": "문주익",
+      "firstAuthors": "Ju Ik Moon"
+    },
+    {
+      "paper_id": 494615,
+      "doctorName": "문주익",
+      "firstAuthors": "J I Moon"
+    },
+    {
+      "paper_id": 494618,
+      "doctorName": "문주익",
+      "firstAuthors": "Ju Ik Moon"
+    },
+    {
+      "paper_id": 494683,
+      "doctorName": "이성기",
+      "firstAuthors": "Sung Ki Lee"
+    },
+    {
+      "paper_id": 494684,
+      "doctorName": "이성기",
+      "firstAuthors": "Sungki Lee"
+    },
+    {
+      "paper_id": 494841,
+      "doctorName": "이무식",
+      "firstAuthors": "Moo-Sik Lee"
+    },
+    {
+      "paper_id": 494861,
+      "doctorName": "박영규",
+      "firstAuthors": "Young Gyu Park"
+    },
+    {
+      "paper_id": 494883,
+      "doctorName": "송재황",
+      "firstAuthors": "Jae-Hwang Song"
+    },
+    {
+      "paper_id": 494974,
+      "doctorName": "조영준",
+      "firstAuthors": "Young Jun Cho"
+    },
+    {
+      "paper_id": 495120,
+      "doctorName": "윤정민",
+      "firstAuthors": "Jung Min Yoon"
+    },
+    {
+      "paper_id": 495167,
+      "doctorName": "박요한",
+      "firstAuthors": "Yohan Park"
+    },
+    {
+      "paper_id": 495173,
+      "doctorName": "박요한",
+      "firstAuthors": "Yohan Park"
+    },
+    {
+      "paper_id": 495177,
+      "doctorName": "박요한",
+      "firstAuthors": "Hanbi Lee, Yohan Park"
+    },
+    {
+      "paper_id": 495179,
+      "doctorName": "박요한",
+      "firstAuthors": "Yohan Park"
+    },
+    {
+      "paper_id": 495183,
+      "doctorName": "박요한",
+      "firstAuthors": "Yohan Park"
+    },
+    {
+      "paper_id": 495184,
+      "doctorName": "박요한",
+      "firstAuthors": "Yohan Park"
+    },
+    {
+      "paper_id": 495188,
+      "doctorName": "박요한",
+      "firstAuthors": "Yohan Park"
+    },
+    {
+      "paper_id": 495189,
+      "doctorName": "박요한",
+      "firstAuthors": "Yo Han Park"
+    },
+    {
+      "paper_id": 495205,
+      "doctorName": "류기현",
+      "firstAuthors": "Ki-Hyun Ryu"
+    },
+    {
+      "paper_id": 495206,
+      "doctorName": "류기현",
+      "firstAuthors": "Ki-Hyun Ryu"
+    },
+    {
+      "paper_id": 495223,
+      "doctorName": "권미혜",
+      "firstAuthors": "Mihye Kwon"
+    },
+    {
+      "paper_id": 495313,
+      "doctorName": "김대성",
+      "firstAuthors": "Dae Sung Kim"
+    },
+    {
+      "paper_id": 495317,
+      "doctorName": "김종대",
+      "firstAuthors": "Jong Dai Kim"
+    },
+    {
+      "paper_id": 495323,
+      "doctorName": "김종대",
+      "firstAuthors": "Jong-Dai Kim"
+    },
+    {
+      "paper_id": 495326,
+      "doctorName": "김종대",
+      "firstAuthors": "Jong Dai Kim"
+    },
+    {
+      "paper_id": 495502,
+      "doctorName": "나상준",
+      "firstAuthors": "Sang-Jun Na"
+    },
+    {
+      "paper_id": 495519,
+      "doctorName": "나상준",
+      "firstAuthors": "Sang-Jun Na"
+    },
+    {
+      "paper_id": 495537,
+      "doctorName": "나상준",
+      "firstAuthors": "Sang-Jun Na"
+    },
+    {
+      "paper_id": 495560,
+      "doctorName": "나상준",
+      "firstAuthors": "Sang-Jun Na"
+    },
+    {
+      "paper_id": 495563,
+      "doctorName": "나상준",
+      "firstAuthors": "Sang-Jun Na"
+    },
+    {
+      "paper_id": 495573,
+      "doctorName": "이영진",
+      "firstAuthors": "Young Jin Lee"
+    },
+    {
+      "paper_id": 495616,
+      "doctorName": "정인범",
+      "firstAuthors": "Inbeom Jeong"
+    }
+  ],
+  "failData": [],
+  "notMatchData": [
+    {
+      "paper_id": 494009,
+      "doctorName": "성태윤",
+      "firstAuthors": "Ji-Yoon Jung"
+    },
+    {
+      "paper_id": 494010,
+      "doctorName": "성태윤",
+      "firstAuthors": "Jae Hwa Yoo"
+    },
+    {
+      "paper_id": 494015,
+      "doctorName": "성태윤",
+      "firstAuthors": "G A Chalkiadis"
+    },
+    {
+      "paper_id": 494016,
+      "doctorName": "조춘규",
+      "firstAuthors": "Chun Woo Yang"
+    },
+    {
+      "paper_id": 494017,
+      "doctorName": "조춘규",
+      "firstAuthors": "Chun Woo Yang"
+    },
+    {
+      "paper_id": 494018,
+      "doctorName": "조춘규",
+      "firstAuthors": "Sung Mee Jung"
+    },
+    {
+      "paper_id": 494020,
+      "doctorName": "조춘규",
+      "firstAuthors": "Chang Kil Park"
+    },
+    {
+      "paper_id": 494025,
+      "doctorName": "조춘규",
+      "firstAuthors": "Jeong Min Park"
+    },
+    {
+      "paper_id": 494026,
+      "doctorName": "조춘규",
+      "firstAuthors": "Chang Kil Park"
+    },
+    {
+      "paper_id": 494033,
+      "doctorName": "조춘규",
+      "firstAuthors": "Elske Sitsen"
+    },
+    {
+      "paper_id": 494038,
+      "doctorName": "권희욱",
+      "firstAuthors": "Seong Cheol Yun"
+    },
+    {
+      "paper_id": 494040,
+      "doctorName": "권희욱",
+      "firstAuthors": "Chun Woo Yang"
+    },
+    {
+      "paper_id": 494041,
+      "doctorName": "권희욱",
+      "firstAuthors": "Chun Woo Yang"
+    },
+    {
+      "paper_id": 494042,
+      "doctorName": "권희욱",
+      "firstAuthors": "Sung Mee Jung"
+    },
+    {
+      "paper_id": 494045,
+      "doctorName": "권희욱",
+      "firstAuthors": "Chun Woo Yang"
+    },
+    {
+      "paper_id": 494046,
+      "doctorName": "권희욱",
+      "firstAuthors": "Chun Woo Yang"
+    },
+    {
+      "paper_id": 494066,
+      "doctorName": "윤대성",
+      "firstAuthors": "Fei Ye"
+    },
+    {
+      "paper_id": 494068,
+      "doctorName": "윤대성",
+      "firstAuthors": "A B Makar"
+    },
+    {
+      "paper_id": 494070,
+      "doctorName": "윤대성",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494071,
+      "doctorName": "윤대성",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494073,
+      "doctorName": "윤대성",
+      "firstAuthors": "D H Kim"
+    },
+    {
+      "paper_id": 494086,
+      "doctorName": "배장호",
+      "firstAuthors": "Hye Won Lee"
+    },
+    {
+      "paper_id": 494087,
+      "doctorName": "배장호",
+      "firstAuthors": "Youngjin Cho"
+    },
+    {
+      "paper_id": 494088,
+      "doctorName": "이종욱",
+      "firstAuthors": "Jae Hyon Park"
+    },
+    {
+      "paper_id": 494089,
+      "doctorName": "이종욱",
+      "firstAuthors": "Dong Ryul Ko"
+    },
+    {
+      "paper_id": 494090,
+      "doctorName": "이종욱",
+      "firstAuthors": "Taeyoung Kong"
+    },
+    {
+      "paper_id": 494091,
+      "doctorName": "이종욱",
+      "firstAuthors": "Jung Won Lee"
+    },
+    {
+      "paper_id": 494093,
+      "doctorName": "이종욱",
+      "firstAuthors": "Yong Sung Cha"
+    },
+    {
+      "paper_id": 494094,
+      "doctorName": "이종욱",
+      "firstAuthors": "Yoon Jung Hwang"
+    },
+    {
+      "paper_id": 494096,
+      "doctorName": "이종욱",
+      "firstAuthors": "Tae Seop Lim"
+    },
+    {
+      "paper_id": 494097,
+      "doctorName": "이종욱",
+      "firstAuthors": "Yoonmi Seok"
+    },
+    {
+      "paper_id": 494098,
+      "doctorName": "이종욱",
+      "firstAuthors": "Jong-Ha Yoo"
+    },
+    {
+      "paper_id": 494101,
+      "doctorName": "이종욱",
+      "firstAuthors": "Chung Hyun Nahm"
+    },
+    {
+      "paper_id": 494104,
+      "doctorName": "이종욱",
+      "firstAuthors": "Marlène Murris-Espin"
+    },
+    {
+      "paper_id": 494107,
+      "doctorName": "이종욱",
+      "firstAuthors": "Katarzyna M Bocian-Ostrzycka"
+    },
+    {
+      "paper_id": 494115,
+      "doctorName": "이종욱",
+      "firstAuthors": "W S Appleton"
+    },
+    {
+      "paper_id": 494117,
+      "doctorName": "이종욱",
+      "firstAuthors": "Pum Soo Kim"
+    },
+    {
+      "paper_id": 494120,
+      "doctorName": "김영진",
+      "firstAuthors": "Jong-Sik Kim"
+    },
+    {
+      "paper_id": 494125,
+      "doctorName": "김영진",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494146,
+      "doctorName": "류한영",
+      "firstAuthors": "P B Babycos"
+    },
+    {
+      "paper_id": 494151,
+      "doctorName": "류한영",
+      "firstAuthors": "H Ikeuchi"
+    },
+    {
+      "paper_id": 494155,
+      "doctorName": "류한영",
+      "firstAuthors": "T A Ports"
+    },
+    {
+      "paper_id": 494162,
+      "doctorName": "명기범",
+      "firstAuthors": "Eun Ah Suhng"
+    },
+    {
+      "paper_id": 494170,
+      "doctorName": "명기범",
+      "firstAuthors": "Sang Woo Lee"
+    },
+    {
+      "paper_id": 494173,
+      "doctorName": "명기범",
+      "firstAuthors": "J Nicole F Fussell"
+    },
+    {
+      "paper_id": 494174,
+      "doctorName": "명기범",
+      "firstAuthors": "Seung-Hyun Cheong"
+    },
+    {
+      "paper_id": 494178,
+      "doctorName": "명기범",
+      "firstAuthors": "Caroline Bertolini Bottino"
+    },
+    {
+      "paper_id": 494179,
+      "doctorName": "명기범",
+      "firstAuthors": "Ga Youn Lee"
+    },
+    {
+      "paper_id": 494187,
+      "doctorName": "명기범",
+      "firstAuthors": "So Young Kim"
+    },
+    {
+      "paper_id": 494194,
+      "doctorName": "명기범",
+      "firstAuthors": "Ji-Yeon Byun"
+    },
+    {
+      "paper_id": 494200,
+      "doctorName": "명기범",
+      "firstAuthors": "M-H Kim"
+    },
+    {
+      "paper_id": 494205,
+      "doctorName": "명기범",
+      "firstAuthors": "Jason Chen"
+    },
+    {
+      "paper_id": 494218,
+      "doctorName": "명기범",
+      "firstAuthors": "Avninder Singh"
+    },
+    {
+      "paper_id": 494222,
+      "doctorName": "명기범",
+      "firstAuthors": "Daniela Carvajal"
+    },
+    {
+      "paper_id": 494230,
+      "doctorName": "명기범",
+      "firstAuthors": "Ruzica Jurakic Toncic"
+    },
+    {
+      "paper_id": 494232,
+      "doctorName": "명기범",
+      "firstAuthors": "C Jacquin-Porretaz"
+    },
+    {
+      "paper_id": 494235,
+      "doctorName": "명기범",
+      "firstAuthors": "Valentina Ruffo di Calabria"
+    },
+    {
+      "paper_id": 494236,
+      "doctorName": "명기범",
+      "firstAuthors": "Michael J Bykowsky"
+    },
+    {
+      "paper_id": 494238,
+      "doctorName": "명기범",
+      "firstAuthors": "M H Kim"
+    },
+    {
+      "paper_id": 494239,
+      "doctorName": "명기범",
+      "firstAuthors": "Byong Han Song"
+    },
+    {
+      "paper_id": 494240,
+      "doctorName": "명기범",
+      "firstAuthors": "Caroline Balvedi Gaiewski"
+    },
+    {
+      "paper_id": 494243,
+      "doctorName": "명기범",
+      "firstAuthors": "Matthew Pihlblad"
+    },
+    {
+      "paper_id": 494267,
+      "doctorName": "명기범",
+      "firstAuthors": "H Samaratunga"
+    },
+    {
+      "paper_id": 494269,
+      "doctorName": "명기범",
+      "firstAuthors": "R S Padilla"
+    },
+    {
+      "paper_id": 494273,
+      "doctorName": "명기범",
+      "firstAuthors": "Sophie Soyeon Lim"
+    },
+    {
+      "paper_id": 494282,
+      "doctorName": "명기범",
+      "firstAuthors": "Zhang Ying"
+    },
+    {
+      "paper_id": 494285,
+      "doctorName": "명기범",
+      "firstAuthors": "Ermias Teklehaimanot Yefter"
+    },
+    {
+      "paper_id": 494295,
+      "doctorName": "명기범",
+      "firstAuthors": "L NOBIS"
+    },
+    {
+      "paper_id": 494304,
+      "doctorName": "명기범",
+      "firstAuthors": "A Ameur"
+    },
+    {
+      "paper_id": 494308,
+      "doctorName": "명기범",
+      "firstAuthors": "Seong Hun Moon"
+    },
+    {
+      "paper_id": 494313,
+      "doctorName": "명기범",
+      "firstAuthors": "Lin-Feng Li"
+    },
+    {
+      "paper_id": 494319,
+      "doctorName": "명기범",
+      "firstAuthors": "Takako Uchiyama"
+    },
+    {
+      "paper_id": 494324,
+      "doctorName": "명기범",
+      "firstAuthors": "Eun Ah Lee"
+    },
+    {
+      "paper_id": 494327,
+      "doctorName": "명기범",
+      "firstAuthors": "Xingyang Yi"
+    },
+    {
+      "paper_id": 494328,
+      "doctorName": "명기범",
+      "firstAuthors": "V Ruocco"
+    },
+    {
+      "paper_id": 494329,
+      "doctorName": "명기범",
+      "firstAuthors": "M W Lee"
+    },
+    {
+      "paper_id": 494334,
+      "doctorName": "명기범",
+      "firstAuthors": "Seong Hun Moon"
+    },
+    {
+      "paper_id": 494335,
+      "doctorName": "명기범",
+      "firstAuthors": "Ji Ha Yoon"
+    },
+    {
+      "paper_id": 494338,
+      "doctorName": "명기범",
+      "firstAuthors": "J Jiang"
+    },
+    {
+      "paper_id": 494339,
+      "doctorName": "명기범",
+      "firstAuthors": "S B Bae"
+    },
+    {
+      "paper_id": 494341,
+      "doctorName": "명기범",
+      "firstAuthors": "A Preti"
+    },
+    {
+      "paper_id": 494342,
+      "doctorName": "명기범",
+      "firstAuthors": "Nozomu Kobayashi"
+    },
+    {
+      "paper_id": 494348,
+      "doctorName": "명기범",
+      "firstAuthors": "H M Choi"
+    },
+    {
+      "paper_id": 494350,
+      "doctorName": "명기범",
+      "firstAuthors": "M Isonokami"
+    },
+    {
+      "paper_id": 494354,
+      "doctorName": "명기범",
+      "firstAuthors": "Nandini Agrawal"
+    },
+    {
+      "paper_id": 494356,
+      "doctorName": "명기범",
+      "firstAuthors": "G GARNIER"
+    },
+    {
+      "paper_id": 494357,
+      "doctorName": "명기범",
+      "firstAuthors": "Shrutakirthi D Shenoi"
+    },
+    {
+      "paper_id": 494369,
+      "doctorName": "명기범",
+      "firstAuthors": "Geok Hoon Lim"
+    },
+    {
+      "paper_id": 494372,
+      "doctorName": "명기범",
+      "firstAuthors": "Mohammad A Khan"
+    },
+    {
+      "paper_id": 494375,
+      "doctorName": "박근용",
+      "firstAuthors": "Ju-Young Kim"
+    },
+    {
+      "paper_id": 494376,
+      "doctorName": "박근용",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494377,
+      "doctorName": "박근용",
+      "firstAuthors": "Seung Uk Jeong"
+    },
+    {
+      "paper_id": 494378,
+      "doctorName": "박근용",
+      "firstAuthors": "J A Masucci"
+    },
+    {
+      "paper_id": 494379,
+      "doctorName": "박근용",
+      "firstAuthors": "M Ardenne"
+    },
+    {
+      "paper_id": 494380,
+      "doctorName": "박근용",
+      "firstAuthors": "P L Poffenbarger"
+    },
+    {
+      "paper_id": 494381,
+      "doctorName": "박근용",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494382,
+      "doctorName": "박근용",
+      "firstAuthors": "Jeong-Hwa Choi"
+    },
+    {
+      "paper_id": 494384,
+      "doctorName": "박근용",
+      "firstAuthors": "Florian Congnard"
+    },
+    {
+      "paper_id": 494385,
+      "doctorName": "임동미",
+      "firstAuthors": "Ju-Young Kim"
+    },
+    {
+      "paper_id": 494387,
+      "doctorName": "임동미",
+      "firstAuthors": "Seung Uk Jeong"
+    },
+    {
+      "paper_id": 494389,
+      "doctorName": "임동미",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494390,
+      "doctorName": "임동미",
+      "firstAuthors": "J A Masucci"
+    },
+    {
+      "paper_id": 494392,
+      "doctorName": "임동미",
+      "firstAuthors": "E Henkel"
+    },
+    {
+      "paper_id": 494394,
+      "doctorName": "임동미",
+      "firstAuthors": "M Ardenne"
+    },
+    {
+      "paper_id": 494395,
+      "doctorName": "김종엽",
+      "firstAuthors": "Sung Ryul Shim"
+    },
+    {
+      "paper_id": 494397,
+      "doctorName": "이종빈",
+      "firstAuthors": "Jun Ma"
+    },
+    {
+      "paper_id": 494398,
+      "doctorName": "이종빈",
+      "firstAuthors": "Hun Yi Park"
+    },
+    {
+      "paper_id": 494401,
+      "doctorName": "이종빈",
+      "firstAuthors": "Yun-Hoon Choung"
+    },
+    {
+      "paper_id": 494406,
+      "doctorName": "인승민",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494407,
+      "doctorName": "인승민",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494409,
+      "doctorName": "인승민",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494418,
+      "doctorName": "박성수",
+      "firstAuthors": "T J Guo"
+    },
+    {
+      "paper_id": 494422,
+      "doctorName": "강지현",
+      "firstAuthors": "Yu Seob Shin"
+    },
+    {
+      "paper_id": 494428,
+      "doctorName": "강지현",
+      "firstAuthors": "R Corrocher"
+    },
+    {
+      "paper_id": 494432,
+      "doctorName": "강지현",
+      "firstAuthors": "Hisataka Ogawa"
+    },
+    {
+      "paper_id": 494446,
+      "doctorName": "유병연",
+      "firstAuthors": "Jee-Hyun Kang"
+    },
+    {
+      "paper_id": 494457,
+      "doctorName": "유병연",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494463,
+      "doctorName": "강영우",
+      "firstAuthors": "Mehari Endale"
+    },
+    {
+      "paper_id": 494464,
+      "doctorName": "강영우",
+      "firstAuthors": "Sun Joo Kim"
+    },
+    {
+      "paper_id": 494474,
+      "doctorName": "강영우",
+      "firstAuthors": "Ok Lee"
+    },
+    {
+      "paper_id": 494475,
+      "doctorName": "강영우",
+      "firstAuthors": "Mee-Hye Kwon"
+    },
+    {
+      "paper_id": 494478,
+      "doctorName": "강영우",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494480,
+      "doctorName": "강영우",
+      "firstAuthors": "Ihab I El Hajj"
+    },
+    {
+      "paper_id": 494483,
+      "doctorName": "강영우",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494485,
+      "doctorName": "강영우",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494486,
+      "doctorName": "강영우",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494499,
+      "doctorName": "구훈섭",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494500,
+      "doctorName": "구훈섭",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494503,
+      "doctorName": "구훈섭",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494504,
+      "doctorName": "구훈섭",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494507,
+      "doctorName": "허규찬",
+      "firstAuthors": "In Seok Lee"
+    },
+    {
+      "paper_id": 494517,
+      "doctorName": "허규찬",
+      "firstAuthors": "Sung-Keun Park"
+    },
+    {
+      "paper_id": 494518,
+      "doctorName": "허규찬",
+      "firstAuthors": "J S Park"
+    },
+    {
+      "paper_id": 494519,
+      "doctorName": "허규찬",
+      "firstAuthors": "Tae Hee Lee"
+    },
+    {
+      "paper_id": 494522,
+      "doctorName": "허규찬",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494523,
+      "doctorName": "허규찬",
+      "firstAuthors": "Yong Moon Kim"
+    },
+    {
+      "paper_id": 494524,
+      "doctorName": "허규찬",
+      "firstAuthors": "Tae Hee Lee"
+    },
+    {
+      "paper_id": 494525,
+      "doctorName": "허규찬",
+      "firstAuthors": "Hwang Choi"
+    },
+    {
+      "paper_id": 494531,
+      "doctorName": "허규찬",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494535,
+      "doctorName": "허규찬",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494536,
+      "doctorName": "허규찬",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494537,
+      "doctorName": "허규찬",
+      "firstAuthors": "Mariana Ferreira Cardoso"
+    },
+    {
+      "paper_id": 494540,
+      "doctorName": "김선문",
+      "firstAuthors": "M SHIBATA"
+    },
+    {
+      "paper_id": 494546,
+      "doctorName": "김선문",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494549,
+      "doctorName": "김선문",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494551,
+      "doctorName": "김선문",
+      "firstAuthors": "Nagehan O Barisik"
+    },
+    {
+      "paper_id": 494553,
+      "doctorName": "김선문",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494555,
+      "doctorName": "김선문",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494557,
+      "doctorName": "김선문",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494565,
+      "doctorName": "최용우",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494568,
+      "doctorName": "최용우",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494570,
+      "doctorName": "최용우",
+      "firstAuthors": "Ihab I El Hajj"
+    },
+    {
+      "paper_id": 494571,
+      "doctorName": "최용우",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494572,
+      "doctorName": "최용우",
+      "firstAuthors": "Ho Gak Kim"
+    },
+    {
+      "paper_id": 494573,
+      "doctorName": "이태희",
+      "firstAuthors": "J Gehler"
+    },
+    {
+      "paper_id": 494574,
+      "doctorName": "이상억",
+      "firstAuthors": "Sang-Ho Jeong"
+    },
+    {
+      "paper_id": 494579,
+      "doctorName": "이상억",
+      "firstAuthors": "Sonja Loges"
+    },
+    {
+      "paper_id": 494585,
+      "doctorName": "최인석",
+      "firstAuthors": "Matija Horzic"
+    },
+    {
+      "paper_id": 494589,
+      "doctorName": "최인석",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494598,
+      "doctorName": "성낙송",
+      "firstAuthors": "Matija Horzic"
+    },
+    {
+      "paper_id": 494599,
+      "doctorName": "문주익",
+      "firstAuthors": "Hyeon Hwa Oh"
+    },
+    {
+      "paper_id": 494600,
+      "doctorName": "문주익",
+      "firstAuthors": "Suk-Bae Moon"
+    },
+    {
+      "paper_id": 494601,
+      "doctorName": "문주익",
+      "firstAuthors": "Jong Man Kim"
+    },
+    {
+      "paper_id": 494603,
+      "doctorName": "문주익",
+      "firstAuthors": "J M Kim"
+    },
+    {
+      "paper_id": 494604,
+      "doctorName": "문주익",
+      "firstAuthors": "J M Kim"
+    },
+    {
+      "paper_id": 494605,
+      "doctorName": "문주익",
+      "firstAuthors": "M Shin"
+    },
+    {
+      "paper_id": 494606,
+      "doctorName": "문주익",
+      "firstAuthors": "G S Choi"
+    },
+    {
+      "paper_id": 494607,
+      "doctorName": "문주익",
+      "firstAuthors": "J M Kim"
+    },
+    {
+      "paper_id": 494608,
+      "doctorName": "문주익",
+      "firstAuthors": "J M Kim"
+    },
+    {
+      "paper_id": 494610,
+      "doctorName": "문주익",
+      "firstAuthors": "S Lee"
+    },
+    {
+      "paper_id": 494611,
+      "doctorName": "문주익",
+      "firstAuthors": "S Lee"
+    },
+    {
+      "paper_id": 494612,
+      "doctorName": "문주익",
+      "firstAuthors": "S Lee"
+    },
+    {
+      "paper_id": 494613,
+      "doctorName": "문주익",
+      "firstAuthors": "G O Jung"
+    },
+    {
+      "paper_id": 494614,
+      "doctorName": "문주익",
+      "firstAuthors": "G O Jung"
+    },
+    {
+      "paper_id": 494621,
+      "doctorName": "윤성로",
+      "firstAuthors": "Sug Kyun Shin"
+    },
+    {
+      "paper_id": 494622,
+      "doctorName": "윤성로",
+      "firstAuthors": "Se-Hee Yoon"
+    },
+    {
+      "paper_id": 494623,
+      "doctorName": "윤성로",
+      "firstAuthors": "Se-Hee Yoon"
+    },
+    {
+      "paper_id": 494629,
+      "doctorName": "박요한",
+      "firstAuthors": "Minhyeok Lee"
+    },
+    {
+      "paper_id": 494630,
+      "doctorName": "박요한",
+      "firstAuthors": "Eun Kyung Kim, Sang-Eun Hong"
+    },
+    {
+      "paper_id": 494635,
+      "doctorName": "장혜연",
+      "firstAuthors": "Hans Christian Rundfeldt"
+    },
+    {
+      "paper_id": 494637,
+      "doctorName": "김용덕",
+      "firstAuthors": "Joong Hyun Park"
+    },
+    {
+      "paper_id": 494638,
+      "doctorName": "김용덕",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494640,
+      "doctorName": "김용덕",
+      "firstAuthors": "Sang-Jun Na"
+    },
+    {
+      "paper_id": 494641,
+      "doctorName": "김용덕",
+      "firstAuthors": "Z Jamrozik"
+    },
+    {
+      "paper_id": 494645,
+      "doctorName": "김용덕",
+      "firstAuthors": "M S Lee"
+    },
+    {
+      "paper_id": 494646,
+      "doctorName": "김용덕",
+      "firstAuthors": "M S Lee"
+    },
+    {
+      "paper_id": 494657,
+      "doctorName": "김현우",
+      "firstAuthors": "Ji Hun Kim"
+    },
+    {
+      "paper_id": 494662,
+      "doctorName": "김현우",
+      "firstAuthors": "Tae-Sob Shin"
+    },
+    {
+      "paper_id": 494666,
+      "doctorName": "김현우",
+      "firstAuthors": "J K Lee"
+    },
+    {
+      "paper_id": 494668,
+      "doctorName": "김현우",
+      "firstAuthors": "A Reinprecht"
+    },
+    {
+      "paper_id": 494676,
+      "doctorName": "김철중",
+      "firstAuthors": "E Sun Paik"
+    },
+    {
+      "paper_id": 494677,
+      "doctorName": "김철중",
+      "firstAuthors": "Joseph J Noh"
+    },
+    {
+      "paper_id": 494678,
+      "doctorName": "김철중",
+      "firstAuthors": "Chul-Jung Kim"
+    },
+    {
+      "paper_id": 494679,
+      "doctorName": "김철중",
+      "firstAuthors": "Tae-Joong Kim"
+    },
+    {
+      "paper_id": 494680,
+      "doctorName": "김철중",
+      "firstAuthors": "Yoo-Young Lee"
+    },
+    {
+      "paper_id": 494681,
+      "doctorName": "김철중",
+      "firstAuthors": "Gun Yoon"
+    },
+    {
+      "paper_id": 494691,
+      "doctorName": "이성기",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494698,
+      "doctorName": "이성기",
+      "firstAuthors": "S T Kim"
+    },
+    {
+      "paper_id": 494699,
+      "doctorName": "이성기",
+      "firstAuthors": "J Schwaller"
+    },
+    {
+      "paper_id": 494703,
+      "doctorName": "이성기",
+      "firstAuthors": "J Schwaller"
+    },
+    {
+      "paper_id": 494706,
+      "doctorName": "이성기",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494707,
+      "doctorName": "이성기",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494710,
+      "doctorName": "이무식",
+      "firstAuthors": "Geum-Hee Oh"
+    },
+    {
+      "paper_id": 494724,
+      "doctorName": "이무식",
+      "firstAuthors": "A V Kolodin"
+    },
+    {
+      "paper_id": 494726,
+      "doctorName": "이무식",
+      "firstAuthors": "Jina Han"
+    },
+    {
+      "paper_id": 494727,
+      "doctorName": "이무식",
+      "firstAuthors": "Lena Tschiderer"
+    },
+    {
+      "paper_id": 494743,
+      "doctorName": "이무식",
+      "firstAuthors": "Eun-Young Kim"
+    },
+    {
+      "paper_id": 494746,
+      "doctorName": "이무식",
+      "firstAuthors": "T Koivula"
+    },
+    {
+      "paper_id": 494754,
+      "doctorName": "이무식",
+      "firstAuthors": "Young Jun Cho"
+    },
+    {
+      "paper_id": 494757,
+      "doctorName": "이무식",
+      "firstAuthors": "Ok Lee"
+    },
+    {
+      "paper_id": 494762,
+      "doctorName": "이무식",
+      "firstAuthors": "Eun Young Kim"
+    },
+    {
+      "paper_id": 494774,
+      "doctorName": "이무식",
+      "firstAuthors": "Byung-Ha Park"
+    },
+    {
+      "paper_id": 494780,
+      "doctorName": "이무식",
+      "firstAuthors": "H S Soh"
+    },
+    {
+      "paper_id": 494794,
+      "doctorName": "이무식",
+      "firstAuthors": "S C Mockrin"
+    },
+    {
+      "paper_id": 494795,
+      "doctorName": "이무식",
+      "firstAuthors": "GBD 2023 Cancer Collaborators"
+    },
+    {
+      "paper_id": 494806,
+      "doctorName": "이무식",
+      "firstAuthors": "D T Browne"
+    },
+    {
+      "paper_id": 494855,
+      "doctorName": "이무식",
+      "firstAuthors": "R Corrocher"
+    },
+    {
+      "paper_id": 494862,
+      "doctorName": "박영규",
+      "firstAuthors": "Hyung-Don Kim"
+    },
+    {
+      "paper_id": 494863,
+      "doctorName": "박영규",
+      "firstAuthors": "Hoe-Sun Yoon"
+    },
+    {
+      "paper_id": 494864,
+      "doctorName": "조도연",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494865,
+      "doctorName": "조도연",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494876,
+      "doctorName": "황정민",
+      "firstAuthors": "Ji Yeon Kim"
+    },
+    {
+      "paper_id": 494878,
+      "doctorName": "김국영",
+      "firstAuthors": "Kook Young Kim"
+    },
+    {
+      "paper_id": 494882,
+      "doctorName": "송재황",
+      "firstAuthors": "Woo Jin Shin"
+    },
+    {
+      "paper_id": 494886,
+      "doctorName": "민영기",
+      "firstAuthors": "Min-Gu Jang"
+    },
+    {
+      "paper_id": 494888,
+      "doctorName": "민영기",
+      "firstAuthors": "Tae Gyun Kim"
+    },
+    {
+      "paper_id": 494897,
+      "doctorName": "허윤무",
+      "firstAuthors": "D B Knaff"
+    },
+    {
+      "paper_id": 494908,
+      "doctorName": "허윤무",
+      "firstAuthors": "Sumedh Talwalkar"
+    },
+    {
+      "paper_id": 494912,
+      "doctorName": "허윤무",
+      "firstAuthors": "Naoya Iwata"
+    },
+    {
+      "paper_id": 494913,
+      "doctorName": "허윤무",
+      "firstAuthors": "Kota Watanabe"
+    },
+    {
+      "paper_id": 494917,
+      "doctorName": "김광균",
+      "firstAuthors": "Kwang-Kyoun Kim"
+    },
+    {
+      "paper_id": 494920,
+      "doctorName": "김광균",
+      "firstAuthors": "Kwang-Kyoun Kim"
+    },
+    {
+      "paper_id": 494932,
+      "doctorName": "고경옥",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494956,
+      "doctorName": "김금원",
+      "firstAuthors": "Hye Yeon Han"
+    },
+    {
+      "paper_id": 494964,
+      "doctorName": "김금원",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494969,
+      "doctorName": "김금원",
+      "firstAuthors": "Yong Sung Park"
+    },
+    {
+      "paper_id": 494982,
+      "doctorName": "조영준",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 494983,
+      "doctorName": "조영준",
+      "firstAuthors": "P Pierard"
+    },
+    {
+      "paper_id": 494989,
+      "doctorName": "조영준",
+      "firstAuthors": "Yong Sung Park"
+    },
+    {
+      "paper_id": 494996,
+      "doctorName": "조영준",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495001,
+      "doctorName": "유형식",
+      "firstAuthors": "Chia-Ling Chang"
+    },
+    {
+      "paper_id": 495007,
+      "doctorName": "김대호",
+      "firstAuthors": "Jang Gyu Cha"
+    },
+    {
+      "paper_id": 495010,
+      "doctorName": "홍미진",
+      "firstAuthors": "Jae Min Song"
+    },
+    {
+      "paper_id": 495011,
+      "doctorName": "홍미진",
+      "firstAuthors": "Eun Jae Ko"
+    },
+    {
+      "paper_id": 495013,
+      "doctorName": "오준석",
+      "firstAuthors": "Jinwoon Joung"
+    },
+    {
+      "paper_id": 495014,
+      "doctorName": "오준석",
+      "firstAuthors": "Jong Gyun Ahn, Jae Il Shin"
+    },
+    {
+      "paper_id": 495015,
+      "doctorName": "정청일",
+      "firstAuthors": "Seong-Ji Park"
+    },
+    {
+      "paper_id": 495017,
+      "doctorName": "정청일",
+      "firstAuthors": "Sang Wan Chung"
+    },
+    {
+      "paper_id": 495019,
+      "doctorName": "정청일",
+      "firstAuthors": "Dong-Jin Park"
+    },
+    {
+      "paper_id": 495020,
+      "doctorName": "정청일",
+      "firstAuthors": "Sameer Kotak"
+    },
+    {
+      "paper_id": 495024,
+      "doctorName": "정청일",
+      "firstAuthors": "Dong-Jin Park"
+    },
+    {
+      "paper_id": 495037,
+      "doctorName": "정청일",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495042,
+      "doctorName": "정청일",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495057,
+      "doctorName": "윤성로",
+      "firstAuthors": "Yohan Park"
+    },
+    {
+      "paper_id": 495062,
+      "doctorName": "윤성로",
+      "firstAuthors": "Sang-Eun Hong"
+    },
+    {
+      "paper_id": 495065,
+      "doctorName": "윤성로",
+      "firstAuthors": "Se-Hee Yoon"
+    },
+    {
+      "paper_id": 495066,
+      "doctorName": "윤성로",
+      "firstAuthors": "Bo Young Jeong"
+    },
+    {
+      "paper_id": 495069,
+      "doctorName": "윤성로",
+      "firstAuthors": "Dong-Chan Jin"
+    },
+    {
+      "paper_id": 495071,
+      "doctorName": "윤성로",
+      "firstAuthors": "Eun Jung Cha"
+    },
+    {
+      "paper_id": 495080,
+      "doctorName": "윤성로",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495085,
+      "doctorName": "윤성로",
+      "firstAuthors": "Sug Kyun Shin"
+    },
+    {
+      "paper_id": 495086,
+      "doctorName": "윤성로",
+      "firstAuthors": "Se-Hee Yoon"
+    },
+    {
+      "paper_id": 495087,
+      "doctorName": "윤성로",
+      "firstAuthors": "Se-Hee Yoon"
+    },
+    {
+      "paper_id": 495093,
+      "doctorName": "윤정민",
+      "firstAuthors": "Eun Jung Cheon"
+    },
+    {
+      "paper_id": 495094,
+      "doctorName": "윤정민",
+      "firstAuthors": "Jinwoon Joung"
+    },
+    {
+      "paper_id": 495095,
+      "doctorName": "윤정민",
+      "firstAuthors": "Kyung Jae Lee"
+    },
+    {
+      "paper_id": 495096,
+      "doctorName": "윤정민",
+      "firstAuthors": "Jong Gyun Ahn, Jae Il Shin"
+    },
+    {
+      "paper_id": 495097,
+      "doctorName": "윤정민",
+      "firstAuthors": "Ji Eun Lee"
+    },
+    {
+      "paper_id": 495098,
+      "doctorName": "윤정민",
+      "firstAuthors": "Seunghee Lee"
+    },
+    {
+      "paper_id": 495102,
+      "doctorName": "윤정민",
+      "firstAuthors": "Sang Hun Lee"
+    },
+    {
+      "paper_id": 495106,
+      "doctorName": "윤정민",
+      "firstAuthors": "Young Hwa Song"
+    },
+    {
+      "paper_id": 495109,
+      "doctorName": "윤정민",
+      "firstAuthors": "Jin Hwan Lee"
+    },
+    {
+      "paper_id": 495110,
+      "doctorName": "윤정민",
+      "firstAuthors": "Heul Jun"
+    },
+    {
+      "paper_id": 495117,
+      "doctorName": "윤정민",
+      "firstAuthors": "In Gyu Song"
+    },
+    {
+      "paper_id": 495123,
+      "doctorName": "윤정민",
+      "firstAuthors": "Ju Yi Park"
+    },
+    {
+      "paper_id": 495124,
+      "doctorName": "윤정민",
+      "firstAuthors": "Yang Hee Park"
+    },
+    {
+      "paper_id": 495133,
+      "doctorName": "윤정민",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495134,
+      "doctorName": "윤정민",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495135,
+      "doctorName": "김기홍",
+      "firstAuthors": "Se-Jin Park"
+    },
+    {
+      "paper_id": 495138,
+      "doctorName": "김기홍",
+      "firstAuthors": "Young Hoon Seo"
+    },
+    {
+      "paper_id": 495141,
+      "doctorName": "김기홍",
+      "firstAuthors": "Young Hoon Seo"
+    },
+    {
+      "paper_id": 495142,
+      "doctorName": "김기홍",
+      "firstAuthors": "Duck-Jun Seo"
+    },
+    {
+      "paper_id": 495143,
+      "doctorName": "김기홍",
+      "firstAuthors": "Ju-Hee Lee"
+    },
+    {
+      "paper_id": 495148,
+      "doctorName": "김기홍",
+      "firstAuthors": "Hyung Bin Yuk"
+    },
+    {
+      "paper_id": 495149,
+      "doctorName": "김기홍",
+      "firstAuthors": "Hyung Bin Yuk"
+    },
+    {
+      "paper_id": 495150,
+      "doctorName": "김기홍",
+      "firstAuthors": "Taek-Geun Kwon"
+    },
+    {
+      "paper_id": 495155,
+      "doctorName": "김기홍",
+      "firstAuthors": "Chung Seop Lee"
+    },
+    {
+      "paper_id": 495163,
+      "doctorName": "박요한",
+      "firstAuthors": "Minhyeok Lee"
+    },
+    {
+      "paper_id": 495164,
+      "doctorName": "박요한",
+      "firstAuthors": "Eun Kyung Kim, Sang-Eun Hong"
+    },
+    {
+      "paper_id": 495171,
+      "doctorName": "박요한",
+      "firstAuthors": "Byungju Min"
+    },
+    {
+      "paper_id": 495174,
+      "doctorName": "박요한",
+      "firstAuthors": "Hyeyoung Lee"
+    },
+    {
+      "paper_id": 495175,
+      "doctorName": "박요한",
+      "firstAuthors": "Jong Hun An, Sang-Eun Hong"
+    },
+    {
+      "paper_id": 495176,
+      "doctorName": "박요한",
+      "firstAuthors": "Ji Won Min"
+    },
+    {
+      "paper_id": 495181,
+      "doctorName": "박요한",
+      "firstAuthors": "Hanbi Lee"
+    },
+    {
+      "paper_id": 495186,
+      "doctorName": "박요한",
+      "firstAuthors": "Sua Lee, Hwa Young Lee"
+    },
+    {
+      "paper_id": 495187,
+      "doctorName": "박요한",
+      "firstAuthors": "Sua Lee"
+    },
+    {
+      "paper_id": 495194,
+      "doctorName": "류기현",
+      "firstAuthors": "Jaesun Lee"
+    },
+    {
+      "paper_id": 495197,
+      "doctorName": "류기현",
+      "firstAuthors": "Song-Hee Han"
+    },
+    {
+      "paper_id": 495201,
+      "doctorName": "류기현",
+      "firstAuthors": "Kyung Ho Song"
+    },
+    {
+      "paper_id": 495202,
+      "doctorName": "류기현",
+      "firstAuthors": "Mi Na Gil"
+    },
+    {
+      "paper_id": 495218,
+      "doctorName": "권미혜",
+      "firstAuthors": "M Kwon"
+    },
+    {
+      "paper_id": 495219,
+      "doctorName": "권미혜",
+      "firstAuthors": "Woong Na"
+    },
+    {
+      "paper_id": 495221,
+      "doctorName": "권미혜",
+      "firstAuthors": "Seong-Ji Park"
+    },
+    {
+      "paper_id": 495224,
+      "doctorName": "권미혜",
+      "firstAuthors": "Sang Wan Chung"
+    },
+    {
+      "paper_id": 495228,
+      "doctorName": "권미혜",
+      "firstAuthors": "Younghee Jung"
+    },
+    {
+      "paper_id": 495231,
+      "doctorName": "권미혜",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495232,
+      "doctorName": "권미혜",
+      "firstAuthors": "Younghee Jung"
+    },
+    {
+      "paper_id": 495240,
+      "doctorName": "권미혜",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495246,
+      "doctorName": "권미혜",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495249,
+      "doctorName": "황원민",
+      "firstAuthors": "Byungju Min"
+    },
+    {
+      "paper_id": 495265,
+      "doctorName": "황원민",
+      "firstAuthors": "Se-Hee Yoon"
+    },
+    {
+      "paper_id": 495266,
+      "doctorName": "황원민",
+      "firstAuthors": "Min Jeong Kim"
+    },
+    {
+      "paper_id": 495267,
+      "doctorName": "황원민",
+      "firstAuthors": "Du Ri Choi"
+    },
+    {
+      "paper_id": 495271,
+      "doctorName": "황원민",
+      "firstAuthors": "Se-Hee Yoon"
+    },
+    {
+      "paper_id": 495272,
+      "doctorName": "황원민",
+      "firstAuthors": "Dong-Mee Lim"
+    },
+    {
+      "paper_id": 495273,
+      "doctorName": "황원민",
+      "firstAuthors": "Dong-Mee Lim"
+    },
+    {
+      "paper_id": 495298,
+      "doctorName": "황원민",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495299,
+      "doctorName": "황원민",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495301,
+      "doctorName": "황원민",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495302,
+      "doctorName": "황원민",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495305,
+      "doctorName": "김대성",
+      "firstAuthors": "Jaesun Lee"
+    },
+    {
+      "paper_id": 495310,
+      "doctorName": "김대성",
+      "firstAuthors": "Seung Wook Hong, Won-Mook Choi"
+    },
+    {
+      "paper_id": 495311,
+      "doctorName": "김대성",
+      "firstAuthors": "Jiyoung Yoon, Junghwan Lee"
+    },
+    {
+      "paper_id": 495312,
+      "doctorName": "김대성",
+      "firstAuthors": "Jiyoung Yoon"
+    },
+    {
+      "paper_id": 495314,
+      "doctorName": "김종대",
+      "firstAuthors": "T Koivula"
+    },
+    {
+      "paper_id": 495322,
+      "doctorName": "김종대",
+      "firstAuthors": "M Ardenne"
+    },
+    {
+      "paper_id": 495327,
+      "doctorName": "김종대",
+      "firstAuthors": "Sora Han"
+    },
+    {
+      "paper_id": 495338,
+      "doctorName": "이태희",
+      "firstAuthors": "Hye Yeon Chon"
+    },
+    {
+      "paper_id": 495347,
+      "doctorName": "이태희",
+      "firstAuthors": "Eileen L Yoon"
+    },
+    {
+      "paper_id": 495354,
+      "doctorName": "이태희",
+      "firstAuthors": "Byeong Wook Cho"
+    },
+    {
+      "paper_id": 495355,
+      "doctorName": "이태희",
+      "firstAuthors": "Byeong Wook Cho"
+    },
+    {
+      "paper_id": 495356,
+      "doctorName": "이태희",
+      "firstAuthors": "Kyung Ho Song"
+    },
+    {
+      "paper_id": 495359,
+      "doctorName": "이태희",
+      "firstAuthors": "Jun Ouk Ha"
+    },
+    {
+      "paper_id": 495362,
+      "doctorName": "이태희",
+      "firstAuthors": "Yeon Seok Seo"
+    },
+    {
+      "paper_id": 495363,
+      "doctorName": "이태희",
+      "firstAuthors": "D T Browne"
+    },
+    {
+      "paper_id": 495364,
+      "doctorName": "이태희",
+      "firstAuthors": "Sae Hwan Lee"
+    },
+    {
+      "paper_id": 495365,
+      "doctorName": "이태희",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495368,
+      "doctorName": "이태희",
+      "firstAuthors": "In Soo Choe"
+    },
+    {
+      "paper_id": 495372,
+      "doctorName": "이태희",
+      "firstAuthors": "Jeong Ah Hwang"
+    },
+    {
+      "paper_id": 495380,
+      "doctorName": "이태희",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495383,
+      "doctorName": "이태희",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495386,
+      "doctorName": "이태희",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495387,
+      "doctorName": "이태희",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495395,
+      "doctorName": "이태희",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495402,
+      "doctorName": "이태희",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495403,
+      "doctorName": "이태희",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495404,
+      "doctorName": "이태희",
+      "firstAuthors": "J Gehler"
+    },
+    {
+      "paper_id": 495411,
+      "doctorName": "이태희",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495413,
+      "doctorName": "이태희",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495414,
+      "doctorName": "이태희",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495417,
+      "doctorName": "이태희",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495423,
+      "doctorName": "이태희",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495424,
+      "doctorName": "이태희",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495428,
+      "doctorName": "이태희",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495430,
+      "doctorName": "이태희",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495431,
+      "doctorName": "이태희",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495432,
+      "doctorName": "이태희",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495433,
+      "doctorName": "이태희",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495434,
+      "doctorName": "이태희",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495435,
+      "doctorName": "이태희",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495436,
+      "doctorName": "이태희",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495437,
+      "doctorName": "이태희",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495444,
+      "doctorName": "이태희",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495446,
+      "doctorName": "이태희",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495451,
+      "doctorName": "이태희",
+      "firstAuthors": "R Corrocher"
+    },
+    {
+      "paper_id": 495461,
+      "doctorName": "나상준",
+      "firstAuthors": "Kee Ook Lee"
+    },
+    {
+      "paper_id": 495464,
+      "doctorName": "나상준",
+      "firstAuthors": "Seon-Min Lee"
+    },
+    {
+      "paper_id": 495465,
+      "doctorName": "나상준",
+      "firstAuthors": "Kee Ook Lee"
+    },
+    {
+      "paper_id": 495468,
+      "doctorName": "나상준",
+      "firstAuthors": "Yoon-Sik Jo"
+    },
+    {
+      "paper_id": 495480,
+      "doctorName": "나상준",
+      "firstAuthors": "Shinkyoung Kim"
+    },
+    {
+      "paper_id": 495481,
+      "doctorName": "나상준",
+      "firstAuthors": "Shinkyoung Kim"
+    },
+    {
+      "paper_id": 495482,
+      "doctorName": "나상준",
+      "firstAuthors": "Yoon Sik Jo"
+    },
+    {
+      "paper_id": 495500,
+      "doctorName": "나상준",
+      "firstAuthors": "Jong Kuk Kim"
+    },
+    {
+      "paper_id": 495504,
+      "doctorName": "나상준",
+      "firstAuthors": "Jong Kuk Kim"
+    },
+    {
+      "paper_id": 495505,
+      "doctorName": "나상준",
+      "firstAuthors": "Bora Yoon"
+    },
+    {
+      "paper_id": 495506,
+      "doctorName": "나상준",
+      "firstAuthors": "Min-Ji Kim"
+    },
+    {
+      "paper_id": 495508,
+      "doctorName": "나상준",
+      "firstAuthors": "Bora Yoon"
+    },
+    {
+      "paper_id": 495510,
+      "doctorName": "나상준",
+      "firstAuthors": "M Tanosaki"
+    },
+    {
+      "paper_id": 495511,
+      "doctorName": "나상준",
+      "firstAuthors": "Kyu Sun Yum"
+    },
+    {
+      "paper_id": 495520,
+      "doctorName": "나상준",
+      "firstAuthors": "Bora Yoon"
+    },
+    {
+      "paper_id": 495521,
+      "doctorName": "나상준",
+      "firstAuthors": "Kyu Sun Yum"
+    },
+    {
+      "paper_id": 495522,
+      "doctorName": "나상준",
+      "firstAuthors": "Yoon-Sik Jo"
+    },
+    {
+      "paper_id": 495525,
+      "doctorName": "나상준",
+      "firstAuthors": "Jihoon Kim"
+    },
+    {
+      "paper_id": 495530,
+      "doctorName": "나상준",
+      "firstAuthors": "Joseph R Berger"
+    },
+    {
+      "paper_id": 495532,
+      "doctorName": "나상준",
+      "firstAuthors": "Kee Ook Lee"
+    },
+    {
+      "paper_id": 495542,
+      "doctorName": "나상준",
+      "firstAuthors": "Z Jamrozik"
+    },
+    {
+      "paper_id": 495544,
+      "doctorName": "나상준",
+      "firstAuthors": "Y Yamamoto"
+    },
+    {
+      "paper_id": 495547,
+      "doctorName": "나상준",
+      "firstAuthors": "Reinhard Reuss"
+    },
+    {
+      "paper_id": 495559,
+      "doctorName": "나상준",
+      "firstAuthors": "H M M T B Herath"
+    },
+    {
+      "paper_id": 495565,
+      "doctorName": "나상준",
+      "firstAuthors": "Alexander L Luryi"
+    },
+    {
+      "paper_id": 495569,
+      "doctorName": "나상준",
+      "firstAuthors": "Seung Hun Oh"
+    },
+    {
+      "paper_id": 495571,
+      "doctorName": "이영진",
+      "firstAuthors": "Jae Min Song"
+    },
+    {
+      "paper_id": 495579,
+      "doctorName": "이영진",
+      "firstAuthors": "Mi Jin Hong"
+    },
+    {
+      "paper_id": 495580,
+      "doctorName": "이영진",
+      "firstAuthors": "Mi Jin Hong"
+    },
+    {
+      "paper_id": 495581,
+      "doctorName": "이영진",
+      "firstAuthors": "H T Kim"
+    },
+    {
+      "paper_id": 495583,
+      "doctorName": "이영진",
+      "firstAuthors": "Ji Hun Jeong"
+    },
+    {
+      "paper_id": 495584,
+      "doctorName": "이영진",
+      "firstAuthors": "Ji Hun Jeong"
+    },
+    {
+      "paper_id": 495587,
+      "doctorName": "이영진",
+      "firstAuthors": "Dong-Heun Ahn"
+    },
+    {
+      "paper_id": 495588,
+      "doctorName": "이영진",
+      "firstAuthors": "Soo Jin Lee"
+    },
+    {
+      "paper_id": 495608,
+      "doctorName": "정인범",
+      "firstAuthors": "Se Jin Park, Daeun Kang"
+    },
+    {
+      "paper_id": 495609,
+      "doctorName": "정인범",
+      "firstAuthors": "Tae Jeong Oh"
+    },
+    {
+      "paper_id": 495610,
+      "doctorName": "정인범",
+      "firstAuthors": "Chang Ryul Park"
+    },
+    {
+      "paper_id": 495611,
+      "doctorName": "정인범",
+      "firstAuthors": "Hyun Woo Lee"
+    },
+    {
+      "paper_id": 495613,
+      "doctorName": "정인범",
+      "firstAuthors": "Kyeong Jin Kim"
+    },
+    {
+      "paper_id": 495625,
+      "doctorName": "정인범",
+      "firstAuthors": "K Pavithran"
+    },
+    {
+      "paper_id": 495652,
+      "doctorName": "손지웅",
+      "firstAuthors": "Eung Bae Lee"
+    },
+    {
+      "paper_id": 495653,
+      "doctorName": "손지웅",
+      "firstAuthors": "Go-Eun Choi"
+    },
+    {
+      "paper_id": 495654,
+      "doctorName": "손지웅",
+      "firstAuthors": "Ji-Sook Lee"
+    },
+    {
+      "paper_id": 495664,
+      "doctorName": "손지웅",
+      "firstAuthors": "J-S Lee"
+    },
+    {
+      "paper_id": 495665,
+      "doctorName": "손지웅",
+      "firstAuthors": "Ji-Sook Lee"
+    },
+    {
+      "paper_id": 495666,
+      "doctorName": "손지웅",
+      "firstAuthors": "Chul-Su Yang"
+    },
+    {
+      "paper_id": 495667,
+      "doctorName": "손지웅",
+      "firstAuthors": "Chul-Su Yang"
+    },
+    {
+      "paper_id": 495669,
+      "doctorName": "손지웅",
+      "firstAuthors": "Jae-Hee Oh"
+    },
+    {
+      "paper_id": 495676,
+      "doctorName": "김홍욱",
+      "firstAuthors": "R B Nerli"
+    },
+    {
+      "paper_id": 495681,
+      "doctorName": "김홍욱",
+      "firstAuthors": "R J Lefkowitz"
+    },
+    {
+      "paper_id": 495686,
+      "doctorName": "김홍욱",
+      "firstAuthors": "Fadi Sawaqed"
+    },
+    {
+      "paper_id": 495693,
+      "doctorName": "김홍욱",
+      "firstAuthors": "Seung Ryeol Lee"
+    },
+    {
+      "paper_id": 495695,
+      "doctorName": "김홍욱",
+      "firstAuthors": "D T Glassman"
+    }
+  ],
+  "nullData": [
+    {
+      "paper_id": 494157,
+      "doctorName": "류한영",
+      "firstAuthors": ""
+    },
+    {
+      "paper_id": 494311,
+      "doctorName": "명기범",
+      "firstAuthors": ""
+    },
+    {
+      "paper_id": 494430,
+      "doctorName": "강지현",
+      "firstAuthors": ""
+    },
+    {
+      "paper_id": 494441,
+      "doctorName": "유병연",
+      "firstAuthors": ""
+    },
+    {
+      "paper_id": 494671,
+      "doctorName": "김현우",
+      "firstAuthors": ""
+    },
+    {
+      "paper_id": 495000,
+      "doctorName": "유형식",
+      "firstAuthors": ""
+    },
+    {
+      "paper_id": 495629,
+      "doctorName": "정인범",
+      "firstAuthors": ""
+    }
+  ]
+}

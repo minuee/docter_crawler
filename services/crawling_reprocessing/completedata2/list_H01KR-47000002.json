@@ -1,0 +1,32 @@
+{
+  "counting": {
+    "totalCount": 4,
+    "processSuccessCount": 0,
+    "processFailCount": 0,
+    "processSameCount": 4
+  },
+  "successData": [],
+  "failData": [],
+  "sameData": [
+    {
+      "paper_id": 488198,
+      "doctorName": "김재현",
+      "authors": "Seungjoo Lee, Moinay Kim, Sae Min Kwon, Min-Yong Kwon, Chang-Hyun Kim, Nak-Hoon Son, Jae Hyun Kim"
+    },
+    {
+      "paper_id": 488199,
+      "doctorName": "김재현",
+      "authors": "Hanwool Jeon, Hayeong Kang, Jihyun Im, Suin Jo, Hyunchul Jung, Moinay Kim, Jae Hyun Kim, Eunyeup Lee, Soyoung Kim, Jeong Hoon Kim, Chang-Ki Hong, Young-Hoon Kim, Sang Woo Song, Jinha Park, Sang-Yeob Kim, Seungjoo Lee"
+    },
+    {
+      "paper_id": 488200,
+      "doctorName": "김재현",
+      "authors": "Moinay Kim, Wonhyoung Park, Jun Ha Hwang, Jae Hyun Kim, Yeongu Chung, Si Un Lee, Joonho Byun, Jung Cheol Park, Jae Sung Ahn, Seungjoo Lee"
+    },
+    {
+      "paper_id": 488201,
+      "doctorName": "김재현",
+      "authors": "Sang-Hun Lee, Tae-Kwon Kim, Jong-Hoon Yoo, Hyung-Jong Park, Jae-Hyun Kim, Jae-Ho Lee"
+    }
+  ]
+}
