@@ -460,7 +460,130 @@ module.exports = {
     return { error: error, data: result };
   },
 
+  getJournalMetricsFromSCImago: async (journalName) => {
+    if (!journalName) {
+        return null;
+    }
 
+    const isAbbreviationMatch = (abbr, fullName) => {
+        const abbrWords = abbr.toLowerCase().split(' ').filter(w => w.length > 0 && w !== '&');
+        const fullWords = fullName.toLowerCase().split(' ').filter(w => w.length > 0 && w !== '&');
+
+        if (abbrWords.length === 0 || fullWords.length === 0 || abbrWords.length > fullWords.length) {
+            return false;
+        }
+        
+        if (abbr.length >= fullName.length * 0.9) { // More strict length check
+            return false;
+        }
+
+        let fullWordIndex = 0;
+        for (const abbrWord of abbrWords) {
+            let foundMatch = false;
+            while (fullWordIndex < fullWords.length) {
+                if (fullWords[fullWordIndex].startsWith(abbrWord)) {
+                    foundMatch = true;
+                    fullWordIndex++;
+                    break;
+                }
+                fullWordIndex++;
+            }
+            if (!foundMatch) {
+                return false;
+            }
+        }
+        return true;
+    };
+
+    const browser = await puppeteer.launch({
+        headless: true,
+        args: [
+            "--no-sandbox",
+            "--disable-setuid-sandbox",
+            "--disable-blink-features=AutomationControlled",
+        ]
+    });
+    const page = await browser.newPage();
+    await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36');
+
+    try {
+        const searchUrl = `https://www.scimagojr.com/journalsearch.php?q=${encodeURIComponent(journalName)}`;
+        await page.goto(searchUrl, { waitUntil: 'networkidle2' });
+
+        const searchResults = await page.$$eval('.search_results a', (links) => {
+            return links.map(link => ({
+                href: link.href,
+                text: link.innerText.trim(),
+            }));
+        });
+        
+        if (searchResults.length === 0) {
+            console.log(`[SCImago] No results for journal: ${journalName}`);
+            await browser.close();
+            return null;
+        }
+
+        searchResults.forEach(result => {
+            const originalName = journalName.toLowerCase();
+            const resultName = result.text.toLowerCase();
+
+            let similarity = stringSimilarity.compareTwoStrings(originalName, resultName);
+            
+            if (isAbbreviationMatch(originalName, resultName)) {
+                similarity = Math.max(similarity, 0.9);
+            }
+            
+            result.similarity = similarity;
+        });
+
+        searchResults.sort((a, b) => b.similarity - a.similarity);
+        const bestMatch = searchResults[0];
+        
+        if (bestMatch.similarity < 0.7) {
+            console.log(`[SCImago] No good match found for ${journalName}. Best match: ${bestMatch.text} with similarity ${bestMatch.similarity.toFixed(2)}`);
+            await browser.close();
+            return null;
+        }
+
+        await page.goto(bestMatch.href, { waitUntil: 'networkidle2' });
+
+        const metrics = await page.evaluate(() => {
+            const sjr = document.querySelector('.sjrvalue span')?.innerText.trim() ||
+                        document.querySelector('.hindexnumber .hsjr')?.innerText.trim() || null;
+
+            const quartile = document.querySelector('#quartiles .quartilebox span')?.innerText.trim() ||
+                             document.querySelector('.hindexnumber .Q1, .hindexnumber .Q2, .hindexnumber .Q3, .hindexnumber .Q4')?.innerText.trim() || null;
+            
+            const issnElement = document.querySelector('.issn') || 
+                                Array.from(document.querySelectorAll('.cuadrado h2'))
+                                     .find(h2 => h2.innerText.trim() === 'ISSN')?.nextElementSibling;
+            const issn = issnElement?.innerText.trim().split(',')[0].trim() || null;
+
+            return { sjr, quartile, issn };
+        });
+
+        if (!metrics.quartile && !metrics.sjr) {
+             console.log(`[SCImago] Could not extract metrics for journal: ${journalName}`);
+             await browser.close();
+             return null;
+        }
+        
+        console.log(`[SCImago] Found metrics for ${journalName}: Quartile - ${metrics.quartile}, SJR - ${metrics.sjr}, ISSN - ${metrics.issn}`);
+        
+        await browser.close();
+        return {
+            quartile: metrics.quartile,
+            impactFactor: metrics.sjr,
+            full_journalName: bestMatch.text,
+            journal_issn: metrics.issn
+        };
+
+    } catch (error) {
+        console.error(`[SCImago] Error scraping ${journalName}: ${error}`);
+        await browser.close();
+        return null;
+    }
+  },
 }
 
 

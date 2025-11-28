@@ -1,0 +1,21 @@
+{
+  "counting": {
+    "totalCount": 1,
+    "doctorCount": 1,
+    "processCount": 2,
+    "processNullCount": 0,
+    "processFailCount": 0
+  },
+  "successData": [
+    {
+      "doctor_id": 12901,
+      "specialty_id": 175
+    },
+    {
+      "doctor_id": 12901,
+      "specialty_id": 4116
+    }
+  ],
+  "failData": [],
+  "nullData": []
+}

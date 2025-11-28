@@ -1,0 +1,75 @@
+{
+  "counting": {
+    "totalCount": 12,
+    "processSuccessCount": 6,
+    "processFailCount": 0,
+    "processNullCount": 0,
+    "processNotMatchCount": 6
+  },
+  "successData": [
+    {
+      "paper_id": 488223,
+      "doctorName": "박기정",
+      "firstAuthors": "Gi Jeong Park"
+    },
+    {
+      "paper_id": 488232,
+      "doctorName": "신효심",
+      "firstAuthors": "Hyoshim Shin"
+    },
+    {
+      "paper_id": 488234,
+      "doctorName": "신효심",
+      "firstAuthors": "Hyoshim Shin"
+    },
+    {
+      "paper_id": 488236,
+      "doctorName": "신효심",
+      "firstAuthors": "Hyoshim Shin"
+    },
+    {
+      "paper_id": 488237,
+      "doctorName": "신효심",
+      "firstAuthors": "Hyoshim Shin"
+    },
+    {
+      "paper_id": 488239,
+      "doctorName": "신효심",
+      "firstAuthors": "Hyoshim Shin"
+    }
+  ],
+  "failData": [],
+  "notMatchData": [
+    {
+      "paper_id": 488222,
+      "doctorName": "박기정",
+      "firstAuthors": "Jong Un Lee"
+    },
+    {
+      "paper_id": 488230,
+      "doctorName": "신효심",
+      "firstAuthors": "Takashi Takahashi"
+    },
+    {
+      "paper_id": 488231,
+      "doctorName": "신효심",
+      "firstAuthors": "Sungwoo Park"
+    },
+    {
+      "paper_id": 488233,
+      "doctorName": "신효심",
+      "firstAuthors": "Mutbyul Kim"
+    },
+    {
+      "paper_id": 488235,
+      "doctorName": "신효심",
+      "firstAuthors": "Mutbyul Kim"
+    },
+    {
+      "paper_id": 488240,
+      "doctorName": "신효심",
+      "firstAuthors": "Yoko Takayama"
+    }
+  ],
+  "nullData": []
+}

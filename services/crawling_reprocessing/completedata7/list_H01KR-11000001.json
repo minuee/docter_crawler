@@ -1,0 +1,25 @@
+{
+  "counting": {
+    "totalCount": 1,
+    "processSuccessCount": 1,
+    "processFailCount": 0,
+    "processNullCount": 0,
+    "processNotMatchCount": 0
+  },
+  "successData": [
+    {
+      "paper_id": 380769,
+      "doctorName": "강재헌",
+      "journalName": "Phys Act Nutr",
+      "metrics": {
+        "quartile": "Q3",
+        "impactFactor": "0.353",
+        "full_journalName": "Physical Activity and Nutrition\nSouth Korea\nKorean Society for Exercise Nutrition",
+        "journal_issn": "27337545"
+      }
+    }
+  ],
+  "failData": [],
+  "notMatchData": [],
+  "nullData": []
+}

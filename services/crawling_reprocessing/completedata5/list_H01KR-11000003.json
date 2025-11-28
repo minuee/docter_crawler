@@ -1,0 +1,2978 @@
+{
+  "counting": {
+    "totalCount": 217,
+    "doctorCount": 204,
+    "processCount": 696,
+    "processNullCount": 13,
+    "processFailCount": 0
+  },
+  "newSpecialtyNames": [
+    "동위원소치료",
+    "직업성질환",
+    "환경성질환",
+    "급성대동맥 박리증",
+    "부인과 내분비질환",
+    "군대 스트레스",
+    "조현 스펙트럼장애",
+    "암 스트레스클리닉",
+    "내시경 절제술",
+    "치료 내시경",
+    "아토피 피부염",
+    "노인 마취",
+    "구조 심질환",
+    "하이푸 치료",
+    "수부 질환",
+    "정형외과 종양",
+    "강직 척추염",
+    "당뇨병성 신증",
+    "해면상 혈관종",
+    "근골격계 재활",
+    "초음파 진단",
+    "다낭성 신질환",
+    "허혈성 심질환",
+    "역류성 인후두염",
+    "분자 유전",
+    "암 유전",
+    "기타 혈액질환",
+    "급성 및 만성통증",
+    "산과 마취",
+    "소아 마취",
+    "심폐 마취",
+    "뇌신경 마취",
+    "신장병리",
+    "간담췌병리",
+    "미세척추수술",
+    "진단면역",
+    "뇨화학",
+    "유세포분석",
+    "현장검사",
+    "안면마비 재활치료",
+    "외상성 뇌손상",
+    "해외여행 관련질환",
+    "실신 및 급사",
+    "종격동 종양",
+    "모야모야 병",
+    "눈꺼풀 질환",
+    "눈물길관련 질환",
+    "성인 서혜부탈장",
+    "응급 복부 질환",
+    "척추 및 척추손상",
+    "퇴행성 관절염",
+    "특이증상 클리닉",
+    "트라우마 인지치료",
+    "차세대염기서열분석",
+    "직업성 질환",
+    "환경성 질환",
+    "직업병",
+    "환경성질환 진료",
+    "대학생 클리닉",
+    "뇌기저부 수술",
+    "류마티스 관절염",
+    "척추 관절염",
+    "쇼그렌 증후군",
+    "전신 혈관염",
+    "염증성 근육염",
+    "경추 척수증",
+    "요추 질환",
+    "내시경 수술",
+    "희귀 내분비질환",
+    "피부 및 쁘띠성형",
+    "흉터 및 창상성형",
+    "선천기형 미용성형",
+    "검진 결과상담",
+    "위장관병리",
+    "디지털병리",
+    "신경 두경부 영상",
+    "근골격 영상",
+    "신경두경부영상의학",
+    "신경중재치료의학",
+    "보청기 클리닉",
+    "심부전 판막질환",
+    "당뇨병 합병증",
+    "고혈압성 신장질환",
+    "무릎외상",
+    "및 호흡기 질환",
+    "신경퇴행성 질환",
+    "보톡스 치료",
+    "로봇 수술",
+    "로봇 단일공 수술",
+    "악성 종양",
+    "단일공 로봇수술",
+    "정신신체 클리닉",
+    "암스트레스 클리닉",
+    "선천성 질환",
+    "임신 중독증",
+    "태아 정밀초음파",
+    "선천성 기형",
+    "폐병리",
+    "디스크 탈출증",
+    "척추관 협착증",
+    "무릎 통증",
+    "대상포진 통증",
+    "정형외과 마취",
+    "일반 마취",
+    "비뇨기 병리",
+    "두경부 병리",
+    "내분비 병리",
+    "내시경전담의",
+    "퇴행성 척추질환",
+    "외상성 척추 손상",
+    "척추 종양",
+    "척추 감염",
+    "기타신장질환"
+  ],
+  "successData": [
+    {
+      "doctor_id": 811,
+      "specialty_id": 211
+    },
+    {
+      "doctor_id": 811,
+      "specialty_id": 5063
+    },
+    {
+      "doctor_id": 802,
+      "specialty_id": 4932
+    },
+    {
+      "doctor_id": 802,
+      "specialty_id": 5000
+    },
+    {
+      "doctor_id": 802,
+      "specialty_id": 4986
+    },
+    {
+      "doctor_id": 798,
+      "specialty_id": 5064
+    },
+    {
+      "doctor_id": 798,
+      "specialty_id": 5065
+    },
+    {
+      "doctor_id": 798,
+      "specialty_id": 1417
+    },
+    {
+      "doctor_id": 808,
+      "specialty_id": 264
+    },
+    {
+      "doctor_id": 808,
+      "specialty_id": 4214
+    },
+    {
+      "doctor_id": 808,
+      "specialty_id": 4441
+    },
+    {
+      "doctor_id": 736,
+      "specialty_id": 192
+    },
+    {
+      "doctor_id": 736,
+      "specialty_id": 1765
+    },
+    {
+      "doctor_id": 736,
+      "specialty_id": 1776
+    },
+    {
+      "doctor_id": 736,
+      "specialty_id": 1321
+    },
+    {
+      "doctor_id": 747,
+      "specialty_id": 2645
+    },
+    {
+      "doctor_id": 747,
+      "specialty_id": 1232
+    },
+    {
+      "doctor_id": 711,
+      "specialty_id": 2732
+    },
+    {
+      "doctor_id": 711,
+      "specialty_id": 5066
+    },
+    {
+      "doctor_id": 711,
+      "specialty_id": 2716
+    },
+    {
+      "doctor_id": 711,
+      "specialty_id": 68
+    },
+    {
+      "doctor_id": 711,
+      "specialty_id": 29
+    },
+    {
+      "doctor_id": 727,
+      "specialty_id": 3064
+    },
+    {
+      "doctor_id": 652,
+      "specialty_id": 5067
+    },
+    {
+      "doctor_id": 652,
+      "specialty_id": 2940
+    },
+    {
+      "doctor_id": 784,
+      "specialty_id": 424
+    },
+    {
+      "doctor_id": 667,
+      "specialty_id": 2246
+    },
+    {
+      "doctor_id": 667,
+      "specialty_id": 83
+    },
+    {
+      "doctor_id": 667,
+      "specialty_id": 2217
+    },
+    {
+      "doctor_id": 667,
+      "specialty_id": 2177
+    },
+    {
+      "doctor_id": 667,
+      "specialty_id": 2210
+    },
+    {
+      "doctor_id": 667,
+      "specialty_id": 2658
+    },
+    {
+      "doctor_id": 667,
+      "specialty_id": 2290
+    },
+    {
+      "doctor_id": 702,
+      "specialty_id": 413
+    },
+    {
+      "doctor_id": 702,
+      "specialty_id": 504
+    },
+    {
+      "doctor_id": 702,
+      "specialty_id": 4321
+    },
+    {
+      "doctor_id": 774,
+      "specialty_id": 5068
+    },
+    {
+      "doctor_id": 774,
+      "specialty_id": 5069
+    },
+    {
+      "doctor_id": 774,
+      "specialty_id": 3798
+    },
+    {
+      "doctor_id": 774,
+      "specialty_id": 485
+    },
+    {
+      "doctor_id": 774,
+      "specialty_id": 4287
+    },
+    {
+      "doctor_id": 774,
+      "specialty_id": 5070
+    },
+    {
+      "doctor_id": 671,
+      "specialty_id": 4895
+    },
+    {
+      "doctor_id": 671,
+      "specialty_id": 4200
+    },
+    {
+      "doctor_id": 679,
+      "specialty_id": 3216
+    },
+    {
+      "doctor_id": 679,
+      "specialty_id": 2520
+    },
+    {
+      "doctor_id": 679,
+      "specialty_id": 5071
+    },
+    {
+      "doctor_id": 679,
+      "specialty_id": 5072
+    },
+    {
+      "doctor_id": 639,
+      "specialty_id": 3259
+    },
+    {
+      "doctor_id": 639,
+      "specialty_id": 1805
+    },
+    {
+      "doctor_id": 639,
+      "specialty_id": 1185
+    },
+    {
+      "doctor_id": 673,
+      "specialty_id": 153
+    },
+    {
+      "doctor_id": 673,
+      "specialty_id": 116
+    },
+    {
+      "doctor_id": 673,
+      "specialty_id": 141
+    },
+    {
+      "doctor_id": 673,
+      "specialty_id": 3910
+    },
+    {
+      "doctor_id": 806,
+      "specialty_id": 5073
+    },
+    {
+      "doctor_id": 806,
+      "specialty_id": 2992
+    },
+    {
+      "doctor_id": 806,
+      "specialty_id": 1588
+    },
+    {
+      "doctor_id": 782,
+      "specialty_id": 1534
+    },
+    {
+      "doctor_id": 782,
+      "specialty_id": 3712
+    },
+    {
+      "doctor_id": 752,
+      "specialty_id": 4826
+    },
+    {
+      "doctor_id": 633,
+      "specialty_id": 3613
+    },
+    {
+      "doctor_id": 633,
+      "specialty_id": 5074
+    },
+    {
+      "doctor_id": 708,
+      "specialty_id": 4537
+    },
+    {
+      "doctor_id": 708,
+      "specialty_id": 5075
+    },
+    {
+      "doctor_id": 708,
+      "specialty_id": 408
+    },
+    {
+      "doctor_id": 708,
+      "specialty_id": 1149
+    },
+    {
+      "doctor_id": 655,
+      "specialty_id": 5076
+    },
+    {
+      "doctor_id": 676,
+      "specialty_id": 4895
+    },
+    {
+      "doctor_id": 676,
+      "specialty_id": 4200
+    },
+    {
+      "doctor_id": 676,
+      "specialty_id": 1181
+    },
+    {
+      "doctor_id": 676,
+      "specialty_id": 1175
+    },
+    {
+      "doctor_id": 617,
+      "specialty_id": 1116
+    },
+    {
+      "doctor_id": 617,
+      "specialty_id": 424
+    },
+    {
+      "doctor_id": 781,
+      "specialty_id": 5077
+    },
+    {
+      "doctor_id": 781,
+      "specialty_id": 5078
+    },
+    {
+      "doctor_id": 627,
+      "specialty_id": 5003
+    },
+    {
+      "doctor_id": 627,
+      "specialty_id": 1338
+    },
+    {
+      "doctor_id": 627,
+      "specialty_id": 5079
+    },
+    {
+      "doctor_id": 627,
+      "specialty_id": 4261
+    },
+    {
+      "doctor_id": 800,
+      "specialty_id": 4972
+    },
+    {
+      "doctor_id": 662,
+      "specialty_id": 3635
+    },
+    {
+      "doctor_id": 662,
+      "specialty_id": 2147
+    },
+    {
+      "doctor_id": 701,
+      "specialty_id": 2645
+    },
+    {
+      "doctor_id": 701,
+      "specialty_id": 4278
+    },
+    {
+      "doctor_id": 701,
+      "specialty_id": 5080
+    },
+    {
+      "doctor_id": 701,
+      "specialty_id": 1421
+    },
+    {
+      "doctor_id": 613,
+      "specialty_id": 1841
+    },
+    {
+      "doctor_id": 613,
+      "specialty_id": 4397
+    },
+    {
+      "doctor_id": 613,
+      "specialty_id": 40
+    },
+    {
+      "doctor_id": 613,
+      "specialty_id": 1364
+    },
+    {
+      "doctor_id": 613,
+      "specialty_id": 1215
+    },
+    {
+      "doctor_id": 613,
+      "specialty_id": 4521
+    },
+    {
+      "doctor_id": 696,
+      "specialty_id": 182
+    },
+    {
+      "doctor_id": 696,
+      "specialty_id": 893
+    },
+    {
+      "doctor_id": 696,
+      "specialty_id": 5081
+    },
+    {
+      "doctor_id": 749,
+      "specialty_id": 4826
+    },
+    {
+      "doctor_id": 789,
+      "specialty_id": 3965
+    },
+    {
+      "doctor_id": 789,
+      "specialty_id": 3989
+    },
+    {
+      "doctor_id": 766,
+      "specialty_id": 5082
+    },
+    {
+      "doctor_id": 766,
+      "specialty_id": 2895
+    },
+    {
+      "doctor_id": 766,
+      "specialty_id": 568
+    },
+    {
+      "doctor_id": 766,
+      "specialty_id": 5083
+    },
+    {
+      "doctor_id": 698,
+      "specialty_id": 2645
+    },
+    {
+      "doctor_id": 698,
+      "specialty_id": 1944
+    },
+    {
+      "doctor_id": 698,
+      "specialty_id": 5084
+    },
+    {
+      "doctor_id": 698,
+      "specialty_id": 4278
+    },
+    {
+      "doctor_id": 698,
+      "specialty_id": 5080
+    },
+    {
+      "doctor_id": 609,
+      "specialty_id": 1888
+    },
+    {
+      "doctor_id": 609,
+      "specialty_id": 270
+    },
+    {
+      "doctor_id": 609,
+      "specialty_id": 863
+    },
+    {
+      "doctor_id": 609,
+      "specialty_id": 87
+    },
+    {
+      "doctor_id": 815,
+      "specialty_id": 1393
+    },
+    {
+      "doctor_id": 815,
+      "specialty_id": 4389
+    },
+    {
+      "doctor_id": 758,
+      "specialty_id": 2862
+    },
+    {
+      "doctor_id": 758,
+      "specialty_id": 1922
+    },
+    {
+      "doctor_id": 758,
+      "specialty_id": 4191
+    },
+    {
+      "doctor_id": 758,
+      "specialty_id": 1774
+    },
+    {
+      "doctor_id": 758,
+      "specialty_id": 4679
+    },
+    {
+      "doctor_id": 706,
+      "specialty_id": 5085
+    },
+    {
+      "doctor_id": 706,
+      "specialty_id": 408
+    },
+    {
+      "doctor_id": 706,
+      "specialty_id": 405
+    },
+    {
+      "doctor_id": 706,
+      "specialty_id": 2681
+    },
+    {
+      "doctor_id": 706,
+      "specialty_id": 1222
+    },
+    {
+      "doctor_id": 761,
+      "specialty_id": 1517
+    },
+    {
+      "doctor_id": 761,
+      "specialty_id": 532
+    },
+    {
+      "doctor_id": 761,
+      "specialty_id": 3350
+    },
+    {
+      "doctor_id": 761,
+      "specialty_id": 5086
+    },
+    {
+      "doctor_id": 761,
+      "specialty_id": 3456
+    },
+    {
+      "doctor_id": 801,
+      "specialty_id": 5087
+    },
+    {
+      "doctor_id": 801,
+      "specialty_id": 5088
+    },
+    {
+      "doctor_id": 801,
+      "specialty_id": 3289
+    },
+    {
+      "doctor_id": 801,
+      "specialty_id": 4770
+    },
+    {
+      "doctor_id": 672,
+      "specialty_id": 110
+    },
+    {
+      "doctor_id": 672,
+      "specialty_id": 1086
+    },
+    {
+      "doctor_id": 672,
+      "specialty_id": 4133
+    },
+    {
+      "doctor_id": 668,
+      "specialty_id": 153
+    },
+    {
+      "doctor_id": 668,
+      "specialty_id": 116
+    },
+    {
+      "doctor_id": 668,
+      "specialty_id": 141
+    },
+    {
+      "doctor_id": 668,
+      "specialty_id": 3910
+    },
+    {
+      "doctor_id": 796,
+      "specialty_id": 1682
+    },
+    {
+      "doctor_id": 796,
+      "specialty_id": 1369
+    },
+    {
+      "doctor_id": 796,
+      "specialty_id": 1034
+    },
+    {
+      "doctor_id": 796,
+      "specialty_id": 3806
+    },
+    {
+      "doctor_id": 796,
+      "specialty_id": 5089
+    },
+    {
+      "doctor_id": 796,
+      "specialty_id": 678
+    },
+    {
+      "doctor_id": 719,
+      "specialty_id": 1465
+    },
+    {
+      "doctor_id": 719,
+      "specialty_id": 4408
+    },
+    {
+      "doctor_id": 719,
+      "specialty_id": 1675
+    },
+    {
+      "doctor_id": 746,
+      "specialty_id": 1459
+    },
+    {
+      "doctor_id": 746,
+      "specialty_id": 3398
+    },
+    {
+      "doctor_id": 819,
+      "specialty_id": 1853
+    },
+    {
+      "doctor_id": 819,
+      "specialty_id": 299
+    },
+    {
+      "doctor_id": 819,
+      "specialty_id": 659
+    },
+    {
+      "doctor_id": 636,
+      "specialty_id": 2885
+    },
+    {
+      "doctor_id": 636,
+      "specialty_id": 3973
+    },
+    {
+      "doctor_id": 636,
+      "specialty_id": 1984
+    },
+    {
+      "doctor_id": 636,
+      "specialty_id": 5090
+    },
+    {
+      "doctor_id": 812,
+      "specialty_id": 4635
+    },
+    {
+      "doctor_id": 812,
+      "specialty_id": 3899
+    },
+    {
+      "doctor_id": 630,
+      "specialty_id": 5091
+    },
+    {
+      "doctor_id": 630,
+      "specialty_id": 5092
+    },
+    {
+      "doctor_id": 635,
+      "specialty_id": 5093
+    },
+    {
+      "doctor_id": 635,
+      "specialty_id": 5094
+    },
+    {
+      "doctor_id": 644,
+      "specialty_id": 5095
+    },
+    {
+      "doctor_id": 644,
+      "specialty_id": 5096
+    },
+    {
+      "doctor_id": 644,
+      "specialty_id": 4871
+    },
+    {
+      "doctor_id": 610,
+      "specialty_id": 87
+    },
+    {
+      "doctor_id": 610,
+      "specialty_id": 1888
+    },
+    {
+      "doctor_id": 610,
+      "specialty_id": 1417
+    },
+    {
+      "doctor_id": 610,
+      "specialty_id": 270
+    },
+    {
+      "doctor_id": 649,
+      "specialty_id": 3669
+    },
+    {
+      "doctor_id": 649,
+      "specialty_id": 1672
+    },
+    {
+      "doctor_id": 649,
+      "specialty_id": 1785
+    },
+    {
+      "doctor_id": 795,
+      "specialty_id": 3216
+    },
+    {
+      "doctor_id": 795,
+      "specialty_id": 4389
+    },
+    {
+      "doctor_id": 795,
+      "specialty_id": 1882
+    },
+    {
+      "doctor_id": 795,
+      "specialty_id": 141
+    },
+    {
+      "doctor_id": 620,
+      "specialty_id": 1116
+    },
+    {
+      "doctor_id": 620,
+      "specialty_id": 226
+    },
+    {
+      "doctor_id": 620,
+      "specialty_id": 1786
+    },
+    {
+      "doctor_id": 685,
+      "specialty_id": 938
+    },
+    {
+      "doctor_id": 685,
+      "specialty_id": 1271
+    },
+    {
+      "doctor_id": 685,
+      "specialty_id": 1450
+    },
+    {
+      "doctor_id": 685,
+      "specialty_id": 3165
+    },
+    {
+      "doctor_id": 685,
+      "specialty_id": 2973
+    },
+    {
+      "doctor_id": 786,
+      "specialty_id": 3146
+    },
+    {
+      "doctor_id": 786,
+      "specialty_id": 5097
+    },
+    {
+      "doctor_id": 786,
+      "specialty_id": 814
+    },
+    {
+      "doctor_id": 786,
+      "specialty_id": 424
+    },
+    {
+      "doctor_id": 678,
+      "specialty_id": 4895
+    },
+    {
+      "doctor_id": 678,
+      "specialty_id": 4200
+    },
+    {
+      "doctor_id": 678,
+      "specialty_id": 1181
+    },
+    {
+      "doctor_id": 678,
+      "specialty_id": 1175
+    },
+    {
+      "doctor_id": 616,
+      "specialty_id": 424
+    },
+    {
+      "doctor_id": 616,
+      "specialty_id": 1116
+    },
+    {
+      "doctor_id": 616,
+      "specialty_id": 226
+    },
+    {
+      "doctor_id": 616,
+      "specialty_id": 1776
+    },
+    {
+      "doctor_id": 748,
+      "specialty_id": 4826
+    },
+    {
+      "doctor_id": 722,
+      "specialty_id": 3064
+    },
+    {
+      "doctor_id": 813,
+      "specialty_id": 4389
+    },
+    {
+      "doctor_id": 813,
+      "specialty_id": 173
+    },
+    {
+      "doctor_id": 751,
+      "specialty_id": 4826
+    },
+    {
+      "doctor_id": 804,
+      "specialty_id": 5098
+    },
+    {
+      "doctor_id": 804,
+      "specialty_id": 5099
+    },
+    {
+      "doctor_id": 804,
+      "specialty_id": 5100
+    },
+    {
+      "doctor_id": 804,
+      "specialty_id": 5101
+    },
+    {
+      "doctor_id": 777,
+      "specialty_id": 3801
+    },
+    {
+      "doctor_id": 777,
+      "specialty_id": 2926
+    },
+    {
+      "doctor_id": 767,
+      "specialty_id": 5102
+    },
+    {
+      "doctor_id": 767,
+      "specialty_id": 2895
+    },
+    {
+      "doctor_id": 659,
+      "specialty_id": 2842
+    },
+    {
+      "doctor_id": 659,
+      "specialty_id": 2047
+    },
+    {
+      "doctor_id": 659,
+      "specialty_id": 4167
+    },
+    {
+      "doctor_id": 659,
+      "specialty_id": 4441
+    },
+    {
+      "doctor_id": 659,
+      "specialty_id": 2016
+    },
+    {
+      "doctor_id": 713,
+      "specialty_id": 1949
+    },
+    {
+      "doctor_id": 713,
+      "specialty_id": 2249
+    },
+    {
+      "doctor_id": 713,
+      "specialty_id": 2575
+    },
+    {
+      "doctor_id": 713,
+      "specialty_id": 1675
+    },
+    {
+      "doctor_id": 790,
+      "specialty_id": 516
+    },
+    {
+      "doctor_id": 790,
+      "specialty_id": 2481
+    },
+    {
+      "doctor_id": 790,
+      "specialty_id": 1113
+    },
+    {
+      "doctor_id": 688,
+      "specialty_id": 938
+    },
+    {
+      "doctor_id": 688,
+      "specialty_id": 982
+    },
+    {
+      "doctor_id": 688,
+      "specialty_id": 1271
+    },
+    {
+      "doctor_id": 634,
+      "specialty_id": 2750
+    },
+    {
+      "doctor_id": 634,
+      "specialty_id": 3094
+    },
+    {
+      "doctor_id": 734,
+      "specialty_id": 110
+    },
+    {
+      "doctor_id": 734,
+      "specialty_id": 1086
+    },
+    {
+      "doctor_id": 734,
+      "specialty_id": 4133
+    },
+    {
+      "doctor_id": 734,
+      "specialty_id": 158
+    },
+    {
+      "doctor_id": 759,
+      "specialty_id": 1774
+    },
+    {
+      "doctor_id": 759,
+      "specialty_id": 1914
+    },
+    {
+      "doctor_id": 759,
+      "specialty_id": 4172
+    },
+    {
+      "doctor_id": 759,
+      "specialty_id": 4190
+    },
+    {
+      "doctor_id": 759,
+      "specialty_id": 2414
+    },
+    {
+      "doctor_id": 744,
+      "specialty_id": 3259
+    },
+    {
+      "doctor_id": 744,
+      "specialty_id": 3272
+    },
+    {
+      "doctor_id": 744,
+      "specialty_id": 3280
+    },
+    {
+      "doctor_id": 646,
+      "specialty_id": 3130
+    },
+    {
+      "doctor_id": 646,
+      "specialty_id": 2632
+    },
+    {
+      "doctor_id": 646,
+      "specialty_id": 2213
+    },
+    {
+      "doctor_id": 740,
+      "specialty_id": 2316
+    },
+    {
+      "doctor_id": 740,
+      "specialty_id": 2056
+    },
+    {
+      "doctor_id": 740,
+      "specialty_id": 2255
+    },
+    {
+      "doctor_id": 740,
+      "specialty_id": 1066
+    },
+    {
+      "doctor_id": 740,
+      "specialty_id": 2342
+    },
+    {
+      "doctor_id": 728,
+      "specialty_id": 3064
+    },
+    {
+      "doctor_id": 765,
+      "specialty_id": 4247
+    },
+    {
+      "doctor_id": 765,
+      "specialty_id": 4024
+    },
+    {
+      "doctor_id": 765,
+      "specialty_id": 5103
+    },
+    {
+      "doctor_id": 765,
+      "specialty_id": 2752
+    },
+    {
+      "doctor_id": 612,
+      "specialty_id": 189
+    },
+    {
+      "doctor_id": 612,
+      "specialty_id": 1841
+    },
+    {
+      "doctor_id": 612,
+      "specialty_id": 40
+    },
+    {
+      "doctor_id": 612,
+      "specialty_id": 1364
+    },
+    {
+      "doctor_id": 612,
+      "specialty_id": 5104
+    },
+    {
+      "doctor_id": 612,
+      "specialty_id": 2135
+    },
+    {
+      "doctor_id": 707,
+      "specialty_id": 1822
+    },
+    {
+      "doctor_id": 707,
+      "specialty_id": 2675
+    },
+    {
+      "doctor_id": 707,
+      "specialty_id": 2695
+    },
+    {
+      "doctor_id": 707,
+      "specialty_id": 3643
+    },
+    {
+      "doctor_id": 707,
+      "specialty_id": 3425
+    },
+    {
+      "doctor_id": 707,
+      "specialty_id": 5105
+    },
+    {
+      "doctor_id": 710,
+      "specialty_id": 4389
+    },
+    {
+      "doctor_id": 710,
+      "specialty_id": 2520
+    },
+    {
+      "doctor_id": 710,
+      "specialty_id": 5106
+    },
+    {
+      "doctor_id": 710,
+      "specialty_id": 1053
+    },
+    {
+      "doctor_id": 710,
+      "specialty_id": 735
+    },
+    {
+      "doctor_id": 710,
+      "specialty_id": 4704
+    },
+    {
+      "doctor_id": 710,
+      "specialty_id": 4398
+    },
+    {
+      "doctor_id": 693,
+      "specialty_id": 893
+    },
+    {
+      "doctor_id": 693,
+      "specialty_id": 5107
+    },
+    {
+      "doctor_id": 693,
+      "specialty_id": 1231
+    },
+    {
+      "doctor_id": 716,
+      "specialty_id": 2150
+    },
+    {
+      "doctor_id": 716,
+      "specialty_id": 5108
+    },
+    {
+      "doctor_id": 716,
+      "specialty_id": 5109
+    },
+    {
+      "doctor_id": 716,
+      "specialty_id": 3370
+    },
+    {
+      "doctor_id": 738,
+      "specialty_id": 1196
+    },
+    {
+      "doctor_id": 738,
+      "specialty_id": 5110
+    },
+    {
+      "doctor_id": 735,
+      "specialty_id": 110
+    },
+    {
+      "doctor_id": 735,
+      "specialty_id": 1086
+    },
+    {
+      "doctor_id": 735,
+      "specialty_id": 4133
+    },
+    {
+      "doctor_id": 735,
+      "specialty_id": 158
+    },
+    {
+      "doctor_id": 735,
+      "specialty_id": 2140
+    },
+    {
+      "doctor_id": 735,
+      "specialty_id": 5111
+    },
+    {
+      "doctor_id": 670,
+      "specialty_id": 4895
+    },
+    {
+      "doctor_id": 670,
+      "specialty_id": 4200
+    },
+    {
+      "doctor_id": 670,
+      "specialty_id": 1181
+    },
+    {
+      "doctor_id": 670,
+      "specialty_id": 1175
+    },
+    {
+      "doctor_id": 686,
+      "specialty_id": 4146
+    },
+    {
+      "doctor_id": 686,
+      "specialty_id": 687
+    },
+    {
+      "doctor_id": 686,
+      "specialty_id": 2976
+    },
+    {
+      "doctor_id": 686,
+      "specialty_id": 4151
+    },
+    {
+      "doctor_id": 686,
+      "specialty_id": 2393
+    },
+    {
+      "doctor_id": 686,
+      "specialty_id": 1271
+    },
+    {
+      "doctor_id": 686,
+      "specialty_id": 2973
+    },
+    {
+      "doctor_id": 686,
+      "specialty_id": 938
+    },
+    {
+      "doctor_id": 768,
+      "specialty_id": 938
+    },
+    {
+      "doctor_id": 768,
+      "specialty_id": 5112
+    },
+    {
+      "doctor_id": 768,
+      "specialty_id": 3485
+    },
+    {
+      "doctor_id": 768,
+      "specialty_id": 4247
+    },
+    {
+      "doctor_id": 625,
+      "specialty_id": 5003
+    },
+    {
+      "doctor_id": 625,
+      "specialty_id": 5113
+    },
+    {
+      "doctor_id": 638,
+      "specialty_id": 1881
+    },
+    {
+      "doctor_id": 638,
+      "specialty_id": 126
+    },
+    {
+      "doctor_id": 638,
+      "specialty_id": 945
+    },
+    {
+      "doctor_id": 638,
+      "specialty_id": 1999
+    },
+    {
+      "doctor_id": 611,
+      "specialty_id": 87
+    },
+    {
+      "doctor_id": 611,
+      "specialty_id": 863
+    },
+    {
+      "doctor_id": 611,
+      "specialty_id": 5114
+    },
+    {
+      "doctor_id": 682,
+      "specialty_id": 2515
+    },
+    {
+      "doctor_id": 682,
+      "specialty_id": 2552
+    },
+    {
+      "doctor_id": 682,
+      "specialty_id": 1337
+    },
+    {
+      "doctor_id": 682,
+      "specialty_id": 3592
+    },
+    {
+      "doctor_id": 682,
+      "specialty_id": 4146
+    },
+    {
+      "doctor_id": 682,
+      "specialty_id": 3964
+    },
+    {
+      "doctor_id": 775,
+      "specialty_id": 3161
+    },
+    {
+      "doctor_id": 775,
+      "specialty_id": 1838
+    },
+    {
+      "doctor_id": 775,
+      "specialty_id": 4151
+    },
+    {
+      "doctor_id": 775,
+      "specialty_id": 5115
+    },
+    {
+      "doctor_id": 692,
+      "specialty_id": 182
+    },
+    {
+      "doctor_id": 692,
+      "specialty_id": 3761
+    },
+    {
+      "doctor_id": 692,
+      "specialty_id": 3389
+    },
+    {
+      "doctor_id": 692,
+      "specialty_id": 2680
+    },
+    {
+      "doctor_id": 692,
+      "specialty_id": 2845
+    },
+    {
+      "doctor_id": 692,
+      "specialty_id": 1266
+    },
+    {
+      "doctor_id": 717,
+      "specialty_id": 1465
+    },
+    {
+      "doctor_id": 717,
+      "specialty_id": 4408
+    },
+    {
+      "doctor_id": 717,
+      "specialty_id": 3246
+    },
+    {
+      "doctor_id": 717,
+      "specialty_id": 4659
+    },
+    {
+      "doctor_id": 717,
+      "specialty_id": 1675
+    },
+    {
+      "doctor_id": 717,
+      "specialty_id": 875
+    },
+    {
+      "doctor_id": 643,
+      "specialty_id": 4887
+    },
+    {
+      "doctor_id": 643,
+      "specialty_id": 4987
+    },
+    {
+      "doctor_id": 643,
+      "specialty_id": 5116
+    },
+    {
+      "doctor_id": 622,
+      "specialty_id": 1116
+    },
+    {
+      "doctor_id": 622,
+      "specialty_id": 226
+    },
+    {
+      "doctor_id": 622,
+      "specialty_id": 1888
+    },
+    {
+      "doctor_id": 622,
+      "specialty_id": 1776
+    },
+    {
+      "doctor_id": 622,
+      "specialty_id": 803
+    },
+    {
+      "doctor_id": 799,
+      "specialty_id": 5117
+    },
+    {
+      "doctor_id": 799,
+      "specialty_id": 5118
+    },
+    {
+      "doctor_id": 799,
+      "specialty_id": 5119
+    },
+    {
+      "doctor_id": 799,
+      "specialty_id": 4967
+    },
+    {
+      "doctor_id": 799,
+      "specialty_id": 5120
+    },
+    {
+      "doctor_id": 737,
+      "specialty_id": 1196
+    },
+    {
+      "doctor_id": 778,
+      "specialty_id": 1844
+    },
+    {
+      "doctor_id": 778,
+      "specialty_id": 3161
+    },
+    {
+      "doctor_id": 778,
+      "specialty_id": 1838
+    },
+    {
+      "doctor_id": 776,
+      "specialty_id": 5121
+    },
+    {
+      "doctor_id": 691,
+      "specialty_id": 3836
+    },
+    {
+      "doctor_id": 691,
+      "specialty_id": 5122
+    },
+    {
+      "doctor_id": 691,
+      "specialty_id": 954
+    },
+    {
+      "doctor_id": 773,
+      "specialty_id": 484
+    },
+    {
+      "doctor_id": 628,
+      "specialty_id": 5123
+    },
+    {
+      "doctor_id": 628,
+      "specialty_id": 5124
+    },
+    {
+      "doctor_id": 628,
+      "specialty_id": 1341
+    },
+    {
+      "doctor_id": 628,
+      "specialty_id": 5125
+    },
+    {
+      "doctor_id": 628,
+      "specialty_id": 5126
+    },
+    {
+      "doctor_id": 628,
+      "specialty_id": 4261
+    },
+    {
+      "doctor_id": 750,
+      "specialty_id": 4826
+    },
+    {
+      "doctor_id": 757,
+      "specialty_id": 4172
+    },
+    {
+      "doctor_id": 757,
+      "specialty_id": 1774
+    },
+    {
+      "doctor_id": 757,
+      "specialty_id": 1914
+    },
+    {
+      "doctor_id": 803,
+      "specialty_id": 4821
+    },
+    {
+      "doctor_id": 803,
+      "specialty_id": 5099
+    },
+    {
+      "doctor_id": 803,
+      "specialty_id": 5101
+    },
+    {
+      "doctor_id": 803,
+      "specialty_id": 5098
+    },
+    {
+      "doctor_id": 624,
+      "specialty_id": 1338
+    },
+    {
+      "doctor_id": 624,
+      "specialty_id": 1345
+    },
+    {
+      "doctor_id": 624,
+      "specialty_id": 3971
+    },
+    {
+      "doctor_id": 624,
+      "specialty_id": 5127
+    },
+    {
+      "doctor_id": 624,
+      "specialty_id": 3538
+    },
+    {
+      "doctor_id": 779,
+      "specialty_id": 5128
+    },
+    {
+      "doctor_id": 779,
+      "specialty_id": 1514
+    },
+    {
+      "doctor_id": 779,
+      "specialty_id": 5129
+    },
+    {
+      "doctor_id": 779,
+      "specialty_id": 5130
+    },
+    {
+      "doctor_id": 779,
+      "specialty_id": 424
+    },
+    {
+      "doctor_id": 683,
+      "specialty_id": 938
+    },
+    {
+      "doctor_id": 683,
+      "specialty_id": 1271
+    },
+    {
+      "doctor_id": 621,
+      "specialty_id": 226
+    },
+    {
+      "doctor_id": 621,
+      "specialty_id": 5131
+    },
+    {
+      "doctor_id": 658,
+      "specialty_id": 4171
+    },
+    {
+      "doctor_id": 658,
+      "specialty_id": 3628
+    },
+    {
+      "doctor_id": 658,
+      "specialty_id": 5132
+    },
+    {
+      "doctor_id": 658,
+      "specialty_id": 5133
+    },
+    {
+      "doctor_id": 658,
+      "specialty_id": 5134
+    },
+    {
+      "doctor_id": 720,
+      "specialty_id": 3064
+    },
+    {
+      "doctor_id": 650,
+      "specialty_id": 3669
+    },
+    {
+      "doctor_id": 817,
+      "specialty_id": 4389
+    },
+    {
+      "doctor_id": 817,
+      "specialty_id": 173
+    },
+    {
+      "doctor_id": 817,
+      "specialty_id": 1392
+    },
+    {
+      "doctor_id": 817,
+      "specialty_id": 5135
+    },
+    {
+      "doctor_id": 640,
+      "specialty_id": 5004
+    },
+    {
+      "doctor_id": 640,
+      "specialty_id": 5136
+    },
+    {
+      "doctor_id": 640,
+      "specialty_id": 5137
+    },
+    {
+      "doctor_id": 664,
+      "specialty_id": 1630
+    },
+    {
+      "doctor_id": 664,
+      "specialty_id": 4491
+    },
+    {
+      "doctor_id": 664,
+      "specialty_id": 3068
+    },
+    {
+      "doctor_id": 664,
+      "specialty_id": 2236
+    },
+    {
+      "doctor_id": 809,
+      "specialty_id": 424
+    },
+    {
+      "doctor_id": 809,
+      "specialty_id": 211
+    },
+    {
+      "doctor_id": 809,
+      "specialty_id": 5063
+    },
+    {
+      "doctor_id": 731,
+      "specialty_id": 3064
+    },
+    {
+      "doctor_id": 731,
+      "specialty_id": 5138
+    },
+    {
+      "doctor_id": 629,
+      "specialty_id": 2885
+    },
+    {
+      "doctor_id": 629,
+      "specialty_id": 3973
+    },
+    {
+      "doctor_id": 629,
+      "specialty_id": 1984
+    },
+    {
+      "doctor_id": 629,
+      "specialty_id": 5090
+    },
+    {
+      "doctor_id": 725,
+      "specialty_id": 3064
+    },
+    {
+      "doctor_id": 725,
+      "specialty_id": 5139
+    },
+    {
+      "doctor_id": 721,
+      "specialty_id": 3064
+    },
+    {
+      "doctor_id": 721,
+      "specialty_id": 5140
+    },
+    {
+      "doctor_id": 721,
+      "specialty_id": 5141
+    },
+    {
+      "doctor_id": 818,
+      "specialty_id": 173
+    },
+    {
+      "doctor_id": 818,
+      "specialty_id": 1426
+    },
+    {
+      "doctor_id": 818,
+      "specialty_id": 659
+    },
+    {
+      "doctor_id": 648,
+      "specialty_id": 4880
+    },
+    {
+      "doctor_id": 623,
+      "specialty_id": 958
+    },
+    {
+      "doctor_id": 623,
+      "specialty_id": 1116
+    },
+    {
+      "doctor_id": 760,
+      "specialty_id": 3869
+    },
+    {
+      "doctor_id": 760,
+      "specialty_id": 768
+    },
+    {
+      "doctor_id": 760,
+      "specialty_id": 3381
+    },
+    {
+      "doctor_id": 760,
+      "specialty_id": 2827
+    },
+    {
+      "doctor_id": 760,
+      "specialty_id": 2973
+    },
+    {
+      "doctor_id": 760,
+      "specialty_id": 3427
+    },
+    {
+      "doctor_id": 760,
+      "specialty_id": 5142
+    },
+    {
+      "doctor_id": 792,
+      "specialty_id": 4389
+    },
+    {
+      "doctor_id": 792,
+      "specialty_id": 1250
+    },
+    {
+      "doctor_id": 792,
+      "specialty_id": 1881
+    },
+    {
+      "doctor_id": 792,
+      "specialty_id": 141
+    },
+    {
+      "doctor_id": 807,
+      "specialty_id": 4457
+    },
+    {
+      "doctor_id": 807,
+      "specialty_id": 1588
+    },
+    {
+      "doctor_id": 769,
+      "specialty_id": 776
+    },
+    {
+      "doctor_id": 769,
+      "specialty_id": 3171
+    },
+    {
+      "doctor_id": 739,
+      "specialty_id": 1196
+    },
+    {
+      "doctor_id": 733,
+      "specialty_id": 3064
+    },
+    {
+      "doctor_id": 724,
+      "specialty_id": 3064
+    },
+    {
+      "doctor_id": 709,
+      "specialty_id": 408
+    },
+    {
+      "doctor_id": 709,
+      "specialty_id": 5143
+    },
+    {
+      "doctor_id": 705,
+      "specialty_id": 5085
+    },
+    {
+      "doctor_id": 705,
+      "specialty_id": 408
+    },
+    {
+      "doctor_id": 705,
+      "specialty_id": 405
+    },
+    {
+      "doctor_id": 705,
+      "specialty_id": 2681
+    },
+    {
+      "doctor_id": 705,
+      "specialty_id": 1222
+    },
+    {
+      "doctor_id": 762,
+      "specialty_id": 3350
+    },
+    {
+      "doctor_id": 762,
+      "specialty_id": 4347
+    },
+    {
+      "doctor_id": 762,
+      "specialty_id": 1517
+    },
+    {
+      "doctor_id": 762,
+      "specialty_id": 537
+    },
+    {
+      "doctor_id": 762,
+      "specialty_id": 1250
+    },
+    {
+      "doctor_id": 762,
+      "specialty_id": 4354
+    },
+    {
+      "doctor_id": 762,
+      "specialty_id": 3458
+    },
+    {
+      "doctor_id": 762,
+      "specialty_id": 1560
+    },
+    {
+      "doctor_id": 762,
+      "specialty_id": 4348
+    },
+    {
+      "doctor_id": 762,
+      "specialty_id": 2088
+    },
+    {
+      "doctor_id": 632,
+      "specialty_id": 2885
+    },
+    {
+      "doctor_id": 632,
+      "specialty_id": 3973
+    },
+    {
+      "doctor_id": 632,
+      "specialty_id": 1984
+    },
+    {
+      "doctor_id": 632,
+      "specialty_id": 5090
+    },
+    {
+      "doctor_id": 714,
+      "specialty_id": 1465
+    },
+    {
+      "doctor_id": 714,
+      "specialty_id": 4408
+    },
+    {
+      "doctor_id": 714,
+      "specialty_id": 3246
+    },
+    {
+      "doctor_id": 714,
+      "specialty_id": 1675
+    },
+    {
+      "doctor_id": 614,
+      "specialty_id": 189
+    },
+    {
+      "doctor_id": 614,
+      "specialty_id": 1841
+    },
+    {
+      "doctor_id": 614,
+      "specialty_id": 40
+    },
+    {
+      "doctor_id": 614,
+      "specialty_id": 1364
+    },
+    {
+      "doctor_id": 614,
+      "specialty_id": 5104
+    },
+    {
+      "doctor_id": 614,
+      "specialty_id": 2135
+    },
+    {
+      "doctor_id": 794,
+      "specialty_id": 3259
+    },
+    {
+      "doctor_id": 794,
+      "specialty_id": 1175
+    },
+    {
+      "doctor_id": 794,
+      "specialty_id": 3926
+    },
+    {
+      "doctor_id": 794,
+      "specialty_id": 1805
+    },
+    {
+      "doctor_id": 794,
+      "specialty_id": 4389
+    },
+    {
+      "doctor_id": 723,
+      "specialty_id": 3064
+    },
+    {
+      "doctor_id": 723,
+      "specialty_id": 4959
+    },
+    {
+      "doctor_id": 745,
+      "specialty_id": 3259
+    },
+    {
+      "doctor_id": 745,
+      "specialty_id": 3272
+    },
+    {
+      "doctor_id": 745,
+      "specialty_id": 3280
+    },
+    {
+      "doctor_id": 742,
+      "specialty_id": 3199
+    },
+    {
+      "doctor_id": 742,
+      "specialty_id": 1888
+    },
+    {
+      "doctor_id": 742,
+      "specialty_id": 5111
+    },
+    {
+      "doctor_id": 755,
+      "specialty_id": 4826
+    },
+    {
+      "doctor_id": 657,
+      "specialty_id": 4171
+    },
+    {
+      "doctor_id": 657,
+      "specialty_id": 1569
+    },
+    {
+      "doctor_id": 657,
+      "specialty_id": 1359
+    },
+    {
+      "doctor_id": 677,
+      "specialty_id": 110
+    },
+    {
+      "doctor_id": 677,
+      "specialty_id": 1086
+    },
+    {
+      "doctor_id": 677,
+      "specialty_id": 4133
+    },
+    {
+      "doctor_id": 618,
+      "specialty_id": 5144
+    },
+    {
+      "doctor_id": 618,
+      "specialty_id": 226
+    },
+    {
+      "doctor_id": 618,
+      "specialty_id": 1116
+    },
+    {
+      "doctor_id": 814,
+      "specialty_id": 4634
+    },
+    {
+      "doctor_id": 814,
+      "specialty_id": 3899
+    },
+    {
+      "doctor_id": 615,
+      "specialty_id": 189
+    },
+    {
+      "doctor_id": 615,
+      "specialty_id": 1841
+    },
+    {
+      "doctor_id": 615,
+      "specialty_id": 40
+    },
+    {
+      "doctor_id": 615,
+      "specialty_id": 1364
+    },
+    {
+      "doctor_id": 615,
+      "specialty_id": 5104
+    },
+    {
+      "doctor_id": 615,
+      "specialty_id": 2135
+    },
+    {
+      "doctor_id": 793,
+      "specialty_id": 3216
+    },
+    {
+      "doctor_id": 793,
+      "specialty_id": 3924
+    },
+    {
+      "doctor_id": 793,
+      "specialty_id": 4103
+    },
+    {
+      "doctor_id": 793,
+      "specialty_id": 1881
+    },
+    {
+      "doctor_id": 793,
+      "specialty_id": 4768
+    },
+    {
+      "doctor_id": 793,
+      "specialty_id": 4389
+    },
+    {
+      "doctor_id": 700,
+      "specialty_id": 2645
+    },
+    {
+      "doctor_id": 700,
+      "specialty_id": 1944
+    },
+    {
+      "doctor_id": 700,
+      "specialty_id": 5145
+    },
+    {
+      "doctor_id": 700,
+      "specialty_id": 5080
+    },
+    {
+      "doctor_id": 703,
+      "specialty_id": 5085
+    },
+    {
+      "doctor_id": 703,
+      "specialty_id": 1459
+    },
+    {
+      "doctor_id": 703,
+      "specialty_id": 1222
+    },
+    {
+      "doctor_id": 703,
+      "specialty_id": 408
+    },
+    {
+      "doctor_id": 780,
+      "specialty_id": 5146
+    },
+    {
+      "doctor_id": 753,
+      "specialty_id": 4826
+    },
+    {
+      "doctor_id": 637,
+      "specialty_id": 4389
+    },
+    {
+      "doctor_id": 637,
+      "specialty_id": 1250
+    },
+    {
+      "doctor_id": 647,
+      "specialty_id": 1672
+    },
+    {
+      "doctor_id": 647,
+      "specialty_id": 3658
+    },
+    {
+      "doctor_id": 647,
+      "specialty_id": 3129
+    },
+    {
+      "doctor_id": 645,
+      "specialty_id": 789
+    },
+    {
+      "doctor_id": 645,
+      "specialty_id": 1672
+    },
+    {
+      "doctor_id": 645,
+      "specialty_id": 3669
+    },
+    {
+      "doctor_id": 645,
+      "specialty_id": 2632
+    },
+    {
+      "doctor_id": 661,
+      "specialty_id": 5073
+    },
+    {
+      "doctor_id": 661,
+      "specialty_id": 4037
+    },
+    {
+      "doctor_id": 661,
+      "specialty_id": 5147
+    },
+    {
+      "doctor_id": 699,
+      "specialty_id": 4579
+    },
+    {
+      "doctor_id": 699,
+      "specialty_id": 1830
+    },
+    {
+      "doctor_id": 699,
+      "specialty_id": 641
+    },
+    {
+      "doctor_id": 699,
+      "specialty_id": 1421
+    },
+    {
+      "doctor_id": 699,
+      "specialty_id": 4278
+    },
+    {
+      "doctor_id": 663,
+      "specialty_id": 2255
+    },
+    {
+      "doctor_id": 663,
+      "specialty_id": 2207
+    },
+    {
+      "doctor_id": 663,
+      "specialty_id": 1935
+    },
+    {
+      "doctor_id": 663,
+      "specialty_id": 4603
+    },
+    {
+      "doctor_id": 663,
+      "specialty_id": 4591
+    },
+    {
+      "doctor_id": 684,
+      "specialty_id": 4306
+    },
+    {
+      "doctor_id": 684,
+      "specialty_id": 3389
+    },
+    {
+      "doctor_id": 684,
+      "specialty_id": 1288
+    },
+    {
+      "doctor_id": 684,
+      "specialty_id": 2973
+    },
+    {
+      "doctor_id": 684,
+      "specialty_id": 5148
+    },
+    {
+      "doctor_id": 684,
+      "specialty_id": 1271
+    },
+    {
+      "doctor_id": 684,
+      "specialty_id": 5149
+    },
+    {
+      "doctor_id": 732,
+      "specialty_id": 3064
+    },
+    {
+      "doctor_id": 689,
+      "specialty_id": 314
+    },
+    {
+      "doctor_id": 689,
+      "specialty_id": 2658
+    },
+    {
+      "doctor_id": 689,
+      "specialty_id": 2408
+    },
+    {
+      "doctor_id": 689,
+      "specialty_id": 2973
+    },
+    {
+      "doctor_id": 689,
+      "specialty_id": 1271
+    },
+    {
+      "doctor_id": 680,
+      "specialty_id": 4146
+    },
+    {
+      "doctor_id": 680,
+      "specialty_id": 302
+    },
+    {
+      "doctor_id": 680,
+      "specialty_id": 938
+    },
+    {
+      "doctor_id": 741,
+      "specialty_id": 3216
+    },
+    {
+      "doctor_id": 741,
+      "specialty_id": 2000
+    },
+    {
+      "doctor_id": 681,
+      "specialty_id": 4306
+    },
+    {
+      "doctor_id": 681,
+      "specialty_id": 4266
+    },
+    {
+      "doctor_id": 681,
+      "specialty_id": 2973
+    },
+    {
+      "doctor_id": 712,
+      "specialty_id": 2126
+    },
+    {
+      "doctor_id": 712,
+      "specialty_id": 4547
+    },
+    {
+      "doctor_id": 619,
+      "specialty_id": 1116
+    },
+    {
+      "doctor_id": 619,
+      "specialty_id": 226
+    },
+    {
+      "doctor_id": 619,
+      "specialty_id": 803
+    },
+    {
+      "doctor_id": 660,
+      "specialty_id": 4064
+    },
+    {
+      "doctor_id": 660,
+      "specialty_id": 2080
+    },
+    {
+      "doctor_id": 660,
+      "specialty_id": 2613
+    },
+    {
+      "doctor_id": 660,
+      "specialty_id": 401
+    },
+    {
+      "doctor_id": 660,
+      "specialty_id": 1583
+    },
+    {
+      "doctor_id": 704,
+      "specialty_id": 1822
+    },
+    {
+      "doctor_id": 704,
+      "specialty_id": 2675
+    },
+    {
+      "doctor_id": 704,
+      "specialty_id": 2695
+    },
+    {
+      "doctor_id": 704,
+      "specialty_id": 3643
+    },
+    {
+      "doctor_id": 704,
+      "specialty_id": 3425
+    },
+    {
+      "doctor_id": 704,
+      "specialty_id": 5105
+    },
+    {
+      "doctor_id": 651,
+      "specialty_id": 5150
+    },
+    {
+      "doctor_id": 651,
+      "specialty_id": 5151
+    },
+    {
+      "doctor_id": 651,
+      "specialty_id": 4843
+    },
+    {
+      "doctor_id": 651,
+      "specialty_id": 2940
+    },
+    {
+      "doctor_id": 651,
+      "specialty_id": 5152
+    },
+    {
+      "doctor_id": 651,
+      "specialty_id": 1388
+    },
+    {
+      "doctor_id": 656,
+      "specialty_id": 5153
+    },
+    {
+      "doctor_id": 656,
+      "specialty_id": 1724
+    },
+    {
+      "doctor_id": 656,
+      "specialty_id": 2793
+    },
+    {
+      "doctor_id": 656,
+      "specialty_id": 2940
+    },
+    {
+      "doctor_id": 656,
+      "specialty_id": 1920
+    },
+    {
+      "doctor_id": 656,
+      "specialty_id": 3581
+    },
+    {
+      "doctor_id": 820,
+      "specialty_id": 4386
+    },
+    {
+      "doctor_id": 820,
+      "specialty_id": 4389
+    },
+    {
+      "doctor_id": 820,
+      "specialty_id": 1426
+    },
+    {
+      "doctor_id": 772,
+      "specialty_id": 5154
+    },
+    {
+      "doctor_id": 772,
+      "specialty_id": 5155
+    },
+    {
+      "doctor_id": 772,
+      "specialty_id": 3801
+    },
+    {
+      "doctor_id": 772,
+      "specialty_id": 4146
+    },
+    {
+      "doctor_id": 772,
+      "specialty_id": 680
+    },
+    {
+      "doctor_id": 754,
+      "specialty_id": 4826
+    },
+    {
+      "doctor_id": 654,
+      "specialty_id": 760
+    },
+    {
+      "doctor_id": 654,
+      "specialty_id": 5156
+    },
+    {
+      "doctor_id": 654,
+      "specialty_id": 5157
+    },
+    {
+      "doctor_id": 654,
+      "specialty_id": 5158
+    },
+    {
+      "doctor_id": 654,
+      "specialty_id": 2945
+    },
+    {
+      "doctor_id": 666,
+      "specialty_id": 395
+    },
+    {
+      "doctor_id": 666,
+      "specialty_id": 4063
+    },
+    {
+      "doctor_id": 666,
+      "specialty_id": 5159
+    },
+    {
+      "doctor_id": 666,
+      "specialty_id": 1631
+    },
+    {
+      "doctor_id": 642,
+      "specialty_id": 4790
+    },
+    {
+      "doctor_id": 642,
+      "specialty_id": 5160
+    },
+    {
+      "doctor_id": 816,
+      "specialty_id": 4037
+    },
+    {
+      "doctor_id": 816,
+      "specialty_id": 673
+    },
+    {
+      "doctor_id": 816,
+      "specialty_id": 2921
+    },
+    {
+      "doctor_id": 13120,
+      "specialty_id": 189
+    },
+    {
+      "doctor_id": 13120,
+      "specialty_id": 1841
+    },
+    {
+      "doctor_id": 13120,
+      "specialty_id": 40
+    },
+    {
+      "doctor_id": 13120,
+      "specialty_id": 1364
+    },
+    {
+      "doctor_id": 13120,
+      "specialty_id": 5104
+    },
+    {
+      "doctor_id": 13120,
+      "specialty_id": 2135
+    },
+    {
+      "doctor_id": 13122,
+      "specialty_id": 647
+    },
+    {
+      "doctor_id": 13122,
+      "specialty_id": 1422
+    },
+    {
+      "doctor_id": 13122,
+      "specialty_id": 5161
+    },
+    {
+      "doctor_id": 13122,
+      "specialty_id": 5162
+    },
+    {
+      "doctor_id": 13122,
+      "specialty_id": 2948
+    },
+    {
+      "doctor_id": 13122,
+      "specialty_id": 5163
+    },
+    {
+      "doctor_id": 13122,
+      "specialty_id": 5164
+    },
+    {
+      "doctor_id": 13122,
+      "specialty_id": 2885
+    },
+    {
+      "doctor_id": 13122,
+      "specialty_id": 1788
+    },
+    {
+      "doctor_id": 13125,
+      "specialty_id": 848
+    },
+    {
+      "doctor_id": 13125,
+      "specialty_id": 5165
+    },
+    {
+      "doctor_id": 13121,
+      "specialty_id": 5166
+    },
+    {
+      "doctor_id": 4746,
+      "specialty_id": 5167
+    },
+    {
+      "doctor_id": 4746,
+      "specialty_id": 5168
+    },
+    {
+      "doctor_id": 4746,
+      "specialty_id": 5169
+    },
+    {
+      "doctor_id": 1345,
+      "specialty_id": 1757
+    },
+    {
+      "doctor_id": 1345,
+      "specialty_id": 2087
+    },
+    {
+      "doctor_id": 1345,
+      "specialty_id": 1691
+    },
+    {
+      "doctor_id": 1345,
+      "specialty_id": 4580
+    },
+    {
+      "doctor_id": 1345,
+      "specialty_id": 4200
+    },
+    {
+      "doctor_id": 1345,
+      "specialty_id": 559
+    },
+    {
+      "doctor_id": 1345,
+      "specialty_id": 4658
+    },
+    {
+      "doctor_id": 1345,
+      "specialty_id": 153
+    },
+    {
+      "doctor_id": 1345,
+      "specialty_id": 2217
+    },
+    {
+      "doctor_id": 1345,
+      "specialty_id": 2258
+    },
+    {
+      "doctor_id": 1345,
+      "specialty_id": 2189
+    },
+    {
+      "doctor_id": 13131,
+      "specialty_id": 5170
+    },
+    {
+      "doctor_id": 13129,
+      "specialty_id": 3199
+    },
+    {
+      "doctor_id": 13129,
+      "specialty_id": 1187
+    },
+    {
+      "doctor_id": 13130,
+      "specialty_id": 3199
+    },
+    {
+      "doctor_id": 13130,
+      "specialty_id": 1187
+    },
+    {
+      "doctor_id": 13132,
+      "specialty_id": 982
+    },
+    {
+      "doctor_id": 13132,
+      "specialty_id": 1271
+    },
+    {
+      "doctor_id": 13133,
+      "specialty_id": 4146
+    },
+    {
+      "doctor_id": 13133,
+      "specialty_id": 687
+    },
+    {
+      "doctor_id": 13133,
+      "specialty_id": 2976
+    },
+    {
+      "doctor_id": 13133,
+      "specialty_id": 4151
+    },
+    {
+      "doctor_id": 13133,
+      "specialty_id": 2393
+    },
+    {
+      "doctor_id": 13133,
+      "specialty_id": 1271
+    },
+    {
+      "doctor_id": 13134,
+      "specialty_id": 5171
+    },
+    {
+      "doctor_id": 13134,
+      "specialty_id": 5172
+    },
+    {
+      "doctor_id": 13134,
+      "specialty_id": 5173
+    },
+    {
+      "doctor_id": 13134,
+      "specialty_id": 5174
+    },
+    {
+      "doctor_id": 13135,
+      "specialty_id": 2645
+    },
+    {
+      "doctor_id": 13135,
+      "specialty_id": 1411
+    },
+    {
+      "doctor_id": 13135,
+      "specialty_id": 4804
+    },
+    {
+      "doctor_id": 13135,
+      "specialty_id": 4579
+    },
+    {
+      "doctor_id": 13135,
+      "specialty_id": 1055
+    },
+    {
+      "doctor_id": 13136,
+      "specialty_id": 638
+    },
+    {
+      "doctor_id": 13136,
+      "specialty_id": 1407
+    },
+    {
+      "doctor_id": 13136,
+      "specialty_id": 5175
+    },
+    {
+      "doctor_id": 13137,
+      "specialty_id": 2760
+    },
+    {
+      "doctor_id": 13137,
+      "specialty_id": 2664
+    },
+    {
+      "doctor_id": 13137,
+      "specialty_id": 4609
+    },
+    {
+      "doctor_id": 13137,
+      "specialty_id": 2681
+    },
+    {
+      "doctor_id": 13137,
+      "specialty_id": 408
+    },
+    {
+      "doctor_id": 13137,
+      "specialty_id": 405
+    },
+    {
+      "doctor_id": 13138,
+      "specialty_id": 2760
+    },
+    {
+      "doctor_id": 13138,
+      "specialty_id": 408
+    },
+    {
+      "doctor_id": 13138,
+      "specialty_id": 405
+    },
+    {
+      "doctor_id": 13138,
+      "specialty_id": 1222
+    },
+    {
+      "doctor_id": 13138,
+      "specialty_id": 5085
+    },
+    {
+      "doctor_id": 13139,
+      "specialty_id": 875
+    },
+    {
+      "doctor_id": 13139,
+      "specialty_id": 1675
+    },
+    {
+      "doctor_id": 13140,
+      "specialty_id": 3064
+    },
+    {
+      "doctor_id": 13141,
+      "specialty_id": 3064
+    },
+    {
+      "doctor_id": 13143,
+      "specialty_id": 4826
+    },
+    {
+      "doctor_id": 13142,
+      "specialty_id": 4826
+    },
+    {
+      "doctor_id": 2448,
+      "specialty_id": 1369
+    },
+    {
+      "doctor_id": 2448,
+      "specialty_id": 1036
+    },
+    {
+      "doctor_id": 2448,
+      "specialty_id": 2944
+    },
+    {
+      "doctor_id": 2448,
+      "specialty_id": 5033
+    },
+    {
+      "doctor_id": 13144,
+      "specialty_id": 1682
+    },
+    {
+      "doctor_id": 13144,
+      "specialty_id": 461
+    },
+    {
+      "doctor_id": 13144,
+      "specialty_id": 464
+    },
+    {
+      "doctor_id": 13144,
+      "specialty_id": 729
+    },
+    {
+      "doctor_id": 13145,
+      "specialty_id": 4936
+    },
+    {
+      "doctor_id": 13145,
+      "specialty_id": 5117
+    }
+  ],
+  "failData": [],
+  "nullData": [
+    {
+      "doctor_id": 763,
+      "doctorName": "김보형",
+      "reason": "specialties is empty for this doctor."
+    },
+    {
+      "doctor_id": 726,
+      "doctorName": "손유미",
+      "reason": "specialties is empty for this doctor."
+    },
+    {
+      "doctor_id": 787,
+      "doctorName": "이성민",
+      "reason": "specialties is empty for this doctor."
+    },
+    {
+      "doctor_id": 764,
+      "doctorName": "임성빈",
+      "reason": "specialties is empty for this doctor."
+    },
+    {
+      "doctor_id": 783,
+      "doctorName": "송상준",
+      "reason": "specialties is empty for this doctor."
+    },
+    {
+      "doctor_id": 669,
+      "doctorName": "김정욱",
+      "reason": "specialties is empty for this doctor."
+    },
+    {
+      "doctor_id": 785,
+      "doctorName": "윤경호",
+      "reason": "specialties is empty for this doctor."
+    },
+    {
+      "doctor_id": 810,
+      "doctorName": "최선주",
+      "reason": "specialties is empty for this doctor."
+    },
+    {
+      "doctor_id": 13124,
+      "doctorName": "조선희",
+      "reason": "specialties is empty for this doctor."
+    },
+    {
+      "doctor_id": 13123,
+      "doctorName": "전아롬",
+      "reason": "specialties is empty for this doctor."
+    },
+    {
+      "doctor_id": 13126,
+      "doctorName": "정혜령",
+      "reason": "specialties is empty for this doctor."
+    },
+    {
+      "doctor_id": 13127,
+      "doctorName": "진주연",
+      "reason": "specialties is empty for this doctor."
+    },
+    {
+      "doctor_id": 13128,
+      "doctorName": "권성문",
+      "reason": "specialties is empty for this doctor."
+    }
+  ]
+}

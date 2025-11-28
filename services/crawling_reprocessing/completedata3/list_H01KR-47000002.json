@@ -1,0 +1,34 @@
+{
+  "counting": {
+    "totalCount": 4,
+    "processSuccessCount": 0,
+    "processFailCount": 0,
+    "processNullCount": 0,
+    "processNotMatchCount": 4
+  },
+  "successData": [],
+  "failData": [],
+  "notMatchData": [
+    {
+      "paper_id": 488198,
+      "doctorName": "김재현",
+      "firstAuthors": "Seungjoo Lee"
+    },
+    {
+      "paper_id": 488199,
+      "doctorName": "김재현",
+      "firstAuthors": "Hanwool Jeon"
+    },
+    {
+      "paper_id": 488200,
+      "doctorName": "김재현",
+      "firstAuthors": "Moinay Kim, Wonhyoung Park"
+    },
+    {
+      "paper_id": 488201,
+      "doctorName": "김재현",
+      "firstAuthors": "Sang-Hun Lee"
+    }
+  ],
+  "nullData": []
+}

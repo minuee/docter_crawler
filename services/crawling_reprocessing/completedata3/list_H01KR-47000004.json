@@ -1,0 +1,75 @@
+{
+  "counting": {
+    "totalCount": 12,
+    "processSuccessCount": 1,
+    "processFailCount": 0,
+    "processNullCount": 0,
+    "processNotMatchCount": 11
+  },
+  "successData": [
+    {
+      "paper_id": 488258,
+      "doctorName": "전익찬",
+      "firstAuthors": "Ikchan Jeon"
+    }
+  ],
+  "failData": [],
+  "notMatchData": [
+    {
+      "paper_id": 488241,
+      "doctorName": "권두혁",
+      "firstAuthors": "Doo Hyuk Kwon"
+    },
+    {
+      "paper_id": 488242,
+      "doctorName": "권두혁",
+      "firstAuthors": "Joong-Goo Kim"
+    },
+    {
+      "paper_id": 488243,
+      "doctorName": "권두혁",
+      "firstAuthors": "Hong-Kyun Park"
+    },
+    {
+      "paper_id": 488246,
+      "doctorName": "권두혁",
+      "firstAuthors": "Do Yeon Kim"
+    },
+    {
+      "paper_id": 488247,
+      "doctorName": "권두혁",
+      "firstAuthors": "Francesco Diana"
+    },
+    {
+      "paper_id": 488248,
+      "doctorName": "권두혁",
+      "firstAuthors": "Joon-Tae Kim"
+    },
+    {
+      "paper_id": 488249,
+      "doctorName": "권두혁",
+      "firstAuthors": "Thomas R Meinel"
+    },
+    {
+      "paper_id": 488250,
+      "doctorName": "권두혁",
+      "firstAuthors": "Keun Tae Kim"
+    },
+    {
+      "paper_id": 488257,
+      "doctorName": "전익찬",
+      "firstAuthors": "Youngbeom Seo, Heesung Yang"
+    },
+    {
+      "paper_id": 488259,
+      "doctorName": "전익찬",
+      "firstAuthors": "Euijin Jung"
+    },
+    {
+      "paper_id": 488261,
+      "doctorName": "전익찬",
+      "firstAuthors": "Seongmin Jeon"
+    }
+  ],
+  "nullData": []
+}

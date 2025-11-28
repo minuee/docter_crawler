@@ -12,6 +12,7 @@ const daoMysql = require(`${global.appRoot}/server/database/dao.mysql`);
 const mybatisMapper = require("mybatis-mapper");
 const fs = require('fs');
 const path = require('path');
+const stringSimilarity = require('string-similarity');
 module.exports = router;
 
 const TMP_PASSWORD = "1234";
@@ -290,7 +291,7 @@ router.post('/make-resume', async (req, res, next) => {
  * @swagger
  *  /v1/c/crawling_reporcessing/make-standard:
  *    post:
- *      summary: "병원데이터 후가공 - 진료과목과세부진료분야 설정(부사장님 작업영영 사용중지"
+ *      summary: "병원데이터 후가공 - 진료과목과세부진료분야 설정(부사장님 작업영역 사용중지)"
  *      description: "수집된 의사 진료과목과세부진료분야 설정 "
  *      tags: [병원데이터 후가공]
  *      produces:
@@ -573,6 +574,8 @@ router.post('/make-doctor-specialty', async (req, res, next) => {
   let processCount = 0;
   let processNullCount = 0;
   let processFailCount = 0;
+  let doctorCount = 0; // doctorCount 초기화
+  const processedDoctorIds = new Set(); // 처리된 의사를 추적하기 위한 Set
   const successData = [];
   const failData = [];
   const nullData = [];
@@ -650,8 +653,8 @@ router.post('/make-doctor-specialty', async (req, res, next) => {
     const newSpecialtyNames = specialtyNamesArray.filter(name => !specialtyNameToIdMap.has(name));
 
     if (newSpecialtyNames.length > 0) {
-      console.log(`Found ${newSpecialtyNames.length} new specialties to create:`, newSpecialtyNames);
-      const insertNewParam = { new_specialty_names: newSpecialtyNames };
+      console.log(`Found ${newSpecialtyNames.length}`);
+      const insertNewParam = { new_specialty_names: newSpecialtyNames, data_version_id };
       const insertNewQuery = mybatisMapper.getStatement("sql", "insert_new_specialties", insertNewParam, format);
       const { DBError: insertNewDBError } = await daoMysql.spCall(insertNewQuery);
       if (insertNewDBError) throw new Error("Failed to bulk-insert new specialties.");
@@ -667,29 +670,39 @@ router.post('/make-doctor-specialty', async (req, res, next) => {
 
     // 6. Prepare all doctor-specialty mappings
     const mappings = [];
-    doctors.forEach(doctor => {
+    let num = 0;
+    for (const doctor of doctors) {
+      num++;
       if (!doctor.doctor_id) {
-        console.log(`[FAIL-NO_DATA] Doctor ${doctor.doctorname} has no doctor_id.`);
+        console.log(`${num}/${totalCount} [FAIL-NO_DATA 1] Doctor ${doctor.doctorname} has no doctor_id.`);
         nullData.push({ doctor_id: null, doctorName: doctor.doctorname, reason: "Doctor has no doctor_id." });
-        return;
+        await CS.wait(1000); // 1초 딜레이
+        continue;
       }
       const specs = parseSpecialties(doctor.specialties);
       if (specs.length === 0) {
-        console.log(`[FAIL-NO_DATA] doctor: ${doctor.doctorname}`);
+        console.log(`${num}/${totalCount} [FAIL-NO_DATA 2] doctorname: ${doctor.doctorname},doctor_id: ${doctor.doctor_id}`);
         nullData.push({ doctor_id: doctor.doctor_id, doctorName: doctor.doctorname, reason: "specialties is empty for this doctor." });
-        return;
+        await CS.wait(1000); // 1초 딜레이
+        continue;
       }
 
       specs.forEach(specialtiesTitle => {
         const specialty_id = specialtyNameToIdMap.get(specialtiesTitle);
         if (specialty_id) {
           mappings.push({ doctor_id: doctor.doctor_id, specialty_id });
+          if (!processedDoctorIds.has(doctor.doctor_id)) {
+            processedDoctorIds.add(doctor.doctor_id);
+            doctorCount++;
+          }
         } else {
-          console.log(`[FAIL-NOT_FOUND] Specialty '${specialtiesTitle}' for doctor '${doctor.doctorname}' could not be found or created.`);
+          console.log(`${num}/${totalCount}  [FAIL-NOT_FOUND] Specialty '${specialtiesTitle}' for doctor '${doctor.doctorname}' could not be found or created.`);
           failData.push({ doctor_id: doctor.doctor_id, doctorName: doctor.doctorname, specialtiesTitle, reason: "Specialty ID could not be resolved." });
         }
       });
-    });
+      console.log(`${num}/${totalCount} [SUCCESS] doctorname: ${doctor.doctorname},doctor_id: ${doctor.doctor_id}`);
+      await CS.wait(1000); // 1초 딜레이
+    }
 
     processNullCount = nullData.length;
     processFailCount = failData.length;
@@ -697,7 +710,7 @@ router.post('/make-doctor-specialty', async (req, res, next) => {
     // 7. Bulk insert all mappings
     if (mappings.length > 0) {
       console.log(`Preparing to insert ${mappings.length} doctor-specialty mappings.`);
-      const mappingParam = { mappings };
+      const mappingParam = { mappings ,data_version_id};
       const mappingQuery = mybatisMapper.getStatement("sql", "insert_doctor_specialty_mappings", mappingParam, format);
       const { DBError: mappingDBError, RS: mappingRS } = await daoMysql.spCall(mappingQuery);
 
@@ -721,16 +734,18 @@ router.post('/make-doctor-specialty', async (req, res, next) => {
     const outputData = { 
       counting : {
         totalCount,
+        doctorCount, // doctorCount 추가
         processCount,
         processNullCount,
         processFailCount
       },
+      newSpecialtyNames,
       successData, 
       failData, nullData 
     };
     fs.writeFileSync(outputFilePath, JSON.stringify(outputData, null, 2));
 
-    const message = `processCount : ${processCount},processFailCount : ${processFailCount},processNullCount : ${processNullCount}`;
+    const message = `totalCount : ${totalCount}, doctorCount : ${doctorCount}, processCount : ${processCount},processFailCount : ${processFailCount},processNullCount : ${processNullCount}`;
     console.log(message);
     return res.send({ code: 200, success: true, message });
 
@@ -739,8 +754,6 @@ router.post('/make-doctor-specialty', async (req, res, next) => {
     return res.json(TS.fail("Processing doctor specialties failed."));
   }
 });
-
-
 
 
 /**
@@ -813,18 +826,18 @@ router.post('/sns-match-doctor', async (req, res, next) => {
     //console.log(`RS : ${RS}`)
     totalCount = _.size(RS);
     console.log(`totalCount : ${totalCount}`)
-    let SP0 = null;
     const P1 = {
       data : RS
     };
     for (let i = 0; i < totalCount; i++) {
       let doctorname = P1.data[i].doctorname;
       let hospital = P1.data[i].hospital;
+      let department = P1.data[i].department;
       const review_eval_id = P1.data[i].review_eval_id;
       console.log(`target ${i+1}번째 doctorname > ${doctorname}, hospital : ${hospital}, review_eval_id : ${review_eval_id}`)
 
       if(!functions.isEmpty(doctorname) && !functions.isEmpty(hospital) ) {
-        const hospitalKey = hospital.replace(/\s/g, '');
+        const hospitalKey = hospital.replace(/\s/g, '').replace(/[^a-zA-Z0-9가-힣]/g, '');
         let matchedHospitalInfo = hospitalCache.get(hospitalKey);
 
         if (matchedHospitalInfo === undefined) {
@@ -847,79 +860,107 @@ router.post('/sns-match-doctor', async (req, res, next) => {
         }
       
         if (matchedHospitalInfo) { // Null 체크 강화
-          const standard_name = matchedHospitalInfo[0]?.standard_name;
-          const standard_hid= matchedHospitalInfo[0]?.hid;
+          //const standard_name = matchedHospitalInfo[0]?.standard_name;
+          //const standard_hid= matchedHospitalInfo[0]?.hid;
 
-          if (standard_name && standard_hid ) {
+          if (matchedHospitalInfo?.length > 0  ) {
 
+            const hidArray = matchedHospitalInfo.map(item => item?.hid).filter(Boolean); // undefined, null 제거
+            //const hidNameArray = matchedHospitalInfo.map(item => item?.standard_name).filter(Boolean); // undefined, null 제거
             const selectDoctorBasicParam = {
-              search_doctorname :  doctorname,
-              search_hospital : standard_name
+              search_hospital : hidArray,
+              search_doctorname : doctorname
             }; 
             const selectDoctorBasicFormat = { language: "sql", indent: "  " };
             const selectDoctorBasicQuery = mybatisMapper.getStatement(
-                "sql",
-                "select_doctor_basic_info",
-                selectDoctorBasicParam,
-                selectDoctorBasicFormat
+              "sql",
+              "select_doctor_basic_info",
+              selectDoctorBasicParam,
+              selectDoctorBasicFormat
             );
     
             const { DBError: selectDoctorBasicDBError, RS: selectDoctorBasicRS } = await daoMysql.spCall(selectDoctorBasicQuery);
             const selectDoctorBasicRet = await functions.myBatisResult(selectDoctorBasicDBError, selectDoctorBasicRS);
           
             const matchedDoctorInfo = selectDoctorBasicRet.data?.length > 0 ? selectDoctorBasicRet.data : null;
+            let bestMatchDoctor = null;
 
-            if (matchedDoctorInfo) { // Null 체크 강화
-              const match_rid = matchedDoctorInfo[0]?.rid;
-              const match_rid_long= matchedDoctorInfo[0]?.rid_long;
-              const updateParam = {
-                match_rid,
-                match_rid_long,
-                match_hospital : standard_name,
-                target_review_eval_id : review_eval_id
-              }; 
-              const updateFormat = { language: "sql", indent: "  " };
-              const updateQuery = mybatisMapper.getStatement(
-                "sql",
-                "update_sns_match_doctor",
-                updateParam,
-                updateFormat
-              );
-      
-              const { DBError: updateDBError, RS: updateRS } = await daoMysql.spCall(updateQuery);
-              const updateRet = await functions.myBatisResult(updateDBError, updateRS);
+            if (matchedDoctorInfo) {
               
-              if (updateRet.success) {
-                console.log(`[SUCCESS] Linked doctor: ${doctorname} with hospital: '${hospital}' (ID: ${review_eval_id})`);
-                processCount++;
-                successData.push({
-                  review_eval_id,
-                  doctorname,
-                  hospital
-                });
+              if (matchedDoctorInfo.length > 1) {
+                console.log(`[INFO] 다중 의사 발견 (${matchedDoctorInfo.length}명). 진료과 유사도 비교 시작...`);
+              }
+
+              let highestScore = -1;
+              for (const doctor of matchedDoctorInfo) {
+                const snsDepartment = department || '';
+                const dbDeptName = doctor.deptname || '';
+
+                // 진료과 정보가 둘 다 있을 때만 유사도 계산
+                if (snsDepartment && dbDeptName) {
+                  const score = stringSimilarity.compareTwoStrings(snsDepartment, dbDeptName);
+                  console.log(`[DEBUG] 비교: '${snsDepartment}' vs '${dbDeptName}' -> 유사도: ${score}`);
+                  if (score > highestScore) {
+                    highestScore = score;
+                    bestMatchDoctor = doctor;
+                  }
+                } else if (highestScore < 0) { // 진료과 정보가 하나라도 없으면, 아직 아무것도 선택되지 않았을 때만 기본 후보로 지정
+                  bestMatchDoctor = doctor;
+                }
+              }
+              
+              const SIMILARITY_THRESHOLD = 0.5; // 유사도 임계값
+              if (bestMatchDoctor && (highestScore >= SIMILARITY_THRESHOLD || highestScore === -1)) { // 점수가 임계값을 넘거나, 진료과 정보가 없어 점수계산을 안한 경우(-1)
+                if (highestScore !== -1) {
+                  console.log(`[INFO] 최종 선택된 의사: ${bestMatchDoctor.doctorname}, 진료과: '${bestMatchDoctor.deptname}' (유사도: ${highestScore})`);
+                }
+
+                const updateParam = {
+                  match_rid: bestMatchDoctor.rid,
+                  match_rid_long: bestMatchDoctor.rid_long,
+                  match_hospital: bestMatchDoctor.hid, // hospital_alias의 standard_name
+                  match_deptname : bestMatchDoctor.deptname, // 매칭된 의사의 deptname
+                  target_review_eval_id: review_eval_id
+                };
+                const updateFormat = { language: "sql", indent: "  " };
+                const updateQuery = mybatisMapper.getStatement(
+                  "sql",
+                  "update_sns_match_doctor",
+                  updateParam,
+                  updateFormat
+                );
+        
+                const { DBError: updateDBError, RS: updateRS } = await daoMysql.spCall(updateQuery);
+                const updateRet = await functions.myBatisResult(updateDBError, updateRS);
+                
+                if (updateRet.success) {
+                  console.log(`[SUCCESS] Linked doctor: ${doctorname} with hospital: '${hospital}' (ID: ${review_eval_id})`);
+                  processCount++;
+                  successData.push({ review_eval_id, doctorname, hospital, matched_doctor: bestMatchDoctor.doctorname, matched_dept: bestMatchDoctor.deptname, score: highestScore });
+                } else {
+                  console.log(`[FAIL-DB_UPDATE] Doctor: ${doctorname}, hospital: ${hospital}`);
+                  processFailCount++;
+                  failData.push({ review_eval_id, doctorname, hospital });
+                }
               } else {
-                console.log(`[FAIL-DB_UPDATE] Doctor: ${doctorname}, hospital: ${hospital}`);
+                console.log(`[FAIL-LOW_SIMILARITY] ${doctorname} 의사 후보를 찾았으나 진료과 유사도가 너무 낮습니다. 최고점수: ${highestScore}`);
                 processFailCount++;
-                failData.push({
-                  review_eval_id,
-                  doctorname,
-                  hospital,
-                });
+                nullData.push({ review_eval_id, doctorname, hospital, reason: "Doctor found, but department similarity was too low.", score: highestScore });
               }
             } else {
-                console.log(`[FAIL-DOCTOR_NOT_FOUND] Doctor '${doctorname}' not found at hospital '${standard_name}'.`);
+                console.log(`[FAIL-DOCTOR_NOT_FOUND] Doctor '${doctorname}' not found at any of the matched hospitals.`);
                 processFailCount++;
-                failData.push({ review_eval_id, doctorname, hospital, reason: "Doctor not found at the specified hospital" });
+                nullData.push({ review_eval_id, doctorname, hospital, reason: "Doctor not found at the specified hospital" });
             }
           } else {
             console.log(`[FAIL-NO_HOSPITAL_ID] review_eval_id '${review_eval_id}', hospital '${hospital}' found but has no hid.`);
             processFailCount++;
-            failData.push({ review_eval_id, doctorname, hospital, reason: "Hospital found but standard_name or hid is missing" });
+            nullData.push({ review_eval_id, doctorname, hospital, reason: "Hospital found but standard_name or hid is missing" });
           }
         } else {
           console.log(`[FAIL-HOSPITAL_NOT_FOUND] review_eval_id '${review_eval_id}', hospital '${hospital}' not found in master DB.`);
           processFailCount++;
-          failData.push({ review_eval_id, doctorname, hospital, reason: "Hospital not found" });
+          nullData.push({ review_eval_id, doctorname, hospital, reason: "Hospital not found" });
         }
       
       } else {
@@ -940,6 +981,12 @@ router.post('/sns-match-doctor', async (req, res, next) => {
     }
     const outputFilePath = path.join(outputDir, `list_ver_${data_version_id}.json`);
     const outputData = {
+      counting : {
+        totalCount,
+        processCount,
+        processNullCount,
+        processFailCount
+      },
       successData,
       failData,
       nullData
@@ -1292,7 +1339,7 @@ router.post('/pubmed_find_firstauthor', async (req, res, next) => {
       const paper_id = P1.data[i].paper_id;
       const doctorName = P1.data[i].doctorName;
       const firstAuthors = P1.data[i].firstAuthors.replace("'","");
-      console.log(`P1.data[i] > ${i+1}번째 ${doctorName}-${paper_id}, ${firstAuthors}`)
+      console.log(`find ${i+1}/${totalCount} ${doctorName}-${paper_id}, ${firstAuthors}`)
       
       if ( doctorName && !functions.isEmpty(firstAuthors)) {
         const candidates = await crawlingCtrl.generateNameCandidates(doctorName);
@@ -1398,5 +1445,171 @@ router.post('/pubmed_find_firstauthor', async (req, res, next) => {
   }catch(e){
     console.error(`error 1111: ${e}`)
     return res.json(TS.fail("논문 Authors 중복 제거 fail."));
+  }
+});
+
+
+
+
+
+/**
+ * @swagger
+ *  /v1/c/crawling_reporcessing/pubmed_find_quartile:
+ *    post:
+ *      summary: "논문 quartile과 impactFactor 조회 "
+ *      description: "논문 quartile과 impactFactor 조회"
+ *      tags: [병원데이터 후가공]
+ *      produces:
+ *      parameters:
+ *       - in: "body"
+ *         name: "input"
+ *         description: "hid, version_id는 필수"
+ *         schema:
+ *           type: object
+ *           required:
+ *             - data_version_id
+ *             - hid
+ *           properties:
+ *             data_version_id:
+ *               type: string
+ *             hid:
+ *               type: string
+ *      responses:
+ *        "200":
+ *          description: 병월별 의사 상세정보 체크
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    users:
+ *                      type: object
+ *                      example:    
+ *                            { "code": 1000, "message": "접속성공" }
+ */
+
+
+router.post('/pubmed_find_quartile', async (req, res, next) => {
+ 
+  const search_hid = req.body.hid;
+  const search_version_id = req.body.data_version_id;
+  let totalUniqueJournals = 0;
+  let processSuccessCount = 0; // Number of unique journals successfully processed
+  let processFailCount = 0;   // Number of unique journals that failed to process
+  let processNullCount = 0;   // Number of unique journals where data was missing initially
+  let processNotMatchCount = 0; // Number of unique journals where SCImago match failed
+
+  const successData = [];
+  const failData = [];
+  const nullData = [];
+  const notMatchData = [];
+
+  console.log(`search_hid : ${search_hid}, search_version_id : ${search_version_id}`)
+
+  try{
+    mybatisMapper.createMapper([`${global.appRoot}/services/crawling_reprocessing/sql.xml`]);
+    const format = { language: "sql", indent: "  " };
+
+    // 1. Get distinct journal names that need quartile updates
+    const param = {
+      search_version_id,
+      search_hid
+    }; 
+    const queryDistinctJournals = mybatisMapper.getStatement(
+      "sql",
+      "select_distinct_journal_names_for_quartile_update",
+      param,
+      format
+    );
+    const { DBError: dbErrorDistinctJournals, RS: rsDistinctJournals } = await daoMysql.spCall(queryDistinctJournals);
+
+    if (dbErrorDistinctJournals) {
+        throw new Error(`DB Error fetching distinct journals: ${dbErrorDistinctJournals}`);
+    }
+
+    const uniqueJournals = rsDistinctJournals || [];
+    totalUniqueJournals = uniqueJournals.length;
+    console.log(`Total unique journals to process: ${totalUniqueJournals}`);
+
+    for (let i = 0; i < totalUniqueJournals; i++) {
+      const uniqueJournalEntry = uniqueJournals[i];
+      const journalName = uniqueJournalEntry.journalName;
+      const hid = uniqueJournalEntry.hid; // The hid is from doctor_basic table for filtering
+      const data_version_id_filter = uniqueJournalEntry.data_version_id; // For more precise filtering
+
+      console.log(`${i+1}/${totalUniqueJournals} Processing journal: ${journalName} (HID: ${hid})`);
+
+      if (!functions.isEmpty(journalName)) {
+        const metrics = await crawlingCtrl.getJournalMetricsFromSCImago(journalName);
+
+        if (metrics && metrics.quartile) {
+          const updateParam = {
+            quartile: metrics.quartile,
+            impactFactor: metrics.impactFactor,
+            full_journalName: metrics.full_journalName,
+            journal_issn: metrics.journal_issn,
+            journalName: journalName, // For WHERE clause
+            search_version_id: data_version_id_filter, // For WHERE clause
+            search_hid: hid // For WHERE clause
+          };
+          const updateQuery = mybatisMapper.getStatement("sql", "update_papers_by_journal_name_and_hid", updateParam, format);
+          const { DBError: updateDBError, RS: updateRS } = await daoMysql.spCall(updateQuery);
+          const updateRet = await functions.myBatisResult(updateDBError, updateRS);
+
+          if (updateRet.success) {
+            console.log(`[SUCCESS] Journal: ${journalName} (HID: ${hid}) updated.`);
+            processSuccessCount++;
+            successData.push({ journalName, hid, metrics });
+          } else {
+            console.log(`[FAIL-DB] Journal: ${journalName} (HID: ${hid}) failed DB update.`);
+            processFailCount++;
+            failData.push({ journalName, hid, reason: "DB Update Failed", metrics });
+          }
+        } else {
+          console.log(`[NOT-MATCH] Journal: ${journalName} (HID: ${hid}) - SCImago match failed or no metrics.`);
+          processNotMatchCount++;
+          notMatchData.push({ journalName, hid });
+        }
+      } else {
+        // This case should ideally not happen if select_distinct_journal_names_for_quartile_update filters out empty journalNames
+        console.log(`[NULL-JOURNALNAME] Empty journalName found (HID: ${hid}).`);
+        processNullCount++;
+        nullData.push({ journalName, hid, reason: "Empty journal name" });
+      }
+
+      await CS.wait(5000); // 5초 딜레이
+    } // for loop end
+
+    const outputDir = path.join(__dirname, 'completedata_journal_batch'); // New directory for batch processing logs
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
+    const outputFilePath = path.join(outputDir, `list_hid_${search_hid}_ver_${search_version_id}.json`);
+    const outputData = {
+      counting : {
+        totalUniqueJournals,
+        processSuccessCount,
+        processFailCount,
+        processNullCount,
+        processNotMatchCount
+      },
+      successData,
+      failData,
+      notMatchData,
+      nullData
+    };
+    fs.writeFileSync(outputFilePath, JSON.stringify(outputData, null, 2));
+    const message = `Total unique journals: ${totalUniqueJournals}, Success: ${processSuccessCount}, Fail: ${processFailCount}, Null: ${processNullCount}, Not Match: ${processNotMatchCount}`;
+    console.log(message);
+    return res.send({
+      code: 200,
+      success: true,
+      message: message
+    });
+  }catch(e){
+    console.error(`Error in pubmed_find_quartile (batch processing): ${e}`)
+    return res.json(TS.fail("논문 Quartile 및 ImpactFactor 일괄 조회 처리에 실패했습니다."));
   }
 });

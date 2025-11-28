@@ -65,7 +65,7 @@
             doctor_basic db
         WHERE
             1=1 AND ( db.data_version_id = #{search_version_id} OR db.data_version_id_update = #{search_version_id} )
-            AND db.specialties IS NOT NULL AND db.doctor_id IS NOT NULL AND db.doctorname in ('이길준','김병익','홍석진','은영희')
+            AND db.specialties IS NOT NULL AND db.doctor_id IS NOT NULL 
             <if test="search_hid != null">
                 AND db.hid = #{search_hid}
             </if>
@@ -106,7 +106,7 @@
             NOW()
         )
         ON DUPLICATE KEY UPDATE
-            specialty_id = specialty_id
+            updateAt = NOW()
     </insert>
 
     <select id="select_specialties_by_names" resultType="map">
@@ -119,16 +119,16 @@
     </select>
 
     <insert id="insert_new_specialties">
-        INSERT INTO specialty (specialty, createAt) VALUES
+        INSERT INTO specialty (specialty, createAt,data_version_id ) VALUES
         <foreach item="item" index="index" collection="new_specialty_names" open="" separator="," close="">
-            (#{item}, NOW())
+            (#{item}, NOW(), #{data_version_id})
         </foreach>
     </insert>
 
     <insert id="insert_doctor_specialty_mappings">
-        INSERT INTO doctor_specialty (doctor_id, specialty_id, createAt) VALUES
+        INSERT INTO doctor_specialty (doctor_id, specialty_id, createAt, data_version_id) VALUES
         <foreach item="item" index="index" collection="mappings" open="" separator="," close="">
-            (#{item.doctor_id}, #{item.specialty_id}, NOW())
+            (#{item.doctor_id}, #{item.specialty_id}, NOW(), #{data_version_id})
         </foreach>
         ON DUPLICATE KEY UPDATE
             specialty_id = specialty_id
@@ -218,13 +218,14 @@
             paper_id = #{target_paper_id}
     </update>
 
-     <select id="select_doctor_revert_career_data">
+     <select id="select_sns_match_doctor">
         SELECT
-            dc.doctorname,dc.hospital
+            dc.review_eval_id,dc.doctorname,dc.hospital,dc.department
         FROM 
             patient_review_evaluation dc
         WHERE
-            1=1  AND dc.data_version_id = '1' AND dc.rid is null 
+            1=1  AND dc.data_version_id = '1' AND dc.rid is null and dc.doctorname is not null and dc.doctorname != 'NULL'
+            and dc.review_eval_id &gt; 58189
     </select>
 
     <select id="select_hospital_hid">
@@ -235,17 +236,21 @@
         WHERE
             a.alias_name = #{search_hospital}
         ORDER BY a.hid
-        LIMIT 1
+        LIMIT 10
     </select>
 
-    <select id="select_hospital_hid">
+    <select id="select_doctor_basic_info">
         SELECT
-            a.rid, a.rid_long
+            a.rid, a.rid_long, a.deptname, a.hid,a.doctorname
         FROM 
-            doctor_baisc a
+            doctor_basic a
         WHERE
-            a.doctorname = #{search_doctorname} and a.hid = #{search_hospital}
-        LIMIT 1
+            a.hid IN
+            <foreach collection="search_hospital" item="item" open="(" separator="," close=")">
+                #{item}
+            </foreach>
+            AND a.doctorname LIKE CONCAT(#{search_doctorname}, '%')
+        LIMIT 10
     </select>
 
     <update id="update_sns_match_doctor">
@@ -254,7 +259,8 @@
         SET 
             rid = #{match_rid},
             rid_long = #{match_rid_long},
-            new_hospital = #{match_hospital},
+            new_hospital = ( SELECT baseName FROM hospital WHERE hid = #{match_hospital} ), 
+            new_department = #{match_deptname},
             updateAt = now()
         WHERE 
             review_eval_id = #{target_review_eval_id}
@@ -282,6 +288,71 @@
             updateAt = now()
         WHERE 
             review_eval_id = #{target_review_eval_id}
+    </update>
+
+
+    <select id="select_doctor_pubmed_find_pubmed_find_quartile">
+        SELECT
+            dp.paper_id, dp.doctorName, dp.journalName, dp.impactFactor, dp.pmid, dp.quartile, dp.title_pubmed, dp.title as title_origin
+        FROM 
+            doctor_paper dp INNER JOIN doctor_basic db ON dp.rid = db.rid
+        WHERE
+            1=1 and dp.doctorName IS NOT NULL and dp.pmid IS NOT NULL and title_pubmed IS NOT NULL AND ( dp.quartile IS NULL OR dp.quartile = '' )
+            <if test="search_version_id != null">
+                AND dp.data_version_id = #{search_version_id}
+            </if>
+            <if test="search_hid != null">
+                AND db.hid = #{search_hid}
+            </if>
+        ORDER BY dp.paper_id asc
+        LIMIT 1
+    </select>
+
+    <update id="update_doctor_pubmed_quartile">
+        UPDATE 
+            doctor_paper
+        SET 
+            quartile = #{quartile},
+            impactFactor = #{impactFactor},
+            full_journalName = #{full_journalName},
+            journal_issn = #{journal_issn},
+            updateAt = now()
+        WHERE 
+            paper_id = #{target_paper_id}
+    </update>
+
+    <select id="select_distinct_journal_names_for_quartile_update" resultType="map">
+        SELECT DISTINCT dp.journalName, db.hid, db.data_version_id
+        FROM doctor_paper dp
+        INNER JOIN doctor_basic db ON dp.rid = db.rid
+        WHERE
+            (dp.quartile IS NULL OR dp.quartile = '')
+            AND (dp.journalName IS NOT NULL AND dp.journalName != '')
+            <if test="search_version_id != null">
+                AND dp.data_version_id = #{search_version_id}
+            </if>
+            <if test="search_hid != null">
+                AND db.hid = #{search_hid}
+            </if>
+    </select>
+
+    <update id="update_papers_by_journal_name_and_hid">
+        UPDATE doctor_paper dp
+        INNER JOIN doctor_basic db ON dp.rid = db.rid
+        SET
+            dp.quartile = #{quartile},
+            dp.impactFactor = #{impactFactor},
+            dp.full_journalName = #{full_journalName},
+            dp.journal_issn = #{journal_issn},
+            dp.updateAt = now()
+        WHERE
+            dp.journalName = #{journalName}
+            <if test="search_version_id != null">
+                AND dp.data_version_id = #{search_version_id}
+            </if>
+            <if test="search_hid != null">
+                AND db.hid = #{search_hid}
+            </if>
     </update>
 
 </mapper>
