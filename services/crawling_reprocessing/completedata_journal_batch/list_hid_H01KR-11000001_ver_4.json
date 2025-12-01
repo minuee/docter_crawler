@@ -1,0 +1,2779 @@
+{
+  "counting": {
+    "totalUniqueJournals": 292,
+    "processSuccessCount": 266,
+    "processFailCount": 0,
+    "processNullCount": 0,
+    "processNotMatchCount": 26
+  },
+  "successData": [
+    {
+      "journalName": "Sci Rep",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.874",
+        "full_journalName": "Scientific Reports\nUnited Kingdom\nNature Research",
+        "journal_issn": "20452322"
+      }
+    },
+    {
+      "journalName": "Korean J Radiol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.247",
+        "full_journalName": "Korean Journal of Radiology\nSouth Korea\nKorean Radiological Society",
+        "journal_issn": "12296929"
+      }
+    },
+    {
+      "journalName": "Acad Radiol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.992",
+        "full_journalName": "Academic Radiology\nUnited States\nElsevier Inc.",
+        "journal_issn": "10766332"
+      }
+    },
+    {
+      "journalName": "Invest Radiol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "2.666",
+        "full_journalName": "Investigative Radiology\nUnited States\nLippincott Williams and Wilkins Ltd.",
+        "journal_issn": "00209996"
+      }
+    },
+    {
+      "journalName": "Abdom Radiol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.817",
+        "full_journalName": "Abdominal Radiology\nUnited States\nSpringer New York",
+        "journal_issn": "2366004X"
+      }
+    },
+    {
+      "journalName": "J Clin Sleep Med",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.120",
+        "full_journalName": "Journal of Clinical Sleep Medicine\nUnited States\nAmerican Academy of Sleep Medicine",
+        "journal_issn": "15509389"
+      }
+    },
+    {
+      "journalName": "Sleep Med",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "4.209",
+        "full_journalName": "Sleep Medicine Reviews\nUnited Kingdom\nW.B. Saunders Ltd",
+        "journal_issn": "10870792"
+      }
+    },
+    {
+      "journalName": "Am J Nephrol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.400",
+        "full_journalName": "American Journal of Nephrology\nSwitzerland\nS. Karger AG",
+        "journal_issn": "02508095"
+      }
+    },
+    {
+      "journalName": "Kidney Dis",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "3.024",
+        "full_journalName": "American Journal of Kidney Diseases\nUnited States\nW.B. Saunders",
+        "journal_issn": "02726386"
+      }
+    },
+    {
+      "journalName": "Kidney Res Clin Pract",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.160",
+        "full_journalName": "Kidney Research and Clinical Practice\nSouth Korea\nThe Korean Society of Nephrology",
+        "journal_issn": "22119132"
+      }
+    },
+    {
+      "journalName": "J Nephrol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "3.749",
+        "full_journalName": "Journal of the American Society of Nephrology\nUnited States\nWolters Kluwer Health",
+        "journal_issn": "10466673"
+      }
+    },
+    {
+      "journalName": "Kidney Int Rep",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.500",
+        "full_journalName": "Kidney International Reports\nUnited States\nElsevier Inc.",
+        "journal_issn": "24680249"
+      }
+    },
+    {
+      "journalName": "Mayo Clin Proc",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "2.001",
+        "full_journalName": "Mayo Clinic Proceedings\nUnited Kingdom\nElsevier Ltd",
+        "journal_issn": "00256196"
+      }
+    },
+    {
+      "journalName": "Atherosclerosis",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.762",
+        "full_journalName": "Atherosclerosis\nIreland\nElsevier Ireland Ltd",
+        "journal_issn": "00219150"
+      }
+    },
+    {
+      "journalName": "J Korean Med Sci",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.765",
+        "full_journalName": "Journal of Korean Medical Science\nSouth Korea\nKorean Academy of Medical Science",
+        "journal_issn": "10118934"
+      }
+    },
+    {
+      "journalName": "Br J Nutr",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.896",
+        "full_journalName": "British Journal of Nutrition\nUnited Kingdom\nCambridge University Press",
+        "journal_issn": "00071145"
+      }
+    },
+    {
+      "journalName": "J Ren Nutr",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.812",
+        "full_journalName": "Journal of Renal Nutrition\nUnited States\nW.B. Saunders",
+        "journal_issn": "10512276"
+      }
+    },
+    {
+      "journalName": "Am J Kidney Dis",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "3.024",
+        "full_journalName": "American Journal of Kidney Diseases\nUnited States\nW.B. Saunders",
+        "journal_issn": "02726386"
+      }
+    },
+    {
+      "journalName": "Front Nutr",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.115",
+        "full_journalName": "Frontiers in Nutrition\nSwitzerland\nFrontiers Media SA",
+        "journal_issn": "2296861X"
+      }
+    },
+    {
+      "journalName": "Nephrol Dial Transplant",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.680",
+        "full_journalName": "Nephrology Dialysis Transplantation\nUnited Kingdom\nOxford University Press",
+        "journal_issn": "09310509"
+      }
+    },
+    {
+      "journalName": "J Am Heart Assoc",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "2.189",
+        "full_journalName": "Journal of the American Heart Association\nUnited States\nAmerican Heart Association Inc.",
+        "journal_issn": "20479980"
+      }
+    },
+    {
+      "journalName": "J Am Soc Nephrol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "3.749",
+        "full_journalName": "Journal of the American Society of Nephrology\nUnited States\nWolters Kluwer Health",
+        "journal_issn": "10466673"
+      }
+    },
+    {
+      "journalName": "Front Cardiovasc Med",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.975",
+        "full_journalName": "Frontiers in Cardiovascular Medicine\nSwitzerland\nFrontiers Media SA",
+        "journal_issn": "2297055X"
+      }
+    },
+    {
+      "journalName": "BMC Nephrol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.805",
+        "full_journalName": "BMC Nephrology\nUnited Kingdom\nBioMed Central Ltd",
+        "journal_issn": "14712369"
+      }
+    },
+    {
+      "journalName": "Biochim Biophys Acta Mol Basis Dis",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.432",
+        "full_journalName": "Biochimica et Biophysica Acta - Molecular Basis of Disease\nNetherlands\nElsevier B.V.",
+        "journal_issn": "09254439"
+      }
+    },
+    {
+      "journalName": "Hip Int",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.811",
+        "full_journalName": "HIP International\nItaly\nWichtig Publishing Srl",
+        "journal_issn": "11207000"
+      }
+    },
+    {
+      "journalName": "Acta Radiol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q3",
+        "impactFactor": "0.412",
+        "full_journalName": "Acta Radiologica\nUnited Kingdom\nSAGE Publications Ltd",
+        "journal_issn": "02841851"
+      }
+    },
+    {
+      "journalName": "J Back Musculoskelet Rehabil",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.495",
+        "full_journalName": "Journal of Back and Musculoskeletal Rehabilitation\nNetherlands\nSAGE Publications Ltd",
+        "journal_issn": "10538127"
+      }
+    },
+    {
+      "journalName": "J Orthop Surg",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.260",
+        "full_journalName": "Journal of the American Academy of Orthopaedic Surgeons\nUnited States\nLippincott Williams and Wilkins",
+        "journal_issn": "1067151X"
+      }
+    },
+    {
+      "journalName": "Asian J Anesthesiol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q3",
+        "impactFactor": "0.169",
+        "full_journalName": "Asian Journal of Anesthesiology\nTaiwan\nTaiwan Society of Anesthesiologists",
+        "journal_issn": "2468824X"
+      }
+    },
+    {
+      "journalName": "Klin Padiatr",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q3",
+        "impactFactor": "0.201",
+        "full_journalName": "Klinische Padiatrie\nGermany\nGeorg Thieme Verlag",
+        "journal_issn": "03008630"
+      }
+    },
+    {
+      "journalName": "Cell Physiol Biochem",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.746",
+        "full_journalName": "Cellular Physiology and Biochemistry\nGermany\nCell Physiol Biochem Press GmbH & Co KG",
+        "journal_issn": "10158987"
+      }
+    },
+    {
+      "journalName": "Acta Med Okayama",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q3",
+        "impactFactor": "0.263",
+        "full_journalName": "Acta Medica Okayama\nJapan\nOkayama University",
+        "journal_issn": "0386300X"
+      }
+    },
+    {
+      "journalName": "Eur Heart J Cardiovasc Imaging",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "2.299",
+        "full_journalName": "European Heart Journal Cardiovascular Imaging\nUnited Kingdom\nOxford University Press",
+        "journal_issn": "20472404"
+      }
+    },
+    {
+      "journalName": "Am J Hypertens",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.192",
+        "full_journalName": "American Journal of Hypertension\nUnited Kingdom\nOxford University Press",
+        "journal_issn": "08957061"
+      }
+    },
+    {
+      "journalName": "J Atheroscler Thromb",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.901",
+        "full_journalName": "Journal of Atherosclerosis and Thrombosis\nJapan\nJapan Atherosclerosis Society",
+        "journal_issn": "13403478"
+      }
+    },
+    {
+      "journalName": "J Clin Med",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.919",
+        "full_journalName": "Journal of Clinical Medicine\nSwitzerland\nMultidisciplinary Digital Publishing Institute (MDPI)",
+        "journal_issn": "20770383"
+      }
+    },
+    {
+      "journalName": "Korean Circ J",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.729",
+        "full_journalName": "Korean Circulation Journal\nSouth Korea\nKorean Society of Cardiology",
+        "journal_issn": "17385520"
+      }
+    },
+    {
+      "journalName": "Nutr Metab Cardiovasc Dis",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.098",
+        "full_journalName": "Nutrition, Metabolism and Cardiovascular Diseases\nNetherlands\nElsevier B.V.",
+        "journal_issn": "09394753"
+      }
+    },
+    {
+      "journalName": "Pulse",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q4",
+        "impactFactor": "0.126",
+        "full_journalName": "IEEE Pulse\nUnited States\nInstitute of Electrical and Electronics Engineers Inc.",
+        "journal_issn": "21542287"
+      }
+    },
+    {
+      "journalName": "Front Med",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.172",
+        "full_journalName": "Frontiers in Microbiology\nSwitzerland\nFrontiers Media SA",
+        "journal_issn": "1664302X"
+      }
+    },
+    {
+      "journalName": "J Clin Hypertens",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.823",
+        "full_journalName": "Journal of Clinical Hypertension\nUnited States\nWiley-Blackwell Publishing Ltd",
+        "journal_issn": "15246175"
+      }
+    },
+    {
+      "journalName": "JAMA Netw Open",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "3.546",
+        "full_journalName": "JAMA Network Open\nUnited States\nAmerican Medical Association",
+        "journal_issn": "25743805"
+      }
+    },
+    {
+      "journalName": "JAMA Cardiol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "5.936",
+        "full_journalName": "JAMA Cardiology\nUnited States\nAmerican Medical Association",
+        "journal_issn": "23806583"
+      }
+    },
+    {
+      "journalName": "Clin Hypertens",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.823",
+        "full_journalName": "Journal of Clinical Hypertension\nUnited States\nWiley-Blackwell Publishing Ltd",
+        "journal_issn": "15246175"
+      }
+    },
+    {
+      "journalName": "Lancet",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "12.113",
+        "full_journalName": "The Lancet\nUnited Kingdom\nElsevier B.V.",
+        "journal_issn": "01406736"
+      }
+    },
+    {
+      "journalName": "Abdom Radiol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.817",
+        "full_journalName": "Abdominal Radiology\nUnited States\nSpringer New York",
+        "journal_issn": "2366004X"
+      }
+    },
+    {
+      "journalName": "Clin Radiol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.622",
+        "full_journalName": "Clinical Radiology\nUnited Kingdom\nW.B. Saunders Ltd",
+        "journal_issn": "00099260"
+      }
+    },
+    {
+      "journalName": "Korean J Radiol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.247",
+        "full_journalName": "Korean Journal of Radiology\nSouth Korea\nKorean Radiological Society",
+        "journal_issn": "12296929"
+      }
+    },
+    {
+      "journalName": "J Korean Soc Radiol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q4",
+        "impactFactor": "0.167",
+        "full_journalName": "Journal of the Korean Society of Radiology\nSouth Korea\nKorean Radiological Society",
+        "journal_issn": "17382637"
+      }
+    },
+    {
+      "journalName": "Eur J Radiol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.003",
+        "full_journalName": "European Journal of Radiology\nIreland\nElsevier Ireland Ltd",
+        "journal_issn": "0720048X"
+      }
+    },
+    {
+      "journalName": "Minim Invasive Ther Allied Technol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.481",
+        "full_journalName": "Minimally Invasive Therapy and Allied Technologies\nUnited Kingdom\nInforma Healthcare",
+        "journal_issn": "13645706"
+      }
+    },
+    {
+      "journalName": "Life",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "2.299",
+        "full_journalName": "Cellular and Molecular Life Sciences\nSwitzerland\nSpringer Science and Business Media Deutschland GmbH",
+        "journal_issn": "1420682X"
+      }
+    },
+    {
+      "journalName": "Asian J Surg",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.107",
+        "full_journalName": "Asian Spine Journal\nSouth Korea\nKorean Society of Spine Surgery",
+        "journal_issn": "19761902"
+      }
+    },
+    {
+      "journalName": "Int J Hyperthermia",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.881",
+        "full_journalName": "International Journal of Hyperthermia\nUnited Kingdom\nInforma Healthcare",
+        "journal_issn": "02656736"
+      }
+    },
+    {
+      "journalName": "Wideochir Inne Tech Maloinwazyjne",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.562",
+        "full_journalName": "Wideochirurgia I Inne Techniki Maloinwazyjne\nPoland\nTermedia Publishing House Ltd.",
+        "journal_issn": "18954588"
+      }
+    },
+    {
+      "journalName": "PLoS One",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.803",
+        "full_journalName": "PLoS ONE\nUnited States\nPublic Library of Science",
+        "journal_issn": "19326203"
+      }
+    },
+    {
+      "journalName": "Radiology",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "3.856",
+        "full_journalName": "Radiology\nUnited States\nRadiological Society of North America Inc.",
+        "journal_issn": "00338419"
+      }
+    },
+    {
+      "journalName": "Liver Int",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "2.001",
+        "full_journalName": "Liver International\nUnited Kingdom\nWiley-Blackwell Publishing Ltd",
+        "journal_issn": "14783223"
+      }
+    },
+    {
+      "journalName": "J Affect Disord",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "2.121",
+        "full_journalName": "Journal of Affective Disorders\nNetherlands\nElsevier B.V.",
+        "journal_issn": "01650327"
+      }
+    },
+    {
+      "journalName": "Diabetes Metab J",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "2.365",
+        "full_journalName": "Diabetes and Metabolism Journal\nSouth Korea\nKorean Diabetes Association",
+        "journal_issn": "22336079"
+      }
+    },
+    {
+      "journalName": "Hepatology",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "5.557",
+        "full_journalName": "Hepatology\nUnited States\nLippincott Williams and Wilkins",
+        "journal_issn": "02709139"
+      }
+    },
+    {
+      "journalName": "Gut",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "8.874",
+        "full_journalName": "Gut\nUnited Kingdom\nBMJ Publishing Group",
+        "journal_issn": "00175749"
+      }
+    },
+    {
+      "journalName": "Am J Gastroenterol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "2.344",
+        "full_journalName": "American Journal of Gastroenterology\nUnited Kingdom\nWolters Kluwer Health",
+        "journal_issn": "00029270"
+      }
+    },
+    {
+      "journalName": "Arterioscler Thromb Vasc Biol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "2.532",
+        "full_journalName": "Arteriosclerosis, Thrombosis, and Vascular Biology\nUnited States\nLippincott Williams and Wilkins",
+        "journal_issn": "10795642"
+      }
+    },
+    {
+      "journalName": "Reprod Sci",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.637",
+        "full_journalName": "Animal Reproduction Science\nNetherlands\nElsevier B.V.",
+        "journal_issn": "03784320"
+      }
+    },
+    {
+      "journalName": "Ann Intern Med",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "3.378",
+        "full_journalName": "Annals of Internal Medicine\nUnited States\nAmerican College of Physicians",
+        "journal_issn": "00034819"
+      }
+    },
+    {
+      "journalName": "J Hepatol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "10.575",
+        "full_journalName": "Journal of Hepatology\nNetherlands\nElsevier B.V.",
+        "journal_issn": "01688278"
+      }
+    },
+    {
+      "journalName": "Breast Cancer Res Treat",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.351",
+        "full_journalName": "Breast Cancer Research and Treatment\nUnited States\nSpringer",
+        "journal_issn": "01676806"
+      }
+    },
+    {
+      "journalName": "Eur J Obstet Gynecol Reprod Biol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.797",
+        "full_journalName": "European Journal of Obstetrics and Gynecology and Reproductive Biology\nIreland\nElsevier Ireland Ltd",
+        "journal_issn": "03012115"
+      }
+    },
+    {
+      "journalName": "J Am Coll Cardiol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "9.015",
+        "full_journalName": "Journal of the American College of Cardiology\nUnited States\nElsevier Inc.",
+        "journal_issn": "07351097"
+      }
+    },
+    {
+      "journalName": "Obesity",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.589",
+        "full_journalName": "International Journal of Obesity\nUnited Kingdom\nSpringer Nature",
+        "journal_issn": "03070565"
+      }
+    },
+    {
+      "journalName": "Asian Pac J Cancer Prev",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.530",
+        "full_journalName": "Asian Pacific Journal of Cancer Prevention\nThailand\nAsian Pacific Organization for Cancer Prevention",
+        "journal_issn": "15137368"
+      }
+    },
+    {
+      "journalName": "Diabetes Res Clin Pract",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.537",
+        "full_journalName": "Diabetes Research and Clinical Practice\nIreland\nElsevier Ireland Ltd",
+        "journal_issn": "01688227"
+      }
+    },
+    {
+      "journalName": "Acute Crit Care",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.493",
+        "full_journalName": "Acute and Critical Care\nSouth Korea\nKorean Society of Critical Care Medicine",
+        "journal_issn": "25866052"
+      }
+    },
+    {
+      "journalName": "Eur J Surg Oncol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.153",
+        "full_journalName": "European Journal of Surgical Oncology\nUnited Kingdom\nW.B. Saunders Ltd",
+        "journal_issn": "07487983"
+      }
+    },
+    {
+      "journalName": "Clin Nutr",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "2.111",
+        "full_journalName": "American Journal of Clinical Nutrition\nUnited States\nElsevier B.V.",
+        "journal_issn": "00029165"
+      }
+    },
+    {
+      "journalName": "J Clin Lab Anal",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.738",
+        "full_journalName": "Journal of Clinical Laboratory Analysis\nUnited States\nWiley-Liss Inc.",
+        "journal_issn": "08878013"
+      }
+    },
+    {
+      "journalName": "Clin Lab",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.952",
+        "full_journalName": "Clinical Chemistry and Laboratory Medicine\nGermany\nWalter de Gruyter GmbH",
+        "journal_issn": "14346621"
+      }
+    },
+    {
+      "journalName": "J Hum Genet",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "4.531",
+        "full_journalName": "American Journal of Human Genetics\nUnited States\nCell Press",
+        "journal_issn": "00029297"
+      }
+    },
+    {
+      "journalName": "Nutrients",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.473",
+        "full_journalName": "Nutrients\nSwitzerland\nMultidisciplinary Digital Publishing Institute (MDPI)",
+        "journal_issn": "20726643"
+      }
+    },
+    {
+      "journalName": "Ann Lab Med",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.892",
+        "full_journalName": "Annals of Laboratory Medicine\nSouth Korea\nKorean Society for Laboratory Medicine",
+        "journal_issn": "22343806"
+      }
+    },
+    {
+      "journalName": "Helicobacter",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.174",
+        "full_journalName": "Helicobacter\nUnited Kingdom\nWiley-Blackwell Publishing Ltd",
+        "journal_issn": "10834389"
+      }
+    },
+    {
+      "journalName": "J Breast Cancer",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.760",
+        "full_journalName": "Journal of Breast Cancer\nSouth Korea\nKorean Breast Cancer Society",
+        "journal_issn": "17386756"
+      }
+    },
+    {
+      "journalName": "Ann Surg Oncol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.152",
+        "full_journalName": "Annals of Surgical Oncology\nGermany\nSpringer Science and Business Media Deutschland GmbH",
+        "journal_issn": "10689265"
+      }
+    },
+    {
+      "journalName": "J Pers Med",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.863",
+        "full_journalName": "Journal of Personalized Medicine\nSwitzerland\nMultidisciplinary Digital Publishing Institute (MDPI)",
+        "journal_issn": "20754426"
+      }
+    },
+    {
+      "journalName": "Breast Cancer",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.351",
+        "full_journalName": "Breast Cancer Research and Treatment\nUnited States\nSpringer",
+        "journal_issn": "01676806"
+      }
+    },
+    {
+      "journalName": "Clin Exp Emerg Med",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.632",
+        "full_journalName": "Clinical and Experimental Emergency Medicine\nSouth Korea\nKorean Society of Emergency Medicine",
+        "journal_issn": "23834625"
+      }
+    },
+    {
+      "journalName": "Global Spine J",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.153",
+        "full_journalName": "Global Spine Journal\nUnited States\nSAGE Publications Inc.",
+        "journal_issn": "21925682"
+      }
+    },
+    {
+      "journalName": "Biomed Res Int",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.744",
+        "full_journalName": "BioMed Research International\nUnited States\nJohn Wiley and Sons Ltd",
+        "journal_issn": "23146133"
+      }
+    },
+    {
+      "journalName": "J Craniofac Surg",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.437",
+        "full_journalName": "Journal of Craniofacial Surgery\nUnited States\nLippincott Williams and Wilkins",
+        "journal_issn": "10492275"
+      }
+    },
+    {
+      "journalName": "Int Surg",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.847",
+        "full_journalName": "International Journal of Oral and Maxillofacial Surgery\nUnited States\nChurchill Livingstone",
+        "journal_issn": "09015027"
+      }
+    },
+    {
+      "journalName": "Medicine",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "19.076",
+        "full_journalName": "New England Journal of Medicine\nUnited States\nMassachussetts Medical Society",
+        "journal_issn": "00284793"
+      }
+    },
+    {
+      "journalName": "J Wound Care",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.467",
+        "full_journalName": "Journal of Wound Care\nUnited Kingdom\nMA Healthcare Ltd",
+        "journal_issn": "09690700"
+      }
+    },
+    {
+      "journalName": "Int J Low Extrem Wounds",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.511",
+        "full_journalName": "International Journal of Lower Extremity Wounds\nUnited States\nSAGE Publications Inc.",
+        "journal_issn": "15347346"
+      }
+    },
+    {
+      "journalName": "J Plast Surg Hand Surg",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.412",
+        "full_journalName": "Journal of Plastic Surgery and Hand Surgery\nSweden\nMedical Journals Sweden AB",
+        "journal_issn": "2000656X"
+      }
+    },
+    {
+      "journalName": "ANZ J Surg",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.483",
+        "full_journalName": "ANZ Journal of Surgery\nUnited Kingdom\nWiley-Blackwell Publishing Ltd",
+        "journal_issn": "14451433"
+      }
+    },
+    {
+      "journalName": "Aesthetic Plast Surg",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.945",
+        "full_journalName": "Aesthetic Plastic Surgery\nUnited States\nSpringer New York",
+        "journal_issn": "0364216X"
+      }
+    },
+    {
+      "journalName": "Chin Med J",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.213",
+        "full_journalName": "Chinese Medical Journal\nChina\nLippincott Williams and Wilkins",
+        "journal_issn": "03666999"
+      }
+    },
+    {
+      "journalName": "J Reconstr Microsurg",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.063",
+        "full_journalName": "Journal of Reconstructive Microsurgery\nUnited States\nThieme Medical Publishers, Inc.",
+        "journal_issn": "0743684X"
+      }
+    },
+    {
+      "journalName": "Ann Occup Environ Med",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.740",
+        "full_journalName": "Annals of Occupational and Environmental Medicine\nUnited Kingdom\nBioMed Central Ltd",
+        "journal_issn": "20524374"
+      }
+    },
+    {
+      "journalName": "Arch Environ Occup Health",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.437",
+        "full_journalName": "Archives of Environmental and Occupational Health\nUnited States\nTaylor and Francis Ltd.",
+        "journal_issn": "19338244"
+      }
+    },
+    {
+      "journalName": "J Occup Environ Med",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.743",
+        "full_journalName": "Journal of Occupational and Environmental Medicine\nUnited States\nLippincott Williams and Wilkins Ltd.",
+        "journal_issn": "10762752"
+      }
+    },
+    {
+      "journalName": "Pediatr Dermatol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.544",
+        "full_journalName": "Pediatric Dermatology\nUnited States\nJohn Wiley and Sons Inc",
+        "journal_issn": "07368046"
+      }
+    },
+    {
+      "journalName": "Lasers Surg Med",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.816",
+        "full_journalName": "Lasers in Surgery and Medicine\nUnited States\nWiley-Liss Inc.",
+        "journal_issn": "01968092"
+      }
+    },
+    {
+      "journalName": "J Cosmet Laser Ther",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.452",
+        "full_journalName": "Journal of Cosmetic and Laser Therapy\nUnited Kingdom\nInforma Healthcare",
+        "journal_issn": "14764172"
+      }
+    },
+    {
+      "journalName": "Dermatol Surg",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.558",
+        "full_journalName": "Dermatologic Surgery\nUnited States\nLippincott Williams and Wilkins",
+        "journal_issn": "10760512"
+      }
+    },
+    {
+      "journalName": "J Cosmet Dermatol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.764",
+        "full_journalName": "Journal of Cosmetic Dermatology\nUnited Kingdom\nJohn Wiley and Sons Inc",
+        "journal_issn": "14732130"
+      }
+    },
+    {
+      "journalName": "Lasers Med Sci",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.625",
+        "full_journalName": "Lasers in Medical Science\nUnited Kingdom\nSpringer London",
+        "journal_issn": "02688921"
+      }
+    },
+    {
+      "journalName": "Ann Dermatol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q3",
+        "impactFactor": "0.440",
+        "full_journalName": "Annals of Dermatology\nSouth Korea\nKorean Dermatological Association",
+        "journal_issn": "10139087"
+      }
+    },
+    {
+      "journalName": "Endocrine",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "9.175",
+        "full_journalName": "Endocrine Reviews\nUnited States\nThe Endocrine Society",
+        "journal_issn": "0163769X"
+      }
+    },
+    {
+      "journalName": "Maturitas",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.218",
+        "full_journalName": "Maturitas\nIreland\nElsevier Ireland Ltd",
+        "journal_issn": "03785122"
+      }
+    },
+    {
+      "journalName": "Clin Chim Acta",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.909",
+        "full_journalName": "Clinica Chimica Acta\nNetherlands\nElsevier B.V.",
+        "journal_issn": "00098981"
+      }
+    },
+    {
+      "journalName": "Sensors",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.764",
+        "full_journalName": "Sensors\nSwitzerland\nMultidisciplinary Digital Publishing Institute (MDPI)",
+        "journal_issn": "14248220"
+      }
+    },
+    {
+      "journalName": "Eur J Intern Med",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.166",
+        "full_journalName": "European Journal of Internal Medicine\nNetherlands\nElsevier B.V.",
+        "journal_issn": "09536205"
+      }
+    },
+    {
+      "journalName": "Eur J Prev Cardiol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "2.119",
+        "full_journalName": "European Journal of Preventive Cardiology\nUnited Kingdom\nOxford University Press",
+        "journal_issn": "20474873"
+      }
+    },
+    {
+      "journalName": "Clin Cardiol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.830",
+        "full_journalName": "Clinical Cardiology\nUnited States\nJohn Wiley and Sons Inc",
+        "journal_issn": "01609289"
+      }
+    },
+    {
+      "journalName": "Transplantation",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "2.439",
+        "full_journalName": "American Journal of Transplantation\nNetherlands\nElsevier B.V.",
+        "journal_issn": "16006135"
+      }
+    },
+    {
+      "journalName": "BMC Public Health",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.359",
+        "full_journalName": "BMC Public Health\nUnited Kingdom\nBioMed Central Ltd",
+        "journal_issn": "14712458"
+      }
+    },
+    {
+      "journalName": "J Cardiovasc Imaging",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "5.426",
+        "full_journalName": "JACC: Cardiovascular Imaging\nUnited States\nElsevier Inc.",
+        "journal_issn": "18767591"
+      }
+    },
+    {
+      "journalName": "Circ J",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.105",
+        "full_journalName": "Circulation Journal\nJapan\nJapanese Circulation Society",
+        "journal_issn": "13469843"
+      }
+    },
+    {
+      "journalName": "Yonsei Med J",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.827",
+        "full_journalName": "Yonsei Medical Journal\nSouth Korea\nYonsei University College of Medicine",
+        "journal_issn": "05135796"
+      }
+    },
+    {
+      "journalName": "J Nucl Med",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "2.224",
+        "full_journalName": "Journal of Nuclear Medicine\nUnited States\nSociety of Nuclear Medicine Inc.",
+        "journal_issn": "01615505"
+      }
+    },
+    {
+      "journalName": "J Steroid Biochem Mol Biol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.729",
+        "full_journalName": "Journal of Steroid Biochemistry and Molecular Biology\nUnited Kingdom\nElsevier Ltd",
+        "journal_issn": "09600760"
+      }
+    },
+    {
+      "journalName": "Endocrinol Metab",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "2.183",
+        "full_journalName": "Journal of Clinical Endocrinology and Metabolism\nUnited States\nEndocrine Society",
+        "journal_issn": "0021972X"
+      }
+    },
+    {
+      "journalName": "J Diabetes Investig",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.145",
+        "full_journalName": "Journal of Diabetes Investigation\nAustralia\nJohn Wiley and Sons Inc",
+        "journal_issn": "20401116"
+      }
+    },
+    {
+      "journalName": "Eur J Endocrinol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.810",
+        "full_journalName": "European Journal of Endocrinology\nUnited Kingdom\nOxford University Press",
+        "journal_issn": "08044643"
+      }
+    },
+    {
+      "journalName": "Br J Radiol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.875",
+        "full_journalName": "British Journal of Radiology\nUnited Kingdom\nOxford University Press",
+        "journal_issn": "00071285"
+      }
+    },
+    {
+      "journalName": "Microvasc Res",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.780",
+        "full_journalName": "Microvascular Research\nUnited States\nAcademic Press Inc.",
+        "journal_issn": "00262862"
+      }
+    },
+    {
+      "journalName": "Oncotarget",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.785",
+        "full_journalName": "Oncotarget\nUnited States\nImpact Journals LLC",
+        "journal_issn": "19492553"
+      }
+    },
+    {
+      "journalName": "Radiology",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "3.856",
+        "full_journalName": "Radiology\nUnited States\nRadiological Society of North America Inc.",
+        "journal_issn": "00338419"
+      }
+    },
+    {
+      "journalName": "Cancer Epidemiol Biomarkers Prev",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.939",
+        "full_journalName": "Cancer Epidemiology Biomarkers and Prevention\nUnited States\nAmerican Association for Cancer Research Inc.",
+        "journal_issn": "10559965"
+      }
+    },
+    {
+      "journalName": "Cancers",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.462",
+        "full_journalName": "Cancers\nSwitzerland\nMultidisciplinary Digital Publishing Institute (MDPI)",
+        "journal_issn": "20726694"
+      }
+    },
+    {
+      "journalName": "Brain Sci",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q3",
+        "impactFactor": "0.637",
+        "full_journalName": "Experimental Brain Research\nGermany\nSpringer Science and Business Media Deutschland GmbH",
+        "journal_issn": "00144819"
+      }
+    },
+    {
+      "journalName": "Psychiatry Investig",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.703",
+        "full_journalName": "Psychiatry Investigation\nSouth Korea\nKorean Neuropsychiatric Association",
+        "journal_issn": "17383684"
+      }
+    },
+    {
+      "journalName": "Int J Biol Macromol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.285",
+        "full_journalName": "International Journal of Biological Macromolecules\nNetherlands\nElsevier B.V.",
+        "journal_issn": "01418130"
+      }
+    },
+    {
+      "journalName": "Front Pediatr",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.738",
+        "full_journalName": "Frontiers in Pediatrics\nSwitzerland\nFrontiers Media SA",
+        "journal_issn": "22962360"
+      }
+    },
+    {
+      "journalName": "J Clin Med",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.919",
+        "full_journalName": "Journal of Clinical Medicine\nSwitzerland\nMultidisciplinary Digital Publishing Institute (MDPI)",
+        "journal_issn": "20770383"
+      }
+    },
+    {
+      "journalName": "Sci Rep",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.874",
+        "full_journalName": "Scientific Reports\nUnited Kingdom\nNature Research",
+        "journal_issn": "20452322"
+      }
+    },
+    {
+      "journalName": "Front Neurol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.993",
+        "full_journalName": "Frontiers in Neurology\nSwitzerland\nFrontiers Media SA",
+        "journal_issn": "16642295"
+      }
+    },
+    {
+      "journalName": "Neurosci Lett",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.766",
+        "full_journalName": "Neuroscience Letters\nIreland\nElsevier Ireland Ltd",
+        "journal_issn": "03043940"
+      }
+    },
+    {
+      "journalName": "J Thorac Dis",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.624",
+        "full_journalName": "Journal of Thoracic Disease\nHong Kong\nPioneer Bioscience Publishing Company (PBPC)",
+        "journal_issn": "20721439"
+      }
+    },
+    {
+      "journalName": "J Cachexia Sarcopenia Muscle",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "3.416",
+        "full_journalName": "Journal of Cachexia, Sarcopenia and Muscle\nUnited States\nWiley-Blackwell",
+        "journal_issn": "21905991"
+      }
+    },
+    {
+      "journalName": "Cranio",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.757",
+        "full_journalName": "Cleft Palate Craniofacial Journal\nUnited Kingdom\nSAGE Publications Ltd",
+        "journal_issn": "10556656"
+      }
+    },
+    {
+      "journalName": "Transplant Proc",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q3",
+        "impactFactor": "0.298",
+        "full_journalName": "Transplantation Proceedings\nUnited States\nElsevier Inc.",
+        "journal_issn": "00411345"
+      }
+    },
+    {
+      "journalName": "Immune Netw",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.368",
+        "full_journalName": "Immune Network\nSouth Korea\nKorean Association of Immunologists",
+        "journal_issn": "15982629"
+      }
+    },
+    {
+      "journalName": "Front Psychiatry",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.192",
+        "full_journalName": "Frontiers in Psychiatry\nSwitzerland\nFrontiers Media SA",
+        "journal_issn": "16640640"
+      }
+    },
+    {
+      "journalName": "Adv Exp Med Biol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q3",
+        "impactFactor": "0.371",
+        "full_journalName": "Advances in Experimental Medicine and Biology\nUnited States\nSpringer",
+        "journal_issn": "00652598"
+      }
+    },
+    {
+      "journalName": "Biomedicines",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.114",
+        "full_journalName": "Biomedicines\nSwitzerland\nMultidisciplinary Digital Publishing Institute (MDPI)",
+        "journal_issn": "22279059"
+      }
+    },
+    {
+      "journalName": "Curr Alzheimer Res",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q3",
+        "impactFactor": "0.593",
+        "full_journalName": "Current Alzheimer Research\nUnited Arab Emirates\nBentham Science Publishers",
+        "journal_issn": "15672050"
+      }
+    },
+    {
+      "journalName": "Neuroimage",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "2.074",
+        "full_journalName": "NeuroImage\nUnited States\nAcademic Press Inc.",
+        "journal_issn": "10538119"
+      }
+    },
+    {
+      "journalName": "BMC Psychol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.030",
+        "full_journalName": "BMC Psychology\nUnited Kingdom\nBioMed Central Ltd",
+        "journal_issn": "20507283"
+      }
+    },
+    {
+      "journalName": "Clin Psychopharmacol Neurosci",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.870",
+        "full_journalName": "Clinical Psychopharmacology and Neuroscience\nSouth Korea\nKorean College of Neuropsychopharmacology",
+        "journal_issn": "17381088"
+      }
+    },
+    {
+      "journalName": "N Engl J Med",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "19.076",
+        "full_journalName": "New England Journal of Medicine\nUnited States\nMassachussetts Medical Society",
+        "journal_issn": "00284793"
+      }
+    },
+    {
+      "journalName": "Korean J Intern Med",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.745",
+        "full_journalName": "Korean Journal of Internal Medicine\nSouth Korea\nKorean Association of Internal Medicine",
+        "journal_issn": "12263303"
+      }
+    },
+    {
+      "journalName": "JACC Asia",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.744",
+        "full_journalName": "JACC: Asia\nUnited States\nElsevier Inc.",
+        "journal_issn": "27723747"
+      }
+    },
+    {
+      "journalName": "Rev Esp Cardiol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.569",
+        "full_journalName": "Revista Espanola de Cardiologia\nSpain\nEdiciones Doyma, S.L.",
+        "journal_issn": "03008932"
+      }
+    },
+    {
+      "journalName": "Circ Cardiovasc Interv",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "3.039",
+        "full_journalName": "Circulation: Cardiovascular Interventions\nUnited States\nLippincott Williams and Wilkins Ltd.",
+        "journal_issn": "19417632"
+      }
+    },
+    {
+      "journalName": "J Vasc Interv Radiol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.646",
+        "full_journalName": "Journal of Vascular and Interventional Radiology\nUnited States\nElsevier Inc.",
+        "journal_issn": "10510443"
+      }
+    },
+    {
+      "journalName": "Biochem Biophys Res Commun",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.748",
+        "full_journalName": "Biochemical and Biophysical Research Communications\nUnited States\nElsevier B.V.",
+        "journal_issn": "0006291X"
+      }
+    },
+    {
+      "journalName": "J Diabetes Sci Technol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.397",
+        "full_journalName": "Journal of Diabetes Science and Technology\nUnited States\nSAGE Publications Inc.",
+        "journal_issn": "19322968"
+      }
+    },
+    {
+      "journalName": "J Neurogastroenterol Motil",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.062",
+        "full_journalName": "Journal of Neurogastroenterology and Motility\nSouth Korea\nKorean Society of Neurogastroenterology and Motility",
+        "journal_issn": "20930879"
+      }
+    },
+    {
+      "journalName": "Korean Circ J",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.729",
+        "full_journalName": "Korean Circulation Journal\nSouth Korea\nKorean Society of Cardiology",
+        "journal_issn": "17385520"
+      }
+    },
+    {
+      "journalName": "Epidemiol Health",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.776",
+        "full_journalName": "Journal of Epidemiology and Community Health\nUnited Kingdom\nBMJ Publishing Group",
+        "journal_issn": "0143005X"
+      }
+    },
+    {
+      "journalName": "Front Cardiovasc Med",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.975",
+        "full_journalName": "Frontiers in Cardiovascular Medicine\nSwitzerland\nFrontiers Media SA",
+        "journal_issn": "2297055X"
+      }
+    },
+    {
+      "journalName": "Yonsei Med J",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.827",
+        "full_journalName": "Yonsei Medical Journal\nSouth Korea\nYonsei University College of Medicine",
+        "journal_issn": "05135796"
+      }
+    },
+    {
+      "journalName": "Europace",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "3.057",
+        "full_journalName": "Europace\nUnited Kingdom\nOxford University Press",
+        "journal_issn": "10995129"
+      }
+    },
+    {
+      "journalName": "Vasc Endovascular Surg",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.512",
+        "full_journalName": "European Journal of Vascular and Endovascular Surgery\nUnited Kingdom\nW.B. Saunders Ltd",
+        "journal_issn": "10785884"
+      }
+    },
+    {
+      "journalName": "BMC Ophthalmol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.720",
+        "full_journalName": "BMC Ophthalmology\nUnited Kingdom\nBioMed Central Ltd",
+        "journal_issn": "14712415"
+      }
+    },
+    {
+      "journalName": "Br J Ophthalmol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.806",
+        "full_journalName": "British Journal of Ophthalmology\nUnited Kingdom\nBMJ Publishing Group",
+        "journal_issn": "00071161"
+      }
+    },
+    {
+      "journalName": "Korean J Ophthalmol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.572",
+        "full_journalName": "Korean journal of ophthalmology : KJO\nSouth Korea\nSeoul Kjo",
+        "journal_issn": "10118942"
+      }
+    },
+    {
+      "journalName": "J Clin Lipidol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.267",
+        "full_journalName": "Journal of Clinical Lipidology\nUnited Kingdom\nElsevier Ltd",
+        "journal_issn": "18764789"
+      }
+    },
+    {
+      "journalName": "J Prev Med Public Health",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.805",
+        "full_journalName": "Journal of Preventive Medicine and Public Health\nSouth Korea\nKorean Society for Preventive Medicine",
+        "journal_issn": "19758375"
+      }
+    },
+    {
+      "journalName": "J Cardiothorac Surg",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.485",
+        "full_journalName": "Journal of Cardiothoracic Surgery\nUnited Kingdom\nBioMed Central Ltd",
+        "journal_issn": "17498090"
+      }
+    },
+    {
+      "journalName": "Orv Hetil",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q4",
+        "impactFactor": "0.227",
+        "full_journalName": "Orvosi Hetilap\nHungary\nAkademiai Kiado ZRt.",
+        "journal_issn": "00306002"
+      }
+    },
+    {
+      "journalName": "Cancer Res Treat",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.351",
+        "full_journalName": "Breast Cancer Research and Treatment\nUnited States\nSpringer",
+        "journal_issn": "01676806"
+      }
+    },
+    {
+      "journalName": "Gastric Cancer",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "2.489",
+        "full_journalName": "Gastric Cancer\nJapan\nSpringer Japan",
+        "journal_issn": "14363291"
+      }
+    },
+    {
+      "journalName": "Eur J Surg Oncol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.153",
+        "full_journalName": "European Journal of Surgical Oncology\nUnited Kingdom\nW.B. Saunders Ltd",
+        "journal_issn": "07487983"
+      }
+    },
+    {
+      "journalName": "BMC Public Health",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.359",
+        "full_journalName": "BMC Public Health\nUnited Kingdom\nBioMed Central Ltd",
+        "journal_issn": "14712458"
+      }
+    },
+    {
+      "journalName": "Arterioscler Thromb Vasc Biol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "2.532",
+        "full_journalName": "Arteriosclerosis, Thrombosis, and Vascular Biology\nUnited States\nLippincott Williams and Wilkins",
+        "journal_issn": "10795642"
+      }
+    },
+    {
+      "journalName": "Eur Heart J",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "4.987",
+        "full_journalName": "European Heart Journal\nUnited Kingdom\nOxford University Press",
+        "journal_issn": "0195668X"
+      }
+    },
+    {
+      "journalName": "Microbes Infect",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.744",
+        "full_journalName": "Microbes and Infection\nFrance\nElsevier Masson s.r.l.",
+        "journal_issn": "12864579"
+      }
+    },
+    {
+      "journalName": "Antibiotics",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.114",
+        "full_journalName": "Antibiotics\nSwitzerland\nMultidisciplinary Digital Publishing Institute (MDPI)",
+        "journal_issn": "20796382"
+      }
+    },
+    {
+      "journalName": "PLoS One",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.803",
+        "full_journalName": "PLoS ONE\nUnited States\nPublic Library of Science",
+        "journal_issn": "19326203"
+      }
+    },
+    {
+      "journalName": "Scand J Clin Lab Invest",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q3",
+        "impactFactor": "0.471",
+        "full_journalName": "Scandinavian Journal of Clinical and Laboratory Investigation\nUnited Kingdom\nInforma Healthcare",
+        "journal_issn": "00365513"
+      }
+    },
+    {
+      "journalName": "World J Emerg Med",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.451",
+        "full_journalName": "World Journal of Emergency Medicine\nChina\nSecond Affiliated Hospital, Zhejiang University School of Medicine",
+        "journal_issn": "19208642"
+      }
+    },
+    {
+      "journalName": "Eur J Emerg Med",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.523",
+        "full_journalName": "European Journal of Emergency Medicine\nUnited States\nLippincott Williams and Wilkins Ltd.",
+        "journal_issn": "09699546"
+      }
+    },
+    {
+      "journalName": "Clin Gastroenterol Hepatol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "3.509",
+        "full_journalName": "Clinical Gastroenterology and Hepatology\nUnited States\nW.B. Saunders",
+        "journal_issn": "15423565"
+      }
+    },
+    {
+      "journalName": "J Nutr Educ Behav",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.743",
+        "full_journalName": "Journal of Nutrition Education and Behavior\nUnited States\nElsevier Inc.",
+        "journal_issn": "14994046"
+      }
+    },
+    {
+      "journalName": "Int J Stem Cells",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q3",
+        "impactFactor": "0.728",
+        "full_journalName": "International Journal of Stem Cells\nSouth Korea\nKorean Society for Stem Cell Research",
+        "journal_issn": "20053606"
+      }
+    },
+    {
+      "journalName": "Stem Cell Res Ther",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "2.021",
+        "full_journalName": "Stem Cell Research and Therapy\nUnited Kingdom\nBioMed Central Ltd",
+        "journal_issn": "17576512"
+      }
+    },
+    {
+      "journalName": "JAMA Ophthalmol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "2.288",
+        "full_journalName": "JAMA Ophthalmology\nUnited States\nAmerican Medical Association",
+        "journal_issn": "21686165"
+      }
+    },
+    {
+      "journalName": "BMC Med Inform Decis Mak",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.041",
+        "full_journalName": "BMC Medical Informatics and Decision Making\nUnited Kingdom\nBioMed Central Ltd",
+        "journal_issn": "14726947"
+      }
+    },
+    {
+      "journalName": "J Neurol Sci",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.687",
+        "full_journalName": "Journal of Neurology\nGermany\nSpringer Science and Business Media Deutschland GmbH",
+        "journal_issn": "03405354"
+      }
+    },
+    {
+      "journalName": "J Mov Disord",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.983",
+        "full_journalName": "Journal of Movement Disorders\nSouth Korea\nKorean Movement Disorder Society",
+        "journal_issn": "2005940X"
+      }
+    },
+    {
+      "journalName": "J Clin Neurol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.937",
+        "full_journalName": "Journal of Clinical Neurology (Korea)\nSouth Korea\nKorean Neurological Association",
+        "journal_issn": "17386586"
+      }
+    },
+    {
+      "journalName": "J Neurol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "6.237",
+        "full_journalName": "JAMA Neurology\nUnited States\nAmerican Medical Association",
+        "journal_issn": "21686149"
+      }
+    },
+    {
+      "journalName": "Brain Commun",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.860",
+        "full_journalName": "Brain Communications\nUnited States\nOxford University Press",
+        "journal_issn": "26321297"
+      }
+    },
+    {
+      "journalName": "Neurol Neurochir Pol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.617",
+        "full_journalName": "Neurologia i Neurochirurgia Polska\nPoland\nVia Medica",
+        "journal_issn": "00283843"
+      }
+    },
+    {
+      "journalName": "Parkinsonism Relat Disord",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.199",
+        "full_journalName": "Parkinsonism and Related Disorders\nUnited Kingdom\nElsevier Ltd",
+        "journal_issn": "13538020"
+      }
+    },
+    {
+      "journalName": "Neurodegener Dis",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.852",
+        "full_journalName": "Neurodegenerative Diseases\nSwitzerland\nS. Karger AG",
+        "journal_issn": "16602854"
+      }
+    },
+    {
+      "journalName": "Mov Disord",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "2.988",
+        "full_journalName": "Movement Disorders\nUnited States\nJohn Wiley & Sons Inc.",
+        "journal_issn": "08853185"
+      }
+    },
+    {
+      "journalName": "J Neurol Neurosurg Psychiatry",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "3.379",
+        "full_journalName": "Journal of Neurology, Neurosurgery and Psychiatry\nUnited Kingdom\nBMJ Publishing Group",
+        "journal_issn": "00223050"
+      }
+    },
+    {
+      "journalName": "Tremor Other Hyperkinet Mov",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.705",
+        "full_journalName": "Tremor and Other Hyperkinetic Movements\nUnited States\nCenter for Digital Research and Scholarship",
+        "journal_issn": "21608288"
+      }
+    },
+    {
+      "journalName": "Brain Dev",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.561",
+        "full_journalName": "Brain and Development\nNetherlands\nElsevier B.V.",
+        "journal_issn": "03877604"
+      }
+    },
+    {
+      "journalName": "Neurology",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "2.401",
+        "full_journalName": "Neurology\nUnited States\nLippincott Williams and Wilkins",
+        "journal_issn": "00283878"
+      }
+    },
+    {
+      "journalName": "Anticancer Res",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.545",
+        "full_journalName": "Anticancer Research\nGreece\nInternational Institute of Anticancer Research",
+        "journal_issn": "02507005"
+      }
+    },
+    {
+      "journalName": "J Med Internet Res",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.992",
+        "full_journalName": "Journal of Medical Internet Research\nCanada\nJMIR Publications Inc.",
+        "journal_issn": "14388871"
+      }
+    },
+    {
+      "journalName": "J Stroke",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.917",
+        "full_journalName": "International Journal of Stroke\nUnited Kingdom\nSAGE Publications Ltd",
+        "journal_issn": "17474930"
+      }
+    },
+    {
+      "journalName": "Neurointervention",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.634",
+        "full_journalName": "Journal of NeuroInterventional Surgery\nUnited Kingdom\nBMJ Publishing Group",
+        "journal_issn": "17598478"
+      }
+    },
+    {
+      "journalName": "Epidemiol Health",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.776",
+        "full_journalName": "Journal of Epidemiology and Community Health\nUnited Kingdom\nBMJ Publishing Group",
+        "journal_issn": "0143005X"
+      }
+    },
+    {
+      "journalName": "Am J Respir Crit Care Med",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "5.076",
+        "full_journalName": "American Journal of Respiratory and Critical Care Medicine\nUnited States\nAmerican Thoracic Society",
+        "journal_issn": "1073449X"
+      }
+    },
+    {
+      "journalName": "J Thorac Oncol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "7.948",
+        "full_journalName": "Journal of Thoracic Oncology\nUnited States\nElsevier Inc.",
+        "journal_issn": "15560864"
+      }
+    },
+    {
+      "journalName": "Tuberc Respir Dis",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.647",
+        "full_journalName": "Tuberculosis and Respiratory Diseases\nSouth Korea\nThe Korean Academy of Tuberculosis and Respiratory Diseases",
+        "journal_issn": "17383536"
+      }
+    },
+    {
+      "journalName": "J Allergy Clin Immunol Pract",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.834",
+        "full_journalName": "Journal of Allergy and Clinical Immunology: In Practice\nUnited States\nAmerican Academy of Allergy, Asthma and Immunology",
+        "journal_issn": "22132198"
+      }
+    },
+    {
+      "journalName": "Cancer Res Treat",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.351",
+        "full_journalName": "Breast Cancer Research and Treatment\nUnited States\nSpringer",
+        "journal_issn": "01676806"
+      }
+    },
+    {
+      "journalName": "J Thorac Dis",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.624",
+        "full_journalName": "Journal of Thoracic Disease\nHong Kong\nPioneer Bioscience Publishing Company (PBPC)",
+        "journal_issn": "20721439"
+      }
+    },
+    {
+      "journalName": "Arthritis Res Ther",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.587",
+        "full_journalName": "Arthritis Research and Therapy\nUnited Kingdom\nBioMed Central Ltd",
+        "journal_issn": "14786354"
+      }
+    },
+    {
+      "journalName": "Transplantation",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "2.439",
+        "full_journalName": "American Journal of Transplantation\nNetherlands\nElsevier B.V.",
+        "journal_issn": "16006135"
+      }
+    },
+    {
+      "journalName": "J Korean Med Sci",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.765",
+        "full_journalName": "Journal of Korean Medical Science\nSouth Korea\nKorean Academy of Medical Science",
+        "journal_issn": "10118934"
+      }
+    },
+    {
+      "journalName": "Front Public Health",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.027",
+        "full_journalName": "Frontiers in Public Health\nSwitzerland\nFrontiers Media SA",
+        "journal_issn": "22962565"
+      }
+    },
+    {
+      "journalName": "Antibiotics",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.114",
+        "full_journalName": "Antibiotics\nSwitzerland\nMultidisciplinary Digital Publishing Institute (MDPI)",
+        "journal_issn": "20796382"
+      }
+    },
+    {
+      "journalName": "Thorac Cancer",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.795",
+        "full_journalName": "Thoracic Cancer\nUnited States\nJohn Wiley and Sons Inc",
+        "journal_issn": "17597706"
+      }
+    },
+    {
+      "journalName": "Ther Adv Chronic Dis",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.966",
+        "full_journalName": "Therapeutic Advances in Chronic Disease\nUnited Kingdom\nSAGE Publications Inc.",
+        "journal_issn": "20406223"
+      }
+    },
+    {
+      "journalName": "BMC Pulm Med",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.889",
+        "full_journalName": "BMC Pulmonary Medicine\nUnited Kingdom\nBioMed Central Ltd",
+        "journal_issn": "14712466"
+      }
+    },
+    {
+      "journalName": "Diagnostics",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.294",
+        "full_journalName": "Journal of Molecular Diagnostics\nNetherlands\nElsevier B.V.",
+        "journal_issn": "15251578"
+      }
+    },
+    {
+      "journalName": "Respir Med",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "5.076",
+        "full_journalName": "American Journal of Respiratory and Critical Care Medicine\nUnited States\nAmerican Thoracic Society",
+        "journal_issn": "1073449X"
+      }
+    },
+    {
+      "journalName": "J Fungi",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.956",
+        "full_journalName": "Journal of Fungi\nSwitzerland\nMultidisciplinary Digital Publishing Institute (MDPI)",
+        "journal_issn": "2309608X"
+      }
+    },
+    {
+      "journalName": "Respir Med Case Rep",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q3",
+        "impactFactor": "0.275",
+        "full_journalName": "Respiratory Medicine Case Reports\nUnited Kingdom\nW.B. Saunders Ltd",
+        "journal_issn": "22130071"
+      }
+    },
+    {
+      "journalName": "Lung Cancer",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.752",
+        "full_journalName": "Lung Cancer\nIreland\nElsevier Ireland Ltd",
+        "journal_issn": "01695002"
+      }
+    },
+    {
+      "journalName": "Chest",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.834",
+        "full_journalName": "Chest\nUnited States\nElsevier Inc.",
+        "journal_issn": "00123692"
+      }
+    },
+    {
+      "journalName": "Front Oncol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "1.075",
+        "full_journalName": "Frontiers in Oncology\nSwitzerland\nFrontiers Media SA",
+        "journal_issn": "2234943X"
+      }
+    },
+    {
+      "journalName": "Oncology",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "11.205",
+        "full_journalName": "Journal of Clinical Oncology\nUnited States\nLippincott Williams and Wilkins",
+        "journal_issn": "0732183X"
+      }
+    },
+    {
+      "journalName": "Acad Radiol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.992",
+        "full_journalName": "Academic Radiology\nUnited States\nElsevier Inc.",
+        "journal_issn": "10766332"
+      }
+    },
+    {
+      "journalName": "Clin Endocrinol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "2.183",
+        "full_journalName": "Journal of Clinical Endocrinology and Metabolism\nUnited States\nEndocrine Society",
+        "journal_issn": "0021972X"
+      }
+    },
+    {
+      "journalName": "Br J Radiol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.875",
+        "full_journalName": "British Journal of Radiology\nUnited Kingdom\nOxford University Press",
+        "journal_issn": "00071285"
+      }
+    },
+    {
+      "journalName": "Ultrasound Med Biol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.663",
+        "full_journalName": "Ultrasound in Medicine and Biology\nUnited States\nElsevier Inc.",
+        "journal_issn": "03015629"
+      }
+    },
+    {
+      "journalName": "Ultrasound Q",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q3",
+        "impactFactor": "0.288",
+        "full_journalName": "Ultrasound Quarterly\nUnited States\nLippincott Williams and Wilkins Ltd.",
+        "journal_issn": "08948771"
+      }
+    },
+    {
+      "journalName": "World J Surg",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.771",
+        "full_journalName": "World Journal of Surgery\nUnited States\nJohn Wiley and Sons Inc",
+        "journal_issn": "03642313"
+      }
+    },
+    {
+      "journalName": "Cancer Rep",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q3",
+        "impactFactor": "0.281",
+        "full_journalName": "Current Breast Cancer Reports\nUnited States\nCurrent Science, Inc.",
+        "journal_issn": "19434588"
+      }
+    },
+    {
+      "journalName": "Virchows Arch",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.272",
+        "full_journalName": "Virchows Archiv\nGermany\nSpringer Science and Business Media Deutschland GmbH",
+        "journal_issn": "09456317"
+      }
+    },
+    {
+      "journalName": "Microbiol Spectr",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.149",
+        "full_journalName": "Microbiology Spectrum\nUnited States\nAmerican Society for Microbiology",
+        "journal_issn": "21650497"
+      }
+    },
+    {
+      "journalName": "Pediatr Hematol Oncol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q3",
+        "impactFactor": "0.351",
+        "full_journalName": "Pediatric Hematology and Oncology\nUnited Kingdom\nInforma Healthcare",
+        "journal_issn": "08880018"
+      }
+    },
+    {
+      "journalName": "J Inherit Metab Dis",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.234",
+        "full_journalName": "Journal of Inherited Metabolic Disease\nNetherlands\nSpringer Netherlands",
+        "journal_issn": "01418955"
+      }
+    },
+    {
+      "journalName": "Ann Pediatr Endocrinol Metab",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.827",
+        "full_journalName": "Annals of Pediatric Endocrinology and Metabolism\nSouth Korea\nKorean society of pediatric endocrinology",
+        "journal_issn": "22871012"
+      }
+    },
+    {
+      "journalName": "J Headache Pain",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "2.066",
+        "full_journalName": "Journal of Headache and Pain\nItaly\nSpringer-Verlag Italia s.r.l.",
+        "journal_issn": "11292369"
+      }
+    },
+    {
+      "journalName": "Lancet Neurol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "11.729",
+        "full_journalName": "The Lancet Neurology\nUnited Kingdom\nElsevier Ltd",
+        "journal_issn": "14744422"
+      }
+    },
+    {
+      "journalName": "Cephalalgia",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.367",
+        "full_journalName": "Cephalalgia\nUnited Kingdom\nSAGE Publications Ltd",
+        "journal_issn": "03331024"
+      }
+    },
+    {
+      "journalName": "Front Neurol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.993",
+        "full_journalName": "Frontiers in Neurology\nSwitzerland\nFrontiers Media SA",
+        "journal_issn": "16642295"
+      }
+    },
+    {
+      "journalName": "Headache",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.426",
+        "full_journalName": "Headache\nUnited Kingdom\nWiley-Blackwell Publishing Ltd",
+        "journal_issn": "00178748"
+      }
+    },
+    {
+      "journalName": "Cerebrovasc Dis",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.689",
+        "full_journalName": "Cerebrovascular Diseases\nSwitzerland\nS. Karger AG",
+        "journal_issn": "10159770"
+      }
+    },
+    {
+      "journalName": "Eur Neurol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.561",
+        "full_journalName": "European Journal of Neurology\nUnited Kingdom\nWiley-Blackwell Publishing Ltd",
+        "journal_issn": "13515101"
+      }
+    },
+    {
+      "journalName": "Can J Neurol Sci",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.686",
+        "full_journalName": "Canadian Journal of Neurological Sciences\nUnited Kingdom\nCambridge University Press",
+        "journal_issn": "03171671"
+      }
+    },
+    {
+      "journalName": "J Korean Neurosurg Soc",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.595",
+        "full_journalName": "Journal of Korean Neurosurgical Society\nSouth Korea\nKorean Neurosurgical Society",
+        "journal_issn": "15987876"
+      }
+    },
+    {
+      "journalName": "World Neurosurg",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.709",
+        "full_journalName": "World Neurosurgery\nUnited States\nElsevier Inc.",
+        "journal_issn": "18788750"
+      }
+    },
+    {
+      "journalName": "Biomed Res Int",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.744",
+        "full_journalName": "BioMed Research International\nUnited States\nJohn Wiley and Sons Ltd",
+        "journal_issn": "23146133"
+      }
+    },
+    {
+      "journalName": "Neurosurg Rev",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.978",
+        "full_journalName": "Neurosurgical Review\nGermany\nSpringer Science and Business Media Deutschland GmbH",
+        "journal_issn": "03445607"
+      }
+    },
+    {
+      "journalName": "Neurospine",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.297",
+        "full_journalName": "Neurospine\nSouth Korea\nKorean Spinal Neurosurgery Society",
+        "journal_issn": "25866583"
+      }
+    },
+    {
+      "journalName": "Eur Spine J",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.076",
+        "full_journalName": "European Spine Journal\nGermany\nSpringer Verlag",
+        "journal_issn": "09406719"
+      }
+    },
+    {
+      "journalName": "Neurosurgery",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "3.379",
+        "full_journalName": "Journal of Neurology, Neurosurgery and Psychiatry\nUnited Kingdom\nBMJ Publishing Group",
+        "journal_issn": "00223050"
+      }
+    },
+    {
+      "journalName": "Spine",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.216",
+        "full_journalName": "Spine\nUnited States\nWolters Kluwer Health",
+        "journal_issn": "03622436"
+      }
+    },
+    {
+      "journalName": "Acta Neurochir",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.736",
+        "full_journalName": "Acta Neurochirurgica\nAustria\nSpringer",
+        "journal_issn": "00016268"
+      }
+    },
+    {
+      "journalName": "Phys Act Nutr",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q3",
+        "impactFactor": "0.353",
+        "full_journalName": "Physical Activity and Nutrition\nSouth Korea\nKorean Society for Exercise Nutrition",
+        "journal_issn": "27337545"
+      }
+    },
+    {
+      "journalName": "Clin Neurol Neurosurg",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q2",
+        "impactFactor": "0.594",
+        "full_journalName": "Clinical Neurology and Neurosurgery\nNetherlands\nElsevier B.V.",
+        "journal_issn": "03038467"
+      }
+    },
+    {
+      "journalName": "J Clin Anesth",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "1.333",
+        "full_journalName": "Journal of Clinical Anesthesia\nUnited States\nElsevier Inc.",
+        "journal_issn": "09528180"
+      }
+    },
+    {
+      "journalName": "BMC Anesthesiol",
+      "hid": "H01KR-11000001",
+      "metrics": {
+        "quartile": "Q1",
+        "impactFactor": "0.753",
+        "full_journalName": "BMC Anesthesiology\nUnited Kingdom\nBioMed Central Ltd",
+        "journal_issn": "14712253"
+      }
+    }
+  ],
+  "failData": [],
+  "notMatchData": [
+    {
+      "journalName": "AJNR Am J Neuroradiol",
+      "hid": "H01KR-11000001"
+    },
+    {
+      "journalName": "Hepatobiliary Surg Nutr",
+      "hid": "H01KR-11000001"
+    },
+    {
+      "journalName": "Asia Pac J Clin Oncol",
+      "hid": "H01KR-11000001"
+    },
+    {
+      "journalName": "Korean J Thorac Cardiovasc Surg",
+      "hid": "H01KR-11000001"
+    },
+    {
+      "journalName": "World J Clin Cases",
+      "hid": "H01KR-11000001"
+    },
+    {
+      "journalName": "Springerplus",
+      "hid": "H01KR-11000001"
+    },
+    {
+      "journalName": "J Am Soc Hypertens",
+      "hid": "H01KR-11000001"
+    },
+    {
+      "journalName": "Prog Neuropsychopharmacol Biol Psychiatry",
+      "hid": "H01KR-11000001"
+    },
+    {
+      "journalName": "Exp Ther Med",
+      "hid": "H01KR-11000001"
+    },
+    {
+      "journalName": "Korean J Thorac Cardiovasc Surg",
+      "hid": "H01KR-11000001"
+    },
+    {
+      "journalName": "World J Mens Health",
+      "hid": "H01KR-11000001"
+    },
+    {
+      "journalName": "Cardiol J",
+      "hid": "H01KR-11000001"
+    },
+    {
+      "journalName": "Int J Cardiol Heart Vasc",
+      "hid": "H01KR-11000001"
+    },
+    {
+      "journalName": "Endocr Relat Cancer",
+      "hid": "H01KR-11000001"
+    },
+    {
+      "journalName": "BMC Womens Health",
+      "hid": "H01KR-11000001"
+    },
+    {
+      "journalName": "Ann Transl Med",
+      "hid": "H01KR-11000001"
+    },
+    {
+      "journalName": "AJR Am J Roentgenol",
+      "hid": "H01KR-11000001"
+    },
+    {
+      "journalName": "J Comput Assist Tomogr",
+      "hid": "H01KR-11000001"
+    },
+    {
+      "journalName": "Ultrasonography",
+      "hid": "H01KR-11000001"
+    },
+    {
+      "journalName": "Clin Imaging",
+      "hid": "H01KR-11000001"
+    },
+    {
+      "journalName": "Clin Chem Lab Med",
+      "hid": "H01KR-11000001"
+    },
+    {
+      "journalName": "Int J Lab Hematol",
+      "hid": "H01KR-11000001"
+    },
+    {
+      "journalName": "Endocr J",
+      "hid": "H01KR-11000001"
+    },
+    {
+      "journalName": "Korean J Spine",
+      "hid": "H01KR-11000001"
+    },
+    {
+      "journalName": "J Spinal Disord Tech",
+      "hid": "H01KR-11000001"
+    },
+    {
+      "journalName": "Neurol Med Chir",
+      "hid": "H01KR-11000001"
+    }
+  ],
+  "nullData": []
+}

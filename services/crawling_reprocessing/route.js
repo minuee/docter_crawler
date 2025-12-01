@@ -992,11 +992,11 @@ router.post('/sns-match-doctor', async (req, res, next) => {
       nullData
     };
     fs.writeFileSync(outputFilePath, JSON.stringify(outputData, null, 2));
-    console.log(`processCount : ${processCount},processFailCount : ${processFailCount},processNullCount : ${processNullCount}`)
+    console.log(`totalCount : ${totalCount},processCount : ${processCount},processFailCount : ${processFailCount},processNullCount : ${processNullCount}`)
     return res.send({
       code: 200,
       success: true,
-      message:`processCount : ${processCount},processFailCount : ${processFailCount},processNullCount : ${processNullCount}`
+      message:`totalCount : ${totalCount},processCount : ${processCount},processFailCount : ${processFailCount},processNullCount : ${processNullCount}`
     });
   }catch(e){
     console.error(`error 1111: ${e}`)
@@ -1463,7 +1463,7 @@ router.post('/pubmed_find_firstauthor', async (req, res, next) => {
  *      parameters:
  *       - in: "body"
  *         name: "input"
- *         description: "hid, version_id는 필수"
+ *         description: "hid, version_id는 필수, is_all_new는 옵션 기본 false "
  *         schema:
  *           type: object
  *           required:
@@ -1474,6 +1474,10 @@ router.post('/pubmed_find_firstauthor', async (req, res, next) => {
  *               type: string
  *             hid:
  *               type: string
+ *            is_all_new:
+ *               type: boolean
+ *               default: false
+ *               description: "true인 경우 로컬 DB 조회 건너뛰고 SCImago에서 강제 재수집"
  *      responses:
  *        "200":
  *          description: 병월별 의사 상세정보 체크
@@ -1495,18 +1499,20 @@ router.post('/pubmed_find_quartile', async (req, res, next) => {
  
   const search_hid = req.body.hid;
   const search_version_id = req.body.data_version_id;
+  const is_all_new = req.body.is_all_new;
   let totalUniqueJournals = 0;
-  let processSuccessCount = 0; // Number of unique journals successfully processed
-  let processFailCount = 0;   // Number of unique journals that failed to process
-  let processNullCount = 0;   // Number of unique journals where data was missing initially
-  let processNotMatchCount = 0; // Number of unique journals where SCImago match failed
+  let processSuccessLocalCount = 0;
+  let processSuccessScrapedCount = 0;
+  let processFailCount = 0;
+  let processNullCount = 0;
+  let processNotMatchCount = 0;
 
   const successData = [];
   const failData = [];
   const nullData = [];
   const notMatchData = [];
 
-  console.log(`search_hid : ${search_hid}, search_version_id : ${search_version_id}`)
+  console.log(`search_hid : ${search_hid}, search_version_id : ${search_version_id}, is_all_new : ${is_all_new}`)
 
   try{
     mybatisMapper.createMapper([`${global.appRoot}/services/crawling_reprocessing/sql.xml`]);
@@ -1536,61 +1542,96 @@ router.post('/pubmed_find_quartile', async (req, res, next) => {
     for (let i = 0; i < totalUniqueJournals; i++) {
       const uniqueJournalEntry = uniqueJournals[i];
       const journalName = uniqueJournalEntry.journalName;
+      const paper_ids_str = uniqueJournalEntry.paper_ids;
       const hid = uniqueJournalEntry.hid; // The hid is from doctor_basic table for filtering
-      const data_version_id_filter = uniqueJournalEntry.data_version_id; // For more precise filtering
+      const paper_ids = paper_ids_str ? paper_ids_str.split(',').map(Number) : [];
 
-      console.log(`${i+1}/${totalUniqueJournals} Processing journal: ${journalName} (HID: ${hid})`);
+      try {
+        console.log(`${i+1}/${totalUniqueJournals} Processing journal: ${journalName} (HID: ${hid})`);
+        let existingMetrics = null;
+        if (!functions.isEmpty(journalName) && paper_ids.length > 0) {
+          // 1. Check for existing data in our DB first
+          if ( is_all_new == false ) {
+            const existingQuartileParam = { journalName };
+            const existingQuartileQuery = mybatisMapper.getStatement("sql", "select_existing_quartile_by_journal_name", existingQuartileParam, format);
+            const { DBError: existingDBError, RS: existingRS } = await daoMysql.spCall(existingQuartileQuery);
+            existingMetrics = (existingRS && existingRS.length > 0) ? existingRS[0] : null;
+          }
 
-      if (!functions.isEmpty(journalName)) {
-        const metrics = await crawlingCtrl.getJournalMetricsFromSCImago(journalName);
+          let metrics;
+          let source = '';
 
-        if (metrics && metrics.quartile) {
-          const updateParam = {
-            quartile: metrics.quartile,
-            impactFactor: metrics.impactFactor,
-            full_journalName: metrics.full_journalName,
-            journal_issn: metrics.journal_issn,
-            journalName: journalName, // For WHERE clause
-            search_version_id: data_version_id_filter, // For WHERE clause
-            search_hid: hid // For WHERE clause
-          };
-          const updateQuery = mybatisMapper.getStatement("sql", "update_papers_by_journal_name_and_hid", updateParam, format);
-          const { DBError: updateDBError, RS: updateRS } = await daoMysql.spCall(updateQuery);
-          const updateRet = await functions.myBatisResult(updateDBError, updateRS);
-
-          if (updateRet.success) {
-            console.log(`[SUCCESS] Journal: ${journalName} (HID: ${hid}) updated.`);
-            processSuccessCount++;
-            successData.push({ journalName, hid, metrics });
+          if (existingMetrics) {
+            // 2a. Use existing data from DB
+            metrics = {
+              quartile: existingMetrics.quartile,
+              impactFactor: existingMetrics.impactFactor,
+              full_journalName: existingMetrics.full_journalName,
+              journal_issn: existingMetrics.journal_issn,
+            };
+            source = 'LOCAL';
           } else {
-            console.log(`[FAIL-DB] Journal: ${journalName} (HID: ${hid}) failed DB update.`);
-            processFailCount++;
-            failData.push({ journalName, hid, reason: "DB Update Failed", metrics });
+            // 2b. If no data in DB, scrape from SCImago
+            metrics = await crawlingCtrl.getJournalMetricsFromSCImago(journalName);
+            source = 'SCRAPED';
+            await CS.wait(5000); // Scrape-only delay
+          }
+          
+          // 3. Update papers if we have metrics from any source
+          if (metrics && metrics.quartile) {
+            const updateParam = {
+              quartile: metrics.quartile,
+              impactFactor: metrics.impactFactor,
+              full_journalName: metrics.full_journalName,
+              journal_issn: metrics.journal_issn,
+              paper_ids: paper_ids,
+            };
+            const updateQuery = mybatisMapper.getStatement("sql", "update_papers_by_paper_ids", updateParam, format);
+            const { DBError: updateDBError, RS: updateRS } = await daoMysql.spCall(updateQuery);
+            const updateRet = await functions.myBatisResult(updateDBError, updateRS);
+
+            if (updateRet.success) {
+              console.log(`[SUCCESS-${source}] Journal: ${journalName} (HID: ${hid}) updated for ${paper_ids.length} papers.`);
+              if (source === 'LOCAL') {
+                processSuccessLocalCount++;
+              } else {
+                processSuccessScrapedCount++;
+              }
+              successData.push({ journalName, hid, source, metrics, paper_ids });
+            } else {
+              console.log(`[FAIL-DB] Journal: ${journalName} (HID: ${hid}) failed DB update.`);
+              processFailCount++;
+              failData.push({ journalName, hid, source, reason: "DB Update Failed", metrics, paper_ids });
+            }
+          } else {
+            console.log(`[NOT-MATCH] Journal: ${journalName} (HID: ${hid}) - Match failed from source: ${source}.`);
+            processNotMatchCount++;
+            notMatchData.push({ journalName, hid, source, paper_ids });
           }
         } else {
-          console.log(`[NOT-MATCH] Journal: ${journalName} (HID: ${hid}) - SCImago match failed or no metrics.`);
-          processNotMatchCount++;
-          notMatchData.push({ journalName, hid });
+          console.log(`[NULL-DATA] Empty journalName or paper_ids found (HID: ${hid}).`);
+          processNullCount++;
+          nullData.push({ journalName, hid, reason: "Empty journal name or paper_ids" });
         }
-      } else {
-        // This case should ideally not happen if select_distinct_journal_names_for_quartile_update filters out empty journalNames
-        console.log(`[NULL-JOURNALNAME] Empty journalName found (HID: ${hid}).`);
-        processNullCount++;
-        nullData.push({ journalName, hid, reason: "Empty journal name" });
+      } catch (e) {
+        console.error(`[ERROR] Failed to process journal: ${journalName} (HID: ${hid}). Error: ${e.toString()}. Continuing...`);
+        processFailCount++;
+        failData.push({ journalName, hid, reason: "Processing Error", error: e.toString(), paper_ids });
       }
-
-      await CS.wait(5000); // 5초 딜레이
     } // for loop end
 
-    const outputDir = path.join(__dirname, 'completedata_journal_batch'); // New directory for batch processing logs
+    const outputDir = path.join(__dirname, 'completedata7'); // New directory for batch processing logs
     if (!fs.existsSync(outputDir)) {
       fs.mkdirSync(outputDir, { recursive: true });
     }
-    const outputFilePath = path.join(outputDir, `list_hid_${search_hid}_ver_${search_version_id}.json`);
+    const outputFilePath = path.join(outputDir, `list_${search_hid}.json`);
+    const processSuccessCount = processSuccessLocalCount + processSuccessScrapedCount;
     const outputData = {
       counting : {
         totalUniqueJournals,
         processSuccessCount,
+        processSuccessLocalCount,
+        processSuccessScrapedCount,
         processFailCount,
         processNullCount,
         processNotMatchCount
@@ -1601,7 +1642,7 @@ router.post('/pubmed_find_quartile', async (req, res, next) => {
       nullData
     };
     fs.writeFileSync(outputFilePath, JSON.stringify(outputData, null, 2));
-    const message = `Total unique journals: ${totalUniqueJournals}, Success: ${processSuccessCount}, Fail: ${processFailCount}, Null: ${processNullCount}, Not Match: ${processNotMatchCount}`;
+    const message = `Total unique journals: ${totalUniqueJournals}, Success (Total: ${processSuccessCount}, Local: ${processSuccessLocalCount}, Scraped: ${processSuccessScrapedCount}), Fail: ${processFailCount}, Null: ${processNullCount}, Not Match: ${processNotMatchCount}`;
     console.log(message);
     return res.send({
       code: 200,

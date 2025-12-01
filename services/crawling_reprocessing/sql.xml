@@ -322,7 +322,11 @@
     </update>
 
     <select id="select_distinct_journal_names_for_quartile_update" resultType="map">
-        SELECT DISTINCT dp.journalName, db.hid, db.data_version_id
+        SELECT
+            dp.journalName,
+            db.hid,
+            db.data_version_id,
+            GROUP_CONCAT(dp.paper_id) as paper_ids
         FROM doctor_paper dp
         INNER JOIN doctor_basic db ON dp.rid = db.rid
         WHERE
@@ -334,6 +338,7 @@
             <if test="search_hid != null">
                 AND db.hid = #{search_hid}
             </if>
+        GROUP BY dp.journalName, db.hid, db.data_version_id
     </select>
 
     <update id="update_papers_by_journal_name_and_hid">
@@ -354,5 +359,34 @@
                 AND db.hid = #{search_hid}
             </if>
     </update>
+
+    <update id="update_papers_by_paper_ids">
+        UPDATE doctor_paper
+        SET
+            quartile = #{quartile},
+            impactFactor = #{impactFactor},
+            full_journalName = #{full_journalName},
+            journal_issn = #{journal_issn},
+            updateAt = now()
+        WHERE
+            paper_id IN
+            <foreach collection="paper_ids" item="id" open="(" separator="," close=")">
+                #{id}
+            </foreach>
+    </update>
+
+    <select id="select_existing_quartile_by_journal_name" resultType="map">
+        SELECT
+            quartile,
+            impactFactor,
+            full_journalName,
+            journal_issn
+        FROM
+            doctor_paper
+        WHERE
+            journalName = #{journalName}
+            AND (quartile IS NOT NULL AND quartile != '')
+        LIMIT 1
+    </select>
 
 </mapper>

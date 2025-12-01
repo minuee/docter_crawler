@@ -1,0 +1,4193 @@
+{
+  "counting": {
+    "totalCount": 692,
+    "processCount": 55,
+    "processNullCount": 86,
+    "processFailCount": 551
+  },
+  "successData": [
+    {
+      "review_eval_id": 58245,
+      "doctorname": "박경희",
+      "hospital": "한림대성심병원",
+      "matched_doctor": "박경희 교수",
+      "matched_dept": "가정의학과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 58247,
+      "doctorname": "한덕현",
+      "hospital": "중앙대학교병원",
+      "matched_doctor": "한덕현",
+      "matched_dept": "정신건강의학과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 58273,
+      "doctorname": "이평복",
+      "hospital": "분당서울대병원",
+      "matched_doctor": "이평복",
+      "matched_dept": "마취통증의학과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 58277,
+      "doctorname": "김은수",
+      "hospital": "부산대학교병원",
+      "matched_doctor": "김은수",
+      "matched_dept": "마취통증의학과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 58326,
+      "doctorname": "김광일",
+      "hospital": "분당서울대병원",
+      "matched_doctor": "김광일",
+      "matched_dept": "노인병내과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 58335,
+      "doctorname": "신동우",
+      "hospital": "한림대성심병원",
+      "matched_doctor": "신동우 교수",
+      "matched_dept": "소화기내과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 58342,
+      "doctorname": "최창환",
+      "hospital": "중앙대병원",
+      "matched_doctor": "최창환",
+      "matched_dept": "소화기내과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 58352,
+      "doctorname": "최창환",
+      "hospital": "중앙대병원",
+      "matched_doctor": "최창환",
+      "matched_dept": "소화기내과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 58359,
+      "doctorname": "송재진",
+      "hospital": "분당서울대병원",
+      "matched_doctor": "송재진",
+      "matched_dept": "이비인후과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 58360,
+      "doctorname": "송재진",
+      "hospital": "분당서울대병원",
+      "matched_doctor": "송재진",
+      "matched_dept": "이비인후과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 58361,
+      "doctorname": "송재진",
+      "hospital": "분당서울대병원",
+      "matched_doctor": "송재진",
+      "matched_dept": "이비인후과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 58427,
+      "doctorname": "김신곤",
+      "hospital": "고려대학교 안암병원",
+      "matched_doctor": "김신곤",
+      "matched_dept": "내분비내과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 58428,
+      "doctorname": "김훈엽",
+      "hospital": "고려대학교 안암병원",
+      "matched_doctor": "김훈엽",
+      "matched_dept": "유방내분비외과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 58521,
+      "doctorname": "강소연",
+      "hospital": "가톨릭대 성빈센트병원",
+      "matched_doctor": "강소연",
+      "matched_dept": "산부인과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 58530,
+      "doctorname": "계봉현",
+      "hospital": "가톨릭대 성빈센트병원",
+      "matched_doctor": "계봉현",
+      "matched_dept": "대장·항문외과",
+      "score": 0.7272727272727273
+    },
+    {
+      "review_eval_id": 58618,
+      "doctorname": "장석준",
+      "hospital": "아주대",
+      "matched_doctor": "장석준",
+      "matched_dept": "산부인과",
+      "score": -1
+    },
+    {
+      "review_eval_id": 58724,
+      "doctorname": "정신",
+      "hospital": "화순 전남대병원",
+      "matched_doctor": "정신",
+      "matched_dept": "신경외과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 58725,
+      "doctorname": "정신",
+      "hospital": "화순 전남대병원",
+      "matched_doctor": "정신",
+      "matched_dept": "신경외과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 58922,
+      "doctorname": "이국종",
+      "hospital": "아주대병원",
+      "matched_doctor": "이국종",
+      "matched_dept": "외상외과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 58923,
+      "doctorname": "이국종",
+      "hospital": "아주대병원",
+      "matched_doctor": "이국종",
+      "matched_dept": "외상외과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 58924,
+      "doctorname": "이국종",
+      "hospital": "아주대병원",
+      "matched_doctor": "이국종",
+      "matched_dept": "외상외과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 58925,
+      "doctorname": "이국종",
+      "hospital": "아주대병원",
+      "matched_doctor": "이국종",
+      "matched_dept": "외상외과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 59187,
+      "doctorname": "송석원",
+      "hospital": "이대서울병원",
+      "matched_doctor": "송석원",
+      "matched_dept": "심장혈관흉부외과",
+      "score": 0.6
+    },
+    {
+      "review_eval_id": 59188,
+      "doctorname": "송석원",
+      "hospital": "이대서울병원",
+      "matched_doctor": "송석원",
+      "matched_dept": "심장혈관흉부외과",
+      "score": 0.6
+    },
+    {
+      "review_eval_id": 59189,
+      "doctorname": "송석원",
+      "hospital": "이대서울병원",
+      "matched_doctor": "송석원",
+      "matched_dept": "심장혈관흉부외과",
+      "score": 0.6
+    },
+    {
+      "review_eval_id": 59260,
+      "doctorname": "백남종",
+      "hospital": "분당서울대병원",
+      "matched_doctor": "백남종",
+      "matched_dept": "재활의학과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 59263,
+      "doctorname": "조학무",
+      "hospital": "고려대학교 안암병원",
+      "matched_doctor": "조학무",
+      "matched_dept": "마취통증의학과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 59264,
+      "doctorname": "공나영",
+      "hospital": "계명대동산병원",
+      "matched_doctor": "공나영",
+      "matched_dept": "정신건강의학과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 59265,
+      "doctorname": "공나영",
+      "hospital": "계명대동산병원",
+      "matched_doctor": "공나영",
+      "matched_dept": "정신건강의학과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 59275,
+      "doctorname": "최종범",
+      "hospital": "아주대병원",
+      "matched_doctor": "최종범",
+      "matched_dept": "마취통증의학과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 59276,
+      "doctorname": "최종범",
+      "hospital": "아주대병원",
+      "matched_doctor": "최종범",
+      "matched_dept": "마취통증의학과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 59368,
+      "doctorname": "윤승현",
+      "hospital": "아주대병원",
+      "matched_doctor": "윤승현",
+      "matched_dept": "재활의학과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 59369,
+      "doctorname": "윤승현",
+      "hospital": "아주대병원",
+      "matched_doctor": "윤승현",
+      "matched_dept": "재활의학과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 59407,
+      "doctorname": "윤승현",
+      "hospital": "아주대병원",
+      "matched_doctor": "윤승현",
+      "matched_dept": "재활의학과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 59446,
+      "doctorname": "김세중",
+      "hospital": "분당서울대병원",
+      "matched_doctor": "김세중",
+      "matched_dept": "신장내과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 59462,
+      "doctorname": "김병채",
+      "hospital": "전남대",
+      "matched_doctor": "김병채",
+      "matched_dept": "신경과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 59486,
+      "doctorname": "강시혁",
+      "hospital": "분당서울대학교병원",
+      "matched_doctor": "강시혁",
+      "matched_dept": "순환기내과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 59515,
+      "doctorname": "강시혁",
+      "hospital": "분당서울대병원",
+      "matched_doctor": "강시혁",
+      "matched_dept": "순환기내과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 59542,
+      "doctorname": "윤승현",
+      "hospital": "아주대병원",
+      "matched_doctor": "윤승현",
+      "matched_dept": "재활의학과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 59622,
+      "doctorname": "황진혁",
+      "hospital": "분당서울대학교병원",
+      "matched_doctor": "황진혁",
+      "matched_dept": "소화기내과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 59623,
+      "doctorname": "김명",
+      "hospital": "이대서울병원",
+      "matched_doctor": "김명",
+      "matched_dept": "비뇨의학과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 59680,
+      "doctorname": "윤승현",
+      "hospital": "아주대병원",
+      "matched_doctor": "윤승현",
+      "matched_dept": "재활의학과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 59681,
+      "doctorname": "윤승현",
+      "hospital": "아주대병원",
+      "matched_doctor": "윤승현",
+      "matched_dept": "재활의학과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 59694,
+      "doctorname": "윤하나",
+      "hospital": "이대서울병원",
+      "matched_doctor": "윤하나",
+      "matched_dept": "비뇨의학과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 59700,
+      "doctorname": "윤승현",
+      "hospital": "아주대병원",
+      "matched_doctor": "윤승현",
+      "matched_dept": "재활의학과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 59701,
+      "doctorname": "윤승현",
+      "hospital": "아주대병원",
+      "matched_doctor": "윤승현",
+      "matched_dept": "재활의학과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 59748,
+      "doctorname": "윤하나",
+      "hospital": "이대서울병원",
+      "matched_doctor": "윤하나",
+      "matched_dept": "비뇨의학과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 59767,
+      "doctorname": "윤하나",
+      "hospital": "이대서울병원",
+      "matched_doctor": "윤하나",
+      "matched_dept": "비뇨의학과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 59768,
+      "doctorname": "윤하나",
+      "hospital": "이대서울병원",
+      "matched_doctor": "윤하나",
+      "matched_dept": "비뇨의학과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 59819,
+      "doctorname": "김세중",
+      "hospital": "분당서울대학교병원",
+      "matched_doctor": "김세중",
+      "matched_dept": "신장내과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 59820,
+      "doctorname": "김세중",
+      "hospital": "분당서울대학교병원",
+      "matched_doctor": "김세중",
+      "matched_dept": "신장내과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 59821,
+      "doctorname": "김세중",
+      "hospital": "분당서울대학교병원",
+      "matched_doctor": "김세중",
+      "matched_dept": "신장내과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 59822,
+      "doctorname": "김세중",
+      "hospital": "분당서울대학교병원",
+      "matched_doctor": "김세중",
+      "matched_dept": "신장내과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 59883,
+      "doctorname": "김종성",
+      "hospital": "강릉아산병원",
+      "matched_doctor": "김종성",
+      "matched_dept": "신경과",
+      "score": 1
+    },
+    {
+      "review_eval_id": 59884,
+      "doctorname": "김종성",
+      "hospital": "강릉아산병원",
+      "matched_doctor": "김종성",
+      "matched_dept": "신경과",
+      "score": 1
+    }
+  ],
+  "failData": [],
+  "nullData": [
+    {
+      "review_eval_id": 58190,
+      "doctorname": "서호석",
+      "hospital": "'S' 정신건강의학과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58191,
+      "doctorname": "이상혁",
+      "hospital": "분당차병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58192,
+      "doctorname": "김민경",
+      "hospital": "일산차병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58193,
+      "doctorname": "김현주",
+      "hospital": "분당차병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58194,
+      "doctorname": "이경욱",
+      "hospital": "의정부성모병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58202,
+      "doctorname": "강서정",
+      "hospital": "알 수 없음",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58209,
+      "doctorname": "이상현",
+      "hospital": "강남성심병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58222,
+      "doctorname": "정희원",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58224,
+      "doctorname": "조현",
+      "hospital": "순천향대학교 서울병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58225,
+      "doctorname": "손정식",
+      "hospital": "한양대학교병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58236,
+      "doctorname": "최민규",
+      "hospital": "한림대학교 강남성심병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58243,
+      "doctorname": "채ㅇㅇ",
+      "hospital": "서울대병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58248,
+      "doctorname": "안형준",
+      "hospital": "세브란스 치과대학병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58250,
+      "doctorname": "정희원",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58258,
+      "doctorname": "변석호",
+      "hospital": "세브란스병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58259,
+      "doctorname": "이준원",
+      "hospital": "강남세브란스병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58260,
+      "doctorname": "원재연",
+      "hospital": "은평성모병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58261,
+      "doctorname": "서석민",
+      "hospital": "은평성모병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58262,
+      "doctorname": "이정민",
+      "hospital": "은평성모병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58271,
+      "doctorname": "이병완",
+      "hospital": "신촌세브란스병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58276,
+      "doctorname": "문호식",
+      "hospital": "은평성모병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58297,
+      "doctorname": "신플란트 치과",
+      "hospital": "안양 비산동",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58298,
+      "doctorname": "굿데이치과",
+      "hospital": "서울",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58299,
+      "doctorname": "박정철",
+      "hospital": "대학병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58306,
+      "doctorname": "박경화",
+      "hospital": "국립암센터",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58307,
+      "doctorname": "박경화",
+      "hospital": "국립암센터",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58308,
+      "doctorname": "박경화",
+      "hospital": "국립암센터",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58309,
+      "doctorname": "김병천",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58310,
+      "doctorname": "김병천",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58311,
+      "doctorname": "노성훈",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58312,
+      "doctorname": "나영무",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58313,
+      "doctorname": "유준일",
+      "hospital": "인하대병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58316,
+      "doctorname": "황지효",
+      "hospital": "한림대 강남성심병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58318,
+      "doctorname": "김락준",
+      "hospital": "건국대병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58333,
+      "doctorname": "이승화",
+      "hospital": "삼성서울병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58363,
+      "doctorname": "문덕환",
+      "hospital": "강남세브란스병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58364,
+      "doctorname": "박만실",
+      "hospital": "노원을지대병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58366,
+      "doctorname": "이지원",
+      "hospital": "신촌세브란스병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58367,
+      "doctorname": "김성환",
+      "hospital": "한림대강남성심병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58368,
+      "doctorname": "박성택",
+      "hospital": "한림대강남성심병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58369,
+      "doctorname": "박만실",
+      "hospital": "노원을지대병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58373,
+      "doctorname": "이헌정",
+      "hospital": "고려대 안암병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58374,
+      "doctorname": "신원철",
+      "hospital": "강동경희대병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58383,
+      "doctorname": "정진권",
+      "hospital": "순천향대서울병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58386,
+      "doctorname": "천재경",
+      "hospital": "차병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58387,
+      "doctorname": "박상철",
+      "hospital": "전남대학교",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58393,
+      "doctorname": "김동욱",
+      "hospital": "의정부을지대병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58395,
+      "doctorname": "조현웅",
+      "hospital": "고려대구로병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58397,
+      "doctorname": "황호경",
+      "hospital": "신촌세브란스병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58398,
+      "doctorname": "황호경",
+      "hospital": "신촌세브란스병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58399,
+      "doctorname": "황호경",
+      "hospital": "신촌세브란스병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58400,
+      "doctorname": "유정주",
+      "hospital": "순천향대 부천병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58401,
+      "doctorname": "유정주",
+      "hospital": "순천향대 부천병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58402,
+      "doctorname": "김신곤",
+      "hospital": "고려대안암병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58403,
+      "doctorname": "김훈엽",
+      "hospital": "고려대안암병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58410,
+      "doctorname": "김성",
+      "hospital": "서울아산병원",
+      "reason": "Doctor found, but department similarity was too low.",
+      "score": 0.18181818181818182
+    },
+    {
+      "review_eval_id": 58416,
+      "doctorname": "금웅섭",
+      "hospital": "연세암병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58417,
+      "doctorname": "금웅섭",
+      "hospital": "연세암병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58418,
+      "doctorname": "금웅섭",
+      "hospital": "연세암병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58424,
+      "doctorname": "이성렬",
+      "hospital": "담소유병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58429,
+      "doctorname": "조병철",
+      "hospital": "세브란스병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58433,
+      "doctorname": "우상현",
+      "hospital": "불명",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58434,
+      "doctorname": "우상현",
+      "hospital": "W병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58435,
+      "doctorname": "우상현",
+      "hospital": "W병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58436,
+      "doctorname": "우상현",
+      "hospital": "W병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58437,
+      "doctorname": "우상현",
+      "hospital": "W병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58438,
+      "doctorname": "우상현",
+      "hospital": "W병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58439,
+      "doctorname": "우상현",
+      "hospital": "W병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58442,
+      "doctorname": "이우용",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58446,
+      "doctorname": "ㅂ00",
+      "hospital": "삼성병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58448,
+      "doctorname": "채종희",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58449,
+      "doctorname": "김정은",
+      "hospital": "은평성모병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58450,
+      "doctorname": "김정은",
+      "hospital": "은평성모병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58451,
+      "doctorname": "채종희",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58452,
+      "doctorname": "채종희",
+      "hospital": "알 수 없음",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58454,
+      "doctorname": "권지원",
+      "hospital": "서울대병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58457,
+      "doctorname": "김영훈",
+      "hospital": "고려대 안암병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58458,
+      "doctorname": "김영훈",
+      "hospital": "고려대 안암병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58459,
+      "doctorname": "김영훈",
+      "hospital": "고려대 안암병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58460,
+      "doctorname": "고영수",
+      "hospital": "타워비뇨의학과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58462,
+      "doctorname": "김영훈",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58463,
+      "doctorname": "김영훈",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58464,
+      "doctorname": "김영훈",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58465,
+      "doctorname": "박소정",
+      "hospital": "이대목동병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58466,
+      "doctorname": "권지원",
+      "hospital": "한양대학교 명지병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58467,
+      "doctorname": "권지원",
+      "hospital": "한양대학교 명지병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58491,
+      "doctorname": "김병건",
+      "hospital": "알 수 없음",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58492,
+      "doctorname": "노동영",
+      "hospital": "서울대학교",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58493,
+      "doctorname": "노동영",
+      "hospital": "서울대학교",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58494,
+      "doctorname": "노동영",
+      "hospital": "서울대학교",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58498,
+      "doctorname": "노동영",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58499,
+      "doctorname": "노동영",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58500,
+      "doctorname": "노동영",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58503,
+      "doctorname": "노성훈",
+      "hospital": "강남 세브란스",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58504,
+      "doctorname": "노성훈",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58513,
+      "doctorname": "최성호",
+      "hospital": "퍼스트삼성안과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58514,
+      "doctorname": "최성호",
+      "hospital": "퍼스트삼성안과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58520,
+      "doctorname": "엄중식",
+      "hospital": "가천대길병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58522,
+      "doctorname": "최승혜",
+      "hospital": "은평성모병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58523,
+      "doctorname": "최승혜",
+      "hospital": "은평성모병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58524,
+      "doctorname": "최승혜",
+      "hospital": "은평성모병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58525,
+      "doctorname": "최승혜",
+      "hospital": "은평성모병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58527,
+      "doctorname": "서석민",
+      "hospital": "은평성모병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58528,
+      "doctorname": "동헌종",
+      "hospital": "하나이비인후과병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58529,
+      "doctorname": "동헌종",
+      "hospital": "하나이비인후과병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58533,
+      "doctorname": "최유왕",
+      "hospital": "강북연세병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58534,
+      "doctorname": "장선오",
+      "hospital": "하나이비인후과병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58539,
+      "doctorname": "유병준",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58546,
+      "doctorname": "우상현",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58550,
+      "doctorname": "홍창형",
+      "hospital": "수원 아주대",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58557,
+      "doctorname": "이승교",
+      "hospital": "알 수 없음",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58559,
+      "doctorname": "이치훈",
+      "hospital": "헤브론 병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58563,
+      "doctorname": "이경은",
+      "hospital": "이대목동병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58564,
+      "doctorname": "이경은",
+      "hospital": "이대목동병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58565,
+      "doctorname": "이경은",
+      "hospital": "이대목동병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58569,
+      "doctorname": "최재완",
+      "hospital": "센트럴서울안과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58571,
+      "doctorname": "천재경",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58574,
+      "doctorname": "이상곤",
+      "hospital": "갑산한의원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58575,
+      "doctorname": "신정은",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58577,
+      "doctorname": "김우주",
+      "hospital": "고대 구로병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58579,
+      "doctorname": "이준우",
+      "hospital": "이대목동병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58580,
+      "doctorname": "문재훈",
+      "hospital": "분당서울대병원",
+      "reason": "Doctor found, but department similarity was too low.",
+      "score": 0.2857142857142857
+    },
+    {
+      "review_eval_id": 58582,
+      "doctorname": "민병무",
+      "hospital": "대전 우리안과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58586,
+      "doctorname": "주동진",
+      "hospital": "불명",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58589,
+      "doctorname": "정지향",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58595,
+      "doctorname": "김욱성",
+      "hospital": "불명",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58596,
+      "doctorname": "이상철",
+      "hospital": "불명",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58597,
+      "doctorname": "김교수",
+      "hospital": "불명",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58598,
+      "doctorname": "김교수",
+      "hospital": "불명",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58602,
+      "doctorname": "박성수",
+      "hospital": "불명",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58608,
+      "doctorname": "채정호",
+      "hospital": "가톨릭대학교 서울성모병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58612,
+      "doctorname": "정선근",
+      "hospital": "불명",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58621,
+      "doctorname": "장석준",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58623,
+      "doctorname": "김태영",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58624,
+      "doctorname": "정선근",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58625,
+      "doctorname": "장석준",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58627,
+      "doctorname": "김희제",
+      "hospital": "불명",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58628,
+      "doctorname": "조병식",
+      "hospital": "불명",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58642,
+      "doctorname": "편욱범",
+      "hospital": "미상",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58646,
+      "doctorname": "김주한",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58647,
+      "doctorname": "편욱범",
+      "hospital": "불명",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58649,
+      "doctorname": "야마자키 후미오",
+      "hospital": "일본",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58650,
+      "doctorname": "이갑석",
+      "hospital": "서울 중앙대학교 병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58653,
+      "doctorname": "김희철",
+      "hospital": "불명",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58654,
+      "doctorname": "김희철",
+      "hospital": "불명",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58657,
+      "doctorname": "김민수",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58659,
+      "doctorname": "윤영호",
+      "hospital": "국립암센터",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58660,
+      "doctorname": "고광현",
+      "hospital": "분당차병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58661,
+      "doctorname": "김주한",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58663,
+      "doctorname": "최상태",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58665,
+      "doctorname": "김정은",
+      "hospital": "불명",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58667,
+      "doctorname": "변동원",
+      "hospital": "불명",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58668,
+      "doctorname": "최세경",
+      "hospital": "언급 없음",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58670,
+      "doctorname": "조소연",
+      "hospital": "알 수 없음",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58671,
+      "doctorname": "정진호",
+      "hospital": "알 수 없음",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58672,
+      "doctorname": "조소연",
+      "hospital": "알 수 없음",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58673,
+      "doctorname": "윤방부",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58674,
+      "doctorname": "윤방부",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58677,
+      "doctorname": "이성진",
+      "hospital": "순천향병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58679,
+      "doctorname": "고인준",
+      "hospital": "은평성모병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58681,
+      "doctorname": "성영희",
+      "hospital": "불명",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58692,
+      "doctorname": "박성하",
+      "hospital": "신촌 세브란스",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58698,
+      "doctorname": "김근수",
+      "hospital": "강남세브란스",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58699,
+      "doctorname": "김근수",
+      "hospital": "강남세브란스",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58700,
+      "doctorname": "김석우",
+      "hospital": "한림대학교병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58701,
+      "doctorname": "석경수",
+      "hospital": "강남세브란스병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58702,
+      "doctorname": "김석우",
+      "hospital": "평촌 한림대",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58703,
+      "doctorname": "강종우",
+      "hospital": "대학병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58704,
+      "doctorname": "조유경",
+      "hospital": "알 수 없음",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58705,
+      "doctorname": "전성수",
+      "hospital": "불명",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58709,
+      "doctorname": "김진구",
+      "hospital": "불명",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58711,
+      "doctorname": "대학병원 귀 난청 전문의",
+      "hospital": "대학병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58712,
+      "doctorname": "공수근",
+      "hospital": "부산대 병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58718,
+      "doctorname": "장선오",
+      "hospital": "불명",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58719,
+      "doctorname": "김형종",
+      "hospital": "불명",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58733,
+      "doctorname": "이용걸",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58736,
+      "doctorname": "신석균",
+      "hospital": "불명",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58752,
+      "doctorname": "ㅇㅅㅇ",
+      "hospital": "알 수 없음",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58762,
+      "doctorname": "정진상",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58763,
+      "doctorname": "김종수",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58764,
+      "doctorname": "김명진",
+      "hospital": "서울대학교 치과병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58769,
+      "doctorname": "전대근",
+      "hospital": "원자력병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58770,
+      "doctorname": "전대근",
+      "hospital": "원자력병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58773,
+      "doctorname": "선우경식",
+      "hospital": "요셉의원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58774,
+      "doctorname": "신완식",
+      "hospital": "요셉의원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58775,
+      "doctorname": "김정식",
+      "hospital": "요셉의원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58780,
+      "doctorname": "강성범",
+      "hospital": "미상",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58781,
+      "doctorname": "강성범",
+      "hospital": "미상",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58782,
+      "doctorname": "박성수",
+      "hospital": "비만대사센터",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58784,
+      "doctorname": "김양현",
+      "hospital": "고대안암병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58786,
+      "doctorname": "안형준",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58787,
+      "doctorname": "심재앙",
+      "hospital": "가천대 길병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58790,
+      "doctorname": "송태진",
+      "hospital": "불명",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58794,
+      "doctorname": "원장원",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58799,
+      "doctorname": "정선근",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58800,
+      "doctorname": "정선근",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58801,
+      "doctorname": "정선근",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58805,
+      "doctorname": "정선근",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58806,
+      "doctorname": "정선근",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58807,
+      "doctorname": "정선근",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58813,
+      "doctorname": "정선근",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58814,
+      "doctorname": "정선근",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58815,
+      "doctorname": "정선근",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58816,
+      "doctorname": "정선근",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58818,
+      "doctorname": "정선근",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58824,
+      "doctorname": "강성범",
+      "hospital": "분당 서울대병원",
+      "reason": "Doctor found, but department similarity was too low.",
+      "score": 0
+    },
+    {
+      "review_eval_id": 58825,
+      "doctorname": "강성범",
+      "hospital": "분당 서울대병원",
+      "reason": "Doctor found, but department similarity was too low.",
+      "score": 0
+    },
+    {
+      "review_eval_id": 58829,
+      "doctorname": "이태희",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58843,
+      "doctorname": "권동수",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58845,
+      "doctorname": "배현정",
+      "hospital": "시흥동 전진상의원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58846,
+      "doctorname": "이태석",
+      "hospital": "수단 톤즈",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58850,
+      "doctorname": "주천기",
+      "hospital": "가톨릭대학교",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58877,
+      "doctorname": "김미소",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58879,
+      "doctorname": "오은영",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58889,
+      "doctorname": "김동해",
+      "hospital": "비전케어",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58890,
+      "doctorname": "임동권",
+      "hospital": "비전케어",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58891,
+      "doctorname": "고영초",
+      "hospital": "자선무료병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58892,
+      "doctorname": "김정식",
+      "hospital": "개인병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58893,
+      "doctorname": "김동해",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58895,
+      "doctorname": "이승종",
+      "hospital": "연세대",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58907,
+      "doctorname": "장기려",
+      "hospital": "김일성의과대학",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58911,
+      "doctorname": "조홍근",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58918,
+      "doctorname": "김진유",
+      "hospital": "경기대",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58920,
+      "doctorname": "박상훈",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58921,
+      "doctorname": "언급된 의사 없음",
+      "hospital": "언급된 병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58929,
+      "doctorname": "김현주",
+      "hospital": "아주대병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58932,
+      "doctorname": "이광연",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58933,
+      "doctorname": "김광연",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58934,
+      "doctorname": "이광연",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58935,
+      "doctorname": "정해영",
+      "hospital": "전남 영광 읍내 내과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58936,
+      "doctorname": "조석범",
+      "hospital": "순창군보건의료원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58937,
+      "doctorname": "정해영",
+      "hospital": "전남 영광 읍내 내과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58940,
+      "doctorname": "박창규",
+      "hospital": "고려대학교 구로병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58944,
+      "doctorname": "홍혜걸",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58946,
+      "doctorname": "오상우",
+      "hospital": "동국대학교일산병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58954,
+      "doctorname": "한상문",
+      "hospital": "서울의료원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58955,
+      "doctorname": "한상문",
+      "hospital": "서울의료원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58959,
+      "doctorname": "이종규",
+      "hospital": "평해읍 의원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58960,
+      "doctorname": "이종규",
+      "hospital": "평해읍 의원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58963,
+      "doctorname": "주석중",
+      "hospital": "아산병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58964,
+      "doctorname": "주석중",
+      "hospital": "아산병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58965,
+      "doctorname": "주석중",
+      "hospital": "아산병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 58979,
+      "doctorname": "서균렬",
+      "hospital": "서울대학교",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 58987,
+      "doctorname": "강정현",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 58988,
+      "doctorname": "정현",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 59009,
+      "doctorname": "이상훈",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 59044,
+      "doctorname": "배상훈",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 59045,
+      "doctorname": "배상훈",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 59046,
+      "doctorname": "배상훈",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 59058,
+      "doctorname": "오은영",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 59063,
+      "doctorname": "서균렬",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 59081,
+      "doctorname": "김진구",
+      "hospital": "명지병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59082,
+      "doctorname": "김진구",
+      "hospital": "명지병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59085,
+      "doctorname": "장석준",
+      "hospital": "불명",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59101,
+      "doctorname": "중대 피부과 샘",
+      "hospital": "중앙대학교병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59106,
+      "doctorname": "이상열",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 59108,
+      "doctorname": "이남호",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 59109,
+      "doctorname": "이남호",
+      "hospital": "고려대학교",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59115,
+      "doctorname": "윤방부",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 59122,
+      "doctorname": "송단",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 59127,
+      "doctorname": "박정환",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 59130,
+      "doctorname": "주원일",
+      "hospital": "은평성모병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59132,
+      "doctorname": "조명의",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 59149,
+      "doctorname": "임태강",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 59151,
+      "doctorname": "임태강",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 59163,
+      "doctorname": "강석범",
+      "hospital": "국립암센터",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59164,
+      "doctorname": "류영준",
+      "hospital": "강원대학교",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59168,
+      "doctorname": "야마자키 후미오",
+      "hospital": "일본",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59169,
+      "doctorname": "이도형",
+      "hospital": "알 수 없음",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59174,
+      "doctorname": "서형교",
+      "hospital": "수지접합병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59177,
+      "doctorname": "유광호",
+      "hospital": "알 수 없음",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59178,
+      "doctorname": "이학승",
+      "hospital": "불명",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59191,
+      "doctorname": "김범석",
+      "hospital": "불명",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59194,
+      "doctorname": "나덕렬",
+      "hospital": "삼성서울병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59197,
+      "doctorname": "김은주",
+      "hospital": "강남 세브란스 병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59203,
+      "doctorname": "허정구",
+      "hospital": "지리산 한의원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59213,
+      "doctorname": "이유진",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 59214,
+      "doctorname": "김유겸",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 59224,
+      "doctorname": "이용걸",
+      "hospital": "명지병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59225,
+      "doctorname": "이용걸",
+      "hospital": "명지병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59226,
+      "doctorname": "이용걸",
+      "hospital": "명지병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59229,
+      "doctorname": "심재앙",
+      "hospital": "가천대 길병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59243,
+      "doctorname": "김성곤",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 59244,
+      "doctorname": "김성곤",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 59245,
+      "doctorname": "김성곤",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 59253,
+      "doctorname": "김지범",
+      "hospital": "두발로병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59256,
+      "doctorname": "홍진주",
+      "hospital": "제이제이성형외과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59257,
+      "doctorname": "김학영",
+      "hospital": "제이제이성형외과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59258,
+      "doctorname": "김형수",
+      "hospital": "서울에이치피부과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59259,
+      "doctorname": "김형수",
+      "hospital": "서울에이치피부과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59267,
+      "doctorname": "이광민",
+      "hospital": "마인드랩공간정신건강의학과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59268,
+      "doctorname": "이광민",
+      "hospital": "마인드랩공간정신건강의학과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59269,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59270,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59271,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59272,
+      "doctorname": "박광우",
+      "hospital": "가천대 길병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59273,
+      "doctorname": "박광우",
+      "hospital": "가천대 길병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59274,
+      "doctorname": "박광우",
+      "hospital": "가천대 길병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59278,
+      "doctorname": "양영순",
+      "hospital": "순천향대병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59279,
+      "doctorname": "허승곤",
+      "hospital": "세브란스",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59280,
+      "doctorname": "서민",
+      "hospital": "단국의대",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59283,
+      "doctorname": "이광민",
+      "hospital": "마인드랩공간정신건강의학과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59284,
+      "doctorname": "김응빈",
+      "hospital": "연세대학교",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59288,
+      "doctorname": "황보현",
+      "hospital": "연세백퍼센트병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59289,
+      "doctorname": "강상욱",
+      "hospital": "상명대학교",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59290,
+      "doctorname": "강상욱",
+      "hospital": "상명대학교",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59291,
+      "doctorname": "강상욱",
+      "hospital": "상명대학교",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59293,
+      "doctorname": "류성용",
+      "hospital": "선릉뉴연세치과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59294,
+      "doctorname": "유경종",
+      "hospital": "세브란스병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59295,
+      "doctorname": "유경종",
+      "hospital": "세브란스병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59296,
+      "doctorname": "유경종",
+      "hospital": "세브란스병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59299,
+      "doctorname": "서민",
+      "hospital": "단국의대",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59305,
+      "doctorname": "장유진",
+      "hospital": "고대구로병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59306,
+      "doctorname": "장유진",
+      "hospital": "고대구로병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59307,
+      "doctorname": "함익병",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 59309,
+      "doctorname": "김형일",
+      "hospital": "단국대병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59311,
+      "doctorname": "조항주",
+      "hospital": "대한외상학회",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59312,
+      "doctorname": "함익병",
+      "hospital": "함익병피부과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59315,
+      "doctorname": "장원석",
+      "hospital": "신촌세브란스병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59316,
+      "doctorname": "김영구",
+      "hospital": "이대목동병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59317,
+      "doctorname": "염창환",
+      "hospital": "염창환병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59318,
+      "doctorname": "서민",
+      "hospital": "단국의대",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59320,
+      "doctorname": "양철우",
+      "hospital": "개인병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59321,
+      "doctorname": "양철우",
+      "hospital": "개인병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59323,
+      "doctorname": "한성열",
+      "hospital": "고려대학교",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59326,
+      "doctorname": "양현승",
+      "hospital": "서울신세계안과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59327,
+      "doctorname": "박동균",
+      "hospital": "장좋은내과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59328,
+      "doctorname": "박동균",
+      "hospital": "장좋은내과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59329,
+      "doctorname": "강상욱",
+      "hospital": "상명대학교",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59332,
+      "doctorname": "허동화",
+      "hospital": "청담해리슨병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59333,
+      "doctorname": "전준복",
+      "hospital": "청담해리슨병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59334,
+      "doctorname": "허동화",
+      "hospital": "청담해리슨병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59335,
+      "doctorname": "전준복",
+      "hospital": "청담해리슨병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59340,
+      "doctorname": "김지범",
+      "hospital": "두발로병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59341,
+      "doctorname": "김지범",
+      "hospital": "두발로병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59342,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59344,
+      "doctorname": "백석호",
+      "hospital": "마디세상병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59345,
+      "doctorname": "백석호",
+      "hospital": "마디세상병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59346,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59347,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59348,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59349,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59350,
+      "doctorname": "이재욱",
+      "hospital": "바르다정형외과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59352,
+      "doctorname": "주연욱",
+      "hospital": "고대구로병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59354,
+      "doctorname": "신정호",
+      "hospital": "고대구로병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59355,
+      "doctorname": "구자웅",
+      "hospital": "구앤장마취통증의학과피부과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59356,
+      "doctorname": "구자웅",
+      "hospital": "구앤장마취통증의학과피부과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59357,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59358,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59359,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59360,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59361,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59367,
+      "doctorname": "한상훈",
+      "hospital": "강남세브란스병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59370,
+      "doctorname": "안수민",
+      "hospital": "강남세브란스병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59371,
+      "doctorname": "함익병",
+      "hospital": "함익병피부과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59372,
+      "doctorname": "함익병",
+      "hospital": "함익병피부과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59377,
+      "doctorname": "심재앙",
+      "hospital": "가천대 길병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59378,
+      "doctorname": "정선화",
+      "hospital": "두번째봄산부인과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59379,
+      "doctorname": "서민",
+      "hospital": "단국의대",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59380,
+      "doctorname": "노성훈",
+      "hospital": "강남세브란스",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59381,
+      "doctorname": "노성훈",
+      "hospital": "강남세브란스",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59382,
+      "doctorname": "노성훈",
+      "hospital": "강남세브란스",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59383,
+      "doctorname": "노성훈",
+      "hospital": "강남세브란스",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59384,
+      "doctorname": "노성훈",
+      "hospital": "강남세브란스",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59385,
+      "doctorname": "허동화",
+      "hospital": "청담해리슨병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59390,
+      "doctorname": "함익병",
+      "hospital": "함익병피부과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59391,
+      "doctorname": "김소연",
+      "hospital": "온세병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59392,
+      "doctorname": "김소연",
+      "hospital": "온세병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59393,
+      "doctorname": "김소연",
+      "hospital": "온세병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59394,
+      "doctorname": "김소연",
+      "hospital": "온세병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59395,
+      "doctorname": "김소연",
+      "hospital": "온세병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59396,
+      "doctorname": "함익병",
+      "hospital": "함익병피부과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59397,
+      "doctorname": "함익병",
+      "hospital": "함익병피부과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59398,
+      "doctorname": "함익병",
+      "hospital": "함익병피부과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59399,
+      "doctorname": "함익병",
+      "hospital": "함익병피부과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59403,
+      "doctorname": "함익병",
+      "hospital": "함익병피부과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59404,
+      "doctorname": "노은비",
+      "hospital": "미즈메디병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59405,
+      "doctorname": "김현성",
+      "hospital": "청담해리슨병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59406,
+      "doctorname": "김현성",
+      "hospital": "청담해리슨병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59409,
+      "doctorname": "허동화",
+      "hospital": "청담해리슨병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59410,
+      "doctorname": "황윤하",
+      "hospital": "청담해리슨병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59411,
+      "doctorname": "심재앙",
+      "hospital": "가천대 길병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59412,
+      "doctorname": "김수진",
+      "hospital": "서울으뜸정신건강의학과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59413,
+      "doctorname": "김재성",
+      "hospital": "서울으뜸정신건강의학과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59414,
+      "doctorname": "김재성",
+      "hospital": "서울으뜸정신건강의학과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59416,
+      "doctorname": "김진국",
+      "hospital": "순천향대 부천병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59417,
+      "doctorname": "김진국",
+      "hospital": "순천향대 부천병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59418,
+      "doctorname": "김진국",
+      "hospital": "순천향대 부천병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59419,
+      "doctorname": "진성림",
+      "hospital": "고운숨결내과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59420,
+      "doctorname": "진성림",
+      "hospital": "고운숨결내과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59421,
+      "doctorname": "진성림",
+      "hospital": "고운숨결내과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59424,
+      "doctorname": "함익병",
+      "hospital": "알 수 없음",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59425,
+      "doctorname": "이광민",
+      "hospital": "마인드랩공간정신건강의학과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59426,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59427,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59428,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59429,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59430,
+      "doctorname": "이재욱",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 59431,
+      "doctorname": "송금영",
+      "hospital": "강남나누리병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59435,
+      "doctorname": "배장환",
+      "hospital": "충북대병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59436,
+      "doctorname": "김범수",
+      "hospital": "인하대학교병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59437,
+      "doctorname": "김범수",
+      "hospital": "인하대학교병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59438,
+      "doctorname": "김범수",
+      "hospital": "인하대학교병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59439,
+      "doctorname": "함익병",
+      "hospital": "함익병피부과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59449,
+      "doctorname": "황세희",
+      "hospital": "연세암병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59450,
+      "doctorname": "금웅섭",
+      "hospital": "연세암병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59454,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59455,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59456,
+      "doctorname": "홍혜걸",
+      "hospital": "의학채널 비온뒤",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59463,
+      "doctorname": "손수인",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59464,
+      "doctorname": "한소원",
+      "hospital": "서울대학교",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59465,
+      "doctorname": "한소원",
+      "hospital": "서울대학교",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59466,
+      "doctorname": "한소원",
+      "hospital": "서울대학교",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59467,
+      "doctorname": "신원철",
+      "hospital": "강동경희대병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59468,
+      "doctorname": "김명준",
+      "hospital": "리뉴서울안과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59473,
+      "doctorname": "강상욱",
+      "hospital": "상명대학교",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59474,
+      "doctorname": "강상욱",
+      "hospital": "상명대학교",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59475,
+      "doctorname": "함익병",
+      "hospital": "함익병피부과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59476,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59477,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59478,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59479,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59480,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59481,
+      "doctorname": "이형민",
+      "hospital": "응급의학의사회",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59482,
+      "doctorname": "이형민",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 59483,
+      "doctorname": "김장한",
+      "hospital": "서울아산병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59484,
+      "doctorname": "이광민",
+      "hospital": "마인드랩공간정신건강의학과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59493,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59494,
+      "doctorname": "권도영",
+      "hospital": "고대안산병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59495,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59497,
+      "doctorname": "한경일",
+      "hospital": "서울내과의원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59498,
+      "doctorname": "한경일",
+      "hospital": "서울내과의원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59499,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59500,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59501,
+      "doctorname": "이형민",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 59502,
+      "doctorname": "전호",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 59505,
+      "doctorname": "최영식",
+      "hospital": "삼성서울병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59508,
+      "doctorname": "이광민",
+      "hospital": "마인드랩공간정신건강의학과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59509,
+      "doctorname": "정남식",
+      "hospital": "필메디스 내과병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59510,
+      "doctorname": "이대영",
+      "hospital": "새길병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59511,
+      "doctorname": "이대영",
+      "hospital": "새길병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59512,
+      "doctorname": "이대영",
+      "hospital": "새길병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59514,
+      "doctorname": "심재앙",
+      "hospital": "가천대 길병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59516,
+      "doctorname": "박성진",
+      "hospital": "연세재활의학과의원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59520,
+      "doctorname": "심재용",
+      "hospital": "강남세브란스병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59521,
+      "doctorname": "심재용",
+      "hospital": "강남세브란스병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59522,
+      "doctorname": "장근수",
+      "hospital": "청담해리슨송도병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59523,
+      "doctorname": "허동화",
+      "hospital": "청담해리슨병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59524,
+      "doctorname": "손희주",
+      "hospital": "중앙대광명병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59525,
+      "doctorname": "손희주",
+      "hospital": "중앙대광명병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59526,
+      "doctorname": "엄완식",
+      "hospital": "한양류마엄완식내과",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59527,
+      "doctorname": "엄완식",
+      "hospital": "한양류마엄완식내과",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59528,
+      "doctorname": "이동찬",
+      "hospital": "안양윌스기념병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59529,
+      "doctorname": "권도영",
+      "hospital": "고대안산병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59530,
+      "doctorname": "김지형",
+      "hospital": "서울성심병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59531,
+      "doctorname": "홍진주",
+      "hospital": "제이제이 성형외과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59533,
+      "doctorname": "의사선생님",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 59535,
+      "doctorname": "장진석",
+      "hospital": "잠실서울비뇨의학과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59536,
+      "doctorname": "연제승",
+      "hospital": "서울N비뇨의학과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59538,
+      "doctorname": "유성훈",
+      "hospital": "연세아이야기치과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59539,
+      "doctorname": "남택진",
+      "hospital": "연세마이덴치과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59540,
+      "doctorname": "김성국",
+      "hospital": "라이프의원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59541,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59546,
+      "doctorname": "허동화",
+      "hospital": "청담해리슨병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59547,
+      "doctorname": "허동화",
+      "hospital": "청담해리슨병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59548,
+      "doctorname": "황지웅",
+      "hospital": "중앙대광명병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59549,
+      "doctorname": "황지웅",
+      "hospital": "중앙대광명병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59551,
+      "doctorname": "이덕철",
+      "hospital": "연세대학교 의과대학",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59552,
+      "doctorname": "김성근",
+      "hospital": "가톨릭대 의과대학",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59553,
+      "doctorname": "황세희",
+      "hospital": "연세암병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59554,
+      "doctorname": "유은실",
+      "hospital": "울산의대",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59557,
+      "doctorname": "이덕철",
+      "hospital": "연세대학교 의과대학",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59558,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59559,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59560,
+      "doctorname": "김은상",
+      "hospital": "고대구로병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59561,
+      "doctorname": "김은상",
+      "hospital": "고대구로병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59563,
+      "doctorname": "김병우",
+      "hospital": "연세산돌병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59564,
+      "doctorname": "김병우",
+      "hospital": "연세산돌병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59568,
+      "doctorname": "진광준",
+      "hospital": "불명",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59569,
+      "doctorname": "안덕선",
+      "hospital": "고려대 의과대학",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59570,
+      "doctorname": "최수정",
+      "hospital": "가천대 길병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59571,
+      "doctorname": "김○○",
+      "hospital": "강남○○병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59572,
+      "doctorname": "김ㅎㅈ",
+      "hospital": "세브란스",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59573,
+      "doctorname": "서홍석",
+      "hospital": "서울적십자병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59574,
+      "doctorname": "서홍석",
+      "hospital": "서울적십자병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59575,
+      "doctorname": "서홍석",
+      "hospital": "서울적십자병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59577,
+      "doctorname": "한국남",
+      "hospital": "중앙대광명병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59578,
+      "doctorname": "구경회",
+      "hospital": "제일정형외과병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59579,
+      "doctorname": "구경회",
+      "hospital": "제일정형외과병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59580,
+      "doctorname": "구경회",
+      "hospital": "제일정형외과병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59581,
+      "doctorname": "구경회",
+      "hospital": "제일정형외과병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59582,
+      "doctorname": "윤삼영",
+      "hospital": "첫눈애안과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59585,
+      "doctorname": "한경일",
+      "hospital": "서울내과의원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59586,
+      "doctorname": "박국양",
+      "hospital": "가천대길병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59587,
+      "doctorname": "최수정",
+      "hospital": ""
+    },
+    {
+      "review_eval_id": 59588,
+      "doctorname": "정재훈",
+      "hospital": "가천대 길병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59589,
+      "doctorname": "박국양",
+      "hospital": "가천대 길병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59590,
+      "doctorname": "최수정",
+      "hospital": "가천대 길병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59591,
+      "doctorname": "이희정",
+      "hospital": "분당차병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59592,
+      "doctorname": "이희정",
+      "hospital": "분당차병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59593,
+      "doctorname": "김대중",
+      "hospital": "김대중내과의원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59595,
+      "doctorname": "신원철",
+      "hospital": "강동경희대병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59600,
+      "doctorname": "염차경",
+      "hospital": "염차경유외과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59605,
+      "doctorname": "윤방부",
+      "hospital": "연세대학교 의과대학",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59607,
+      "doctorname": "천은미",
+      "hospital": "이대목동병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59608,
+      "doctorname": "천은미",
+      "hospital": "이대목동병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59609,
+      "doctorname": "문종일",
+      "hospital": "굿드림치과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59610,
+      "doctorname": "문종일",
+      "hospital": "굿드림치과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59611,
+      "doctorname": "정재영",
+      "hospital": "국립암센터",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59612,
+      "doctorname": "정재영",
+      "hospital": "국립암센터",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59616,
+      "doctorname": "하정훈",
+      "hospital": "땡큐서울의원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59618,
+      "doctorname": "홍그루",
+      "hospital": "세브란스병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59619,
+      "doctorname": "홍그루",
+      "hospital": "세브란스병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59620,
+      "doctorname": "홍그루",
+      "hospital": "세브란스병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59624,
+      "doctorname": "한병규",
+      "hospital": "퍼펙트비뇨의학과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59625,
+      "doctorname": "한병규",
+      "hospital": "퍼펙트비뇨의학과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59627,
+      "doctorname": "심재앙",
+      "hospital": "가천대 길병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59630,
+      "doctorname": "윤동희",
+      "hospital": "종로타워비뇨기과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59634,
+      "doctorname": "김명준",
+      "hospital": "리뉴안과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59635,
+      "doctorname": "김지범",
+      "hospital": "두발로병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59636,
+      "doctorname": "언급없음",
+      "hospital": "강북힘찬병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59640,
+      "doctorname": "노태호",
+      "hospital": "노태호바오로내과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59648,
+      "doctorname": "국형돈",
+      "hospital": "안암병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59650,
+      "doctorname": "김병건",
+      "hospital": "을지대병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59651,
+      "doctorname": "이상협",
+      "hospital": "센스피부과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59652,
+      "doctorname": "장진우",
+      "hospital": "고대안암병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59653,
+      "doctorname": "장진우",
+      "hospital": "고대안암병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59654,
+      "doctorname": "장진우",
+      "hospital": "세브란스",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59655,
+      "doctorname": "장진우",
+      "hospital": "고대병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59657,
+      "doctorname": "안성귀",
+      "hospital": "강남세브란스병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59658,
+      "doctorname": "안성귀",
+      "hospital": "강남세브란스병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59659,
+      "doctorname": "김병준",
+      "hospital": "가천대 길병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59660,
+      "doctorname": "김병준",
+      "hospital": "가천대 길병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59662,
+      "doctorname": "홍영호",
+      "hospital": "참포도나무병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59665,
+      "doctorname": "윤삼영",
+      "hospital": "첫눈애안과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59666,
+      "doctorname": "윤삼영",
+      "hospital": "첫눈애안과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59667,
+      "doctorname": "고영국",
+      "hospital": "세브란스병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59668,
+      "doctorname": "서려경",
+      "hospital": "순천향대천안병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59670,
+      "doctorname": "권도영",
+      "hospital": "고대안산병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59671,
+      "doctorname": "권도영",
+      "hospital": "고대안산병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59672,
+      "doctorname": "권도영",
+      "hospital": "고대안산병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59673,
+      "doctorname": "권도영",
+      "hospital": "고대안산병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59675,
+      "doctorname": "이형",
+      "hospital": "계명대학교 동산병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59676,
+      "doctorname": "이형",
+      "hospital": "이형신경과의원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59677,
+      "doctorname": "이형",
+      "hospital": "이형신경과의원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59679,
+      "doctorname": "장진석",
+      "hospital": "잠실서울비뇨의학과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59683,
+      "doctorname": "박건우",
+      "hospital": "고대안암병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59684,
+      "doctorname": "황주삼",
+      "hospital": "가천대 길병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59685,
+      "doctorname": "이형민",
+      "hospital": "한림대성심병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59689,
+      "doctorname": "황진철",
+      "hospital": "그랜드비뇨의학과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59690,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59691,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59692,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59698,
+      "doctorname": "홍정기",
+      "hospital": "차의과학대학교",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59699,
+      "doctorname": "홍정기",
+      "hospital": "차의과학대학교",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59707,
+      "doctorname": "서영범",
+      "hospital": "영남대병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59708,
+      "doctorname": "서영범",
+      "hospital": "영남대병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59709,
+      "doctorname": "서영범",
+      "hospital": "영남대병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59710,
+      "doctorname": "김명준",
+      "hospital": "리뉴서울안과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59711,
+      "doctorname": "김명준",
+      "hospital": "리뉴안과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59712,
+      "doctorname": "김병준",
+      "hospital": "가천대길병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59713,
+      "doctorname": "김병준",
+      "hospital": "가천대길병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59714,
+      "doctorname": "변형권",
+      "hospital": "순천향대 서울병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59715,
+      "doctorname": "변형권",
+      "hospital": "순천향대 서울병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59716,
+      "doctorname": "변형권",
+      "hospital": "순천향대 서울병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59720,
+      "doctorname": "오성훈",
+      "hospital": "청담해리슨병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59721,
+      "doctorname": "허동화",
+      "hospital": "청담해리슨병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59726,
+      "doctorname": "최창휴",
+      "hospital": "가천대 길병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59728,
+      "doctorname": "윤동희",
+      "hospital": "종로타워비뇨기과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59737,
+      "doctorname": "양기영",
+      "hospital": "인천한림병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59738,
+      "doctorname": "양기영",
+      "hospital": "원자력병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59739,
+      "doctorname": "서동주",
+      "hospital": "다리핏의원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59740,
+      "doctorname": "홍성헌",
+      "hospital": "닥터홍바른치과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59741,
+      "doctorname": "명작치과 의사부부",
+      "hospital": "명작치과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59744,
+      "doctorname": "신유리",
+      "hospital": "강동소리의원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59745,
+      "doctorname": "신유리",
+      "hospital": "강동소리의원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59746,
+      "doctorname": "홍진주",
+      "hospital": "제이제이성형외과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59747,
+      "doctorname": "곽도훈",
+      "hospital": "제이제이성형외과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59749,
+      "doctorname": "김형호",
+      "hospital": "중앙대학교광명병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59750,
+      "doctorname": "천병준",
+      "hospital": "땡큐서울의원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59756,
+      "doctorname": "박치열",
+      "hospital": "스페셜이비인후과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59761,
+      "doctorname": "김형준",
+      "hospital": "국가대표정형외과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59769,
+      "doctorname": "조재구",
+      "hospital": "고려의대",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59770,
+      "doctorname": "진영주",
+      "hospital": "강원대병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59771,
+      "doctorname": "어해용",
+      "hospital": "힐락의원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59772,
+      "doctorname": "어해용",
+      "hospital": "힐락의원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59773,
+      "doctorname": "어해용",
+      "hospital": "힐락의원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59774,
+      "doctorname": "어해용",
+      "hospital": "힐락의원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59775,
+      "doctorname": "어해용",
+      "hospital": "힐락의원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59777,
+      "doctorname": "함익병",
+      "hospital": "함익병피부과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59781,
+      "doctorname": "주형로",
+      "hospital": "하나이비인후과",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59783,
+      "doctorname": "허동화",
+      "hospital": "청담해리슨병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59790,
+      "doctorname": "장하균",
+      "hospital": "고대안산병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59791,
+      "doctorname": "안지현",
+      "hospital": "비온뒤",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59792,
+      "doctorname": "순횐기내과선생님",
+      "hospital": "종합대형병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59795,
+      "doctorname": "김병우",
+      "hospital": "연세산돌병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59799,
+      "doctorname": "양기영",
+      "hospital": "인천한림병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59802,
+      "doctorname": "박건우",
+      "hospital": "고려대 안암병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59803,
+      "doctorname": "박건우",
+      "hospital": "고려대 안암병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59804,
+      "doctorname": "박건우",
+      "hospital": "고려대 안암병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59805,
+      "doctorname": "박건우",
+      "hospital": "고려대 안암병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59806,
+      "doctorname": "최창휴",
+      "hospital": "가천대 길병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59807,
+      "doctorname": "문병주",
+      "hospital": "캐나다 사우스레이크 리저널 헬스 센터",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59808,
+      "doctorname": "류성용",
+      "hospital": "뉴연세치과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59809,
+      "doctorname": "이선명",
+      "hospital": "뉴연세치과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59810,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59811,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59812,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59813,
+      "doctorname": "박현아",
+      "hospital": "상계백병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59814,
+      "doctorname": "진영주",
+      "hospital": "강원대학교병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59815,
+      "doctorname": "김지성",
+      "hospital": "건양대학교 보건복지대학원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59816,
+      "doctorname": "이경실",
+      "hospital": "라이프의원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59817,
+      "doctorname": "김○○",
+      "hospital": "강남○○병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59818,
+      "doctorname": "김ㅎㅈ",
+      "hospital": "세브란스",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59823,
+      "doctorname": "김형호",
+      "hospital": "중앙대광명병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59824,
+      "doctorname": "장성숙",
+      "hospital": "가톨릭대",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59863,
+      "doctorname": "이용걸",
+      "hospital": "경희의료원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59864,
+      "doctorname": "조선미",
+      "hospital": "아주대학교",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59869,
+      "doctorname": "심재앙",
+      "hospital": "가천대길병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59870,
+      "doctorname": "윤동희",
+      "hospital": "종로타워비뇨기과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59871,
+      "doctorname": "윤동희",
+      "hospital": "종로타워비뇨기과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59873,
+      "doctorname": "배장호",
+      "hospital": "건양대병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59874,
+      "doctorname": "배장호",
+      "hospital": "건양대병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59875,
+      "doctorname": "배장호",
+      "hospital": "건양대병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59876,
+      "doctorname": "배장호",
+      "hospital": "건양대병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59877,
+      "doctorname": "배장호",
+      "hospital": "건양대병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59878,
+      "doctorname": "김용욱",
+      "hospital": "인천성모병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59879,
+      "doctorname": "김용욱",
+      "hospital": "인천성모병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59880,
+      "doctorname": "김용욱",
+      "hospital": "인천성모병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59882,
+      "doctorname": "한상훈",
+      "hospital": "강남세브란스병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59885,
+      "doctorname": "송숙근",
+      "hospital": "연세위드신경과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59887,
+      "doctorname": "노태호",
+      "hospital": "노태호바오로내과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59888,
+      "doctorname": "노태호",
+      "hospital": "노태호바오로내과",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59889,
+      "doctorname": "한성열",
+      "hospital": "고려대학교",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59894,
+      "doctorname": "심재앙",
+      "hospital": "가천대 길병원",
+      "reason": "Hospital not found"
+    },
+    {
+      "review_eval_id": 59895,
+      "doctorname": "김성수",
+      "hospital": "봄빛병원",
+      "reason": "Doctor not found at the specified hospital"
+    },
+    {
+      "review_eval_id": 59896,
+      "doctorname": "이은실",
+      "hospital": "순천향대 서울병원",
+      "reason": "Doctor not found at the specified hospital"
+    }
+  ]
+}

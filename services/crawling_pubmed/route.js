@@ -174,12 +174,12 @@ router.post('/pubmed', async (req, res, next) => {
         let impactFactor = 0
         let citedCount = 0
         let PMID = null
-        let publication_type = null
+        let authors = null
         let DOI = null
         let abstract = null
         let keywords = null
         let title = null
-        let authors = null
+        let firstAuthors = null
         if (content2) {
           const content2Temp = content2.replace(/<\/?u>/g, '');
           if (!content2Temp || content2Temp.trim() === '') {
