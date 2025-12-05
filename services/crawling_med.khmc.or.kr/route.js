@@ -247,7 +247,7 @@ router.post('/step02', async (req, res, next) => {
         return res.json(TS.fail("SP3 DB fail."));
       }
 
-      /* await CS.wait(300);
+      await CS.wait(300);
       const SP4 = await crawlingCtrl.setCrawlingdoctorBiography(tempRid, HOSPITAL_ID, SP1.data.basic.doctorName, JSON.stringify(SP1.data.detail));
       if (SP4.error) {
         console.log("SP4 DB fail.");
@@ -283,7 +283,7 @@ router.post('/step02', async (req, res, next) => {
             console.log(`Error on ${doctorName}`)
           }
         }
-      } */
+      }
     }
   }
   let result = totalCount

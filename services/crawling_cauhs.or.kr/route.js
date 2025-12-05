@@ -237,7 +237,7 @@ router.post('/step02', async (req, res, next) => {
       totalCount = totalCount + 1
       //  console.log(`SP1.data >>> `, SP1.data)
 
-      /* await CS.wait(300);
+      await CS.wait(300);
       const SP2 = await crawlingCtrl.get_rid_encrypt(doctorName, refUrl);
       if (SP2.error) {
         console.log("SP2 DB fail.");
@@ -289,8 +289,8 @@ router.post('/step02', async (req, res, next) => {
             console.log(`Error on ${doctorName}`)
           }
         }
-      } */
-        data.push({doctorName,deptName,refUrl})
+      }
+      data.push({doctorName,deptName,refUrl})
     }
   }
   console.log(`대상 의사수 : ${_.size(P1.data)}, 작업된 의사수 : ${_.size(data)}`);

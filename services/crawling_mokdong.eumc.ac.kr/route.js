@@ -248,7 +248,7 @@ router.post('/step02', async (req, res, next) => {
       totalCount = totalCount + 1
 
       await CS.wait(300);
-      /*const SP2 = await crawlingCtrl.get_rid_encrypt(doctorName, refUrl);
+      const SP2 = await crawlingCtrl.get_rid_encrypt(doctorName, refUrl);
       if (SP2.error) {
         console.log("SP2 DB fail.");
         return res.json(TS.fail("SP2 DB fail."));
@@ -298,7 +298,7 @@ router.post('/step02', async (req, res, next) => {
             console.log(`Error on ${doctorname}`)
           }
         }
-      } */
+      }
     }
   }
 

@@ -204,7 +204,7 @@ module.exports = {
     // console.log("Journal Name:", journalName);
     // console.log("Year:", year);
 
-    /* $('#tab-treatise div.mt20.table_type01.bk.wide:not(.academic) tbody tr').each((index, element) => {
+    $('#tab-treatise div.mt20.table_type01.bk.wide:not(.academic) tbody tr').each((index, element) => {
       let publicationDate = null
       publicationDate = $(element).find('th').text().trim();
       const yearPattern = /\b\d{4}\b/;
@@ -231,7 +231,7 @@ module.exports = {
           publicationLocation: null
         })
       }
-    }); */
+    });
     
     result = {
       basic: basic,

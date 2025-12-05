@@ -22,7 +22,7 @@ console.log("DATA_VERSION_ID", DATA_VERSION_ID)
 
 /**
  * @swagger
- *  /v1/c/crawling_reporcessing/make-resume:
+ *  /v1/c/crawling_reporcessing/make-career-resume:
  *    post:
  *      summary: "병원데이터 후가공 - 경력분리"
  *      description: "수집된 의사 경력을 경력/학력/기타로 분리 "
@@ -59,7 +59,7 @@ console.log("DATA_VERSION_ID", DATA_VERSION_ID)
  */
 
 
-router.post('/make-resume', async (req, res, next) => {
+router.post('/make-career-resume', async (req, res, next) => {
  
   const data_version_id = req.body.data_version_id;
   const hid = req.body.hid;

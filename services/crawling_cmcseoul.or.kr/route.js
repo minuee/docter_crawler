@@ -224,7 +224,7 @@ router.post('/step02', async (req, res, next) => {
    
     if (doctorName && refUrl) {
       await CS.wait(300);
-      /* const SP2 = await crawlingCtrl.get_rid_encrypt(doctorName, refUrl);
+      const SP2 = await crawlingCtrl.get_rid_encrypt(doctorName, refUrl);
       if (SP2.error) {
         console.log("SP2 DB fail.");
         return res.json(TS.fail("SP2 DB fail."));
@@ -272,7 +272,7 @@ router.post('/step02', async (req, res, next) => {
           console.log(`Error on ${P1.data[i].doctorName}`)
         }
       }  
-      */
+     
       data.push({doctorName,deptName,refUrl})
     }
   }

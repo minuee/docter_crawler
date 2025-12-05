@@ -262,7 +262,7 @@ router.post('/step02', async (req, res, next) => {
           rid: tempRid,
           title: element.title,
           doi: null,
-          journalName: null,
+          journalName: CS.isEmpty(element.journalName) ? null : element.journalName,
           authorRule: null,
           publicationDate: null,
           url: null,
