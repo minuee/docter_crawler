@@ -1,0 +1,65 @@
+{
+  "doctorId": 14976,
+  "rid_long": "7B2A55973C1E14BC1F3022DAF43FFCF9A219FD5388F35EC7689A222017B9ABF546635792737D630CDDDE65F10831519B5192A53376FBD280ADE3695DCA1EF4ABF3607BA77F8BAACE6FEED6E854AEED42DF95A3D72860539A96DD9F36B53231FA512740F713FA78A3FF9345472A78F8070A1FBEA597132975855FAF710AC926821DDF2110F7F135361F672899FF1833636CF49C18307DC26614E623956689097A25E9972B5B9F820896601094A01AA5EFD9F827ECC0F379003D7A98D37F8D7A4C",
+  "hospital_cid": 438,
+  "bedoc_id": "A8243",
+  "bedoc_hospitalsite": "http://www.noon.co.kr",
+  "bedoc_doctorname": "이원기",
+  "bedoc_deptname": "안과",
+  "bedoc_hospitalname": "누네안과병원",
+  "hospital_name": "누네안과병원",
+  "aiga_hid": "H21KR-11000040",
+  "hospital_site": "https://www.noon.co.kr/about/doctor_view/1/4?sch_key=&sch_branch_code_key=1&sch_center_code_no=&sch_text=",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 강남구 테헤란로 408, 대치빌딩 지상9층~지상17층 (대치동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.noon.co.kr/about/doctor_view/1/4?sch_key=&sch_branch_code_key=1&sch_center_code_no=&sch_text=&doctorName=%EC%9D%B4%EC%9B%90%EA%B8%B0&depthName=%EC%95%88%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "https://www.noon.co.kr/upload/doctor/20220112133846.png",
+  "specialty": "망막, 포도막",
+  "학력": [
+    {
+      "date": null,
+      "content": "· 서울대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "· 한양대학교 안과학 석사"
+    },
+    {
+      "date": null,
+      "content": "· 한양대학교 안과학 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "· 미국황반학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "· 대한안과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "· 한국망막학회 회장"
+    },
+    {
+      "date": null,
+      "content": "· 오사카 시립대학교 Visiting Researcher"
+    },
+    {
+      "date": null,
+      "content": "· 가톨릭대학교 의과대학 안과 교수"
+    }
+  ],
+  "학술": [],
+  "수상": [],
+  "논문": [],
+  "저서": [],
+  "언론": []
+}

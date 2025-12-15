@@ -1,0 +1,242 @@
+{
+  "doctorId": 14812,
+  "rid_long": "6F84892DCF70E24BD5CD13D8171323A60AEA136E8B955EEF4D52795CD9D87E86F97736FD3A75D47694C20A13E01A33819CD6FABFA6CC501C5544877F64DDE359A1E532B6AB19A19D4BE674CE0E7E88ED57DD8C130C675DA4DDEB1F1E6DB384A79AA735E2D91FD4DFA09336BDB85B8508B50E6915662E2BD4BBE453764A72A0D5B394D0BD6ED537479CBB1ECC32B7FF83",
+  "hospital_cid": 243,
+  "bedoc_id": "A5766",
+  "bedoc_hospitalsite": "http://kangnam.hallym.or.kr",
+  "bedoc_doctorname": "박천욱",
+  "bedoc_deptname": "피부과",
+  "bedoc_hospitalname": "강남성심병원",
+  "hospital_name": "한림대학교강남성심병원",
+  "aiga_hid": "H11KR-11000040",
+  "hospital_site": "https://kangnam.hallym.or.kr/ptm207.asp?Doctor_Id=275",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 영등포구 신길로 1, (대림동, 강남성심병원)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://kangnam.hallym.or.kr/ptm207.asp?Doctor_Id=275&doctorName=%EB%B0%95%EC%B2%9C%EC%9A%B1&depthName=%ED%94%BC%EB%B6%80%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "학력": [
+    {
+      "date": "1977.03 ~ 1983.02",
+      "content": "가톨릭대학교(제2캠퍼스) 의학 졸업"
+    },
+    {
+      "date": "1984.09 ~ 1986.08",
+      "content": "가톨릭대학교(제2캠퍼스) 대학원 의학석사 졸업"
+    },
+    {
+      "date": "1990.09 ~ 1994.08",
+      "content": "가톨릭대학교(제2캠퍼스) 대학원 의학박사 졸업"
+    },
+    {
+      "date": "1998",
+      "content": "미국 Alkansas 대학 의료센터"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1983.03 ~ 1984.02",
+      "content": "가톨릭대학교 강남성모병원 인턴"
+    },
+    {
+      "date": "1984.03 ~ 1987.02",
+      "content": "가톨릭대학교 강남성모병원 피부과 레지던트"
+    },
+    {
+      "date": "1987.04 ~ 1988.04",
+      "content": "육군20사단 군의관(피부과)"
+    },
+    {
+      "date": "1988.05 ~ 1990.04",
+      "content": "육군사관학교 군의관(피부과)"
+    },
+    {
+      "date": "1990.05 ~ 1991.03",
+      "content": "가톨릭대학교 강남성모병원 피부과 임상강사"
+    },
+    {
+      "date": null,
+      "content": "한림대학교강남성심병원 피부과 임상과장 역임"
+    },
+    {
+      "date": null,
+      "content": "한림대학교 의과대학 피부과학교실 주임교수"
+    },
+    {
+      "date": null,
+      "content": "한림대학교강남성심병원 피부과 교수"
+    }
+  ],
+  "학술": [
+    {
+      "date": "2011.11 ~ 2013.12",
+      "content": "대한피부과학회 교과서편찬위원회 위원"
+    },
+    {
+      "date": "2011.11 ~ 2013.12",
+      "content": "대한피부과학회 피부미용사대책위원회 위원"
+    },
+    {
+      "date": "2011.11 ~ 2013.12",
+      "content": "대한피부과학회 의무위원회 위원"
+    },
+    {
+      "date": "2011.11 ~ 2013.12",
+      "content": "대한피부과학회 윤리 법제 이사"
+    },
+    {
+      "date": "2008 ~",
+      "content": "서울시 아토피 대책위원"
+    },
+    {
+      "date": "2007 ~",
+      "content": "질병관리본부 위원"
+    },
+    {
+      "date": "2009 ~ 2011",
+      "content": "대한피부과학회 홍보위원회 위원"
+    },
+    {
+      "date": "2007 ~ 2009",
+      "content": "대한피부과학회 상임이사(교육이사)"
+    },
+    {
+      "date": "2009 ~ 2011",
+      "content": "대한피부과학회 교육위원회 위원"
+    },
+    {
+      "date": "2001 ~ 2011",
+      "content": "대한아토피피부염학회 총무이사"
+    },
+    {
+      "date": null,
+      "content": "대학피부과학회지 및 Annals of Dermatology 편집위원"
+    },
+    {
+      "date": null,
+      "content": "미국 및 유럽 알레르기학회 정회원"
+    },
+    {
+      "date": "2011 ~",
+      "content": "대한아토피피부염학회 감사"
+    },
+    {
+      "date": null,
+      "content": "미국피부과학회 정회원"
+    }
+  ],
+  "언론": [
+    {
+      "targetDate": "2025-07-20",
+      "type": "기사",
+      "text": "금속 알레르기 있는 사람, 니켈 든 ‘이 음식’ 먹으면 위험",
+      "url": "https://health.chosun.com/site/data/html_dir/2025/07/18/2025071802240.html",
+      "issuer": "헬스조선"
+    },
+    {
+      "targetDate": "2023-02-01",
+      "type": "기사",
+      "text": "소아청소년 아토피 치료제 급여 경쟁, '듀피젠트' 독주 막힐까",
+      "url": "https://health.chosun.com/site/data/html_dir/2023/02/01/2023020101786.html",
+      "issuer": "헬스조선"
+    },
+    {
+      "targetDate": "2022-01-23",
+      "type": "기사",
+      "text": "아토피, 음식 가려먹어야 할까?",
+      "url": "https://health.chosun.com/site/data/html_dir/2022/01/21/2022012100948.html",
+      "issuer": "헬스조선"
+    },
+    {
+      "targetDate": "2019-10-24",
+      "type": "기사",
+      "text": "한림대강남성심병원 박천욱 교수, 대한피부과학회 회장 취임",
+      "url": "https://www.ajunews.com/view/20191024135604528",
+      "issuer": "아주경제"
+    },
+    {
+      "targetDate": "2017-08-14",
+      "type": "기사",
+      "text": "'도시에 사는 비만 여성, 아토피 피부염 재발 위험 높다'",
+      "url": "http://news.donga.com/3/all/20170814/85811345/1",
+      "issuer": "동아일보"
+    },
+    {
+      "targetDate": "2016-02-24",
+      "type": "기사",
+      "text": "아토피 피부염은 '기다림의 병'... 보습만 꾸준히 해도 낫는다",
+      "url": "http://health.chosun.com/site/data/html_dir/2016/02/23/2016022302270.html",
+      "issuer": "조선일보"
+    }
+  ],
+  "논문": [
+    "1. 김진혜, 양윤석, 조수익, 정보영, 김혜원, 이철헌. 양측 전경골근 탈출증 1예. 대한피부과학회지 2013;51(7):552-557",
+    "2. 김진혜, 양윤석, 조수익, 박천욱, 이철헌, 김혜원. 수박과 멜론에 의해 유발된 구강 알레르기 증후군. 대한피부과학회지 2013;51(9):730~733",
+    "3. 김진혜, 양윤석, 조수익, 정보영, 박천욱, 이철헌, 김혜원. 유륜에 발생한 후천성 국한성 림프관종. 대한피부과학회지 2013;51(6):474-477",
+    "4. 조수익, 김진혜, 정보영, 김정원, 김혜원, 박천욱, 이철헌. 비전형적인 임상양상을 보인 palisaded encapusulated neuroma 1예. 대한피부과학회지 2012;50:734-737",
+    "5. 윤석찬, 허찬영, 김혜원, 백롱민,.Pulsed dye laser가 창상의 collagen remodeling에 미치는 효과.대한 의학 레이져학회지 2011;15:48-54",
+    "6. 김진혜, 김혜원, 박천욱, 이철헌. 성인 아토피피부염 환자의 삶의 질. 대한피부과학회지 2011;983-992",
+    "7. 조수익(R2),정보영(R3),안인수(R4),신미경(병리과,1986), 김혜원(2008), 박천욱(1987), 이철헌(1978) 화상 후 생긴 단순 한선 극세포종 1예. 대한피부과학회지 2011;853-855",
+    "8. 정보영(R3),조수익(R2),안인수(R4), 김혜원(2008), 박천욱(1987), 이철헌(1978) 두피에 발생한 에크린 한공종 2예. 대한피부과학회지 2011;768-771",
+    "9. 조수익(R2),김진혜(R1),정보영(R3),안인수(R4),김혜원(2008), 박천욱(1987), 이철헌(1978 소아청소년 아토피피부염 환자의 삶의 질. 대한피부과학회지 2011;415-421",
+    "10. 안인수, 김혜원, 박천욱, 이철헌. 아토피피부염 병변에서의 CCL1의 특이적 발현. 대한피부과학회지 2011;393-397",
+    "11. 정보영, 조수익, 안인수, 이희봉, 김혜원, 김광호, 박천욱, 이철헌. 악성 결절 한선종. 대한피부과학회지 2011;250-254",
+    "12. 조성은, 전지은, 조하나, 손동국, 김혜원, 이수형, 염혜영. 아토피피부염 통합치료 프로그램에서의 심리적 개입의 실제. Korean J Asthma Allergy Clin Immunol 2010; 30:100-109",
+    "13. 이희봉, 김혜원, 조희진, 박천욱, 이철헌. 젖산 자상 검사 반응에 대한 알로에의 항자극 효과에 대한 연구.대한피부과학회지 2010;48:355-359",
+    "14. 안인수, 정보영, 이희봉, 최지훈, 안혜경, 김혜원, 박천욱, 이철헌. 왼쪽 다리에 발생한 낭종형 에크린 나선종 1예. 대한피부과학회지 2010;48:409-412",
+    "15. 이희봉, 정보영, 안인수, 김혜원, 박천욱, 이철헌. 눈 주변에 발생한 알레르기 접촉 피부염 3예. 대한피부과학회지 2010;48:429-434",
+    "16. 김혜원, 한희진, 이희봉, 최지훈, 박천욱, 이철헌. 아토피피부염 환자에서 바퀴벌레 항원의 기제 및 농도에 따른 아토피 첩포검사. 대한피부과학회지 2009;47:425-430",
+    "17. 황인아, 김혜원, 최선영, 전혜찬, 허창훈, 윤상웅, 박경찬 필링화장품의 피부개선효과에 대한 연구. 대한코스메틱 피부과학회지 2008;5:26-30",
+    "18. 박창근, 김혜원, 박천욱, 이철헌. 수두 예방 접종의 시행 여부에 따른 수두의 임상 경과의 차이. 대한피부과학회지 2008;46:1011-1019",
+    "19. 이보현, 박창근, 김혜원, 조희진, 박천욱, 이철헌. 민감성 피부에서 부식성 및 비부식성 자극 물질에 의한 피부 자극에 관한 비교 연구. 대한피부과학회지 2008;46:241-244",
+    "20. 최지훈, 이희봉, 박창근, 김혜원, 박천욱, 이철헌. 신경섬유종증 환자에서 발생한 에크린 나선종 1예. 대한피부과학회지 2008;46:241-244",
+    "21. 박창근, 최지훈, 김혜원, 박천욱, 이철헌. 수술 중 발생한 라텍스 아나필락시스 쇼크 1예. 대한피부과학회지 2008;46:1087-1089",
+    "22. 박창근, 이희봉, 최지훈, 김혜원, 박천욱, 이철헌. 가족력을 동반한 piezogenic pedal papules 1예. 대한피부과학회지 2007;45:1224-1226",
+    "23. 박창근, 최지훈, 김혜원, 박천욱, 이철헌. Mycobacterium fortuitom에 의한 피부 감염 1예. 대한피부과학회지 2007;45:266-270",
+    "24. 김혜원, 이보현, 한희진, 박천욱, 이철헌. 5% imiquimod로 치료한 음경의 상피내암. 대한피부과학회지 2006;44:117-119",
+    "25. 박창근, 최지훈, 김혜원, 박천욱, 이철헌. 들깨에 의해 유발된 구강 알레르기 증후군 1예. 대한피부과학회지 2006;44:1423-1425",
+    "26. 김혜원, 이보현, 한희진, 박천욱, 이철헌. 김정한. paclitaxel로 치료한 면역 억제제 관련형 카포시 육종 1예. 대한피부과학회지 2005;43:1119-1123",
+    "27. 김혜원, 박천욱, 이철헌, 이정옥 한국인 아토피 환자에서 tacrolimus 1% 연고의 치료 효과. 대한피부과학회지 2005;43:312-318",
+    "28. 박상준, 김혜원, 김경일, 조희진, 이정옥, 이철헌. benzalconium chloride와 sodium lauryl sulfate에 의한 피부 자극 비교. 대한피부과학회지 2005;43:1454-1460",
+    "29. 이보현, 강권수, 한희진, 김혜원, 박천욱, 이철헌. 안혜경. 천공성 광택 태선 1예. 대한피부과학회지 2005;43:691-693",
+    "30. 이보현, 박창근, 김혜원, 박천욱, 이철헌. dapsone에 호전을 보인 아토피피부염. 대한피부과학회지 2005;43:1626-1630",
+    "31. 이보현, 김혜원, 한희진, 강권수, 박천욱, 이철헌. 허원. 여드름에 대한 저강도 협대역 적생광의 유효성에 대한 평가. 대한피부과학회지 2004;42:1566-1573",
+    "32. 원저 : 유,소아기 아토피피부염이 환아의 삶의 질과 가족에 미치는 영향.대한피부과학회지 | 45권 5호 429 ~ 438.",
+    "33. 민감성 피부에서 부식성 및 비부식성 자극물질에 의한 피부자극에 관한 비교연구. 대한피부과학회지 | 45권 6호 551 ~ 559.",
+    "34. 원저 : 음식물 히스타민 함량에 관한 한국에서의 연구. 대한피부과학회지 | 45권 8호 768 ~ 771.",
+    "35. 가족력을 동반한 Painful Piezogenic Pedal Papules 1예. 대한피부과학회지 | 45권 11호 1224 ~ 1226.",
+    "1. SY Park, JH Kim, SI Cho, KI Kim, HJ Cho, CW Park, CH Lee, HO Kim. Induction of Hardening Phenomenon by Repeated Application of Sodium Lauryl Sulfate. Ann of dermatol. 2014;26(1) 게재예정 (SCIE)",
+    "2. BY Chung, SI Cho, IS Ahn, JH Kim, HO Kim, CW Park, CH Lee. Dose-dependent effects of evening primrose oil in children and adolescents with atopic dermatitis. Ann Dermatol 2013;25(3):285-291 (SCIE)",
+    "3. IS Ahn, BY Chung, SI Cho, JH Kim, HO Kim, CH Lee, CW Park. Improvement of atopic dermatitis severity after reducing indoor air pollutants. Ann Dermatol 2013;25(3):292-297 (SCIE)",
+    "4. SI Cho, HO Kim, CH Lee, CW Park. Effectiveness of Fractional Radiofrequency Microneedle Treatment in Recalcitrant Sycosis Barbae. Dermatologic surgery 2013 Aug 5. doi: 10.1111/dsu.12295 (SCI)",
+    "5. SI Cho, JH Kim, BY Chung, HO Kim, HJ Cho, CW Park, CH Lee. Food Hypersensitivity in Patients with Childhood Atopic Dermatitis in Korea. Ann Dermatol 2013;25:196-202 (SCIE)",
+    "6. SI Cho, HO Kim, HJ Cho, CH Lee, CW Park. Lack of association of plasma histamine with diamine oxidase in chronic idiopathic urticaria. Ann Dermatol 2013;25(2):189-195 (ㅁㅁㅁ01230132SCIE)",
+    "7. BY Chung, JH Kim, SI Cho, HO Kim, CH Lee, CW Park. The proactive treatment of atopic dermatitis with tacrolimus ointment in Korean patients: a comparative study between once-weekly and thrice-weekly applications. British Journal of Dermatology 2013;168:908-910 (SCI)",
+    "8. SI Cho, BY Chung, HK Ahn, HO Kim, CW Park, CH Lee. Expression of CCL1 and CCL18 in atopic dermatitis and psoriasis. Clin Exp Dermatol 2012;37:521-526 (SCI)",
+    "9. SI Cho, BY Chung, MK Choi, JH Baek, HJ Cho, CW Park, CH Lee, HO Kim. Evaluation of the clinical efficacy of fractional radiofrequency microneedle treatment in acne scars and large facial pores. Dermatol Surg 2012;38:1017-1024 (SCIE).",
+    "10. HJ Cho, BY Chung, HB Lee, HO Kim, CW Park, CH Lee., Quantitative study of stratum corneum ceramides contents in patients with sensitive skin. J Dermatol 2012;39(3):295-300. (SCIE)",
+    "11. IS Ahn, BY Chung, SI Cho, HO Kim, CW Park, CH Lee. Epidermal cysts in a tacrolimus treated renal transplant recipient. Ann Dermatol 2011;23(S2):S181-S184 (SCIE)",
+    "12. BY Chung, IS Ahn, SI Cho, HO Kim, KO Kim, CW Park, CH Lee. Primary malignant rhabdoid melanoma. Ann Dermatol 2011;23(S2):S155-S159 (SCIE)",
+    "13. IS Ahn, BY Chung, HB Lee, HO Kim, HK Ahn, CW Park, CH Lee. A case of a subepidermal calcified nodule on the sole without trauma. Ann Dermatol 2011;23(S1):S116-S118 (SCIE)",
+    "14. BY Chung, SI Cho, IS Ahn, HB Lee, HO Kim, CW Park, CH Lee. Treatment of atopic dermatitis with a low-histamine diet. Ann Dermatol 2011;23(S1):S91-S95 (SCIE)",
+    "15. BY Chung, HO Kim, CW Park, CH Lee. Diagnostic usefulness of the serum-specific IgE, the skin prick test and the atopy patch test compared with that of the oral food challenge test. Ann Dermatol 2010;22:404-411 (SCIE)",
+    "16. HO Kim, JH Choi, CH Lee, HK Ahn, CW Park. Effects of Tacrolimus Ointment on the Expression of Substance P, Nerve Growth Factor and Neurotrophin-3 in Atopic Dermatitis. Int J dermatol. 2009;47:431-438 (SCI)",
+    "17. HO Kim, BG Kim, DH Kim, SW Youn, CH Huh, KC Park. Change of Skin Color after Application of Topical Anesthetic Cream. J Dermatol Treat. 2009;20:1-12 (SCI)",
+    "18. HO Kim, SW Youn, CH Huh, KC Park. MDA/GSH as a biomarker for vitiligo activity. J Invest Dermatol. 2008;128:S58 (SCI)",
+    "19. Park CW, Youn M, Jung YM, Kim H, Jeong Y, Lee HK, Kim HO, et al. New functional probiotic Lactobacillus sakei probio 65 alleviates atopic symptoms in the mouse. J Med Food. 2008:11:405-12. (SCIE)",
+    "20. A Comparison study of Nonanoic acid and sodium lauryl sulfate in skin irritation/ Exogenous dermatology 2004(3):19-25",
+    "21. Tacrolimus Reduces Staphylococcal Colonization on the Skin in Korean Atopic Dermatitis Patients /DRUGS EXPTL. CLIN. RES. XXXI(2) 77-87",
+    "23. Tacrolimus Decreases the Expression of Exotoxin, CCR3, RANTES and Interleukin-5 in Atopic Dermatitis/British Journal of Dermatology 152, PP1173-1181"
+  ],
+  "저서": [
+    {
+      "content": "아토피피부염의 모든 것/ 대한피부과학회 산하 대한아토피피부염학회"
+    }
+  ],
+  "specialty": "아토피피부염, 건선, 피부알레르기, 두드러기, 탈모",
+  "profileUrl": "https://kangnam.hallym.or.kr/CHPFile/treatment/B_20210812_12102112_b_1.png",
+  "isAttend": true
+}

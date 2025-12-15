@@ -1,0 +1,71 @@
+{
+  "counting": {
+    "totalCount": 7,
+    "doctorCount": 3,
+    "processCount": 9,
+    "processNullCount": 4,
+    "processFailCount": 0
+  },
+  "newSpecialtyNames": [],
+  "successData": [
+    {
+      "doctor_id": 4231,
+      "specialty_id": 6382
+    },
+    {
+      "doctor_id": 14618,
+      "specialty_id": 2074
+    },
+    {
+      "doctor_id": 14618,
+      "specialty_id": 2128
+    },
+    {
+      "doctor_id": 14618,
+      "specialty_id": 2750
+    },
+    {
+      "doctor_id": 14618,
+      "specialty_id": 2751
+    },
+    {
+      "doctor_id": 14623,
+      "specialty_id": 1447
+    },
+    {
+      "doctor_id": 14623,
+      "specialty_id": 2556
+    },
+    {
+      "doctor_id": 14623,
+      "specialty_id": 3166
+    },
+    {
+      "doctor_id": 14623,
+      "specialty_id": 3964
+    }
+  ],
+  "failData": [],
+  "nullData": [
+    {
+      "doctor_id": 4208,
+      "doctorName": "김소연",
+      "reason": "specialties is empty for this doctor."
+    },
+    {
+      "doctor_id": 4228,
+      "doctorName": "박선영",
+      "reason": "specialties is empty for this doctor."
+    },
+    {
+      "doctor_id": 14625,
+      "doctorName": "박선영",
+      "reason": "specialties is empty for this doctor."
+    },
+    {
+      "doctor_id": 14625,
+      "doctorName": "김소연",
+      "reason": "specialties is empty for this doctor."
+    }
+  ]
+}

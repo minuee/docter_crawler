@@ -1,0 +1,50 @@
+{
+  "doctorId": 15090,
+  "rid_long": "DBAA904297F68DA06EC65763CF3AACE02C6DFACFE76D1E102E87AEEB4E1AB90B6029D06A36799C98188AA847FBD37A6E21A50B560E438540EC6E4DBEE40AD63ED269EADC4C7A213B380D05007634983ACE8C2E3B7B1E2BBEF6E0AE23CFADB45069C8A79DEAE37DE76A827C1BA7FC33B0A7C3CFB23C662CD481AD8A84E4751BC7A389B6266689DBB9A86113C811E485D9",
+  "hospital_cid": 586,
+  "bedoc_id": "A5330",
+  "bedoc_hospitalsite": "https://www.jeongseonmc.com/",
+  "bedoc_doctorname": "지경천",
+  "bedoc_deptname": "외과",
+  "bedoc_hospitalname": "정선의료재단 군립병원",
+  "hospital_name": "정선의료재단 군립병원",
+  "aiga_hid": "H21KR-32000031",
+  "hospital_site": "https://www.jeongseonmc.com/bbs/content.php?co_id=1sub2",
+  "site_type": "list",
+  "hospital_addr": "강원특별자치도 정선군 사북읍 지장천로 727, (사북읍)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.jeongseonmc.com/bbs/content.php?co_id=1sub2&doctorName=%EC%A7%80%EA%B2%BD%EC%B2%9C&depthName=%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "isAttend": true,
+  "specialty": "갑상선암, 복강경/만화치료",
+  "학력": [
+    {
+      "date": null,
+      "content": "중앙대학교 의과대학 졸업"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "정선의료재단 군립병원 병원장"
+    },
+    {
+      "date": null,
+      "content": "중앙대학교병원 외과 주임교수"
+    },
+    {
+      "date": null,
+      "content": "건강보험심사평가원 심사위원"
+    },
+    {
+      "date": null,
+      "content": "대한외과학회 이사"
+    },
+    {
+      "date": null,
+      "content": "대한위담학회 이사"
+    }
+  ]
+}

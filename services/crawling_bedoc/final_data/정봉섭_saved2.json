@@ -1,0 +1,73 @@
+{
+  "doctorId": 15044,
+  "rid_long": "A0E989BB59E771C9CE1E9B59FEC82377D7E238154D6D39A3B65C40D13D7866053E56FA1B11BF640B1B91C6C05EB1A251F707E6D8BB041EB0624D71FE1EB75E187992EF88A0DBD37BBD425FF7026E34F340356C68361589A5447E292FEE0AFE8291EE8A126D69F4AB12015AC06CD4B48AFB3F6E6914EB23E1C68CAC6857B43904DB4921D3585188DC653C10C970D843CC0A77D51291BA48D50467AEF742CC8F1B60A0AD2D3FF952E71447E41E948F3591A389B6266689DBB9A86113C811E485D9",
+  "hospital_cid": 526,
+  "bedoc_id": "A8517",
+  "bedoc_hospitalsite": "http://anyang.samhospital.com/home/homepage.php?homefile=sub0101.html",
+  "bedoc_doctorname": "정봉섭",
+  "bedoc_deptname": "신경외과",
+  "bedoc_hospitalname": "안양샘병원",
+  "hospital_name": "천안충무병원",
+  "aiga_hid": "H11KR-34000006",
+  "hospital_site": "https://www.cmhos.co.kr/cmhos/medical/department/dept_main.asp?dept_cd=NS&type=doctor",
+  "site_type": "list",
+  "hospital_addr": "충청남도 천안시 서북구 다가말3길 8,  (쌍용동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.cmhos.co.kr/cmhos/medical/department/dept_main.asp?dept_cd=NS&type=doctor&doctorName=%EC%A0%95%EB%B4%89%EC%84%AD&depthName=%EC%8B%A0%EA%B2%BD%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "학력": [
+    {
+      "date": null,
+      "content": "연세대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 의과대학원 의학석사, 의학박사"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 의과대학병원 세브란스병원 신경외과 전공의 수료"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "한림의대 강동성심병원 조교수"
+    },
+    {
+      "date": null,
+      "content": "텍사스의과대학 갤베스턴 Marine Biomedical Institute 방문과학자"
+    },
+    {
+      "date": null,
+      "content": "한림의대 강동성심병원 부교수"
+    },
+    {
+      "date": null,
+      "content": "차의과대학 분당차병원 신경외과 주임교수"
+    },
+    {
+      "date": null,
+      "content": "분당제생병원 신경외과 주임과장"
+    },
+    {
+      "date": null,
+      "content": "분당제생병원 병원장"
+    },
+    {
+      "date": null,
+      "content": "안양샘병원 신경외과 과장"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한신경외과학회\n대한뇌혈관내수술 학회"
+    }
+  ],
+  "specialty": "뇌종양 수술, 뇌동맥류 개두술 클립 및 코일 색전술(뇌 미세수술 전문)",
+  "profileUrl": "https://www.cmhos.co.kr/images/upload/doctor/%EC%A0%95%EB%B4%89%EC%84%AD%20%EA%B3%BC%EC%9E%A5(%EC%9D%B8%ED%8A%B8%EB%9D%BC%EB%84%B7).jpg",
+  "isAttend": true
+}

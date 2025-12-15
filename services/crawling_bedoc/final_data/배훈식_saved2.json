@@ -1,0 +1,53 @@
+{
+  "doctorId": 14826,
+  "rid_long": "EA519776EADF59EAA05CC747B138A563F26D7006230E8EC9911B95E4239E6825A899ED5AD8F0DBFEDB7140555E94650D77D2CE9D8B92B0EE8725F326C618C3184D3C34A1CC0A06949E9ADE4D3A9FFFD3A69FA9CC4E7C8E98E47011B32DCCDBDAD3DBA3FBE7B1D88E063C82E54AA1FCFAA1E532B6AB19A19D4BE674CE0E7E88EDC7EAC65CA66B4B0EB4F50FD0AD5A0A6EEDFCC0D21D69D733E83E20AC611B7EBE848FCFFE447EBD707A02F1D3AC8BBEFA0944BA96E31F76C49F6722ADF59AFDBC9DFD89CD119F6DFF5C0C4D09AFFC5098F2DA5F1E44F2158A03DF57D4132684197D3B102FDB4BAA89C4BC7BD02ECB3C6F",
+  "hospital_cid": 261,
+  "bedoc_id": "A0783",
+  "bedoc_hospitalsite": "http://chuncheon.hallym.or.kr/",
+  "bedoc_doctorname": "배훈식",
+  "bedoc_deptname": "방사선종양학과",
+  "bedoc_hospitalname": "춘천성심병원",
+  "hospital_name": "한림대학교춘천성심병원",
+  "aiga_hid": "H11KR-32000013",
+  "hospital_site": "https://chuncheon.hallym.or.kr/ptm207.asp?doctor_id=779&holevel=&cate_no=&medical_no=21&medical_code=",
+  "site_type": "single",
+  "hospital_addr": "강원특별자치도 춘천시 삭주로 77, 77",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://chuncheon.hallym.or.kr/ptm207.asp?doctor_id=779&holevel=&cate_no=&medical_no=21&medical_code=&doctorName=%EB%B0%B0%ED%9B%88%EC%8B%9D&depthName=%EB%B0%A9%EC%82%AC%EC%84%A0%EC%A2%85%EC%96%91%ED%95%99%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "https://chuncheon.hallym.or.kr/CHPFile/treatment/C_20210903_12103123_b_1.png",
+  "specialty": "방사선 치료",
+  "학력": [
+    {
+      "date": "1986",
+      "content": "한양대학교 의학 박사"
+    },
+    {
+      "date": "1971.03 ~ 1977.02",
+      "content": "한양대학교 의학 학사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "現 한림대학교춘천성심병원 방사선종양학과 임상과장"
+    },
+    {
+      "date": "~ 1988",
+      "content": "미국 미네소타의대 연수"
+    },
+    {
+      "date": "1996 ~ 1997",
+      "content": "홍콩의대 퀸메리병원 연수"
+    }
+  ],
+  "학술": [],
+  "수상": [],
+  "논문": [],
+  "저서": [],
+  "언론": []
+}

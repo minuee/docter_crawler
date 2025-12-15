@@ -1,0 +1,644 @@
+{
+  "doctorId": 14924,
+  "rid_long": "395A010810FCABEE948AE87E55AB9B74FCC9C20848C15CDEF1543256172B627E7E280802111D0B6D9A97874280F32D7901E44FE84614AC182D4681FE469D5A1AF49BB48E0D59A632C334DDB02D7B26FA66D891F217E9CA58C4FB6F3EDA3934570CE17E66ACF013ED48BF2C40436181EA46B2C8CBB3945DA57017DE386B15DBFA548E33F72D24D203A6052B0296D38FDF4C65798AE5F6913E6BAE763D8CA21E433CBFFC7C386692C15161BFB07EC0E3149A6EA5047D16577841B232BC7369918AF7C203C558F5EB9DE0FBDBCB4FA02958",
+  "hospital_cid": 376,
+  "bedoc_id": "A5823",
+  "bedoc_hospitalsite": "http://www.eulji.or.kr/default.asp",
+  "bedoc_doctorname": "은병욱",
+  "bedoc_deptname": "소아청소년과",
+  "bedoc_hospitalname": "을지병원",
+  "hospital_name": "을지병원",
+  "aiga_hid": "H11KR-11000009",
+  "hospital_site": "https://www.eulji.or.kr/clinic/clinic_doc_view01_01.jsp?dept=ABCAAA&doct=212283",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 노원구 한글비석로 68, 을지병원 (하계동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.eulji.or.kr/clinic/clinic_doc_view01_01.jsp?dept=ABCAAA&doct=212283&doctorName=%EC%9D%80%EB%B3%91%EC%9A%B1&depthName=%EC%86%8C%EC%95%84%EC%B2%AD%EC%86%8C%EB%85%84%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "profileUrl": "https://www.eulji.or.kr/upload/doctor/212283_20210319092248.png",
+  "specialty": "호흡기, 감염(발열, 예방접종, 인플루엔자, 잠복결핵/결핵, 원내감염), [유학생 및 해외여행자 클리닉], 소아신장(혈뇨, 단백뇨, 요로감염)",
+  "학력": [
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 학사 졸업"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 대학원 소아과학 석사"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 대학원 소아과학 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "서울대학교병원 인턴"
+    },
+    {
+      "date": null,
+      "content": "서울대학교병원 소아과 전공의"
+    },
+    {
+      "date": null,
+      "content": "서울대학교병원 소아청소년과 감염전임의"
+    },
+    {
+      "date": null,
+      "content": "무안종합병원 소아과 과장"
+    },
+    {
+      "date": null,
+      "content": "가천의대길병원 소아청소년과 임상조교수/조교수/부교수"
+    },
+    {
+      "date": null,
+      "content": "현) 을지의대 소아과학교실 부교수"
+    },
+    {
+      "date": null,
+      "content": "ECFMG certificate 취득"
+    },
+    {
+      "date": null,
+      "content": "소아청소년과 감염분과 세부전문의 자격증 취득"
+    },
+    {
+      "date": null,
+      "content": "중환자의학 세부전문의 자격증 취득"
+    }
+  ],
+  "수상": [],
+  "학술": [
+    {
+      "date": "2009.9.~2011.8.",
+      "content": "한국소아감염병학회 일반이사"
+    },
+    {
+      "date": "2009.11.~",
+      "content": "대한소아과학회 감염위원"
+    },
+    {
+      "date": "2011.9.~",
+      "content": "한국소아감염병학회 기획정보이사"
+    },
+    {
+      "date": "2011.9.~",
+      "content": "한국소아감염병학회 세부전문의관리위원회 부위원장(간사)"
+    }
+  ],
+  "저서": [],
+  "논문": [
+    "Choi EH, Lee HJ, Kim SJ, Eun BW, Kim NH, Lee JA, Lee JH, Song EK, Kim SH. Ten-year analysis of adenovirus type 7 molecular epidemiology in Korea, 1995-2004: Implication of fiber diversity. J Clin Virol 2006;35:388-93.",
+    "Choi EH, Lee HJ, Kim SJ, Eun BW, Kim NH, Lee JA, Lee JH, Song EK, Kim SH, Park JY, Sung JY. The Association of Newly Identified Respiratory Viruses with Lower Respiratory Tract Infections in Korean Children, 2000-2005. Clin Infect Dis 2006;43:585-92.",
+    "Kim NH, Lee JA, Eun BW, Shin SH, Chung EH, Park KW, Choi EH, Lee HJ. Comparative evaluation of polymerase chain reaction and indirect particle agglutination antibody test in the diagnosis of Mycoplasma pneumoniae pneumonia during two outbreaks. Pediatr Infect Dis J 2007;26:897-903",
+    "Lee J, Pai H, Kim YK, Kim NH, Eun BW, Kang HJ, Park KH, Choi EH, Shin HY, Kim EC, Lee HJ, Ahn HS. Control of extended-spectrum beta-lactamase producing Escherichia coli and Klebsiella pneumoniae in a children’s hospital by changing antimicrobial agent usage policy. J Antimicrob Chemother 2007; Sep;60(3):629-37. Epub 2007 Jun 27.",
+    "Choi EH, Kim HS, Eun BW, Kim BI, Choi JY, Lee HJ, Inada T. Adenovirus type 7 peptide diversity during outbreak, Korea, 1995-2000. Emerg Infect Dis. 2005 May;11(5):649",
+    "Eun BW, Kim NH, Choi EH, Lee HJ. Mycoplasma pneumoniae in Korean Children: The Epidemiology of Pneumonia Over an 18-Year Period. J Infect. 2008 May;56(5):326-31",
+    "Hwa Choi E, Hee Kim S, Wook Eun B, Jung Kim S, Hee Kim N, Lee J, Jong Lee H. Streptococcus pneumoniae serotype 19A in children, South Korea. Emerg Infect Dis 2008;14:275-81",
+    "Kim SH, Kim SY, Eun BW, Yoo WJ, Park KU, Choi EH, Kim EC, Lee HJ. BCG osteomyelitis caused by the BCG Tokyo strain and confirmed by molecular method. 2008;26:4379-81",
+    "Eun BW, Kim SJ, Cho EY, Lee J, Choi EH, Lee HJ. Genetic structure of Streptococcus pneumoniae isolated from children in a tertiary care university hospital, in Korea, 1995 to 2005. Diagn Microbiol Infect Dis. 2010 Dec;68(4):345-51.",
+    "Sun YH, Eun BW, Sim SY, Cho KH, Ryoo E, Cho DY, Son DW, Tchah H, Jeon IS. Poor adherence and reasons for nonadherence to the asthma guidelines among pediatricians in Korea. Asian Pac J Allergy Immunol. 2010 Jun-Sep;28(2-3):147-54.",
+    "Choi EH, Lee HJ, Cho EY, Oh CE, Eun BW, Lee J, Kim MJ. Prevalence and genetic structures of Streptococcus pneumoniae serotype 6D, South Korea. Emerg Infect Dis. 2010 Nov;16(11):1751-3.",
+    "Sung JY, Lee HJ, Eun BW, Kim SH, Lee SY, Lee JY, Park KU, Choi EH. Role of human coronavirus NL63 in hospitalized children with croup. Pediatr Infect Dis J. 2010 Sep;29(9):822-6.",
+    "Ko JH, Kim JH, Kang JH, Kim JH, Eun BW, Kim KH, Hong JY, Oh SH. Characteristics of hospitalized children with 2009 pandemic influenza A (H1N1): a multicenter study in Korea. J Korean Med Sci. 2012 Apr;27(4):408-15.",
+    "Kim KH, Kim YK, Kim NH, Chang SH, Lee J, Park EA, Park SE, Eun BW, Lee H, Lee HJ. Immunogenicity and safety of LBVH0101, a new Haemophilus influenzae type b tetanus toxoid conjugate vaccine, compared with Hiberix™ in Korean infants and children: a randomized trial. Vaccine. 2012 Feb 27;30(10):1886-94.",
+    "Kim YK, Eun BW, Kim NH, Kang EK, Lee BS, Kim DH, Lim JS. Comparison of immunogenicity and reactogenicity of split versus subunit influenza vaccine in Korean children aged 6-35 months. Scand J Infect Dis. 2013 Jun;45(6):460-8",
+    "Cho EY, Lee H, Choi EH, Kim YJ, Eun BW, Cho YK, Kim YK, Jo DS, Lee HS, Lee J, Kim MN, Kim DS, Lee HJ. Serotype distribution and antibiotic resistance of Streptococcus pneumoniae isolated from invasive infections after optional use of the 7-valent conjugate vaccine in Korea, 2006-2010. Diagn Microbiol Infect Dis. 2014 Apr;78(4):481-6",
+    "Oh SH, Choi EH, Shin SH, Kim YK, Chang JK, Choi KM, Hur JK, Kim KH, Kim JY, Chung EH, Lee SY, Park SE, Cha S, Kim KN, Ma SH, Eun BW, Kim NH, Jo DS, Choi BY, Kim SA. Varicella and varicella vaccination in South Korea. Clin Vaccine Immunol. 2014 May;21(5):762-8",
+    "Yun KW, Lee HJ, Kang JH, Eun BW, Kim YJ, Kim KH, Kim NH, Hong YJ, Kim DH, Kim HM, Cha SH. Safety and immunogenicity of a freeze-dried, Vero cell culture-derived, inactivated Japanese encephalitis vaccine (KD-287, ENCEVAC®) versus a mouse brain-derived inactivated Japanese encephalitis vaccine in children: a phase III, multicenter, double-blinded, randomized trial. BMC Infect Dis. 2015 Jan 8;15:7.",
+    "Choi JY, Kwak YG, Yoo H, Lee SO, Kim HB, Han SH, Choi HJ, Kim YK, Kim SR, Kim TH, Lee H, Chun HK, Kim JS, Eun BW, Kim DW, Koo HS, Bae GR, Lee K; Korean Nosocomial Infections Surveillance System (KONIS). Trends in the incidence rate of device-associated infections in intensive care units after the establishment of the Korean Nosocomial Infections Surveillance System. J Hosp Infect. 2015 Sep;91(1):28-34.",
+    "은병욱 정유미 강희경 하일수 정해일 이환종 최 용. 3개월 이하 영아기 열성 요로감염증에 대한 임상적 고찰. 소아과 2003 년 46 권 3 호 265 ~ 270",
+    "은병욱 임호경 김윤경 곽영호 홍정연 정혜선 김경모 이환종. 성장부전으로 인하여 발견된 HIV 수직감염 1례. 소아과 2001;44:592-96",
+    "은병욱 정은희 김영지 김제학 이환종. 장구균에 의한 소아 균혈증. 감염과 화학요법 2003;35:130-7",
+    "은병욱 박은실 이성용 한혜원 장주영 박경미 김철우 강진한 고재성 하일수 이환종 정해일 서정기 최 용. 소아에서 신이식후 발생한 Posttransplant Lymphoproliferative Disease (PTLD) 1례. 대한소아신장학회지 2002;6:123-30",
+    "김소희 이영아 은병욱 김남희 이진아 강형진 최은화 신희영 이환종 안효섭. 소아 혈액 종양 환자에서 발생한 균혈증의 원인균, 2002-2005년. Korean Journal of Pediatrics 2007;50:56-64",
+    "강민재 김소희 김남희 이진아 은병욱 최은화 이환종. 면역 기능의 이상이 발견되지 않은 영아에서의 침습성 녹농균 감염증 2례. 소아감염 2006;13:180-5",
+    "김소희 성지연 양미애 은병욱 이진아 최은화 이환종. Respiratory Syntcytial Virus 감염의 조기 진단 kit \"바이오라인 알에스브이TM\"의 평가. 소아감염 2007;14:91-6",
+    "성지연 김주화 양미애 김소희 은병욱 김남희 박경운 이진아 최은화 이환종. 폐결핵 접촉력을 가진 소아에서 잠복 결핵 감염의 진단을 위한 결핵 특이항원 자극 인터페론-감마 측정의 유용성. 소아감염 2008;15:52-8",
+    "양미애 성지연 김소희 은병욱 이진아 최은화 이환종. 20년간(1988-2007) 1개 대학병원에 입원한 소아결핵 환자의 동향. 소아감염 2008;15:59-67",
+    "은병욱. 소아 및 청소년 결핵의 특징. Korean Journal of Pediatrics. 2009;52:513-8",
+    "은병욱. 소아청소년 영역에서의 새로운 항미생물제. 소아감염. 2009;16:6-11",
+    "조은영 은병욱 김남희 이진아 최은화 이환종 최정연. 가와사끼병과 급성 호흡기 바이러스 감염증의 연관성에 관한 연구. Korean J Pediatr 2009;52(11) : 1241-1248",
+    "Choi EH, Kim KH, Kim YJ, Kim JH, Park SE, Lee HJ, Eun BW, Jo DS, Choi KM, Hong YJ. Recommendation for use of the newly introduced pneumococcal protein conjugate vaccines in Korea.",
+    "Baek JH, Seo YB, Choi WS, Kee SY, Jeong HW, Lee HY, Eun BW, Choo EJ, Lee J, Kim SR, Kim YK, Song JY, Wie SH, Lee JS, Cheong HJ, Kim WJ; Transgovernmental Enterprise for Pandemic Influenza in Korea. Guideline on the prevention and control of seasonal influenza in healthcare setting. Korean J Intern Med. 2014 Mar;29(2):265-80",
+    "Kim SY, Kim YK, Eun BW, Kim NH, Kang EK, Lee BS, Lim JS, Lee JA, Kim DH. Evaluation of immunogenicity of the 2008-2009 seasonal influenza vaccines by microneutralization test. Korean J Pediatr. 2012 Dec;55(12):474-80",
+    "Jo DS, Kim JH, Choi EH, Park SE, Kim YJ, Kim YK, Lee J, Eun BW, Lee SY, Lee H, Kim KH, Kim KH; Korean Pediatric Society, Committee on Infectious Diseases. Recommended immunization schedule for children and adolescents: the Korean Pediatric Society, 2013. Korean J Pediatr. 2013 Jun;56(6):231-4",
+    "Song JY, Eun BW, Nahm MH. Diagnosis of pneumococcal pneumonia: current pitfalls and the way forward. Infect Chemother. 2013 Dec;45(4):351-66",
+    "Choi WS, Baek JH, Seo YB, Kee SY, Jeong HW, Lee HY, Eun BW, Choo EJ, Lee J, Kim YK, Song JY, Wie SH, Lee JS, Cheong HJ, Kim WJ; Transgovernmental Enterprise for Pandemic Influenza in Korea. Severe influenza treatment guideline. Korean J Intern Med. 2014 Jan;29(1):132-47",
+    "Kwak YG, Choi JY, Yoo H, Lee SO, Kim HB, Han SH, Choi HJ, Kim YK, Kim SR, Kim TH, Lee H, Chun HK, Kim JS, Eun BW, Koo HS, Cho EH, Uh Y, Lee K; Korean Nosocomial Infections Surveillance System. Korean Nosocomial Infections Surveillance System, Intensive Care Unit Module Report: Summary of Data from July 2013 through June 2014.",
+    "Lee MH, Sung JJ, Eun BW, Cho HK. Survey of Secondary Infections within the Households of Newly Diagnosed Tuberculosis Patients. Pediatr Infect Vaccine. 2015 Apr;22(1):7-15.",
+    "Kang HR, Kim SY, Cha HH, An YM, Park IA, Kang HJ, Eun BW. An Outbreak of Mumps in a High School, Seoul, 2013. Pediatr Infect Vaccine. 2015 Apr;22(1):1-6."
+  ],
+  "언론": [
+    {
+      "targetDate": null,
+      "type": "방송",
+      "text": "글로벌 전염병 경고등, 홍역, 코로나19 대유행 조짐",
+      "url": "https://www.youtube.com/watch?v=p78JUemO8_E",
+      "issuer": "KTV 국군방송 글로벌 인사이트"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "\"폐렴구균 질환 예방. 비백신 혈청형 변화 대응 필요\"",
+      "url": "https://www.docdocdoc.co.kr/news/articleView.html?idxno=3029811",
+      "issuer": "청년의사"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "노원을지대병원 은병욱 교수, 질병관리청 예방접종전문위원회 위원 위촉",
+      "url": "https://health.chosun.com/site/data/html_dir/2025/04/24/2025042401415.html",
+      "issuer": "헬스조선"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "은병욱 교수, 질병관리청 예방접종전문위원회 위원 위촉",
+      "url": "https://www.healthinnews.co.kr/view.php?ud=2025042412175523226aa9cc43d0_48",
+      "issuer": "헬스인뉴스"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "어린 시절 ‘이것’ 반복 노출되면 면역력·뇌 발달 위험 ‘경고등’",
+      "url": "https://kormedi.com/2714040/",
+      "issuer": "코메디닷컴"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "홍역 백신이 자폐증 유발?... 전문가들 근거 無",
+      "url": "https://www.healthinnews.co.kr/view.php?ud=202503171314522503d8d7a7031b_48",
+      "issuer": "헬스인뉴스"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "홍역 원인은 영양실조, 백신은 자폐증 유발?... 전문가들 근거 無",
+      "url": "https://www.yna.co.kr/view/AKR20250315047500530?input=1195m",
+      "issuer": "연합뉴스"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "노로바이러스 감염증 급증…영유아 환자 60% 차지",
+      "url": "https://news.ebs.co.kr/ebsnews/allView/60558762/N",
+      "issuer": "EBS 뉴스"
+    },
+    {
+      "targetDate": null,
+      "type": "방송",
+      "text": "개학 맞물려 코로나19 재유행 '비상'...집단 감염 막으려면?",
+      "url": "https://news.ebs.co.kr/ebsnews/allView/60510911/N",
+      "issuer": "EBS 뉴스12"
+    },
+    {
+      "targetDate": null,
+      "type": "방송",
+      "text": "학교 뚫은 백일해, 환자 92%가 초중고",
+      "url": "https://news.ebs.co.kr/ebsnews/allView/60499435/N",
+      "issuer": "EBS 뉴스12"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "세균성 호흡기 감염병 유행...'마이코플라스마 폐렴' 첫 주의보",
+      "url": "https://n.news.naver.com/article/005/0001706016?sid=103",
+      "issuer": "국민일보"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "노원을지대병원 은병욱 교수, 복지부장관상 수상",
+      "url": "http://www.doctorstimes.com/news/articleView.html?idxno=226966",
+      "issuer": "의사신문"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "노원을지대병원 은병욱 교수, 보건복지부장관상 수상",
+      "url": "https://health.chosun.com/site/data/html_dir/2024/04/30/2024043001950.html",
+      "issuer": "헬스조선"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "노원을지대 소청과 은병욱 교수 감염병 관리 보건복지부장관상 수상",
+      "url": "https://www.segye.com/newsView/20240430508449?OutUrl=naver",
+      "issuer": "세계일보"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "독감 걸리면 꼭 주사 치료제를 맞아야 할까요?",
+      "url": "https://www.hani.co.kr/arti/society/health/1122568.html",
+      "issuer": "경향신문"
+    },
+    {
+      "targetDate": null,
+      "type": "방송",
+      "text": "마이코플라스마 어린이 중심 확산세…\"의심되면 등교중지\"",
+      "url": "https://news.ebs.co.kr/ebsnews/allView/60423085/N",
+      "issuer": "EBS뉴스"
+    },
+    {
+      "targetDate": null,
+      "type": "방송",
+      "text": "호흡기감염병 관계부처 합동 대책반 구성 라이브 브리핑",
+      "url": "https://www.youtube.com/live/Iqm5ekHqEp8?si=UroyHLKfPTU2DbAA",
+      "issuer": "유튜브 KTV정책LIFE"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "독감·감기 연달아 걸린 아이… \"항생제 과해\" vs \"복용 중단이 최악\"",
+      "url": "https://www.segye.com/newsView/20230503514039?OutUrl=naver",
+      "issuer": "세계일보"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "로타 백신 바로 알기",
+      "url": "https://www.joongang.co.kr/article/25151970",
+      "issuer": "중앙일보"
+    },
+    {
+      "targetDate": null,
+      "type": "방송",
+      "text": "오늘부터 영유아 백신접종 시작.. 확진자 수는 감소세",
+      "url": "https://www.yonhapnewstv.co.kr/news/MYH20230213001000641?input=1825m",
+      "issuer": "연합뉴스TV"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "면역 결핍이나 신경,근육질환 등 기저질환 있으면 접종 필요",
+      "url": "https://n.news.naver.com/mnews/article/005/0001583274?sid=103",
+      "issuer": "국민일보"
+    },
+    {
+      "targetDate": null,
+      "type": "방송",
+      "text": "수능 앞두고 현실화한 청소년 트윈데믹.. 예방이 최선",
+      "url": "https://www.yonhapnewstv.co.kr/news/MYH20221111001200640?input=1825m",
+      "issuer": "연합뉴스TV"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "국내도 '트리플데믹' 경고 잇따라.. 코로나도 다시 4만명대",
+      "url": "https://sports.khan.co.kr/bizlife/sk_index.html?art_id=202210251519003&sec_id=561801&pt=nv",
+      "issuer": "스포츠경향"
+    },
+    {
+      "targetDate": null,
+      "type": "방송",
+      "text": "3년만에 호흡감염병 유행 조짐.. '코로나 베이비' 특히 취약",
+      "url": "https://www.mbn.co.kr/news/society/4869638",
+      "issuer": "MBN뉴스"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "실내마스크 단계적으로 벗자. 전문가 10명중 4명 \"개인 자율에 맡겨야\"",
+      "url": "https://view.asiae.co.kr/article/2022102116151201313",
+      "issuer": "아시아경제"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "코로나19 재유행 대응력 높인다",
+      "url": "http://news.heraldcorp.com/view.php?ud=20221017000347",
+      "issuer": "헤럴드경제"
+    },
+    {
+      "targetDate": null,
+      "type": "방송",
+      "text": "올가을 '트윈데믹' 우려... 영유아 보호 더 시급",
+      "url": "https://www.yonhapnewstv.co.kr/news/MYH20220828011000641?input=1825m",
+      "issuer": "연합뉴스TV"
+    },
+    {
+      "targetDate": null,
+      "type": "방송",
+      "text": "확진 어린이 사망 속출 \"고열, 탈수 시 병원부터\"",
+      "url": "https://www.yonhapnewstv.co.kr/news/MYH20220804016200641?input=1825m",
+      "issuer": "연합뉴스TV"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "코로나 잦아든 사이.. 호흡기, 장염바이러스 등 동시유행 조짐",
+      "url": "https://news.kmib.co.kr/article/view.asp?arcid=0924253283&code=14130000&cp=nv",
+      "issuer": "국민일보"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "어린이-청소년 '롱 코비드' 경계령... 10명 중 1명 이상 후유증",
+      "url": "https://news.kmib.co.kr/article/view.asp?arcid=0924245487&code=14130000&cp=nv",
+      "issuer": "국민일보"
+    },
+    {
+      "targetDate": null,
+      "type": "방송",
+      "text": "증상 없어 괜찮다? 소아 롱코비드 \"안심 안 돼\"",
+      "url": "https://imnews.imbc.com/replay/2022/nwdesk/article/6368655_35744.html",
+      "issuer": "MBC 뉴스데스크"
+    },
+    {
+      "targetDate": null,
+      "type": "방송",
+      "text": "5~11세 아동의 60% 코로나 감염... \"후유증 주목해야\"",
+      "url": "https://news.ebs.co.kr/ebsnews/allView/60214645/N",
+      "issuer": "EBS 뉴스"
+    },
+    {
+      "targetDate": null,
+      "type": "방송",
+      "text": "코로나 사태에 소아비만, 키 성장 비상... 당뇨 위험도 커져",
+      "url": "https://www.yonhapnewstv.co.kr/news/MYH20220504015400641?input=1825m",
+      "issuer": "연합뉴스TV 채널23"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "코로나로 소아 비만도 급증, 6~11살 15%가 비만",
+      "url": "https://www.chosun.com/culture-life/health/2022/04/24/3F6BVWUGSNAKLKU6KY4DXOT3FI/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+      "issuer": "조선일보"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "코로나 확진자, 8명 중 1명 후유증 시달려",
+      "url": "https://www.edaily.co.kr/news/read?newsId=03929446632295464&mediaCodeNo=257&OutLnkChk=Y",
+      "issuer": "이데일리"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "코로나 비만 50만명... 매일 1시간 걸으면 한달 뒤 체중 1% 빠진다",
+      "url": "https://www.chosun.com/culture-life/health/2022/04/11/LHPZNHPXXBFZLDCBWQSNN3JJTQ/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+      "issuer": "조선일보"
+    },
+    {
+      "targetDate": null,
+      "type": "방송",
+      "text": "소아 51% 확진, 후두염, 고열성 경련 이어지면 병원가세요",
+      "url": "https://news.kbs.co.kr/news/view.do?ncd=5436193&ref=A",
+      "issuer": "KBS 뉴스"
+    },
+    {
+      "targetDate": null,
+      "type": "방송",
+      "text": "9세 이하 어린이 절반이 확진... 사망자도 15명으로",
+      "url": "https://www.yonhapnewstv.co.kr/news/MYH20220407015000641?did=1825m",
+      "issuer": "연합뉴스TV"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "자율권에 맡겨진 소아백신.. 이상반응 이송체계 확보 시급",
+      "url": "https://biz.newdaily.co.kr/site/data/html/2022/03/25/2022032500101.html",
+      "issuer": "뉴데일리경제"
+    },
+    {
+      "targetDate": null,
+      "type": "방송",
+      "text": "[KBS 뉴스]우리 아이도 고열인데, 소아 감염 증상은?",
+      "url": "https://news.kbs.co.kr/news/view.do?ncd=5410959&ref=A",
+      "issuer": "KBS"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "새학기 아이 신속항원검사",
+      "url": "http://news.kmib.co.kr/article/view.asp?arcid=0924233568&code=14130000&cp=nv",
+      "issuer": "국민일보"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "코로나에 집콕만했던 우리 아이, 또래보다 체중 20% 더 나간다면 '소아비만'",
+      "url": "https://www.fnnews.com/news/202202241916520124",
+      "issuer": "파이낸셜뉴스"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "오미크론, 영유아까지 위협... 생후 4개월, 7세 숨져",
+      "url": "http://news.kmib.co.kr/article/view.asp?arcid=0924233432&code=11132000&cp=nv",
+      "issuer": "국민일보"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "코로나 셀프 재택치료 어떻게",
+      "url": "http://news.kmib.co.kr/article/view.asp?arcid=0924231435&code=14130000&cp=nv",
+      "issuer": "국민일보"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "5차 유행, 소아-청소년 노린다.. 위험도는 7주 만에 하향",
+      "url": "http://news.kmib.co.kr/article/view.asp?arcid=0924226951&code=11132000&cp=nv",
+      "issuer": "국민일보"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "학원 방역패스로 청소년 백신접종 강요 반대",
+      "url": "http://www.doctorstimes.com/news/articleView.html?idxno=217205",
+      "issuer": "의사신문"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "위드 코로나 긴급점검 토론회 개최, 전문가에게 듣는다",
+      "url": "http://www.docdocdoc.co.kr/news/articleView.html?idxno=2017729",
+      "issuer": "청년의사"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "소아청소년 코로나19 백신 접종, 전문가 의견은?",
+      "url": "http://www.doctorsnews.co.kr/news/articleView.html?idxno=141998",
+      "issuer": "의협신문"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "12~17세 자녀 코로나 백신 접종해야 하나..전문가들도 의견 엇갈려",
+      "url": "https://www.dongascience.com/news.php?idx=50636",
+      "issuer": "동아사이언스"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "소아청소년 코로나백신 접종 필요성, 전문가도 의견 엇갈려",
+      "url": "http://www.doctorstimes.com/news/articleView.html?idxno=216839",
+      "issuer": "의사신문"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "다시 맞는 새학기.. 우리 아이 건강 사수하려면",
+      "url": "http://news.khan.co.kr/kh_news/khan_art_view.html?artid=202102261022002&code=900303",
+      "issuer": "경향신문"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "코로나 위생수칙만 지키면 학교 감염 가능성 낮다",
+      "url": "https://www.donga.com/news/article/all/20210225/105601841/1",
+      "issuer": "동아일보"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "3월 등교 앞둔 아이들, 백신접종 시기는?",
+      "url": "http://news.heraldcorp.com/view.php?ud=20210225000396",
+      "issuer": "헤럴드경제"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "다음 주부터 다시 학교 가는 아이들 \"실내에 모여 밥 먹을 때 가장 주의\"",
+      "url": "https://www.chosun.com/culture-life/health/2021/02/25/RRADPIPZNBFMTJQEXNSPGN3MIA/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news",
+      "issuer": "조선일보"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "개학 앞둔 우리 아이, 코로나19 건강 수칙",
+      "url": "https://jhealthmedia.joins.com/article/article_view.asp?pno=23243",
+      "issuer": "중앙일보"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "개학 앞둔 아이들 코로나19 예방 어떻게?",
+      "url": "https://newsis.com/view/?id=NISX20210222_0001347725&cID=13101&pID=13100",
+      "issuer": "뉴시스"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "어린 아이 손소독제 펌핑 조심... 눈에 튈 위험",
+      "url": "http://news.kmib.co.kr/article/view.asp?arcid=0924173477&code=14130000&cp=nv",
+      "issuer": "국민일보"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "집콕하는 아이들 건강 괜찮을까? 운동-영양 신경써야",
+      "url": "https://newsis.com/view/?id=NISX20201231_0001290154&cID=13101&pID=13100",
+      "issuer": "뉴시스"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "무증상, 잠복 감염자 못 찾으면 하루 확진 2000명씩 쏟아진다",
+      "url": "https://www.seoul.co.kr/news/newsView.php?id=20201210002021&wlog_tag3=naver",
+      "issuer": "서울신문"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "코로나에 갇혀사는 아이들.. 건강 지키는 '슬집생'은?",
+      "url": "https://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=103&oid=016&aid=0001767112",
+      "issuer": "헤럴드경제"
+    },
+    {
+      "targetDate": null,
+      "type": "방송",
+      "text": "아이 열나면 무조건 해열제? '복통, 두통 있을 때만'",
+      "url": "https://www.yonhapnewstv.co.kr/news/MYH20191003007700038?did=1825m",
+      "issuer": "연합뉴스TV"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "전염성 강한 여름 불청객, 백신 없어 손씻기 등 예방이 최선",
+      "url": "http://sports.chosun.com/news/ntype.htm?id=201907050100036920002271&servicedate=20190704",
+      "issuer": "스포츠조선"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "올여름도 수족구병 주의보... 30초 손 씻기 기억하세요",
+      "url": "http://www.fnnews.com/news/201906202011450008",
+      "issuer": "파이낸셜뉴스"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "치료법 없는 로타바이러스 장염... 백신으로 예방해야",
+      "url": "http://health.chosun.com/site/data/html_dir/2019/06/17/2019061700823.html",
+      "issuer": "조선일보"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "포근한 날씨 수족구병 주의보, 5세 미만 주목해야 할 증상은?",
+      "url": "https://jhealthmedia.joins.com/article/article_view.asp?pno=20377",
+      "issuer": "중앙일보"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "전염성 강한 수족구병... 예방은 올바른 손 씻기",
+      "url": "https://www.mk.co.kr/news/it/view/2019/04/256588/",
+      "issuer": "매일경제"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "점점 빨라지는 일본뇌염 주의보",
+      "url": "http://news.naver.com/main/read.nhn?mode=LSD&mid=sec&sid1=103&oid=011&aid=0003285659",
+      "issuer": "서울경제"
+    },
+    {
+      "targetDate": null,
+      "type": "방송",
+      "text": "겨울 식중독 노로바이러스 주의",
+      "url": "https://www.youtube.com/watch?v=Zrs-PVZx154",
+      "issuer": "연합뉴스TV"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "일본뇌염 주의보",
+      "url": "http://article.joins.com/news/article/article.asp?total_id=18173766&cloc=olink|article|default",
+      "issuer": "중앙일보"
+    },
+    {
+      "targetDate": null,
+      "type": "방송",
+      "text": "모닝와이드 - 결핵",
+      "url": "http://program.sbs.co.kr/builder/programMainList.do?pgm_id=00000210215",
+      "issuer": "SBS"
+    },
+    {
+      "targetDate": null,
+      "type": "방송",
+      "text": "8시뉴스 - 감염관리",
+      "url": "http://www.kbs.co.kr/2tv/enter/1vs100/index.html",
+      "issuer": "SBS"
+    },
+    {
+      "targetDate": null,
+      "type": "방송",
+      "text": "뉴스Y - 해외유입 감염병 급증",
+      "url": "http://www.yonhapnewstv.co.kr/MYH20140626002700038/",
+      "issuer": "연합뉴스TV"
+    }
+  ],
+  "isAttend": true
+}

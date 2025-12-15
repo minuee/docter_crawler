@@ -1,0 +1,101 @@
+{
+  "doctorId": 14681,
+  "rid_long": "DA7A90AE87AAD0397A7A607AA66FCDEB699298D3DB227E5C716D2E49F6A6A5A9BCB86C3DADF1A27E327514FE3C2FCC0CE9B7EE1C04544209A50B7A8D29FF7AE934CDC77CA33477DC225E0B567A07E843FFD7FD5F8DD8F3B72714E97A532DA26F9FE5741AC8AD8A1BAF905B0EBB24DA93FE1EB55CC631A69B5178DB6BDA659A8A0098565848A115B0174E6E006ED34AD566A658EF55B45F821ED79090DD4587C4A656525FF5113F6ABCC644823774E5C6016B40E595F3CB3B652FD4B35FBA6620",
+  "hospital_cid": 63,
+  "bedoc_id": "A5781",
+  "bedoc_hospitalsite": "https://www.eulji.or.kr/",
+  "bedoc_doctorname": "김동욱",
+  "bedoc_deptname": "혈액종양내과",
+  "bedoc_hospitalname": "의정부을지대병원",
+  "hospital_name": "의정부을지대학교병원",
+  "aiga_hid": "H11KR-31000062",
+  "hospital_site": "https://m.uemc.ac.kr/dept/dept_pg01_03.jsp?dept=ABBGAA&doct=20211531",
+  "site_type": "single",
+  "hospital_addr": "경기도 의정부시 동일로 712, 을지대학교 의정부캠퍼스 및 부속병원 (금오동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://m.uemc.ac.kr/dept/dept_pg01_03.jsp?dept=ABBGAA&doct=20211531&doctorName=%EA%B9%80%EB%8F%99%EC%9A%B1&depthName=%ED%98%88%EC%95%A1%EC%A2%85%EC%96%91%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "doctorSiteUrl": "https://m.uemc.ac.kr/dept/dept_pg01_03.jsp?dept=ABBGAA&doct=20211531",
+  "profileUrl": "http://www.uemc.ac.kr/upload/doctor/20211531_20231116081131.png",
+  "isAttend": true,
+  "specialty": "만성혈액암, 최첨단 표적항암치료,백혈구 증가증",
+  "학력": [
+    {
+      "date": "1985",
+      "content": "가톨릭대학교 의과대학 의학과 학사"
+    },
+    {
+      "date": "1992",
+      "content": "가톨릭대학교 대학원 의학과 석사"
+    },
+    {
+      "date": "11996",
+      "content": "가톨릭대학교 대학원 의학과 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1985 - 1986",
+      "content": "가톨릭중앙의료원 인턴"
+    },
+    {
+      "date": "1986 - 1989",
+      "content": "가톨릭중앙의료원 내과 레지던트"
+    },
+    {
+      "date": "1992 - 1994",
+      "content": "가톨릭대학교 성모병원 내과 임상강사"
+    },
+    {
+      "date": "1994 - 1994",
+      "content": "삼성서울병원 내과 전문의"
+    },
+    {
+      "date": "1997 - 1999",
+      "content": "Fred Hutchison Cancer Research Center 교환교수"
+    },
+    {
+      "date": "2003 - 2012",
+      "content": "가톨릭의과대학교 분자유전학연구소장"
+    },
+    {
+      "date": "2011 - 2015",
+      "content": "가톨릭의과대학교 암연구소장"
+    },
+    {
+      "date": "2012 - 2016",
+      "content": "가톨릭의과대학교 혈액내과 학과장"
+    },
+    {
+      "date": "2012 - 2017",
+      "content": "서울성모병원 암병원 연구부장"
+    },
+    {
+      "date": "2015 - 2017",
+      "content": "서울성모병원 혈액내과분과장"
+    },
+    {
+      "date": "2015 - 2021",
+      "content": "가톨릭의과대학교 백혈병연구소장"
+    },
+    {
+      "date": "2017 - 2018",
+      "content": "서울성모병원 BMT 센터장"
+    },
+    {
+      "date": "2018 - 2021",
+      "content": "가톨릭혈액병원장"
+    },
+    {
+      "date": "2021 - 현재",
+      "content": "을지대학교 의과대학 내과학교실 교수"
+    },
+    {
+      "date": "2021 - 현재",
+      "content": "을지대학교 백혈병오믹스연구소장"
+    }
+  ]
+}

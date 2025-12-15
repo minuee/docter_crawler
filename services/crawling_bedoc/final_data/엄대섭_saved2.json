@@ -1,0 +1,78 @@
+{
+  "doctorId": 14893,
+  "rid_long": "91B1B44D789F12CC28BC6F972D6FB2D71B77223FA38A1801E73834C46C6293A9AEC12ECBDA838C01E1B1CE5518DDA66291475F466573BD11F45F9B2973CBCD3D46A7B64AD5CD06BB2263B702AAB9418ADB4921D3585188DC653C10C970D843CCFE3D4A1A80AE81C296325D0FAD084897BEAE849D21430449BBFAA0D9E6CBCC22A389B6266689DBB9A86113C811E485D9",
+  "hospital_cid": 338,
+  "bedoc_id": "A8233",
+  "bedoc_hospitalsite": "http://barobone.kr",
+  "bedoc_doctorname": "엄대섭",
+  "bedoc_deptname": "정형외과",
+  "bedoc_hospitalname": "대구바로본병원",
+  "hospital_name": "의료법인 대명의료재단 서대구병원",
+  "aiga_hid": "H21KR-23000021",
+  "hospital_site": "https://www.sdg-hosp.com/page/sub01_3",
+  "site_type": "list",
+  "hospital_addr": "대구광역시 서구 국채보상로 200, (평리동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.sdg-hosp.com/page/sub01_3?doctorName=%EC%97%84%EB%8C%80%EC%84%AD&depthName=%EC%A0%95%ED%98%95%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_ocr",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": null,
+  "specialty": null,
+  "학력": [
+    {
+      "date": null,
+      "content": "경북대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "경북대학교 의과대학원 의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "경북대학교병원 정형외과 전공의 수료"
+    },
+    {
+      "date": null,
+      "content": "경북대학교병원 정형외과 전문의"
+    },
+    {
+      "date": null,
+      "content": "경북대학교병원 정형외과 임상교수"
+    },
+    {
+      "date": null,
+      "content": "미국 워싱턴 주립대학교 정형외과 교환교수"
+    },
+    {
+      "date": null,
+      "content": "바로본병원 병원장"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한정형외과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한고관절학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한슬관절학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한골절학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한스포츠의학회 정회원"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "doctorId": 15012,
+  "rid_long": "45BF625FAFE6E8F789E5380D214D3EC95CD76E480BA2BC2C8AD96EBD31DD9BC4332E0DB53AFBA53CEC51B73C337B9ADB5EFFAFD9757CC41CAC30A3A893D362936C10A10A41E757D23266A059CEDD207D9B1549FD4BABB00AB51C304E288D506B3859DAB71B6D58EABF40B83209DCBD40F7C203C558F5EB9DE0FBDBCB4FA02958",
+  "hospital_cid": 483,
+  "bedoc_id": "A8170",
+  "bedoc_hospitalsite": "https://daegu.dsmc.or.kr:49880/",
+  "bedoc_doctorname": "이형",
+  "bedoc_deptname": "신경과",
+  "bedoc_hospitalname": "계명대동산병원",
+  "hospital_name": "이형신경과의원",
+  "aiga_hid": "H31KR-23001596",
+  "hospital_site": "http://lhneurology.com/doc/doctor2.php",
+  "site_type": "single",
+  "hospital_addr": "대구광역시 수성구 달구벌대로 2362, 6층 (수성동3가)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "http://lhneurology.com/doc/doctor2.php?doctorName=%EC%9D%B4%ED%98%95&depthName=%EC%8B%A0%EA%B2%BD%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "http://lhneurology.com/images/sub/intro2-img_240129.png",
+  "specialty": "신경과",
+  "학력": [
+    {
+      "date": null,
+      "content": "계명대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "계명대학교 대학원 의학 석사, 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "계명대학교 동산병원 신경과 전문의 자격 취득"
+    },
+    {
+      "date": null,
+      "content": "계명대학교 동산병원 신경과 교수 및 신경과 과장"
+    },
+    {
+      "date": null,
+      "content": "계명대학교 동산병원 진료 부원장"
+    },
+    {
+      "date": null,
+      "content": "계명대학교 동산의료원 경영전략처장"
+    },
+    {
+      "date": null,
+      "content": "계명대학교 동산의료원 뇌연구소 소장"
+    },
+    {
+      "date": null,
+      "content": "계명대학교 동산의료원 새의료원 이전추진기획본부장"
+    },
+    {
+      "date": null,
+      "content": "미국 UCLA 대학병원 신경과 방문교수"
+    },
+    {
+      "date": null,
+      "content": "캐나다 UBC 대학병원 신경과 방문교수"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한민국의학한림원(의학분야 최고 석학 단체) 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한평형의학회(어지럼증  관련 전국 학회) 회장"
+    },
+    {
+      "date": null,
+      "content": "대한안신경의학회(어지럼증  관련 전국 학회) 회장"
+    },
+    {
+      "date": null,
+      "content": "대한평형의학회 20주년 편찬 위원장"
+    },
+    {
+      "date": null,
+      "content": "대한신경과학회 대구경북지회 회장"
+    },
+    {
+      "date": null,
+      "content": "대구경북 어지럼증 연구회 회장"
+    },
+    {
+      "date": null,
+      "content": "대한통증자율신경학회 이사"
+    },
+    {
+      "date": null,
+      "content": "대구광역시의사회 학술 이사"
+    }
+  ]
+}

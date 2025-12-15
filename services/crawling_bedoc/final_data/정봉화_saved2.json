@@ -1,0 +1,90 @@
+{
+  "doctorId": 15045,
+  "rid_long": "4647320508EDA6CD9B1E8852AD3CE61F0AEA136E8B955EEF4D52795CD9D87E86F97736FD3A75D47694C20A13E01A3381C5C6781426AB8E66D4C78A84F8A9385091EE8A126D69F4AB12015AC06CD4B48AF0960F1708013AF80CFDAD1E84F901F760EB53AFEADC50CBB752DD19CDA6A651A512A9BCE06A52915CA6729EF9866EF4FAFB1564AC84957CFAD32A083025EFC5",
+  "hospital_cid": 527,
+  "bedoc_id": "A0207",
+  "bedoc_hospitalsite": "http://kangnam.hallym.or.kr",
+  "bedoc_doctorname": "정봉화",
+  "bedoc_deptname": "외과",
+  "bedoc_hospitalname": "강남성심병원",
+  "hospital_name": "강남성심병원",
+  "aiga_hid": "H11KR-11000040",
+  "hospital_site": "https://kangnam.hallym.or.kr/ptm207.asp?Doctor_Id=277",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 영등포구 신길로 1, (대림동, 강남성심병원)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://kangnam.hallym.or.kr/ptm207.asp?Doctor_Id=277&doctorName=%EC%A0%95%EB%B4%89%ED%99%94&depthName=%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "학력": [
+    {
+      "date": "1975.03 ~ 1981.02",
+      "content": "중앙대학교 제1캠퍼스 의학 졸업"
+    },
+    {
+      "date": "1983.03 ~ 1985.02",
+      "content": "중앙대학교 제1캠퍼스 대학원 의학석사 졸업"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1981.03 ~ 1982.02",
+      "content": "중앙대학교의과대학부속 용산병원 인턴"
+    },
+    {
+      "date": "1982.03 ~ 1986.02",
+      "content": "중앙대학교의과대학부속 용산병원 외과 전공의"
+    },
+    {
+      "date": "1985.05 ~ 1989.04",
+      "content": "국군수도병원 의무실 군의관"
+    },
+    {
+      "date": "1986.05 ~ 1987.04",
+      "content": "해군해병2사단 의무중대 외과 군의관(공중보건의)"
+    },
+    {
+      "date": "1996 ~ 1997",
+      "content": "Duke University Hospital (USA) 연구원 내분비종양 치료(유방암의 면역학적 치료)"
+    },
+    {
+      "date": null,
+      "content": "한림대학교 의과대학 교수"
+    },
+    {
+      "date": null,
+      "content": "한림대강남성심병원 외과 과장 역임"
+    },
+    {
+      "date": null,
+      "content": "한림대강남성심병원 진료심의사인검토 위원장"
+    },
+    {
+      "date": null,
+      "content": "한림대강남성심병원 외과 교수"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한외과학회"
+    },
+    {
+      "date": null,
+      "content": "대한유방암학회"
+    },
+    {
+      "date": null,
+      "content": "대한내분비학회 회원"
+    },
+    {
+      "date": null,
+      "content": "제11차 세계유방초음파 학술대회 조직위원회 자문위원"
+    }
+  ],
+  "specialty": "유방암, 갑상선암, 유방암·갑상선암 검진, 유방갑상선 양성질",
+  "profileUrl": "https://kangnam.hallym.or.kr/CHPFile/treatment/B_20210812_12102113_b_1.png",
+  "isAttend": true
+}

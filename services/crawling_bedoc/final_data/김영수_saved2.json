@@ -1,0 +1,98 @@
+{
+  "doctorId": 14713,
+  "rid_long": "D95B5982DC35E07C3B1838EAD894030475708CD4C3748F9544DA76BA298F13BEF97736FD3A75D47694C20A13E01A338156683CFF7C91E75199A866530DFE1E1D08CA9E62F0C680274C810C5C2B2F71197592A975A89D9E3C5287A3EFED1F69644BCC20DC9B57A788EB6D10D2D63AB19954D70CA0ECB86F2DE3743CF3340E9E388B71BA7F7AB29191F0CFB7727351F722016B40E595F3CB3B652FD4B35FBA6620",
+  "hospital_cid": 105,
+  "bedoc_id": "A0373",
+  "bedoc_hospitalsite": "http://dongtan.hallym.or.kr/",
+  "bedoc_doctorname": "김영수",
+  "bedoc_deptname": "신경외과",
+  "bedoc_hospitalname": "동탄성심병원",
+  "hospital_name": "한림대학교동탄성심병원",
+  "aiga_hid": "H11KR-31000063",
+  "hospital_site": "https://dongtan.hallym.or.kr/ptm207.asp?Doctor_Id=2960",
+  "site_type": "single",
+  "hospital_addr": "경기도 화성시 큰재봉길 7, (석우동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://dongtan.hallym.or.kr/ptm207.asp?Doctor_Id=2960&doctorName=%EA%B9%80%EC%98%81%EC%88%98&depthName=%EC%8B%A0%EA%B2%BD%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "학력": [
+    {
+      "date": "1976.03 ~ 1982.02",
+      "content": "연세대학교 의과대학"
+    },
+    {
+      "date": "1984.09 ~ 1990.08",
+      "content": "연세대학교 의과대학 대학원 석사"
+    },
+    {
+      "date": "1991.09 ~ 1995.08",
+      "content": "연세대학교 의과대학 대학원 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1990.05 ~ 1992.02",
+      "content": "연세대학교 의과대학 연구강사"
+    },
+    {
+      "date": "1992.03 ~ 1994.02",
+      "content": "한양대학교 의과대학 전임강사"
+    },
+    {
+      "date": "1994.03 ~ 2000.02",
+      "content": "한양대학교 의과대학 조교수"
+    },
+    {
+      "date": "2000.03 ~ 2005.02",
+      "content": "한양대학교 의과대학 부교수"
+    },
+    {
+      "date": "2005.03 ~ 2023.02",
+      "content": "한양대학교 의과대학 정교수"
+    }
+  ],
+  "학술": [],
+  "수상": [],
+  "논문": [],
+  "언론": [
+    {
+      "date": "2024.08.14",
+      "content": "맞춤형 뇌심부자극술이 파킨슨병 치료효과 높인다"
+    },
+    {
+      "date": "2024.03.23",
+      "content": "“잃어버린 8년 되찾아” 약발 안 먹히는 파킨슨병, 맞춤 수술로 극복"
+    },
+    {
+      "date": "2023.06.21",
+      "content": "“엄마 왜 이렇게 손을 떨어”...행동 느려진 노인들, 노화 문제가 아니다?"
+    },
+    {
+      "date": "2023.03.13",
+      "content": "한림대동탄성심병원, 파킨슨병 수술 권위자 김영수 교수 초빙...국내 최다 난치성 통증 수술 시행"
+    },
+    {
+      "date": "2023.03.13",
+      "content": "“뇌신경질환 치료 선도해 환자 삶의 질 높일 것”"
+    },
+    {
+      "date": null,
+      "content": "[씩씩TV]파킨슨병 환자는 00약 반드시 피해야 한다? 파킨슨병의 치료와 수술"
+    },
+    {
+      "date": null,
+      "content": "[씩씩TV]반드시 병원에 가야 하는 파킨슨병 의심증상은? 뇌졸중, 치매와 차이점"
+    },
+    {
+      "date": null,
+      "content": "[건강정보]뇌심부자극술로 치료할 수 있다?! 신경이 노화하는 파킨슨병, 빠른 진단과 치료가 중요해요!"
+    }
+  ],
+  "저서": [],
+  "profileUrl": "https://dongtan.hallym.or.kr/CHPFile/treatment/H_20230310105054_12107117_a_1.PNG",
+  "specialty": "정위기능,파킨슨병, 이상운동질환,손떨림, 얼굴떨림, 뇌전증, 삼차신경통, 난치성 통증, 두통, 방사선수술, 뇌종양, 척추전이종양",
+  "isAttend": true
+}

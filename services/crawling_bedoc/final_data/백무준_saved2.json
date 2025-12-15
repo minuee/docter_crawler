@@ -1,0 +1,160 @@
+{
+  "doctorId": 14828,
+  "rid_long": "7CA916F7DF552AA0AB21590A7CD21EAE3089D9D59C9EB4F5A624D9AA5209081C1AA444DE3C0CCDF1C258E4466A95F1ED19099B497F9485D13A85C927454A33F22C044219ABE525D8C9FAEA4643E3045AB540010708B73A4CEA09E9D4865537778E275C43AF0DBAC901567B45B95E6865D837B98D2CF3273179DCDF98A03A22A010A3B6522C96659A86CD6A52C3CBD43D7D3B102FDB4BAA89C4BC7BD02ECB3C6F",
+  "hospital_cid": 263,
+  "bedoc_id": "A5153",
+  "bedoc_hospitalsite": "http://www.schmc.ac.kr/cheonan/kor/index.do",
+  "bedoc_doctorname": "백무준",
+  "bedoc_deptname": "외과",
+  "bedoc_hospitalname": "순천향대천안병원",
+  "hospital_name": "순천향대학교 천안병원",
+  "aiga_hid": "H11KR-34000003",
+  "hospital_site": "https://www.schmc.ac.kr/cheonan/doctr/home.do?key=2945&doctrNo=970",
+  "site_type": "single",
+  "hospital_addr": "충청남도 천안시 동남구 순천향6길 31,  5동 (봉명동,순천향대학교병원)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.schmc.ac.kr/cheonan/doctr/home.do?key=2945&doctrNo=970&doctorName=%EB%B0%B1%EB%AC%B4%EC%A4%80&depthName=%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "specialty": "대장암, 직장암, 대장암클리닉·복강경수술",
+  "profileUrl": "https://www.schmc.ac.kr/attach/DATA/doctr/coco_1685.png",
+  "학력": [
+    {
+      "date": null,
+      "content": "순천향대학교 의과대학"
+    },
+    {
+      "date": null,
+      "content": "충남대학교 대학원(석사)"
+    },
+    {
+      "date": null,
+      "content": "순천향대학교 대학원(박사)"
+    }
+  ],
+  "경력": [
+    {
+      "date": "2024 ~ 현재",
+      "content": "순천향대학교 의과대학장"
+    },
+    {
+      "date": "2018 ~ 2023",
+      "content": "순천향대학교 부속 천안병원 연구부원장"
+    },
+    {
+      "date": "2017 ~ 현재",
+      "content": "보건복지부 보건의료기술연구개발사업 질환극복기술개발 대상과제 연구책임자"
+    },
+    {
+      "date": "2015",
+      "content": "세계 3대 인명사전 '마르퀴즈 후즈 후' 등재"
+    },
+    {
+      "date": null,
+      "content": "순천향의생명연구원(SIMS) 임상연구실장"
+    },
+    {
+      "date": "2015 ~ 현재",
+      "content": "2014 : 대한대장항문학회 사노피-아벤티스 학술상 수상"
+    },
+    {
+      "date": "2012 ~ 2017",
+      "content": "순천향대학교 부속 천안병원 임상의학연구소 소장"
+    },
+    {
+      "date": "2012 ~ 현재",
+      "content": "순천향대학교 부속 천안병원 암센터 소장"
+    },
+    {
+      "date": "2012",
+      "content": "대한대장항문학회 로슈학술상 수상"
+    },
+    {
+      "date": "2010 ~ 2012",
+      "content": "순천향대학교 부속 천안병원 암센터 조정실장"
+    },
+    {
+      "date": "2010 ~ 2017",
+      "content": "순천향대학교 부속 천안병원 외과 과장"
+    },
+    {
+      "date": "2009",
+      "content": "대한대장항문학회 우수논문상 수상"
+    },
+    {
+      "date": "2007",
+      "content": "대한대장항문학회 지원 연구비 수상"
+    }
+  ],
+  "학술": [
+    {
+      "date": "2023 ~ 2024",
+      "content": "한국정맥경장영양학회(KSPEN) 이사장"
+    },
+    {
+      "date": "2024 ~ 2025",
+      "content": "대한대장항문학회 부회장"
+    },
+    {
+      "date": "2018 ~ 2020",
+      "content": "외과대사영양학회 편집위원장"
+    },
+    {
+      "date": "2012 ~ 2022",
+      "content": "대한종양외과학회 편집위원장"
+    },
+    {
+      "date": "2016 ~ 2018",
+      "content": "대한외과학회 교과서 편찬위원회 위원"
+    },
+    {
+      "date": "2008 ~ 2016",
+      "content": "대한외과학회 편집위원회 간사"
+    },
+    {
+      "date": "2017 ~ 2020",
+      "content": "대한대장항문학회 편집위원장"
+    },
+    {
+      "date": "2007 ~ 2017",
+      "content": " 대한대장항문학회 편집간사"
+    },
+    {
+      "date": "현재",
+      "content": "대한임상종양학회 평생회원"
+    },
+    {
+      "date": "현재",
+      "content": "현미국대장직장외과학회 정회원"
+    },
+    {
+      "date": "현재",
+      "content": "생화학분자생물학회 정회원"
+    },
+    {
+      "date": "현재",
+      "content": "대한외과학회 정회원"
+    }
+  ],
+  "논문": [
+    "Preoperative neutrophil-lymphocyte ratio and CEA is associated with poor prognosis in patients with synchronous colorectal cancer liver metastasis (ANNALS OF SURGICAL TREATMENT AND RESEARCH, 2019)",
+    "Defensin alpha 6 (DEFA6) is a prognostic marker in colorectal cancer (CANCER BIOMARKERS, 2019)",
+    "Promotion of tumor progression and cancer stemness by MUC15 in thyroid cancer via the GPCR/ERK and integrin-FAK signaling pathways (ONCOGENESIS, 2018)",
+    "RhoA is associated with invasion and poor prognosis in colorectal cancer. International journal of oncology 48.2 (2016): 714-722.",
+    "Cyr61 expression is associated with prognosis in patients with colorectal cancer. BMC cancer 14.1 (2014): 164.",
+    "Prospective multicenter phase II clinical trial of FOLFIRI chemotherapy as a neoadjuvant treatment for colorectal cancer with multiple liver metastases(Journal of the Korean Surgical Society, 85(4))"
+  ],
+  "언론": [
+    {
+      "date": "2012.10.25",
+      "content": "(충청투데이) 50세 넘으면 2년에 한번 내시경검사 필수[대장암]"
+    },
+    {
+      "date": "2014.11.27",
+      "content": "(중앙일보) 변비나 설사 오래가고 배가 자주 아플 땐 대장암 의심해 봐야"
+    }
+  ]
+}

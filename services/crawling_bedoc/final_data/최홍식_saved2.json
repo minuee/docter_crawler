@@ -1,0 +1,80 @@
+{
+  "doctorId": 15128,
+  "rid_long": "11B3FEAA626095C5FA680ECF442F12E919723E90697D43A9A25F822821DE39B72EA70B341B777F64E5FB521D9923013C5BA87E4025CC44A193AC4E29E4A4A44D8D634F32DBAD0B2C1522CE86A5AACD5748053E953AF49BEEEB719D5713BB45B68916C24EB975B9877FB92FCA5CFEF0FEEE03C14649303E60B98903FA0A1C5A2E29BD97F65235A9DD8BCC4B146CA584CF2ABAD065483283B92095A6E094CFF7AA016B40E595F3CB3B652FD4B35FBA6620",
+  "hospital_cid": 627,
+  "bedoc_id": "A8208",
+  "bedoc_hospitalsite": "http://www.hanaent.co.kr",
+  "bedoc_doctorname": "최홍식",
+  "bedoc_deptname": "이비인후과",
+  "bedoc_hospitalname": "하나이비인후과병원",
+  "hospital_name": "제일이비인후과",
+  "aiga_hid": "H31KR-11008664",
+  "hospital_site": "https://www.jeilent.com/home/homepage.php?homefile=s0102.html",
+  "site_type": "popup",
+  "hospital_addr": "서울특별시 강남구 논현로131길 23, 지상2층, 3층, 4층, 5층 (논현동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.jeilent.com/home/homepage.php?homefile=s0102.html&doctorName=%EC%B5%9C%ED%99%8D%EC%8B%9D&depthName=%EC%9D%B4%EB%B9%84%EC%9D%B8%ED%9B%84%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "학력": [
+    {
+      "date": "1978",
+      "content": "연세의대 졸업"
+    }
+  ],
+  "경력": [
+    {
+      "date": "2019",
+      "content": "연세의대 교수(2019 정년퇴임)"
+    },
+    {
+      "date": null,
+      "content": "강남세브란스병원 이비인후과장 역임"
+    },
+    {
+      "date": "1991-93",
+      "content": "미국 UCLA 후두생리연구소 교환교수"
+    },
+    {
+      "date": null,
+      "content": "EBS 명의 2회 선정: 후두질환(2007, 국내 이비인후과 1호), 후두암(2012)"
+    },
+    {
+      "date": null,
+      "content": "대통령 이비인후과분야 자문의(김대중, 박근혜 대통령)"
+    },
+    {
+      "date": null,
+      "content": "(사)세종대왕기념사업회 회장"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한후두음성언어의학회 회장 역임"
+    },
+    {
+      "date": null,
+      "content": "대한이비인후과학회 이사장 역임"
+    },
+    {
+      "date": null,
+      "content": "대한이비인후과 학술지 편집위원장 역임"
+    }
+  ],
+  "저서": [
+    {
+      "date": "2020",
+      "content": "목소리면역학"
+    },
+    {
+      "date": "2019",
+      "content": "음성언어의학"
+    }
+  ],
+  "논문": [],
+  "profileUrl": "https://www.jeilent.com/home/skin/gaga_basic_skin/image/sub/doc_detail-profile04.jpg",
+  "specialty": "음성질환, 후두암, 갑상선암, 인후두역류질환,연축성발성장애, 후두협착, 언어장애"
+}

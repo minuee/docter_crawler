@@ -1,0 +1,63 @@
+{
+  "doctorId": 15105,
+  "rid_long": "F8F13998B181AAF122DA5F8CA8F47199D00988EF3C7B60BE84F6DEDA730895A9C33E7E21595753F697D715DBBFC49F3F430B7D6C7B10321E97C16233BCBEC5F29FC5C996A4D9CD18FC7E93457B881BFBD027F0B35DA56AD47A2A9CA21972BF6E58BF602EBCA8F7AEB27614E74F71DC7847EB604CB79D7350F9B6C9F51E67A470FE8B68CAA77C0237F2A9A37B8BF8156DFD99B584B62122BF9888AB9EC79E014B",
+  "hospital_cid": 603,
+  "bedoc_id": "A8117",
+  "bedoc_hospitalsite": "http://yuseongsunhospital.com/main/",
+  "bedoc_doctorname": "최민석",
+  "bedoc_deptname": "순환기내과",
+  "bedoc_hospitalname": "유성선병원",
+  "hospital_name": "유성선병원",
+  "aiga_hid": "H11KR-25000006",
+  "hospital_site": "https://www.yuseongsunhospital.com/doctors/?bid=4984",
+  "site_type": "single",
+  "hospital_addr": "대전광역시 유성구 북유성대로 93-0,  0동 0호 (지족동,유선성병원)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.yuseongsunhospital.com/doctors/?bid=4984&doctorName=%EC%B5%9C%EB%AF%BC%EC%84%9D&depthName=%EC%88%9C%ED%99%98%EA%B8%B0%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "학력": [
+    {
+      "content": "가톨릭대학교 의과대학원 졸업"
+    }
+  ],
+  "경력": [
+    {
+      "content": "서울성모병원  내과(심장) 임상교수"
+    }
+  ],
+  "학술": [
+    {
+      "content": "미국 부정맥학회 회원"
+    },
+    {
+      "content": "일본부정맥 학회 회원"
+    },
+    {
+      "content": "유럽부정맥학회 회원"
+    },
+    {
+      "content": "대한내과학회 정회원"
+    },
+    {
+      "content": "대한심장학회 정회원"
+    },
+    {
+      "content": "심혈관중재학회 정회원"
+    },
+    {
+      "content": "대한 부정맥연구회 회원"
+    }
+  ],
+  "언론": [
+    {
+      "content": "유성선병원, 최신 '심방세동 펄스장 절제술(PFA)' 도입으로 심방세동 치료 강화"
+    },
+    {
+      "content": "유성선병원 심장부정맥센터, 리드미아 국내 최초 정식 도입"
+    }
+  ],
+  "specialty": "부정맥, 실신, 돌연사, 심부전, 고혈압",
+  "isAttend": true
+}

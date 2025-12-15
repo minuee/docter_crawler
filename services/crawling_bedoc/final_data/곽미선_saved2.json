@@ -1,0 +1,76 @@
+{
+  "doctorId": 14649,
+  "rid_long": "902491907B8C66516BEA66CC711F261579901E1DFAB30D7282F93C8FADCD89CF7CBB0CEACB5C1C66C1BD4133D10A0D59C82AE004976A6B2E85879D2C525D1B93E36A1E06327A9AA4C727675E78F3BB8E6A7253110562E693478DD396E7B0986086DEEBD3B93ADFC4F63CD95BBF154B1DD5BBECD9F761C618E00578D08BDD7F7739C05FC33A1528169AD811E2AE142246ECC48FDC56DDF8F487DFFAB226F4E203DC05175A8B20DCA3297B371BFA68905E016B40E595F3CB3B652FD4B35FBA6620",
+  "hospital_cid": 22,
+  "bedoc_id": "A0516",
+  "bedoc_hospitalsite": "http://www.fatima.or.kr",
+  "bedoc_doctorname": "곽미선",
+  "bedoc_deptname": "안과",
+  "bedoc_hospitalname": "대구파티마병원",
+  "hospital_name": "대구파티마병원",
+  "doctorName": "곽미선",
+  "department": "안과",
+  "aiga_hid": "H11KR-23000009",
+  "hospital_site": "https://www.fatima.or.kr/main/doctor/view.do?md_idx=78&doctor_code=103806&mp_idx=30&part_code=2120000000",
+  "site_type": "single",
+  "hospital_addr": "대구광역시 동구 아양로 99, (신암동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.fatima.or.kr/main/doctor/view.do?md_idx=78&doctor_code=103806&mp_idx=30&part_code=2120000000&doctorName=%EA%B3%BD%EB%AF%B8%EC%84%A0&depthName=%EC%95%88%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "학력": [
+    {
+      "date": "1990",
+      "content": "경북대학교 의과대학 의학과 의학사"
+    },
+    {
+      "date": "1992",
+      "content": "경북대학교 대학원 의학과 안과학 의학석사"
+    },
+    {
+      "date": "1998",
+      "content": "경북대학교 대학원 의학과 안과학 의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1995",
+      "content": "경북대학교병원 안과 전문의"
+    },
+    {
+      "date": "1995.3.2~현재",
+      "content": "대구파티마병원 안과 과장"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한안과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한안성형학회 정회원"
+    }
+  ],
+  "논문": [
+    "누기수술의 임상적 경험",
+    "선천성 비루관 폐쇄에 대한 단계별 치료의 효과",
+    "Medpor Barrier Sheet Implant를 이용한 안와골절정복술의 임상 경험",
+    "누구 접근법을 이용한 단독 안와내벽골절정복술 외 다수",
+    "누기수술의 임상적 경험",
+    "선천성 비루관 폐쇄에 대한 단계별 치료의 효과",
+    "Medpor(R) Barrier Sheet Implant 를 이용한 안와골절 정복술의 임상경험",
+    "누구접근법을 이용한 단독안와내벽골절정복술",
+    "안와에 국한된 사르코이드증 1예"
+  ],
+  "언론": [
+    {
+      "date": "2025.03.04",
+      "content": "전문의 장기근속자 표창패 수여식"
+    }
+  ],
+  "specialty": "안성형,누기,안와,백내장",
+  "profileUrl": "https://www.fatima.or.kr/data/doctor/103806_2.png",
+  "isAttend": true
+}

@@ -1,0 +1,68 @@
+{
+  "doctorId": 14981,
+  "rid_long": "D1CD1413CF72FD0BC0C9326B75D06AA22C061C30B6C63DE85C4AC43B07F796FD7C7DEF9EA433BFEDAB661F0B8AD3C57991475F466573BD11F45F9B2973CBCD3D47821268262A9C86645314E55EE994C61AB92625B4480D718A39BB69D45B9805B6F13D5067531A45014F29824A6AD17957136D9B3655B1343FDBFD0E7159B3EA02EA4AE7DC04004B64779D967904A5B0D9F827ECC0F379003D7A98D37F8D7A4C",
+  "hospital_cid": 444,
+  "bedoc_id": "A8216",
+  "bedoc_hospitalsite": "http://www.rheuma.co.kr/map.htm",
+  "bedoc_doctorname": "이인홍",
+  "bedoc_deptname": "류마티스내과",
+  "bedoc_hospitalname": "한양대 류마티스 병원 자매의원",
+  "hospital_name": "한양대 류마티스 병원 자매의원",
+  "aiga_hid": "H31KR-11010390",
+  "hospital_site": "http://rheuma.co.kr/info_hospital.htm",
+  "site_type": "list",
+  "hospital_addr": "서울시 강동구 성내동 416-6 심포니 타워5층",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "http://rheuma.co.kr/info_hospital.htm?doctorName=%EC%9D%B4%EC%9D%B8%ED%99%8D&depthName=%EB%A5%98%EB%A7%88%ED%8B%B0%EC%8A%A4%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_ocr",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": null,
+  "specialty": "류마티스내과",
+  "학력": [
+    {
+      "date": "1985",
+      "content": "한양대학교 의과대학 졸업"
+    },
+    {
+      "date": "1992",
+      "content": "내과 전문의 (한양대학교 병원)"
+    },
+    {
+      "date": "1994",
+      "content": "류마티스 내과 분과 전문의 (한양대 류마티스병원)"
+    },
+    {
+      "date": "1994",
+      "content": "한양대학교 의과대학 의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1997~1999",
+      "content": "미국 뉴욕, 코넬 의대 류마티스 전문병원 (HSS)수료"
+    },
+    {
+      "date": "1994~2000.9.1",
+      "content": "한양대학교 구리병원 류마티스 내과장"
+    },
+    {
+      "date": "1999~2001.2",
+      "content": "한양대학교 부설 류마티즘연구소 제 3연구실장"
+    },
+    {
+      "date": "1996 ~ 현재",
+      "content": "미국 류마티스 학회 정회원"
+    },
+    {
+      "date": "1996~2001.2",
+      "content": "류마티스 내과 교수(한양대 류마티스 병원)"
+    },
+    {
+      "date": "2001.2 ~ 현재",
+      "content": "한양 류마티스 클리닉 원장, 한양대 류마티스 내과 외래 교수"
+    }
+  ]
+}

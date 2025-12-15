@@ -1,0 +1,410 @@
+{
+  "doctorId": 14695,
+  "rid_long": "681A7273BD88BE5172549A8A1367EA94C7A531296AF209D505158776CF4C0A7471A7B68C22BE1DE575712FAC14B66D44DE5DBAE336C11FBCCF05D22392C41C77C0E847F357FFE7D740F96CD7AECA3CA707970AA435C97AD73D18D7767DA347F57B06B36AFE8F7F732306A661D6292BA034349995A335F76E04D71AE7ECE1250C92A2202887AECC92B2A3711FE636A90D8D426F339DA65453D82FC113123C8C7C84AD3555704E667A7B18DB79AC6218C0C2D2F63B2819CC5AE7A37297DDC0F163FF11036F9C934DE0337DD94BEE1A3D7634E087CA22ECC82E170C09B09BCE9580",
+  "hospital_cid": 82,
+  "bedoc_id": "A5236",
+  "bedoc_hospitalsite": "http://www.brmh.org",
+  "bedoc_doctorname": "김상현",
+  "bedoc_deptname": "순환기/심장내과",
+  "bedoc_hospitalname": "서울보라매병원",
+  "hospital_name": "서울특별시보라매병원",
+  "aiga_hid": "H11KR-11000019",
+  "hospital_site": "https://www.brmh.org/custom/popup/layer_doctor_view.do?dt_no=339&medi_code=001016000%7C001016000",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 동작구 보라매로5길 20, (신대방동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.brmh.org/custom/popup/layer_doctor_view.do?dt_no=339&medi_code=001016000%7C001016000&doctorName=%EA%B9%80%EC%83%81%ED%98%84&depthName=%EC%88%9C%ED%99%98%EA%B8%B0%2F%EC%8B%AC%EC%9E%A5%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "http://www.brmh.org/upload/TB_MEDITEAM/444be887b82246ef80c358d37e246897.png",
+  "specialty": "고혈압, 협심증, 심근경색증, 고지혈증, 심부전, 부정맥, 동맥경화, 관동맥시술, 심장판막증",
+  "학력": [
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 교수"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 박사"
+    },
+    {
+      "date": null,
+      "content": "순환기내과 전문의"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 졸업"
+    }
+  ],
+  "경력": [
+    {
+      "date": "2007, 2012, 2018",
+      "content": "미국 Irvine 캘리포니아주립대학 연수"
+    },
+    {
+      "date": "2007",
+      "content": "미국 롱비치 VA hospital 연수"
+    },
+    {
+      "date": "2007, 2012",
+      "content": "미국 보스턴 Tufts university 연수"
+    },
+    {
+      "date": "1999 - 2000",
+      "content": "서울대병원 순환기내과 임상강사"
+    },
+    {
+      "date": null,
+      "content": "미국심장학회 정회원 (FAHA)"
+    },
+    {
+      "date": null,
+      "content": "유럽심장학회 정회원 (FESC)"
+    },
+    {
+      "date": "2012-2020",
+      "content": "질병관리본부 국민건강 영양조사 자문위원"
+    },
+    {
+      "date": "2005-2006",
+      "content": "아시아태평양 지질동맥경화학회 학술위원"
+    },
+    {
+      "date": "2013-2014",
+      "content": "세계내과학회 조직위원회 학술위원"
+    },
+    {
+      "date": "2015-2016",
+      "content": "세계고혈압학회 조직위원회 홍보위원"
+    }
+  ],
+  "학술": [
+    {
+      "date": "2025- 현재",
+      "content": "한국 지질동맥경화학회 이사장"
+    },
+    {
+      "date": "2019-현재",
+      "content": "대한 심장학회 진료지침위원회 위원"
+    },
+    {
+      "date": "2019-현재",
+      "content": "대한 심장대사증후군학회 기획이사"
+    },
+    {
+      "date": "2021-현재",
+      "content": "대한 심혈관약물치료학회 기획이사"
+    },
+    {
+      "date": "2023-2024",
+      "content": "한국 지질동맥경화학회 감사"
+    },
+    {
+      "date": "2021-2024",
+      "content": "대한심장학회 이사"
+    },
+    {
+      "date": "2020-2024",
+      "content": "대한 심혈관중재학회 정책이사"
+    },
+    {
+      "date": "2018-2023",
+      "content": "대한의학회 이상지질혈증 치료지침제정위원장"
+    },
+    {
+      "date": "2021-2022",
+      "content": "한국 지질동맥경화학회 진료지침위원장"
+    },
+    {
+      "date": "2019-2020",
+      "content": "한국 지질동맥경화학회 감사"
+    },
+    {
+      "date": "2017-2018",
+      "content": "한국 지질동맥경화학회 학술위원장"
+    },
+    {
+      "date": "2015-2016",
+      "content": "한국 지질동맥경화학회 보험법제이사"
+    },
+    {
+      "date": "2011-2014",
+      "content": "한국 지질동맥경화학회 홍보이사"
+    },
+    {
+      "date": "2009-2010",
+      "content": "한국 지질동맥경화학회 총무이사"
+    },
+    {
+      "date": "2007-2008",
+      "content": "한국 지질동맥경화학회 보험법제위원"
+    },
+    {
+      "date": "2011-2018",
+      "content": "한국 지질동맥경화학회 간행위원"
+    },
+    {
+      "date": "2005-2014",
+      "content": "한국 지질동맥경화학회 학술위원"
+    },
+    {
+      "date": "2021-2022",
+      "content": "대한 심장학회 무임소이사"
+    },
+    {
+      "date": "2017-2018",
+      "content": "대한 심장학회 무임소이사"
+    },
+    {
+      "date": "2011-2014",
+      "content": "대한 심장학회 대외협력위원"
+    },
+    {
+      "date": "2007-2016",
+      "content": "대한 심장학회 간행위원"
+    },
+    {
+      "date": "2009-2010",
+      "content": "대한 심장학회 학술위원"
+    },
+    {
+      "date": "2018-2020",
+      "content": "대한 심뇌혈관질환 예방학회 이사"
+    },
+    {
+      "date": "2018-2020",
+      "content": "대한 심혈관약물치료학회 대외협력이사"
+    },
+    {
+      "date": "2014-2016",
+      "content": "대한 내과학회 표준치료지침제정위원"
+    },
+    {
+      "date": "2014-2016",
+      "content": "대한 심장대사증후군학회 총무이사"
+    },
+    {
+      "date": "2014-2015",
+      "content": "대한 심혈관중재학회 간행 및 편집위원회 간사"
+    },
+    {
+      "date": "2011-2015",
+      "content": "대한 고혈압학회 홍보위원회 간사"
+    },
+    {
+      "date": "2013-2015",
+      "content": "대한 고혈압학회 홍보위원회 기획위원"
+    },
+    {
+      "date": "2011-2016",
+      "content": "대한의학학술지 편집인협의회 정보관리위원회 간사"
+    }
+  ],
+  "수상": [
+    {
+      "date": null,
+      "content": "2001년 8월 미국 심장학회(American Heart Association, AHA)의 연례 모임인 Scientific Conference on Molecular, Integrative and ClinicalApproaches to Myocardial Ischemia에서 발표, New Investigator Award 수상"
+    },
+    {
+      "date": null,
+      "content": "2007년 한국지질동맥경화학회 Clinical research award 수상"
+    },
+    {
+      "date": null,
+      "content": "2017년 대한심장학회지 발전공로상 수상"
+    },
+    {
+      "date": null,
+      "content": "2018년 아시아 태평양 심장대사증후군학회 (APCMS) 우수초록상 수상"
+    }
+  ],
+  "논문": [
+    "Intravascular imaging-guided percutaneous coronary intervention in patients with acute myocardial infarction and cardiogenic shock. (Rev Esp Cardiol (Engl Ed), 2024-12)",
+    "The Associations of Arterial Stiffness and Central Hemodynamics with Carotid Atherosclerosis in Patients at a High Coronary Risk: A Cross-Sectional Study. (Pulse (Basel), 2024-12)",
+    "Impact of three-month treatment with pitavastatin on arterial stiffness in patients with hypercholesterolemia: a prospective observational study. (Hellenic J Cardiol, 2024-10)",
+    "The association between arterial stiffness and socioeconomic status: a cross-sectional study using estimated pulse wave velocity. (Clin Hypertens, 2024-10)",
+    "Association Between Orthostatic Hypertension and Frailty Among Older Patients With Hypertension. (Hypertension, 2024-06)",
+    "Characteristics According to Frailty Status Among Older Korean Patients With Hypertension. (J Korean Med Sci, 2024-03)",
+    "Association between arterial stiffness and autonomic dysfunction in participants underwent treadmill exercise testing: a cross-sectional analysis. (Sci Rep, 2024-02)",
+    "Impact of Age on Antiplatelet Monotherapy in the Chronic Maintenance Period After Percutaneous Coronary Intervention: A Post Hoc Analysis From the HOST-EXAM Extended Study. (Can J Cardiol, 2024-01)",
+    "Influence of Socioeconomic Status on the Presence of Obstructive Coronary Artery Disease and Cardiovascular Outcomes in Patients Undergoing Invasive Coronary Angiography. (Healthcare (Basel), 2024-01)",
+    "Lipoprotein(a) and the Effect of Alirocumab on Revascularization After Acute Coronary Syndrome. (Can J Cardiol, 2023-10)",
+    "The Prognostic Value of Arterial Stiffness According to Socioeconomic Status. (J Clin Med, 2023-11)",
+    "New onset diabetes mellitus and cardiovascular outcomes according to statin intensity in patients after drug-eluting stent implantation in Asian patients. (Sci Rep, 2023-09)",
+    "Association between invasively measured central aortic pulse pressure and diameter of ascending aorta. (Sci Rep, 2023-11)",
+    "Estimated Pulse Wave Velocity in the Prediction of Clinical Outcomes in Patients Undergoing Drug-Eluting Stent Implantation. (J Clin Med, 2023-09)",
+    "Associations of Estimated Pulse Wave Velocity with Body Mass Index and Waist Circumference among General Korean Adults. (Metabolites, 2023-10)",
+    "Remnant cholesterol, low-density lipoprotein cholesterol, and incident cardiovascular disease among Koreans: a national population-based study. (Eur J Prev Cardiol, 2023-08)",
+    "A Randomized, Multicenter, Double-blind, Placebo-Controlled Study to Evaluate the Efficacy and Safety of a Quadruple Combination of Amlodipine, Losartan, Rosuvastatin, and Ezetimibe in Patients with Concomitant Essential Hypertension and Dyslipidemia. (Am J Cardiovasc Drugs, 2023-07)",
+    "Study design and rationale of the establishment of a national registry to assess clinical characteristics and prognostic factors in Korean patients with high-risk metabolic syndrome: a prospective observational study (CardioMetab Synd J, 2023-09)",
+    "Efficacy and Safety of a Single-Pill Triple Combination of Olmesartan, Amlodipine, and Rosuvastatin in Hypertensive Patients with Low-to-Moderate Cardiovascular Risk: A Multicenter, Randomized, Open-Label, Active-Control, Phase IV Clinical Trial. (J Cardiovasc Pharmacol Ther, 2023-10)",
+    "Prognostic Value of Brachial-Ankle Pulse Wave Velocity According to Subjects'' Clinical Characteristics: Data From Analysis of 10,597 Subjects. (J Korean Med Sci, 2023-12)",
+    "Efficacy, safety and clinical outcome associated with statin use for primary prevention in Korean patients with low-density lipoprotein cholesterol level ≥ 190 mg/dL: A retrospective cohort study. (PLoS One, 2023-06)",
+    "Comparison of efficacy and safety between third-dose triple and third-dose dual antihypertensive combination therapies in patients with hypertension. (J Clin Hypertens (Greenwich), 2023-05)",
+    "Comparison of 3- to 6-Month Versus 12-Month Dual Antiplatelet Therapy After Coronary Intervention Using the Contemporary Drug-Eluting Stents With Ultrathin Struts: The HOST-IDEA Randomized Clinical Trial. (Circulation, 2023-05)",
+    "Arterial stiffness and its associations with left ventricular diastolic function according to heart failure types. (Clin Hypertens, 2023-03)",
+    "One-month changes in blood pressure-adjusted pulse wave velocity for predicting long-term cardiovascular outcomes in patients undergoing percutaneous coronary intervention (Journal of hypertension, 2023-03)",
+    "Efficacy and Safety of Coadministered Ezetimibe-Rosuvastatin plus Telmisartan in South Korean Patients with Dyslipidemia and Hypertension: A Multicenter, Randomized, Double-Blind, Active-Controlled, Phase III Trial. (J Clin Med, 2023-03)",
+    "Lipid Management in Korean People With Type 2 Diabetes Mellitus: Korean Diabetes Association and Korean Society of Lipid and Atherosclerosis Consensus Statement. (J Lipid Atheroscler, 2023-01)",
+    "BioMatrix Versus Orsiro Stents for Coronary Artery Disease: A Multicenter, Randomized, Open-Label Study. (Circ Cardiovasc Interv, 2023-01)",
+    "Lipid Management in Korean People with Type 2 Diabetes Mellitus: Korean Diabetes Association and Korean Society of Lipid and Atherosclerosis Consensus Statement. (Diabetes Metab J, 2023-01)",
+    "Durable polymer versus biodegradable polymer drug-eluting stents in patients with acute coronary syndrome undergoing complex percutaneous coronary intervention: a post hoc analysis of the HOST-REDUCE-POLYTECH-ACS trial (EuroIntervention, 2022-12)",
+    "Brachial-ankle pulse wave velocity as a predictor of long-term cardiovascular events in 2174 subjects with type 2 diabetes mellitus: A retrospective cohort study (Medicine, 2022-11)",
+    "Association between arterial stiffness and left ventricular diastolic function: A large population-based cross-sectional study (Frontiers in cardiovascular medicine, 2022-10)",
+    "A Multicenter, Randomized, Double-blind, Active-controlled, Factorial Design, Phase III Clinical Trial to Evaluate the Efficacy and Safety of Combination Therapy of Pitavastatin and Ezetimibe Versus Monotherapy of Pitavastatin in Patients With Primary Hypercholesterolemia (Clinical therapeutics, 2022-10)",
+    "Optimal blood pressure target in the elderly: rationale and design of the HOW to Optimize eLDerly systolic Blood Pressure (HOWOLD-BP) trial (The Korean journal of internal medicine, 2022-09)",
+    "Phenotypic and Genetic Analyses of Korean Patients with Familial Hypercholesterolemia: Results from the KFH Registry 2020 (Journal of atherosclerosis and thrombosis, 2022-08)",
+    "Integrated Analysis of Two Probucol Trials for the Secondary Prevention of Atherosclerotic Cardiovascular Events: PROSPECTIVE and IMPACT (Journal of atherosclerosis and thrombosis, 2022-06)",
+    "Prasugrel Dose De-escalation Therapy After Complex Percutaneous Coronary Intervention in Patients With Acute Coronary Syndrome: A Post Hoc Analysis From the HOST-REDUCE-POLYTECH-ACS Trial (JAMA cardiology, 2022-04)",
+    "Efficacy and Safety of SID142 in Patients With Peripheral Arterial Disease: A Multicenter, Randomized, Double-Blind, Active-Controlled, Parallel-Group, Phase III Clinical Trial (Clinical therapeutics, 2022-04)",
+    "Association Between Body Mass Index and Arterial Stiffness (Cardiometabolic Syndrome Journal, 2022-03)",
+    "Sex-specific associations of brachial-ankle pulse wave velocity with adverse cardiac remodeling and long-term cardiovascular outcome (Journal of hypertension, 2022-02)",
+    "Lifestyle Modification in the Management of Metabolic Syndrome: Statement From Korean Society of CardioMetabolic Syndrome (KSCMS) (Korean circulation journal, 2022-02)",
+    "Interventions for Adherence Improvement in the Primary Prevention of Cardiovascular Diseases: Expert Consensus Statement (Korean circulation journal, 2022-01)",
+    "Association between household income and pulse pressure: data from the Korean National Health and Nutrition Examination Survey (Blood pressure, 2021-08)",
+    "Prognostic value of serum soluble ST2 in stable coronary artery disease: a prospective observational study (Scientific reports, 2021-07)",
+    "Prognostic value of arterial stiffness according to the cardiovascular risk profiles (Journal of human hypertension, 2021-11)",
+    "Improved Prognostic Value in Predicting Long-Term Cardiovascular Events by a Combination of High-Sensitivity C-Reactive Protein and Brachial-Ankle Pulse Wave Velocity (Journal of clinical medicine, 2021-07)",
+    "Clinical factors associated with reduced global longitudinal strain in subjects with normal left ventricular ejection fraction (The international journal of cardiovascular imaging, 2021-11)",
+    "Associations between measurements of central blood pressure and target organ damage in high-risk patients (Clinical hypertension, 2021-12)",
+    "Association between inter-leg blood pressure difference and cardiovascular outcome in patients undergoing percutaneous coronary intervention (PloS one, 2021-10)",
+    "Apparent treatment-resistant hypertension among ambulatory hypertensive patients: a cross-sectional study from 13 general hospitals (The Korean journal of internal medicine, 2021-07)",
+    "Age-specific association between invasively measured central blood pressure and left ventricular mass index (Clinical and experimental hypertension, 2021-07)",
+    "A Randomized, Double-blind, Active-controlled, Two Parallel-Group, Optional Titration, Multicenter, Phase IIIb Study to Evaluate the Efficacy and Safety of Fimasartan Versus Perindopril Monotherapy With and Without a Diuretic Combination in Elderly Patients With Essential Hypertension (Clinical therapeutics, 2021-10)",
+    "Effects of Prolonged Dual Antiplatelet Therapy in ST-Segment Elevation vs. Non-ST-Segment Elevation Myocardial Infarction (Circulation journal, 2021-05)",
+    "Effect of Probucol and/or Cilostazol on Carotid Intima Media Thickness in Patients with Coronary Heart Disease: A Randomized, Multicenter, Multinational Study (Journal of atherosclerosis and thrombosis, 2021-02)",
+    "Cardiovascular effects of omega-3 fatty acids: Hope or hype? (Atherosclerosis, 2021-04)",
+    "BioMatrix versus Orsiro biodegradable polymer stents in all-comer patients with coronary artery disease: the multicentre, randomised BIODEGRADE trial (EuroIntervention, 2021-04)",
+    "Associations of Brachial-Ankle Pulse Wave Velocity With Left Ventricular Geometry and Diastolic Function in Untreated Hypertensive Patients (Frontiers in cardiovascular medicine, 2021-05)",
+    "Aspirin versus clopidogrel for chronic maintenance monotherapy after percutaneous coronary intervention (HOST-EXAM): an investigator-initiated, prospective, randomised, open-label, multicentre trial (Lancet, 2021-06)",
+    "Prediction of cardiovascular events using brachial-ankle pulse wave velocity in hypertensive patients (Journal of clinical hypertension, 2020-09)",
+    "Lomitapide, relief pitcher for patients with homozygous familial hypercholesterolemia (European journal of preventive cardiology, 2020-01)",
+    "Echocardiographic parameters determining cardiovascular outcomes in patients after acute ischemic stroke (The international journal of cardiovascular imaging, 2020-08)",
+    "Design and rationale of a randomized control trial testing the effectiveness of combined therapy with STAtin plus FENOfibrate and statin alone in non-diabetic, combined dyslipidemia patients with non-intervened intermediate coronary artery disease - STAFENO study (Trials, 2020-04)",
+    "Consensus Statement on Coronary Intervention during the Coronavirus Disease 2019 (COVID-19) Pandemic: from the Korean Society of Interventional Cardiology (KSIC) (Korean circulation journal, 2020-11)",
+    "Clinical Usefulness of PRECISE-DAPT Score for Predicting Bleeding Events in Patients With Acute Coronary Syndrome Undergoing Percutaneous Coronary Intervention: An Analysis From the SMART-DATE Randomized Trial (Circulation. Cardiovascular interventions, 2020-05)",
+    "Association of the Serum Osteoprotegerin Level With Target Organ Damage in Patients at High Risk of Coronary Artery Disease (Circulation journal, 2020-12)",
+    "Association Between Metabolic Syndrome and Parameters of Subclinical Target Organ Damage in Urban Subjects Without Documented Cardiovascular Disease (Metabolic syndrome and related disorders, 2020-10)",
+    "The Current Status of Intervention for Intermediate Coronary Stenosis in the Korean Percutaneous Coronary Intervention (K-PCI) Registry (Korean circulation journal, 2019-11)",
+    "The comparison of the impact of arterial stiffness and central pressure on left ventricular geometry and diastolic function (Clinical hypertension, 2019-09)",
+    "Subclinical alterations in left ventricular structure and function according to obesity and metabolic health status (PloS one, 2019-09)",
+    "Long-Term Comparison of Platinum Chromium Everolimus-Eluting Stent vs. Cobalt Chromium Zotarolimus-Eluting Stent - 3-Year Outcomes From the HOST-ASSURE Randomized Clinical Trial (Circulation journal, 2019-06)",
+    "Gender Related Association between Arterial Stiffness and Aortic Root Geometry (Journal of cardiovascular imaging, 2019-01)",
+    "Gender differences of in-hospital outcomes in patients undergoing percutaneous coronary intervention in the drug-eluting stent era (Medicine, 2019-05)",
+    "Gender difference in the association between brachial-ankle pulse wave velocity and cardiovascular risk scores (The Korean journal of internal medicine, 2019-05)",
+    "Frequency and Severity of Hypoglycemia in Type 2 Diabetes Mellitus Patients Treated with a Sulfonylurea-Based Regimen at University-Affiliated Hospitals in Korea: The Naturalistic Evaluation of Hypoglycemic Events in Diabetic Subjects Study (Korean journal of family medicine, 2019-07)",
+    "Fimasartan versus perindopril with and without diuretics in the treatment of elderly patients with essential hypertension (Fimasartan in the Senior Subjects (FITNESS)): study protocol for a randomized controlled trial (Trials, 2019-07)",
+    "Ezetimibe and Rosuvastatin Combination Treatment Can Reduce the Dose of Rosuvastatin Without Compromising Its Lipid-lowering Efficacy (Clinical therapeutics, 2019-08)",
+    "Correlations between invasively measured aortic pressures and left ventricular end-diastolic pressure in patients undergoing coronary angiography (Blood pressure monitoring, 2019-10)",
+    "Clinical Factors Associated with Obstructive Coronary Artery Disease in Patients with Out-of-Hospital Cardiac Arrest: Data from the Korean Cardiac Arrest Research Consortium (KoCARC) Registry (Journal of Korean medical science, 2019-06)",
+    "Association of arterial stiffness with aortic calcification and tortuosity (Medicine, 2019-08)",
+    "Association between the level of serum soluble ST2 and invasively measured aortic pulse pressure in patients undergoing coronary angiography (Medicine, 2019-02)",
+    "Association between invasively measured aortic pulse pressure and orthostatic hypotension in patients undergoing invasive coronary angiography (Journal of hypertension, 2019-10)",
+    "Association between epicardial adipose tissue thickness and parameters of target organ damage in patients undergoing coronary angiography (Hypertension research, 2019-04)",
+    "Association between dental health and obstructive coronary artery disease: an observational study (BMC cardiovascular disorders, 2019-04)",
+    "Relationship between brachial-ankle pulse wave velocity and invasively measured aortic pulse pressure (Journal of clinical hypertension, 2018-03)",
+    "Interaction of Metabolic Health and Obesity on Subclinical Target Organ Damage (Metabolic syndrome and related disorders, 2018-02)",
+    "Impact of Optimized Procedure-Related Factors in Drug-Eluting Balloon Angioplasty for Treatment of In-Stent Restenosis (JACC. Cardiovascular interventions, 2018-05)",
+    "Findings of Single-Photon Emission Computed Tomography and Its Relation with Quantitative Coronary Angiography in Patients with Significant Stenosis of the Left Main Coronary Artery (Korean journal of radiology, 2018-01)",
+    "Efficacy and Tolerability of Telmisartan/Amlodipine + Hydrochlorothiazide Versus Telmisartan/Amlodipine Combination Therapy for Essential Hypertension Uncontrolled With Telmisartan/Amlodipine: The Phase III, Multicenter, Randomized, Double-blind TAHYTI Study (Clinical therapeutics, 2018-01)",
+    "Efficacy and Safety of Fixed-dose Combination Therapy With Telmisartan and Rosuvastatin in Korean Patients With Hypertension and Dyslipidemia: TELSTA-YU (TELmisartan-rosuvaSTAtin from YUhan), a Multicenter, Randomized, 4-arm, Double-blind, Placebo-controlled, Phase III Study (Clinical therapeutics, 2018-05)",
+    "Efficacy and Safety of Ezetimibe and Rosuvastatin Combination Therapy Versus Those of Rosuvastatin Monotherapy in Patients With Primary Hypercholesterolemia (Clinical therapeutics, 2018-06)",
+    "Efficacy and Safety of Adding Omega-3 Fatty Acids in Statin-treated Patients with Residual Hypertriglyceridemia: ROMANTIC (Rosuvastatin-OMAcor iN residual hyperTrIglyCeridemia), a Randomized, Double-blind, and Placebo-controlled Trial (Clinical therapeutics, 2018-01)",
+    "Body mass index and the risk of low femoral artery puncture in coronary angiography under fluoroscopy guidance (Medicine, 2018-03)",
+    "Association between aortic knob width and invasively measured aortic pulse pressure (Blood pressure monitoring, 2018-06)",
+    "Additional prognostic value of brachial-ankle pulse wave velocity to coronary computed tomography angiography in patients with suspected coronary artery disease (Atherosclerosis, 2018-01)",
+    "6-month versus 12-month or longer dual antiplatelet therapy after percutaneous coronary intervention in patients with acute coronary syndrome (SMART-DATE): a randomised, open-label, non-inferiority trial (Lancet (London, England), 2018-03)",
+    "The value of diastolic flow reversal in the descending thoracic aorta as a determinant of invasively measured aortic pulse pressure (Echocardiography (Mount Kisco, N.Y.), 2017-05)",
+    "The efficacy and safety of co-administration of fimasartan and rosuvastatin to patients with hypertension and dyslipidemia (BMC pharmacology & toxicology, 2017-01)",
+    "Statin and the risk of new-onset diabetes mellitus (Journal of the Korean Medical Association, 2017-11)",
+    "Soluble Tumor Necrosis Factor Receptors and Arterial Stiffness in Patients With Coronary Atherosclerosis (American journal of hypertension, 2017-03)",
+    "Predictors of candesartan's effect on vascular reactivity in patients with coronary artery disease (Cardiovascular therapeutics, 2017-10)",
+    "Predictors and Long-Term Clinical Outcome of Longitudinal Stent Deformation: Insights From Pooled Analysis of Korean Multicenter Drug-Eluting Stent Cohort (Circulation. Cardiovascular interventions, 2017-11)",
+    "Gender Difference in the Association between Aortic Pulse Pressure and Left Ventricular Filling Pressure in the Elderly: An Invasive Hemodynamic Study (Journal of cardiac failure, 2017-03)",
+    "Efficacy and tolerability of two different formulations of atorvastatin in Korean patients with hypercholesterolemia: a multicenter, prospective, randomized clinical trial (Drug design, development and therapy, 2017-08)",
+    "Double Right Coronary Arteries Originated from Separate Ostia with Total Occlusive Lesion in One of the Two Right Coronary Arteries (Journal of Lipidology and Atherosclerosis, 2017-12)",
+    "Comparison of outcomes after treatment of in-stent restenosis using newer generation drug-eluting stents versus drug-eluting balloon: Patient-level pooled analysis of Korean Multicenter in-Stent Restenosis Registry (International journal of cardiology, 2017-03)",
+    "Association between reduced arterial stiffness and preserved diastolic function of the left ventricle in middle-aged and elderly patients. (Journal of Clinical Hypertension, 2017-06)",
+    "Association between arterial stiffness and left ventricular diastolic function in relation to gender and age (Medicine (Baltimore), 2017-01)",
+    "Additional Value of Brachial-Ankle Pulse Wave Velocity to Single-Photon Emission Computed Tomography in the Diagnosis of Coronary Artery Disease (Journal of Atherosclerosis and Thrombosis, 2017-12)",
+    "The impact of acute bout of exercise on circulating cardiac natriuretic peptide and left ventricular function in untrained healthy young subjects (The Journal of sports medicine and physical fitness, 2016-12)",
+    "Re-mobilization of Lost Coronary Stent From the Axillary Artery to the Femoral Artery (Journal of Lipid and Atherosclerosis, 2016-06)",
+    "New concept of treatment guideline of dyslipidemia(이상지질혈증 진료지침의 최신지견) (Journal of the Korean Medical Association(대한의사협회지), 2016-05)",
+    "Efficacy and safety of two fixed-dose combinations of S-amlodipine and telmisartan (CKD-828) versus S-amlodipine monotherapy in patients with hypertension inadequately controlled using S-amlodipine monotherapy: an 8-week, multicenter, randomized, double-blind, Phase III clinical study (Drug design, development and therapy, 2016-11)",
+    "Efficacy and safety of fixed-dose combination therapy with olmesartan medoxomil and rosuvastatin in Korean patients with mild to moderate hypertension and dyslipidemia: an 8-week, multicenter, randomized, double-blind, factorial-design study (OLSTA-D RCT: OLmesartan rosuvaSTAtin from Daewoong) (Drug design, development and therapy, 2016-08)",
+    "Effect of fixed-dose combinations of ezetimibe plus rosuvastatin in patients with primary hypercholesterolemia: MRS-ROZE (Multicenter Randomized Study of ROsuvastatin and eZEtimibe) (Cardiovascular therapeutics, 2016-10)",
+    "Drug treatment of dyslipidemia(이상지질혈증의 약물치료) (Journal of the Korean Medical Association(대한의사협회지), 2016-05)",
+    "Different prognostic factors according to left ventricular systolic function in patients with acute myocardial infarction (International journal of cardiology, 2016-10)",
+    "Comparison of dual antiplatelet therapy prescribed as one-pill versus two-pill regimen. A pooled analysis of individual patient data from the three MR-CAPCIS trials (Thrombosis and haemostasis, 2016-07)",
+    "Blood Pressure and Cholesterol-lowering Efficacy of a Fixed-dose Combination With Irbesartan and Atorvastatin in Patients With Hypertension and Hypercholesterolemia: A Randomized, Double-blind, Factorial, Multicenter Phase III Study (Clinical therapeutics, 2016-10)",
+    "Incidence and Risk Factors Associated With Hospitalization for Variant Angina in Korea (Medicine, 2016-03)",
+    "Efficacy and Safety of DP-R202 in Patients with Chronic Artery Occlusive Disease: Multicenter Randomized Double-blind Active-controlled Parallel Group Phase III Clinical Study (Clinical therapeutics, 2016-03)",
+    "Safety of 6-month duration of dual antiplatelet therapy after percutaneous coronary intervention in patients with acute coronary syndromes: Rationale and design of the Smart Angioplasty Research Team-safety of 6-month duration of Dual Antiplatelet Therapy after percutaneous coronary intervention in patients with acute coronary syndromes (SMART-DATE) prospective multicenter randomized trial (American heart journal, 2016-12)",
+    "Prevalence, Treatment Pattern and Resource Use in Patients with Mixed Dyslipidemia Using Lipid Modifying Agents in Korea (PRIMULA): An Observational Study (JOURNAL OF LIPID AND ATHEROSCLEROSIS, 2016-12)",
+    "2015 Korean Guidelines for the Management of Dyslipidemia: Executive Summary (English Translation). (Korean circulation journal, 2016-05)",
+    "Study design of the influence of SErotonin inhibition on patients with RENAl impairment or diabetes undergoing drug-eluting stent implantation (SERENADE) study: A multicenter, open-label, prospective, randomized study (Contemporary clinical trials, 2015-07)",
+    "Efficacy of fimasartan/hydrochlorothiazide combination in hypertensive patients inadequately controlled by fimasartan monotherapy (Drug design, development and therapy, 2015-06)",
+    "Renin-angiotensin system inhibitor and statins combination therapeutics - what have we learnt? (Expert opinion on pharmacotherapy, 2015-05)",
+    "Recurrent Acute Decompensated Heart Failure Owing to Severe Iron Deficiency Anemia Caused by Inappropriate Habitual Bloodletting (Journal of cardiovascular ultrasound, 2015-12)",
+    "Harmonizing Optimal Strategy for Treatment of coronary artery diseases--comparison of REDUCtion of prasugrEl dose or POLYmer TECHnology in ACS patients (HOST-REDUCE-POLYTECH-ACS RCT): study protocol for a randomized controlled trial (Trials, 2015-09)",
+    "The association between ambulatory blood pressure profile and brachial-ankle pulse wave velocity in untreated hypertensive subjects (Blood pressure, 2015-06)",
+    "Association between invasively measured central aortic pressure and left ventricular diastolic function in patients undergoing coronary angiography (American journal of hypertension, 2015-03)",
+    "The effects of metabolic syndrome and its components on arterial stiffness in relation to gender (Journal of cardiology, 2015-03)",
+    "Prognostic value of the ankle-brachial index in patients undergoing drug-eluting stent implantation (Journal of atherosclerosis and thrombosis, 2015-01)",
+    "The efficacy and safety of mechanical hemodynamic support in patients undergoing high-risk percutaneous coronary intervention with or without cardiogenic shock: Bayesian approach network meta-analysis of 13 randomized controlled trials (International journal of cardiology, 2015-04)",
+    "Independent association between brachial-ankle pulse wave velocity and global longitudinal strain of left ventricle (International journal of cardiovascular imaging, 2015-12)",
+    "Incremental Prognostic Value of Brachial-Ankle Pulse Wave Velocity to Single-Photon Emission Computed Tomography in Patients with Suspected Coronary Artery Disease (Journal of atherosclerosis and thrombosis, 2015-10)",
+    "Comparison of Angiographic Outcomes of Side Branch Ostium at Bifurcation Coronary Lesion between Two-stent and One-stent Techniques (Journal of Korean Medical Science, 2015-07)",
+    "Circulating tumour necrosis factor receptors 1 and 2 predict contrast-induced nephropathy and progressive renal dysfunction: a prospective cohort study (Nephrology, 2015-08)",
+    "The association of brachial-ankle pulse wave velocity with coronary artery disease evaluated by coronary computed tomography angiography (PLoS One, 2015-04)",
+    "Three-year patient-related and stent-related outcomes of second-generation everolimus-eluting Xience V stents versus zotarolimus-eluting resolute stents in real-world practice (from the Multicenter Prospective EXCELLENT and RESOLUTE-Korea Registries) (American journal of cardiology, 2014-11)",
+    "Prevalence and Gender-Related Characteristics of Metabolic Syndrome in Korean Community (Journal of Lipid Atherosclerosis, 2014-12)",
+    "Lipid-lowering treatment practice patterns in korea: comparison with the data obtained from the CEPHEUS Pan-Asian study (Journal of atherosclerosis and thrombosis, 2014-10)",
+    "Fenofibrate Therapy and Change of Renal Function: Management, What and How? (Fenofibrate 투여와 신장 기능의 변화: 무엇을 어떻게 고려해야 할까) (Korean Journal of Medicine, 2014-06)",
+    "Influence of Second- and Third-Degree Heart Block on 30-Day Outcome Following Acute Myocardial Infarction in the Drug-Eluting Stent Era (The American journal of cardiology, 2014-12)",
+    "The incidence and predictors of overall adverse effects caused by low dose amiodarone in real-world clinical practice (The Korean journal of internal medicine, 2014-09)",
+    "A randomized comparison of platinum chromium-based everolimus-eluting stents versus cobalt chromium-based Zotarolimus-Eluting stents in all-comers receiving percutaneous coronary intervention: HOST-ASSURE (harmonizing optimal strategy for treatment of coronary artery stenosis-safety & effectiveness of drug-eluting stents & anti-platelet regimen), a randomized, controlled, noninferiority trial (Journal of the American College of Cardiology, 2014-07)",
+    "Acute Stent Thrombosis after Coronary Stenting in Patients with Acute Coronary Syndrome (Journal of Lipid and Atherosclerosis, 2014-01)",
+    "Acute Pulmonary Embolism due to Thrombus-in-Transit in the Right Atrium During Bipolar Endoprosthesis of the Hip (Korean Journal of Medicine, 2013-07)",
+    "Comparison of Two Different Strategies of Intravascular Ultrasound Guidance during Percutaneous Coronary Intervention; Routine versus Selective (Korean circulation journal, 2013-05)",
+    "A case of successful survival from ventricular free wall micro-rupture without surgery (World Journal of Cardiovascular Diseases, 2013-04)",
+    "Immediate impact of exercise on arterial stiffness in humans (World Journal of Cardiovascular Diseases, 2013-01)",
+    "Additional value of lateral tissue Doppler imaging in the assessment of diastolic dysfunction among subjects with pseudonormal pattern of mitral inflow (Cardiovascular Ultrasound, 2013-08)",
+    "The association between arterial stiffness and left ventricular filling pressure in an apparently healthy Korean population (Cardiovascular Ultrasound, 2013-01)",
+    "Simultaneously Presented Acute Ischemic Stroke and Non-ST Elevation Myocardial Infarction in a Patient with Paroxysmal Atrial Fibrillation (Korean circulation journal, 2013-11)",
+    "Efficacy and safety of morning versus evening dose of controlled-release simvastatin tablets in patients with hyperlipidemia: a randomized, double-blind, multicenter phase III trial (Clinical therapeutics, 2013-09)",
+    "Assessment of the efficacy and tolerability of 2 formulations of atorvastatin in Korean adults with hypercholesterolemia: a multicenter, prospective, open-label, randomized trial (Clinical therapeutics, 2013-01)",
+    "Prospective randomized comparison between omega-3 fatty acid supplements plus simvastatin versus simvastatin alone in Korean patients with mixed dyslipidemia: lipoprotein profiles and heart rate variability. (European Journal of Clinical Nutrition, 2011-01)",
+    "The effect of aspirin on C-reactive protein in hypertensive patients. (Clincial and Experimental Hypertension, 2011-08)",
+    "Clinical Characteristics and Target-Organ Damage in Hypertensive Patients with Metabolic Syndrome. (Journal of Korean Atherosclerosis and Lipidology, 2011-12)",
+    "Comparison of Antiplatelet Effect and Tolerability of Clopidogrel Resinate With Clopidogrel Bisulfate in Patients With Coronary Heart Disease (CHD) or CHD-Equivalent Risks: A Phase IV, Prospective, Double-Dummy, Parallel-Group, 4-Week Noninferiority Trial. (Clinical Therapeutics, 2011-08)",
+    "Phase IV, 8-Week, Multicenter, Randomized, Active Treatment–Controlled, Parallel Group, Efficacy, and Tolerability Study of High-Dose Candesartan Cilexetil Combined With Hydrochlorothiazide in Korean Adults With Stage II Hypertension. (Clinical Therapeutics, 2011-08)",
+    "Efficacy and Tolerability of a New Extended-Release Formulation of Nicotinic Acid in Korean Adults With Mixed Dyslipidemia: An 8-Week, Multicenter, Prospective, Randomized, Double-Blind, and Placebo-Controlled Trial. (Clinical Therapeutics, 2011-01)"
+  ],
+  "언론": [
+    {
+      "targetDate": "2025-06-09",
+      "type": "기사",
+      "text": "다학제 바탕으로 표준화된 치료 기반 마련한다",
+      "url": "https://www.kmedinfo.co.kr/news/articleView.html?idxno=90630",
+      "issuer": "의료정보"
+    },
+    {
+      "targetDate": "2023-05-08",
+      "type": "기사",
+      "text": "순환기내과 김상현 교수, 한국인 목표치 정하는데, 서양 데이터 수용할 수밖에 없었다",
+      "url": "http://www.monews.co.kr/news/articleView.html?idxno=322800",
+      "issuer": "메디컬업저버"
+    },
+    {
+      "targetDate": "2023-03-10",
+      "type": "기사",
+      "text": "순환기내과 김상현 교수, “초고위험군 LDL-C 목표치 하향국면 뚜렷”",
+      "url": "http://www.monews.co.kr/news/articleView.html?idxno=320926",
+      "issuer": "메디컬업저버"
+    }
+  ]
+}

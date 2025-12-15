@@ -1,0 +1,94 @@
+{
+  "doctorId": 14684,
+  "rid_long": "53371676CDF7F8E25C5AD504EC443313431C065A5766AB6130138C8E933E4EEAA38ABCF2168990AE6FAA42F7E5DB949C3A08FD168D24B566EF163F539BCA6A0659C21178B4E133959A71EAEA4A4EA73B34349995A335F76E04D71AE7ECE1250CDED19FF7BFAEB69EFA9EDCB984D1E240E889652AC1D42ADA02F9B0EA18F20F1F84AD3555704E667A7B18DB79AC6218C0C2D2F63B2819CC5AE7A37297DDC0F163FF11036F9C934DE0337DD94BEE1A3D7634E087CA22ECC82E170C09B09BCE9580",
+  "hospital_cid": 67,
+  "bedoc_id": "A5245",
+  "bedoc_hospitalsite": "http://www.paik.ac.kr/haeundae/",
+  "bedoc_doctorname": "김두일",
+  "bedoc_deptname": "순환기/심장내과",
+  "bedoc_hospitalname": "해운대백병원",
+  "hospital_name": "인제대학교 해운대백병원",
+  "aiga_hid": "H11KR-21000019",
+  "hospital_site": "https://www.paik.ac.kr/haeundae/user/doctor/view.do?doctorId=881",
+  "site_type": "single",
+  "hospital_addr": "부산광역시 해운대구 해운대로 875, (좌동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.paik.ac.kr/haeundae/user/doctor/view.do?doctorId=881&doctorName=%EA%B9%80%EB%91%90%EC%9D%BC&depthName=%EC%88%9C%ED%99%98%EA%B8%B0%2F%EC%8B%AC%EC%9E%A5%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "profileUrl": "https://www.paik.ac.kr/cmmn/file/imageSrc.do?atchFileId=ba49c6166ba148b18930c75d5bf64e81&fileSn=2",
+  "specialty": "협심증(흉통), 심근경색, 고혈압, 심부전, 심장판막질환",
+  "학력": [
+    {
+      "date": "1988-02-28",
+      "content": "인제대학교 의과대학졸업"
+    },
+    {
+      "date": null,
+      "content": "의학석사 취득"
+    },
+    {
+      "date": null,
+      "content": "박사 취득"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1989-02-28",
+      "content": "인제대학교부산백병원(인턴)"
+    },
+    {
+      "date": "1992-02-28",
+      "content": "인제대학교부산백병원(레지던트)"
+    },
+    {
+      "date": null,
+      "content": "전 인제대학교 부산백병원 심장내과 교수"
+    },
+    {
+      "date": null,
+      "content": "전 인제대학교 부산백병원 심장내과 과장"
+    },
+    {
+      "date": null,
+      "content": "전 인제대학교 부산백병원 심혈관센터 소장"
+    },
+    {
+      "date": null,
+      "content": "현 인제대학교 해운대백병원 심혈관센터 소장"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한심장학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "한국심초음파학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "중재시술학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한고혈압학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "지질동맥경화학회 정회원"
+    }
+  ],
+  "논문": [],
+  "저서": [
+    {
+      "date": null,
+      "content": "관상동맥 시술관련 TRI manual, CTI manual 외 다수",
+      "issuer": null
+    }
+  ],
+  "isAttend": true
+}

@@ -1,0 +1,91 @@
+{
+  "doctorId": 14664,
+  "rid_long": "13009BB39E2E0F80B662FE2C352EA50C1A9FD9B8B9F0A00033215840A58BF13B6B5CDF79E628DE83AEC8702E3FD19B836DB8A39579A15D53E948AEFF30947800A9F0DDB3D3399D43D55EF98AC74DA87834349995A335F76E04D71AE7ECE1250CCC32F368FF613FE8D3B3BEF7A8809AE04A168945BF0E00C8F184B73FB6490DDB48186E19F739905CD9B0D1835205BC85",
+  "hospital_cid": 40,
+  "bedoc_id": "A8395",
+  "bedoc_hospitalsite": "http://www.dkmc.or.kr",
+  "bedoc_doctorname": "김강성",
+  "bedoc_deptname": "외과",
+  "bedoc_hospitalname": "동강병원",
+  "hospital_name": "동강병원",
+  "doctorName": "김강성",
+  "department": "외과",
+  "aiga_hid": "H11KR-26000004",
+  "hospital_site": "https://www.dkmc.or.kr/medical/dkmcmedical/surgery/medical01.php",
+  "site_type": "popup",
+  "hospital_addr": "울산광역시 중구 태화로 239, (태화동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.dkmc.or.kr/medical/dkmcmedical/surgery/medical01.php?doctorName=%EA%B9%80%EA%B0%95%EC%84%B1&depthName=%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "학력": [
+    {
+      "date": null,
+      "content": "조선의대 졸업(1993)"
+    },
+    {
+      "date": null,
+      "content": "일본 나고야 의과 대학 담도암 연수"
+    },
+    {
+      "date": null,
+      "content": "부산의대 대학원 석사, 박사 학위 취득"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "울산의림대상 학술상 수상"
+    },
+    {
+      "date": null,
+      "content": "한국간담췌외과학회 학술상 수상"
+    },
+    {
+      "date": null,
+      "content": "복강경 담석증 수술 최대 증례 보유"
+    }
+  ],
+  "논문": [
+    "급성 복잡성 담낭염에서 경피적 담낭 배액술의 효과와 수술 적기",
+    "재발성 담관 결석 환자에서 십이지장 팽대부 주위 게실의 의의",
+    "경피적 담낭 배액술의 장점;미예측 총담관 결석의 진단",
+    "담낭 결석환자에서 총담관 결석의 예측 인자에 관한 연구",
+    "재발성 담관 결석 환자에서 경피경간 담도경을 이용한 제석술"
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한외과학회 평생회원"
+    },
+    {
+      "date": null,
+      "content": "한국간담췌외과학회 회원"
+    },
+    {
+      "date": null,
+      "content": "대한내시경복강경외과학회 평생회원"
+    },
+    {
+      "date": null,
+      "content": "아시아내시경복강경외과학회(ELSA) 회원"
+    },
+    {
+      "date": null,
+      "content": "대한임상종양학회 평생회원"
+    },
+    {
+      "date": null,
+      "content": "대한위암학회 평생회원"
+    },
+    {
+      "date": null,
+      "content": "울산지역 암관리 사업체 협의회 위원"
+    }
+  ],
+  "profileUrl": "http://www.dkmc.or.kr/upload/A01/userFile/thumb_20010501_IMG_62e792e1d89bf.jpg",
+  "specialty": "간담도외과, 복강경수술, 상부위장관",
+  "isAttend": true
+}

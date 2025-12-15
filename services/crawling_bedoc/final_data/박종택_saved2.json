@@ -1,0 +1,44 @@
+{
+  "doctorId": 14807,
+  "rid_long": "6E49AB4EAA6BCD0C7AF9150ECE712F7079C3026487E2400D12AC5E396B3A02F270C5E469EEAC1ECB355436725C628218FF1B93EC1648FCE775AEE8AB1D1CF07356121FBCB8FFB45A91B52E42E63041EE61127F2E547A901B791BBA9A716E7CC49D66D1D2236C5A82829131155E23D8783D9B6FEDBFFA208F4EDCC212344A59B5BB3C129B6743DA366937B6577FA1E3D4380E8AD26518A0D23F3D0072563EFB2758A30AF03F28B74C476BCF4CEE8E1F8DFAFB1564AC84957CFAD32A083025EFC5",
+  "hospital_cid": 236,
+  "bedoc_id": "A5618",
+  "bedoc_hospitalsite": "http://gangnam.chamc.co.kr",
+  "bedoc_doctorname": "박종택",
+  "bedoc_deptname": "산부인과",
+  "bedoc_hospitalname": "강남차병원",
+  "hospital_name": "강남차병원",
+  "aiga_hid": "H11KR-11000037",
+  "hospital_site": "https://gangnam.chamc.co.kr/treatment/list/obstetrics/reservation.cha?ctCode=2#none",
+  "site_type": "list",
+  "hospital_addr": "서울특별시 강남구 논현로 566, 강남차병원(역삼동650-9, 606-4, 605외2필지(지하7층~지하1층, 지상2층~7층)) (역삼동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://gangnam.chamc.co.kr/treatment/list/obstetrics/reservation.cha?ctCode=2#none&doctorName=%EB%B0%95%EC%A2%85%ED%83%9D&depthName=%EC%82%B0%EB%B6%80%EC%9D%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": "Cheerio parser could not extract education or experience.",
+  "profileUrl": "https://wmanager.chamc.co.kr/file/doctor/1_%EB%B0%95%EC%A2%85%ED%83%9D_%EA%B5%90%EC%88%98%EB%8B%98_1.png",
+  "specialty": "부인종양학, 부인암, 비정상자궁경부세포진, 자궁경부암, 자궁근종, 자궁내막암, 자궁내시경수술, 자궁선근증, 난소암, 난소종양, 복강경수술, 골반내시경수술, 폐경기",
+  "학력": [
+    {
+      "date": "1965년 2월",
+      "content": "전남대학교 의과대학 의학과 졸업"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1974년 3월 ~ 2006년 6월",
+      "content": "성균관의대"
+    },
+    {
+      "date": null,
+      "content": "제일병원 산부인과 역임"
+    },
+    {
+      "date": null,
+      "content": "현 CHA의과대학교 산부인과 임상교수"
+    }
+  ],
+  "학술": []
+}

@@ -1,0 +1,91 @@
+{
+  "doctorId": 14942,
+  "rid_long": "EC6FEF785A79A18E8436CB44557B333A41516758CF06D4463F3F9F29D60387C6E21685C55964F8C8D08227BC870D6E770552EB91B6F87B871657F0B3D9AB7763EC2741D71C53F7677969A8EC04184D24FB6737DD5CA0109C7C4959CF0E76D01E58BF602EBCA8F7AEB27614E74F71DC78C3B5DB964B052F823514CF47949A402D16EA9484BBA2FDFDFDC0DCD812CBC75130993AEDEA0F6066982B8BF8067B5903",
+  "hospital_cid": 400,
+  "bedoc_id": "A5545",
+  "bedoc_hospitalsite": "http://www.hanaromf.com/",
+  "bedoc_doctorname": "이병석",
+  "bedoc_deptname": "산부인과",
+  "bedoc_hospitalname": "하나로의료재단 강남센터",
+  "hospital_name": "하나로의료재단 강남센터",
+  "aiga_hid": "H31KR-11007886",
+  "hospital_site": "https://www.hanaromf.com/introduce/doctor/doctor.jsp",
+  "site_type": "list",
+  "hospital_addr": "서울특별시 종로구 종로 33, 그랑서울 501,502,503호 (청진동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.hanaromf.com/introduce/doctor/doctor.jsp?doctorName=%EC%9D%B4%EB%B3%91%EC%84%9D&depthName=%EC%82%B0%EB%B6%80%EC%9D%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "profileUrl": "https://www.hanaromf.com/upload/noticelistimage/1617348148236_835.jpg",
+  "specialty": null,
+  "학력": [
+    {
+      "date": null,
+      "content": "연세대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 대학원 의학석사 및 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "연세대학교 의과대학 산부인과학교실 교수"
+    },
+    {
+      "date": null,
+      "content": "미국 Harvard 부속 Brigham & Women's Hospital 연구교수"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 의과대학 산부인과학교실 주임교수"
+    },
+    {
+      "date": null,
+      "content": "대한피임생식보건학회 회장"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 의과대학 강남세브란스병원 병원장"
+    },
+    {
+      "date": null,
+      "content": "아시아ㆍ태평양 피임위원회 국제학술대회(APCOC) 조직위원장"
+    },
+    {
+      "date": null,
+      "content": "대한산부인과 내시경학회 회장"
+    },
+    {
+      "date": null,
+      "content": "대통령 주치의"
+    },
+    {
+      "date": null,
+      "content": "아시아 태평양 폐경학회 Member of Advisory Committee"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 의과대학 학장"
+    },
+    {
+      "date": null,
+      "content": "대한폐경학회 회장"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 의과대학 세브란스병원장"
+    },
+    {
+      "date": null,
+      "content": "대한자궁내막증학회 회장"
+    },
+    {
+      "date": null,
+      "content": "대한산부인과 내분비학회 회장"
+    }
+  ]
+}

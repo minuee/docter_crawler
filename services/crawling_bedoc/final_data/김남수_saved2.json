@@ -1,0 +1,64 @@
+{
+  "doctorId": 14677,
+  "rid_long": "343ADC89041CA09EBC67CF95ACAF5EAB699298D3DB227E5C716D2E49F6A6A5A9BCB86C3DADF1A27E327514FE3C2FCC0CC4ED5C7E33C85D62246E8F9BAC302045C9AB322EDFAB3797D88DBFFC2476C97BFFD7FD5F8DD8F3B72714E97A532DA26FFB0EEF956916250346588DEA162FC3A6F23C3C75B6851EE7107E89A0425B4B69A105831E9653BBCFB3108BFC97A04F89333DFA7F155E305A141B6F6D8EDD6ABC7858356D2A7B0BFBFC74C5CD002B1184016B40E595F3CB3B652FD4B35FBA6620",
+  "hospital_cid": 55,
+  "bedoc_id": "A1275",
+  "bedoc_hospitalsite": "http://guri.hyumc.com/index.asp?",
+  "bedoc_doctorname": "김남수",
+  "bedoc_deptname": "소아청소년과",
+  "bedoc_hospitalname": "한양대구리병원",
+  "hospital_name": "의정부을지대학교병원",
+  "doctorName": "김남수",
+  "department": "소아청소년과",
+  "aiga_hid": "H11KR-31000062",
+  "hospital_site": "https://m.uemc.ac.kr/dept/dept_pg01_03.jsp?dept=ABCAAA&doct=20250795",
+  "site_type": "single",
+  "hospital_addr": "경기도 의정부시 동일로 712, 을지대학교 의정부캠퍼스 및 부속병원 (금오동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://m.uemc.ac.kr/dept/dept_pg01_03.jsp?dept=ABCAAA&doct=20250795&doctorName=%EA%B9%80%EB%82%A8%EC%88%98&depthName=%EC%86%8C%EC%95%84%EC%B2%AD%EC%86%8C%EB%85%84%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "doctorSiteUrl": "https://m.uemc.ac.kr/dept/dept_pg01_03.jsp?dept=ABCAAA&doct=20250795",
+  "profileUrl": "http://www.uemc.ac.kr/upload/doctor/20250795_20250701090428.png",
+  "isAttend": true,
+  "specialty": "선천성심장질환, 소아심장질환, 가와사키병, 부정맥",
+  "학력": [
+    {
+      "content": "서울대학교 의과대학 학사"
+    },
+    {
+      "content": "서울대학교 의과대학원 석사"
+    },
+    {
+      "content": "서울대학교 의과대학원 박사"
+    }
+  ],
+  "경력": [
+    {
+      "content": "서울대학교병원 인턴"
+    },
+    {
+      "content": "서울대학교병원 레지던트"
+    },
+    {
+      "content": "부천 세종병원 소아과 과장"
+    },
+    {
+      "content": "한양대학교 의과대학 교수(소아청소년과 소아심장)"
+    },
+    {
+      "content": "일산차병원 소아청소년과 과장"
+    },
+    {
+      "content": "명지병원 소아청소년과 교수"
+    },
+    {
+      "content": "단원병원 소아청소년과 과장"
+    },
+    {
+      "content": "인하대병원 진료교수"
+    }
+  ]
+}

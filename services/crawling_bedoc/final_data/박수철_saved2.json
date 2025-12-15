@@ -1,0 +1,68 @@
+{
+  "doctorId": 14791,
+  "rid_long": "8B4E02BC2ED2748A30CD965F683D2E4D0E22B2DF04354BE5B68E5A5283A823A988B25ADA22870C77AF01DC132FFBF0A1E88D04AEE99D271B888048E14B2375A020F20137C304ACE1202D04015C1FB32C9322C831C230B881F1FF14147A0341868B6C8EBD0B6460273A034CFB35CCCECCA19F2DBE4843C1472D925F1ABDDBB470E1D8D9E5677E915AF62015EB8119DB0372A04066EABB9040AA3BD56B1DCB6B0A",
+  "hospital_cid": 218,
+  "bedoc_id": "A5859",
+  "bedoc_hospitalsite": "http://www.saeviteye.com",
+  "bedoc_doctorname": "박수철",
+  "bedoc_deptname": "안과",
+  "bedoc_hospitalname": "새빛안과병원",
+  "hospital_name": "새빛안과병원",
+  "aiga_hid": "H21KR-31000215",
+  "hospital_site": "https://www.saeviteye.com/m/medical-information/doctor.html?ct_id=900000004",
+  "site_type": "popup",
+  "hospital_addr": "경기도 고양시 일산동구 중앙로 1065, (백석동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.saeviteye.com/m/medical-information/doctor.html?ct_id=900000004&doctorName=%EB%B0%95%EC%88%98%EC%B2%A0&depthName=%EC%95%88%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "학력": [
+    {
+      "date": null,
+      "content": "가톨릭대학교 의과대학 졸업/의학박사"
+    },
+    {
+      "date": null,
+      "content": "가톨릭대학교 강남성모병원 안과전문의"
+    },
+    {
+      "date": null,
+      "content": "가톨릭대학교 성모병원 소아안과 과장 및 교수"
+    },
+    {
+      "date": null,
+      "content": "미국 워싱턴의과대학교 어린이병원 소아안과 교환교수"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "한국 사시 소아안과학회 학술이사"
+    },
+    {
+      "date": null,
+      "content": "대한안과학회 홍보위원 및 전산정보위원"
+    },
+    {
+      "date": null,
+      "content": "대한안과학회 전문의고시 출제위원"
+    },
+    {
+      "date": null,
+      "content": "대한안과학회지 편집위원"
+    },
+    {
+      "date": null,
+      "content": "대한의학회 건강자료 심의위원회 심의위원"
+    },
+    {
+      "date": null,
+      "content": "한국/미국/국제 사시학회 회원"
+    }
+  ],
+  "profileUrl": "http://www.saeviteye.com/upfile/doctor/2201201027280190.jpg",
+  "specialty": "소아안과,신경안과,사시"
+}

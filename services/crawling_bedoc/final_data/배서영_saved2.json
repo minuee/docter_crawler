@@ -1,0 +1,155 @@
+{
+  "doctorId": 14822,
+  "rid_long": "B5D681CCC16C156ACC13B6E8F9DB7BE3431C065A5766AB6130138C8E933E4EEA05425C404A67C5E6CA5A2582354A0EE23AF7A2CAA3CB58B776E48FBAD9E84784FE2767C212D27195C7C83695549155B03B55F10315EBFF13D8F9C8FC6128016B79C11795A50AC5381D9B0F08EE3FCE990A29AC66E19023403450E59E13C9FEAC773F1482A03873A9011354BB28D8C05F8F2B4A6929271F90C5FE98F3C1A63422",
+  "hospital_cid": 255,
+  "bedoc_id": "A0824",
+  "bedoc_hospitalsite": "http://www.paik.ac.kr/sanggye",
+  "bedoc_doctorname": "배서영",
+  "bedoc_deptname": "정형외과",
+  "bedoc_hospitalname": "상계백병원",
+  "hospital_name": "인제대학교상계백병원",
+  "aiga_hid": "H11KR-11000035",
+  "hospital_site": "https://www.paik.ac.kr/sanggye/user/doctor/view.do?doctorId=495",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 노원구 동일로 1342, 상계백병원 (상계동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.paik.ac.kr/sanggye/user/doctor/view.do?doctorId=495&doctorName=%EB%B0%B0%EC%84%9C%EC%98%81&depthName=%EC%A0%95%ED%98%95%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "profileUrl": "https://www.paik.ac.kr/cmmn/file/imageSrc.do?atchFileId=a3f28ef4ddad422bb29a1c1aa38f028b&fileSn=2",
+  "specialty": "발목 및 발, 스포츠의학, 골절 및 외상,족부족관절센터",
+  "학력": [
+    {
+      "date": null,
+      "content": "이화여자대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "이화여자대학교 대학원 의학 박사 학위 취득"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "이화여자대학교 의료원 정형외과 전공의 수료"
+    },
+    {
+      "date": null,
+      "content": "이화여자대학교 목동병원 정형외과 전임의"
+    },
+    {
+      "date": "2001",
+      "content": "독일 Schiller University Trauma Center연수"
+    },
+    {
+      "date": "2002",
+      "content": "~2009 국립의료원 근무"
+    },
+    {
+      "date": "2005",
+      "content": "미국족부족관절학회 초청 5개병원 연수"
+    },
+    {
+      "date": "2005",
+      "content": "~2007 미국 Union Memorial Hospital Foot & Ankle Center 연수"
+    },
+    {
+      "date": null,
+      "content": "현 인제대학교 상계백병원 정형외과 교수"
+    },
+    {
+      "date": null,
+      "content": "현 인제대학교 상계백병원 족부족관절센터소장"
+    }
+  ],
+  "수상": [
+    {
+      "date": null,
+      "content": "대한정형외과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한골절학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한족부족관절학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한정형외과연구학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "북미정형외과족부족관절학회 국제회원"
+    },
+    {
+      "date": null,
+      "content": "대한정형외과학회 및 족부족관절학회 보험위원"
+    }
+  ],
+  "논문": [],
+  "학술": [],
+  "저서": [],
+  "언론": [
+    {
+      "targetDate": "2025.04.26",
+      "type": "뉴스",
+      "text": "날 풀렸지만 덜 풀린 몸 '발목' 잡았네",
+      "url": "https://www.khan.co.kr/article/202504260600005",
+      "issuer": "경향신문"
+    },
+    {
+      "targetDate": "2025.04.23",
+      "type": "뉴스",
+      "text": "걷다가도 삐끗삐끗…'발목관절염' 경고신호입니다",
+      "url": "https://www.k-health.com/news/articleView.html?idxno=80455",
+      "issuer": "헬스경향"
+    },
+    {
+      "targetDate": "2025.04.12",
+      "type": "뉴스",
+      "text": "운동하다가 발목 안 다치려면, '종아리' 풀어주세요",
+      "url": "https://health.chosun.com/site/data/html_dir/2025/04/11/2025041102782.html",
+      "issuer": "헬스조선"
+    },
+    {
+      "targetDate": "2025.04.04",
+      "type": "뉴스",
+      "text": "널 뛰는 봄 날씨, 갑작스러운 야외 운동에 '아킬레스건' 주의보",
+      "url": "https://jhealthmedia.joins.com/news/articleView.html?idxno=30005",
+      "issuer": "헬스중앙"
+    },
+    {
+      "targetDate": "2024.06.03",
+      "type": "뉴스",
+      "text": "발바닥 자극하면 왜 좋을까?...맨발 걷기, 진짜 효과는 '이것'",
+      "url": "https://kormedi.com/1694164/%EB%A9%B4%EC%97%AD%EB%A0%A5-%EB%86%92%EC%9D%B4%EB%8A%94-%EB%A7%A8%EB%B0%9C%EA%B1%B7%EA%B8%B0-%ED%94%BC%ED%95%B4%EC%95%BC-%ED%95%A0-%EC%82%AC%EB%9E%8C%EC%9D%80/",
+      "issuer": "코메디닷컴"
+    },
+    {
+      "targetDate": "2024.05.13",
+      "type": "뉴스",
+      "text": "[헬스＆에너지+] 맨발걷기, 무리하거나 당뇨환자엔 '역효과'",
+      "url": "https://www.ekn.kr/web/view.php?key=20240513021254761",
+      "issuer": "에너지경제"
+    },
+    {
+      "targetDate": "2023.05.16",
+      "type": "뉴스",
+      "text": "발바닥 '이곳' 자꾸 아프면... 족저근막염 의심해야",
+      "url": "https://health.chosun.com/site/data/html_dir/2023/05/16/2023051601182.html",
+      "issuer": "헬스조선"
+    },
+    {
+      "targetDate": "2022.11.14",
+      "type": "뉴스",
+      "text": "발은 '발바닥 장판'부터 늙는다...재발 많은 '족저근막염'",
+      "url": "http://www.koreahealthlog.com/news/articleView.html?idxno=33180",
+      "issuer": "코리아헬스로그"
+    }
+  ],
+  "isAttend": true
+}

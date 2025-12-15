@@ -1,0 +1,84 @@
+{
+  "doctorId": 15114,
+  "rid_long": "8501656311B1D6F7E2425FE572A4C1E33089D9D59C9EB4F5A624D9AA5209081C5E50589DA8E43F7F6D1E04ECC71136DEDCADC6F874539F33221DA7250F2D5EA719AAB3A3478CD92773CF941CB52AC3872351C51B0E51A0FDA5F2D5230312422B73A8CFF383DFC65C5EFF30C0433A0CF2E889652AC1D42ADA02F9B0EA18F20F1F884F8AF41ED0B1C05FDEA39C7F388EF5F2283A3A32D96FCCF2DC44A28E1A448572A04066EABB9040AA3BD56B1DCB6B0A",
+  "hospital_cid": 612,
+  "bedoc_id": "A5691",
+  "bedoc_hospitalsite": "http://www.schmc.ac.kr/seoul/kor/index.do",
+  "bedoc_doctorname": "최윤희",
+  "bedoc_deptname": "재활의학과",
+  "bedoc_hospitalname": "순천향대서울병원",
+  "hospital_name": "순천향대서울병원",
+  "aiga_hid": "H11KR-11000026",
+  "hospital_site": "https://www.schmc.ac.kr/seoul/doctr/home.do?key=1605&doctrNo=531",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 용산구 대사관로 59, (한남동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.schmc.ac.kr/seoul/doctr/home.do?key=1605&doctrNo=531&doctorName=%EC%B5%9C%EC%9C%A4%ED%9D%AC&depthName=%EC%9E%AC%ED%99%9C%EC%9D%98%ED%95%99%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "profileUrl": "https://www.schmc.ac.kr/attach/DATA/doctr/seoul_0220250821113611970.png",
+  "specialty": "뇌신경재활(뇌졸중, 퇴행성뇌질환), 근골격계재활, 소아재활, 삼킴장애, 경직치료(보톡스), 언어장애",
+  "학력": [
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 의학과 석사"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 의학과 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "서울대학교병원 인턴"
+    },
+    {
+      "date": null,
+      "content": "서울대학교병원 재활의학과 전공의"
+    },
+    {
+      "date": null,
+      "content": "분당서울대학교병원 재활의학과 뇌신경계재활(뇌졸중, 외상성뇌손상, 뇌종양, 이상운동장애)전임의"
+    },
+    {
+      "date": "2014 ~ 2022.2",
+      "content": "순천향대학교 서울병원 조교수"
+    },
+    {
+      "date": "2022.03~",
+      "content": "순천향대학교 서울병원 부교수"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한재활의학회 교육위원회 위원"
+    },
+    {
+      "date": null,
+      "content": "대한재활의학회 장애판정위원회 위원"
+    },
+    {
+      "date": null,
+      "content": "대한뇌신경재활학회 미래기획위원회 간사"
+    }
+  ],
+  "수상": [
+    {
+      "date": "2012",
+      "content": "MASCC/ISOO (International symposium on supportive care in cancer) Young Investigator Award 수상"
+    }
+  ],
+  "논문": [
+    "Kwak JM, Kim DH, Lee YG, Choi YH. Optimal needle placement for extensor hallucis longus muscle using ultrasound verification. Muscle Nerve. 2019 Mar;59(3):331-336.",
+    "Park J, Choi YH, Chai JW, Cha SW, Lim JH, Jo CH, Kim DH. Anterior capsular abnormality: another important MRI finding for the diagnosis of adhesive capsulitis of the shoulder. Skeletal Radiol. 2019 Apr;48(4):543-552.",
+    "Cha SW, Bae KJ, Chai JW, Park J, Choi YH, Kim DH. Reliable measurements of physiologic ankle syndesmosis widening using dynamic 3D ultrasonography: a preliminary study. Ultrasonography. 2019 Jul;38(3):236-245"
+  ],
+  "isAttend": true
+}

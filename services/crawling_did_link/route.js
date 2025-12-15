@@ -596,6 +596,25 @@ router.post('/save-notmatch', async function(req, res) {
  *          description: 작업 성공
  */
 
+
+/* 
+  save_match이 과거 의사의 rid를 기준으로 is_active가 0으로 업데이트가 되어야 하는데 누락되는 경우가 있다 다 작업후 쿼리로 확인필요 
+  SELECT db1.*
+  FROM aiga2025.doctor_basic db1
+  JOIN aiga2025.doctor_basic db2
+    ON db1.doctor_id = db2.doctor_id
+  AND db1.rid_long = db2.prev_rid 
+  WHERE db1.is_active NOT IN (0, '0')
+    AND db2.is_active NOT IN (0, '0')
+    AND db1.doctor_id IN (
+          SELECT doctor_id
+          FROM aiga2025.doctor_basic
+          WHERE is_active NOT IN (0, '0')
+          GROUP BY doctor_id
+          HAVING COUNT(*) = 2
+    );
+*/
+
 router.post('/save-match', async function(req, res) {
   mybatisMapper.createMapper([`${global.appRoot}/services/crawling_did_link/controler.xml`]);
   const HOSPITAL_ID = req.body.hid;
@@ -706,6 +725,10 @@ router.post('/save-match', async function(req, res) {
             step = 'update_old_doctor_is_active';
             const updateActiveParam = { search_rid_long: oldDoctorInfo?.rid_long };
             const updateActiveQuery = mybatisMapper.getStatement("controler", "update_old_doctor_is_active", updateActiveParam, format);
+
+            step = 'update_old_doctor_basic_is_active';
+            const updateActiveBasicParam = { search_rid_long: oldDoctorInfo?.rid_long };
+            const updateActivBasicQuery = mybatisMapper.getStatement("controler", "update_old_doctor_basic_is_active", updateActiveParam, format);
 
             console.log(` -> [Step 2.2: UPDATE is_active] Executing for ${doctorData.doctorname}...`);
             const { DBError: updateActiveDBError, RS: updateActiveRS } = await daoMysql.spCall(updateActiveQuery);

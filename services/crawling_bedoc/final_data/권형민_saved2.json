@@ -1,0 +1,179 @@
+{
+  "doctorId": 14661,
+  "rid_long": "668CDB6AA56562D6B8745A118FA392A4C7A531296AF209D505158776CF4C0A7471A7B68C22BE1DE575712FAC14B66D44DE5DBAE336C11FBCCF05D22392C41C77391728CC6F3950CD9513D3D60D0E1B458033896A66F5097E021D3B846C321CC9BA720A867C7CDCE78BE2310A6D9292FF1E951F442FAF27F27DEF761591466547B353726620997191D6D6AEE5FC7072B7E889652AC1D42ADA02F9B0EA18F20F1F76EFB32F8A60968FDAF70CA207D3187AD9F827ECC0F379003D7A98D37F8D7A4C",
+  "hospital_cid": 37,
+  "bedoc_id": "A0463",
+  "bedoc_hospitalsite": "http://www.brmh.org",
+  "bedoc_doctorname": "권형민",
+  "bedoc_deptname": "신경과",
+  "bedoc_hospitalname": "서울보라매병원",
+  "hospital_name": "서울특별시보라매병원",
+  "doctorName": "권형민",
+  "department": "신경과",
+  "aiga_hid": "H11KR-11000019",
+  "hospital_site": "https://www.brmh.org/custom/popup/layer_doctor_view.do?dt_no=351&medi_code=001017000%7C001017000",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 동작구 보라매로5길 20, (신대방동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.brmh.org/custom/popup/layer_doctor_view.do?dt_no=351&medi_code=001017000%7C001017000&doctorName=%EA%B6%8C%ED%98%95%EB%AF%BC&depthName=%EC%8B%A0%EA%B2%BD%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "isAttend": true,
+  "profileUrl": "http://www.brmh.org/upload/TB_MEDITEAM/a1c4377e912147e4a3c10fde76a22caa.png",
+  "specialty": "뇌졸중, 두통, 어지러움증, 일반신경계질환, 뇌졸중클리닉",
+  "학력": [
+    {
+      "date": "2009",
+      "content": "서울대학교 의과대학 뇌신경과학 / 박사"
+    },
+    {
+      "date": "2005",
+      "content": "서울대학교 의과대학 뇌신경과학 / 석사"
+    },
+    {
+      "date": "1998",
+      "content": "서울대학교 의과대학 / 졸업"
+    }
+  ],
+  "경력": [
+    {
+      "date": "2021.06 ~ 현재",
+      "content": "서울특별시보라매병원 의료혁신실장"
+    },
+    {
+      "date": "2019.07 ~ 2021.06",
+      "content": "서울특별시보라매병원 물류기획실장"
+    },
+    {
+      "date": "2018.07 ~ 2019.06",
+      "content": "서울특별시보라매병원 의료혁신실 의료질향상담당"
+    },
+    {
+      "date": "2016.09 ~ 현재",
+      "content": "서울특별시보라매병원 신경과장"
+    },
+    {
+      "date": "2015.06 ~ 2018.06",
+      "content": "서울특별시보라매병원 교육수련실 교육수련담당"
+    },
+    {
+      "date": "2014.02 ~ 2015.01",
+      "content": "Medical University of South Carolina 연수"
+    },
+    {
+      "date": "2011.04 ~ 2012.01",
+      "content": "서울특별시보라매병원 홍보실 홍보담당"
+    },
+    {
+      "date": "2006.03 ~ 2007.02",
+      "content": "강동경희대병원 임상강사"
+    },
+    {
+      "date": "2005.03 ~ 2006.02",
+      "content": "서울대학교병원 뇌졸중 Fellow"
+    }
+  ],
+  "수상": [
+    {
+      "date": "2019",
+      "content": "Paul Dudley White International Scholar Award (American Heart Association)"
+    },
+    {
+      "date": "2014",
+      "content": "대한신경과학회 명인학술상"
+    }
+  ],
+  "학술": [
+    {
+      "date": "2024.03 ~ 현재",
+      "content": "대한뇌졸중학회 기획이사"
+    },
+    {
+      "date": "2024.03 ~ 현재",
+      "content": "대한신경초음파학회 기획이사"
+    },
+    {
+      "date": "2023.01",
+      "content": "대한노인신경의학회 학술이사"
+    },
+    {
+      "date": "2021.01",
+      "content": "대한심뇌혈관예방학회 무임소이사"
+    },
+    {
+      "date": "2018.03 ~ 2022.02",
+      "content": "대한신경초음파학회 총무이사"
+    },
+    {
+      "date": "2017.04",
+      "content": "대한뇌졸중의학연구원 이사"
+    },
+    {
+      "date": "2015.09",
+      "content": "Cerebrovascular Diseases, editorial board"
+    },
+    {
+      "date": "2015.09 ~ 2023.05",
+      "content": "BMC Neurology, associate editor"
+    },
+    {
+      "date": null,
+      "content": "대한신경과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한뇌졸중학회 정회원"
+    }
+  ],
+  "논문": [
+    "Cerebral Small Vessel Disease and Stage 1 Hypertension Defined by the 2017 American College of Cardiology/American Heart Association Guidelines Hypertension 2019-06",
+    "Distribution of cerebral microbleeds in the East and West: Individual participant meta-analysis Neurology 2019-03",
+    "Serum homocysteine level is related to cerebral small vessel disease in a healthy population Neurology 2019-01",
+    "Effects of Temperature and Pressure on Acute Stroke Incidence Assessed Using a Korean Nationwide Insurance Database Journal of Stroke 2017-09",
+    "Factors Associated With Recurrent Ischemic Stroke in the Medical Group of the SAMMPRIS Trial JAMA neurology 2016-03",
+    "Reversible right heart failure after medullary stroke Lancet 2015-04",
+    "New pooled cohort risk equations and presence of asymptomatic brain infarction Stroke 2014-12",
+    "Homocysteine as a predictor of early neurological deterioration in acute ischemic stroke Stroke 2014-03",
+    "High glycated albumin is associated with early neurological deterioration in patients with acute ischemic stroke. BMC Neurol 2024-08",
+    "Triglyceride-Related Parameters and Symptomatic Atherosclerotic Lesions in Patients With Ischemic Stroke. J Lipid Atheroscler 2024-05",
+    "Outcomes of non-vitamin K oral anticoagulants for secondary prevention in ischemic stroke with atrial fibrillation. Sci Rep 2024-04",
+    "Blood urea nitrogen to albumin ratio is associated with cerebral small vessel diseases. Sci Rep 2024-02",
+    "Association of Coronary Stenosis With Cerebral Small Vessel Diseases in Neurologically Asymptomatic Adults. J Stroke 2024-01",
+    "Monocyte to high-density lipoprotein cholesterol ratio is associated with cerebral small vessel diseases. BMC Neurol 2024-01",
+    "Association of medication use with increased fall risk in inpatients: a single-center matched study J Geriatr Neurol 2023-12",
+    "Long Sleep Duration and Dissatisfaction with Sleep Quality Are Associated with Ischemic Stroke in Young Patients. Cerebrovasc Dis 2023-12",
+    "Effectiveness and safety of secondary prevention of non-vitamin K oral anticoagulants use by drug type in Asian patients. Int J Stroke 2023-10",
+    "Clinical significance of D-dimer levels during acute period in ischemic stroke Thromb J 2023-05"
+  ],
+  "언론": [
+    {
+      "targetDate": "2025-09-12",
+      "type": "기사",
+      "text": "\"벼락 맞은 듯한 통증\"…'이런 두통' 가볍게 보지 마세요",
+      "url": "https://v.daum.net/v/20250912010214461?f=o",
+      "issuer": "뉴시스"
+    },
+    {
+      "targetDate": "2023-12-26",
+      "type": "기사",
+      "text": "신경과 권형민 교수, 노령층 입원하면 낙상 예방 약물 모니터링 필요",
+      "url": "https://jhealthmedia.joins.com/article/article_view.asp?pno=27565",
+      "issuer": "중앙일보"
+    },
+    {
+      "targetDate": "2023-07-25",
+      "type": "기사",
+      "text": "신경과 남기웅 교수·권형민 교수·이용석 교수, 혈전 수치가 예전보다 높다면… 뇌졸중 환자의 경우 증상 악화될 수 있어",
+      "url": "https://www.pharmnews.com/news/articleView.html?idxno=227798",
+      "issuer": "쿠키뉴스"
+    },
+    {
+      "targetDate": "2023-06-12",
+      "type": "기사",
+      "text": "신경과 권형민 교수, [in-터뷰] \"심방세동 동반 뇌졸중 2차 예방서 NOAC 임상적 근거 재확인\"",
+      "url": "https://www.rapportian.com/news/articleView.html?idxno=161783",
+      "issuer": "라포르시안"
+    }
+  ]
+}

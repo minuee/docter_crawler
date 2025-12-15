@@ -1,0 +1,242 @@
+{
+  "doctorId": 14815,
+  "rid_long": "A03C0727739141627E93D89730A7943A63CA75B473F98C85BB272B172D3F941D932125E0B69027FE8B33701AF2013889B642F81DF0F5AE22C5E37A2CF211A1AAF463C10E0891E4CC9C19B50031CA9BDE4195BD1027C6F8206DEAD6DC603728DBB29F32081765C0D1D611BCEE378984FCDA69B88D74DAE50C6337C33B121EB4B0CD5194100636D43331FABD1930031FAB3C10FC4ED098257F4333BA75D5E3594C71366A8B024552FB91C7A149EFF1C81E8BB4E92C97DC4D707A254BD276BE3F31",
+  "hospital_cid": 246,
+  "bedoc_id": "A1096",
+  "bedoc_hospitalsite": "http://www.ncc.re.kr",
+  "bedoc_doctorname": "박현진",
+  "bedoc_deptname": "소아청소년과",
+  "bedoc_hospitalname": "국립암센터",
+  "hospital_name": "국립암센터",
+  "aiga_hid": "H11KR-31000013",
+  "hospital_site": "https://www.ncc.re.kr/ncc_about03_param.ncc?searchKey=&searchValue=&dept=PO",
+  "site_type": "list",
+  "hospital_addr": "경기도 고양시 일산동구 일산로 323, (마두동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.ncc.re.kr/ncc_about03_param.ncc?searchKey=&searchValue=&dept=PO&doctorName=%EB%B0%95%ED%98%84%EC%A7%84&depthName=%EC%86%8C%EC%95%84%EC%B2%AD%EC%86%8C%EB%85%84%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "profileUrl": "https://www.ncc.re.kr/images/no-image.gif",
+  "specialty": "소아청소년암의 진단 및 항암치료 (뇌종양, 백혈병, 악성 림프종, 혈액종양)조혈모세포이식소아청소년암 생존자 추적관리 및 다학제클리닉",
+  "isAttend": true,
+  "학력": [
+    {
+      "date": "1985-03 ~ 1991-02",
+      "content": "서울대학교 의과대학교 의학과 대졸(의대)"
+    },
+    {
+      "date": "1995-03 ~ 1997-02",
+      "content": "서울대학교 대학원 의학과 대학원졸(석사)"
+    },
+    {
+      "date": "1998-03 ~ 2004-02",
+      "content": "서울대학교 대학원 의학과 대학원졸(박사)"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1991-03 ~ 1992-02",
+      "content": "서울대학교병원 수련의"
+    },
+    {
+      "date": "1992-03 ~ 1996-02",
+      "content": "서울대학교병원 소아과 전공의"
+    },
+    {
+      "date": "1996-03 ~ 1996-11",
+      "content": "서울대학교병원 소아혈액종양분과 전임의"
+    },
+    {
+      "date": "1996-12 ~ 1999-03",
+      "content": "충북대학교병원 전임강사"
+    },
+    {
+      "date": "1999-03 ~ 2001-01",
+      "content": "Medical College of Georgia Postdoctoral Fellow"
+    },
+    {
+      "date": "1999-04 ~ 2004-03",
+      "content": "충북대학교병원 조교수"
+    },
+    {
+      "date": "2004-04 ~ 2005-02",
+      "content": "충북대학교병원 부교수"
+    },
+    {
+      "date": "2005-03 ~ 2009-07",
+      "content": "국립암센터 특수암센터 전문의"
+    },
+    {
+      "date": "2009-08 ~ 2014-08",
+      "content": "국립암센터 소아암센터 전문의"
+    },
+    {
+      "date": "2012-01 ~ 2019-01",
+      "content": "국립암센터 소아청소년과 전문의"
+    },
+    {
+      "date": "2015-09 ~ 2019-01",
+      "content": "국립암센터 소아암센터 센터장"
+    },
+    {
+      "date": "2019-02 ~ 2023-03",
+      "content": "국립암센터 소아청소년과 의사직, 과장"
+    },
+    {
+      "date": "2019-02 ~ 현재",
+      "content": "국립암센터 소아청소년암센터 의사직, 센터장"
+    },
+    {
+      "date": "2019-11 ~ 현재",
+      "content": "국립암센터 암생존자통합지지실 의사직"
+    },
+    {
+      "date": "2021-03 ~ 현재",
+      "content": "국립암센터국제암대학원대학교 암관리학과 겸임교수"
+    },
+    {
+      "date": "2023-03 ~ 현재",
+      "content": "국립암센터 소아청소년과 의사직(임상교수), 과장"
+    }
+  ],
+  "논문": [
+    "Development and pilot testing of a personalised decision aid for decision-making regarding fertility preservation in young female patients with cancer: a study protocol: BMJ OPEN. 15(8):e090759~ (2.3)",
+    "Comparable outcomes for pediatric acute lymphoblastic leukemia patients receiving conditioning with total body irradiation or chemotherapy: A nationwide, Korean registry-based study: HEMASPHERE. 9(6):e70158~ (14.6)",
+    "Allogeneic Hematopoietic Stem Cell Transplantation in Pediatric and Young Adult Patients with Chronic Myeloid Leukemia in Tyrosine Kinase Inhibitor Era: A Study of the Korean Blood and Marrow Transplantation Registry: CANCER RESEARCH AND TREATMENT. :~ (3.8)",
+    "Understanding gut Microbiome changes in Korean children, adolescents, and young adults with hematologic malignancies: ANNALS OF HEMATOLOGY. 104(5):2947~2961 (2.4)",
+    "Telomere Length in Adolescent and Young Adult Survivors of Childhood Cancer: Cancers. 16(13):2344~ (4.5)",
+    "Spontaneous Regression of Glioma-Mimicking Brainstem Lesion in a Child: A Case Report: Brain Tumor Research and Treatment. 12(1):58~62 (0)",
+    "Excellent Outcomes in Children, Adolescents, and Young Adults with Ovarian Germ Cell Tumors Treated by Either Reduced- or Standard-Dose Bleomycin: CANCERS. 15(21):5290~ (5.2)",
+    "Current Status and Physicians’ Perspectives of Childhood Cancer Survivorship in Korea: A Nationwide Survey of Pediatric Hematologists/Oncologists: JOURNAL OF KOREAN MEDICAL SCIENCE. 38(29):e230~ (4.5)",
+    "Characteristics and clinical course of thyroid abnormalities arisen in long term survivors of childhood cancer: BMC PEDIATRICS. 23(1):124~ (2.4)",
+    "Gonadal Function in Female Adolescent and Young Adult Survivors of Childhood Cancer: CANCER RESEARCH AND TREATMENT. 55(3):992~1000 (4.6)",
+    "Outcomes of intracranial non-germinomatous germ cell tumors: a retrospective Asian multinational study on treatment strategies and prognostic factors: JOURNAL OF NEURO-ONCOLOGY. 160:41~53 (4.506)",
+    "Epidemiologic and Clinical Outcomes of Pediatric Renal Tumors in Korea: A Retrospective Analysis of The Korean Pediatric Hematology and Oncology Group (KPHOG) Data: CANCER RESEARCH AND TREATMENT. 55(1):279~290 (5.036)",
+    "Clinical characteristics and long?term outcomes of rhabdomyosarcoma in Korean children, adolescents and young adults: a single?center experience: JOURNAL OF CANCER RESEARCH AND CLINICAL ONCOLOGY. Online:Published (4.322)",
+    "Prevalence and risk factors of metabolic syndrome components in childhood cancer survivors: JOURNAL OF ADOLESCENT AND YOUNG ADULT ONCOLOGY. Online:Published (1.757)",
+    "Outcome of intracranial germinoma-a retrospective multinational Asian study on effect of clinical presentation and differential treatment strategies: NEURO-ONCOLOGY. Online:Published (12.3)",
+    "Experimental Assessment of Leptomeningeal Metastasis Diagnosis in Medulloblastoma Using Cerebrospinal Fluid Metabolomic Profiles: METABOLITES. 11(12):851~ (4.932)",
+    "Osteosarcoma in Adolescents and Young Adults: CELLS. 10(10):2684~ (6.6)",
+    "Incidence and outcomes of malignant ovarian germ cell tumors in Korea, 1999-2017: GYNECOLOGIC ONCOLOGY. 163(1):79~84 (5.482)",
+    "Incidence Patterns and Outcomes of Ewing Sarcoma in South Korea (1999-2017): A Retrospective Analysis Using Korea Central Cancer Registry Data: CANCER RESEARCH AND TREATMENT. Online:Published (4.679)",
+    "Vincristine, Irinotecan, and Temozolomide as a Salvage Regimen for Relapsed or Refractory Sarcoma in Children and Young Adults: CANCER RESEARCH AND TREATMENT. Online:Published (4.679)",
+    "Tumors of the Pleura and Lung Developed 17 Years after Allogeneic Bone Marrow Transplantation for Childhood Acute Myelomonocytic Leukemia: Synovial Sarcoma Mimicking Malignant Mesothelioma: Clinical Pediatric Hematology-Oncology. 28(1):63~66 (0)",
+    "Guidelines for Cancer Care during the COVID-19 Pandemic in South Korea: CANCER RESEARCH AND TREATMENT. 53(2):323~329 (4.679)",
+    "Cancer Incidence and Survival among Adolescents and Young Adults in Korea: An Update for 2016: CANCER RESEARCH AND TREATMENT. Online:Published (3.761)",
+    "Clinical Characteristics and Treatment Outcomes in Children, Adolescents, and Young-adults with Hodgkin's Lymphoma: a KPHOG Lymphoma Working-party, Multicenter, Retrospective Study: JOURNAL OF KOREAN MEDICAL SCIENCE. 35(46):e393~ (1.705)",
+    "Atypical Teratoid/Rhabdoid Tumor of the Central Nervous System in Children Under the Age of 3 Years: CANCER RESEARCH AND TREATMENT. Online:Published (3.761)",
+    "Nanoparticles in 472 human cerebrospinal fluid: Changes in extracellular vesicle concentration and miR-21 expression as a biomarker for leptomeningeal metastasis: CANCERS. 12(10):E2745~ (6.126)",
+    "Hyperammonemic Encephalopathy Mimicking Ornithine Transcarbamylase Deficiency in Fibrolamellar Hepatocellular Carcinoma: Successful Treatment with Continuous Venovenous Hemofiltration and Ammonia Scavengers: CANCER RESEARCH AND TREATMENT. Online:Published (3.761)",
+    "Epidemiological Study of Hereditary Hemolytic Anemia in the Korean Pediatric Population during 1997?2016: a Nationwide Retrospective Cohort Study: JOURNAL OF KOREAN MEDICAL SCIENCE. 35(33):e279~ (1.705)",
+    "Korean parents' perceptions of the challenges and needs on school re-entry during or after childhood and adolesecnt cancer: a multi-institutional survey by Korean Society of Pediatric Hematology and Oncology: clinical and experimental pediatrics. Online:Published ()",
+    "Outcomes of acute lymphoblastic leukaemia in adolescent and young adult Korean patients: British journal of haematology. Online:Published (5.206)",
+    "Histologic Response and Toxicity following Interval-Compressed Four-Drug Therapy Given Preoperatively in Children and Young Adults with Osteosarcoma: A Retrospective Study: ONCOLOGY. Online:Published (2.278)",
+    "Thromboembolism in children with cancer: a retrospective multicenter study in Korea: Journal of Thrombosis and Thrombolysis. 47(4):558~565 (2.941)",
+    "T-Cell Receptor Rearrangements Determined Using Fragment Analysis in Patients With T-Acute Lymphoblastic Leukemia: ANNALS OF LABORATORY MEDICINE. 39(2):125~132 (1.916)",
+    "Thromboembolism in children with cancer: a retrospective multicenter study in Korea.: JOURNAL OF THROMBOSIS AND THROMBOLYSIS. 47(4):558~565 (2.054)",
+    "A Nationwide, Population-Based Epidemiologic Study of Childhood Brain Tumors in Korea, 2005-2014: A Comparison with United States Data.: CANCER EPIDEMIOLOGY, BIOMARKERS & PREVENTION. 28(2):409~416 (4.554)",
+    "Second malignant neoplasms after childhood cancer: A nationwide population-based study in Korea: PLOS ONE. 13(11):e0207243~e0207243 (2.766)",
+    "School performance of childhood cancer survivors in Korea: a multi-institutional study on behalf of the Korean Society of Pediatric Hematology and Oncology.: Psycho-oncology. 27(9):2257~2264 (3.455)",
+    "Nationwide Statistical Analysis of Lymphoid Malignancies in Korea: Cancer Research and Treatment. 50(1):222~238 (3.772)",
+    "Developing chemotherapy for diffuse pontine intrinsic gliomas (DIPG): Critical Reviews in Oncology/Hematology. 120:111~119 (4.971)",
+    "Cerebrospinal fluid metabolomic profiles can discriminate patients with leptomeningeal carcinomatosis from patients at high risk for leptomeningeal metastasis: Oncotarget. 8(60):101203~101214 (5.168)",
+    "Gonadal and Sexual Dysfunction in Childhood Cancer Survivors: Cancer Research and Treatment. Online:Published (3.772)",
+    "Neurocognitive and Psychological Functioning of Children with an Intracranial Germ Cell Tumor: Cancer Research & Treatment. 49(4):960~969 (3.772)",
+    "Awareness about past diagnosis and treatment history: nationwide survey of childhood cancer survivors and their parents: Japanese journal of clinical oncology. 47(10):962~968 (1.905)",
+    "Re-evaluation of DNA Index as a Prognostic Factor in Children with Precursor B Cell Acute Lymphoblastic Leukemia: Annals of Clinical & Laboratory Science. 47(5):535~540 (0.727)",
+    "Outcome of reinduction chemotherapy with a modified dose of idarubicin for children with marrow-relapsed acute lymphoblastic leukemia: Results of the childhood acute lymphoblastic leukemia (CALL)-0633 study: Journal of Korean Medical Science. 32(4):642~649 (1.459)",
+    "Nationwide Population-based Incidence and Survival rates of Malignant Central Nervous System Germ Cell Tumors in Korea, 2005-2012: Cancer Research and Treatment. 49(2):494~501 (4.245)",
+    "Neurocognitive function and health-related quality of life in pediatric Korean survivors of medulloblastoma: Journal of Korean Medical Science. 31(11):1726~1734 (1.256)",
+    "Higher Gemcitabine dose was associated with better outcome of osteosarcoma patients receving Gemcitabine-Docetaxel chemotherapy: Pediatric Blood and Cancer. 63(9):1552~1556 (2.634)",
+    "Characteristics and outcomes of second malignant neoplasms after childhood cancer treatment: Multi-center retrospective survey: Journal of Korean Medical Science. 31(8):1254~1261 (1.256)",
+    "Incidence and Survival of Childhood Cancer in Korea: Cancer Research and Treatment. 48(3):869~882 (4.245)",
+    "A case of Langerhans cell histiocytosis manifested as a suprasellar mass: Brain Tumor Research and Treatment. 4:26~29 ()",
+    "Depression and distress in caregivers of children with brain tumors undergoing treatment: psychosocial factors as moderators: Psycho-Oncology. 25(5):544~550 (2.443)",
+    "Gradual increase of chronic lymphocytic leukemia incidence in Korea, 1999-2010: comparison to plasma cell myeloma: Leukemia & Lymphoma. 57(3):585~589 (2.891)",
+    "Nationwide statistical analysis of myeloid malignancies in Korea: incidence and survival rate from 1999 to 2012: BLOOD RESEARCH. 50(4):204~217 (0)",
+    "Acute Raoultella planticola cystitis in a child with rhabdomyosarcoma of the bladder neck.: Pediatrics International. 57:985~987 (0.73)",
+    "Pediatric supratentorial high-grade glioma: multicenter retrospective observational study of  the Korean Society for Pediatric Neuro-Oncology: Journal of neuro-oncology. 121(2):413~419 (3.07)",
+    "Network Computer Management System Development for Blood Transfusion in ABO-Incompatible Stem Cell Transplantation: The Korean Journal of Blood Transfusion. 25(3):283~290 (0)",
+    "Diffuse cerebral vasospasm with infarct after intrathecal cytarabine in childhood leukemia: Pediatrics international. 56(6):921~924 (0.731)",
+    "A Case of Childhood Paroxysmal Cold Hemoglobinuria Related with Suspicious Chlamydia Infection: Clinical Pediatric Hematology-Oncology. 21(2):135~139 (0)",
+    "Adult-onset sellar and suprasellar atypical teratoid rhabdoid tumor treated with a multimodal approach: A case report: Brain tumor research and treatment. 2(2):108~113 (0)",
+    "Ewing sarcoma/peripheral primitive neuroectodermal tumor in the adrenal gland of an adolescent: A case report and review of the literature: Journal of pediatric hematology/oncology. 36(7):e456~e459 (0.956)",
+    "Efficacy and safety of micafungin for the prophylaxis of invasive fungal infection during neutropenia in children and adolescents undergoing allogeneic hematopoietic SCT: Bone marrow transplantation. 49(9):1212~1216 (3.466)",
+    "Proton beam therapy reduces the incidence of acute haematological and gastrointestinal toxicities associated with craniospinal irradiation in pediatric brain tumors: Acta oncologica. 53(9):1158~1164 (3.71)",
+    "Clinical Effects and Safety of Therapeutic Leukapheresis in Hyperleukocytosis: The Korean Journal of Blood Transfusion. 25(2):132~140 (0)",
+    "A study of docetaxel and irinotecan in children and young adults with recurrent or refractory Ewing sarcoma family of tumors: BMC Cancer. 14:622~622 (3.319)",
+    "Huge Intrathoracic Malignant Peripheral Nerve Sheath Tumor in an Adolescent with Neurofibromatosis Type 1: Case reports in pediatrics. 2014:951252~951252 (0)",
+    "Cancer Incidence and Survival among Adolescents and Young Adults in Korea: PloS One. 9(5):e96088~e96088 (3.534)",
+    "Clinical features and treatment outcomes of Langerhans cell histiocytosis: A nationwide survey from Korea Histiocytosis Working Party: Journal of pediatric hematology/oncology. 36(2):125~133 (0.956)",
+    "Cross-Cultural Adaptation of the Korean Version of the Minneapolis-Manchester Quality of Life Instrument-Adolescent Form: Journal of Korean medical science. 28(12):1788~1795 (1.249)",
+    "A Comparison of the Correlations between the Disgust Sensitivity and Pain-fear Association in Children and Adolescent Patients with Cancer against Non-patient Children and Adolescents: The Korean Journal of Health Psychology. 18(4):869~879 (0)",
+    "Early-onset Pericardial Effusion after Autologous Hematopoietic Stem Cell Transplantation in a Child with Neuroblastoma: Clinical Pediatric Hematology-Oncololgy. 20(2):121~125 (0)",
+    "An infant with prenatally diagnosed congenital anaplastic astrocytoma who remains disesase-free after proton therapy: Journal of Korean Medical Science. 28:1394~1398 (1.249)",
+    "Myeloablative chemotherapy and autologous stem cell transplantation in patients with relapsed or progressed central nervous system germ cell tumors: results of Korean Society of Pediatric Neuro-Oncology S-053 study: Journal of neuro-oncology. 114:329~338 (3.115)",
+    "Langerhans cell histiocytosis in non-twin siblings: Pediatrics International. 55(3):e73~e76 (0.875)",
+    "Retrospective analysis of treatment outcome of pediatric ependymomas in Korea: analysis of Korean multi-institutional data.: Journal of Neuro-oncology. 113(1):39~48 (3.115)",
+    "Proton Beam Radiotherapy for Pediatric Gliomas: Early Outcomes and Dose Comparison: Clinical Pediatric Hematology-Oncololgy. 20(1):40~50 (0)",
+    "Quantitative comparison of CDKN2B methylation in pediatric and adult myelodysplastic syndromes: Acta Haematologica. 130(2):115~121 (0.894)",
+    "Safety and effects of prophylactic defibrotide for sinusoidal obstruction syndrome in hematopoietic stem cell transplantation: Annals of transplantation. 18:36~2 (0.815)",
+    "6-Thioguanine-Induced Hepatic Sinusoidal Obstruction Syndrome in a Leukemic Child with TPMT Heterozygote: Clinical Pediatric Hematology and Oncology. 19(2):109~113 (0)",
+    "Hemophagocytic Lymphohistiocytosis can Mimic the Superior Vena Cava Syndrome: Journal of Pediatric Hematology Oncology. 34(4):e152~e154 (1.159)",
+    "Follicular thyroid carcinoma arising after stem cell transplantation in a child with pleuropulmonary blastoma: Thyroid. 225(5):547~551 (4.792)",
+    "Statistics of hematologic malignancies in Korea: incidence, prevalence and survival rates from 1999 to 2008.: Korean Journal of Hematology. 47:28~38 (0)",
+    "Tandem high dose chemotherapy and autologous stem cell transplantation in young children with atypical teratoid/rhabdoid tumor of the central nervous system: Journal of Korean Medical Science. 27(2):135~140 (0.993)",
+    "Prediction of tumour necrosis fractions using metabolic and volumetric 18F-FDG PET/CT indices, after one course and at the completion of neoadjuvant chemotherapy, in children and young adults with osteosarcoma: European Journal of Nuclear Medicine and Molecular Imaging. 39(1):39~49 (4.991)",
+    "Chemotherapy for malignant gliomas based on histoculture drug response assay: a pilot study: Journal of Korean Neurosurgical Society. 50:426~433 (0.607)",
+    "Craniospinal Irradiation Techniques: A Dosimetric Comparison of Proton Beams with Standard and Advanced Photon Radiotherapy.: International journal of radiation oncology, biology, physics. 81(3):637~646 (4.503)",
+    "Ewing sarcoma/peripheral primitive neuroectodermal tumor in an adolesence, manifeted as isolated cervical mass: Clinical Pediatric Hematology-Oncology. 18(1):70~74 (0)",
+    "Epidemiology and Clinical Long-term Outcome of Childhood Aplastic Anemia in Korea for 15 Years: Retrospective Study of the Korean Society of Pediatric Hematology Oncology (KSPHO): J Pediatr Hematol Oncol. 33(3):172~178 (0.998)",
+    "The impact of HLA matching on unrelated donor hematopoietic stem cell transplantation in Korean children: Korean J Hematol. 46(1):11~17 (0)",
+    "Current status of pediatric umbilical cord blood transplantation in Korea: A multicenter retrospective analysis of 236 cases: American Journal of Hematology. 86(1):12~17 (3.576)",
+    "Long-trem follow-up study and long-term care of childhood cancer survivors: Korean Journal of Pediatrics. 53:465~470 ()",
+    "Validation of the Pediatric Functional Assessment of Cancer Therapy Questionnaire (Version 2.0) in Brain Tumor Survivors Aged 13 Years and Older: Journal of Pain and Symptom Management. 40(4):559~565 (2.423)",
+    "Validation of pediatric Functional Assessment of Cancer Therapy: patient version 2 \"brain tumor survivor\" for grade school patients aged 7-12 years: Qual Life Res. 40(4):559~565 (2.423)",
+    "Efficacy of high-dose chemotherapy and autologoys stem cell trasnplantation in patients with relapsed medulloblastoma: A report on the Korean Society for pediatric neuro-oncology(KSPNO)-S-053 study: Journal of Korean Medical Science. 25:1160~1166 (0.838)",
+    "Agreement Between Pediatric Brain Tumor Patients and Parent Proxy Reports Regarding the Pediatric Functional Assessment of Cancer Therapy-Childhood Brain Tumor Survivors Questionnaire, Version 2: Cancer. 116(15):3674~3682 (5.418)",
+    "Hepatic veno-occlusive disease in children after hematopoietic stem cell transplantation: incidence, risk factors, and outcome.: Bone Marrow Transplantation. 45(8):1287~1293 (2.998)",
+    "Normalization of red cell enolase level following allogeneic bone marrow transplantation in a child with Diamond-Blackfan anemia.: Journal of Korean medical science. 25(4):626~629 (0.838)",
+    "Idarubicin Plus Behenoyl Cytarabine and 6-thioguanine Compares Favorably with Idarubicin Plus Cytarabine-based Regimen for Children with Previously Untreated Acute Myeloid  eukemia: 10-Year Retrospective, Multicenter Study in Korea: Journal of Korean Medical Science. 25:9~15 (0.838)",
+    "Synchronous multifocal HPV-related neoplasm involving both the genital tract and the head-and-neck area: A case report of Fanconi anemia.: radiotherapy and oncology. 92:138~141 (3.99)",
+    "Clinical Results of Chemotherapy based Treatment in Retinoblastoma Patients:A Single Center Experience: Cancer Research and Treatment. 40(4):164~171 (0)",
+    "Adenocarcinoma of lung in never smoked children.: Lung Cancer. 61:266~269 (3.455)",
+    "Anti-tumor Cytotoxicity of Allogeneic Neuroblastoma Tumor Antigen-loaded Dendiritic Cells: 대한혈액학회지. 42:163~145 (0)",
+    "The Clinical Guidelines for Myelodysplastic Syndrome: 대한혈액학회지. 42:71~90 ()",
+    "Outcome of Multicenter Study for Korean Children with Medulloblastoma: 임상소아혈액종양. 14:167~175 ()",
+    "Establishment of Korean Childhood Cancer Survivor Cohort and Long-Term Follow-up System: 임상소아혈액종양. 14:1~42 ()",
+    "Current Status of Hematopoietic Stem Cell Transplantation in Korean Children: 대한혈액학회지. 41:223~242 ()",
+    "Acute Lymphoblastic Leukemia with Chromosomal Translocation t(5;14) (q31;q32) and Hypereosinophilia in a Child: 대한소아혈액종양학회지. 12:108~113 ()",
+    "Successful Treatment of Disseminated Fusariosis with Liposomal Amphotericin B and Voriconazole in a Child Undergoing Chemotherapy: 대한소아혈액종양학회지. 12:330~334 ()",
+    "Successful Treatment of Epstein-Barr Virus-Associated Hemophagocytic lymphophistiocytosis with HLH-94 Protocol: Journal of  Korean Medical Science. 20:209~214 ()",
+    "Homozygous type I Protein C deficiency in neonatal purpura\nfulminans with a novel frame-shift deletion of 10 base pairs in\nexon 8 of PROC gene: International Society on Thrombosis and Haemostasis. 3:593~595 ()",
+    "Functional and Phenotypic Characterization of Cord Blood-Derived Dendritic Cells: 대한소아혈액종양학회지. 11:217~227 ()",
+    "Defibrotide Treatment for Hepatic Veno-occlusive Disease after Umbilical Cord Blood Transplantation: 대한소아혈액종양학회지. 11:92~96 ()",
+    "Rhabdomyosarcoma of the Urinary Bladder Manifested as an Abdominal Mass: A Case Report: 대한초음파의학회지. 23:193~196 ()",
+    "Neonatal Purpura Fulminans Due to Homozygous Protein C Deficiency: Annals of Dermatology. 16:176~179 ()",
+    "Identification of mutations in the Bruton's tyrosine kinase gene, including a novel genomic rearrangements resulting in large deletion, in Korean X-linked agammaglobulinemia patients.: Journal of Human Genetics. 48:322~326 ()",
+    "Dendritic Cell-Based Cancer Immunotherapy: Journal of the Korean Pediatric Society. 46:947~951 ()",
+    "Myeloid Sarcoma of Both Kidneys, the Brain, and Multiple Bones in a Nonleukemic Child: Yonsei Medical Journal. 44:740~743 ()",
+    "A Case of EBV-associated Hemophagocytic Lymphohistiocytosis with Seizure and Loss of Consciousness: 대한소아신경학회지. 10:325~332 ()",
+    "Tryptophan deprivation sensitizes activated T cells to apoptosis prior to cell division.: Immunology. 107:452~460 ()",
+    "A Case of Neonatal Alloimmune Thrombocytopenia due to Anti-HLA-B62+B75: 대한수혈학회지. 13:173~179 ()",
+    "Th/Tc and Cytotoxic Responses of Cord and Adult Blood Mononuclear Cells following Allogeneic Stimulation: 대한조혈모세포이식학회지. 6:124~139 ()",
+    "Molecular Detection of TEL-AML1 Transcripts as a Diagnostic Tool and for Monitoring of Minimal Residual Disease in B-lineage Childhood Acute Lymphoblastic Leukemia.: Molecules & Cells. 10:90~95 ()",
+    "Leukapheresis for Collection of Peripheral Blood Stem Cells in Children with Acute Myelocytic Leukemia: 대한혈액학회지. 34:215~227 ()",
+    "A Case of Cold Agglutinin Hemolytic Anemia Complicating Mycoplasma pneumoniae Pneumonia in Children: 소아감염. 5:302~307 ()",
+    "Induction Chemotherapy with BH-AC, Idarubicin, and 6-Thioguanine in Childhood Acute Myelogenous Leukemia: Journal of the Korean Pediatric Society. 41:209~215 ()",
+    "Immunophenotypic Analysis of Long-term Culture-Initiating Cells in Long-term Liquid Culture: 대한소아혈액종양학회지. 5:130~137 ()",
+    "Treatment Result of Pediatric Osteosarcoma with Intraarterial Cisplatin: 대한암학회지. 30:169~177 ()",
+    "Testicular Involvement in Childhood Acute Lymphoblastic leukemia: 대한소아혈액종양학회지. 4:301~309 ()",
+    "A Result of Treatment of Malignant Germ Cell Tumors in Childhood: journal of the Korean Pediatric Society. 40:1707~1718 ()",
+    "Tumors of the Exocrine Pancreas in Childhood: 대한소아혈액종양학회지. 3:113~122 ()",
+    "Effect of Rapid Freezing and Storage in a -80℃ Freezer on Viability and Colony Forming Capacity of hematopoietic Stem Cells: 대한조혈모세포이식학회지. 1:75~83 ()",
+    "Influence of Deflazacort and Prednisolone on Bone and Glucose Metabolism: 대한혈액학회지. 31:105~112 ()",
+    "Effective Method of RBC Depletion from Cord Blood for Use in Cord Blood Transplantation and Cord Blood Banking: 대한혈액학회지. 31:393~400 ()"
+  ],
+  "저서": [],
+  "수상": [],
+  "언론": []
+}

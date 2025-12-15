@@ -1,0 +1,103 @@
+{
+  "doctorId": 14667,
+  "rid_long": "E5DF863C169C10C2F7B6EBA1A257D2AA020C0D9467165E48796E58F3481D5A48C0B95A357B77389FF2C675FD39B0B8DBBEC3E69CCB352E4DD58D31392710A3B0B97809935938AC90D91B679A662653F58D086601F562CA08093AD3C166B73BA8D89D8E2B71E828C874E7A9FD90DE59FBBE5B38E0C2C1D035C56234630C78D01632F41D4D494F109088C2ED824CDA5B61E9636D19B87F4B07FEA22B5E9F0FF6EFB1B3D045A98ADB57C7ADBBC7637A91FF2C5432D1525C50531E8791ED8156786345768206FB976C55A0C2E47609009157DEE1D0C2D27777085B8465153E297EC0",
+  "hospital_cid": 43,
+  "bedoc_id": "A5810",
+  "bedoc_hospitalsite": "https://mjh.or.kr",
+  "bedoc_doctorname": "김광남",
+  "bedoc_deptname": "소아청소년과",
+  "bedoc_hospitalname": "명지병원",
+  "hospital_name": "명지병원",
+  "doctorName": "김광남",
+  "department": "소아청소년과",
+  "aiga_hid": "H11KR-31000048",
+  "hospital_site": "https://mjh.or.kr/main/doctor/view.do?doctor_code=PE026&md_idx=30&mp_idx&part_code=PE&utm_source=chatgpt.com",
+  "site_type": "single",
+  "hospital_addr": "경기도 고양시 덕양구 화수로14번길 55, (화정동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://mjh.or.kr/main/doctor/view.do?doctor_code=PE026&md_idx=30&mp_idx&part_code=PE&utm_source=chatgpt.com&doctorName=%EA%B9%80%EA%B4%91%EB%82%A8&depthName=%EC%86%8C%EC%95%84%EC%B2%AD%EC%86%8C%EB%85%84%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "isAttend": true,
+  "profileUrl": "https://mjh.or.kr/data/doctor/PE026_2.png",
+  "specialty": "소아류마티스",
+  "학력": [
+    {
+      "date": null,
+      "content": "한양대학교 의과대학 미생물학 박사"
+    },
+    {
+      "date": null,
+      "content": "한양대학교 의과대학 소아과 석사"
+    },
+    {
+      "date": null,
+      "content": "한양대학교 의과대학 졸업"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "명지의료재단 명지병원 류마티스센터장 (현)"
+    },
+    {
+      "date": null,
+      "content": "명지의료재단 명지병원 소아청소년과장 (전)"
+    },
+    {
+      "date": null,
+      "content": "한양대학병원 레지던트"
+    },
+    {
+      "date": null,
+      "content": "미국 CHMC in Clincinnati, OH observer"
+    },
+    {
+      "date": null,
+      "content": "미국 CHMC in Clincinnati, OH international fellowship"
+    },
+    {
+      "date": null,
+      "content": "미국 UCLA exchange scholar"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한소아감염학회 교육연수 위원장 (전)"
+    },
+    {
+      "date": null,
+      "content": "대한소아 임상면역학회 학술 위원장 (전)"
+    },
+    {
+      "date": null,
+      "content": "대한 소아과학회 교육위원 (전)"
+    },
+    {
+      "date": null,
+      "content": "대한 류마티스학회 이사 (전)"
+    },
+    {
+      "date": null,
+      "content": "대한소아감염학회 평의원"
+    },
+    {
+      "date": null,
+      "content": "대한백신학회 평의원"
+    }
+  ],
+  "수상": [],
+  "저서": [],
+  "논문": [
+    "Long term safety and efficacy of Etanercept in JIA in a single center - 2019.07",
+    "Catastrophic Antiphospholipid Syndrome associated with SLE sucessfully treated with Rituximab - 2019.01",
+    "Prevalence of low BMD and its associated factors in Korean children and adolecents with JIA - 2018.10",
+    "Prevalence, Risk Factors and Expression of HLA DRB1 in JIA associated uveitis - 2018.01",
+    "New Provisional Classification of JIA applying RF and ANA - 2018.01",
+    "소아청소년의 급성충수염 : 천공과 관련된 인자 및 원인균 - 2018",
+    "계절 인플루엔자 진단에서 신속항원검사의 유용성 - 2017",
+    "HLA B27 and JIA and Classification of JAS by the ASAS criteria - 2016.08"
+  ]
+}

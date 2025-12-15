@@ -1,0 +1,260 @@
+{
+  "doctorId": 14790,
+  "rid_long": "ACA7595737F3BB9CD851E97AF46882E2DE9E074B31ECD868AD4B9BC70597CCF8A6FA121388F2FF8F457CD646E3D9F31286A450E5EEE01D69780A7A0D7593BA04A4F9AE07E1D343AF5C1A6866BB891C219358E6A54208E6C21E3F1D2827E5EA8F409F1B2526F591B3B494DB1036264C9A9622D22D286C10C6C02ECEFC692B0FB0A3762D10A3AA7DADEBCD1E6D45F4A5DD6EB6063BD9188BE221627E200D7C6FF4A1367002B3323B4777E996E21DBEA86BF7C203C558F5EB9DE0FBDBCB4FA02958",
+  "hospital_cid": 217,
+  "bedoc_id": "A0407",
+  "bedoc_hospitalsite": "http://www.kdh.or.kr",
+  "bedoc_doctorname": "박세혁",
+  "bedoc_deptname": "신경외과",
+  "bedoc_hospitalname": "강동성심병원",
+  "hospital_name": "강동성심병원",
+  "aiga_hid": "H11KR-11000023",
+  "hospital_site": "https://www.kdh.or.kr/sub201_02_result.php?dr_keyword=%EB%B0%95%EC%84%B8%ED%98%81",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 강동구 성안로 150, (길동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.kdh.or.kr/sub201_02_result.php?dr_keyword=%EB%B0%95%EC%84%B8%ED%98%81&doctorName=%EB%B0%95%EC%84%B8%ED%98%81&depthName=%EC%8B%A0%EA%B2%BD%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "profileUrl": "https://www.kdh.or.kr/files/1623333954/1623333954.jpg",
+  "specialty": "뇌종양, 뇌혈관질환(뇌졸중), 손저림, 소아신경외과",
+  "학력": [
+    {
+      "date": null,
+      "content": "연세대학교 의과대학"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 대학원 의학석사"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 대학원 의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "강동성심병원 신경외과 객원교수(現)"
+    },
+    {
+      "date": null,
+      "content": "강동성심병원 손저림내시경클리닉 소장(現)"
+    },
+    {
+      "date": null,
+      "content": "한림대학교 의과대학 교수"
+    },
+    {
+      "date": null,
+      "content": "한림의대 신경외과학교실 주임교수"
+    },
+    {
+      "date": null,
+      "content": "강동성심병원 신경외과 과장"
+    },
+    {
+      "date": null,
+      "content": "미국 UCSF 뇌종양연구소 박사후 연구원"
+    },
+    {
+      "date": null,
+      "content": "신촌세브란스병원 신경외과 수련"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한신경외과학회(전문의)"
+    },
+    {
+      "date": null,
+      "content": "대한신경중환자의학회(신경계중환자 전문치료 인증의)"
+    },
+    {
+      "date": null,
+      "content": "대한중환자의학회(세부전문의)"
+    },
+    {
+      "date": null,
+      "content": "대한소아신경외과학회 회장"
+    },
+    {
+      "date": null,
+      "content": "대한말초신경학회 회장"
+    },
+    {
+      "date": null,
+      "content": "대한신경외과초음파학회 회장"
+    },
+    {
+      "date": null,
+      "content": "대한뇌종양학회"
+    },
+    {
+      "date": null,
+      "content": "대한뇌혈관외과학회"
+    },
+    {
+      "date": null,
+      "content": "대한소아신경외과학회"
+    },
+    {
+      "date": null,
+      "content": "대한말초신경학회"
+    },
+    {
+      "date": null,
+      "content": "대한신경외과초음파학회"
+    },
+    {
+      "date": null,
+      "content": "대한신경중환자의학회"
+    },
+    {
+      "date": null,
+      "content": "대한두개저외과학회"
+    },
+    {
+      "date": null,
+      "content": "대한중환자의학회"
+    },
+    {
+      "date": null,
+      "content": "미국신경외과학회"
+    },
+    {
+      "date": null,
+      "content": "국제소아신경외과학회"
+    },
+    {
+      "date": null,
+      "content": "대한신경외과학회 이사"
+    },
+    {
+      "date": null,
+      "content": "대한신경외과학회 학술위원"
+    },
+    {
+      "date": null,
+      "content": "대한신경외과학회 교과서"
+    }
+  ],
+  "수상": [
+    {
+      "date": null,
+      "content": "1. 대한신경외과학회 학술상(2005)"
+    },
+    {
+      "date": null,
+      "content": "2. 대한말초신경학회 최우수연제상(2014)"
+    },
+    {
+      "date": null,
+      "content": "3. 대한민국 옥조근정훈장(2021)"
+    },
+    {
+      "date": null,
+      "content": "4. 보건복지부장관 표창(2023)"
+    }
+  ],
+  "논문": [
+    "Surgical Technique for Performing Endoscopic Carpal Tunnel Release without Converting to an Open Technique, and Analysis of the Reasons for Conversion. World Neurosurg 2025",
+    "Anomalous Muscles of the Wrist Encountered During Endoscopic Carpal Tunnel Surgery. J Korean Neurosurg Soc 2018",
+    "Delayed improvement after endoscopic carpal tunnel release. J Korean Neurosurg Soc 2014",
+    "Value of ultrasonography in the diagnosis of carpal tunnel syndrome: Correlation with electrophysiological abnormalities and clinical severity. J Korean Neurosurg Soc 2014",
+    "Spontaneous resorption of calcified cephalhematoma in a 9-month-old child: case report. Childs Nerv Syst 2013",
+    "Traumatic pseudoaneurysm of the superficial temporal artery in a child: a case report. Childs Nerv Syst 2010",
+    "Racemose cysticercosis in the cerebellar hemisphere: case report. J Korean Neurosurg Soc 48(7):59-61, 2010",
+    "A study of 77 cases of surgically excised scalp and skull masses in pediatric patients. Childs Nerv Syst 2008",
+    "Delayed development of frontal mucocele after fronto-orbital advancement in a child with craniosynostosis. Surg Neurol 2007",
+    "Delayed diagnosis of cerebellar hemangioblastoma after intracerebellar    hemorrhage. Surg Neurol 2007",
+    "A case of type III cystic sacrococcygeal teratoma. Pediatr Neurosurg 2006",
+    "Penetrating craniofacial injuries in children with wooden and metal chopsticks. Pediatr Neurosurg 2006",
+    "Teratoma in Human Tail Lipoma. Pediatr Neurosurg 2005",
+    "Surgical outcome of endoscopic carpal tunnel release in 100 patients with carpal tunnel syndrome. Minm Invas Neurosurg 2004",
+    "Head injuries from falls in preschool children. Yonsei Med J 2004",
+    "Heterogeneity, polyploidy, aneusomy, and 9p deletion in human glioblastoma multiforme. Cancer Genet Cytogenet 1995"
+  ],
+  "언론": [
+    {
+      "targetDate": "2012-01-28",
+      "type": "기사",
+      "text": "건강적색경보 내 몸이 보내는 SOS - 신경외과 박세혁 교수",
+      "url": "http://www.imbc.com/broad/tv/culture/",
+      "issuer": null
+    },
+    {
+      "targetDate": "2007-10-28",
+      "type": "기사",
+      "text": "건강 365 - 신경외과 박세혁 교수",
+      "url": "http://culture.kbs.co.kr/",
+      "issuer": null
+    },
+    {
+      "targetDate": "2005-09-20",
+      "type": "기사",
+      "text": "무엇이든 물어보세요 - 신경외과 박세혁 교수",
+      "url": "http://program.kbs.co.kr/1tv/culture/whatever/pc/list.html?smenu=c2cc5a",
+      "issuer": null
+    },
+    {
+      "targetDate": "2008-08-29",
+      "type": "기사",
+      "text": "고기 기생충 조심, 뇌 공격",
+      "url": "http://health.chosun.com/site/data/html_dir/2008/08/29/2008082900671.html",
+      "issuer": null
+    },
+    {
+      "targetDate": "2008-04-05",
+      "type": "기사",
+      "text": "덜익은 돼지고기 좋아한다면?",
+      "url": "http://www.seoul.co.kr/news/newsView.php?id=20080405022002",
+      "issuer": null
+    },
+    {
+      "targetDate": "2008-04-02",
+      "type": "기사",
+      "text": "돼지고기 ‘확실히’ 익히세요",
+      "url": "http://www.fnnews.com/view?ra=Sent0901m_View&corp=fnnews&arcid=0921274812&cDateYear=2008&cDateMonth=04&cDateDay=02",
+      "issuer": null
+    },
+    {
+      "targetDate": "2008-04-02",
+      "type": "기사",
+      "text": "돼지고기 잘못 먹으면 두통에 다리마비?",
+      "url": "http://health.chosun.com/site/data/html_dir/2008/04/02/2008040200682.html",
+      "issuer": null
+    },
+    {
+      "targetDate": "2007-03-13",
+      "type": "기사",
+      "text": "'수근관증후군' 내시경 수술로 간단히 치료",
+      "url": "http://www.hankyung.com/news/app/newsview.php?aid=2007031112421&intype=1",
+      "issuer": null
+    },
+    {
+      "targetDate": "2006-08-23",
+      "type": "기사",
+      "text": "손저림증",
+      "url": "/board.php?table_name=news&mode=view&bid=26087",
+      "issuer": null
+    },
+    {
+      "targetDate": "2006-06-05",
+      "type": "기사",
+      "text": "영아 뇌손상 61% 추락원인 外",
+      "url": "/board.php?table_name=news&mode=view&bid=26065",
+      "issuer": null
+    },
+    {
+      "targetDate": "2006-06-05",
+      "type": "기사",
+      "text": "손저림증, '손목터널 증후군' 의심해봐야",
+      "url": "/board.php?table_name=news&mode=view&bid=26063",
+      "issuer": null
+    }
+  ]
+}

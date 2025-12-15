@@ -1,0 +1,203 @@
+{
+  "doctorId": 15005,
+  "rid_long": "E1012B71B39B76F71B08A6628207AE44275257E8660E39A9268B8972FF6C0249BEE368B7E9B233452ABC1614B6F815BCFEBA9E0B26953ED138FF1FFECAC71A43C1CDABFB6849DA3724B73DFEBEE326E1A8B22C4B1F87348C5CF77CD53E6499073438158ADE5FA2E38E990B3E756FB5736EB6063BD9188BE221627E200D7C6FF4A1367002B3323B4777E996E21DBEA86BF7C203C558F5EB9DE0FBDBCB4FA02958",
+  "hospital_cid": 476,
+  "bedoc_id": "A0380",
+  "bedoc_hospitalsite": "http://www.cmcujb.or.kr/",
+  "bedoc_doctorname": "이태규",
+  "bedoc_deptname": "신경외과",
+  "bedoc_hospitalname": "의정부성모병원",
+  "hospital_name": "의정부성모병원",
+  "aiga_hid": "H11KR-31000003",
+  "hospital_site": "https://www.cmcujb.or.kr/page/doctor/103/D0001143",
+  "site_type": "single",
+  "hospital_addr": "경기도 의정부시 천보로 271, 의정부성모병원 (금오동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.cmcujb.or.kr/page/doctor/103/D0001143?doctorName=%EC%9D%B4%ED%83%9C%EA%B7%9C&depthName=%EC%8B%A0%EA%B2%BD%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "doctorSiteUrl": "https://www.cmcujb.or.kr/page/doctor/103/D0001143",
+  "profileUrl": "https://www.cmcujb.or.kr/api/attach/view/doctor/D0001165/thumbs/1",
+  "학력": [
+    {
+      "date": "1988~1995",
+      "content": "가톨릭대학교 의학 학사"
+    },
+    {
+      "date": "2001~2003",
+      "content": "가톨릭대학교 신경외과학 석사"
+    },
+    {
+      "date": "2004~2008",
+      "content": "가톨릭대학교 신경외과학 박사"
+    },
+    {
+      "date": "2017~2019",
+      "content": "가톨릭대학교 의료경영대학원 경영학석사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1997~2001",
+      "content": "가톨릭대학교 강남성모병원 신경외과 전공의"
+    },
+    {
+      "date": "2001~2004",
+      "content": "가톨릭대학교 강남성모병원 신경외과 임상강사"
+    },
+    {
+      "date": "2004~2010",
+      "content": "가톨릭대학교 서울성모병원 전임강사, 조교수"
+    }
+  ],
+  "연수": [
+    {
+      "date": "2004",
+      "content": "Stanford University Medical Center, Palo Alto, CA, U.S.A."
+    },
+    {
+      "date": "2008~2010",
+      "content": "Mayo Clinic, Rocheste, MN, U.S.A."
+    }
+  ],
+  "수상": [
+    {
+      "date": "2005",
+      "content": "Award in Cyberkinfe Society"
+    }
+  ],
+  "학술": [
+    {
+      "date": "현재",
+      "content": "대한신경외과학회 교과서 책임편집위원, 학술위원, 학회지 편집위원"
+    },
+    {
+      "date": "현재",
+      "content": "대한정위기능신경외과학회 회장"
+    },
+    {
+      "date": "현재",
+      "content": "대한신경조절학회 회장"
+    },
+    {
+      "date": "현재",
+      "content": "대한신경통증학회 학술이사"
+    },
+    {
+      "date": "현재",
+      "content": "대한방사선수술학회 보험이사"
+    },
+    {
+      "date": "현재",
+      "content": "대한신경기능이상연구회 특별이사"
+    },
+    {
+      "date": "현재",
+      "content": "대한통증연구학회 특별이사"
+    },
+    {
+      "date": "현재",
+      "content": "Asian journal of Pain - Editor"
+    },
+    {
+      "date": "현재",
+      "content": "NECA (보건의료연구원) 전문위원"
+    }
+  ],
+  "논문": [
+    "Medical Ethics and Artificial Intelligence in Neurosurgery-How Should We Prepare? (WORLD NEUROSURGERY 제1저자)",
+    "Robotic surgery for microvascular decompression in hemifacial spasm: a feasibility study (NEUROFUNCTION 공동저자)",
+    "The Direction of Neurosurgery to Overcome the Living with COVID-19 Era : The Possibility of Telemedicine in Neurosurgery (JOURNAL OF KOREAN NEUROSURGICAL SOCIETY (대한신경외과학회지) 교신저자)",
+    "Delayed Detection of a 5-Aminolevulinic Acid In Vivo: A Case of Metastatic Breast Cancer (BRAIN TUMOR RESEARCH AND TREATMENT 공동저자)",
+    "Letter to the Editor: Comparison of AggreGuide A-100 with Platelet Function Tests and Thromboelastography in Patients with Ischemic Stroke (ANNALS OF CLINICAL AND LABORATORY SCIENCE 공동저자)",
+    "Individualized three-dimensional printed model for skull base tumor surgery (JOURNAL OF KOREAN SKULL BASE SOCIETY(대한두개저학회지) 공동저자)",
+    "Application of augmented reality using neuro-navigation system for individualized brain tumor surgery (JOURNAL OF KOREAN SKULL BASE SOCIETY(대한두개저학회지) 공동저자)",
+    "Cadaver-Free Neurosurgical Simulation Using a 3-Dimensional Printer and Augmented Reality (OPERATIVE NEUROSURGERY 교신저자)"
+  ],
+  "저서": [
+    {
+      "date": "2024 Mar",
+      "content": "정위기능신경외과학 3판",
+      "issuer": "대한정위기능신경외과학회"
+    },
+    {
+      "date": "2019 Apr",
+      "content": "만성통증교과서",
+      "issuer": "대한신경통증학회"
+    },
+    {
+      "date": "2017 Jan",
+      "content": "정위기능신경외과학 2판",
+      "issuer": "대한정위기능신경외과학회"
+    },
+    {
+      "date": "2012 Jan",
+      "content": "신경외과학 (Neurosurgery, 4th Edition)",
+      "issuer": "대한신경외과학회"
+    },
+    {
+      "date": "2005 Jun",
+      "content": "Robotic Radiosurgery",
+      "issuer": "The Cyberknife Society Press"
+    }
+  ],
+  "언론": [
+    {
+      "targetDate": "2022.09.09",
+      "type": "뉴스",
+      "text": "대한정위기능신경외과학회 회장취임",
+      "url": "http://www.doctorsnews.co.kr/news/articleView.html?idxno=146065"
+    },
+    {
+      "targetDate": "2022.07.01",
+      "type": "영상",
+      "text": "(얼굴떨림의 모든것) 안면경련 VS 안면마비 VS 틱장애, 이렇게 구분하세요!",
+      "url": "https://youtu.be/uerOO9C8ak8"
+    },
+    {
+      "targetDate": "2022.07.01",
+      "type": "영상",
+      "text": "(내귀에 닥터) 95% 완치 안면경련 치료법",
+      "url": "https://youtu.be/wD0H-nmqkRE"
+    },
+    {
+      "targetDate": "2021.06.18",
+      "type": "뉴스",
+      "text": "‘극심한 고통’ 3차 신경통",
+      "url": "http://www.ilyoseoul.co.kr/news/articleView.html?idxno=209911"
+    },
+    {
+      "targetDate": "2021.06.18",
+      "type": "뉴스",
+      "text": "가톨릭대학교 의정부성모병원, 증강현실 시스템 수술 성공 - 국민일보",
+      "url": "http://news.kmib.co.kr/article/view.asp?arcid=0015639209&code=61122013"
+    },
+    {
+      "targetDate": "2021.06.18",
+      "type": "뉴스",
+      "text": "가톨릭대학교 의정부성모병원 아시아 최초 첫 시각화 시스템 수술 성공 - 한국경제",
+      "url": "https://www.hankyung.com/society/article/202103160148Y"
+    },
+    {
+      "targetDate": "2021.06.18",
+      "type": "뉴스",
+      "text": "암 환자 절반이 겪는 통증, 수술로 잡는다? - 헬스조선",
+      "url": "https://health.chosun.com/site/data/html_dir/2021/06/09/2021060901630.html"
+    },
+    {
+      "targetDate": "2021.06.18",
+      "type": "영상",
+      "text": "[신경외과 신사부] 대한신경외과학회 선정 명의 ##‘만성통증과 암성통증의 수술적 치료!’",
+      "url": "https://youtu.be/pyg4h8FGv1E"
+    },
+    {
+      "targetDate": "2021.06.18",
+      "type": "영상",
+      "text": "[신경외과 신사부] 대한신경외과학회 선정 명의 ## 편측안면경련/삼차신경통 수술 (미세혈관감압술)",
+      "url": "https://youtu.be/8dGds9KiEqg"
+    }
+  ],
+  "specialty": "미세혈관감압술 (안면떨림/삼차신경통), 뇌종양, 척수신경자극기설치술 (난치성통증, 복합부위통증증후군, 척추수술후통증, 당뇨병성신경통, 대상포진후통증, 중풍후통증), 이식형약물주입기설치술 (암성통증, 뇌성마비, 중풍후마비), 심부뇌자극술 (파킨슨병, 진전, 뇌전증, 뇌성마비, 만성통증, 강박증, 우울증).",
+  "isAttend": true
+}

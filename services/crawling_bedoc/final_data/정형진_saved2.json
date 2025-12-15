@@ -1,0 +1,86 @@
+{
+  "doctorId": 15060,
+  "rid_long": "326CE14F13666FAE2AF371DBAD486819431C065A5766AB6130138C8E933E4EEA05425C404A67C5E6CA5A2582354A0EE23AF7A2CAA3CB58B776E48FBAD9E84784BB34CC9B1C812FDADC78F7E34EF1CC96880BF52F6E704C03CBFE73105B739DFE2301DF20E30B97F852CCC9310434FB330A29AC66E19023403450E59E13C9FEAC773F1482A03873A9011354BB28D8C05F8F2B4A6929271F90C5FE98F3C1A63422",
+  "hospital_cid": 546,
+  "bedoc_id": "A0817",
+  "bedoc_hospitalsite": "http://www.paik.ac.kr/sanggye",
+  "bedoc_doctorname": "정형진",
+  "bedoc_deptname": "정형외과",
+  "bedoc_hospitalname": "상계백병원",
+  "hospital_name": "상계백병원",
+  "aiga_hid": "H11KR-11000035",
+  "hospital_site": "https://www.paik.ac.kr/sanggye/user/doctor/view.do?doctorId=494",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 노원구 동일로 1342, 상계백병원 (상계동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.paik.ac.kr/sanggye/user/doctor/view.do?doctorId=494&doctorName=%EC%A0%95%ED%98%95%EC%A7%84&depthName=%EC%A0%95%ED%98%95%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "profileUrl": "https://www.paik.ac.kr/cmmn/file/imageSrc.do?atchFileId=299ef17d0f5749c7a121194dcfe99b40&fileSn=2",
+  "specialty": "발목 및 발의 변형, 관절염, 외상, 스포츠손상, 당뇨발 및 말초혈관 질환",
+  "학력": [
+    {
+      "date": null,
+      "content": "인제대학교 의과대학 학사"
+    },
+    {
+      "date": null,
+      "content": "인제대학교 대학원 석사"
+    },
+    {
+      "date": null,
+      "content": "경희대학교 대학원 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1999",
+      "content": "년 스위스 AO Course 연수"
+    },
+    {
+      "date": "2000",
+      "content": "년 세브란스 관절경 연구실 연수"
+    },
+    {
+      "date": "2001",
+      "content": "년 러시아 일리자로프 코스 연수"
+    },
+    {
+      "date": "2005",
+      "content": "년 스위스 Basel 대학 병원 족부 클리닉 연수"
+    },
+    {
+      "date": "2005",
+      "content": "년 ~ 년 미국 뉴욕 Hospital for Special Surgery, International Fellowship 수료"
+    },
+    {
+      "date": null,
+      "content": "인제대학교 상계백병원 족부족관절센터 소장 (연구부원장, 정형외과 책임교수 역임)&nbsp;"
+    }
+  ],
+  "수상": [
+    {
+      "date": null,
+      "content": "대한족부족관절학회 회장, 평의원, 학술위원장, 국제위원장, 감사 등 역임"
+    },
+    {
+      "date": null,
+      "content": "대한정형외과학회 현 임상진료지침위원회 위원장, 의료심사자문위원 (고시위원, 논문심사위원 역임)"
+    },
+    {
+      "date": null,
+      "content": "대한골절학회 평의원 (학술위원, 편집위원 역임)"
+    },
+    {
+      "date": null,
+      "content": "근로복지공단 및 심평원 자문위원"
+    }
+  ],
+  "논문": [],
+  "isAttend": true,
+  "학술": [],
+  "저서": [],
+  "언론": []
+}

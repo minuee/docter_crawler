@@ -75,6 +75,18 @@
         ORDER BY db.createAt
     </select>
 
+    <select id="select_doctor_basic_specialty_temp">
+        SELECT
+            db.specialties,db.rid_long,db.hid,db.doctorname,db.doctor_id
+        FROM 
+            doctor_basic db
+        WHERE
+            1=1 AND doctor_id in (
+                4208,4228,4231,14618,14623,14625
+            )
+        ORDER BY db.createAt
+    </select>
+
     <select id="select_specialty_id">
         SELECT
             a.specialty_id

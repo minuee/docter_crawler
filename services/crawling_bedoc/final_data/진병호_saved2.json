@@ -1,0 +1,70 @@
+{
+  "doctorId": 15092,
+  "rid_long": "B7BFF83F0BE3BA2D06DB6D03765E8B8FF43B301EB98332F540E84DB43C1C0651103402FCBF23E9E66BC0B36E666B5E09CA8CB8E22C771DBD3ED52894F54132916D5D5D0248EC944599C8757229FF98B5A6DBF83506D18CB97F4BA9ADA810EA9B26C77C30F791CFE618656E750635ACED6BE90A1053F4CC09AD7FF27077A6AE1F8D9A887995E9A29BBC7266205AB553AA2CF941F4844C7200241FD23BF3E58013E0EAF297E8FB962344A2DC5E55849FB7B72E850996FC920A38E6D0FFAD873B14",
+  "hospital_cid": 588,
+  "bedoc_id": "A8297",
+  "bedoc_hospitalsite": "http://www.ish.or.kr",
+  "bedoc_doctorname": "진병호",
+  "bedoc_deptname": "신경외과",
+  "bedoc_hospitalname": "국제성모병원",
+  "hospital_name": "가톨릭관동대학교 국제성모병원",
+  "aiga_hid": "H11KR-22000003",
+  "hospital_site": "https://www.ish.or.kr/main/doctor/view.do?md_idx=56&doctor_code=545598&mp_idx=60&mc_idx=",
+  "site_type": "single",
+  "hospital_addr": "인천광역시 서구 심곡로100번길 25-0, 인천국제성모병원",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.ish.or.kr/main/doctor/view.do?md_idx=56&doctor_code=545598&mp_idx=60&mc_idx=&doctorName=%EC%A7%84%EB%B3%91%ED%98%B8&depthName=%EC%8B%A0%EA%B2%BD%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "isAttend": true,
+  "specialty": "퇴행성 척추질환(목, 허리 디스크), 미세현미경 디스크 제거술, 인공디스크 치환술, 척추관 협착증, 척추전방전위증, 후종인대골화증, 재발성디스크, 척수종양, 척추외상 및 골절, 희귀난치성 척추질환(척수공동증, 척수혈관질환)",
+  "경력": [
+    {
+      "date": "현재",
+      "content": "가톨릭관동대 국제성모병원 교수"
+    },
+    {
+      "date": "2019 ~ 현재",
+      "content": "가톨릭관동대 국제성모병원 신경외과 과장"
+    },
+    {
+      "date": "2019 ~ 2025",
+      "content": "가톨릭관동대 국제성모병원 척추센터장"
+    },
+    {
+      "date": "2018 ~ 2020",
+      "content": "가톨릭관동대 국제성모병원 진료부원장"
+    },
+    {
+      "date": "1995 ~ 2011",
+      "content": "강남세브란스병원 전강,조,부,교수"
+    },
+    {
+      "date": "1992 ~ 1995",
+      "content": "강남세브란스병원 임상강사"
+    },
+    {
+      "date": "1988 ~ 1992",
+      "content": "강남세브란스병원 레지던트"
+    },
+    {
+      "date": "1987 ~ 1988",
+      "content": "세브란스병원 인턴"
+    }
+  ],
+  "학력": [
+    {
+      "date": "1990 ~ 1994",
+      "content": "연세대학교 의과대학원 의학석사"
+    },
+    {
+      "date": "1980 ~ 1987",
+      "content": "연세대학교 의과대학 의학사"
+    }
+  ],
+  "논문": [
+    "Paraganglioma of the cauda equina region: a case report (The Nerve, 2020.06)",
+    "Dural injury in unilateral biportal endoscopic spinal surgery (Global spine journal, 2021.07)"
+  ]
+}

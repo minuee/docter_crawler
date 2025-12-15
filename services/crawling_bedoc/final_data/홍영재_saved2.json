@@ -1,0 +1,104 @@
+{
+  "doctorId": 15145,
+  "rid_long": "6F9A5EB271042F2859EF882A0C2618FBA219FD5388F35EC7689A222017B9ABF546635792737D630CDDDE65F10831519BED071F6CD56B8278DCC5F7C6D77E1831F3607BA77F8BAACE6FEED6E854AEED42DF95A3D72860539A96DD9F36B53231FA512740F713FA78A3FF9345472A78F8070A1FBEA597132975855FAF710AC9268229CDA0928A17A8D30DE357515642774488B54D16C7813EA0F5774B724D584C3925E9972B5B9F820896601094A01AA5EFD9F827ECC0F379003D7A98D37F8D7A4C",
+  "hospital_cid": 657,
+  "bedoc_id": "A0007",
+  "bedoc_hospitalsite": "http://www.noon.co.kr",
+  "bedoc_doctorname": "홍영재",
+  "bedoc_deptname": "안과",
+  "bedoc_hospitalname": "누네안과병원",
+  "hospital_name": "누네안과병원",
+  "aiga_hid": "H21KR-11000040",
+  "hospital_site": "https://www.noon.co.kr/about/doctor_view/1/6?sch_key=&sch_branch_code_key=1&sch_center_code_no=&sch_text=",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 강남구 테헤란로 408, 대치빌딩 지상9층~지상17층 (대치동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.noon.co.kr/about/doctor_view/1/6?sch_key=&sch_branch_code_key=1&sch_center_code_no=&sch_text=&doctorName=%ED%99%8D%EC%98%81%EC%9E%AC&depthName=%EC%95%88%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "specialty": "녹내장",
+  "profileUrl": "https://www.noon.co.kr/upload/doctor/20220114173841.png",
+  "학력": [
+    {
+      "date": null,
+      "content": "연세대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 대학원 의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "연세대학교 의과대학 명예교수"
+    },
+    {
+      "date": null,
+      "content": "대한민국 의학 한림원 정회원"
+    },
+    {
+      "date": null,
+      "content": "대학안과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "EditorinChief, Korea Journal od Ophthalmology"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 의과대학 안과학교실 교수"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 의과대학 부속 원주기독병원 안과 과장"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 의료원 강남세브란스병원 안과 과장"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 의료원 세브란스병원 부원장"
+    },
+    {
+      "date": null,
+      "content": "대한안과학회 이사장"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 교수평의회 의장"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 의료원 안·이비인후과 병원장"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한안과학회 편집이사, 이사장"
+    },
+    {
+      "date": null,
+      "content": "The organizing committee Chairman of the 3rd congress of the Asian Oceanic Glaucoma Society"
+    }
+  ],
+  "수상": [
+    {
+      "date": "2001",
+      "content": "Achievement Award: AmericanAcademyofOphthalmology"
+    },
+    {
+      "date": "2003",
+      "content": "Distinguished Service Award: AsiaPacific Academy of Ophthalmology"
+    },
+    {
+      "date": "2004",
+      "content": "지석영 의학상, 후생신보"
+    }
+  ],
+  "isAttend": true
+}

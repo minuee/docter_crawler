@@ -1,0 +1,110 @@
+{
+  "doctorId": 14704,
+  "rid_long": "C5959A1D705B6C5BE95580536AC8B2233B439EA0631FC7CCC886F0CC79FFB55B62735E90F1B0BDDA3ECA495393A55489890B308F7DC7DFDA008B962174939DE13C4053F344DFDE931D2E307025CA771C18342786DD76A9FC703AAEFAFDE0DAC1746C1F6EC2EEB39F9224BA0402999DDE990189738932618EF6358846CAB7A80791782DA134BC0C26978B837AD355BF44",
+  "hospital_cid": 94,
+  "bedoc_id": "A1308",
+  "bedoc_hospitalsite": "http://www.cmcseoul.or.kr",
+  "bedoc_doctorname": "김성철",
+  "bedoc_deptname": "비뇨기과",
+  "bedoc_hospitalname": "서울성모병원",
+  "hospital_name": "가톨릭대학교 서울성모병원",
+  "aiga_hid": "H11KR-11000026",
+  "hospital_site": "https://www.cmcseoul.or.kr/page/doctor/A/20",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 서초구 반포대로 222, (반포동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.cmcseoul.or.kr/page/doctor/A/20?doctorName=%EA%B9%80%EC%84%B1%EC%B2%A0&depthName=%EB%B9%84%EB%87%A8%EA%B8%B0%EA%B3%BC",
+  "isSearchType": "html_playwright_failed",
+  "error": "Cheerio parser could not extract education or experience.",
+  "specialty": "전립선암, 신장암, 방광암, 비뇨기종양, 복강경수술, 로봇수술",
+  "학력": [
+    {
+      "date": null,
+      "content": "가톨릭대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "가톨릭대학교 의과대학 석사"
+    },
+    {
+      "date": null,
+      "content": "가톨릭대학교 의과대학 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "가톨릭중앙의료원 인턴"
+    },
+    {
+      "date": null,
+      "content": "가톨릭중앙의료원 레지던트"
+    },
+    {
+      "date": null,
+      "content": "가톨릭대학교 의과대학 조교수"
+    },
+    {
+      "date": null,
+      "content": "미국 토마스제퍼슨 의대 필라델피아 연수"
+    },
+    {
+      "date": null,
+      "content": "가톨릭대학교 의과대학 부교수"
+    },
+    {
+      "date": null,
+      "content": "가톨릭대학교 의과대학 교수"
+    },
+    {
+      "date": null,
+      "content": "現 서울성모병원 비뇨의학과 교수"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한비뇨의학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한비뇨기종양학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한내비뇨기학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한배뇨장애요실금학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한남성과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한생식의학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "미국비뇨의학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "세계비뇨의학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한비뇨기종양학회 회장 역임"
+    },
+    {
+      "date": null,
+      "content": "대한비뇨의학회 이사장 역임"
+    }
+  ],
+  "언론": [],
+  "isAttend": false
+}

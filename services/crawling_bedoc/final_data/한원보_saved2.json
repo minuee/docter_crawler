@@ -1,0 +1,89 @@
+{
+  "doctorId": 15136,
+  "rid_long": "842CB00BCDF495AD972BF79924DC8B4879C3026487E2400D12AC5E396B3A02F270C5E469EEAC1ECB355436725C628218FF1B93EC1648FCE775AEE8AB1D1CF07365663CC20E1FD643112F1E3B08780EADF3C1B414DCDE1A0C322AF56B61EC0904CE2C81789248FB5FFEB48440103F9B9DF7C226B123659059B572BFDC5038FDFC991098410749791DB5B337B7855822F3BCED3BC473E1853E929309904FF1F848F88E8D6D9C5E8B27C5457245770088EF",
+  "hospital_cid": 644,
+  "bedoc_id": "A0913",
+  "bedoc_hospitalsite": "http://gangnam.chamc.co.kr",
+  "bedoc_doctorname": "한원보",
+  "bedoc_deptname": "산부인과",
+  "bedoc_hospitalname": "강남차병원",
+  "hospital_name": "강남차병원",
+  "aiga_hid": "H11KR-11000037",
+  "hospital_site": "https://gangnam.chamc.co.kr/treatment/list/obstetrics/reservation.cha#none",
+  "site_type": "list",
+  "hospital_addr": "서울특별시 강남구 논현로 566, 강남차병원(역삼동650-9, 606-4, 605외2필지(지하7층~지하1층, 지상2층~7층)) (역삼동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://gangnam.chamc.co.kr/treatment/list/obstetrics/reservation.cha#none?doctorName=%ED%95%9C%EC%9B%90%EB%B3%B4&depthName=%EC%82%B0%EB%B6%80%EC%9D%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "profileUrl": "https://wmanager.chamc.co.kr/file/doctor/2_%ED%95%9C%EC%9B%90%EB%B3%B4_%EA%B5%90%EC%88%98%EB%8B%98_1.png",
+  "specialty": "초음파, 일반산부인과",
+  "학력": [
+    {
+      "date": null,
+      "content": "연세대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 대학원 의학석사"
+    },
+    {
+      "date": null,
+      "content": "연세대학교 대학원 의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "세브란스병원 인턴, 레지던트"
+    },
+    {
+      "date": null,
+      "content": "국군수도통합병원 산부인과 과장"
+    },
+    {
+      "date": null,
+      "content": "CHA 의과학대학교 산부인과학교실 주임교수"
+    },
+    {
+      "date": null,
+      "content": "강남차병원 산부인과 과장"
+    },
+    {
+      "date": null,
+      "content": "강남차병원 교육수련부장"
+    },
+    {
+      "date": null,
+      "content": "강남차병원 진료부원장"
+    },
+    {
+      "date": null,
+      "content": "現 차의과대학교 산부인과 교수"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한산부인과의학회"
+    },
+    {
+      "date": null,
+      "content": "대한초음파의학회"
+    },
+    {
+      "date": null,
+      "content": "대한 성의학회"
+    }
+  ],
+  "수상": [
+    {
+      "date": "2015",
+      "content": "보건복지부장관 표창"
+    }
+  ],
+  "논문": [
+    "Han WB, et al. The clinical significance of fetal heart rate variability in the second half of pregnancy. J Matern Fetal Neonatal Med. 2022;35(25):7343-7349."
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "doctorId": 15108,
+  "rid_long": "5FAD0706355F4EB4527514C9501997092FAE829D42CCA61E13ED0CC5E86026A16CE2E09026FD8908D117507BED591D590B12BCF878A8DB7DDBCFC5DCBB31E0CDAEE7E322B9D79B940FE7CDCD09BBC1F5EA0CEF1B817372AAF73047679DBF1D3C85E816BF4127BF6077B56FAFB5D4BE6BE9572B102F7CDC2683246A0ADE056993D9F827ECC0F379003D7A98D37F8D7A4C",
+  "hospital_cid": 606,
+  "bedoc_id": "A8253",
+  "bedoc_hospitalsite": "http://www.khnmc.or.kr",
+  "bedoc_doctorname": "최성일",
+  "bedoc_deptname": "외과",
+  "bedoc_hospitalname": "강동경희대병원",
+  "hospital_name": "강동경희대학교병원",
+  "aiga_hid": "H11KR-11000004",
+  "hospital_site": "https://www.khnmc.or.kr/kr/treatment/doctor/39/profile.do",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 강동구 동남로 892, (상일동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.khnmc.or.kr/kr/treatment/doctor/39/profile.do?doctorName=%EC%B5%9C%EC%84%B1%EC%9D%BC&depthName=%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "specialty": "위암, 고도비만수술, 탈장(소아는 8세이상 가능), 복강경수술, 로봇수술",
+  "학력": [
+    {
+      "date": null,
+      "content": "경희대학교 의과대학"
+    },
+    {
+      "date": null,
+      "content": "경희대학교 의과대학 외과학 석사"
+    },
+    {
+      "date": null,
+      "content": "성균관대학교 의과대학 외과학 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "현재",
+      "content": "강동경희대학교병원 기획조정처 부처장"
+    },
+    {
+      "date": "2022~ 현재",
+      "content": "강동경희대학교병원 의대병원 외과장"
+    },
+    {
+      "date": "현재",
+      "content": "강동경희대학교병원 의대병원 로봇수술센터장"
+    },
+    {
+      "date": "현재",
+      "content": "강동경희대학교병원 외과 교수"
+    },
+    {
+      "date": "2019",
+      "content": "목련교수 2기 선정"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "세계탈장학회 아시아태평양지역 상임이사"
+    },
+    {
+      "date": null,
+      "content": "대한탈장학회 회장"
+    },
+    {
+      "date": null,
+      "content": "대한내시경복강경학회 상임이사"
+    },
+    {
+      "date": null,
+      "content": "대한비만대사외과 상임이사"
+    },
+    {
+      "date": null,
+      "content": "대한위암학회 이사"
+    }
+  ],
+  "수상": [
+    {
+      "date": "2021",
+      "content": "대한비만대사외과학회 우수논문상"
+    },
+    {
+      "date": "2020",
+      "content": "대한비만대사외과학회 우수논문상"
+    },
+    {
+      "date": "2010",
+      "content": "대한암학회 우수 논문상"
+    }
+  ],
+  "논문": [
+    "The feasibility of robotic inguinal henia repair in Korea (Journal of Minimally Invasive Surgery. 2023;26(3):108-109)",
+    "Comparative Analysis of Various Weight Loss Success Criteria Models After Bariatric Metabolic Surgery in Korean Morbid Obese Patients (Journal of Metabolic and Bariatric Surgery. 2023;12(2):67-75)",
+    "Long-Term Survival Outcomes of Elderly Patients Treated With S-1 or Capecitabine Plus Oxaliplatin for Stage II or III Gastric Cancer: A Multicenter Cohort Study (JOURNAL OF GASTRIC CANCER. 2022;22(1):67-77)",
+    "비만대사수술 시행 환자에서 수면무호흡증의 대사영향 평가에 대한 연구 (Journal of sleep medicine. 2022;19(2):59-64)",
+    "Impact of the Deep Neuromuscular Block on Oncologic Quality of Laparoscopic Surgery in Obese Gastric Cancer Patients: A Randomized Clinical Trial (Journal of the American College of Surgeons. 2022;234(3):326-339)",
+    "Short-term comparative study of three-dimensional and two-dimensional laparoscopic surgery for total extraperitoneal primary inguinal hernia repair (Journal of Minimally Invasive Surgery. 2021;24(2):98-103)",
+    "Appropriate Number of Adjuvant Chemotherapy Cycles for Patients with Stage 2 or 3 Gastric Cancer After Curative Gastrectomy: A Multicenter Cohort Study (Annals of Surgical Oncology. 2021;28(8):4458-4470)",
+    "Is the Sleeve Gastrectomy Sufficient or Does it Require Additional Surgical Procedures? ( J Metab Bariatr Surg. 2021;10(1):9-13)",
+    "Nutritional Intervention for a Patient with Laparoscopic Sleeve Gastrectomy for Morbid Obesity: a Case Report (Clinical Nutrition Research. 2020;9(2):157-162)",
+    "Multicenter Retrospective Analysis of Intraperitoneal Paclitaxel and Systemic Chemotherapy for Advanced Gastric Cancer with Peritoneal Metastasis (Journal of Gastric Cancer. 2020;20(1):50-59)",
+    "Short-term outcomes of laparoscopic sleeve gastrectomy with duodenojejunal bypass for morbid obesity (Journal of Metabolic and Bariatirc surgery. 2020;9(2):61-67)",
+    "Clinical Significance of Paraspinal Muscle Parameters as a prognostic factor for survival in Gastric Cancer Patients who underwent Curative Surgical Resection (JOURNAL OF CANCER. 2020;11(19):5792-5801)",
+    "Surgical Treatment of Intractable Cordocele Complication Following Laparoscopic Inguinal Hernia Repair (Journal of Herniology. 2020;10(1):8-10)",
+    "Long-term Efficacy of S-1 Monotherapy or Capecitabine Plus Oxaliplatin as Adjuvant Chemotherapy for Patients with Stage II or III Gastric Cancer after Curative Gastrectomy: a Propensity Score-Matched Multicenter Cohort Study (JOURNAL OF GASTRIC CANCER. 2020;20(2):152-164)",
+    "The AMPK-Parkin axis negatively regulates necroptosis and tumorigenesis by inhibiting the necrosome (NATURE CELL BIOLOGY. 2019;21(8):940-951)",
+    "Meta-analysis and systematic review on laparoscopic-assisted distal gastrectomy (LADG) and totally laparoscopic distal gastrectomy (TLDG) for gastric cancer: Preliminary study for a multicenter prospective KLASS07 trial (European Journal of Surgical Oncology. 2019;45(12):2231-2240)",
+    "Effect of Laparoscopic Distal Gastrectomy vs Open Distal Gastrectomy on Long-term Survival Among Patients With Stage I Gastric Cancer The KLASS-01 Randomized Clinical Trial (JAMA ONCOLOGY. 2019;5(4):506-513)",
+    "A multi-center prospective randomized controlled trial (phase III) comparing the quality of life between laparoscopy-assisted distal gastrectomy and totally laparoscopic distal gastrectomy for gastric Cancer (study protocol) (BMC CANCER. 2019;19(1):23-28)",
+    "The expression of C-MYC in gastric adenocarcinoma is associated with PD-L1 and FOXP3 expression: C-MYC overexpression is a good prognostic factor (Pathology Research and Practice. 2019;215(11):51-59)",
+    "Oncologic Outcomes after Laparoscopic and Open Distal Gastrectomy for Advanced Gastric Cancer: Propensity Score Matching Analysis (JOURNAL OF GASTRIC CANCER. 2019;19(1):83-91)",
+    "Feasibility of totally extraperitoneal (TEP) laparoscopic hernia repair in elderly patients (HERNIA. 2019;23(2):299-303)",
+    "Single-port laparoscopic surgery in uncomplicated acute appendicitis: a randomized controlled trial (SURGICAL ENDOSCOPY AND OTHER INTERVENTIONAL TECHNIQUES. 2018;32(7):3131-3137)",
+    "Comparison of oncological benefits of deep neuromuscular block in obese patients with gastric cancer (DEBLOQS_GC study): A study protocol for a double-blind, randomized controlled trial (Medicine. 2018;97(49):e13424-13424)",
+    "Who Can Perform Adjuvant Chemotherapy Treatment for Gastric Cancer? A Multicenter Retrospective Overview of the Current Status in Korea (JOURNAL OF GASTRIC CANCER. 2018;18(3):264-273)",
+    "Improved Surgical Outcomes of Laparoscopic Gastrectomy Compared with Conventional Open Gastrectomy for Gastric Adenocarcinoma in Obese Patients (Journal of Minimally Invasive Surgery. 2017;20(3):77-78)",
+    "Tumoral FOXP3 expression is associated with favorable clinicopathological variables and good prognosis in gastric adenocarcinoma: the tumor suppressor function of tumoral FOXP3 is related with the P21 expression in gastric adenocarcinoma (HUMAN PATHOLOGY. 2017;68(0):112-118)",
+    "알로에 베라 위석에 의한 소장 폐색 증례 보고 (대한소화기학회지. 2017;69(5):312-315)",
+    "Distinctive interrelation of p53 with SCO2, COX, and TIGAR in human gastric cancer (PATHOLOGY RESEARCH AND PRACTICE. 2016;212(10):904-910)",
+    "Effects of intensive nutrition education on nutritional status and quality of life among postgastrectomy patients (대한외과학회지. 2016;90(2):79-88)",
+    "Delayed Appendectomy Is Safe in Patients With Acute Nonperforated Appendicitis (INTERNATIONAL SURGERY. 2015;100(0):1004-1010)",
+    "Absolute monocyte and lymphocyte count prognostic score for patients with gastric cancer (WORLD JOURNAL OF GASTROENTEROLOGY. 2015;21(9):2668-2676)",
+    "Dropped Omental Fat Post Laparoscopy-assisted Distal Gastrectomy with Omentectomy Mistaken for Malignant Peritoneal Seeding on Sonography (JOURNAL OF CLINICAL ULTRASOUND. 2014;42(5):305-307)",
+    "MDCT findings of a Meckel's diverticulum with ectopic pancreatic tissue (CLINICAL IMAGING. 2014;38(1):70-72)",
+    "Pure NOTES rectosigmoid resection: Transgastric endoscopic IMA dissection and transanal rectal mobilization in animal models (Journal of Laparoendoscopic and Advanced Surgical Techniques 23(7). 2013;23(7):592-595)",
+    "Initial experience of single-port laparoscopic surgery for sigmoid colon cancer (WORLD JOURNAL OF SURGERY. 2013;37(3):652-656)",
+    "Uterus-like mass involving the appendix: Us and CT findings (JOURNAL OF CLINICAL ULTRASOUND. 2012;0(0):0-0)",
+    "Two cases of female hydrocele of the canal of nuck (Korean Journal of Pediatrics. 2012;55(4):143-146)",
+    "하복부 수술의 과거력이 있는 환자들에게 시행한 복강경 전복막외접근 탈장교정술의 초기 경험 (대한내시경복강경외과학회지. 2011;14(2):91-95)",
+    "소장폐쇄환자에서 복강경 수술의 유용성 (대한내시경복강경외과학회지. 2011;14(2):84-90)",
+    "Clinical usefulness of laparoscopic total extraperitoneal hernia repair for recurrent inguinal hernia (대한외과학회지. 2011;80(5):313-318)",
+    "Laparoscopic Abdominoperineal Resection for Rectal Cancer in a Patient With Situs Inversus Totalis (SURGICAL LAPAROSCOPY ENDOSCOPY  PERCUTANEOUS TECHNIQUES. 2011;21(2):87-90)",
+    "Sonographic Diagnosis of Gastric Duplication Cyst Communicating with the Gastric Lumen (JOURNAL OF CLINICAL ULTRASOUND. 2011;39(9):550-552)",
+    "Neuroendocrine Tumor of Unknown Primary Accompanied with stomach adenocarcinoma (대한위암학회지. 2011;11(04):234-238)",
+    "Local Perianal Block in Anal Surgery: The Disadvantage of Pain during Injection despite High Patient Satisfaction (JOURNAL OF THE KOREAN SURGICAL SOCIETY. 2010;78(2):106-110)",
+    "Rectal Syphilis Mimicking Rectal Cancer (YONSEI MEDICAL JOURNAL. 2010;51(51):276-278)",
+    "Cyclooxygenase (COX)-1, Cyclooxygenase (COX)-2 and E-cadherin Expression in Colorectal Cancer Patients with Hepatic Metastasis (JOURNAL OF THE KOREAN SURGICAL SOCIETY. 2010;78(3):177-183)",
+    "Endo-Satinsky Clamp for Rectal Transection During Laparoscopic Total Mesorectal Excision (DISEASES OF THE COLON & RECTUM. 2010;53(53):355-359)",
+    "Cytomegalovirus Enteritis Causing Ileal Perforation in an Elderly Immunocompetent Individual (YONSEI MEDICAL JOURNAL. 2010;51(2):279-283)",
+    "Single port laparoscopic right hemicolectomy with D3 dissection for advanced colon cancer (WORLD JOURNAL OF GASTROENTEROLOGY. 2010;16(16):275-278)",
+    "Montreal Classification에 따른 한국 크론병의 특징 (대한대장항문학회지. 2009;25(5):300-305)",
+    "Experience with Porcine Acellular Dermal Collagen (Permacol (R)) Implant in Contaminated Fascia Defects (JOURNAL OF THE KOREAN SURGICAL SOCIETY. 2009;77(3):216-220)",
+    "Comparison of Laparoscopic Totally Extraperitoneal Inguinal Hernia Repair and Tension-Free Herniorrhaphy Using Perfix (R): Short-Term Follow-Up Results (JOURNAL OF THE KOREAN SURGICAL SOCIETY. 2009;77(3):189-194)",
+    "직장루가 합병된 제 5요추-1천추간 수술 후 추체-추간판염  - 증례 보고 - (대한척추외과학회지. 2009;16(3):222-227)",
+    "신경섬유종증 1형에서 발생한 상행결장 장간막 총상형  신경섬유종 (대한대장항문학회지. 2009;25(4):259-263)",
+    "Image-guided conservative management of right colonic diverticulitis (WORLD JOURNAL OF GASTROENTEROLOGY. 2009;15(46):5838-5842)",
+    "Cytoplasmic Expression of HuR is Related to Cyclooxygenase-2 Expression in Colon Cancer (Cancer Research and Treatment. 2009;41(2):87-92)",
+    "Laparoscopic resection of an adrenal pseudocyst mimicking a retroperitoneal mucinous cystic neoplasm (WORLD JOURNAL OF GASTROENTEROLOGY. 2009;15(23):2923-2926)",
+    "CT Findings of a Gastric Inflammatory Fibroid Polyp Manifesting as Unexpected Growth: A Case Report (대한영상의학회지. 2009;60(4):271-274)",
+    "자석 이물질 섭취 후 발생한 회장 천공 (대한외과학회지. 2009;76(4):270-272)",
+    "폐쇄성 대장암에서 스텐트 삽입 후 시행한 대장절제술의 단기예후: 비 폐쇄성 대장암군과의 비교 (대한대장항문학회지. 2009;25(1):41-45)",
+    "충수돌기 술잔세포 유암종 (대한대장항문학회지. 2009;25(3):197-201)"
+  ],
+  "언론": [
+    {
+      "targetDate": "2025-06-13",
+      "type": null,
+      "text": "[경향신문] 몸짱 되려 운동했는데 힘 좀 주니 탈장",
+      "url": "",
+      "issuer": null
+    },
+    {
+      "targetDate": "2025-05-20",
+      "type": null,
+      "text": "[헬스조선] 1년 내 체중 25~30% 감량, 안전성 입증된 최후의 비만 치료법",
+      "url": "",
+      "issuer": null
+    },
+    {
+      "targetDate": "2025-02-21",
+      "type": null,
+      "text": "[e·의료정보] 최성일 대한탈장학회장 인터뷰 '첨단 술기 교육 늘리며 국제학회로 발돋움'",
+      "url": "",
+      "issuer": null
+    },
+    {
+      "targetDate": "2025-02-16",
+      "type": null,
+      "text": "[헬스조선] 탈장됐다, 그런데 안 아프다… 수술 꼭 해야 할까?",
+      "url": "",
+      "issuer": null
+    },
+    {
+      "targetDate": "2025-02-17",
+      "type": null,
+      "text": "[스포츠경향] 통증 없는 '탈장' 방치하다 탈 난다",
+      "url": "",
+      "issuer": null
+    }
+  ],
+  "isAttend": true
+}

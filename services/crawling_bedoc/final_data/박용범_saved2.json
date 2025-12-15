@@ -1,0 +1,160 @@
+{
+  "doctorId": 14796,
+  "rid_long": "1C7523D412566625DE16F35FC5285BE4DE9E074B31ECD868AD4B9BC70597CCF83A0FED22604F1851681A4F280A827C3E8489C49B39FCAA00FAD8E6339FDC8738046F94EF6029007E0C14C3B5AE579F35C32FAE3D5007DB967DA596CB914AD371C3E9592892D84219AB18A0729BE967741AB18E7C78387C8C6E8B5B44BEF1011861BCD2141967413A2B029E02ABAFED46016B40E595F3CB3B652FD4B35FBA6620",
+  "hospital_cid": 224,
+  "bedoc_id": "A8086",
+  "bedoc_hospitalsite": "http://www.kdh.or.kr",
+  "bedoc_doctorname": "박용범",
+  "bedoc_deptname": "호흡기내과",
+  "bedoc_hospitalname": "강동성심병원",
+  "hospital_name": "강동성심병원",
+  "aiga_hid": "H11KR-11000023",
+  "hospital_site": "https://www.kdh.or.kr/sub202_1.php?bid=111130",
+  "site_type": "popup",
+  "hospital_addr": "서울특별시 강동구 성안로 150, (길동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.kdh.or.kr/sub202_1.php?bid=111130&doctorName=%EB%B0%95%EC%9A%A9%EB%B2%94&depthName=%ED%98%B8%ED%9D%A1%EA%B8%B0%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "profileUrl": "https://www.kdh.or.kr/files/1623331940/1623331940.jpg",
+  "specialty": "만성기도질환,COPD, 천식, 기관지확장증, 만성기침, 간질성폐질환, 폐혈관질환",
+  "학력": [
+    {
+      "date": null,
+      "content": "중앙대학교 의과대학"
+    },
+    {
+      "date": null,
+      "content": "중앙대학교 대학원 의학석사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "(現)강동성심병원 호흡기내과 과장"
+    },
+    {
+      "date": null,
+      "content": "(現) 강동성심병원 호흡기내과 교수"
+    },
+    {
+      "date": null,
+      "content": "서울아산병원 호흡기내과 전임의"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한결핵 및 호흡기학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "호흡기내과 분과전문의"
+    }
+  ],
+  "논문": [
+    "Clinical Characteristics and Frequency of Chronic Obstructive Pulmonary Disease Exacerbations in Korean Patients: Findings From the KOCOSS Cohort 2012-2021/공동저자/2024",
+    "Comparing Costs and Healthcare Resource Utilization (HCRU) Using LAMA versus LABA/ICS at Treatment Initiation for COPD: Findings from CITRUS (Comparing the Incidence of Tiotropium and ICS/LABA in Real-World Use in South Korea) Study/공동저자/2024",
+    "Components of the Chronic Obstructive Pulmonary Disease Assessment Test Associated with the Exacerbation of Severe Chronic Obstructive Pulmonary Disease Patients/공동저자/2024",
+    "Development of the Rapid Cough Questionnaire: Key item identification/공동교신/2024",
+    "Efficacy and safety of mixture of ivy leaf extract and coptidis rhizome in the treatment of acute bronchitis: multicenter, randomized, double-blinded, active-controlled, parallel, therapeutic confirmatory clinical trial/공동저자/2024",
+    "Prevalence and clinical significance of pre- and post-bronchodilator airflow obstruction in COPD patients/공동저자/2024",
+    "Pulmonary Rehabilitation Is Associated With Decreased Exacerbation and Mortality in Patients With COPD: A Nationwide Korean Study/공동저자/2024",
+    "Suboptimal peak inspiratory flow rate in dry-powder inhaler users for chronic obstructive pulmonary disease in Korea/공동교신/2024",
+    "The effect of nebulized N-acetylcysteine on the phlegm of chronic obstructive pulmonary disease: the NEWEST study/공동저자/2024",
+    "Clinical characteristics of chronic obstructive pulmonary disease patients with superoptimal peak inspiratory flow rate/공동저자/2023",
+    "A Multicenter Study of Pertussis Infection in Adults with Coughing in Korea: PCR-Based Study/공동저자/2012",
+    "Minor Criteria of Infectious Disease Society of America/American Thoracic Society for Severe Community-Acquired Pneumonia Can Predict Delayed Treatment Response/공동저자/2012",
+    "Clinical Characteristics of Idiopathic Pulmonary Fibrosis Patients with Diabetes Mellitus: the National Survey in Korea from 2003 to 2007/공동저자/2012",
+    "Bronchoscopic Ethanolamine Injection Therapy in Patients with Persistent Air Leak from Chest Tube Drainage/공동저자/2012",
+    "Application of a New Spirometric Reference Equation and Its Impact on the Staging of Korean Chronic Obstructive Pulmonary Disease Patients/공동저자/2012",
+    "Awareness and Impact of COPD in Korea: An Epidemiologic Insight Survey/공동저자/2011",
+    "폐동맥 고혈압의 약물요법/Pharmacotherapy for pulmonary arterial hypertension/교신저자/2011",
+    "Acute kidney injury in critically ill patients with pandemic influenza A pneumonia 2009 in Korea: A multicenter study/공동저자/2011",
+    "비편평, 비소세포폐암에서 EGFR 염기서열 분석법의 치료 반응 예측/Predicting the Treatment Response Using a Direct Sequencing Method for EGFR in Non-Squamous, Non-Small Cell Lung Cancer/공동저자/2011",
+    "만성 기침환자에서 기관지 과민성, 아토피와 비만의 상관관계: 두 기관 연구/The Association of Obesity, Airway Hyperresponsiveness and Atopy in Chronic Cough Patients: Results of a Two-Center Study/공동 교신저자/2011",
+    "Corticosteroid Treatment in Critically Ill Patients with Pandemic Influenza A/H1N1 2009 Infection Analytic Strategy Using Propensity Scores/공동저자/2011",
+    "만성 폐쇄성 폐질환의 조기 진단과 관리/Early Diagnosis and Management of Chronic Obstructive Pulmonary Disease/공동저자/2011",
+    "새로운 호흡기 장애 판정 기준의 제안/공동저자/2011",
+    "만성기침 환자에서 Chlamydia pneumoniae 감염률/교신저자/2010",
+    "국내 난치성 천식의 특징 - 파일럿 연구/공동저자/2010",
+    "A Nationwide Survey of Lymphangioleiomyomatosis in Korea: Recent Increase in Newly Diagnosed Patients/공동저자/2010",
+    "미만성 폐침윤을 보이는 중증 화상환자에서 기관지폐포 세척술의 임상적 의의/Clinical Significance of Bronchoalveolar Lavage in Severely Burned Patients with Diffuse Lung Infiltration/공동저자/2010",
+    "Catamenial Hemoptysis: A Nationwide Analysis in Korea/공동저자/2010",
+    "Clinical Features and Outcomes of Idiopathic Pulmonary Alveolar Proteinosis in Korean Population/공동저자/2010",
+    "Clinical Efficacy of Direct DNA Sequencing Analysis on Sputum Specimens for Early Detection of Drug-Resistant Mycobacterium tuberculosis in a Clinical Setting/공동저자/2010",
+    "식도이완 불능증과 간질성 폐렴을 동반한 전신성 홍반성 낭창/Systemic lupus erythematosus associated with interstitial pneumonia and achalasia/공동저자/2008",
+    "COPD 환자에서 6분 보행검사를 이용한 최대산소섭취량 예측/Predicting oxygen uptake for men with moderate to severe chronic obstructive pulmonary disease/공동저자/2008",
+    "Pulmoanry endometriosis resected by video-assisted thoracoscopic surgery/공동저자/2006",
+    "객혈을 동반한 양성 전이성 폐 평활근종 1예/공동저자/2006",
+    "결핵으로 입원한 환자의 병원내 사망과 관련된 인자/공동저자/2006",
+    "통상성 간질성 페렴 환자 예후인자로서의 섬유모세포병소의 유용성/공동저자/2002",
+    "재발된 자발성 종격동기종/공동저자/2005",
+    "결핵성 뇌수막염에 동반된 뇌성 염분소실증후군 1예/공동저자/2005",
+    "결핵성 림프절염에 의한 상대정맥증후군 1예/공동저자/2004"
+  ],
+  "언론": [
+    {
+      "targetDate": "2025-08-18",
+      "type": "기사",
+      "text": "호흡기알레르기내과 박용범 교수ㅣ호흡곤란 심한 COPD있으면 흡연력 없어도 폐암 위험 3배 높아 ",
+      "url": "https://jhealthmedia.joins.com/news/articleView.html?idxno=30763"
+    },
+    {
+      "targetDate": "2024-09-12",
+      "type": "기사",
+      "text": "호흡기내과 박용범 교수ㅣ천식·COPD도 만성질환…동네병원 역할 간과할 수 없어",
+      "url": "https://www.k-health.com/news/articleView.html?idxno=74476"
+    },
+    {
+      "targetDate": "2020-12-08",
+      "type": "기사",
+      "text": "폐동맥고혈압, 조기 약물병용으로 생존율 높이는 게 세계적 흐름 - 호흡기-알레르기 내과 박용범 교수",
+      "url": "http://www.docdocdoc.co.kr/news/articleView.html?idxno=2005472"
+    },
+    {
+      "targetDate": "2020-02-25",
+      "type": "기사",
+      "text": "마른 기침ㆍ누런 가래 1주일 이상… 식욕 저하ㆍ자주 졸린 것도 폐렴 증상 -호흡기-알레르기 내과 박용범 교수",
+      "url": "https://www.hankookilbo.com/News/Read/202002221653315999?did=NA&dtype=&dtypecode=&prnewsid="
+    },
+    {
+      "targetDate": "2017-11-20",
+      "type": "기사",
+      "text": "COPD 가이드라인, GOLD와 달라진 이유 있어_호흡기내과 박용범 교수",
+      "url": "http://www.dailypharm.com/News/233576"
+    },
+    {
+      "targetDate": "2015-07-06",
+      "type": "기사",
+      "text": "강동성심병원도 내일 재개원",
+      "url": "http://news.tvchosun.com/site/data/html_dir/2015/07/06/2015070690212.html"
+    },
+    {
+      "targetDate": "2014-11-18",
+      "type": "기사",
+      "text": "COPD, 진료지침 '조기 접근성' 방점 - 호흡기내과 박용범 교수",
+      "url": "http://www.newsmp.com/news/articleView.html?idxno=128535"
+    },
+    {
+      "targetDate": "2014-09-28",
+      "type": "기사",
+      "text": "한국형 COPD·천식 진료지침 업데이트 - 호흡기내과 박용범 교수",
+      "url": "http://www.monews.co.kr/news/articleView.html?idxno=77084"
+    },
+    {
+      "targetDate": "2014-05-14",
+      "type": "기사",
+      "text": "폐동맥고혈압, 발전된 치료전략으로 ‘급진적’ 예후 향상 가능",
+      "url": "http://news.kukinews.com/article/view.asp?page=1&gCode=cul&arcid=0008321492&cp=nv"
+    },
+    {
+      "targetDate": "2014-05-16",
+      "type": "기사",
+      "text": "정확한 COPD 진단에는 CAT 검사법이 더 유용 - 호흡기내과 박용범 교수",
+      "url": "http://www.monews.co.kr/news/articleView.html?idxno=73494"
+    }
+  ]
+}

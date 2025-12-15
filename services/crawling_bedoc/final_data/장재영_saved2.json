@@ -1,0 +1,190 @@
+{
+  "doctorId": 15029,
+  "rid_long": "11A2895BB86DC5F32A62B20EAFD0BA753089D9D59C9EB4F5A624D9AA5209081C5E50589DA8E43F7F6D1E04ECC71136DEDCADC6F874539F33221DA7250F2D5EA7C70E5AD6A1AE4015AC713EBCBE14B3367EB3C8812FC13AF3267E5A8AF175FAF148746182DEB8C135F5B2CA525C916E8DA3762D10A3AA7DADEBCD1E6D45F4A5DD8D0F95E8982CEBA3E79EB1BB669A153B20185A1B872A87EF1F4EEAAD0EE2EFDCB458B6E09F9047853144B7CBC30E5AA5",
+  "hospital_cid": 505,
+  "bedoc_id": "A0083",
+  "bedoc_hospitalsite": "http://www.schmc.ac.kr/seoul/kor/index.do",
+  "bedoc_doctorname": "장재영",
+  "bedoc_deptname": "소화기내과",
+  "bedoc_hospitalname": "순천향대서울병원",
+  "hospital_name": "순천향대서울병원",
+  "aiga_hid": "H11KR-11000026",
+  "hospital_site": "https://www.schmc.ac.kr/seoul/doctr/home.do?key=1605&doctrNo=1170",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 용산구 대사관로 59, (한남동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.schmc.ac.kr/seoul/doctr/home.do?key=1605&doctrNo=1170&doctorName=%EC%9E%A5%EC%9E%AC%EC%98%81&depthName=%EC%86%8C%ED%99%94%EA%B8%B0%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": "page.textContent: Target page, context or browser has been closed",
+  "profileUrl": "https://www.schmc.ac.kr/attach/DATA/doctr/seoul_0220250819154000302.png",
+  "specialty": "간질환, 급성 및 만성(B형, C형)간염, 간경변증, 간암 (간동맥화학색전술 (DC bead, yttrium-90 resin microspheres), 알코올주입치료, 고주파열치료, 사이버나이프치료), 식도 위정맥류의 내시경 및 중재적 치료, 간질환의 복부초음파, C형 간염 및 간암 치료제 연구, 독성 및 약제성 간염, 알코올성 간염",
+  "학력": [
+    {
+      "date": null,
+      "content": "의학박사"
+    },
+    {
+      "date": null,
+      "content": "순천향대학교 의과대학 졸업 (1993)"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "일본동경대학교 간암센터(2004)"
+    },
+    {
+      "date": null,
+      "content": "하버드대학교 의과대학 부속병원(2008-2010)"
+    },
+    {
+      "date": null,
+      "content": "현)순천향대학교 부속 서울병원 소화기내과 교수"
+    },
+    {
+      "date": null,
+      "content": "현)순천향대학교 부속 서울병원 연구부원장"
+    },
+    {
+      "date": null,
+      "content": "현) 순천향대학교 서울병원 소화기내과장"
+    },
+    {
+      "date": null,
+      "content": "현) 순천향대학교 서울병원 소화기병센터장"
+    },
+    {
+      "date": null,
+      "content": "현)대한임상초음파학회 총무이사"
+    },
+    {
+      "date": null,
+      "content": "전)대한간암학회 학술이사"
+    },
+    {
+      "date": null,
+      "content": "현)대한간학회 의료정책이사"
+    },
+    {
+      "date": null,
+      "content": "현)한국인 간질환 백서 개정위원장"
+    },
+    {
+      "date": null,
+      "content": "현)대한간학회 간경변증 진료가이드라인 개정위원장"
+    },
+    {
+      "date": null,
+      "content": "현)대한간암학회 원발성간암규약집 개정위원장"
+    },
+    {
+      "date": null,
+      "content": "현) 대한문맥압항진증연구회 회장"
+    },
+    {
+      "date": null,
+      "content": "전) 대한알코올연구회 회장"
+    },
+    {
+      "date": null,
+      "content": "전)대한임상초음파학회 학술이사"
+    },
+    {
+      "date": null,
+      "content": "전)대한간학회 홍보이사"
+    },
+    {
+      "date": null,
+      "content": "전)대한간암학회 보험이사"
+    },
+    {
+      "date": null,
+      "content": "전)대한간암학회 간행이사"
+    },
+    {
+      "date": null,
+      "content": "2009 ASGE Audio visual awards – Winner Endoscopic Management of Variceal Hemorrhage in Cirrhosis"
+    },
+    {
+      "date": null,
+      "content": "2011 KASL-Best presentation award  (Plenary) DR4 and DR5 induced Apoptosis in JFH1(HCV) infected Human Hepatoma Cell Lines"
+    },
+    {
+      "date": null,
+      "content": "2012 KASL-Best presentation award  (Free oral) Novel inhibitory effect of ginsenoside Rg3 in HCV replication and apoptosis"
+    },
+    {
+      "date": null,
+      "content": "2012 KASL-Kansan Academic Award ‘Cyclooxygenase-2 and vascular endothelial growth factor in chronic hepatitis, cirrhosis and hepatocellular carcinoma’"
+    },
+    {
+      "date": null,
+      "content": "2014 KASL-Best presentation award  (Free oral) ‘Ginsenoside Rg3 Inhibits Hepatitis C Virus Induced Aberrant Mitochondrial Dynamics: Antiviral Mechanism of Ginsenoside Rg3’"
+    },
+    {
+      "date": null,
+      "content": "2017 KASL-Best presentation award  (Free oral) ‘Ginsenoside Rg3 restores hepatitis-C-virus-induced aberrant mitochondrial dynamics and inhibits virus propagation’"
+    },
+    {
+      "date": null,
+      "content": "National Research Foundation of Korea (2011.5-2014. 4)"
+    },
+    {
+      "date": null,
+      "content": "The effect of Viral Replication and Apoptosis in HCV infected Hepatoma Cell Line after Treatment of TRAIL Receptor Agonist"
+    },
+    {
+      "date": null,
+      "content": "SCH Biopharm Human Resources Development Center Foundation  (National Research Foundation of Korea) (2011.7-2012.1)"
+    },
+    {
+      "date": null,
+      "content": "The inhibitory effect of Korean Red Ginseng in Hepatitis C Virus replication  National Research Foundation of Korea (2016.6-2018. 5)"
+    },
+    {
+      "date": null,
+      "content": "The study of drug development for the establishment of treatment in NASH"
+    },
+    {
+      "date": null,
+      "content": "National Research Foundation of Korea (2019.7-2020. 6) The study of drug development for the HCC"
+    }
+  ],
+  "학술": [],
+  "논문": [
+    "1.\tApplication of Hepatic Venous Pressure Gradient to Predict Prognosis in Cirrhotic Patients with a Low Model for End-Stage Liver Disease Score. Chang Y, Suk KT, Jeong SW, Yoo JJ, Kim SG, Kim YS, Lee SH, Kim HS, Kang SH, Baik SK, Kim DJ, Kim MY, Jang JY. Diagnostics (Basel). 2020 Oct 10;10(10):E805. doi: 10.3390/diagnostics10100805.",
+    "2.\tAcute-on-chronic liver failure as a major predictive factor for mortality in patients with variceal bleeding. Shin J, Yu JH, Jin YJ, Yim HJ, Jung YK, Yang JM, Song DS, Kim YS, Kim SG, Kim DJ, Suk KT, Yoon EL, Lee SS, Kim CW, Kim HY, Jang JY, Jeong SW.Clin Mol Hepatol. 2020 Oct;26(4):540-553. doi: 10.3350/cmh.2020.0034. Epub 2020 Sep 17.",
+    "3.\tPrognosis predictability of serum and urine renal markers in patients with decompensated cirrhosis: A multicenter prospective study. Kim TH, Seo YS, Kang SH, Kim MY, Kim SG, Lee HY, Lee JH, Lee YS, Kim JH, Jung SW, Jang JY, Suk KT, Jung YK, An H, Yim HJ, Kim YS, Um SH; Korean Study Group of Portal Hypertension.Liver Int. 2020 Aug 4. doi: 10.1111/liv.14631. Online ahead of print.",
+    "16.\tPropranolol plus endoscopic ligation for variceal bleeding in patients with significant ascites: Propensity score matching analysis. Yoo JJ, Kim SG, Kim YS, Lee B, Jeong SW, Jang JY, Lee SH, Kim HS, Jun BG, Kim YD, Cheon GJ.Medicine (Baltimore). 2020 Jan;99(5):e18913. doi: 10.1097/MD.0000000000018913.PMID: 32000397",
+    "17.\tRelation of fibroblast growth factor receptor 2 expression to hepatocellular carcinoma recurrence after liver resection. Jun BG, Lee WC, Jang JY, Jeong SW, Chang Y, Lee SH, Kim YD, Kim SG, Cheon GJ, Kim YS, Kim HS, Jin SY.PLoS One. 2020 Jan 15;15(1):e0227440. doi: 10.1371/journal.pone.0227440. eCollection 2020.PMID: 31940413 Free PMC article. Clinical Trial.",
+    "18.\tThe Influence of Histologic Inflammation on the Improvement of Liver Stiffness Values Over 1 and 3 Years. Yoo JJ, Seo YS, Kim YS, Jeong SW, Jang JY, Suh SJ, Yim HJ, Suk KT, Kim DJ, Han KH, Kim SU, Lee B, Kim SG.J Clin Med. 2019 Nov 24;8(12):2065. doi: 10.3390/jcm8122065.",
+    "31.\tEpidemiology of alcoholic liver disease in Korea. Jang JY, Kim DJ.Clin Mol Hepatol. 2018 Jun;24(2):93-99. doi: 10.3350/cmh.2017.0079. Epub 2018 Mar 16.PMID: 29544241 Free PMC article. Review.",
+    "32.\tFollow-up Creatinine Level Is an Important Predictive Factor of In-hospital Mortality in Cirrhotic Patients with Spontaneous Bacterial Peritonitis. Jun BG, Lee WC, Jang JY, Jeong SW, Kim YD, Cheon GJ, Lee YN, Kim SG, Kim YS, Cho YS, Lee SH, Kim HS. J Korean Med Sci. 2018 Mar 19;33(12):e99.",
+    "33.\tPlatelet count is associated with sustained virological response rates in treatments for chronic hepatitis C. Jun BG, Park EJ, Lee WC, Jang JY, Jeong SW, Kim YD, Cheon GJ, Cho YS, Lee SH, Kim HS, Lee YN, Kim SG, Kim YS, Kim BS. Korean J Intern Med. 2018 Mar 14. doi: 10.3904/kjim.2017.322. [Epub ahead of print]",
+    "46.\tA prospective comparative assessment of the accuracy of the FibroScan in evaluating liver steatosis. Jun BG, Park WY, Park EJ, Jang JY, Jeong SW, Lee SH, Kim SG, Cha SW, Kim YS, Cho YD, Kim HS, Kim BS, Jin SY, Park S. PLoS One. 2017 Aug 15;12(8):e0182784. doi: 10.1371/journal.pone.0182784. eCollection 2017.",
+    "47.\tUseful Endoscopic Ultrasonography Parameters and a Predictive Model for the Recurrence of Esophageal Varices and Bleeding after Variceal Ligation. Jeong SW, Kim HS, Kim SG, Yoo JJ, Jang JY, Lee SH, Kim HS, Lee JS, Kim YS, Kim BS. Gut Liver. 2017 Nov 15;11(6):843-851. doi: 10.5009/gnl16458.",
+    "48.\tEffects of branched-chain amino acids (BCAAs) on the progression of advanced liver disease: A Korean nationwide, multicenter, retrospective, observational, cohort study. Park JG, Tak WY, Park SY, Kweon YO, Jang SY, Lee YR, Bae SH, Jang JY, Kim DY, Lee JS, Suk KT, Kim IH, Lee HJ, Chung WJ, Jang BK, Suh JI, Heo J, Lee WK. Medicine (Baltimore). 2017 Jun;96(24):e6580. doi: 10.1097/MD.0000000000006580.",
+    "61.\tAn Observational, Multicenter, Cohort Study Evaluating the Antiviral Efficacy and Safety in Korean Patients With Chronic Hepatitis B Receiving Pegylated Interferon-alpha 2a (Pegasys): TRACES Study. Chon YE, Kim DJ, Kim SG, Kim IH, Bae SH, Hwang SG, Heo J, Jang JW, Lee BS, Kim HJ, Jun DW, Kim KM, Chung WJ, Choi MS, Jang JY, Yim HJ, Tak WY, Yoon KT, Park JY, Han KH, Suk KT, Lee HW, Jang BK, Ahn SH. Medicine (Baltimore). 2016 Apr;95(14):e3026.",
+    "62.\tComparison of hepatic venous pressure gradient and endoscopic grading of esophageal varices. Lee E, Kim YJ, Goo DE, Yang SB, Kim HJ, Jang JY, Jeong SW. World J Gastroenterol. 2016 Mar 21;22(11):3212-9.",
+    "63.\tPredictive Factors for Sustained Remission after Discontinuation of Antiviral Therapy in Patients with HBeAg-positive Chronic Hepatitis B. Jun BG, Lee SH, Kim HS, Kim SG, Kim YS, Kim BS, Jeong SW, Jang JY, Kim YD, Cheon GJ. Korean J Gastroenterol. 2016 Jan 25;67(1):28-34. doi: 10.4166/kjg.2016.67.1.28. Erratum in:Korean J Gastroenterol. 2016 Feb 25;67(2):121.",
+    "76.\tTRAIL enhances apoptosis of human hepatocellular carcinoma cells sensitized by hepatitis C virus infection: therapeutic implications. Jang JY, Kim SJ, Cho EK, Jeong SW, Park EJ, Lee WC, Lee SH, Kim SG, Kim YS, Kim HS, Kim BS, Lin W, Chung RT. PLoS One. 2014 Jun 13;9(6):e98171. doi: 10.1371/journal.pone.0098171. eCollection 2014.",
+    "77.\tRelative adrenal insufficiency in chronic liver disease: its prevalence and effects on long-term mortality. Jang JY, Kim TY, Sohn JH, Lee TH, Jeong SW, Park EJ, Lee SH, Kim SG, Kim YS, Kim HS, Kim BS. Aliment Pharmacol Ther. 2014 Oct;40(7):819-26.",
+    "78.\tComparison on the efficacy and safety of biphenyl dimethyl dicarboxylate and ursodeoxycholic acid in patients with abnormal alanine aminotransferase: Multicenter, double-blinded, randomized, active-controlled clinical trial. Lee SH, Cheon GJ, Kim HS, Kim YD, Kim SG, Kim YS, et al. The Korean Journal of Gastroenterology 2014;64:31-39.",
+    "91.\tOccult hepatitis B virus infection in chronic hepatitis C. Jang JY, Park EJ. Korean J Gastroenterol. 2013 Sep 25;62(3):154-9.",
+    "92.\tThe usefulness of transient elastography, acoustic-radiation-force impulse elastography, and real-time elastography for the evaluation of liver fibrosis. Chung JH, Ahn HS, Kim SG, Lee YN, Kim YS, Jeong SW, Jang JY, Lee SH, Kim HS, Kim BS. Clin Mol Hepatol. 2013 Jun;19(2):156-64.",
+    "93.\tHepatitis C virus and hepatocarcinogenesis. Soung Won Jeong, Jae Young Jang, and Raymond T. Chung. Clin Mol Hepatol. 2012 Dec;18(4):347-356",
+    "106.\tJejunal variceal bleeding successfully treated with percutaneous coil embolization.  Koo SM, Jeong SW, Jang JY, Lee TH, Jeon SR, Kim HG, Kim JO, Kim YJ. J Korean Med Sci. 2012 Mar;27(3):321-4. Epub 2012 Feb 23.",
+    "107.\tPre-existing YMDD mutants in treatment-naïve patients with chronic hepatitis B are not selected during lamivudine therapy. Lee SH, Kim HS, Byun IS, Jeong SW, Kim SG, Jang JY, Kim YS, Kim BS. J Med Virol. 2012 Feb;84(2):217-22.",
+    "108.\tLiver cirrhosis due to autoimmune hepatitis combined with systemic sclerosis. You BC, Jeong SW, Jang JY, Goo SM, Kim SG, Kim YS, Jeon CH, Jeen YM. Korean J Gastroenterol. 2012 Jan 25;59(1):48-52.",
+    "121.\tIncreased expression of cyclooxygenase-2 is associated with the progression to cirrhosis. Jeong SW, Jang JY, Lee SH, Kim SG, Cheon YK, Kim YS, Cho YD, Kim HS, Lee JS, Jin SY, Shim CS, Kim BS. Korean J Intern Med. 2010 Dec;25(4):364-71.",
+    "122.\tTreatment of hepatocellular carcinoma with portal vein thrombosis by sorafenib combined with hepatic arterial infusion chemotherapy. Yang MY, Jeong SW, Kim DK, Kim SG, Jang JY, Kim YS, Lee JS, Kim BS, Kim JH, Kim YJ. Gut Liver. 2010 Sep;4(3):423-7.",
+    "123.\tDetection of distant metastasis to skeletal muscle by 18F-FDG-PET in a case of intrahepatic cholangiocarcinoma. Park SK, Kim YS, Kim SG, Jang JY, Moon JH, Lee MS, Kim BS, Koh ES, Park JM. Korean J Hepatol. 2010 Sep;16(3):325-8.",
+    "136.\tClinical significance of intrahepatic HCV RNA level in chronic HCV infection. Jang JY, Kim YS, Kim SG, Kim YS, Cho YD, Lee JS, Jin SY, Lee MS, Kim JH, Shim CS, Kim BS. Korean J Hepatol. 2006 Dec;12(4):515-23. .",
+    "137.\tMagnifying endoscopy in upper gastrointestinal tract. Lee SH, Ryu CB, Jang JY, Cho JY.Korean J Gastroenterol. 2006 Sep;48(3):145-55.",
+    "138.\tA case of complete regression of hepatocellular carcinoma during administration of COX-2 inhibitor. Song HJ, Kim YS, Han CH, Jang JY, Kim JH, Cheon YK, Kim YS, Moon JH, Cho YD, Shim CS, Kwon KH, Kim BS. Korean J Hepatol. 2006 Sep;12(3):449-54. .",
+    "139.\tDetection of Intrahepatic HBV DNA in HBsAg-negative liver diseases. Kim YS, Jang JY, Eun SH, Cheon YK, Kim YS, Moon JH, Cho YD, Jin SY, Shim CS, Kim BS. Korean J Hepatol. 2006 Jun;12(2):201-8."
+  ],
+  "isAttend": true
+}

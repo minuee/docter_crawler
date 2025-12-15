@@ -1,0 +1,87 @@
+{
+  "doctorId": 15098,
+  "rid_long": "92FB45C9451C4E32A1A62C6F18D460CD1997D32C61B31591C4E261B14B5B06554B77B13E0DA7827F1BAB43D3D04F5C8CE4BC5479F587BADA8444538F82B040868775105E486ED8FBCB7B36E52DBA8A48D942A47E579C3B64A9BC322AC6B7D383548E33F72D24D203A6052B0296D38FDF7AC1794E4EFF513CE215C3D573AD5B06D48A4359A61B109ED33D9AC09AD64F98",
+  "hospital_cid": 595,
+  "bedoc_id": "A5393",
+  "bedoc_hospitalsite": "http://www.srch.or.kr",
+  "bedoc_doctorname": "채동완",
+  "bedoc_deptname": "신장내과",
+  "bedoc_hospitalname": "서울적십자병원",
+  "hospital_name": "서울적십자병원",
+  "aiga_hid": "H11KR-11000017",
+  "hospital_site": "https://www.rch.or.kr/web/rchseoul/contents/C01",
+  "site_type": "list",
+  "hospital_addr": "서울특별시 종로구 새문안로 9, 적십자병원 (평동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.rch.or.kr/web/rchseoul/contents/C01?doctorName=%EC%B1%84%EB%8F%99%EC%99%84&depthName=%EC%8B%A0%EC%9E%A5%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "doctorSiteUrl": "https://www.rch.or.kr/web/rchseoul/contents/C01",
+  "profileUrl": "https://www.rch.or.kr/web/rchseoul/file/image/uu/330c8e3f46554e139af06562a95c15cf",
+  "specialty": "신장내과",
+  "학력": [
+    {
+      "date": null,
+      "content": "서울대학교 의과대학원 내과학 석사"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 의과대학원 내과학 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "서울대학교병원 신장내과 전임의"
+    },
+    {
+      "date": null,
+      "content": "하버드대학교 의과대학 베스이스라엘병원 연구 전임의"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 분당서울대병원 신장내과 교수"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 명예교수"
+    }
+  ],
+  "수상": [
+    {
+      "date": null,
+      "content": "1996 Young Investigator Award 15th annual meeting of American Society of Transplant Physician"
+    },
+    {
+      "date": null,
+      "content": "2022 대한민국 근정포장"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "National Investigator in AURORA study"
+    },
+    {
+      "date": null,
+      "content": "National leader in CREDENCE study"
+    },
+    {
+      "date": null,
+      "content": "National leader in PROTECT study"
+    },
+    {
+      "date": null,
+      "content": "National leader in DUPLEX study"
+    },
+    {
+      "date": null,
+      "content": "Main investigator in KNOW-CKD study"
+    }
+  ],
+  "논문": [],
+  "저서": [],
+  "isAttend": true
+}

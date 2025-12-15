@@ -1,0 +1,80 @@
+{
+  "doctorId": 14777,
+  "rid_long": "E6B4DD3F883729A2F49411AD7493E1D977841B22255F77ED393B8D545B3A01792040B3D5792410535DFC4DEEF083E137558272C84B20AED0BBF491781640FB28ED9A26BC0973C002ED8EF3D788CBF07AAA227C0A0945C984AD57511452875C3E8CD48905A8C57A64C8930352D42464ED29F5BD0FB9160CA5EC5FE12ABBEE918354E54E4568B51843FA13BC7FE102CCF99FBC6BBE5AE39D94FD21E92B2C0B4BBACDE59A6351EF67F85E46DC95562115EDD48A4359A61B109ED33D9AC09AD64F98",
+  "hospital_cid": 198,
+  "bedoc_id": "A0994",
+  "bedoc_hospitalsite": "http://www.phgidok.com/",
+  "bedoc_doctorname": "민경업",
+  "bedoc_deptname": "알레르기내과",
+  "bedoc_hospitalname": "포항세명기독병원",
+  "hospital_name": "포항세명기독병원",
+  "aiga_hid": "H11KR-37000019",
+  "hospital_site": "http://www.phgidok.com/main/department/doctorList/?mode=staffIntroduce&idx=72",
+  "site_type": "single",
+  "hospital_addr": "경상북도 포항시 남구 포스코대로 351,  (대도동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "http://www.phgidok.com/main/department/doctorList/?mode=staffIntroduce&idx=72&doctorName=%EB%AF%BC%EA%B2%BD%EC%97%85&depthName=%EC%95%8C%EB%A0%88%EB%A5%B4%EA%B8%B0%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "doctorSiteUrl": "http://www.phgidok.com/main/department/doctorList/?mode=staffIntroduce&idx=72",
+  "profileUrl": "http://www.phgidok.com/template/staff/202104/1617933877_9.jpg",
+  "학력": [
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 의과대학원 석사 및 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "서울대학교병원 수련의 및 내과 전공의 수료, 내과 전문의"
+    },
+    {
+      "date": null,
+      "content": "서울대학교병원 알레르기내과 전임의"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 내과 조교수·부교수·교수"
+    },
+    {
+      "date": null,
+      "content": "미국 NIH, NIAID 연수"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 명예교수"
+    }
+  ],
+  "수상": [
+    {
+      "date": null,
+      "content": "옥조근정훈장"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한천식알레르기학회 회장"
+    }
+  ],
+  "저서": [
+    {
+      "date": null,
+      "content": "임상알레르기학",
+      "issuer": null
+    },
+    {
+      "date": null,
+      "content": "알레르기질환의 진단과 치료",
+      "issuer": null
+    }
+  ],
+  "specialty": "알레르기 비염, 두드러기, 천식 질환, 그 외 각종 알레르기 질환",
+  "isAttend": true
+}

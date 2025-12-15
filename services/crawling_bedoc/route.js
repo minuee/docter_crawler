@@ -871,7 +871,7 @@ router.get('/save-detailurl', async function(req, res) {
 
 /**
  * @swagger
- *  /v1/c/crawling_bedoc/parsing-final:
+ *  /v1/c/crawling_bedoc/parsing-final-step1:
  *    get:
  *      summary: "최종 수집된 의사 데이터 파싱 및 수정"
  *      description: "특정 디렉토리의 의사 JSON 파일들을 순차적으로 읽어 지시된 내용으로 수정합니다."
@@ -889,7 +889,11 @@ router.get('/save-detailurl', async function(req, res) {
  *                    message:
  *                      type: string
  */
-router.get('/parsing-final', async function(req, res) {
+
+router.get('/parsing-final-step1', async function(req, res) {
+
+  //mapper 경로
+  mybatisMapper.createMapper([`${global.appRoot}/services/crawling_bedoc/controler.xml`]);
   let processed_count = 0;
   const errors = [];
   // NOTE: 작업할 파일이 있는 디렉토리를 지정해야 합니다. 우선 'final_data'로 설정합니다.
@@ -905,66 +909,135 @@ router.get('/parsing-final', async function(req, res) {
     }
 
     const allDoctorFiles = fs.readdirSync(targetDir)
-      .filter(file => file.endsWith('.json') && !file.endsWith('_saved.json') && !file.endsWith('_saved2.json') && !file.endsWith('_failed.json'));
-    const filesToProcess = allDoctorFiles.slice(0, 10); // 한 번에 10개 파일만 선택
+      .filter(file => file.endsWith('.json') && !file.endsWith('_saved.json') && !file.endsWith('_saved2.json') && !file.endsWith('_saved3.json') && !file.endsWith('_failed.json'));
+    const filesToProcess = allDoctorFiles.slice(0, 1); // 한 번에 10개 파일만 선택
 
     console.log(`[PARSING-FINAL] Found ${allDoctorFiles.length} total files. Will process a batch of ${filesToProcess.length}.`);
-
+    let step = null;
+    let doctorId = null;
+    const format = { language: "sql", indent: "  " };
     for (const fileName of filesToProcess) {
       const filePath = path.join(targetDir, fileName);
       try {
         console.log(`[PARSING-FINAL] --- Processing file: ${fileName} ---`);
         const fileContent = fs.readFileSync(filePath, 'utf-8');
         let doctorData = JSON.parse(fileContent);
-
-        // isFinalComplete가 true이면 파일을 건너뛴다.
-        if (doctorData.isFinalComplete === true) {
-          console.log(`[PARSING-FINAL] Skipping already completed file: ${fileName}`);
-          continue;
-        }
-
         // =================================================================
         // 1. 필요한 모든 키가 있는지 확인하고 로직 실행
-        const baseUrl = doctorData.doctorDetailUrl || doctorData.hospital_site;
-        const doctorNameValue = doctorData.bedoc_doctorname || doctorData.doctorName;
-        const deptNameValue = doctorData.bedoc_deptname || doctorData.department;
+        const baseUrl = doctorData.doctorDetailUrl || doctorData?.hospital_site;
+        const doctorNameValue = doctorData.bedoc_doctorname || doctorData?.doctorName;
+        const deptNameValue = doctorData.bedoc_deptname || doctorData?.department;
+        const hospitalName = doctorData?.hospitalName || doctorData?.bedoc_hospitalname;
+        const aigahid = doctorData.aiga_hid;
 
         // 2. 모든 필수 데이터가 있는 경우에만 전체 수정 작업을 진행
-        if (baseUrl && doctorNameValue && deptNameValue) {
-            // 2-1. saveDoctorDetailUrl 값 생성
-            const doctorName = encodeURIComponent(doctorNameValue);
-            const deptName = encodeURIComponent(deptNameValue);
-            const queryString = `doctorName=${doctorName}&depthName=${deptName}`;
-            const separator = baseUrl.includes('?') ? '&' : '?';
-            const newUrl = `${baseUrl}${separator}${queryString}`;
+        if (baseUrl && doctorNameValue && deptNameValue && aigahid) {
+          
+          // 2-1. saveDoctorDetailUrl 값 생성
+          const doctorName = doctorNameValue;//encodeURIComponent(doctorNameValue);
+          const deptName = deptNameValue;//encodeURIComponent(deptNameValue);
+          const queryString = `doctorName=${encodeURIComponent(doctorNameValue)}&depthName=${encodeURIComponent(deptNameValue)}`;
+          const separator = baseUrl.includes('?') ? '&' : '?';
+          const newUrl = `${baseUrl}${separator}${queryString}`;
 
-            // 2-2. 필드 순서 조정을 위해 객체를 새로 생성
-            const newData = {};
-            let newFieldsAdded = false;
-            for (const key in doctorData) {
-                newData[key] = doctorData[key];
-                if (key === 'isExist') {
-                    newData.isFinalComplete = true;
-                    newData.isSaveToDatabase = false;
-                    newData.saveDoctorDetailUrl = newUrl; // isSaveToDatabase 바로 뒤에 추가
-                    newFieldsAdded = true;
-                }
+          // 2-2. 필드 순서 조정을 위해 객체를 새로 생성
+          const newData = {};
+          let newFieldsAdded = false;
+          for (const key in doctorData) {
+              newData[key] = doctorData[key];
+              if (key === 'isExist') {
+                  newData.isFinalComplete = true;
+                  newData.isSaveToDatabase = false;
+                  newData.saveDoctorDetailUrl = newUrl; // isSaveToDatabase 바로 뒤에 추가
+                  newFieldsAdded = true;
+              }
+          }
+          
+          doctorData = newData;
+          const SP2 = await crawlingCtrl.get_rid_encrypt(doctorName, doctorData?.saveDoctorDetailUrl);
+          if (SP2.error) {
+            console.log("SP2 DB fail.");
+            return res.json(TS.fail("SP2 DB fail."));
+          }
+          const new_rid_long = SP2.data[0].rid_encrypt;
+          // 여기에서 데이터베이스 신규 등록을 진행한다,
+          // doctor, doctor_basic, doctor_career, doctor_paper;
+
+
+          // 1. target rid의 doctor_id를 가져온다 이때 없으면 이는 신규로 만들어서 이전 save-notmatch에서 신규 생성 프로세스를 진행해야 한다 있으면 target_doctor_id 변수에 할당
+          step = 'select_doctor_id';
+          // 1. rid_long으로 doctor_id가 있는지 확인
+          const selectParam = { search_rid_long: new_rid_long };
+          const format = { language: "sql", indent: "  " };
+          const selectQuery = mybatisMapper.getStatement("controler", "select_doctor_id_by_rid_long", selectParam, format);
+          
+          console.log(` -> [Step 1: SELECT] Executing for ${doctorName}...`);
+          const { DBError: selectDBError, RS: selectRS } = await daoMysql.spCall(selectQuery);
+          console.log(` -> [Step 1: SELECT] Done.`);
+          const selectRet = await functions.myBatisResult(selectDBError, selectRS);
+          if (selectRet.success && selectRet.data.length > 0) {
+            doctorId = selectRet.data[0].doctor_id;
+            console.log(`- Doctor ID found: ${doctorId}`);
+          } else {
+            step = 'insert_new_doctor';
+            // 2. 없으면 doctor 테이블에 새로 INSERT
+            const insertParam = {
+              search_data_version_id : 3,
+              search_rid_long: new_rid_long,
+              search_doctorname: doctorName
+            };
+            const insertQuery = mybatisMapper.getStatement("controler", "insert_new_doctor", insertParam, format);
+            
+            console.log(` -> [Step 2: INSERT] Executing for ${doctorName}...`);
+            const { DBError: insertDBError, RS: insertRS } = await daoMysql.spCall(insertQuery);
+            console.log(` -> [Step 2: INSERT] Done.`);
+            const insertRet = await functions.myBatisResult(insertDBError, insertRS);
+
+            if (insertRet.success && insertRet.data.insertId) {
+              doctorId = insertRet.data.insertId;
+              console.log(`    - New Doctor ID created: ${doctorId}`);
+            } else {
+              throw new Error('Failed to insert new doctor or get insertId.');
             }
-            // isExist 키가 없는 경우, 마지막에 새 필드들을 추가
-            if (!newFieldsAdded) {
-                newData.isFinalComplete = true;
-                newData.isSaveToDatabase = false;
-                newData.saveDoctorDetailUrl = newUrl;
-            }
-            doctorData = newData;
+          }
+          if ( doctorId ) {
+            step = 'insert_doctor_basic';
+            
+            const logParam = { 
+              new_rid_long: new_rid_long, 
+              new_hid : aigahid, 
+              new_doctor_id: doctorId, 
+              new_data_version_id : 3,
+              new_deptname : deptName, 
+              new_doctorname : doctorName, 
+              new_specialties : doctorData?.specialty ? doctorData?.specialty : null, 
+              new_doctor_url : doctorData?.saveDoctorDetailUrl, 
+              new_profileimgurl : doctorData?.profileUrl ? doctorData?.profileUrl : null, 
+              new_hospitalname : hospitalName
+            };
+            const logQuery = mybatisMapper.getStatement("controler", "insert_doctor_basic", logParam, format);
 
-            // 2-3. 수정된 내용을 파일에 쓰고, 파일명 변경
-            fs.writeFileSync(filePath, JSON.stringify(doctorData, null, 2), 'utf-8');
-            const newFilePath = filePath.replace('.json', '_saved.json');
-            fs.renameSync(filePath, newFilePath);
+            console.log(` -> [Step 2.1: INSERT LOG] Executing for ${doctorName}...`);
+            const { DBError: logDBError, RS: logRS } = await daoMysql.spCall(logQuery);
+            console.log(` -> [Step 2.1: INSERT LOG] Done.`);
+            const logRet = await functions.myBatisResult(logDBError, logRS);
+          }
 
-            processed_count++;
-            console.log(`[PARSING-FINAL] Successfully processed and renamed ${fileName}`);
+          // doctorId와 new_rid_long를 파일 맨 위에 추가하고 isSaveToDatabase 업데이트
+          doctorData = {
+              doctorId: doctorId,
+              rid_long: new_rid_long,
+              ...doctorData
+          };
+          doctorData.isSaveToDatabase = true;
+
+          // 2-3. 수정된 내용을 파일에 쓰고, 파일명 변경
+          fs.writeFileSync(filePath, JSON.stringify(doctorData, null, 2), 'utf-8');
+          const newFilePath = filePath.replace('.json', '_saved.json');
+          fs.renameSync(filePath, newFilePath);
+
+          processed_count++;
+          console.log(`[PARSING-FINAL] Successfully processed and renamed ${fileName}`);
 
         } else {
             // 필수 데이터가 없어 처리하지 않고 _failed.json으로 이름 변경
@@ -994,6 +1067,312 @@ router.get('/parsing-final', async function(req, res) {
     res.status(500).send('A critical error occurred during the parsing process: ' + error.message);
   }
 });
+
+
+/**
+ * @swagger
+ *  /v1/c/crawling_bedoc/parsing-final-step2:
+ *    get:
+ *      summary: "최종 수집된 의사 데이터 2차 파싱 및 수정"
+ *      description: "Step1에서 처리된 JSON 파일들을 순차적으로 읽어 추가 작업을 진행합니다."
+ *      tags: [crawling_bedoc-베닥의사 수집]
+ *      responses:
+ *        "200":
+ *          description: 데이터 처리 결과
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    message:
+ *                      type: string
+ */
+router.get('/parsing-final-step2', async function(req, res) {
+  //mapper 경로
+  mybatisMapper.createMapper([`${global.appRoot}/services/crawling_bedoc/controler.xml`]);
+  let processed_count = 0;
+  const errors = [];
+  const targetDir = path.join(global.appRoot, 'services/crawling_bedoc/final_data');
+
+  try {
+    if (!fs.existsSync(targetDir)) {
+      return res.status(404).send({
+        code: 404,
+        success: false,
+        message: `Directory not found: ${targetDir}`
+      });
+    }
+
+    const allDoctorFiles = fs.readdirSync(targetDir)
+      .filter(file => file.endsWith('_saved.json') && !file.endsWith('_saved2.json')); // _saved.json 파일을 대상으로 함
+    const filesToProcess = allDoctorFiles.slice(0, 1); // 한 번에 10개 파일만 선택
+
+    console.log(`[PARSING-FINAL-STEP2] Found ${allDoctorFiles.length} total files. Will process a batch of ${filesToProcess.length}.`);
+    let step = null;
+    let successCount = 0;
+    let failCount = 0;
+    for (const fileName of filesToProcess) {
+      const filePath = path.join(targetDir, fileName);
+      try {
+        console.log(`[PARSING-FINAL-STEP2] --- Processing file: ${fileName} ---`);
+        const fileContent = fs.readFileSync(filePath, 'utf-8');
+        let doctorData = JSON.parse(fileContent);
+
+        // 1. doctorId와 rid_long 필수 항목 확인
+        if (!doctorData.doctorId || !doctorData.rid_long) {
+          errors.push(`File ${fileName} is missing doctorId or rid_long.`);
+          // 필수 항목이 없으면 _failed.json으로 변경하고 건너뜁니다.
+          const newFilePath = filePath.replace('_saved.json', '_failed.json');
+          fs.renameSync(filePath, newFilePath);
+          console.log(`[PARSING-FINAL-STEP2] Renamed ${fileName} to _failed.json due to missing doctorId or rid_long.`);
+          continue; // 다음 파일로 넘어감
+        }
+        
+        // 2. 각 항목별로 데이터 배열 생성 및 병합
+        const education = doctorData['학력'] || [];
+        const career = doctorData['경력'] || [];
+        const awards = doctorData['수상'] || [];
+        const academic = doctorData['학술'] || [];
+        const media = doctorData['언론'] || [];
+        const books = doctorData['저서'] || [];
+
+        const etc = [...awards, ...academic, ...media, ...books];
+        const jsonData = [...education, ...career, ...etc];
+
+        // 3. doctor_career 테이블 저장 로직 (향후 추가될 부분)
+        step = 'select_doctor_career';
+        const selectParam = { search_rid_long: doctorData.rid_long };
+        const format = { language: "sql", indent: "  " };
+        const selectQuery = mybatisMapper.getStatement("controler", "select_doctor_career", selectParam, format);
+        
+        console.log(` -> [Step 1: SELECT] Executing for ${doctorData.doctorName}...`);
+        const { DBError: selectDBError, RS: selectRS } = await daoMysql.spCall(selectQuery);
+        console.log(` -> [Step 1: SELECT] Done.`);
+        const selectRet = await functions.myBatisResult(selectDBError, selectRS);
+
+        if (selectRet.success && selectRet.data.length > 0) {
+          //업데이트 
+          console.log(`- Doctor ID found: ${doctorData.doctorId}`);
+          step = 'update_doctor_career';
+          // 3. doctor_basic 테이블에 doctor_id 업데이트
+          const updateDidParam = { 
+            search_data_version_id : 3,
+            search_rid_long: doctorData.rid_long,
+            search_jsonData: JSON.stringify(jsonData),
+            search_education: JSON.stringify(education),
+            search_career: JSON.stringify(career),
+            search_etc : JSON.stringify(etc)
+          };
+          const updateDidQuery = mybatisMapper.getStatement("controler", "update_doctor_career", updateDidParam, format);
+
+          console.log(` -> [Step 3: UPDATE] Executing for ${doctorData.doctorName}...`);
+          const { DBError: updateDidDBError, RS: updateDidRS } = await daoMysql.spCall(updateDidQuery);
+          console.log(` -> [Step 3: UPDATE] Done.`);
+          const updateDidRet = await functions.myBatisResult(updateDidDBError, updateDidRS);
+          if (updateDidRet.success) {
+            console.log(`    - Successfully updated doctor_basic.`);
+            successCount++;
+          } else {
+            failCount++;
+            console.log(`    - Failed to update doctor_basic.`);  
+          }
+        } else {
+          //새로 생성
+          step = 'insert_new_doctor_career';
+          // 2. 없으면 doctor 테이블에 새로 INSERT
+          const insertParam = {
+            search_data_version_id : 3,
+            search_rid_long: doctorData.rid_long,
+            search_jsonData: jsonData,//JSON.stringify(jsonData),
+            search_education: education,//JSON.stringify(education),
+            search_career: career,//SON.stringify(career),
+            search_etc : etc//JSON.stringify(etc)
+          };
+          const insertQuery = mybatisMapper.getStatement("controler", "insert_new_doctor_career", insertParam, format);
+          
+          console.log(` -> [Step 2: INSERT] Executing for ${doctorData.doctorName}...`);
+          const { DBError: insertDBError, RS: insertRS } = await daoMysql.spCall(insertQuery);
+          console.log(` -> [Step 2: INSERT] Done.`);
+          const insertRet = await functions.myBatisResult(insertDBError, insertRS);
+          if (insertRet.success) {
+            successCount++;
+            console.log(`    - Successfully inserted new doctor_career.`);
+          } else {
+            failCount++;
+            console.log(`    - Failed to insert new doctor_career.`); 
+          }
+        }
+        // 4. 성공적으로 처리되면 파일명 변경
+        processed_count++;
+        const newFilePath = filePath.replace('_saved.json', '_saved2.json');
+        fs.renameSync(filePath, newFilePath);
+        console.log(`[PARSING-FINAL-STEP2] Successfully processed and renamed ${fileName} to _saved2.json`);
+
+      } catch (fileError) {
+        const errorMessage = `File ${fileName}: ${fileError.message}`;
+        console.error(`[PARSING-FINAL-STEP2] CRITICAL ERROR processing ${errorMessage}`);
+        errors.push(errorMessage);
+      }
+    }
+
+    return res.send({
+      code: 200,
+      success: true,
+      message: `Batch complete. Processed ${processed_count} doctor records. Errors: ${errors.length}`,
+      errors: errors
+    });
+  } catch (error) {
+    console.error('Critical error in /parsing-final-step2 route:', error.message);
+    res.status(500).send('A critical error occurred during the parsing process: ' + error.message);
+  }
+});
+
+
+
+
+/**
+ * @swagger
+ *  /v1/c/crawling_bedoc/parsing-final-step3:
+ *    get:
+ *      summary: "최종 수집된 의사 데이터 3차 파싱 및 수정"
+ *      description: "Step2에서 처리된 JSON 파일들을 순차적으로 읽어 추가 작업을 진행합니다."
+ *      tags: [crawling_bedoc-베닥의사 수집]
+ *      responses:
+ *        "200":
+ *          description: 데이터 처리 결과
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                    ok:
+ *                      type: boolean
+ *                    message:
+ *                      type: string
+ */
+router.get('/parsing-final-step3', async function(req, res) {
+  //mapper 경로
+  mybatisMapper.createMapper([`${global.appRoot}/services/crawling_bedoc/controler.xml`]);
+  let processed_count = 0;
+  const errors = [];
+  const targetDir = path.join(global.appRoot, 'services/crawling_bedoc/final_data');
+
+  try {
+    if (!fs.existsSync(targetDir)) {
+      return res.status(404).send({
+        code: 404,
+        success: false,
+        message: `Directory not found: ${targetDir}`
+      });
+    }
+
+    const allDoctorFiles = fs.readdirSync(targetDir)
+      .filter(file => file.endsWith('_saved2.json') && !file.endsWith('_saved3.json') ); // _saved2.json 파일을 대상으로 함
+    const filesToProcess = allDoctorFiles.slice(0, 1); // 한 번에 10개 파일만 선택
+
+    console.log(`[PARSING-FINAL-STEP3] Found ${allDoctorFiles.length} total files. Will process a batch of ${filesToProcess.length}.`);
+    let step = null;
+    let successCount = 0;
+    let failCount = 0;
+    for (const fileName of filesToProcess) {
+      const filePath = path.join(targetDir, fileName);
+      try {
+        console.log(`[PARSING-FINAL-STEP3] --- Processing file: ${fileName} ---`);
+        const fileContent = fs.readFileSync(filePath, 'utf-8');
+        let doctorData = JSON.parse(fileContent);
+
+        // 1. doctorId와 rid_long 필수 항목 확인
+        if (!doctorData.doctorId || !doctorData.rid_long) {
+          errors.push(`File ${fileName} is missing doctorId or rid_long.`);
+          // 필수 항목이 없으면 _failed.json으로 변경하고 건너뜁니다.
+          const newFilePath = filePath.replace('_saved2.json', '_failed2.json');
+          fs.renameSync(filePath, newFilePath);
+          console.log(`[PARSING-FINAL-STEP2] Renamed ${fileName} to _failed.json due to missing doctorId or rid_long.`);
+          continue; // 다음 파일로 넘어감
+        }
+        
+        // 2. 논문 목록 추출
+        const paperList = doctorData['논문'] || [];
+        const format = { language: "sql", indent: "  " };
+        
+        // 3. 각 논문을 순회하며 DB에 저장
+        for (const paper of paperList) {
+          if (!paper || typeof paper !== 'string') continue; // 유효하지 않은 논문 데이터는 건너뜁니다.
+
+          // SQL 쿼리 오류를 방지하기 위해 제목에서 따옴표(')와 큰따옴표(")를 모두 제거합니다.
+          // 참고: 이 방식은 데이터를 일부 변경할 수 있습니다 (예: "Meckel's" -> "Meckels").
+          const search_title = paper.replaceAll(/['"]/g, ""); // 현재 논문 제목
+          
+          step = 'select_doctor_paper';
+          const selectParam = { 
+            search_rid_long: doctorData.rid_long, 
+            search_title: search_title 
+          };
+          const selectQuery = mybatisMapper.getStatement("controler", "select_doctor_paper", selectParam, format);
+          
+          console.log(` -> [Step 3.1: SELECT paper] rid: ${doctorData.rid_long}, title: ${search_title.substring(0, 30)}...`);
+          const { DBError: selectDBError, RS: selectRS } = await daoMysql.spCall(selectQuery);
+          const selectRet = await functions.myBatisResult(selectDBError, selectRS);
+
+          if (selectRet.success && selectRet.data.length > 0) {
+            // 논문이 이미 존재하면 건너뜁니다 (또는 필요시 업데이트 로직 추가). 
+            // 현재는 특별한 업데이트 로직이 없으므로 중복 삽입만 방지합니다.
+            console.log(`    - Paper already exists. Skipping.`);
+            continue;
+          } else {
+            //새로 생성
+            step = 'insert_new_doctor_paper';
+            const insertParam = {
+              search_data_version_id : 3,
+              search_rid_long: doctorData.rid_long,
+              search_doctor_id: doctorData.doctorId,
+              search_doctorName: doctorData.doctorName,
+              search_title: search_title
+            };
+            const insertQuery = mybatisMapper.getStatement("controler", "insert_new_doctor_paper", insertParam, format);
+            
+            console.log(`    -> [Step 3.2: INSERT paper] Inserting...`);
+            const { DBError: insertDBError, RS: insertRS } = await daoMysql.spCall(insertQuery);
+            const insertRet = await functions.myBatisResult(insertDBError, insertRS);
+
+            if (insertRet.success) {
+              successCount++;
+              console.log(`       - Successfully inserted new paper.`);
+            } else {
+              failCount++;
+              errors.push(`Failed to insert paper for ${fileName}: ${search_title}`);
+              console.log(`       - Failed to insert new paper.`); 
+            }
+          }
+        }
+        // 4. 성공적으로 처리되면 파일명 변경
+        processed_count++;
+        const newFilePath = filePath.replace('_saved2.json', '_saved3.json');
+        fs.renameSync(filePath, newFilePath);
+        console.log(`[PARSING-FINAL-STEP3] Successfully processed and renamed ${fileName} to _saved3.json`);
+
+      } catch (fileError) {
+        const errorMessage = `File ${fileName}: ${fileError.message}`;
+        console.error(`[PARSING-FINAL-STEP2] CRITICAL ERROR processing ${errorMessage}`);
+        errors.push(errorMessage);
+      }
+    }
+
+    return res.send({
+      code: 200,
+      success: true,
+      message: `Batch complete. Processed ${processed_count} doctor records. Errors: ${errors.length}`,
+      errors: errors
+    });
+  } catch (error) {
+    console.error('Critical error in /parsing-final-step2 route:', error.message);
+    res.status(500).send('A critical error occurred during the parsing process: ' + error.message);
+  }
+});
+
+
 
 
 /**

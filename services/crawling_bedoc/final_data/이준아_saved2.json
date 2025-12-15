@@ -1,0 +1,337 @@
+{
+  "doctorId": 14996,
+  "rid_long": "9BAC2305206940602349DD8629C55FF963CA75B473F98C85BB272B172D3F941D932125E0B69027FE8B33701AF2013889B642F81DF0F5AE22C5E37A2CF211A1AAF463C10E0891E4CC9C19B50031CA9BDE5F169906F31E5A622C983387A0C6C4CA0F3FB6C84A27F545EBF4C4F1569DF558B2D3EBAFCBCC8EED7F939F70E612DB90B1B3D045A98ADB57C7ADBBC7637A91FF2C5432D1525C50531E8791ED8156786345768206FB976C55A0C2E47609009157DEE1D0C2D27777085B8465153E297EC0",
+  "hospital_cid": 462,
+  "bedoc_id": "A1100",
+  "bedoc_hospitalsite": "http://www.kcch.re.kr",
+  "bedoc_doctorname": "이준아",
+  "bedoc_deptname": "소아청소년과",
+  "bedoc_hospitalname": "원자력병원",
+  "hospital_name": "국립암센터",
+  "aiga_hid": "H11KR-31000013",
+  "hospital_site": "https://www.ncc.re.kr/ncc_about03_param.ncc?searchKey=&searchValue=&dept=PED",
+  "site_type": "popup",
+  "hospital_addr": "경기도 고양시 일산동구 일산로 323, (마두동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.ncc.re.kr/ncc_about03_param.ncc?searchKey=&searchValue=&dept=PED&doctorName=%EC%9D%B4%EC%A4%80%EC%95%84&depthName=%EC%86%8C%EC%95%84%EC%B2%AD%EC%86%8C%EB%85%84%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "https://www.ncc.re.kr/images/no-image.gif",
+  "specialty": "소아청소년암의 진단 및 항암치료(고형암; 육종, 두경부종양, 간종양, 신경모세포종)\n소아청소년암 환자의 완화의료",
+  "학력": [
+    {
+      "date": "1987-03 ~ 1993-02",
+      "content": "서울대학교 의학과 대졸"
+    },
+    {
+      "date": "1997-03 ~ 1999-02",
+      "content": "서울대학교 의학과 대학원졸(석사)"
+    },
+    {
+      "date": "1999-03 ~ 2006-02",
+      "content": "서울대학교 의학과 대학원졸(박사)"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1993-03 ~ 1994-02",
+      "content": "서울대병원 인턴"
+    },
+    {
+      "date": "1994-03 ~ 1998-02",
+      "content": "서울대병원 레지던트"
+    },
+    {
+      "date": "1998-03 ~ 1999-02",
+      "content": "서울대병원 전임의"
+    },
+    {
+      "date": "1999-08 ~ 2001-06",
+      "content": "한국보훈병원 전문의"
+    },
+    {
+      "date": "2001-06 ~ 2002-04",
+      "content": "차의과학대학교 분당차병원 전문의"
+    },
+    {
+      "date": "2002-05 ~ 2018-12",
+      "content": "한국원자력의학원 원자력병원 과장"
+    },
+    {
+      "date": "2006-04 ~ 2007-06",
+      "content": "Albert Einstein College of Medicine 방문교수"
+    },
+    {
+      "date": "2019-03 ~ 2023-03",
+      "content": "국립암센터 소아청소년과 의사직"
+    },
+    {
+      "date": "2019-03 ~ 현재",
+      "content": "국립암센터 소아청소년암센터 의사직"
+    },
+    {
+      "date": "2022-03 ~ 현재",
+      "content": "국립암센터 소아청소년완화의료팀 팀장"
+    },
+    {
+      "date": "2023-03 ~ 현재",
+      "content": "국립암센터 소아청소년과 의사직(임상교수)"
+    }
+  ],
+  "학술": [
+    {
+      "date": "2020-03 ~ 현재",
+      "content": "Cancer Research and Treatment Editorial board"
+    },
+    {
+      "date": "2019-12 ~ 현재",
+      "content": "대한소아청소년학회 간행위원회 위원"
+    },
+    {
+      "date": "2018-03 ~ 현재",
+      "content": "대한소아청소년학회 보험위원회 위원"
+    },
+    {
+      "date": "2017-10 ~ 현재",
+      "content": "대한소아혈액종양학회 임상연구회 (KPHOG) 육종 분과위원회 위원장"
+    },
+    {
+      "date": "2015-10 ~ 현재",
+      "content": "대한소아혈액종양학회 보험이사"
+    },
+    {
+      "date": "2013-08 ~ 현재",
+      "content": "대한혈액학회 평의원"
+    }
+  ],
+  "논문": [
+    "Understanding gut Microbiome changes in Korean children, adolescents, and young adults with hematologic malignancies: ANNALS OF HEMATOLOGY. 104(5):2947~2961 (2.4)",
+    "Right ventricular mass in a 10-year-old girl with osteosarcoma: an unusual case of cardiac metastasis: Clinical and Experimental Pediatrics. 67(12):725~727 (0)",
+    "Patterns of Medical Utilization in Children, Adolescents, and Young Adults With Life-Limiting Conditions in Korea: A Cohort Study Based on National Health Insurance Data: JOURNAL OF KOREAN MEDICAL SCIENCE. 40:e27~ (3)",
+    "CD47 in Osteosarcoma: Correlation with Metastasis and Macrophage-Mediated Phagocytosis: CELLS. 13(22):1862~ (5.1)",
+    "Lenvatinib Plus Ifosfamide and Etoposide in Children and Young Adults With Relapsed Osteosarcoma: JAMA ONCOLOGY. 10(12):1645~1653 (22.3)",
+    "Telomere Length in Adolescent and Young Adult Survivors of Childhood Cancer: Cancers. 16(13):2344~ (4.5)",
+    "Excellent Outcomes in Children, Adolescents, and Young Adults with Ovarian Germ Cell Tumors Treated by Either Reduced- or Standard-Dose Bleomycin: CANCERS. 15(21):5290~ (5.2)",
+    "Characteristics and clinical course of thyroid abnormalities arisen in long term survivors of childhood cancer: BMC PEDIATRICS. 23(1):124~ (2.4)",
+    "Gonadal Function in Female Adolescent and Young Adult Survivors of Childhood Cancer: CANCER RESEARCH AND TREATMENT. 55(3):992~1000 (4.6)",
+    "Epidemiologic and Clinical Outcomes of Pediatric Renal Tumors in Korea: A Retrospective Analysis of The Korean Pediatric Hematology and Oncology Group (KPHOG) Data: CANCER RESEARCH AND TREATMENT. 55(1):279~290 (5.036)",
+    "Clinical characteristics and long?term outcomes of rhabdomyosarcoma in Korean children, adolescents and young adults: a single?center experience: JOURNAL OF CANCER RESEARCH AND CLINICAL ONCOLOGY. Online:Published (4.322)",
+    "Therapeutic Potential of Ex Vivo Expanded gamma delta T Cells against Osteosarcoma Cells: CELLS. 11(14):2164~ (7.666)",
+    "Prevalence and risk factors of metabolic syndrome components in childhood cancer survivors: JOURNAL OF ADOLESCENT AND YOUNG ADULT ONCOLOGY. Online:Published (1.757)",
+    "Identifying serum miRNA biomarkers for radiation exposure in hematopoietic humanized NSG-SGM3 mice: BIOCHEMICAL AND BIOPHYSICAL RESEARCH COMMUNICATIONS. 599:51~56 (3.322)",
+    "Osteosarcoma in Adolescents and Young Adults: CELLS. 10(10):2684~ (6.6)",
+    "Incidence and outcomes of malignant ovarian germ cell tumors in Korea, 1999-2017: GYNECOLOGIC ONCOLOGY. 163(1):79~84 (5.482)",
+    "Incidence Patterns and Outcomes of Ewing Sarcoma in South Korea (1999-2017): A Retrospective Analysis Using Korea Central Cancer Registry Data: CANCER RESEARCH AND TREATMENT. Online:Published (4.679)",
+    "Development of a Bioluminescent Human Osteosarcoma Model in Humanized NSG Mice: A Pilot Study: IN VIVO. 35(4):2151~2157 (2.155)",
+    "Vincristine, Irinotecan, and Temozolomide as a Salvage Regimen for Relapsed or Refractory Sarcoma in Children and Young Adults: CANCER RESEARCH AND TREATMENT. Online:Published (4.679)",
+    "Tumors of the Pleura and Lung Developed 17 Years after Allogeneic Bone Marrow Transplantation for Childhood Acute Myelomonocytic Leukemia: Synovial Sarcoma Mimicking Malignant Mesothelioma: Clinical Pediatric Hematology-Oncology. 28(1):63~66 (0)",
+    "Cancer Incidence and Survival among Adolescents and Young Adults in Korea: An Update for 2016: CANCER RESEARCH AND TREATMENT. Online:Published (3.761)",
+    "Clinical Characteristics and Treatment Outcomes in Children, Adolescents, and Young-adults with Hodgkins Lymphoma: a KPHOG Lymphoma Working-party, Multicenter, Retrospective Study: JOURNAL OF KOREAN MEDICAL SCIENCE. 35(46):e393~ (1.705)",
+    "Atypical Teratoid/Rhabdoid Tumor of the Central Nervous System in Children Under the Age of 3 Years: CANCER RESEARCH AND TREATMENT. Online:Published (3.761)",
+    "Low bone mineral density in children and adolescents with cancer: Annals of Pediatric Endocrinology & Metabolism. 25(3):137~144 (0)",
+    "Hyperammonemic Encephalopathy Mimicking Ornithine Transcarbamylase Deficiency in Fibrolamellar Hepatocellular Carcinoma: Successful Treatment with Continuous Venovenous Hemofiltration and Ammonia Scavengers: CANCER RESEARCH AND TREATMENT. Online:Published (3.761)",
+    "Epidemiological Study of Hereditary Hemolytic Anemia in the Korean Pediatric Population during 1997?2016: a Nationwide Retrospective Cohort Study: JOURNAL OF KOREAN MEDICAL SCIENCE. 35(33):e279~ (1.705)",
+    "Korean parents' perceptions of the challenges and needs on school re-entry during or after childhood and adolesecnt cancer: a multi-institutional survey by Korean Society of Pediatric Hematology and Oncology: clinical and experimental pediatrics. Online:Published ()",
+    "Molecular diagnosis of hereditary spherocytosis by multi-gene target sequencing in Korea: matching with osmotic fragility test and presence of spherocyte: ORPHANET JOURNAL OF RARE DISEASES. 14(1):114~ (3.523)",
+    "Thromboembolism in children with cancer: a retrospective multicenter study in Korea.: JOURNAL OF THROMBOSIS AND THROMBOLYSIS. 47(4):558~565 (2.054)",
+    "Evaluation of the field-protective effectiveness of seasonal influenza vaccine among Korean children aged < 5 years during the 2014?2015 and 2015?2016 influenza seasons: a cohort study: HUMAN VACCINES & IMMUNOTHERAPEUTICS. 15(2):481~486 (2.619)",
+    "Lymphocyte-monocyte ratio at day 14 of first cisplatin-doxorubicin chemotherapy is associated with treatment outcome of pediatric patients with localized osteosarcoma: Korean journal of pediatrics. 62(2):62~67 (0)"
+  ],
+  "저서": [
+    {
+      "date": "2020-07-01",
+      "content": "청소년청년 종양학",
+      "issuer": "대한소아혈액종양학회"
+    }
+  ],
+  "언론": [
+    {
+      "date": "2024-10-16",
+      "content": "국립암센터, 제12회 호스피스의 날 맞아 기념행사 개최",
+      "media": "보건타임즈"
+    },
+    {
+      "date": "2024-05-29",
+      "content": "국립암센터, 암성 통증 인식 향상 위한 캠페인 진행",
+      "media": "보건타임즈"
+    },
+    {
+      "date": "2024-05-29",
+      "content": "\"암성 통증, 조절할 수 있습니다!\"",
+      "media": "메디팜스투데이"
+    },
+    {
+      "date": "2024-05-29",
+      "content": "[5월 29일 병원계 이모저모②]국립암센터, 강원대, 아주대, 충북대병원 등 소식",
+      "media": "메디컬월드뉴스"
+    },
+    {
+      "date": "2024-05-29",
+      "content": "국립암센터, 암성 통증 인식 함양 캠페인 전개",
+      "media": "의학신문"
+    },
+    {
+      "date": "2023-10-20",
+      "content": "지역 거점병원 육성해 ‘붕괴 위기’ 지역의료 살린다 [정부 필수의료 혁신전략]",
+      "media": "세계일보"
+    },
+    {
+      "date": "2023-10-16",
+      "content": "매년 ‘지역의사’ 200명 늘린다…의대정원 확대, ‘지역안착’에 ‘방점’",
+      "media": "농민신문"
+    },
+    {
+      "date": "2023-10-16",
+      "content": "전문가들 “필수 의료분야 의사 유인책 마련이 급선무”",
+      "media": "대경일보"
+    },
+    {
+      "date": "2023-10-16",
+      "content": "\"의대 정원 늘리되, 필수의료로 의사 끌어들일 유인책 마련해야\"",
+      "media": "연합뉴스"
+    },
+    {
+      "date": "2023-03-21",
+      "content": "제16회 암예방의 날 기념식...김열홍 교수 홍조근정훈장 등 12인 정부 포상",
+      "media": "약업신문"
+    },
+    {
+      "date": "2023-03-03",
+      "content": "'명의' 이준아 교수가 전하는 소아 청소년 암의 종류 및 최신 치료법",
+      "media": "비즈엔터"
+    },
+    {
+      "date": "2023-03-03",
+      "content": "[EBS 명의] 소아암 종류, 증상, 치료방법 소개...본방송-재방송 시간은?",
+      "media": "문화뉴스"
+    },
+    {
+      "date": "2023-03-03",
+      "content": "[EBS 명의] 소아암 전문의 이준아 교수, “암과 싸우는 아이들...소아암 전문의가 사라지고 있다”",
+      "media": "한국강사신문"
+    },
+    {
+      "date": "2023-03-03",
+      "content": "[EBS명의] 암과 싸우는 아이들 \"너를 응원해\"",
+      "media": "EBS"
+    },
+    {
+      "date": "2023-03-03",
+      "content": "EBS 명의 소아암 종류와 증상· 최신 치료법 등 소개, 국립암센터 소아청소년과 이준아 교수 출연",
+      "media": "광명지역신문"
+    },
+    {
+      "date": "2023-03-02",
+      "content": "'명의' 완치율 85.5% 소아암, 하지만 소아암 전문의가 사라지고 있다?",
+      "media": "스타데일리뉴스"
+    },
+    {
+      "date": "2023-03-02",
+      "content": "소아·청소년 암, 어떻게 알아채고 물리치나…EBS1 ‘명의’",
+      "media": "경향신문"
+    },
+    {
+      "date": "2023-02-21",
+      "content": "통증으로부터 소중한 시간을 지키는 사람들 국립암센터 미니 다큐 - 호스피스완화의료 편",
+      "media": "국립암센터(유튜브)"
+    },
+    {
+      "date": "2022-10-26",
+      "content": "치료 끝나도 일상은 고달프고… 어린 암 환자 돕는 ‘완화의료’[아미랑]",
+      "media": "헬스조선"
+    },
+    {
+      "date": "2022-10-18",
+      "content": "[아미랑] 완치율은 세계 최고인데… 붕괴된 소아암 진료 체계",
+      "media": "헬스조선"
+    },
+    {
+      "date": "2022-10-18",
+      "content": "통증으로부터 소중한 시간을 지키는 사람들？？??？？？??？ I 국립암센터 미니 다큐？？ - 호스피스완화의료 편",
+      "media": "국립암센터(유튜브)"
+    },
+    {
+      "date": "2022-10-03",
+      "content": "<연합뉴스>치료 받으려 동분서주…소아암 의사가 사라진다",
+      "media": "연합뉴스"
+    },
+    {
+      "date": "2022-09-28",
+      "content": "씨마르는 소아암 전문의… 강원·경북엔 0명",
+      "media": "조선일보"
+    },
+    {
+      "date": "2022-08-12",
+      "content": "[8월 11일 병원계 이모저모③]국립암센터, 분당차, 원주연세의료원, 한양대구리병원 등 소식",
+      "media": "메디컬월드뉴스"
+    },
+    {
+      "date": "2022-08-12",
+      "content": "[HOSPITAL UNIQUE] 2022년 8월 12일자",
+      "media": "병원신문"
+    },
+    {
+      "date": "2022-08-12",
+      "content": "국립암센터, 소아청소년 완화의료 캠페인 진행",
+      "media": "헬스코리아뉴스"
+    },
+    {
+      "date": "2022-08-11",
+      "content": "[의료24시] 고려대 안산병원 의료진, 우크라이나 고려인 전쟁난민 의료지원",
+      "media": "헬스코리아뉴스"
+    },
+    {
+      "date": "2022-08-11",
+      "content": "국립암센터, 소아청소년 완화의료 캠페인 펼쳐",
+      "media": "헬스미디어&플랜"
+    },
+    {
+      "date": "2022-08-11",
+      "content": "국립암센터, 소아청소년 완화의료 캠페인",
+      "media": "e헬스통신"
+    },
+    {
+      "date": "2022-08-11",
+      "content": "국립암센터, 소아청소년 완화의료 캠페인 펼쳐",
+      "media": "보건타임즈"
+    },
+    {
+      "date": "2022-08-11",
+      "content": "국립암센터, 소아청소년 암환자 대상 완화의료 서비스 시작",
+      "media": "청년의사"
+    },
+    {
+      "date": "2022-08-11",
+      "content": "국립암센터, 소아청소년 완화의료 ‘새봄누리’ 본격 가동",
+      "media": "메디칼통신"
+    },
+    {
+      "date": "2022-08-11",
+      "content": "국립암센터, 소아청소년완화의료팀 '새봄누리' 출범",
+      "media": "보건뉴스"
+    },
+    {
+      "date": "2022-08-11",
+      "content": "[의료계 소식] 국립암센터, 소아청소년 완화의료 캠페인 펼쳐",
+      "media": "헬스조선"
+    },
+    {
+      "date": "2022-08-11",
+      "content": "국립암센터, 소아청소년완화의료팀 ‘새봄누리’ 출범",
+      "media": "의학신문"
+    },
+    {
+      "date": "2022-08-11",
+      "content": "국립암센터, 소아청소년 완화의료 캠페인 펼쳐",
+      "media": "메디소비자뉴스"
+    },
+    {
+      "date": "2022-08-11",
+      "content": "국립암센터, 소아청소년 완화의료 캠페인 펼쳐",
+      "media": "메디팜스투데이"
+    }
+  ]
+}

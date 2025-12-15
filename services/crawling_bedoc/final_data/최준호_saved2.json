@@ -1,0 +1,84 @@
+{
+  "doctorId": 15121,
+  "rid_long": "775646610EEC112BEB9203F550E70A9EA75FA7D88C6DDC00EA12D3CCAC765AB2B32B4191C894F48634BB575FC983A39CA480531FD553BE18C125CD1896C2E6072C4315091A694B08A38A605E3AA2DBBD6A0BC13819537A24135C10EFB53200F0922F9064B4BED4A6A79B84E6982DC08A9A25516E378AB3C297E8043D8F72C4D2A0E195DDA0C09C9D0596BBEC4AB87F196A43ACE06A1C9CBC3A94378B6204951D6BB9D358D1407EB30EA4569BA0B14FBE5F2B88C8F05E57EB361ECEBA1E715766BB7961992FB08FF96457F0AEDB2C3094145357B292916F2094C4734176766A97E76E452782575C569F34CE10035300C0E006FC1B2760DC762201718B14A2730E",
+  "hospital_cid": 619,
+  "bedoc_id": "A8413",
+  "bedoc_hospitalsite": "http://guri.hyumc.com/index.asp?",
+  "bedoc_doctorname": "최준호",
+  "bedoc_deptname": "정신건강의학과",
+  "bedoc_hospitalname": "한양대구리병원",
+  "hospital_name": "한양대구리병원",
+  "aiga_hid": "H11KR-31000064",
+  "hospital_site": "https://guri.hyumc.com/guri/mediteam/mditeam.do?action=detail&searchCondition1=nmTagMediteam&searchCommonSeq=&searchCommonCd1=2027344&searchCommonCd2=111330&searchKeyword=%EC%B5%9C%EC%A4%80%ED%98%B8",
+  "site_type": "single",
+  "hospital_addr": "경기도 구리시 경춘로 153, (교문동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://guri.hyumc.com/guri/mediteam/mditeam.do?action=detail&searchCondition1=nmTagMediteam&searchCommonSeq=&searchCommonCd1=2027344&searchCommonCd2=111330&searchKeyword=%EC%B5%9C%EC%A4%80%ED%98%B8&doctorName=%EC%B5%9C%EC%A4%80%ED%98%B8&depthName=%EC%A0%95%EC%8B%A0%EA%B1%B4%EA%B0%95%EC%9D%98%ED%95%99%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "https://guri.hyumc.com/upload/ckfinder/images/photo_doctor/guri/0%EC%A0%95%EC%8B%A0%EA%B1%B4%EA%B0%95%EC%9D%98%ED%95%99%EA%B3%BC%EC%B5%9C%EC%A4%80%ED%98%B8%EA%B5%90%EC%88%98%EB%8B%98%EA%B5%90%EC%88%98%EB%8B%983.jpg",
+  "specialty": "조현병, 조기정신병, 조울증, 우울증, 재발성우울증",
+  "학력": [
+    {
+      "date": null,
+      "content": "한양대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "한양대학교 의과대학 정신건강의학과 석사 및 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "한양대학교 구리병원 정신건강의학과 전임의 및 임상교수"
+    },
+    {
+      "date": null,
+      "content": "현)한양대학교 의과대학 정신건강의학과 교수"
+    },
+    {
+      "date": null,
+      "content": "Brain stimulation lab of MUSC (Medical University of South Carolina), SC, USA."
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한신경정신의학회 진료심의위원회 의무이사"
+    },
+    {
+      "date": null,
+      "content": "대한생물정신의학회 기획이사"
+    },
+    {
+      "date": null,
+      "content": "대한조현병학회 보험이사"
+    },
+    {
+      "date": null,
+      "content": "대한생물치료정신의학회 평이사"
+    }
+  ],
+  "언론": [
+    {
+      "targetDate": "2023-09-15",
+      "type": "언론",
+      "text": "[의학신문] 한양대구리병원 최준호 교수, 대한생물정신의학회 이사장 취임",
+      "url": "http://www.bosa.co.kr/news/articleView.html?idxno=2199903",
+      "issuer": "의학신문"
+    }
+  ],
+  "논문": [
+    "Choi J, Jang J, Lee S. Effects of an Antipsychotic Polypharmacy on the Clinical Efficacy and Metabolic Side Effects in Patients With Schizophrenia: A Randomized, Open-Label, Controlled Trial. J Clin Psychopharmacol. 2023;43(3):220-227."
+  ],
+  "저서": [
+    {
+      "date": "2023",
+      "content": "조현병 (공저)"
+    }
+  ]
+}

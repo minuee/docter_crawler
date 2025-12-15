@@ -27,21 +27,20 @@ console.log("DATA_VERSION_ID", DATA_VERSION_ID)
  *      summary: "병원데이터 후가공 - 경력분리"
  *      description: "수집된 의사 경력을 경력/학력/기타로 분리 "
  *      tags: [병원데이터 후가공]
- *      produces:
  *      parameters:
- *       - in: "body"
- *         name: "input"
- *         description: "data_version_id, hid는 필수"
- *         schema:
- *           type: object
- *           required:
- *             - data_version_id
- *             - hid
- *           properties:
- *             data_version_id:
- *               type: string
- *             hid:
- *               type: string
+ *        - in: "body"
+ *          name: "input"
+ *          description: "data_version_id, hid는 필수"
+ *          schema:
+ *            type: object
+ *            required:
+ *              - data_version_id
+ *              - hid
+ *            properties:
+ *              data_version_id:
+ *                type: string
+ *              hid:
+ *                type: string
  *      responses:
  *        "200":
  *          description: 병원데이터 후가공 
@@ -294,21 +293,20 @@ router.post('/make-career-resume', async (req, res, next) => {
  *      summary: "병원데이터 후가공 - 진료과목과세부진료분야 설정(부사장님 작업영역 사용중지)"
  *      description: "수집된 의사 진료과목과세부진료분야 설정 "
  *      tags: [병원데이터 후가공]
- *      produces:
  *      parameters:
- *       - in: "body"
- *         name: "input"
- *         description: "data_version_id, hid는 필수"
- *         schema:
- *           type: object
- *           required:
- *             - data_version_id
- *             - hid
- *           properties:
- *             data_version_id:
- *               type: string
- *             hid:
- *               type: string
+ *        - in: "body"
+ *          name: "input"
+ *          description: "data_version_id, hid는 필수"
+ *          schema:
+ *            type: object
+ *            required:
+ *              - data_version_id
+ *              - hid
+ *            properties:
+ *              data_version_id:
+ *                type: string
+ *              hid:
+ *                type: string
  *      responses:
  *        "200":
  *          description: 병원데이터 후가공 
@@ -533,21 +531,20 @@ router.post('/make-standard', async (req, res, next) => {
  *      summary: "병원데이터 후가공 - doctor id에 specialty id 부여 작업"
  *      description: "수집된 의사 doctor id에 specialty id 부여 작업 "
  *      tags: [병원데이터 후가공]
- *      produces:
  *      parameters:
- *       - in: "body"
- *         name: "input"
- *         description: "data_version_id, hid는 필수"
- *         schema:
- *           type: object
- *           required:
- *             - data_version_id
- *             - hid
- *           properties:
- *             data_version_id:
- *               type: string
- *             hid:
- *               type: string
+ *        - in: "body"
+ *          name: "input"
+ *          description: "data_version_id, hid는 필수"
+ *          schema:
+ *            type: object
+ *            required:
+ *              - data_version_id
+ *              - hid
+ *            properties:
+ *              data_version_id:
+ *                type: string
+ *              hid:
+ *                type: string
  *      responses:
  *        "200":
  *          description: 병원데이터 후가공 
@@ -616,7 +613,7 @@ router.post('/make-doctor-specialty', async (req, res, next) => {
 
     // 1. Fetch all doctors for the given hospital
     const param = { search_version_id: data_version_id, search_hid: hid };
-    const query = mybatisMapper.getStatement("sql", "select_doctor_basic_specialty", param, format);
+    const query = mybatisMapper.getStatement("sql", "select_doctor_basic_specialty_temp", param, format);
     const { DBError, RS } = await daoMysql.spCall(query);
     if (DBError) throw new Error(DBError);
 
@@ -627,6 +624,7 @@ router.post('/make-doctor-specialty', async (req, res, next) => {
     // 2. Collect all unique specialty names from all doctors
     const allSpecialtyNames = new Set();
     doctors.forEach(doctor => {
+      console.log(`doctor.specialties: ${doctor.specialties}`);
       if (doctor.specialties) {
         const specs = parseSpecialties(doctor.specialties);
         specs.forEach(spec => allSpecialtyNames.add(spec));
@@ -673,6 +671,7 @@ router.post('/make-doctor-specialty', async (req, res, next) => {
     let num = 0;
     for (const doctor of doctors) {
       num++;
+      console.log(`${num}/${totalCount} Doctor ${doctor.doctorname}, doctorID ${doctor.doctor_id}`);
       if (!doctor.doctor_id) {
         console.log(`${num}/${totalCount} [FAIL-NO_DATA 1] Doctor ${doctor.doctorname} has no doctor_id.`);
         nullData.push({ doctor_id: null, doctorName: doctor.doctorname, reason: "Doctor has no doctor_id." });
@@ -680,6 +679,7 @@ router.post('/make-doctor-specialty', async (req, res, next) => {
         continue;
       }
       const specs = parseSpecialties(doctor.specialties);
+      console.log(`${num}/${totalCount} Doctor ${doctor.doctorname}, doctorID ${JSON.stringify(specs)}`);
       if (specs.length === 0) {
         console.log(`${num}/${totalCount} [FAIL-NO_DATA 2] doctorname: ${doctor.doctorname},doctor_id: ${doctor.doctor_id}`);
         nullData.push({ doctor_id: doctor.doctor_id, doctorName: doctor.doctorname, reason: "specialties is empty for this doctor." });
@@ -763,18 +763,17 @@ router.post('/make-doctor-specialty', async (req, res, next) => {
  *      summary: "병원데이터 후가공 - sns평가 정보의 dodctor정보 매칭"
  *      description: "수sns평가 정보의 dodctor정보 매칭 "
  *      tags: [병원데이터 후가공]
- *      produces:
  *      parameters:
- *       - in: "body"
- *         name: "input"
- *         description: "data_version_id필수"
- *         schema:
- *           type: object
- *           required:
- *             - data_version_id
- *           properties:
- *             data_version_id:
- *               type: string
+ *        - in: "body"
+ *          name: "input"
+ *          description: "data_version_id필수"
+ *          schema:
+ *            type: object
+ *            required:
+ *              - data_version_id
+ *            properties:
+ *              data_version_id:
+ *                type: string
  *      responses:
  *        "200":
  *          description: 병원데이터 후가공 
@@ -1012,18 +1011,17 @@ router.post('/sns-match-doctor', async (req, res, next) => {
  *      summary: "병원데이터 후가공 - 경력합치기"
  *      description: "이미 수집된 의사의  경력/학력/기타를 하나의 jsondata로 merge"
  *      tags: [병원데이터 후가공]
- *      produces:
  *      parameters:
- *       - in: "body"
- *         name: "input"
- *         description: "rid는 필수"
- *         schema:
- *           type: object
- *           required:
- *             - rid
- *           properties:
- *             rid:
- *               type: string
+ *        - in: "body"
+ *          name: "input"
+ *          description: "rid는 필수"
+ *          schema:
+ *            type: object
+ *            required:
+ *              - rid
+ *            properties:
+ *              rid:
+ *                type: string
  *      responses:
  *        "200":
  *          description: 병원데이터 후가공 
@@ -1101,21 +1099,20 @@ router.post('/make-revert', async (req, res, next) => {
  *      summary: "논문 Authors의 중복 제거"
  *      description: "논문 Authors의 중복 제거"
  *      tags: [병원데이터 후가공]
- *      produces:
  *      parameters:
- *       - in: "body"
- *         name: "input"
- *         description: "hid, version_id는 필수"
- *         schema:
- *           type: object
- *           required:
- *             - data_version_id
- *             - hid
- *           properties:
- *             data_version_id:
- *               type: string
- *             hid:
- *               type: string
+ *        - in: "body"
+ *          name: "input"
+ *          description: "hid, version_id는 필수"
+ *          schema:
+ *            type: object
+ *            required:
+ *              - data_version_id
+ *              - hid
+ *            properties:
+ *              data_version_id:
+ *                type: string
+ *              hid:
+ *                type: string
  *      responses:
  *        "200":
  *          description: 병월별 의사 상세정보 체크
@@ -1264,21 +1261,20 @@ router.post('/pubmed_authors_remove', async (req, res, next) => {
  *      summary: "논문 제1저자 찾기"
  *      description: "논문 제1저자 찾기"
  *      tags: [병원데이터 후가공]
- *      produces:
  *      parameters:
- *       - in: "body"
- *         name: "input"
- *         description: "hid, version_id는 필수"
- *         schema:
- *           type: object
- *           required:
- *             - data_version_id
- *             - hid
- *           properties:
- *             data_version_id:
- *               type: string
- *             hid:
- *               type: string
+ *        - in: "body"
+ *          name: "input"
+ *          description: "hid, version_id는 필수"
+ *          schema:
+ *            type: object
+ *            required:
+ *              - data_version_id
+ *              - hid
+ *            properties:
+ *              data_version_id:
+ *                type: string
+ *              hid:
+ *                type: string
  *      responses:
  *        "200":
  *          description: 병월별 의사 상세정보 체크
@@ -1459,25 +1455,24 @@ router.post('/pubmed_find_firstauthor', async (req, res, next) => {
  *      summary: "논문 quartile과 impactFactor 조회 "
  *      description: "논문 quartile과 impactFactor 조회"
  *      tags: [병원데이터 후가공]
- *      produces:
  *      parameters:
- *       - in: "body"
- *         name: "input"
- *         description: "hid, version_id는 필수, is_all_new는 옵션 기본 false "
- *         schema:
- *           type: object
- *           required:
- *             - data_version_id
- *             - hid
- *           properties:
- *             data_version_id:
- *               type: string
- *             hid:
- *               type: string
- *            is_all_new:
- *               type: boolean
- *               default: false
- *               description: "true인 경우 로컬 DB 조회 건너뛰고 SCImago에서 강제 재수집"
+ *        - in: "body"
+ *          name: "input"
+ *          description: "hid, version_id는 필수, is_all_new는 옵션 기본 false "
+ *          schema:
+ *            type: object
+ *            required:
+ *              - data_version_id
+ *              - hid
+ *            properties:
+ *              data_version_id:
+ *                type: string
+ *              hid:
+ *                type: string
+ *              is_all_new:
+ *                type: boolean
+ *                default: false
+ *                description: "true인 경우 로컬 DB 조회 건너뛰고 SCImago에서 강제 재수집"
  *      responses:
  *        "200":
  *          description: 병월별 의사 상세정보 체크

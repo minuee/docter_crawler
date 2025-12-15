@@ -1,0 +1,66 @@
+{
+  "doctorId": 15075,
+  "rid_long": "E7336306088D758A96292B74589DDC42FD27F42DB68635547F5D00F18D0B1420732D7476F38C90B765E8A6801FCEF1F2AB8438ACA054A82EA51B3D7A63C70C5D4A02D0380335147F5DFF2AEA14DDF668AFDEE907D9C7A656E9D1DA45CC3A7BECA457B41C68E8A0831A0D8A2A5E7E28D5AF80A08D9A350D37067ECA8D7C8363BB963BD309B466709E0C1DCFE392DC46D1",
+  "hospital_cid": 567,
+  "bedoc_id": "A1119",
+  "bedoc_hospitalsite": "http://www.seoulstar.net/",
+  "bedoc_doctorname": "조우신",
+  "bedoc_deptname": "정형외과",
+  "bedoc_hospitalname": "서울스타병원",
+  "hospital_name": "아산재건정형외과의원",
+  "aiga_hid": "H31KR-31004593",
+  "hospital_site": "http://www.asanrecon.com/html/main.asp#team",
+  "site_type": "popup",
+  "hospital_addr": "경기도 양주시 고읍남로 18, 가보프라자 3층 301,302호, 4층, 6층 601,602호, 7층 702호 (광사동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "http://www.asanrecon.com/html/main.asp#team?doctorName=%EC%A1%B0%EC%9A%B0%EC%8B%A0&depthName=%EC%A0%95%ED%98%95%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "isAttend": true,
+  "specialty": "정형외과",
+  "학력": [
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "카톨릭대학교 의과대학 의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "국립의료원 수료"
+    },
+    {
+      "date": null,
+      "content": "울산대학교 의과대학 교수"
+    },
+    {
+      "date": null,
+      "content": "서울아산병원 정형외과 주임교수"
+    },
+    {
+      "date": null,
+      "content": "정형외과 전문의"
+    },
+    {
+      "date": null,
+      "content": "대한민국 정형외과 전문의 최초"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한슬관절학회 회장"
+    }
+  ],
+  "저서": [
+    {
+      "date": null,
+      "content": "세계 3대 학술 전문 출판사 SPRINGER에서 Knee Joint Athroplasty (무릎의 인공관절) 출간"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "doctorId": 15076,
+  "rid_long": "24B99782D28BC393ACDEDF08D951872FA219FD5388F35EC7689A222017B9ABF546635792737D630CDDDE65F10831519B2956EA8D717C9E34309067555B5F6FD38EB840AA802E1F1F7904E58AEFFB5574498BC4A7062AEB5FCC600CFA4A9041653AF77C58947A4B82B1F218CFC8696744B6DF11E732D7D1DE263D7719D5AE7554C30DC6F91D86BDD32AE007FC21BF7D1791EE8A126D69F4AB12015AC06CD4B48AA2C6B5020E47A3A51BF23D8B05AD7395400AAEDC38C3F987386A95B2DCD8886A07F9C692E54FC9497E3A6F9F286D1EB2FAFB1564AC84957CFAD32A083025EFC5",
+  "hospital_cid": 568,
+  "bedoc_id": "A5848",
+  "bedoc_hospitalsite": "http://www.noon.co.kr",
+  "bedoc_doctorname": "조윤애",
+  "bedoc_deptname": "안과",
+  "bedoc_hospitalname": "누네안과병원",
+  "hospital_name": "누네안과병원",
+  "aiga_hid": "H21KR-11000040",
+  "hospital_site": "https://www.noon.co.kr/about/doctor_view/1/17?sch_key=&sch_branch_code_key=1&sch_center_code_no=&sch_text=%EC%A1%B0%EC%9C%A4%EC%95%A0",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 강남구 테헤란로 408, 대치빌딩 지상9층~지상17층 (대치동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.noon.co.kr/about/doctor_view/1/17?sch_key=&sch_branch_code_key=1&sch_center_code_no=&sch_text=%EC%A1%B0%EC%9C%A4%EC%95%A0&doctorName=%EC%A1%B0%EC%9C%A4%EC%95%A0&depthName=%EC%95%88%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "isAttend": true,
+  "specialty": "소아사시, 성인사시, 마비사시, 소아안과",
+  "profileUrl": "https://www.noon.co.kr/upload/doctor/20220125120658.png",
+  "학력": [
+    {
+      "date": null,
+      "content": "· 고려대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "· 경북대학교 대학원 의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "· 고려대학교 의과대학 명예교수"
+    },
+    {
+      "date": null,
+      "content": "· 누네안과병원 사시·소아안과센터 원장"
+    },
+    {
+      "date": null,
+      "content": "· 고려대학교 의과대학 안과 주임교수"
+    },
+    {
+      "date": null,
+      "content": "· George-Washington 의과대학 부속 소아국립병원 연수"
+    },
+    {
+      "date": null,
+      "content": "· Smith-Kettlewell 안 연구소 임상강사"
+    },
+    {
+      "date": null,
+      "content": "· 독일 Giessen 대학 (안과) 교환교수"
+    },
+    {
+      "date": null,
+      "content": "· 제27회 아세아-태평양학회 (APAO Busan 2012) Host Coordinator"
+    },
+    {
+      "date": null,
+      "content": "· EBS 사시 명의"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "· 한국사시소아안과학회 회원(KAPOS)"
+    },
+    {
+      "date": null,
+      "content": "· 한국신경안과학회 회원(ISA)"
+    },
+    {
+      "date": null,
+      "content": "· 미국사시소아안과학회 회원(AAPOS)"
+    },
+    {
+      "date": null,
+      "content": "· 대한안과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "· 한국사시·소아안과 학회 회장"
+    }
+  ]
+}

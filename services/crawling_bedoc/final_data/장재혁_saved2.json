@@ -1,0 +1,132 @@
+{
+  "doctorId": 15031,
+  "rid_long": "B19533561777EB7E1927C50B9B740019E5D39A05ACC4D6FF88C86216763F643FDF412760A32B62394F058972E3A2819A2BDA40E4D3E9F90716B209C203D578E540513AC17FE7BEC0E8CE9213D09D19C265556AA71FFADED06F6544296E905CF2CB7EFB38A1D584CC10D3E55D377BB487007826427A01E62BCA365D98968BC90AED0ACA93489EA4A6E3064CA68B80C152FD99B584B62122BF9888AB9EC79E014B",
+  "hospital_cid": 507,
+  "bedoc_id": "A5065",
+  "bedoc_hospitalsite": "http://www.cmcbucheon.or.kr",
+  "bedoc_doctorname": "장재혁",
+  "bedoc_deptname": "소화기내과",
+  "bedoc_hospitalname": "가톨릭대부천성모병원",
+  "hospital_name": "가톨릭대학교부천성모병원",
+  "aiga_hid": "H11KR-31000002",
+  "hospital_site": "https://www.cmcbucheon.or.kr/page/doctor/82/D0001193",
+  "site_type": "single",
+  "hospital_addr": "경기도 부천시 원미구 소사로 327, 가톨릭대학교 부천성모병원 (소사동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.cmcbucheon.or.kr/page/doctor/82/D0001193?doctorName=%EC%9E%A5%EC%9E%AC%ED%98%81&depthName=%EC%86%8C%ED%99%94%EA%B8%B0%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "doctorSiteUrl": "https://www.cmcbucheon.or.kr/page/doctor/82/D0001193",
+  "profileUrl": "https://www.cmcbucheon.or.kr/api/attach/view/doctor/D0001193/profile/1",
+  "specialty": "췌장질환, 담관 및 담낭질환, 담석증",
+  "학력": [
+    {
+      "date": "2008~2012",
+      "content": "가톨릭대학교 내과학 박사"
+    },
+    {
+      "date": "2006~2008",
+      "content": "가톨릭대학교 내과학 석사"
+    },
+    {
+      "date": "1992~1998",
+      "content": "가톨릭대학교 의학 학사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "2025",
+      "content": "부천성모병원 임상분과장"
+    },
+    {
+      "date": "2018~현재",
+      "content": "부천성모병원 내과 교수"
+    },
+    {
+      "date": "2012~2017",
+      "content": "부천성모병원 내과 부교수"
+    },
+    {
+      "date": "2010~2011",
+      "content": "부천성모병원 내과 임상조교수"
+    },
+    {
+      "date": "2008~2009",
+      "content": "서울성모병원 내과 임상조교수"
+    },
+    {
+      "date": "2015~2016",
+      "content": "University of Washington"
+    }
+  ],
+  "수상": [
+    {
+      "date": "2007",
+      "content": "폴얀센 학술상, 대한소화기내시경학회"
+    },
+    {
+      "date": "2009",
+      "content": "학술상, 가톨릭대학교 대학원"
+    },
+    {
+      "date": "2012",
+      "content": "학술상, 가톨릭대학교 대학원"
+    }
+  ],
+  "학술": [
+    {
+      "date": "2007~현재",
+      "content": "대한소화기내시경학회"
+    },
+    {
+      "date": "2008~현재",
+      "content": "대한췌장담도학회"
+    },
+    {
+      "date": "2008~현재",
+      "content": "대한소화기학회"
+    },
+    {
+      "date": "2020~현재",
+      "content": "대한소화기암연구학회"
+    }
+  ],
+  "논문": [
+    "Effect of bowel preparation completion time on bowel cleansing efficacy: Prospective randomized controlled trial of different bowel preparation completion times precolonoscopy (DIGESTIVE ENDOSCOPY, 2024년 12월, 공동저자)",
+    "Characteristics of Early Pancreatic Cancer: Comparison between Stage 1A and Stage 1B Pancreatic Cancer in Multicenter Clinical Data Warehouse Study (CANCERS, 2024년 03월, 교신저자)",
+    "Tracking incidentally discovered pancreatic cysts smaller than 30 mm: Natural course and predictors of malignancy (DIGESTIVE AND LIVER DISEASE, 2024년 01월, 교신저자)",
+    "Incidence and risk of pancreatic cancer in patients with chronic pancreatitis: defining the optimal subgroup for surveillance (SCIENTIFIC REPORTS, 2023년 01월, 교신저자)",
+    "CD40 Agonists Alter the Pancreatic Cancer Microenvironment by Shifting the Macrophage Phenotype toward M1 and Suppress Human Pancreatic Cancer in Organotypic Slice Cultures (GUT AND LIVER, 2022년 07월, 교신저자)"
+  ],
+  "저서": [
+    {
+      "date": null,
+      "content": "Current Principles and Clinical Practice of Internal Medicine (군자출판사 공동)",
+      "issuer": null
+    },
+    {
+      "date": null,
+      "content": "머크메뉴얼 (신일북스 공동)",
+      "issuer": null
+    },
+    {
+      "date": null,
+      "content": "머크매뉴얼 (신일북스 공동)",
+      "issuer": null
+    },
+    {
+      "date": null,
+      "content": "(Current principles and clinical practice of) internal medicine : 임상진료지침 (군자출판사 공동)",
+      "issuer": null
+    },
+    {
+      "date": null,
+      "content": "Gastrointestinal Cancerr: A Comprehensive Guide to Diagnosis and Management (Springer Singapore 공동)",
+      "issuer": null
+    }
+  ],
+  "언론": [],
+  "isAttend": true
+}

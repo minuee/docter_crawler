@@ -1,0 +1,69 @@
+{
+  "doctorId": 15043,
+  "rid_long": "A77E19F9D3C98ED8DC22F85BF66BA68E79901E1DFAB30D7282F93C8FADCD89CF7CBB0CEACB5C1C66C1BD4133D10A0D5948E6EC9D00E5BFF4A802B3ABCC86E316DB5D093830F85013477C15D599638448F4D77E0FBC4DDA45EBE2914A90105DE262AA7EFA6757F4C73E13116324841E3A77C80182C6A4B121BB997620CE0C5B93917E93F2466037FB0401DDDFFF94519672C021BBAC699E9618850A9CA1587BFAB00512455C838A5FECF9010CE85D95247D377664F7AABCD3D50B9DF71F38B7BB64A71E04885FA4CFF406EAE2549106AA164127D7BCAE64E74E964F22CAB6340C",
+  "hospital_cid": 525,
+  "bedoc_id": "A8119",
+  "bedoc_hospitalsite": "http://www.fatima.or.kr",
+  "bedoc_doctorname": "정병천",
+  "bedoc_deptname": "순환기내과",
+  "bedoc_hospitalname": "대구파티마병원",
+  "hospital_name": "대구파티마병원",
+  "aiga_hid": "H11KR-23000009",
+  "hospital_site": "https://www.fatima.or.kr/main/doctor/view.do?md_idx=209&doctor_code=104369&mp_idx=29&part_code=2010400000",
+  "site_type": "single",
+  "hospital_addr": "대구광역시 동구 아양로 99, (신암동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.fatima.or.kr/main/doctor/view.do?md_idx=209&doctor_code=104369&mp_idx=29&part_code=2010400000&doctorName=%EC%A0%95%EB%B3%91%EC%B2%9C&depthName=%EC%88%9C%ED%99%98%EA%B8%B0%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "specialty": "허혈성 심장질환, 부정맥, 고혈압, 심부전, 고지혈증",
+  "profileUrl": "https://www.fatima.or.kr/data/doctor/104369_2.png",
+  "isAttend": true,
+  "학력": [
+    {
+      "date": "1992",
+      "content": "경북대학교 대학원 의학과 내과학 의학석사"
+    },
+    {
+      "date": "1989",
+      "content": "경북대학교 의과대학 의학과 의학사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "(1997.5~1998.2)",
+      "content": "경북대학교 병원 순환기내과 전임의"
+    },
+    {
+      "date": "(1998.3~1999.2)",
+      "content": "울산동강병원 내과 과장"
+    },
+    {
+      "date": "(2004.3~2005.2)",
+      "content": "UCLA순환기 연수"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한내과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한심장학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한중환자의학회 정회원"
+    }
+  ],
+  "논문": [
+    "중증도 이상의 심낭삼출을 보이는 환자에서 원인 및 특성 [2006]",
+    "정상 좌심실 구혈률을 가진 환자에게서의 나이에 따른 Systolic Torsion의 변화 [2007]",
+    "뇌경색 환자와 정상인에 있어서의 좌심실 이완기능의 차이 [2007]",
+    "characteristics of QT interval and QT dispension in exercise Electrocardiogram:Healthy personrersus stable argina patients [2007]",
+    "Age related change in Left Ventricular torsion as Assessed by 2-dimensianal Ultrasound speckle tracking imaging [2008]",
+    "중증도이상의 심낭삼출환자에서 임상상 및 장기예후 [2008]"
+  ]
+}

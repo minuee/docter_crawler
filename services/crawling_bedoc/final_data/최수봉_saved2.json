@@ -1,0 +1,93 @@
+{
+  "doctorId": 15109,
+  "rid_long": "87C9E9FFC069668F1D6D88E4ED06E711293F79A6F39C894638AC6325CCB23983C6F11859BBDB03004281792EB13D299F0F863D36AF20AC9B4CF7616FF3900A6B5981912EABB28582AE44AA3297994D7A6C0F4312B707B151909F0F6F6552289D39C435E1762741092607237BED654D02CBD3853CC18EAE90489F785264A628649FC5C996A4D9CD18FC7E93457B881BFB024D82FCD9BCEA8A277DD7929D8A0D9D33C3252800D2C23ED4BAC4CE94432337EC248453F891B2562BCD7CAB2DB43A405E304643AE72525A555CBAD8249AC8BAFD99B584B62122BF9888AB9EC79E014B",
+  "hospital_cid": 607,
+  "bedoc_id": "A0734",
+  "bedoc_hospitalsite": "http://www.kuh.co.kr",
+  "bedoc_doctorname": "최수봉",
+  "bedoc_deptname": "내분비내과",
+  "bedoc_hospitalname": "건국대충주병원",
+  "hospital_name": "건국대충주병원",
+  "aiga_hid": "H11KR-33000001",
+  "hospital_site": "https://www.kuh.co.kr/medical/departmentDoctorList.do?deptCode=MD&orderType=DEFAULT&menu_idx=5&cont_idx=CT0000000164",
+  "site_type": "popup",
+  "hospital_addr": "충청북도 충주시 국원대로 82-0, 건국대학교충주병원",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.kuh.co.kr/medical/departmentDoctorList.do?deptCode=MD&orderType=DEFAULT&menu_idx=5&cont_idx=CT0000000164&doctorName=%EC%B5%9C%EC%88%98%EB%B4%89&depthName=%EB%82%B4%EB%B6%84%EB%B9%84%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "profileUrl": "https://www.kuh.co.kr/medical/getImage.do?loadType=DOCTOR&showType=DETAIL&deptCode=MD&doctId=MD01&doctCode=10215",
+  "specialty": "인슐린펌프, 인공췌장기, 당뇨클리닉, 당뇨병, 내분비학",
+  "학력": [
+    {
+      "content": "서울대학교 의학석사, 박사"
+    },
+    {
+      "content": "ECFMG 시험 (미합중국 보건교육부)"
+    }
+  ],
+  "경력": [
+    {
+      "content": "방사선 동위원소 취급면허 (과학기술처 119호)"
+    },
+    {
+      "content": "서울대학병원 위공학과 연구부장"
+    },
+    {
+      "content": "한일병원 내과 과장"
+    },
+    {
+      "content": "서울대학병원 내과 전공의 수료"
+    },
+    {
+      "content": "미국 Minnesota 의과대학 내과 Visiting Professor"
+    },
+    {
+      "content": "영남대학교 의과대학 부교수 및 핵의학과 과장"
+    },
+    {
+      "content": "내분비 및 당뇨병학 내과 Visiting Professor"
+    },
+    {
+      "content": "건국대학교 의과대학 교수(내분비 및 대사학 분야)"
+    },
+    {
+      "content": "건국대학교 충주병원 당뇨센터 소장"
+    }
+  ],
+  "학술": [
+    {
+      "content": "한국전자공학연구소 회원"
+    },
+    {
+      "content": "전기 및 전자공학회 기술 회원"
+    },
+    {
+      "content": "한국 핵의학회 회원"
+    },
+    {
+      "content": "대한 내과학회 회원"
+    },
+    {
+      "content": "한국 당뇨병학회 회원 및 평의원"
+    },
+    {
+      "content": "한국 내분비학회 회원 및 평의원"
+    },
+    {
+      "content": "국제 당뇨병협회 회원"
+    },
+    {
+      "content": "미국 당뇨병학회 회원"
+    },
+    {
+      "content": "유럽 당뇨병학회 회원"
+    }
+  ],
+  "논문": [
+    "당뇨병에 있어서 Glycosylated Hemoglobin과 혈당조절",
+    "고농도 포도당배지에서 배양한 섬유아세포의 인슐린에 의한 포도당 섭취에 관한 연구"
+  ],
+  "isAttend": true
+}

@@ -1,0 +1,72 @@
+{
+  "doctorId": 15117,
+  "rid_long": "E63FC0C90D52327A05A49A01C1597F957D4759470B5439BBCA983470E24AAD7417F5A597F0F7D159C8A9930FFBB888F5FFC9924A327781016AC6DEF360293762F8EC26CAD8DC253F44C2B10CA7001CA5236C2AF1A82536E405EBA2DFA59721E38D022725622675CABDAEEC036167E3DFD514CEFCC4C22B218F7B3357457D58B9F7D95570524DBD6168D4F240782B189E7C0EF1345389255A07ED4E07EF779D730E0E605A674FE0C670B5B19A962E7E1D",
+  "hospital_cid": 615,
+  "bedoc_id": "A5126",
+  "bedoc_hospitalsite": "http://www.handoh.com",
+  "bedoc_doctorname": "최재현",
+  "bedoc_deptname": "소화기내과",
+  "bedoc_hospitalname": "한도병원",
+  "hospital_name": "한도병원",
+  "aiga_hid": "H21KR-31000213",
+  "hospital_site": "https://www.handoh.com/sub_treatment/department_view.php?cate=0001_",
+  "site_type": "list",
+  "hospital_addr": "경기도 시흥시 장곡로37번길 20, (장곡동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.handoh.com/sub_treatment/department_view.php?cate=0001_&doctorName=%EC%B5%9C%EC%9E%AC%ED%98%84&depthName=%EC%86%8C%ED%99%94%EA%B8%B0%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "profileUrl": "https://www.handoh.com/shop_sun/files/pro_img/list/thumb/pro_20230418104724_0.png",
+  "specialty": "소화기치료내시경, 크론병, 궤양성대장염, 베제트병",
+  "학력": [
+    {
+      "date": null,
+      "content": "고려대학교 의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "소화기내과 전문의·내시경 전문의"
+    },
+    {
+      "date": null,
+      "content": "고려대학교 의과대학 교수"
+    },
+    {
+      "date": null,
+      "content": "미국 MD ANDERSON 암센터 교환교수"
+    },
+    {
+      "date": null,
+      "content": "고려대학교 부속 안산병원 병원장"
+    },
+    {
+      "date": null,
+      "content": "나은병원 소화기내과 명예원장·센터장"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한장연구학회 회장"
+    }
+  ],
+  "수상": [
+    {
+      "date": null,
+      "content": "3년 연속 동아일보 선정 대한민국 소화기내과 10대 명의"
+    },
+    {
+      "date": null,
+      "content": "한국일보 선정 대한민국 건강지킴이 대상 수상"
+    },
+    {
+      "date": null,
+      "content": "IBC선정 세계 100대 의학자"
+    }
+  ],
+  "isAttend": true
+}

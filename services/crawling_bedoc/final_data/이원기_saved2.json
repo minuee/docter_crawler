@@ -1,0 +1,322 @@
+{
+  "doctorId": 14975,
+  "rid_long": "7B2A55973C1E14BC1F3022DAF43FFCF9F26D7006230E8EC9911B95E4239E6825A899ED5AD8F0DBFEDB7140555E94650DD607A7BBC6A5F09247B36060951101E628F1FFF09B44B4132DC68EB96DDAC3154DC15BC6B7A9B43C0499C7275971DA424B183ABF4CF22AC804CB1668E3EEA64EDF711801ECA39F3F5838296A58F3C25F4CDCDED2484EDA0DC624C841466CA537D8AA1EE3B2F16E462126D2538FAF1980F7C203C558F5EB9DE0FBDBCB4FA02958",
+  "hospital_cid": 439,
+  "bedoc_id": "A1254",
+  "bedoc_hospitalsite": "http://chuncheon.hallym.or.kr/",
+  "bedoc_doctorname": "이원기",
+  "bedoc_deptname": "비뇨의학과",
+  "bedoc_hospitalname": "춘천성심병원",
+  "hospital_name": "춘천성심병원",
+  "aiga_hid": "H11KR-32000013",
+  "hospital_site": "https://chuncheon.hallym.or.kr/ptm207.asp?Doctor_Id=1014",
+  "site_type": "single",
+  "hospital_addr": "강원특별자치도 춘천시 삭주로 77, 77",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://chuncheon.hallym.or.kr/ptm207.asp?Doctor_Id=1014&doctorName=%EC%9D%B4%EC%9B%90%EA%B8%B0&depthName=%EB%B9%84%EB%87%A8%EC%9D%98%ED%95%99%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "https://chuncheon.hallym.or.kr/CHPFile/treatment/C_20210903_12103121_b_2.png",
+  "specialty": "내시경 수술, 로봇 수술, 성기능 장애, 요로 결석, 신장암, 전립선암, 배뇨장애",
+  "학력": [
+    {
+      "date": "2013.08",
+      "content": "의학 박사 (약리학), 강원대학교"
+    },
+    {
+      "date": "2005.02",
+      "content": "의학 석사 (비뇨의학), 한림대학교"
+    },
+    {
+      "date": "2001.02",
+      "content": "의학 학사 한림대학교"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "現 한림대학교춘천성심병원 비뇨의학과 임상과장"
+    },
+    {
+      "date": null,
+      "content": "대한남성과학회 남성건강 인정의"
+    },
+    {
+      "date": null,
+      "content": "Intuitive 다빈치로봇수술 인증의"
+    },
+    {
+      "date": null,
+      "content": "미국비뇨기과학회  Selected Clinical Topics in Urology 수료"
+    },
+    {
+      "date": "2021 ~",
+      "content": "한림대학교 춘천성심병원 교수"
+    },
+    {
+      "date": "2016 ~ 2020",
+      "content": "한림대학교 춘천성심병원 부교수"
+    },
+    {
+      "date": "2011 ~ 2015",
+      "content": "한림대학교 춘천성심병원 조교수"
+    },
+    {
+      "date": "2009 ~ 2010",
+      "content": "서울대학교 분당병원 임상강사"
+    },
+    {
+      "date": "2002 ~ 2006",
+      "content": "한림대학교 강동성심병원 비뇨의학과 전공의"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "World Journal of Mens Health 부편집장"
+    },
+    {
+      "date": null,
+      "content": "Journal of Urology and Nephrology 편집위원"
+    },
+    {
+      "date": null,
+      "content": "Investigative Clinical Urology, 온라인 에디터"
+    },
+    {
+      "date": null,
+      "content": "유럽비뇨기과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "미국비뇨기과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "국제성의학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "아시아태평양 성의학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "국제 여성성건강학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한남성과학회 진료지침 위원장"
+    },
+    {
+      "date": null,
+      "content": "아시아태평양 성의학회 간행위원"
+    },
+    {
+      "date": null,
+      "content": "대한비뇨생식기통합기능의학연구회 재무이사"
+    },
+    {
+      "date": null,
+      "content": "대한여성성건강연구회 교육이사"
+    },
+    {
+      "date": null,
+      "content": "대한성학회 대외협력이사"
+    },
+    {
+      "date": null,
+      "content": "대한노인비뇨의학회 이사"
+    },
+    {
+      "date": null,
+      "content": "한국연구재단 기초연구본부 핵심평가위원"
+    },
+    {
+      "date": null,
+      "content": "춘천지방법원 의료부분 자문의"
+    },
+    {
+      "date": null,
+      "content": "대한비뇨기과학회 학술위원"
+    },
+    {
+      "date": null,
+      "content": "대한전립선학회 교육위원"
+    },
+    {
+      "date": null,
+      "content": "대한비뇨기과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한비뇨기종양학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한남성과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한비뇨생식기통합기능의학연구회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한성학회 정회원"
+    }
+  ],
+  "수상": [
+    {
+      "date": "2023",
+      "content": "아시아태평양성의학회 “Best Presentation Award”"
+    },
+    {
+      "date": "2021",
+      "content": "대한남성과학회 “해외학술상”"
+    },
+    {
+      "date": "2020",
+      "content": "International Journal of Impotence Research “30th Anniversary Collection of the Top Papers”"
+    },
+    {
+      "date": "2020",
+      "content": "대한남성과학회 해외학술상"
+    },
+    {
+      "date": "2019",
+      "content": "International Journal of Impotence Research “The Collection of Best Articles 2017-2018”"
+    },
+    {
+      "date": "2018",
+      "content": "World Journal of Mens Health 올해의 최고 심사위원상"
+    },
+    {
+      "date": "2018",
+      "content": "세계 3대 인명사전 등재"
+    },
+    {
+      "date": "2017",
+      "content": "World Journal of Mens Health “올해의 최고 심사위원상“"
+    },
+    {
+      "date": "2017",
+      "content": "대한남성과학회 “올해의 젊은 비뇨의학자상”"
+    },
+    {
+      "date": "2016",
+      "content": "대한남성과학회 “해외학술상”"
+    },
+    {
+      "date": "2015",
+      "content": "아시아비뇨기과학회 “젊은 아시아 비뇨의학자상"
+    },
+    {
+      "date": "2014",
+      "content": "대한남성과학회 “학술상”"
+    },
+    {
+      "date": "2013",
+      "content": "대한남성과학회 “최우수발표상”"
+    },
+    {
+      "date": "2011",
+      "content": "대한남성과학회 “최우수발표상”"
+    },
+    {
+      "date": "2010",
+      "content": "대한비뇨기과학회 “우수논문상”"
+    }
+  ],
+  "논문": [
+    "Expression and Distribution of Free Zinc in Penile Erectile Tissue. The World Journal of Men's Health",
+    "Deep learning based prediction of prognosis in nonmetastatic clear cell renal cell carcinoma. Scientific Reports",
+    "Comparison of Clinical Outcomes between Hyaluronic and Polylactic Acid Filler Injections for Penile Augmentation in Men Reporting a Small Penis: A Multicenter, Patient-Blinded/Evaluator-Blinded, Non-Inferiority, Randomized Comparative Trial with 18 Months of Follow-up. JOURNAL OF CLINICAL MEDICINE",
+    "A Comparison Between Hyaluronic Acid and Polylactic Acid Filler Injections for Temporary Penile Augmentation in Patients with Small Penis Syndrome: A Multicenter, Patient/Evaluator-Blind, Comparative, Randomized Trial. JOURNAL OF SEXUAL MEDICINE",
+    "Recent Updates in the Right Decision and Management of “Small Penis Syndrome”. Journal of Men's Health",
+    "Effect of tadalafil 5 mg on post-micturition dribble in men with lower urinary tract symptoms: a multicentre, double-blind, randomized, placebo-controlled trial. BJU INTERNATIONAL",
+    "Development and validation of a symptom assessment tool for postmicturition dribble: A prospective, multicenter, observational study in Korea. PLoS ONE",
+    "A current perspective on post-micturition dribble in males. INVESTIGATIVE AND CLINICAL UROLOGY",
+    "A Comparison of the Efficacy and Safety Between Hyaluronic Acid and Polylactic Acid Filler Injection in Penile Augmentation: A Multicenter, Patient/Evaluator-Blinded, Randomized Trial. JOURNAL OF SEXUAL MEDICINE",
+    "Is A Combination of Antibiotics and Non-Steroidal Anti-Inflammatory Drugs More Beneficial Than Antibiotic Monotherapy For The Treatment of Female Acute Uncomplicated Cystitis? A Randomized Controlled Pilot Study. Urology journal",
+    "Postmicturition Dribble Is Associated with Erectile Dysfunction in Middle-Aged and Older Men with Lower Urinary Tract Symptoms. The World Journal of Men's Health",
+    "The transgluteal approach to shockwave lithotripsy to treat distal ureter stones: a prospective, randomized, and multicenter study. WORLD JOURNAL OF UROLOGY",
+    "Age-dependent prognostic value of body mass index for non-metastatic clear cell renal cell carcinoma: A large multicenter retrospective analysis. JOURNAL OF SURGICAL ONCOLOGY",
+    "Sex-Specific Prognostic Significance of Obesity in Nonmetastatic Clear-Cell Renal-Cell Carcinoma in Korea: A Large Multicenter Cohort Analysis. CLINICAL GENITOURINARY CANCER",
+    "Efficacy and safety of newly developed cross-linked dextran gel injection for glans penis augmentation with a novel technique. ASIAN JOURNAL OF ANDROLOGY",
+    "Impact of preoperative calculation of nephron volume loss on future of partial nephrectomy techniques; planning a strategic roadmap for improving functional preservation and securing oncological safety. BJU INTERNATIONAL",
+    "Efficacy and safety of a newly developed polylactic acid microsphere as an injectable bulking agent for penile augmentation: 18-months follow-up. INTERNATIONAL JOURNAL OF IMPOTENCE RESEARCH",
+    "Effect of low frequency on speech performance with bimodal hearing in bilateral severe hearing loss. Laryngoscope",
+    "Prognostic Significance of Preoperative Neutrophil-to-Lymphocyte Ratio in Nonmetastatic Renal Cell Carcinoma: A Large, Multicenter Cohort Analysis. BIOMED RESEARCH INTERNATIONAL",
+    "Long-Term Safety and Longevity of a Mixture of Polymethyl Methacrylate and Cross-Linked Dextran (Lipen-10ⓡ) after Penile Augmentation: Extension Study from Six to 18 Months of Follow-Up. The World Journal of Men's Health",
+    "Prognostic Value of Body Mass Index According to Histologic Subtype in Nonmetastatic Renal Cell Carcinoma: A Large Cohort Analysis. Clinical Genitourinary Cancer",
+    "Alcohol, Smoking, Physical Activity, Protein, and Lower Urinary Tract Symptoms: Prospective Longitudinal Cohort. INTERNATIONAL NEUROUROLOGY JOURNAL",
+    "Relationship between Metabolic Syndrome and Lower Urinary Tract Symptoms: Hallym Aging Study. BIOMED RESEARCH INTERNATIONAL",
+    "A novel mathematical model to predict the severity of postoperative functional reduction before partial nephrectomy: The importance of calculating resected and ischemic volume. Journal of Urology",
+    "Can estimated intravaginal ejaculatory latency time be used interchangeably with stopwatch-measured intravaginal ejaculatory latency time for the diagnosis of lifelong premature ejaculation? Urology",
+    "Predictors of survival following extracorporeal cardiopulmonary resuscitation in patients with acute myocardial infarction-complicated refractory cardiac arrest in the emergency department: a retrospective study. JOURNAL OF CARDIOTHORACIC SURGERY",
+    "The effect and safety of polylactic acid and adipose-derived stromal vascular fraction cell as an injectable bulking agent in urologic field: A 24-week follow-up study. Journal of Biomedical Materials Research - Part B Applied Biomaterials",
+    "Efficacy of veno-venous extracorporeal membrane oxygenation in severe acute respiratory failure. Yonsei Medical Journal",
+    "Relationship between Serum Testosterone and Cardiovascular Disease Risk Determined Using the Framingham Risk Score in Male Patients with Sexual Dysfunction. The World Journal of Men's Health",
+    "Spontaneous Renal Forniceal Rupture caused by a Calculus in an Anuric Patient receiving Long-Term Hemodialysis. The Medical Journal of Chosun University",
+    "Characteristics and Prognostic Value of Papillary Histologic Subtype in Non-metastatic Renal Cell Carcinoma in Korea: A Multicenter Study. UROLOGY JOURNAL",
+    "Effect of Improvement in Lower Urinary Tract Symptoms on Sexual Function in Men: Tamsulosin Monotherapy vs. Combination Therapy of Tamsulosin and Solifenacin. Korean Journal of Urology",
+    "Clinical utility of prostate-specific antigen mass ratio for prediction of prostate cancer detection on a repeated prostate biopsy. International Braz J Urol",
+    "Mirodenafil for the Treatment of Erectile Dysfunction: A Systematic Review of the Literature. The World Journal of Men's Health",
+    "Urologist’s Practice Patterns Including Surgical Treatment in the Management of Premature Ejaculation: A Korean Nationwide Survey. The World Journal of Men's Health",
+    "Comparison Between On-Demand Dosing of Dapoxetine Alone and Dapoxetine Plus Mirodenafil in Patients with Lifelong Premature Ejaculation: Prospective, Randomized, Double-Blind, Placebo-Controlled, Multicenter Study. JOURNAL OF SEXUAL MEDICINE",
+    "Effects of Low-Dose Tamsulosin on Sexual Function in Patients With Lower Urinary Tract Symptoms Suggestive of Benign Prostatic Hyperplasia. Korean Journal of Urology",
+    "Tolerability and efficacy of newly developed penile injection of cross-linked dextran and polymethylmethacrylate mixture on penile enhancement: 6 months follow-up. INTERNATIONAL JOURNAL OF IMPOTENCE RESEARCH",
+    "Sexual Behavior of the Elderly in Urban Areas. The World Journal of Men's Health",
+    "Is High-Sensitivity C-Reactive Protein Associated with Lower Urinary Tract Symptoms in Aging Men? Results from the Hallym Aging Study. Korean Journal of Urology",
+    "Primary Malignant Melanoma of the Female Urethra. Korean Journal of Urology",
+    "Influence of Donor’s Renal Function on the Outcome of Living Kidney Transplantation: 10-Year Follow-up. Korean Journal of Urology",
+    "Spontaneous Recovery of Cavernous Nerve Crush Injury. Korean Journal of Urology",
+    "Thrombin-induced Migration and Matrix Metalloproteinase-9 Expression Are Regulated by MAPK and PI3K Pathways in C6 Glioma Cells. KOREAN JOURNAL OF PHYSIOLOGY PHARMACOLOGY",
+    "Use of Nafamostat Mesilate as an Anticoagulant during Extracorporeal Membrane Oxygenation. JOURNAL OF KOREAN MEDICAL SCIENCE",
+    "Early recovery of urinary continence after radical prostatectomy: Correlation with vesico-urethral anastomosis location in the pelvic cavity measured by postoperative cystography. INTERNATIONAL JOURNAL OF UROLOGY",
+    "Effect of Desmopressin with Anticholinergics in Female Patients with Overactive Bladder. Korean Journal of Urology",
+    "Is body mass index associated with pathological outcomes after radical prostatectomy in Korean men? BJU INTERNATIONAL",
+    "Suppression of Autophagy and Activation of Glycogen Synthase Kinase 3beta Facilitate the Aggregate Formation of Tau. KOREAN JOURNAL OF PHYSIOLOGY PHARMACOLOGY",
+    "The 5-year functional outcomes after radical prostatectomy: a real-life experience in Korea. Asian Journal of Andrology",
+    "Prognostic significance of undetectable ultrasensitive prostate-specific antigen nadir after radical prostatectomy. Urology",
+    "Alteration of Antithrombin III and D-dimer Levels in Clinically Localized Prostate Cancer. Korean Journal of Urology",
+    "Comparison of radiographic and pathologic sizes of renal tumors. World Journal of Urology",
+    "Significance of postbiopsy hemorrhage observed on preoperative magnetic resonance imaging in performing robot-assisted laparoscopic radical prostatectomy. World Journal of Urology",
+    "Application of the Epstein criteria for prediction of clinically insignificant prostate cancer in Korean men. BJU International"
+  ],
+  "저서": [
+    {
+      "date": "2019년",
+      "content": "비뇨의학 교과서 (공저), 대한비뇨의학회",
+      "issuer": null
+    },
+    {
+      "date": "2018년",
+      "content": "비뇨생식기 주요 질환의 예방치료 지침서 (공저). 대한남성과학회",
+      "issuer": null
+    },
+    {
+      "date": "2016년",
+      "content": "남성과학 교과서 (공저), 대한남성과학회",
+      "issuer": null
+    },
+    {
+      "date": "2016년",
+      "content": "Penile Augmentation (영문판, 공저), SPRINGER",
+      "issuer": null
+    },
+    {
+      "date": "2015년",
+      "content": "남성건강 15대질환 길라잡이 (공저), 대한남성과학회",
+      "issuer": null
+    },
+    {
+      "date": "2013년",
+      "content": "남성건강학 (공저), 대한남성과학회",
+      "issuer": null
+    }
+  ],
+  "언론": []
+}

@@ -1,0 +1,786 @@
+{
+  "doctorId": 14928,
+  "rid_long": "F57FABD3D969149EBE2579D7C9046B3A63CA75B473F98C85BB272B172D3F941D932125E0B69027FE8B33701AF2013889B642F81DF0F5AE22C5E37A2CF211A1AAF463C10E0891E4CC9C19B50031CA9BDEE30EBF9E4B5CAE38559971B27A28473F937400043BCBB70C7CF4D1645DEF25A87ACF293FBCEC8B5AE1EDF58B1E0CE64D68E11B2AED0FCDAED82AE417C94AC850B07EA4F85997699D2E9F52E1D7D95AA7E255B3621180F621C1510510B9C68877FD99B584B62122BF9888AB9EC79E014B",
+  "hospital_cid": 383,
+  "bedoc_id": "A8380",
+  "bedoc_hospitalsite": "http://www.ncc.re.kr",
+  "bedoc_doctorname": "이근석",
+  "bedoc_deptname": "혈액종양내과",
+  "bedoc_hospitalname": "국립암센터",
+  "hospital_name": "국립암센터",
+  "aiga_hid": "H11KR-31000013",
+  "hospital_site": "https://www.ncc.re.kr/ncc_about03_param.ncc?searchKey=&searchValue=&dept=IM",
+  "site_type": "popup",
+  "hospital_addr": "경기도 고양시 일산동구 일산로 323, (마두동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.ncc.re.kr/ncc_about03_param.ncc?searchKey=&searchValue=&dept=IM&doctorName=%EC%9D%B4%EA%B7%BC%EC%84%9D&depthName=%ED%98%88%EC%95%A1%EC%A2%85%EC%96%91%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "학력": [
+    {
+      "date": "1985-03 ~ 1991-02",
+      "content": "서울대학교 의과대학 의학과 대졸(의대)"
+    },
+    {
+      "date": "1993-03 ~ 1995-02",
+      "content": "서울대학교 대학원 의학과 대학원졸(석사)"
+    },
+    {
+      "date": "2001-03 ~ 2011-02",
+      "content": "서울대학교 대학원 의학과 대학원졸(박사)"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1991-03 ~ 1992-02",
+      "content": "서울대병원 인턴"
+    },
+    {
+      "date": "1992-03 ~ 1996-02",
+      "content": "서울대병원 전공의"
+    },
+    {
+      "date": "1996-05 ~ 1999-04",
+      "content": "군복무 "
+    },
+    {
+      "date": "1999-05 ~ 2000-02",
+      "content": "서울대병원 전임의"
+    },
+    {
+      "date": "2000-03 ~ 2001-02",
+      "content": "인제대 일산백병원 전임강사"
+    },
+    {
+      "date": "2001-03 ~ 2004-12",
+      "content": "한림대 강동성심병원 조교수"
+    },
+    {
+      "date": "2005-01 ~ 현재",
+      "content": "국립암센터 유방암센터 의사직"
+    },
+    {
+      "date": "2006-03 ~ 2009-11",
+      "content": "국립암센터 대장암센터 전문의"
+    },
+    {
+      "date": "2008-04 ~ 2009-01",
+      "content": "국립암센터 임상시험센터 임상시험센터장"
+    },
+    {
+      "date": "2009-02 ~ 2019-01",
+      "content": "국립암센터 임상시험센터 전문의"
+    },
+    {
+      "date": "2010-10 ~ 2011-12",
+      "content": "국립암센터 외래주사치료실 실장"
+    },
+    {
+      "date": "2011-12 ~ 2012-12",
+      "content": "MD Anderson Cancer Center(미국) 장기연수 "
+    },
+    {
+      "date": "2014-10 ~ 2021-02",
+      "content": "국립암센터 유방암센터 센터장"
+    },
+    {
+      "date": "2019-02 ~ 2021-02",
+      "content": "국립암센터 임상시험센터 전문의"
+    },
+    {
+      "date": "2019-02 ~ 2021-02",
+      "content": "국립암센터 혈액종양내과분과 "
+    },
+    {
+      "date": "2021-03 ~ 2025-02",
+      "content": "국립암센터 임상시험센터 임상시험센터장"
+    },
+    {
+      "date": "2021-03 ~ 2023-03",
+      "content": "국립암센터 혈액종양내과분과 의사직(교수급), 분과장"
+    },
+    {
+      "date": "2023-03 ~ 2025-02",
+      "content": "국립암센터 혈액종양내과분과 의사직(임상교수), 분과장"
+    },
+    {
+      "date": "2025-01 ~ 현재",
+      "content": "국립암센터 부속병원 부속병원장"
+    },
+    {
+      "date": "2025-03 ~ 현재",
+      "content": "국립암센터 임상시험센터 임상교수"
+    },
+    {
+      "date": "2025-03 ~ 현재",
+      "content": "국립암센터 혈액종양내과분과 임상교수"
+    }
+  ],
+  "논문": [
+    "ASO Author Reflections: Multimodal Sentinel Lymph Node Mapping in Breast Cancer: Efficacy and Clinical Implications After Neoadjuvant Chemotherapy: ANNALS OF SURGICAL ONCOLOGY. :~ (3.5)",
+    "Clinical Application of Multimodal Sentinel Lymph Node-Mapping Method for Patients with Breast Cancer Undergoing Neoadjuvant Chemotherapy: A Final Analysis: ANNALS OF SURGICAL ONCOLOGY. :~ (3.5)",
+    "PALB2 germline pathogenic variants: frequency, clinical features, and functional analysis of c.3350+5G>A variant in 3987 Korean cancer patients: ESMO OPEN. 10(3):104132~ (8.3)",
+    "Palbociclib plus endocrine therapy versus capecitabine in premenopausal women with hormone receptor-positive, HER2-negative metastatic breast cancer (Young-PEARL): overall survival analysis of a randomised, open-label, phase 2 study: LANCET ONCOLOGY. 26(3):343~354 (35.9)",
+    "Neoadjuvant Chemotherapy with Concurrent Letrozole for Estrogen Receptor-Positive and HER2-Negative Breast Cancer: An Open-Label, Single-Center, Nonrandomized Phase II Study (NeoCHAI): CANCERS. 16(18):3122~ (4.5)",
+    "ASO Author Reflections: Assessing the Efficacy of Multimodal Sentinel Lymph Node Mapping in Breast Cancer Patients After Neoadjuvant Chemotherapy: ANNALS OF SURGICAL ONCOLOGY. 31(10):6841~6842 (3.4)",
+    "Trastuzumab deruxtecan versus treatment of physician’s choice in previously treated Asian patients with HER2-low unresectable/metastatic breast cancer: subgroup analysis of the DESTINY-Breast04 study: BREAST CANCER. 31(5):858~868 (4)",
+    "Clinical Application of Multimodal Sentinel Lymph Node Mapping Method in Patients with Breast Cancer Undergoing Neoadjuvant Chemotherapy: An Interim Analysis: ANNALS OF SURGICAL ONCOLOGY. 31:5141~5147 (3.4)",
+    "Contribution of tumour and immune cells to PD-L1 expression as a predictive biomarker in metastatic triple-negative breast cancer: exploratory analysis from KEYNOTE-119: JOURNAL OF PATHOLOGY CLINICAL RESEARCH. 10(3):e12371~ (3.4)",
+    "Patient-Reported Outcomes in OlympiA: A Phase III, Randomized, Placebo-Controlled Trial of Adjuvant Olaparib in gBRCA1/2 Mutations and High-Risk Human Epidermal Growth Factor Receptor 2-Negative Early Breast Cancer: JOURNAL OF CLINICAL ONCOLOGY. 42(11):1288~1300 (42.1)",
+    "A nationwide real-world study for evaluation of effectiveness and safety of T-DM1 in patients with HER2-positive metastatic breast cancer in Korea (KCSG BR19-15): THERAPEUTIC ADVANCES IN MEDICAL ONCOLOGY. 16:1~15 (4.3)",
+    "Pemetrexed plus vinorelbine versus vinorelbine monotherapy in patients with metastatic breast cancer (KCSG-BR15-17): A randomized, open-label, multicenter, phase II trial: EUROPEAN JOURNAL OF CANCER. 197:113456~ (8.4)",
+    "Impact of pembrolizumab versus chemotherapy on health-related quality of life in patients with metastatic triple-negative breast cancer: results from the phase 3 randomised KEYNOTE-119 study: EUROPEAN JOURNAL OF CANCER. 195:113393~ (8.4)",
+    "Safety and Tolerability of a Novel Anti-HER2 Antibody-Drug Conjugate (PF-06804103) in Patients with HER2-Expressing Solid Tumors: A Phase 1 Dose-Escalation Study: MOLECULAR CANCER THERAPEUTICS. 22(10):1191~1203 (5.7)",
+    "Clinicopathological Factors Associated with Oncotype DX Risk Group in Patients with ER+/HER2- Breast Cancer: CANCERS. 15(18):3122~ (4.5)",
+    "TROPION-Breast01: Datopotamab deruxtecan vs chemotherapy in pre-treated inoperable or metastatic HR+/HER2- breast cancer: FUTURE ONCOLOGY. 20(8):423~436 (3.3)",
+    "Establishment of Patient-Derived Organoids Using Ascitic or Pleural Fluid from Cancer Patients: CANCER RESEARCH AND TREATMENT. 55(4):1077~1086 (4.6)",
+    "Risk Factors for Palbociclib-Induced Early Developing Neutropenia in Patients with Hormone Receptor-Positive Metastatic Breast Cancer: CANCERS. 15(10):2810~ (5.2)",
+    "Progranulin and Breast Cancer Mortality: 13-Year Follow-Up of a Cohort Study: BREAST CANCER-TARGETS AND THERAPY. 15:251~261 (2.6)",
+    "A Multicenter, Prospective, Observational Study to Evaluate Ethanol-Induced Symptoms in Patients Receiving Docetaxel Chemotherapy: CANCER RESEARCH AND TREATMENT. 55(4):1096~1103 (4.6)",
+    "Eflapegrastim Versus Pegfilgrastim for Chemotherapy-Induced Neutropenia in Korean and Asian Patients with Early Breast Cancer: Results from the Two Phase III ADVANCE and RECOVER Studies: CANCER RESEARCH AND TREATMENT. 55(3):766~777 (4.6)",
+    "A Phase II Trial of S-1 and Oxaliplatin in Patients with Metastatic Breast Cancer Previously Treated with Anthracycline and Taxane (KCSG-BR07-03): CANCER RESEARCH AND TREATMENT. Online:Published (5.036)",
+    "Androgen Receptor as a Predictive Marker for Pathologic Complete Response in Hormone Receptor?Positive and HER-2?Negative Breast Cancer with Neoadjuvant Chemotherapy: CANCER RESEARCH AND TREATMENT. Online:Published (5.036)",
+    "Response Rate and Safety of a Neoadjuvant Pertuzumab, Atezolizumab, Docetaxel, and Trastuzumab Regimen for Patients With ERBB2-Positive Stage II/III Breast Cancer The Neo-PATH Phase 2 Nonrandomized Clinical Trial: JAMA ONCOLOGY. 8(9):1271~1277 (33.012)",
+    "Trastuzumab Deruxtecan in Previously Treated HER2-Low Advanced Breast Cancer: NEW ENGLAND JOURNAL OF MEDICINE. 387(1):9~20 (176.082)",
+    "Impacts of Subtype on Clinical Feature and Outcome of Male Breast Cancer: Multicenter Study in Korea (KCSG BR16-09): CANCER RESEARCH AND TREATMENT. Online:Published (5.036)",
+    "Long?Term Safety and Effectiveness of PF?05280014 (a Trastuzumab Biosimilar) Treatment in Patients with HER2?Positive Metastatic Breast Cancer: Updated Results of a Randomized, Double?Blind Study: BIODRUGS. 36(1):55~69 (7.744)",
+    "Targeted next generation sequencing of circulating tumor DNA provides prognostic information for management in breast cancer patients: ANNALS OF TRANSLATIONAL MEDICINE. 10(2):28~ (3.616)",
+    "Updated Overall Survival of Ribociclib plus Endocrine Therapy versus Endocrine Therapy Alone in Pre- and\nPerimenopausal Patients with HR  /HER2  Advanced Breast Cancer in MONALEESA-7: A Phase III Randomized Clinical Trial.: CLINICAL CANCER RESEARCH. 28(5):851~859 (12.531)",
+    "Phase II study of DHP107 (oral paclitaxel) in the first-line treatment of HER2-negative recurrent or metastatic breast cancer (OPTIMAL study): THERAPEUTIC ADVANCES IN MEDICAL ONCOLOGY. Online:Published (8.168)",
+    "Clinical Effectiveness of Hypofractionated Proton Beam Therapy for Liver Metastasis from Breast Cancer: FRONTIERS IN ONCOLOGY. 11:783327~ (6.244)",
+    "Analysis of the pan?Asian subgroup of patients in the NALA Trial: a randomized phase III NALA Trial comparing neratinib+capecitabine (N+C) vs lapatinib+capecitabine (L+C) in patients with HER2+metastatic breast cancer (mBC) previously treated with two or more HER2?directed regimens: BREAST CANCER RESEARCH AND TREATMENT. 189(3):665~676 (4.872)",
+    "Genomic Profiling of Premenopausal HR+ and HER2- Metastatic Breast Cancer by Circulating Tumor DNA and Association of Genetic Alterations With Therapeutic Response to Endocrine Therapy and Ribociclib: JCO PRECISION ONCOLOGY. 5:1408~1420 (4.853)",
+    "ELOVL2: a novel tumor suppressor attenuating\ntamoxifen resistance in breast cancer: AMERICAN JOURNAL OF CANCER RESEARCH. 11(6):2568~2589 (6.166)",
+    "Neratinib + capecitabine sustains health?related quality of life in patients with HER2-positive metastatic breast cancer and ≥ 2 prior HER2- directed regimens: BREAST CANCER RESEARCH AND TREATMENT. 188(22):449~458 (4.872)",
+    "Final results of the randomized phase 2 LEO trial and bone protective effects of everolimus for premenopausal hormone receptor-positive, HER2-negative metastatic breast cancer: INTERNATIONAL JOURNAL OF CANCER. Online:Published (7.396)",
+    "Incidence and disease course of new-onset diabetes mellitus in breast and colorectal cancer patients undergoing chemotherapy: a prospective multicenter cohort study: DIABETES RESEARCH AND CLINICAL PRACTICE. 174:108751~ (5.602)",
+    "Safety and efficacy of everolimus (EVE) plus exemestane (EXE) in postmenopausal women with locally advanced or metastatic breast cancer: final results from EVEREXES: BREAST CANCER RESEARCH AND TREATMENT. 188(1):77~89 (4.872)",
+    "Mutation analysis using cell?free DNA for endocrine therapy in patients with HR+ metastatic breast cancer: SCIENTIFIC REPORTS. 11(1):5566~ (4.38)",
+    "The Role of Chemotherapy in Patients With HER2-Negative Isolated Locoregional Recurrence of Breast Cancer: A Multicenter Retrospective Cohort Study: FRONTIERS IN ONCOLOGY. 11:653243~ (6.244)",
+    "Pembrolizumab versus investigator-choice chemotherapy \nfor metastatic triple-negative breast cancer (KEYNOTE-119): \na randomised, open-label, phase 3 trial: LANCET ONCOLOGY. 22(4):499~511 (41.316)",
+    "Symptom perception and functioning in patients with advanced cancer: PLOS ONE. 16(2):e0245987~ (3.24)",
+    "A phase Ib/II study of xentuzumab, an IGF-neutralising antibody, combined with exemestane and everolimus in hormone receptor-positive, HER2-negative locally advanced/metastatic breast cancer: BREAST CANCER RESEARCH. 23(1):8~ (6.488)",
+    "Criteria for identifying residual tumours after neoadjuvant chemotherapy of breast cancers: a magnetic resonance imaging study: SCIENTIFIC REPORTS. 11(1):634~ (4.38)",
+    "Leuprorelin combined with letrozole with/without everolimus in ovarian-suppressed premenopausal women with hormone receptor-positive, HER2-negative metastatic breast cancer: The LEO study: EUROPEAN JOURNAL OF CANCER. 144:341~350 (7.275)",
+    "Clinical implications of？HER2 mRNA expression and？intrinsic subtype \nin？refractory HER2?positive metastatic breast cancer treated \nwith？pan?HER inhibitor, poziotinib: BREAST CANCER RESEARCH AND TREATMENT. 184(3):743~753 (3.831)",
+    "A phase Ib study of alpelisib or buparlisib combined with tamoxifen plus goserelin in premenopausal women with HR-positive HER2-negative advanced breast cancer: CLINICAL CANCER RESEARCH. Online:Published (10.107)",
+    "Cumulative incidence of chemotherapy-induced cardiotoxicity during a 2-year follow-up period in breast cancer patients: BREAST CANCER RESEARCH AND TREATMENT. 182(2):333~343 (3.831)",
+    "Genome-wide association study of genetic variants related to anthracycline-induced cardiotoxicity in early breast cancer: CANCER SCIENCE. Online:Published (4.966)",
+    "Phase I and pharmacokinetic study of the vascular-disrupting agent CKD-516 (NOV120401) in patients with refractory solid tumors: PHARMACOLOGY RESEARCH & PERSPECTIVES. 8(2):e00568~ (2.052)",
+    "Trastuzumab Deruxtecan in Previously \nTreated HER2-Positive Breast Cancer: THE NEW ENGLAND JOURNAL OF MEDICINE. Online:Published (70.67)",
+    "A pilot study on intermittent every other days of 5-dose Filgrastim\ncompared with single Pegfilgrastim in breast Cancer patients\nreceiving adjuvant Docetaxel, doxorubicin, and cyclophosphamide\n(TAC) chemotherapy: INVESTIGATIONAL NEW DRUGS. Online:Published (2.663)",
+    "Genomic characteristics of triple-negative breast cancer nominate molecular subtypes that predict chemotherapy response: Molecular Cancer Research. 18(2):253~263 (4.484)",
+    "Randomised Phase 2 study of lapatinib and vinorelbine vs vinorelbine in patients with HER2 + metastatic breast cancer after lapatinib and trastuzumab treatment (KCSG BR11-16): British journal of cancer. Online:Published (5.416)",
+    "Anti-tumor activity of BET inhibitors in androgen-receptor-expressing triple-negative breast cancer.: SCIENTIFIC REPORTS. 9(1):13305~ (4.011)",
+    "Molecular alterations and poziotinib efficacy, a pan-HER inhibitor, in human epidermal growth factor receptor2 (HER2)-positive breast cancers: Combined exploratory biomarker analysis from a phase II clinical trial of poziotinib for refractory HER2-positive breast cancer patients: INTERNATIONAL JOURNAL OF CANCER. 145(6):1669~1678 (4.982)",
+    "Fulvestrant plus vistusertib vs fulvestrant plus everolimus\nvs fulvestrant alone for women With hormone receptor?\npositive metastatic breast cancer: JAMA ONCOLOGY. Online:Published (22.416)",
+    "Exploratory biomarker analysis from a phase II clinical trial of eribulin plus gemcitabine versus paclitaxel plus gemcitabine for HER2-negative metastatic breast cancer patients (KCSG BR13-11): BREAST CANCER RESEARCH AND TREATMENT. 178:367~377 (3.471)",
+    "The Sentinel Lymph Node Biopsy Using Indocyanine Green Fluorescence Plus Radioisotope Method Compared With the Radioisotope-Only Method for Breast Cancer Patients After\nNeoadjuvant Chemotherapy: A Prospective, Randomized, Open-Label, Single-Center Phase 2 Trial: ANNALS OF SURGICAL ONCOLOGY. 26(8):2409~2416 (3.681)",
+    "Overall Survival with Ribociclib plus Endocrine Therapy in Breast Cancer: THE NEW ENGLAND JOURNAL OF MEDICINE. 381(4):307~316 (70.67)",
+    "Quality of life outcomes including neuropathy-associated scale from a phase II, multicenter, randomized trial of eribulin plus gemcitabine versus paclitaxel plus gemcitabine as first-line chemotherapy for HER2-negative metastatic breast cancer: Korean Cancer Study Group Trial (KCSG BR13-11): Cancer Communications. 39(1):29~29 (0)",
+    "Integrative In Vivo Drug Testing Using Gene Expression Signature and Patient-Derived Xenografts from Treatment-Refractory HER2 Positive and Triple-Negative Subtypes of Breast Cancer: CANCERS. 11(4):E574~E574 (6.162)",
+    "A multi-national, randomised, open-label, parallel, phase III non-inferiority study comparing NK105 and paclitaxel in metastatic or recurrent breast cancer patients: British Journal of Cancer. 120(5):475~480 (5.416)",
+    "PF-05280014 (a trastuzumab biosimilar) plus paclitaxel compared with reference trastuzumab plus paclitaxel for HER2-positive metastatic breast cancer: a randomised, double-blind study: British Journal of Cancer. 120(2):172~182 (5.922)",
+    "randomized open label phase III tiral of irinotecan plus capecitabine versus capecitabine monotherapy in patients with metastatic breast cancer previously treated with anthracycline and taxane : PROCEED trial (KCSG BR 11-01): CANCER RESEARCH AND TREATMENT. 51(1):43~52 (3.363)",
+    "Predicting Response to Neoadjuvant Chemotherapy in Patients With Breast Cancer: combined Statistical Modeling Using Clinicopathological Factors and FDG PET/CT Texture Parameters: clinical nuclear medicine. 44(1):21~29 (6.309)",
+    "A phase II trial of the pan-HER inhibitor poziotinib, in patients with HER2-positive metastatic breast cancer who had received at least two prior HER2-directed regimens: results of the NOV120101-203 trial: INTERNATIONAL JOURNAL OF CANCER. 143(12):3240~3247 (7.36)",
+    "Magnetic Resonance Imaging (MRI) Assessment of Residual Breast Cancer After Neoadjuvant Chemotherapy: Relevance to Tumor Subtypes and MRI Interpretation Threshold.: Clinical breast cancer. 18(6):459~467 (2.703)",
+    "Prognostic impact of skeletal muscle volume derived from crosssectional computed tomography images in breast cancer: BREAST CANCER RESEARCH AND TREATMENT. 172(2):425~436 (3.605)",
+    "Fulvestrant plus goserelin versus anastrozole plus goserelin versus goserelin alone for hormone receptor-positive, HER2-negative tamoxifen-pretreated premenopausal women with recurrent or metastatic breast cancer: EUROPEAN JOURNAL OF CANCER. 103:127~136 (7.191)",
+    "Oncologic Safety of Gonadotropin-Releasing Hormone Agonist for Ovarian Function Protection During Breast Cancer Chemotherapy: Clinical breast cancer. 18(5):e1165~e1172 (2.703)",
+    "Use of adjuvant chemotherapy in hormone receptor-positive breast cancer patients with or without the 21-gene expression assay: Breast cancer research and treatment. 170(1):69~76 (3.605)",
+    "Phase I/II clinical trial of everolimus combined with gemcitabine/cisplatin for metastatic triple-negative breast cancer.: Journal of Cancer. 9(7):1145~1151 (3.249)",
+    "Buparlisib plus fulvestrant in postmenopausal women with hormone-receptor-positive, HER2-negative, advanced breast cancer progressing on or after mTOR inhibition (BELLE-3): a randomised, double-blind, placebo-controlled, phase 3 trial.: The Lancet. Oncology. 19(1):87~100 (33.9)",
+    "Quality of life on TSU-68: Combination of docetaxel and TSU-68, an oral antiangiogenic agent, in patients with metastatic breast cancer previously treated with anthracycline.: Asia-Pacific journal of clinical oncology. 13(6):365~371 (1.959)",
+    "Phase II, multicentre, randomised trial of eribulin plus gemcitabine versus paclitaxel plus gemcitabine as first-line chemotherapy in patients with HER2-negative metastatic breast cancer.: European journal of cancer. 86:385~393 (6.029)",
+    "Prognostic Impact of Elective Supraclavicular Nodal Irradiation for Patients with N1 Breast Cancer after Lumpectomy and Anthracycline plus Taxane-based Chemotherapy (KROG 1418): A Multicenter Case-Controlled Study: Cancer Research and Treatment. 49(4):970~980 (3.772)",
+    "CKAP2 (cytoskeleton-associated protein2) is a new prognostic marker in HER2-negative luminal type breast cancer: PLOS ONE. 12(8):e0182107~e0182107 (2.806)",
+    "Characteristics of BRCA1/2 mutations carriers including large genomic rearrangements in high risk breast cancer patients: Breast Cancer Research and Treatment. 163(1):139~150 (3.626)",
+    "Efficacy and safety of everolimus in combination with trastuzumab and paclitaxel in Asian patients with HER2+ advanced breast cancer in BOLERO-1.: Breast cancer research. 19(1):47~47 (6.345)",
+    "Post-mastectomy Radiotherapy in Patients with pT1-2N1 Breast Cancer Treated with Taxane-based Chemotherapy: A Retrospective Multicenter Analysis (KROG 1418).: Cancer Research and Treatment. Online:Published (4.245)",
+    "Feasibility and Efficacy of Eribulin Mesilate in Korean Patients with Metastatic\nBreast Cancer: Korean Multi-center Phase IV Clinical Study Results: Cancer Research and treatment. 49(2):423~429 (4.245)",
+    "Optimal radiation dose for patients with one to three lymph node positive breast cancer following breast-conserving surgery and anthracycline plus taxane-based chemotherapy: A retrospective multicenter analysis (KROG 1418): Oncotarget. 8(1):1796~1804 (5.008)",
+    "Accelerated whole breast irradiation in early breast cancer patients with adverse prognostic features.: Oncotarget. 7(49):81888~81898 (5.008)",
+    "Three-Year Prospective Cohort Study of Factors Associated with Return to Work After Breast Cancer Diagnosis.: Journal of Occup Rehabilitation. Online:Published (1.644)",
+    "Effects of Postoperative Radiotherapy on Leptomeningeal Carcinomatosis or Dural Metastasis After Resection of Brain Metastases in Breast Cancer Patients: Cancer Research and Treatment. Online:Published (4.245)",
+    "The Significance of Serum HER2 Levels at Diagnosis on Intrinsic\nSubtype-Specific Outcome of Operable Breast Cancer Patients: PLOS ONE. 11(10):e0163370~e0163370 (3.057)",
+    "Locoregional Recurrence by Tumor Biology in Breast Cancer Patients after Preoperative Chemotherapy and Breast Conservation Treatment: Cancer research and treatment. 48(4):1363~1372 (4.245)",
+    "Prognostic Value of Axillary Nodal Ratio after\nNeoadjuvant Chemotherapy of Doxorubicin/Cyclophosphamide\nFollowed by Docetaxel: A Multicenter Retrospective Cohort Study: Cancer Res Treatment. 48(4):1373~1381 (4.245)",
+    "An open label randomized parallel phase III trial evaluating the efficacy and safety of polymeric micelle formulated paclitaxel compared to conventional cremophor EL-based paclitaxel for recurrent or metastatic HER2 negative breast cancer: cancer research and treatment. Online:Published (4.245)",
+    "A Rare Case of Phyllodes Tumor Metastasis to the Stomach Presenting as Anemia: Cancer research and treatment. Online:Published (4.245)",
+    "A Comparative Study of Daily 3-Gy Hypofractionated and 1.8-Gy Conventional Breast Irradiation in Early-Stage Breast Cancer: Medicine. 95(19):e3320~e3320 (2.133)",
+    "Identifying the potential long-term survivors among breast cancer patients with distant metastasis: Annals of oncology. 27(5):828~833 (9.269)",
+    "Effect of Time Interval between Breast-conserving Surgery and Radiation Therapy on Outcomes of Node-positive Breast Cancer Patients Treated with Adjuvant Doxorubicin/Cyclophosphamide followed by Taxane: Cancer research and treatment. 170(1):483~490 (3.318)",
+    "Prognostic Implications of Tumor-Infiltrating Lymphocytes in Association With Programmed Death Ligand 1 Expression in Early-Stage\nBreast Cancer: Clinical Breast Cancer. 16(1):51~58 (2.107)",
+    "Impact of Molecular Subtype Conversion of Breast Cancers after Neoadjuvant Chemotherapy on Clinical Outcome: Cancer research and treatment. 48(1):133~141 (3.318)",
+    "Changes in health-related quality of life and quality of care among terminally ill cancer patients and survival prediction: Multicenter prospective cohort study: Palliative & supportive care. 13(4):1103~1111 (1.525)",
+    "Breast Cancer-Related Lymphedema after Neoadjuvant Chemotherapy: Cancer research and treatment. 47(3):416~423 (3.318)",
+    "Effects of Second and Subsequent Lines of Chemotherapy for Metastatic Breast Cancer: Clinical breast cancer. 15(1):e55~e62 (2.107)",
+    "Outcomes of palliative weekly low-dose gemcitabine-Cisplatin chemotherapy in anthracycline- and taxane- pretreated metastatic breast cancer patients: Journal of breast cancer. 17(4):339~343 (1.317)",
+    "High Volumetric Breast Density Predicts Risk for Breast Cancer in Postmenopausal, but not Premenopausal, Korean Women: Annals of surgical oncology. 21(13):4124~4132 (3.943)",
+    "Identification and clinical implications of circulating microRNAs for estrogen receptor-positive breast cancer.: Tumor biology. 35(12):12173~12180 (2.84)",
+    "Treatment factors affecting breast cancer-related lymphedema after systemic chemotherapy and radiotherapy in stage II/III breast cancer patients: Breast cancer research and treatment. 148(1):91~98 (4.198)",
+    "Comparison of Sentinel Lymph Node Biopsy Guided by the Multimodal Method of Indocyanine Green Fluorescence, Radioisotope, and Blue Dye Versus the Radioisotope Method in Breast Cancer: A Randomized Controlled Trial: Annals of Surgical Oncology. 21(4):1254~1259 (3.943)",
+    "Association of Polymorphisms and Haplotypes in the Insulin-Like Growth Factor 1 Receptor (IGF1R) Gene with the Risk of Breast Cancer in Korean Women.: PLOS One. 9(1):e84532~e84532 (3.534)",
+    "Phase 2 trial of accelerated, hypofractionated whole-breast irradiation of 39 Gy in 13 fractions followed by a tumor bed boost sequentially delivering 9 Gy in 3 fractions in early-stage breast cancer: International Journal of Radiation Oncology Biology Physics. 87(5):1037~1042 (4.524)",
+    "Burdens, Needs and Satisfaction of Terminal Cancer Patients and their Caregivers: Asian Pacific Journal of Cancer Prevention. 14(1):209~216 (1.271)",
+    "Phase III, Multicenter, Randomized Trial of Maintenance Chemotherapy Versus Observation in Patients With Metastatistic Breast Cancer After Achieving Disease Control With Six Cycles of Gemcitabine Plus Paclitaxel As First-Line Chemotherapy: KCSG-BR07-02: Journal of Clinical Oncology. 31(4):1732~1739 (18.038)",
+    "Phase II study of irinotecan plus capecitabine in anthracycline- and taxane- pretreated patients with metastatic breast cancer: Investigational new drugs. 31(1):152~159 (3.498)",
+    "Effect of complementary and alternative medicine on the survival and health-related quality of life among terminally ill cancer patients: a prospective cohort study.: Annals of Oncology. 24(2):489~494 (7.384)",
+    "A Case of Primary Gastric CD30-Positive Anaplastic Large-Cell Lymphoma: Journal of Korean Medical Science. 20:1062~1065 (0.824)",
+    "Factors influencing preferences for place of terminal care and of death among cancer patients and their families in Korea: Suportive Care Cancer. 13:565~72 (2.122)",
+    "High-dose versus low-dose cyclophosphamide in combination with G-CSF for peripheral blood progenitor cell mobilization.: Korean Journal of Internal Medicine. 20:224~231 (0)",
+    "Clinical features of hospitalized adults with infectious mononucleosis: Korean Journal of Hematology. 40:1~7 ()"
+  ],
+  "저서": [
+    {
+      "date": null,
+      "content": "암진료 가이드"
+    },
+    {
+      "date": null,
+      "content": "완화의학"
+    }
+  ],
+  "수상": [],
+  "언론": [
+    {
+      "targetDate": "2025-06-18",
+      "type": "기사",
+      "text": "암 정복 위한 최신기술 어디까지 왔나… 국립암센터 국제 심포지엄 개최",
+      "issuer": "헬스조선"
+    },
+    {
+      "targetDate": "2025-02-15",
+      "type": "기사",
+      "text": "한국여성경제인협회, 국립암센터 3800만원 기부…\"저소득층 치료지원\"",
+      "issuer": "이코노뉴스"
+    },
+    {
+      "targetDate": "2025-02-13",
+      "type": "기사",
+      "text": "여성경제인협회, 국립암센터에 3800만원 기부",
+      "issuer": "매일일보"
+    },
+    {
+      "targetDate": "2025-02-13",
+      "type": "기사",
+      "text": "박창숙 여경협 신임 회장 취임…“고부가가치 산업 적극 발굴”",
+      "issuer": "여성신문"
+    },
+    {
+      "targetDate": "2025-02-13",
+      "type": "기사",
+      "text": "\"저소득층 위해 써 달라\"…여경협, 국립암센터에 3800만원 기부",
+      "issuer": "뉴스1"
+    },
+    {
+      "targetDate": "2025-02-13",
+      "type": "기사",
+      "text": "여경협, '암 환자' 치료 지원…3800만원 기부",
+      "issuer": "신아일보"
+    },
+    {
+      "targetDate": "2025-02-13",
+      "type": "기사",
+      "text": "여경협, 저소득 암환자 치료비 3800만원 전달",
+      "issuer": "전자신문"
+    },
+    {
+      "targetDate": "2025-02-13",
+      "type": "기사",
+      "text": "박창숙 여경협 신임 회장 \"여성기업인이 경제 위기 극복과 성장 이끌 것\"",
+      "issuer": "서울경제"
+    },
+    {
+      "targetDate": "2025-02-13",
+      "type": "기사",
+      "text": "여성경제인협회 박창숙 신임회장 취임…“여성특화 기술기반 산업 육성”",
+      "issuer": "부산일보"
+    },
+    {
+      "targetDate": "2025-02-13",
+      "type": "기사",
+      "text": "한국여성경제인협회, 국립암센터에 3800만원 기부",
+      "issuer": "핀포인트뉴스"
+    },
+    {
+      "targetDate": "2025-02-12",
+      "type": "기사",
+      "text": "릴리 버제니오, 조기유방암 적응증 급여획득 가능할까",
+      "issuer": "데일리팜"
+    },
+    {
+      "targetDate": "2025-02-12",
+      "type": "기사",
+      "text": "박창숙 여경협 신임 회장 취임 \"여성기업에 새로운 희망씨앗 심을 것\"",
+      "issuer": "뉴스웨이"
+    },
+    {
+      "targetDate": "2025-02-12",
+      "type": "기사",
+      "text": "박창숙 여경협 신임 회장 “국내 최고 여성경제단체로…10만 회원 목표”(종합)",
+      "issuer": "이데일리"
+    },
+    {
+      "targetDate": "2025-02-12",
+      "type": "기사",
+      "text": "박창숙 여경협 신임 회장 “326만 女기업, 위기극복 이끌 것”",
+      "issuer": "이데일리"
+    },
+    {
+      "targetDate": "2025-02-12",
+      "type": "기사",
+      "text": "박창숙 여경협 회장 취임…“경제 희망 씨앗 심겠다”",
+      "issuer": "이투데이"
+    },
+    {
+      "targetDate": "2025-01-23",
+      "type": "기사",
+      "text": "국립암센터, 중국 연변대학 부속병원 암 전문 의료진 초청 연수",
+      "issuer": "라포르시안"
+    },
+    {
+      "targetDate": "2025-01-23",
+      "type": "기사",
+      "text": "[동정+] 국립암센터, 중국 연변대학 부속병원 암 전문 의료진 초청 연수 성료 外",
+      "issuer": "팜뉴스"
+    },
+    {
+      "targetDate": "2025-01-23",
+      "type": "기사",
+      "text": "국립암센터, 중국 연변대 부속병원 암 전문 의료진 초청 연수 성료",
+      "issuer": "메디파나뉴스"
+    },
+    {
+      "targetDate": "2025-01-23",
+      "type": "기사",
+      "text": "국립암센터, 암치료 기술·경험 연변대 의료진에 전수",
+      "issuer": "메디팜뉴스"
+    },
+    {
+      "targetDate": "2025-01-23",
+      "type": "기사",
+      "text": "국립암센터, 중국 연변대학 부속병원 암 전문 의료진 초청 연수 성료",
+      "issuer": "의사신문"
+    },
+    {
+      "targetDate": "2025-01-23",
+      "type": "기사",
+      "text": "국립암센터, 중국 연변대 부속병원 암 전문 의료진 초청 연수",
+      "issuer": "의학신문"
+    },
+    {
+      "targetDate": "2025-01-23",
+      "type": "기사",
+      "text": "국립암센터, 중국 연변대학 부속병원 암 전문 의료진 초청 연수 성공적 개최",
+      "issuer": "헬스코리아뉴스"
+    },
+    {
+      "targetDate": "2025-01-23",
+      "type": "기사",
+      "text": "국립암센터, 중국 연변대학 부속병원 암 전문 의료진 초청 연수 성료",
+      "issuer": "의약뉴스"
+    },
+    {
+      "targetDate": "2025-01-23",
+      "type": "기사",
+      "text": "국립암센터, 중국 연변대학 부속병원 의료진 초청 연수 진행",
+      "issuer": "메디컬월드뉴스"
+    },
+    {
+      "targetDate": "2025-01-23",
+      "type": "기사",
+      "text": "국립암센터, 중국 연변대학 부속병원 의료진 초청 연수 성료",
+      "issuer": "병원신문"
+    },
+    {
+      "targetDate": "2025-01-23",
+      "type": "기사",
+      "text": "국립암센터, 중 연변대병원 연수 성료",
+      "issuer": "데일리메디"
+    },
+    {
+      "targetDate": "2025-01-23",
+      "type": "기사",
+      "text": "국립암센터, 중 연변대학 부속병원 암 전문 의료진 초청 연수",
+      "issuer": "후생신보"
+    },
+    {
+      "targetDate": "2025-01-23",
+      "type": "기사",
+      "text": "국립암센터, 중국 연변대학 부속병원 암 전문 의료진 초청 연수 성료",
+      "issuer": "메디팜스투데이"
+    },
+    {
+      "targetDate": "2025-01-23",
+      "type": "기사",
+      "text": "연변대학 부속병원 암 전문 의료진 초청 연수 성료",
+      "issuer": "의계신문"
+    },
+    {
+      "targetDate": "2025-01-23",
+      "type": "기사",
+      "text": "국립암센터, 중국 연변대학 부속병원 암 전문 의료진 초청 연수 성료",
+      "issuer": "메디포뉴스"
+    },
+    {
+      "targetDate": "2024-03-06",
+      "type": "기사",
+      "text": "조기유방암 급여 노리는 '버제니오' 오늘 암질심 상정",
+      "issuer": "데일리팜"
+    },
+    {
+      "targetDate": "2023-07-24",
+      "type": "기사",
+      "text": "세계 유방암 치료 트렌드 이끄는 한국 종양내과 전문의들",
+      "issuer": "청년의사"
+    },
+    {
+      "targetDate": "2023-07-24",
+      "type": "기사",
+      "text": "항암요법연구회 유방암 치료제 연구, 보건의료 R&D 우수성과 채택",
+      "issuer": "헬스인뉴스"
+    },
+    {
+      "targetDate": "2023-07-24",
+      "type": "기사",
+      "text": "대한항암요법연구회, 폐경 전 유방암 치료제 연구 국내외 유방암 치료 환경 개선",
+      "issuer": "바이오타임즈"
+    },
+    {
+      "targetDate": "2023-07-20",
+      "type": "기사",
+      "text": "한국화이자제약 ‘입랜스’ 1차 내분비요법에서 ‘폐경 전 환자’에 허가 확대",
+      "issuer": "메디컬월드뉴스"
+    },
+    {
+      "targetDate": "2023-07-20",
+      "type": "기사",
+      "text": "HR+/HER2- 전이성 유방암 치료제 중 최초 'CDK4/6 억제제'",
+      "issuer": "보건타임즈"
+    },
+    {
+      "targetDate": "2023-07-20",
+      "type": "기사",
+      "text": "한국화이자제약 ‘입랜스’ 1차 내분비요법에서 ‘폐경 전 환자’에 허가 확대",
+      "issuer": "메디컬월드뉴스"
+    },
+    {
+      "targetDate": "2023-07-19",
+      "type": "기사",
+      "text": "최초 CDK4/6 표적 유방암약 ‘입랜스’…폐경 여부 상관없이 사용 가능",
+      "issuer": "코메디닷컴"
+    },
+    {
+      "targetDate": "2023-07-19",
+      "type": "기사",
+      "text": "한국화이자제약 입랜스, 폐경 전 유방암 환자로 적응증 확대 外",
+      "issuer": "의약뉴스"
+    },
+    {
+      "targetDate": "2023-06-29",
+      "type": "기사",
+      "text": "국립암센터, 전이성 암환자의 흉수·복수 검체로 암 오가노이드 수립",
+      "issuer": "메디파나뉴스"
+    },
+    {
+      "targetDate": "2023-06-26",
+      "type": "기사",
+      "text": "국립암센터, 전이성 암환자 흉수·복수 검체로 암 오가노이드 수립",
+      "issuer": "이로운넷"
+    },
+    {
+      "targetDate": "2023-06-26",
+      "type": "기사",
+      "text": "국립암센터, 전이성 암환자 흉수·복수 검체로 암 오가노이드 수립",
+      "issuer": "메디컬투데이"
+    },
+    {
+      "targetDate": "2023-06-26",
+      "type": "기사",
+      "text": "전이성 암환자, 흉수？복수 검체로 암 오가노이드 수립",
+      "issuer": "메디코파마뉴스"
+    },
+    {
+      "targetDate": "2023-06-26",
+      "type": "기사",
+      "text": "국립암센터 연구팀, 전이성 암환자의 흉수·복수 검체로 암 오가노이드 수립",
+      "issuer": "e의료정보"
+    },
+    {
+      "targetDate": "2023-06-26",
+      "type": "기사",
+      "text": "국립암센터 연구팀, 전이성 암환자의 흉수·복수 검체로 암 오가노이드 수립",
+      "issuer": "팜뉴스"
+    },
+    {
+      "targetDate": "2023-06-26",
+      "type": "기사",
+      "text": "전이성 암환자 흉수·복수 검체로 암 오가노이드 수립…환자 맞춤형 치료 전략 제시 기대 등",
+      "issuer": "메디컬월드뉴스"
+    },
+    {
+      "targetDate": "2023-06-26",
+      "type": "기사",
+      "text": "국립암센터, 전이성 암환자 흉수·복수 검체로 암 오가노이드 수립",
+      "issuer": "라포르시안"
+    },
+    {
+      "targetDate": "2023-06-26",
+      "type": "기사",
+      "text": "국립암센터, 전이암 환자 흉수·복수 검체로 암 오가노이드 배양 성공",
+      "issuer": "한국경제"
+    },
+    {
+      "targetDate": "2023-06-26",
+      "type": "기사",
+      "text": "국립암센터, 전이성 암환자 흉수·복수 검체로 암 오가노이드 수립",
+      "issuer": "약업신문"
+    },
+    {
+      "targetDate": "2023-06-21",
+      "type": "기사",
+      "text": "한국릴리, 대한암학회에서 버제니오 최신지견 소개 外",
+      "issuer": "의약뉴스"
+    },
+    {
+      "targetDate": "2023-06-21",
+      "type": "기사",
+      "text": "한국릴리, 대한암학회 학술대회 런천 심포지엄서 버제니오 최신 지견 소개",
+      "issuer": "의사신문"
+    },
+    {
+      "targetDate": "2023-06-21",
+      "type": "기사",
+      "text": "한국릴리, 대한암학회 학술대회 런천 심포지엄서 버제니오 최신 지견 소개",
+      "issuer": "e의료정보"
+    },
+    {
+      "targetDate": "2023-06-21",
+      "type": "기사",
+      "text": "한국릴리, 암학회 학술대회서 '버제니오' 최신지견 소개",
+      "issuer": "라포르시안"
+    },
+    {
+      "targetDate": "2023-06-21",
+      "type": "기사",
+      "text": "유방암 표적약 '버제니오'…조기 유방암 환자 사망 35% 줄여",
+      "issuer": "코메디닷컴"
+    },
+    {
+      "targetDate": "2023-06-21",
+      "type": "기사",
+      "text": "한국릴리 버제니오가 유방암 재발ㆍ사망위험 35% 감소",
+      "issuer": "메디소비자뉴스"
+    },
+    {
+      "targetDate": "2023-05-16",
+      "type": "기사",
+      "text": "BrightEN HER fuTUre DESTINY: ENHERTU? Symposium",
+      "issuer": "메디칼업저버"
+    },
+    {
+      "targetDate": "2022-12-22",
+      "type": "기사",
+      "text": "고가·부작용 이슈 면역항암제 대신 CIK치료서 답 찾겠다",
+      "issuer": "메디칼타임즈"
+    },
+    {
+      "targetDate": "2022-12-20",
+      "type": "기사",
+      "text": "조기 유방암 환자는 재발 위험 높다는데 어떻게 관리해야 하나요?",
+      "issuer": "중앙일보헬스미디어"
+    },
+    {
+      "targetDate": "2022-04-07",
+      "type": "기사",
+      "text": "여성암 명의가 추천하는 유방암 비수술 분야 최고의 명의",
+      "issuer": "동아일보"
+    },
+    {
+      "targetDate": "2021-12-16",
+      "type": "기사",
+      "text": "심평원 ‘9기 암질환심의위' 구축…위원장 임호영",
+      "issuer": "의학신문"
+    },
+    {
+      "targetDate": "2021-09-27",
+      "type": "기사",
+      "text": "키스칼리, 진행성 유방암 연구 중 가장 긴 전체생존기간 개선 효과",
+      "issuer": "라포르시안"
+    },
+    {
+      "targetDate": "2021-09-27",
+      "type": "기사",
+      "text": "노바티스 '키스칼리', 진행성 유방암 환자 전체생존기간 개선 입증",
+      "issuer": "메디컬투데이"
+    },
+    {
+      "targetDate": "2021-09-27",
+      "type": "기사",
+      "text": "노바티스, 유방암 치료 패러다임 바꾸나",
+      "issuer": "데일리메디"
+    },
+    {
+      "targetDate": "2021-09-27",
+      "type": "기사",
+      "text": "키스칼리, HR+/HER2- 진행성 유방암 연구 중 가장 긴 OS 개선 효과 확인",
+      "issuer": "e의료정보"
+    },
+    {
+      "targetDate": "2021-09-27",
+      "type": "기사",
+      "text": "'키스칼리', HR+/HER2- 진행성 유방암 OS 개선",
+      "issuer": "메디파나뉴스"
+    },
+    {
+      "targetDate": "2021-09-27",
+      "type": "기사",
+      "text": "키스칼리, HR+/HER2- 진행성 유방암 OS 63.9개월 확인",
+      "issuer": "보건뉴스"
+    },
+    {
+      "targetDate": "2021-09-27",
+      "type": "기사",
+      "text": "키스칼리, HR+/HER2- 진행성 유방암 OS 63.9개월 확인",
+      "issuer": "약업신문"
+    },
+    {
+      "targetDate": "2021-09-27",
+      "type": "기사",
+      "text": "'키스칼리', 진행성 유방암 환자 전체생존 연장 입증",
+      "issuer": "청년의사"
+    },
+    {
+      "targetDate": "2021-09-18",
+      "type": "기사",
+      "text": "[제약사이모저모] 한국노바티스㈜, 삼성바이오에피스, 한국룬드벡, 헥톤프로젝트, 한미약품, 헬릭스미스, GC녹십자랩셀 등 제약사 소식",
+      "issuer": "메디컬월드뉴스"
+    },
+    {
+      "targetDate": "2021-09-10",
+      "type": "기사",
+      "text": "폐경전 진행성 유방암 환자는 왜 예후가 더 나쁠까",
+      "issuer": "청년의사"
+    },
+    {
+      "targetDate": "2021-08-23",
+      "type": "기사",
+      "text": "노바티스, '사(四)기충전 캠페인'‥제 1회 온라인 건강강좌 개최",
+      "issuer": "메디파나뉴스"
+    },
+    {
+      "targetDate": "2021-07-06",
+      "type": "기사",
+      "text": "[온라인 토크콘서트] '통증이 있으면 호르몬약 중단해도 되나요?' 비타민주사,젤로다, 허셉틴 (국립암센터 유방암센터 이근석 교수 외)",
+      "issuer": "KBDCA 한국혈액암협회"
+    },
+    {
+      "targetDate": "2021-06-25",
+      "type": "기사",
+      "text": "[온라인 토크콘서트] '유방암 수술 후 항암치료, 꼭 받아야 하나요?' / 유방암 코로나 백신 (국립암센터 유방암센터 이근석 교수 외)",
+      "issuer": "KBDCA 한국혈액암협회"
+    },
+    {
+      "targetDate": "2018-01-24",
+      "type": "기사",
+      "text": "[사이언스] 기억세포 파괴하는 '치매'…'칵테일 약'으로 잡는다!",
+      "issuer": "YTN"
+    },
+    {
+      "targetDate": "2017-11-13",
+      "type": "기사",
+      "text": "[암, 지피지기면 백전백승] 여성암 발병률 2위…가슴 쪽 멍울 만져지면 병원 찾아야",
+      "issuer": "농민신문"
+    },
+    {
+      "targetDate": "2017-09-14",
+      "type": "기사",
+      "text": "[유종일의 경제 새판짜기]‘웰다잉’을 위한 정책 하나",
+      "issuer": "경향신문"
+    },
+    {
+      "targetDate": "2017-07-06",
+      "type": "기사",
+      "text": "[사이언스투데이] 진화하는 항암 치료…암 정복 앞당긴다",
+      "issuer": "YTN사이언스"
+    },
+    {
+      "targetDate": "2016-11-14",
+      "type": "기사",
+      "text": "대한민국 사망 원인 1위 ‘암(癌)’, “생활습관만 바꿔도 발병 위험 40% 떨어져”",
+      "issuer": "헬스조선"
+    },
+    {
+      "targetDate": "2016-10-26",
+      "type": "기사",
+      "text": "대한민국 사망 원인 1위 암, 생활습관만 바꿔도 발병 위험 40% 떨어져",
+      "issuer": "헬스조선"
+    },
+    {
+      "targetDate": "2016-09-15",
+      "type": "기사",
+      "text": "[모닝와이드] 유방암",
+      "issuer": "SBS"
+    },
+    {
+      "targetDate": "2016-08-22",
+      "type": "기사",
+      "text": "이근석교수 '유방암 치료,비용때문에 제한받아선 안돼;",
+      "issuer": "약업신문"
+    },
+    {
+      "targetDate": "2015-11-10",
+      "type": "기사",
+      "text": "전이성 유방암 극복은, 진인사대천명",
+      "issuer": "의협신문"
+    },
+    {
+      "targetDate": "2015-01-17",
+      "type": "기사",
+      "text": "유방암 100문 100답｜이근석 등 지음｜국립암센터｜1만원",
+      "issuer": "조선일보"
+    },
+    {
+      "targetDate": "2014-10-02",
+      "type": "기사",
+      "text": "[인사]국립암센터",
+      "issuer": "동아일보"
+    },
+    {
+      "targetDate": "2014-10-01",
+      "type": "기사",
+      "text": "국립암센터 부속병원장에 오재환 박사 선임",
+      "issuer": "국민일보"
+    },
+    {
+      "targetDate": "2014-06-13",
+      "type": "기사",
+      "text": "[의술 인술]삶의 질 높인 유방암 표적치료 보험 적용",
+      "issuer": "경향신문"
+    },
+    {
+      "targetDate": "2013-05-05",
+      "type": "기사",
+      "text": "기적처럼, 말기암 정선영씨의 마지막 소원",
+      "issuer": "채널A"
+    },
+    {
+      "targetDate": "2011-06-10",
+      "type": "기사",
+      "text": "죽음을 이겨낸 건강고수",
+      "issuer": "SBS"
+    },
+    {
+      "targetDate": "2008-12-15",
+      "type": "기사",
+      "text": "김미혜씨(유방암 환자) 관련 인터뷰",
+      "issuer": "KBS"
+    }
+  ],
+  "profileUrl": "https://www.ncc.re.kr/imageViewer.ncc?in_fileUrl=EMRFILE01/www/hongbo/img/profile/10760.jpg",
+  "specialty": "유방암의 항암화학요법"
+}

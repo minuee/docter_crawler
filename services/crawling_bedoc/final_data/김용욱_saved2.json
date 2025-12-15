@@ -1,0 +1,39 @@
+{
+  "doctorId": 14722,
+  "rid_long": "3E905EA0F6F6CEE7B2834E9CF4FF36780A37EF44D0CB0007426D7B13BD393623DF0E26F3759B84EF95162A9FF9F34D43FBFD9770EB6B5BAFFE5549894D1191373A5B402BAFADAF84C47DB1A0E4896891C62CA3B718EC5CDBFDE6F2680395014E80C44AC1BDA14BE08F4BADD6DB83B4BD404497F6A98F1BE78F8D38E42A5C8A6D874C4EBF215B09417B890FACDAD45C0C7ACB4DA0029BF30F3A7EEE9AA34F72A0FF6733081AC30C144CF56B2167DAE685B72E850996FC920A38E6D0FFAD873B14",
+  "hospital_cid": 115,
+  "bedoc_id": "A1270",
+  "bedoc_hospitalsite": "http://www.kch.or.kr",
+  "bedoc_doctorname": "김용욱",
+  "bedoc_deptname": "소아청소년과",
+  "bedoc_hospitalname": "광주기독병원",
+  "hospital_name": "광주기독병원",
+  "aiga_hid": "H11KR-24000002",
+  "hospital_site": "https://www.kch.or.kr/user/sub2020/doctor_list/depart_no/202412-110009",
+  "site_type": "list",
+  "hospital_addr": "광주광역시 남구 양림로 37,  (양림동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.kch.or.kr/user/sub2020/doctor_list/depart_no/202412-110009?doctorName=%EA%B9%80%EC%9A%A9%EC%9A%B1&depthName=%EC%86%8C%EC%95%84%EC%B2%AD%EC%86%8C%EB%85%84%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "https://www.kch.or.kr/site_data/cms/c_doctor/1747125405_zxif9OYw_EC868CEC95.png",
+  "specialty": "심장질환, 호흡기질환, 심초음파검사, 공공심야 어린이병원",
+  "학력": [
+    {
+      "content": "1980 전남대학교 의과대학 졸업"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1983 - 1987",
+      "content": "광주기독병원 인턴, 전공의 수료"
+    },
+    {
+      "date": "1987 - 현재",
+      "content": "소아청소년과 진료과장"
+    }
+  ]
+}

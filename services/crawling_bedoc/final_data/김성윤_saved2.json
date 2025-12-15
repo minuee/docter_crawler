@@ -1,0 +1,55 @@
+{
+  "doctorId": 14701,
+  "rid_long": "AD7DF2919C797A12F9E3886DFF93D9879959C6400F73B8F7D3406379C99696DCAA7BF12C0ADFA23A48492DF5D371FFD9DA3D6F511B7BD6E34A1DEAAAFD82E791604536895A09744394D92A0F2579B5BADD00315A0F916B8957BB553410E0726F9CA0EF5C38F288744444DA67FB9A3367C85F28840E82AB8F97DFAD7EC01C84E60E0E605A674FE0C670B5B19A962E7E1D",
+  "hospital_cid": 91,
+  "bedoc_id": "A0836",
+  "bedoc_hospitalsite": "http://www.kimrm.com",
+  "bedoc_doctorname": "김성윤",
+  "bedoc_deptname": "류마티스내과",
+  "bedoc_hospitalname": "김성윤내과의원",
+  "hospital_name": "김성윤내과의원",
+  "aiga_hid": "H31KR-11001018",
+  "hospital_site": "https://kimrm.co.kr/Doctor",
+  "site_type": "list",
+  "hospital_addr": "서울특별시 강남구 논현로176길 14, 3층 (신사동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://kimrm.co.kr/Doctor?doctorName=%EA%B9%80%EC%84%B1%EC%9C%A4&depthName=%EB%A5%98%EB%A7%88%ED%8B%B0%EC%8A%A4%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "specialty": "류마티스내과",
+  "학력": [
+    {
+      "date": null,
+      "content": "미국 시카고 Rush Medical School"
+    },
+    {
+      "date": null,
+      "content": "미국 뉴욕 Mount sinai 의대"
+    },
+    {
+      "date": null,
+      "content": "미국 Tennessee 의대 Research fellow"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "(前) 한양대학교 류마티스 초대병원장, 국내 최초 류마티스병원 설립"
+    },
+    {
+      "date": null,
+      "content": "Post Graduate Trainee in Immunology"
+    },
+    {
+      "date": null,
+      "content": "Hospital for joint Disease Orthopaedic"
+    },
+    {
+      "date": null,
+      "content": "Institute Rheumatology fellow"
+    }
+  ],
+  "isAttend": true
+}

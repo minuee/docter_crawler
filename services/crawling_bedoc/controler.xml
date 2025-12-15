@@ -124,4 +124,131 @@
         WHERE rid_long = #{rid_long} 
     </update>
 
+    <select id="select_doctor_id_by_rid_long">
+        SELECT doctor_id FROM doctor WHERE rid_long = #{search_rid_long}
+    </select>
+
+    <insert id="insert_new_doctor">
+        INSERT INTO doctor (
+            rid_long,
+            rid,
+            name,
+            is_active,
+            data_version_id,
+            createAt
+        ) values (
+            #{search_rid_long},
+            UNHEX(LEFT(SHA2(#{search_rid_long}, 256), 32)),
+            #{search_doctorname},
+            1,
+            #{search_data_version_id},
+            now()
+        )
+    </insert>
+    <insert id="insert_doctor_basic">
+        INSERT INTO doctor_basic (
+            rid_long, 
+            rid, 
+            hid, 
+            doctor_id,
+            data_version_id,
+            deptname, 
+            doctorname,
+            specialties, 
+            doctor_url,
+            profileimgurl,
+            new_hospitalname,
+            new_doctor_url,
+            createAt 
+        )
+        VALUES (
+            #{new_rid_long},
+            UNHEX(LEFT(SHA2(#{new_rid_long}, 256), 32)),
+            #{new_hid},
+            #{new_doctor_id},
+            #{new_data_version_id},
+            #{new_deptname},
+            #{new_doctorname},
+            #{new_specialties},
+            #{new_doctor_url},
+            #{new_profileimgurl},
+            #{new_hospitalname},
+            #{new_doctor_url},
+            NOW()
+        )
+    </insert>
+    <select id="select_doctor_career">
+        SELECT 
+            a.data_version_id
+        FROM
+            doctor_career as a
+        WHERE
+            a.rid_long = #{search_rid_long} 
+        LIMIT 1
+    </select>
+    <insert id="insert_new_doctor_career">
+        INSERT INTO doctor_career (
+            rid_long, 
+            rid, 
+            data_version_id, 
+            jsondata,
+            education,
+            career, 
+            etc,
+            createAt 
+        )
+        VALUES (
+            #{search_rid_long},
+            UNHEX(LEFT(SHA2(#{search_rid_long}, 256), 32)),
+            #{search_data_version_id},
+            #{search_jsonData},
+            #{search_education},
+            #{search_career},
+            #{search_etc},
+            NOW()
+        )
+    </insert>
+
+    <update id="update_doctor_career">
+        UPDATE doctor_career 
+        SET 
+            jsondata = #{search_jsonData},
+            education = #{search_education},
+            career = #{search_career},
+            etc = #{search_etc},
+            data_version_id_update = #{search_data_version_id},
+            updateAt = NOW()
+        WHERE rid_long = #{search_rid_long} 
+    </update>
+
+    <select id="select_doctor_paper">
+        SELECT 
+            a.paper_id
+        FROM
+            doctor_paper as a
+        WHERE
+            a.rid_long = #{search_rid_long} and a.title = #{search_title}
+        LIMIT 1
+    </select>
+
+    <insert id="insert_new_doctor_paper">
+        INSERT INTO doctor_paper (
+            rid_long, 
+            rid, 
+            data_version_id, 
+            doctorName,
+            title,
+            createAt 
+        )
+        VALUES (
+            #{search_rid_long},
+            UNHEX(LEFT(SHA2(#{search_rid_long}, 256), 32)),
+            #{search_data_version_id},
+            #{search_doctorName},
+            #{search_title},
+            NOW()
+        )
+    </insert>
+
+
 </mapper>

@@ -1,0 +1,59 @@
+{
+  "doctorId": 14802,
+  "rid_long": "EE1D09BFD32A69ECAF2FA56C5A5C1439ACD3F51163E89C0B617074E4B9AEC5A4328EB3DA8C0A56BFEC4EB41BB59E44602A2366B4F1BA4928700C42030915A5090F0EA4E68F7B0BF9172C69F0B7FA1800530B9510BEBA3CE1DE98383C663908433444AFD129FA51EFBC55191FF8AA63FF08FA400FED9A81AEED7EB961193FC026552BCB4532C14B54F54AD4CF6956FB1D1FECEE5056A585BD29FD4C9449B865AFCCA1308C09E5FD733980AE9FBC1EE277B913BD38A6C3425154C6EFF16D05EE8E8CEC3FC6E224E7345E34248DF3942CD1",
+  "hospital_cid": 231,
+  "bedoc_id": "A8085",
+  "bedoc_hospitalsite": "https://gh.cauhs.or.kr/",
+  "bedoc_doctorname": "박인원",
+  "bedoc_deptname": "호흡기알레르기내과",
+  "bedoc_hospitalname": "중앙대학교광명병원",
+  "hospital_name": "중앙보훈병원",
+  "aiga_hid": "H11KR-11000038",
+  "hospital_site": "https://seoul.bohun.or.kr/popup/040_01_body_01_01.php?idx=1875",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 강동구 진황도로61길 53, (둔촌동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://seoul.bohun.or.kr/popup/040_01_body_01_01.php?idx=1875&doctorName=%EB%B0%95%EC%9D%B8%EC%9B%90&depthName=%ED%98%B8%ED%9D%A1%EA%B8%B0%EC%95%8C%EB%A0%88%EB%A5%B4%EA%B8%B0%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "profileUrl": "https://seoul.bohun.or.kr/common/ImgView.php?bd=bh_part_detail&idx=1875",
+  "specialty": "COPD, 천식, 폐렴, 기타폐질환",
+  "학력": [
+    {
+      "date": "1983.02",
+      "content": "중앙대학교 의학과("
+    },
+    {
+      "date": "1993.08",
+      "content": "중앙대학교 내과학과 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1987.03 ~ 1990.02",
+      "content": "중앙대병원 내과 전공의"
+    },
+    {
+      "date": "1990.03 ~ 1991.02",
+      "content": "서울대학교병원 호흡기내과 전임의"
+    },
+    {
+      "date": "1991.03 ~ 1998.02",
+      "content": "중앙대병원 호흡기내과 임상강사, 조교수, 부교수"
+    },
+    {
+      "date": "1998.03 ~ 2022.02",
+      "content": "중앙대병원 호흡기내과 교수"
+    },
+    {
+      "date": "2002.03 ~ 2025.02",
+      "content": "중앙대학교 광명병원 호흡기내과 명예교수"
+    },
+    {
+      "date": "2025.05 ~ 현재",
+      "content": "중앙보훈병원 호흡기알레르기내과 전문의"
+    }
+  ]
+}

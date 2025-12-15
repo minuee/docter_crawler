@@ -1,0 +1,628 @@
+{
+  "doctorId": 15116,
+  "rid_long": "9B197B26357A5F2D6DF21E4A49798B5663CA75B473F98C85BB272B172D3F941D932125E0B69027FE8B33701AF2013889B642F81DF0F5AE22C5E37A2CF211A1AAF463C10E0891E4CC9C19B50031CA9BDEE30EBF9E4B5CAE38559971B27A28473FF36F885AD4A6562BA7BC92C452F083A5D0886F036913D9A5DC518532FA0E7F4ECD5194100636D43331FABD1930031FABF8324D156AD96E7D0157A86E396447EB5B0FACF618872A594D017BF8E1AE4A0530993AEDEA0F6066982B8BF8067B5903",
+  "hospital_cid": 614,
+  "bedoc_id": "A8464",
+  "bedoc_hospitalsite": "http://www.ncc.re.kr",
+  "bedoc_doctorname": "최일주",
+  "bedoc_deptname": "소화기내과",
+  "bedoc_hospitalname": "국립암센터",
+  "hospital_name": "국립암센터",
+  "aiga_hid": "H11KR-31000013",
+  "hospital_site": "https://www.ncc.re.kr/ncc_about03_param.ncc?searchKey=&searchValue=&dept=IM",
+  "site_type": "popup",
+  "hospital_addr": "경기도 고양시 일산동구 일산로 323, (마두동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.ncc.re.kr/ncc_about03_param.ncc?searchKey=&searchValue=&dept=IM&doctorName=%EC%B5%9C%EC%9D%BC%EC%A3%BC&depthName=%EC%86%8C%ED%99%94%EA%B8%B0%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "https://www.ncc.re.kr/images/no-image.gif",
+  "specialty": "위암진단, 조기위암 내시경치료(내시경점막절제술)위암 원인(헬리코박터,식이)연구,위암의 유전소인(유전자 다형성 및 유전체) 연구, 위암 검진 및 예방 연구,  치료 내시경 연구",
+  "학력": [
+    {
+      "date": "1986-03 ~ 1990-02",
+      "content": "서울대학교 의과대학 의학과 대졸(의대)"
+    },
+    {
+      "date": "1993-03 ~ 1994-02",
+      "content": "서울대학교 의과 대학원 의학과 대학원졸(석사)"
+    },
+    {
+      "date": "1999-03 ~ 2000-02",
+      "content": "서울대학교 의과대학원 의학과 대학원졸(박사)"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1990-03 ~ 1991-02",
+      "content": "서울대학교병원 인턴"
+    },
+    {
+      "date": "1991-03 ~ 1995-02",
+      "content": "서울대학교병원 레지던트"
+    },
+    {
+      "date": "1998-05 ~ 2000-02",
+      "content": "서울대학교병원 전임의"
+    },
+    {
+      "date": "2000-03 ~ 2000-12",
+      "content": "을지의과대학교 전임강사"
+    },
+    {
+      "date": "2001-01 ~ 2001-08",
+      "content": "을지의과대학교 전임강사"
+    },
+    {
+      "date": "2001-09 ~ 현재",
+      "content": "국립암센터 위암센터 전문의"
+    },
+    {
+      "date": "2001-09 ~ 2009-01",
+      "content": "국립암센터 위암연구과 선임연구원"
+    },
+    {
+      "date": "2003-02 ~ 2010-08",
+      "content": "국립암센터 내시경실 실장"
+    },
+    {
+      "date": "2004-04 ~ 2004-04",
+      "content": "일본 국립암센터 내시경부 일본연수"
+    },
+    {
+      "date": "2005-03 ~ 2006-02",
+      "content": "미국 Baylor 의과대학 소화기내과 미국연수"
+    },
+    {
+      "date": "2009-02 ~ 2016-02",
+      "content": "국립암센터 위암연구과 책임연구원"
+    },
+    {
+      "date": "2010-01 ~ 2012-01",
+      "content": "국립암센터 위암연구과 과장"
+    },
+    {
+      "date": "2012-01 ~ 2014-08",
+      "content": "국립암센터 위암센터 센터장"
+    },
+    {
+      "date": "2015-04 ~ 2017-02",
+      "content": "국립암센터 국제암대학원대학교 암관리정책학과 겸임교수"
+    },
+    {
+      "date": "2016-03 ~ 2017-02",
+      "content": "국립암센터 위암연구과 수석연구원"
+    },
+    {
+      "date": "2017-03 ~ 2019-01",
+      "content": "국립암센터 암역학연구과 수석연구원"
+    },
+    {
+      "date": "2017-03 ~ 2017-12",
+      "content": "국립암센터 암역학예방연구부 부장"
+    },
+    {
+      "date": "2017-03 ~ 현재",
+      "content": "국립암센터국제암대학원대학교 암관리학과 겸임교수"
+    },
+    {
+      "date": "2019-02 ~ 2023-03",
+      "content": "국립암센터 소화기내과분과 전문의"
+    },
+    {
+      "date": "2019-02 ~ 2021-08",
+      "content": "국립암센터 암역학예방연구부 최고연구원"
+    },
+    {
+      "date": "2021-09 ~ 현재",
+      "content": "국립암센터 암역학연구과 최고연구원"
+    },
+    {
+      "date": "2023-03 ~ 현재",
+      "content": "국립암센터 소화기내과분과 임상교수"
+    }
+  ],
+  "논문": [
+    "Helicobacter pylori Infection and Metachronous Gastric Cancer in Elderly Patients With Gastric Cancer Aged ≥ 75 Years Who Underwent Endoscopic Submucosal Dissection: HELICOBACTER. 30(4):e70068~ (4.3)",
+    "Comparative Efficacy of Potassium-Competitive Acid Blocker-Based Triple Therapy with Tegoprazan versus Vonoprazan for Helicobacter pylori Eradication: A Randomized, Double-Blind, Active-Controlled Pilot Study: GUT AND LIVER. :~ (3.2)",
+    "A Machine Learning Risk Prediction Model for Gastric Cancer with SHapley Additive exPlanations: CANCER RESEARCH AND TREATMENT. :~ (4.1)",
+    "Cost Utility Analysis of National Cancer Screening Program for Gastric Cancer in Korea: A Markov Model Analysis: JOURNAL OF KOREAN MEDICAL SCIENCE. 40(6):e43~ (3)",
+    "Gene content, phage cycle regulation model and prophage inactivation disclosed by prophage genomics in the Helicobacter pylori Genome Project: GUT MICROBES. 16(1):2379440~ (12.2)",
+    "Overexpression of heat shock protein 47 is associated with increased proliferation and metastasis in gastric cancer: Genomics & Informatics. 22:6~ (0)",
+    "Dietary mercury intake, the IL23R rs10889677 polymorphism, and the risk of gastric cancer: a hospital-based case-control study: EPIDEMIOLOGY AND HEALTH. 46:e2024051~ (2.2)",
+    "A Modified eCura System to Stratify the Risk of Lymph Node Metastasis in Undifferentiated-Type Early Gastric Cancer After Endoscopic Resection: JOURNAL OF GASTRIC CANCER. 24(2):172~184 (3.2)",
+    "The Helicobacter pylori Genome Project: insights into H. pylori population structure from analysis of a worldwide collection of complete genomes: NATURE COMMUNICATIONS. 14(1):8184~ (16.6)",
+    "Functional Annotation and Gene Set Analysis of Gastric Cancer Risk Loci in a Korean Population: CANCER RESEARCH AND TREATMENT. 56(1):191~198 (4.6)",
+    "Exploring Connections between Oral Microbiota, Short-Chain Fatty Acids, and Specific Cancer Types: A Study of Oral Cancer, Head and Neck Cancer, Pancreatic Cancer, and Gastric Cancer: CANCERS. 15(11):2898~ (5.2)",
+    "External Validation of the eCura System for Undifferentiated-Type Early Gastric Cancer with Noncurative Endoscopic Resection: GUT AND LIVER. 17(4):537~546 (3.4)",
+    "Risk of upper gastrointestinal cancer and death in persons with negative screening results: results from the National Cancer Screening Program in South Korea: GASTRIC CANCER. 26:580~589 (7.4)",
+    "Endoscopic submucosal dissection for papillary early gastric carcinoma Insights from a large-scale analysis of post-gastrectomy pathology specimens: MEDICINE. 101(50):e32085~ (1.817)",
+    "Interaction between dietary potassium intake and TNF-a rs1800629 genetic polymorphism in gastric cancer risk: a case-control study conducted in Korea: BRITISH JOURNAL OF NUTRITION. :1~8 (4.125)",
+    "Gastric cancer risk is reduced by predominantly antioxidant factors in the oxidative balance: a hospital-based case-control study: EPIDEMIOLOGY AND HEALTH. Online:Published (5.919)",
+    "Current Evidence for a Paradigm Shift in Gastric Cancer Prevention From Endoscopic Screening to Helicobacter pylori Eradication in Korea: JOURNAL OF GASTRIC CANCER. 22(3):169~183 (3.197)",
+    "헬리코박터 파일로리 제균 치료의 요양급여 인정 기준: Korean Journal of Helicobacter and Upper Gastrointestinal Research. 22(3):235~239 (0)",
+    "위암 검진사업 현황: Journal of the Korean Medical Association. 65(5):250~257 (0)",
+    "A Comprehensive and Comparative Review of Global Gastric Cancer Treatment Guidelines: JOURNAL OF GASTRIC CANCER. 22(1):3~23 (3.197)",
+    "Comparison of long?term outcomes of endoscopic submucosal dissection and surgery for undifferentiated?type early gastric cancer meeting the expanded criteria: a systematic review and meta?analysis: SURGICAL ENDOSCOPY AND OTHER INTERVENTIONAL TECHNIQUES. 36(6):3686~3697 (3.453)",
+    "The association of dietary fibre intake and the IL13 rs20541 polymorphism with the risk of gastric cancer: a case-control study in Korea: EUROPEAN JOURNAL OF CLINICAL NUTRITION. 76(7):1031~1037 (4.884)",
+    "An Approach to the Primary and Secondary Prevention of Gastric Cancer in the United States: CLINICAL GASTROENTEROLOGY AND HEPATOLOGY. Online:Published (11.382)",
+    "Metabolic Effects of Gastrectomy and Duodenal Bypass in Early Gastric Cancer Patients with T2DM: A Prospective Single-Center Cohort Study: JOURNAL OF CLINICAL MEDICINE. 10(17):4008~ (4.242)",
+    "Effect of the interaction between dietary patterns and the gastric microbiome on the risk of gastric cancer: NUTRIENTS. 13(8):2692~ (5.719)",
+    "The association of dietary iron intake and the transferrin receptor (TFRC) rs9846149 polymorphism with the risk of gastric cancer: a case-control study conducted in Korea: NUTRIENTS. 13(8):2600~ (5.719)",
+    "Effectiveness of a Novel Covered Stent without External Thread Fixation for Anastomotic Leakage after Total or Proximal Gastrectomy for Gastric Cancer: CANCERS. 13(15):3720~ (6.639)",
+    "Association between bacteria other than Helicobacter pylori and the risk of gastric cancer: HELICOBACTER. 26(5):e12836~ (5.753)",
+    "Efficacy of endoscopic management for anastomotic leakage after gastrectomy in patients with gastric cancer: SURGICAL ENDOSCOPY AND OTHER INTERVENTIONAL TECHNIQUES. Online:Published (4.584)",
+    "Riboflavin intake, MTRR genetic polymorphism (rs1532268) and gastric cancer risk in a Korean population: a case-control study: BRITISH JOURNAL OF NUTRITION. :1~8 (3.718)",
+    "Risk factors for lymph node metastasis in early gastric cancer without lymphatic invasion after endoscopic submucosal dissection: EJSO. Online:Published (4.424)",
+    "Establishing Machine Learning Models to Predict Curative Resection in Early Gastric Cancer with Undifferentiated Histology: Development and Usability Study: JOURNAL OF MEDICAL INTERNET RESEARCH. 23(4):e25053~ (5.428)",
+    "Feasibility of Non-Exposure Simple Suturing Endoscopic Full-Thickness Resection in Comparison with Laparoscopic Endoscopic Cooperative Surgery for Gastric Subepithelial Tumors: Results of Two Independent Prospective Trials: CANCERS. 13(8):1858~ (6.639)",
+    "Long term outcomes of endoscopic resection followed by additional surgery after non?curative resection in undiferentiated?type early gastric cancer: a nationwide multi?center study: SURGICAL ENDOSCOPY AND OTHER INTERVENTIONAL TECHNIQUES. Online:Published (4.584)",
+    "Long-term Outcomes of Undifferentiated-Type Early Gastric Cancer with Positive Horizontal Margins after Endoscopic Resection: GUT AND LIVER. Online:Published (4.519)",
+    "Prediction model for curative endoscopic submucosal dissection of undifferentiated-type early gastric cancer: SURGICAL ENDOSCOPY AND OTHER INTERVENTIONAL TECHNIQUES. Online:Published (4.584)",
+    "Ten-day bismuth-containing quadruple therapy versus 7-day proton pump inhibitor-clarithromycin containing triple therapy as first-line empirical therapy for the Helicobacter pylori infection in Korea: a randomized open-label trial: BMC GASTROENTEROLOGY. 21(1):95~ (3.067)",
+    "Eradication Rates of Clarithromycin Triple Therapy in Korea: A Systematic Review and Meta-analysis: The Korean Journal of Helicobacter and Upper Gastrointestinal Research. Online:Published (0)",
+    "Gastric cancer risk prediction using an epidemiological risk assessment model and polygenic risk score: CANCERS. 13(4):876~ (6.639)",
+    "Antioxidant-rich diet, GSTP1 rs1871042 polymorphism, and gastric cancer risk in a hospital-based case-control study: FRONTIERS IN ONCOLOGY. 10:596355~ (6.244)",
+    "A 10- or 14-day Bismuth-containing Quadruple Therapy as a First-line Helicobacter pylori Eradication Therapy: A Systematic Review and Meta-analysis: The Korean Journal of Helicobacter and Upper Gastrointestinal Research. Online:Published (0)",
+    "Salvage Regimens after Failure of Previous Helicobacter pylori Eradication Therapy: A Systematic Review and Meta-analysis: The Korean Journal of Helicobacter and Upper Gastrointestinal Research. Online:Published (0)",
+    "Evidence-Based Guidelines for the Treatment of Helicobacter pylori Infection in Korea 2020: GUT AND LIVER. 15(2):168~195 (4.519)",
+    "Upregulation of LAMB1 via ERK/c-Jun Axis Promotes Gastric Cancer Growth and Motility: INTERNATIONAL JOURNAL OF MOLECULAR SCIENCES. 22(2):626~ (5.924)",
+    "Risk factors of lymph node metastasis after non-curative endoscopic resection of undifferentiated-type early gastric cancer: GASTRIC CANCER. 24(1):168~178 (7.088)",
+    "Dietary patterns and gastric cancer risk in a Korean population: a case-control study: EUROPEAN JOURNAL OF NUTRITION. 60(1):389~397 (4.664)",
+    "Effect of Helicobacter pylori treatment on the long-term mortality in patients with type 2 diabetes: KOREAN JOURNAL OF INTERNAL MEDICINE. Online:Published (2.751)",
+    "Comparison between endoscopic submucosal resection and surgery for the curative resection of undifferentiated?type early gastric cancer within expanded indications: a nationwide multi?center study: GASTRIC CANCER. Online:Published (7.088)",
+    "Evidence-based Guidelines for the Treatment of Helicobacter pylori Infection in Korea: 2020 Revised Editionhttp://app.ncc.re.kr/MIS/IMAGES/PER/BTN/btn_CreateEstimation_02.gif: The Korean Journal of Helicobacter and Upper Gastrointestinal Research. Online:Published (0)",
+    "Alterations in gastric microbial communities are associated with risk of gastric cancer in a Korean population: a case-control study: CANCERS. 12(9):2619~ (6.126)",
+    "TNF genetic polymorphism (rs1799964) may modify the effect of the dietary inflammatory index on gastric cancer: a case-control study: SCIENTIFIC REPORTS. 10(1):14590~ (3.998)",
+    "Clinical outcomes of endoscopic resection for undifferentiated intramucosal early gastric cancer larger than 2 cm: GASTRIC CANCER. Online:Published (7.088)",
+    "A Summary of the 2020 Gastric Cancer Summit at Stanford University.: GASTROENTEROLOGY. 159(4):1221~1226 (17.373)",
+    "Non-exposure Simple Suturing Endoscopic Full-thickness Resection with Sentinel Basin Dissection in Patients with Early Gastric Cancer : the SENORITA 3 Pilot Study: JOURNAL OF GASTRIC CANCER. 20(3):245~255 (1.989)",
+    "Family History of Gastric Cancer and Helicobacter pylori Treatment (letter): NEW ENGLAND JOURNAL OF MEDICINE. 382(22):2170~2172 (74.699)",
+    "Identification of Dietary Pattern Networks Associated with Gastric Cancer Using Gaussian Graphical Models: A Case-Control Study: CANCERS. 12(4):1044~ (6.126)",
+    "Clinicopathologic Features of Submucosal Papillary Gastric Cancer Differ from Those of Other Differentiated-Type Histologies: GUT AND LIVER. Online:Published (3.141)",
+    "Evaluation of Submucosal or Lymphovascular Invasion Detection Rates in Early Gastric Cancer Based on Pathology Section Interval: JOURNAL OF GASTRIC CANCER. 20(2):165~175 (1.989)",
+    "Comparison of the performance of risk scoring systems for tumor bleeding in patients with inoperable gastric cancer: ENDOSCOPY. Online:Published (7.341)",
+    "Family History of Gastric Cancer and Helicobacter pylori Treatment: NEW ENGLAND JOURNAL OF MEDICINE. 382(5):427~436 (74.699)",
+    "The Suggestion of Revised Criteria for Endoscopic Resection of Differentiated-Type Submucosal Gastric Cancer.: Ann Surg Oncol. Online:Published (3.681)",
+    "Association between the relative abundance of gastric microbiota and the risk of gastric cancer: a case-control study: SCIENTIFIC REPORTS. Online:Published (4.011)",
+    "Ten-Day Concomitant, 10-Day Sequential, and 7-Day Triple Therapy as First-Line Treatment for Helicobacter pylori Infection: A Nationwide Randomized Trial in Korea: Gut and Liver. 13(5):531~540 (2.968)",
+    "Online registry for nationwide database of Helicobacter pylori eradication in Korea: Correlation of antibiotic use density with eradication success: Helicobacter. 24(5):e12646~e12646 (3.352)",
+    "Effect of Helicobacter pylori Treatment on Long-term Mortality in Patients with Hypertension: GUT AND LIVER. Online:Published (2.968)",
+    "Effect of gastrectomy on blood pressure in early gastric cancer survivors with hypertension: SUPPORTIVE CARE IN CANCER. 27(6):2237~2245 (2.676)",
+    "Genome-wide Association of Genetic Variation in the PSCA Gene with Gastric Cancer Susceptibility in a Korean Population: CANCER RESEARCH AND TREATMENT. 51(2):748~757 (3.23)",
+    "The distribution pattern of metastatic lymph nodes after non-curative endoscopic resection in early gastric cancer: JOURNAL OF SURGICAL ONCOLOGY. 118(8):1257~1263 (2.886)",
+    "Association between dietary cadmium intake and early gastric cancer risk in a Korean population: a case-control study: European Journal of Nutrition. Online:Published (4.423)",
+    "Body mass index and mortality in patients with gastric cancer: a large cohort study.: Gastric Cancer. 21(6):913~924 (5.045)",
+    "Physical Activity and Gastric Cancer Risk in Patients with and without Helicobacter pylori Infection in A Korean Population: A Hospital-Based Case-Control Study: CANCERS. 10(10):1~1 (5.326)",
+    "Dietary carotenoids intake and the risk of gastric cancer: a case-control study in Korea: Nutrients. 10(8):e1031~e1031 (4.196)",
+    "Genome-wide profiling of normal gastric mucosa identifies Helicobacter pylori- and cancer-associated DNA methylome changes: International Journal of Cancer. 143(3):597~609 (7.36)",
+    "Long-Term Clinical Outcomes of Endoscopic Submucosal Dissection in Patients with Early Gastric Cancer: A Prospective Multicenter Cohort Study: Gut and Liver. 12(4):402~410 (2.849)",
+    "Helicobacter pylori and Preventin of Gastric Cancer: THE NEW ENGLAND JOURNAL OF MEDICINE. 378(23):2244~2245 (79.26)",
+    "Prevalence and Implications of Bone Marrow Involvement in Patients with Gastric Mucosa-Associated Lymphoid Tissue Lymphoma: Gut and Liver. 12(3):278~287 (2.849)",
+    "Helicobacter pylori Therapy for the Prevention of Metachronous Gastric Cancer: THE NEW ENGLAND JOURNAL OF MEDICINE. 378(12):1085~1095 (79.26)",
+    "Dietary n-3 and n-6 polyunsaturated fatty acids, the FADS gene, and the risk of gastric cancer in a Korean population: Scientific reports. 8(1):3823~3823 (4.122)",
+    "Effect of total number of harvested lymph nodes on survival outcomes after curative resection for gastric adenocarcinoma: findings from an eastern high-volume gastric cancer center: BMC CANCER. 18(1):73~73 (3.288)",
+    "Three-year interval for endoscopic screening may reduce the mortality in patients with gastric cancer: Surgical endoscopy. 33(3):861~869 (3.117)",
+    "Non-exposure simple suturing endoscopic full-thickness resection (NESS-EFTR) versus laparoscopic wedge resection: a randomized controlled trial in a porcine model: Surgical endoscopy. 32(5):2274~2280 (3.747)",
+    "Serial intermediate-term quality of life comparison after endoscopic submucosal dissection versus surgery in early gastric cancer patients.: Surgical Endoscopy. 32(4):2114~2122 (3.747)",
+    "Factors to improve the interobserver agreement for gastric atrophy and intestinal metaplasia: consensus of definition and criteria: Histopathology. 72(5):838~845 (3.523)",
+    "Recovery of Food Intake after Gastrectomy for Gastric Cancer: Based on a Large-Scale Gastric Cancer Cohort: Digestive Surgery. 35(3):220~229 (1.644)",
+    "Effect of biopsy site on detection of gastric cancer high-risk groups by OLGA and OLGIM stages: Helicobacter. 22(6):1~1 (3.429)",
+    "Concomitant, sequential, and 7-day triple therapy in first-line treatment of Helicobacter pylori infection in Korea: study protocol for a randomized controlled trial.: Trials. 18(1):549~549 (1.969)",
+    "Dietary inflammatory index and the risk of gastric cancer in a Korean population: Oncotarget. 8:85452~85462 (5.168)",
+    "Effects of soy product intake and interleukin genetic polymorphisms on early gastric cancer risk in Korea: a case-control study: Cancer Research and Treatment. 49(4):1044~1056 (3.772)",
+    "Alpha-fetoprotein is a significant prognostic factor for gastric cancer:Results from a propensity score matching analysis after curative resection: European Journal of Surgical Oncology. 43(8):1542~1549 (3.522)",
+    "Is the Reinitiation of Antiplatelet Agents Safe at 1 Week after Gastric Endoscopic Submucosal Dissection? Assessment of Bleeding Risk Using the Forrest Classification: Gut and Liver. 11(4):489~496 (2.663)",
+    "Botulinum Toxin Injection for the Treatment of Delayed Gastric Emptying Following Pylorus-Preserving Gastrectomy: an Initial Experience: Journal of Gastric Cancer. 17(2):173~179 (0)",
+    "Effect of a Proton Pump Inhibitor on Tumor Bleeding Prevention in Unresectable Gastric Cancer Patients: a Double-Blind, Randomized, Placebo-Controlled Trial: Journal of Gastric Cancer. 17(2):120~131 (0)",
+    "Effectiveness of the Korean National Cancer Screening Program in Reducing Gastric Cancer Mortality: Gastroenterology. 152(6):1319~1328 (18.392)",
+    "Effect of abdominal visceral fat on the development of new erosive oesophagitis: a prospective cohort study.: European journal of gastroenterology & hepatology.. 29(4):388~395 (1.968)",
+    "The Effect of Endoscopic Resection on Short-Term Surgical Outcomes in Patients with Additional Laparoscopic Gastrectomy after Non-Curative Resection for Gastric Cancer: Journal of Gastric Cancer. 17(1):33~42 (0)",
+    "Effects of alcohol consumption, ALDH2 rs 671 polymorphism, and Helicobacter pylori infection on the gastric cancer risk in a Korean population: Oncotarget. 8(4):6630~6641 (5.008)",
+    "Quality of Life after Endoscopic Submucosal Dissection for Early Gastric Cancer: a Prospective Multicenter Cohort Study.: Gut and Liver. 11(1):87~92 (2)",
+    "Survival benefit of additional surgery after non-curative endoscopic resection in patients with early gastric cancer.: Gastrointest Endosc. 85(1):155~163 (6.217)",
+    "Different effects of dietary factors on reflux esophagitis and non-erosive reflux disease in 11,690 Korean subjects: Journal of Gastroenterology. Online:Published (4.414)",
+    "Variations in TAS1R taste receptor gene family modify food intake and gastric cancer risk in a Korean population: Molecular Nutrition and Food Research. 60(11):2433~2445 (4.551)",
+    "Practical intraoperative pathologic evaluation of sentinel lymph nodes during sentinel node navigation surgery in gastric cancer patients e Proposal of the pathologic protocol for the upcoming SENORITA trial: Surgical Oncology. 25(3):139 ~146 (3.514)",
+    "Short-Term Outcomes of Endoscopic Submucosal Dissection in Patients with Early Gastric Cancer: A Prospective Multicenter Cohort Study.: Gut and Liver. 10(5):739~748 (2)",
+    "Effect of dietary vitamin C on gastric cancer risk in the Korean population: World Journal of Gastroenterology. 22(27):6257~6267 (2.787)",
+    "Different survival outcomes after curative R0-resection for Eastern Asian and European gastric cancer: Results from a propensity score matched analysis comparing a Korean and a German specialized center: Medicine (Baltimore). 95(28):e4261~e4261 (2.133)",
+    "Genetic Variation in the TAS2R38 Bitter Taste Receptor and Gastric Cancer Risk in Koreans: Scientific reports. 6:26904~26904 (5.228)",
+    "Discrepancy between Clinical and Final Pathological Evaluation Findings in Early Gastric Cancer Patients Treated with Endoscopic Submucosal Dissection: Journal of Gastric Cancer. 16:34~42 ()",
+    "Dietary folate, one-carbon metabolism-related genes, and gastric cancer risk in Korea: Molecular Nutrition and Food Research. 60(2):337~345 (4.551)",
+    "Therapeutic Decision-Making Using Endoscopic Ultrasonography in Endoscopic Treatment of Early Gastric Cancer.: Gut and Liver. 10(1):42~50 (2)",
+    "Lymph node metastasis risk according to the depth of invasion in early gastric cancer confined to the mucosal layer.: Gastric Cancer. 19(3):860~868 (3.719)",
+    "Long-term low-dose Aspirin use Reduces Gastric Cancer Incidence: A Nationwide Cohort Study.: Cancer Research and Treatment. 48(2):798~805 (3.318)",
+    "A phase II study of perioperative S-1 combined with weekly docetaxel in patients with locally advanced gastric carcinoma: clinical outcomes and clinicopathological and pharmacogenetic predictors for survival.: Gastric Cancer. 19(2):586~596 (3.719)",
+    "External Validation of an Eastern Asian Nomogram for Survival Prediction After Gastric Cancer Surgery in a European Patient Cohort: Medicine. 94:e2406~e2406 (5.723)",
+    "Historical Perspective of Helicobacter pylori Treatment in Korea: The Korean Journal of Helicobacter and Upper Gastrointestinal Research. 15(4):211~221 (0)",
+    "Nonexposure endolaparoscopic full-thickness resection with simple suturing technique: Endoscopy. 47(12):1171~1174 (5.104)",
+    "Effect of Helicobacter pylori Eradication on Long-Term Survival After Distal Gastrectomy for Gastric Cancer.: Cancer Research and Treatment. Online:Published (3.318)",
+    "Risk Factors for Tuberculosis in Patients with Early Gastric Cancer: Is Gastrectomy a Significant Risk Factor for Tuberculosis?: Chest. 148(3):774~783 (7.483)",
+    "Postgastrectomy pharmacokinetic changes of S-1 in patients with localized advanced gastric cancer.: The Journal of Clinical Pharmacology. 55(8):926~935 (2.475)",
+    "Targeting Notch signaling by gamma-secretase inhibitor I enhances the cytotoxic effect of 5-FU in gastric cancer: Clinical & experimental metastasis. 32:593~603 (3.491)",
+    "Prediction Model for Gastric Cancer Incidence in Korean Population: PloS one [electronic resource]. 10(7):0132613~0132613 (3.234)",
+    "Robot-Assisted Gastrectomy for Early Gastric Cancer: Is It Beneficial in Viscerally Obese Patients Compared to Laparoscopic Gastrectomy?: World journal of surgery. 39(7):1789~1797 (2.642)",
+    "Risk of Lymph Node Metastasis in Differentiated Type Mucosal Early Gastric Cancer Mixed with Minor Undifferentiated Type Histology: Annals of surgical oncology. 22(6):1813~1819 (3.93)",
+    "Optimal submucosal invasion of early gastric cancer for endoscopic resection.: Annals of surgical oncology. 22(6):1806~1812 (3.93)",
+    "Individual having a parent with early-onset gastric cancer may need screening at younger age: World journal of gastroenterology. 21(15):4592~4598 (2.369)",
+    "Long-term survival after endoscopic resection versus surgery in early gastric cancers.: Endoscopy. 47(4):293~301 (5.104)",
+    "The Effect of Abdominal Visceral Fat, Circulating Inflammatory Cytokines, and Leptin Levels on Reflux Esophagitis: Journal of Neurogastroenterology and Motility. 21(2):247~254 (2.296)",
+    "Endoscopic management of tumor bleeding from inoperable gastric cancer.: Clinical endoscopy. 48(2):121~127 (0)",
+    "Cost Comparison between Surgical Treatments and Endoscopic Submucosal Dissection in Patients with Early Gastric Cancer in Korea: Gut and liver. 9(2):174~180 (1.81)",
+    "Peroxisome proliferator-activated receptor γ upregulates galectin-9 and predicts prognosis in intestinal-type gastric cancer.: International journal of cancer. 136(4):810~820 (5.085)",
+    "Effect of endoscopy screening on stage at gastric cancer diagnosis: results of the National Cancer Screening Programme in Korea: British journal of cancer. 112(3):608~612 (4.836)",
+    "Long-term outcome comparison of endoscopic resection and surgery in early gastric cancer meeting the absolute indication for endoscopic resection: Gastrointestinal endoscopy. 81(2):333~341 (5.369)",
+    "Improvement of diabetes and hypertension after gastrectomy: A nationwide cohort study: World journal of gastroenterology. 21(4):1173~1181 (2.369)",
+    "Biopathologic features and clinical significance of micrometatasis in the lymph node of early gastric cancer: World journal of gastroenterology : WJG.. 21(2):667~674 (2.369)",
+    "Lymph Node Metastases in Esophageal Carcinoma: An Endoscopist's View: Clinical endoscopy. 47(6):523~529 (0)",
+    "Stricture occurring after endoscopic submucosal dissection for esophageal and gastric tumors: Clinical endoscopy. 47(6):516~522 (0)",
+    "Endoscopic gastric cancer screening and surveillance in high-risk groups: Clinical endoscopy. 47(6):497~503 (0)",
+    "Dietary Flavonoids and Gastric Cancer Risk in a Korean Population: Nutrients. 6(11):4961~4973 (3.148)",
+    "Ablation of galectin-3 induces p27(KIP1)-dependent premature senescence without oncogenic stress: Cell death and differentiation. 21(11):1769~1779 (8.385)",
+    "International Digestive Endoscopy Network 2014: Turnpike to the Future: Clinical endoscopy. 47(5):371~382 (0)",
+    "Characteristics of gastric cancer according to Helicobacter pylori infection status: Journal of gastroenterology and hepatology. 29(9):1671~1677 (3.627)",
+    "Highlights from the 50th seminar of the korean society of gastrointestinal endoscopy: Clinical endoscopy. 47(4):285~294 (0)",
+    "The association between Helicobacter pylori status and incidence of metachronous gastric cancer after endoscopic resection of early gastric cancer: Helicobacter. 19(3):194~201 (2.993)",
+    "Unique patterns and proper management of postgastrectomy bleeding in patients with gastric cancer: Surgery. 155(6):1023~1029 (3.105)",
+    "Up-regulation of neogenin-1 increases cell proliferation and motility in gastric cancer: Oncotarget. 5(10):3386~3398 (6.627)",
+    "OLGA and OLGIM stage distribution according to age and Helicobacter pylori status in the Korean population.: Helicobacter. 19(2):81~89 (2.993)",
+    "Proposal of the Surgical Options for Primary Tumor Control During Sentinel Node Navigation Surgery Based on the Discrepancy Between Preoperative and Postoperative Early Gastric Cancer Diagnoses.: Annals of Surgical Oncology. 21(4):1123~1129 (3.943)",
+    "Long-term metformin use reduces gastric cancer risk in type 2 diabetics without insulin treatment: a nationwide cohort study.: Alimentary Pharmacology and Therapeutics. 39(8):854~863 (5.478)",
+    "Genomic profile analysis of diffuse-type gastric cancers: Genome Biology. 15(4):R55~R55 (10.465)",
+    "Endoscopic removal of a migrated coil after embolization of a splenic pseudoaneurysm: a case report: Clinical endoscopy. 47(2):183~187 (0)",
+    "Prognostic Impact of Microscopic Tumor Involved Resection Margin in Advanced Gastric Cancer Patients after Gastric Resection: World Journal of Surgery. 38(2):439~446 (2.348)",
+    "Interobserver agreement in using magnifying narrow band imaging system: Clinical endoscopy. 47(1):1~2 (0)",
+    "MicroRNA 135a suppresses lymph node metastasis through down-regulation of ROCK1 in early gastric cancer: PLoS One. 9(1):e85205~e85205 (3.534)",
+    "Outcomes of second self-expandable metallic stent insertion for malignant gastric outlet obstruction: Surgical Endoscopy. 28(1):281~288 (3.313)",
+    "Clinical significance of intraperitoneal air on computed tomography scan after endoscopic submucosal dissection in patients with gastric neoplasms: Surgical Endoscopy. 28(1):307~313 (3.313)",
+    "Current evidence of effects of Helicobacter pylori eradication on prevention of gastric cancer: The Korean journal of internal medicine. 28(5):525~537 (0)",
+    "Effects of Polymorphisms of Innate Immunity Genes and Environmental Factors on the Risk of Noncardia Gastric Cancer: Cancer Research and Treatment. 45(4):313~324 (1.962)",
+    "Staging of intestinal- and diffuse-type gastric cancers with the OLGA and OLGIM staging systems: Alimentary Pharmacology & Therapeutics. 38(10):1292~1302 (4.548)",
+    "Upregulation of adenylate cyclase 3 (ADCY3) increases the tumorigenic potential of cells by activating the CREB pathway: Oncotarget. 4(10):1791~1803 (6.636)",
+    "Association of smoking history with cancer recurrence and survival in stage III-IV male gastric cancer patients.: Cancer Epidemiol Biomarkers Prevention. 22(10):1805~1812 (4.559)",
+    "Commentary: H. pylori eradication therapy after subtotal gastrectomy for gastric cancer - can the qualitative be quantified? Authors' reply: Alimentary Pharmacology and Therapeutics. 38(8):991~991 (4.548)",
+    "Outcome of endoscopic therapy for cancer bleeding in patients with unresectable gastric cancer.: Journal of Gastroenterology and Hepatology. 28(9):1489~1495 (3.325)",
+    "Randomised clinical trial: the effects of Helicobacter pylori eradication on glandular atrophy and intestinal metaplasia after subtotal gastrectomy for gastric cancer: Alimentary pharmacology and therapeutics. 38(5):477~489 (4.548)",
+    "The risk factors for lymph node metastasis in early gastric cancer patients who underwent endoscopic resection: is the minimal lymph node dissection applicable? A retrospective study: Surgical Endoscopy. 27:3247~3253 (3.427)",
+    "Recapitulation of previous genome-wide association studies with two distinct pathophysiological entities of gastric cancer in the Korean population: Journal of human genetics. 58(4):233~235 (2.365)",
+    "Are there great savings with rapid urease test by one-plus-one?: Clinical endoscopy. 45(4):341~342 (0)",
+    "Argon plasma coagulation is safe and effective for treating smaller gastric lesions with low-grade dysplasia: a comparison with endoscopic submucosal dissection.: Surgical Endoscopy. 27(4):1211~1218 (3.427)",
+    "Phase 3 Trial of Postoperative Chemotherapy Alone Versus Chemoradiation Therapy in Stage III-IV Gastric Cancer Treated With R0 Gastrectomy and D2 Lymph Node Dissection.: International journal of radiation oncology, biology, physics.. 84:e585~e592 (4.105)",
+    "Performance of Different Gastric Cancer Screening Methods in Korea: A Population-Based Study: PLOS ONE. 7(11):e50041~e50041 (4.092)",
+    "Acceleration of Gastric Tumorigenesis Through MKRN1-Mediated Posttranslational Regulation of p14ARF: journal of the national cancer institute. 104:1660~1672 (13.757)",
+    "Differential gene expression pattern in early gastric cancer by an integrative systematic approach: International Journal of Oncology. 41(5):1675~1682 (2.399)",
+    "Association of the interval between endoscopies with gastric cancer stage at diagnosis in a region of high prevalence: Cancer. 118(20):4953~4960 (4.771)",
+    "Association Study between Folate Pathway Gene Single Nucleotide Polymorphisms and Gastric Cancer in Koreans: Genomics & Informatics. 10(3):184~193 (0)",
+    "The influence of hospital volume and surgical treatment delay on long-term survival after cancer surgery: Annals of Oncology. 23(10):2731~2737 (6.425)",
+    "Effect of chemotherapy on the outcome of self-expandable metallic stents in gastric cancer patients with malignant outlet obstruction.: Endoscopy. 44(9):807~812 (5.21)",
+    "Reply to K. Hemminki et al and V. Formica et al: Journal of Clinical Oncology. 30(25):3152~3153 (18.372)",
+    "Upper Endoscopy in International Digestive Endoscopy Network 2012: Towards Upper End of Quality.: Clinical endoscopy. 45(3):217~219 (0)",
+    "Overexpression of IFITM1 Has Clinicopathologic Effects on Gastric Cancer and Is Regulated by an Epigenetic Mechanism: AMERICAN JOURNAL OF PATHOLOGY. 181(1):43~52 (4.89)",
+    "Gastric Preparation for Upper Endoscopy: Clinical endoscopy.. 45(2):113~114 (0)",
+    "Preoperative plasma fibrinogen level is a useful predictor of adjacent organ involvement in patients with advanced gastric cancer: Journal of Gastric Cancer. 12(2):81~87 (0)",
+    "Robot-assisted total gastrectomy is comparable with laparoscopically assisted total gastrectomy for early gastric cancer: Surgical endoscopy and other interventional techniques. 26(5):1377~1381 (4.013)",
+    "Association of Family History With Cancer Recurrence and survival in Patients With Gastric Cancer: Journal of Clinical Oncology. 30(7):701~708 (18.372)",
+    "Survival analysis of gastric cancer patients with tumor thrombus in the portal vein.: Journal of Surgical Oncology. 105(3):310~315 (2.1)",
+    "Aspirin use and bleeding risk after endoscopic submucosal dissection in patients with gastric neoplasms.: Endoscopy. 44(2):114~121 (5.21)",
+    "Effects of Interleukin-10 Polymorphisms, Helicobacter pylori Infection, and Smoking on the Risk of Noncardia Gastric Cancer: PLoS ONE. 7(1):e29643~e29643 (4.092)",
+    "Prostate Stem Cell Antigen, a Presumable Organ-Dependent Tumor Suppressor Gene, Is Down-Regulated in Gallbladder Carcinogenesis: Genes, Chromosomes & Cancer. 51(1):30~41 (3.306)",
+    "Is the New Seventh AJCC/UICC Staging System Appropriate for Patients with Gastric Cancer?: Journal of the American College of Surgeons. 214(1):88~96 (4.549)",
+    "The lymphangiogenic factor SOX 18: A key indicator to stage gastric tumor progression.: International journal of cancer.. 131(1):41~48 (5.444)",
+    "Pretreatment risk factors for multiple gastric cancer and missed lesions: Journal of Surgical Oncology. 105(8):813~817 (2.1)",
+    "Comparison of surgical performance and short-term clinical outcomes between laparoscopic and robotic surgery in distal gastric cancer.: European journal of surgical oncology. 38(1):57~63 (2.499)",
+    "TOFSIMS-P: A Web-Based Platform for Analysis of Large-Scale TOF-SIMS Data: analytical chemistry. 83:9298~9305 (5.874)",
+    "Galectin-3 germline variant at position 191 enhances nuclear accumulation and activation of β-catenin in gastric cancer: Clinical Experimental Metastasis. 28:743~750 (4.113)",
+    "miRNA signature associated with outcome of gastric cancer patients following chemotherapy.: BMC Medical Genomics.. 4(1):e79~e79 (3.766)",
+    "Is the sentinel node biopsy clinically applicable for limited lymphadenectomy and modified gastric resection in gastric cancer? A meta-analysis of feasibility studies.: Journal of Surgical Oncology. 104(6):578~584 (2.428)",
+    "Galectin-3 Facilitates Cell Motility in Gastric Cancer by Up-Regulating Protease-Activated Receptor-1(PAR-1) and Matrix Metalloproteinase-1(MMP-1).: PLoS One. 6(9):e25103~e25103 (4.411)",
+    "Performance of gastric cancer screening by endoscopy testing through the National Cancer Screening Program of Korea: Cancer Science. 102:1559~1564 (3.846)",
+    "Helicobacter pylori infection and histological changes in siblings of young gastric cancer patients: Journal of Gastroenterology and Hepatology. 26:1157~1163 (2.41)",
+    "Distinctions in gastric cancer gene expression signatures derived from laser capture microdissection versus histologic macrodissection.: BMC Medical Genomics. Online:Published (3.766)",
+    "Risk of high-grade dysplasia or carcinoma in gastric biopsy-proven low-grade dysplasia: an analysis using the Vienna classification.: Endoscopy. 43(6):465~471 (6.096)",
+    "Self-expandable metallic stent placement for malignant obstruction in patients with locally recurrent gastric cancer: Surgical Endoscoy. 25:1505~1513 (3.436)",
+    "Phase II study of a triplet regimen of S-1 combined with irinotecan and oxaliplatin in patients with metastatic gastric cancer: clinical and pharmacogenetic results.: Ann Oncol. 22(4):890~896 (6.452)",
+    "CYP2A6 and ERCC1 polymorphisms correlate with efficacy of S-1 plus cisplatin in metastatic gastric cancer patients.: British Journal of Cancer.. 104(7):1126~1134 (4.831)",
+    "A Functional Single Nucleotide Polymorphisms in Mucin 1, at Chromosome 1q22, Determines Susceptibility to Diffuse-Type Gastric Cancer: Gastroenterology. 140(3):892~902 (12.032)",
+    "A gene expression signature of acquired chemoresistance to Cisplatin and Fluorouracil combination chemotherapy in gastric cancer patients.: PLOS ONE. 6(2):e16694~e16694 (4.411)",
+    "Oncologic Effectiveness of Regular Follow-up to Detect Recurrence After Curative Resection of Gastric Cancer: Annals of Surgical Oncology. 18(2):358~364 (4.182)",
+    "Helicobacter pylori Seropositivity is Associated with Gastric Cancer Regardless of Tumor Subtype in Korea: Gut and Liver. 4:466~474 (0.167)",
+    "Abdominal Visceral Adipose Tissue Volume Is Associated With Increased Risk of Erosive Esophagitis in Men and Women.: Gastroenterology. 139(6):1902~1911 (12.899)",
+    "Risk Factors Associated with Gastric Cancer in Patients with a Duodenal Ulcer: Helicobacter. 15(6):516~523 (2.851)",
+    "predictors of timing and patterns of recurrence after curative resection for gastric cancer: Digestive Surgery. 27(6):481~486 (1.372)",
+    "Effect of Helicobacter pylori Infection and Its Eradication on Reflux Esophagitis and Reflux Symptoms.: The American journal of gastroenterology. 105(10):2153~2162 (6.012)",
+    "Gastric cancer-specific protein profile identified using endoscopic biopsy samples via MALDI mass spectrometry.: Journal of proteome research. 9(8):4123~4130 (5.132)",
+    "Covered versus uncovered self-expandable metallic stents for palliation of malignant pyloric obstruction in gastric cancer patients: a randomized, prospective study: Gastrointestinal Endoscopy. 72(1):25~32 (6.713)",
+    "Endoscopic submucosal dissection for metachronous tumor in the remnant stomach after distal gastrectomy.: Surgical endoscopy. 24(6):1360~1366 (3.307)",
+    "Identification of valid reference genes for gene expression studies of human stomach cancer by reverse transcription-qPCR: BMC Cancer. 10(1):240~240 (2.736)",
+    "Risk factors for lymph node metastasis in patients with early gastric cancer and signet ring cell histology.: The British journal of surgery. 97(5):732~736 (4.077)",
+    "Prognostic Value of Preoperative Clinical Staging Assessed by Computed Tomography in Resectable Gastric Cancer Patients: A Viewpoint in the Era of Preoperative Treatment.: Annals of surgery. 251(3):428~435 (7.9)",
+    "Galectin-3 Increases Gastric Cancer Cell Motility by Up-Regulating Fascin-1 Expression: Gastroenterology. 138:1035~1045 (12.899)",
+    "Predictive factors for the efficacy of cetuximab plus chemotherapy as salvage therapy in metastatic gastric cancer patients: Cancer Chemotherapy and Pharmacology. 65(3):579~587 (2.654)",
+    "Risk of Hemorrhagic Gastropathy Associated with Colonoscopy Bowel Preparation Using Oral Sodium Phosphate Solution: endoscopy. 42:109~113 (5.545)",
+    "Learning Curve for Identification of Sentinel Lymph Node Based on a Cumulative Sum Analysis in Gastric Cancer: Digestive Surgery. 26:465~470 (1.372)",
+    "Cost-Effectiveness of Eradication of Helicobacter pylori in Gastric Cancer Survivors After Endoscopic Resection of Early Gastric Cancer: Helicobacter. 14:536~544 (2.47)",
+    "Technical feasibility and safety of laparoscopy-assisted total gastrectomy in gastric cancer: a comparative study with laparoscopy-assisted distal gastrectomy.: Journal of surgical oncology. 100:392~395 (2.478)",
+    "Effect of repeated endoscopic screening on the incidence and treatment of gastric cancer in health screenees: European Journal of Gastroenterology & Hepatology. 21(8):855~860 (2.08)",
+    "Developing an Institutional Protocol Guideline for Laparoscopy-Assisted Distal Gastrectomy: Annals of Surgical Oncology. 16(8):2231~6 (3.898)",
+    "Association of CYP2A6 polymorphisms with S-1 plus docetaxel therapy outcomes in metastatic gastric cancer: Pharmacogenomics. 10(7):1147~55 (3.551)",
+    "Preoperative Serum Angiopoietin-2 Levels Correlate with Lymph Node Status in Patients with Early Gastric Cancer: Annals of Surgical Oncology. 16(7):2052~2057 (3.898)",
+    "Endoscopic Clipping of Duodenal Stump Leakage After Billroth II Gastrectomy in Gastric Cancer Patient: Journal of Surgical Oncology. 100:80~81 (2.478)",
+    "Obesity and weight gain as risk factors for erosive oesophagitis in men.: Alimentary pharmacology and therapeutics. 29:1042~1052 (3.71)",
+    "Sentinel Node Mapping and Skip Metastases in Patients with Early Gastric Cancer: Annals of Surgical Oncology. 16:603~608 (3.898)",
+    "Factors associated with detection failure and false-negative sentinel node biopsy findings in gastric cancer: results of prospective single center trials: Journal of Surgical Oncology. 99:137~142 (2.478)",
+    "Effective diameter of balloon dilation for benign esophagojejunal anastomotic stricture after total gastrectomy: Surgical Endoscopy. Online:Published (2.242)",
+    "Biopsy site for detecting Helicobacter pylori infection in patients with gastric cancer: Journal of Gastroenterology and Hepatology. 24(3):469~74 (2.275)",
+    "Improved quality of life outcomes after laparoscopy-assisted distal gastrectomy for early gastric cancer: results of a prospective randomized clinical trial: Annals of Surgery. 248:721~727 (7.446)",
+    "Feasibility of laparoscopic sentinel basin dissection for limited resection in early gastric cancer: Journal of Surgical Oncology. 98:331~335 (2.384)",
+    "Does hyaluronic acid stimulate tumor growth after endoscopic mucosal resection?: Journal of Gastroenterology and Hepatology. 23:1204~1207 (1.673)",
+    "The influence of reconstruction methods on food retention phenomenon in the remnant stomach after a subtotal gastrectomy: Journal of Surgical Oncology. 98:11~14 (2.384)",
+    "Duodenal mucosa-associated lymphoid tissue lymphoma masquerading as an ulcer scar: Endoscopy. 40S2:~ (4.166)",
+    "Surgical complications and the risk factors of laparoscopy-assisted disital gastrectomy in early gastric cancer: Annals of Surgical Oncology. 15:1625~1631 (3.917)",
+    "Endoscopic ultrasound and computed tomography in restaging and predicting prognosis after neoadjuvant chemotherapy in patients with locally advanced gastric cancer.: Cancer. 112:2368~2376 (4.632)",
+    "Genetic variation in PSCA is associated with susceptibility to diffuse-type gastric cancer: Nature Genetics. 40:730~740 (25.556)",
+    "Phase I/II study of S-1 combined with weekly docetaxel in patients with metastatic gastric carcinoma: British Journal of Cancer. 98:1305~11 (4.635)",
+    "Tumor lysis syndrome after capecitabine plus cisplatin treatment in advanced gastric cancer: Journal of Clinical Oncology. 26:1006~1008 (15.484)",
+    "Regulation of IL-18 in Helicobacter pylori infection: The Journal of Immunology. 180:1207~1216 (6.068)",
+    "Synchronous gastric cancer in primary sporadic colorectal cancer patients in Korea.: International Journal of Colorectal Disease. 23:61~65 (1.918)",
+    "Preoperative versus postoperative Helicobacter pylori eradication therapy in gastric cancer patients: a randomized trial: American Journal of Gastroenterology. 103:48~54 (6.101)",
+    "Survival analysis of 904 patients with hepatocellular carcinoma in a hepatitis B virus-endemic area: Journal of Gastroenterology and Hepatology. 23(3):467~473 (1.785)",
+    "Surgical indication for non-curative endoscopic resection in early gastric cancer: Annals of Surgical Oncology. 14:3428~3434 (3.329)",
+    "A phase-II clinical trial of laparoscopy-assisted distal gastrectomy with D2 lymph node dissection for gastric cancer patients: Annals of Surgical Oncology. 14:3148~3153 (3.329)",
+    "Helicobacter pylori environmental interactions: effect of acidic conditions on H. pylori-induced gastric mucosal interleukin-8 production: Cellular Microbiology. 9:2457~2469 (5.293)",
+    "Smoking, alcohol and gastric cancer risk in Korean men: the National Health Insurance Corporation Study: British Journal of Cancer. 97:700~704 (4.459)",
+    "Decisions for extent of gastric surgery in gastric cancer patients; younger patients require more attention than the elderly: Journal of Surgical Oncology. 95:485~490 (2.183)",
+    "Sentinel node biopsy using dye and isotope double tracers in early gastric cancer: Annals of Surgical Oncology. 13:1168~1174 (3.456)",
+    "Phase II study of docetaxel and irinotecan combination chemotherapy in metastatic gastric carcinoma: British Journal of Cancer. 94:1402~1406 (4.115)",
+    "Gastric cancer patients at high-risk of having synchronous cancer: World Journal of Gastroenterology. 12:2588~2592 ()",
+    "Use of a combination of computed tomography and endoscopy to assess the response to 5-fluorouracil/cisplatin and predict survival in gastric cancer: Journal of Gastroenterology. 41:339~346 (1.532)",
+    "The Learning curve for EMR with circumferential mucosal incision in treating intramucosal gastric neoplasm: Gastrointest Endosc. 62:860~865 (3.483)",
+    "Comparative study of the subserosalversus submucosal dye injection method for sentinel node biopsy in gastric cancer: European Journal of Surgical Oncology. 31(9):965~968 (1.882)",
+    "Phase II Study of low-dose docetaxel/fluorouracil/cisplatin in metastatic gastric carcinoma: American Journal of Clinical Oncology. 28:433~438 (1.703)",
+    "Phase II Study of low-dose docetaxel/fluorouracil/cisplatin in metastatic gastric carcinoma: American Journal of Clinical Oncology. 28:433~438 (1.703)",
+    "Dose-volumetric Parameters of Acute Esophageal Toxicity in Patients with Lung Cancer Treated with Three Dimensional Radiotherapy: International Journal of Radiation Oncology Biology Physics. 62:995~1002 (4.297)",
+    "Weekly Docetaxel in Combination With Capecitabine in Patients With Metastatic Gastric Cancer: American Journal of Clinical Oncology. 28:188~194 (1.703)",
+    "The role of hand-assisted laparoscopic distal gastrectomy for distal gastric cancer: Surg Endosc. 0:383~391 (2.122)",
+    "Incresed Expression of Metallothinonein Is Associated with Irinotecan Resistance in Gastric Cancer: Cancer Res. 64:4703~4706 (8.649)",
+    "DNA mociroarray analysis of the correlation between gene expression patterns and acquired resistance to 5-FU/cisplatin in gastric cancer: Biochemical and Biophysical Research Communications. 316:781~789 (2.904)",
+    "Weekly irinotecan in patients with metastatic gastric cancer failing cisplatin-based chemotherapy: Jpn J Clin Oncol. 34:8~13 (0.691)",
+    "Prediction of lymph nodes metastasis by sentinel node biopsy in gastric cancer: Eur J Surg Oncol. 29:895~899 (1.316)",
+    "Effect of inhibition of extracellular signal-regulated kinase 1 and 2 pathway on apoptosis and bcl-2 expression in Helicobacter pylori-infected AGS cells: Infect Immun. 71:830~837 (4.212)",
+    "Preoperative endoscopic clipping: Localizing technique of early gastric cancer: J Surg Oncol. 82:75~77 (1.318)",
+    "Effect of Helicobacter pylori eradication on duodenal ulcer scar in patients with no clinical history of duodenal ulcer.: Alimentary pharmacology & therapeutics. 16:275~280 ()",
+    "Efficacy of low-dose clarithromycin triple therapy and tinidazole-containing triple therapy for Helicobacter pylori eradication.: Alimentary pharmacology & therapeutics. 16:145~151 ()",
+    "Prediction of the Clinical Course of Behcet's Colitis According to Macroscopic Classfication by Colonoscopy: Endoscopy. 32:635~640 ()",
+    "Long-Term Clinical Course and Prognostic Factors in Intestinal Behcet's Disease.: Diseases of the Colon & Rectum. 43:692~700 ()",
+    "The Safety and Efficacy of Transcatheter Arterial Chemoembolization in the Treatment of Patients with Hepatocellular Carcinoma and Main Portal Vein Obstruction. A Prospective Controlled Study.: Cancer. 79:2087~2094 ()"
+  ],
+  "저서": [
+    {
+      "date": "2014",
+      "content": "H. pylori Eradication as a Strategy for Preventing Gastric Cancer, IARC Working Group Reports, No. 8"
+    },
+    {
+      "date": "2013",
+      "content": "위암 100문 100답 개정판"
+    },
+    {
+      "date": "2012",
+      "content": "Self-Expandable Stents in the Gastrointestinal Tract"
+    },
+    {
+      "date": "2011",
+      "content": "김정룡 소화기계 질환"
+    }
+  ],
+  "수상": [
+    {
+      "date": "2012",
+      "content": "최우수 연구자상 : 6편 + IF 57.238 = 63.238"
+    },
+    {
+      "date": "2010",
+      "content": "국가암관리사업유공"
+    },
+    {
+      "date": "2010",
+      "content": "SCI 저작상 우수상 : 6.5점, 7편"
+    }
+  ],
+  "언론": [
+    {
+      "targetDate": "2023.08.16",
+      "type": "언론",
+      "text": "[헬스조선] 위암 환자, 수술 전후 ‘이것’ 관리해야 사망 위험 낮춘다",
+      "url": "https://www.health.chosun.com/site/data/html_dir/2023/08/16/2023081602195.html",
+      "issuer": "헬스조선"
+    },
+    {
+      "targetDate": "2023.07.26",
+      "type": "언론",
+      "text": "[헬스조선] 위암, 헬리코박터균 제균 치료하면 예방된다",
+      "url": "https://www.health.chosun.com/site/data/html_dir/2023/07/26/2023072602296.html",
+      "issuer": "헬스조선"
+    },
+    {
+      "targetDate": "2023.07.25",
+      "type": "언론",
+      "text": "[코메디닷컴] 위암 예방하려면…가족력 확인하고 제균 치료 받아야",
+      "url": "http://www.comedytv.co.kr/news/articleView.html?idxno=26397",
+      "issuer": "코메디닷컴"
+    },
+    {
+      "targetDate": "2023.07.25",
+      "type": "언론",
+      "text": "[헬스조선] [명의] 아시아인, 위암 발병 위험 높은 이유",
+      "url": "https://www.health.chosun.com/site/data/html_dir/2023/07/25/2023072502305.html",
+      "issuer": "헬스조선"
+    },
+    {
+      "targetDate": "2023.07.25",
+      "type": "언론",
+      "text": "[YTN] [YTN24] 위암 가족력 있으면 '헬리코박터균' 없애야",
+      "url": "https://www.ytn.co.kr/_ln/0103_202307251524454949",
+      "issuer": "YTN"
+    },
+    {
+      "targetDate": "2023.07.25",
+      "type": "언론",
+      "text": "[헬스조선] 위암 씨앗 ‘장상피화생’, 위암 예방하려면",
+      "url": "https://www.health.chosun.com/site/data/html_dir/2023/07/25/2023072502211.html",
+      "issuer": "헬스조선"
+    },
+    {
+      "targetDate": "2023.07.25",
+      "type": "언론",
+      "text": "[헬스조선] 위암 예방의 핵심, ‘헬리코박터균 제균’ 아시나요?",
+      "url": "https://www.health.chosun.com/site/data/html_dir/2023/07/25/2023072502189.html",
+      "issuer": "헬스조선"
+    },
+    {
+      "targetDate": "2023.07.25",
+      "type": "언론",
+      "text": "[헬스조선] 위암 예방하려면 ‘이것’부터 확인하세요",
+      "url": "https://www.health.chosun.com/site/data/html_dir/2023/07/25/2023072502167.html",
+      "issuer": "헬스조선"
+    },
+    {
+      "targetDate": "2023.07.25",
+      "type": "언론",
+      "text": "[헬스조선] 위암 환자, ‘이것’ 높으면 사망 위험 2배",
+      "url": "https://www.health.chosun.com/site/data/html_dir/2023/07/25/2023072502135.html",
+      "issuer": "헬스조선"
+    },
+    {
+      "targetDate": "2023.07.25",
+      "type": "언론",
+      "text": "[헬스조선] 위암 예방, ‘이것’만 잘해도 충분하다",
+      "url": "https://www.health.chosun.com/site/data/html_dir/2023/07/25/2023072502111.html",
+      "issuer": "헬스조선"
+    },
+    {
+      "targetDate": "2022.11.11",
+      "type": "언론",
+      "text": "국립암센터 최일주 교수, 대한암예방학회 ‘암예방학술상’ 수상",
+      "url": "http://www.whosaeng.com/139004",
+      "issuer": "후생신보"
+    },
+    {
+      "targetDate": "2022.09.23",
+      "type": "언론",
+      "text": "국립암센터 연구팀, 위암 발생 예측하는 유전자 발견",
+      "url": "https://www.health.chosun.com/site/data/html_dir/2022/09/23/2022092302264.html",
+      "issuer": "헬스조선"
+    },
+    {
+      "targetDate": "2022.08.31",
+      "type": "언론",
+      "text": "국립암센터 최일주 교수, 위암 예방 위한 ‘헬리코박터 제균 치료’ 효과 입증",
+      "url": "https://www.mdtoday.co.kr/news/view/1065579966056739",
+      "issuer": "메디컬투데이"
+    },
+    {
+      "targetDate": "2022.08.31",
+      "type": "언론",
+      "text": "국립암센터 최일주 교수, 위암 예방 위한 헬리코박터 제균 치료 효과 입증",
+      "url": "http://www.whosaeng.com/136934",
+      "issuer": "후생신보"
+    },
+    {
+      "targetDate": "2022.08.31",
+      "type": "언론",
+      "text": "국립암센터 최일주 교수, 위암 예방 위한 헬리코박터 제균 치료 효과 입증",
+      "url": "http://www.khanews.com/news/articleView.html?idxno=213499",
+      "issuer": "병원신문"
+    },
+    {
+      "targetDate": "2022.08.31",
+      "type": "언론",
+      "text": "국립암센터 최일주 교수, 위암 예방 위한 헬리코박터 제균 치료 효과 입증",
+      "url": "http://www.medifonews.com/news/article.html?no=170034",
+      "issuer": "메디포뉴스"
+    },
+    {
+      "targetDate": "2022.08.31",
+      "type": "언론",
+      "text": "국립암센터 최일주 교수, 위암 예방 위한 헬리코박터 제균 치료 효과 입증",
+      "url": "http://www.pharmstoday.com/news/articleView.html?idxno=220802",
+      "issuer": "메디팜스투데이"
+    },
+    {
+      "targetDate": "2022.08.31",
+      "type": "언론",
+      "text": "국립암센터 최일주 교수, 위암 예방 위한 헬리코박터 제균 치료 효과 입증",
+      "url": "http://www.bokuennews.com/news/article.html?no=219614",
+      "issuer": "보건뉴스"
+    },
+    {
+      "targetDate": "2022.08.31",
+      "type": "언론",
+      "text": "국립암센터 최일주 교수, 위암 예방 위한 헬리코박터 제균 치료 효과 입증",
+      "url": "http://www.dailymedi.com/detail.php?number=888495",
+      "issuer": "데일리메디"
+    },
+    {
+      "targetDate": "2022.08.31",
+      "type": "언론",
+      "text": "국립암센터 최일주 교수, 위암 예방 위한 헬리코박터 제균 치료 효과 입증",
+      "url": "http://www.doctorsnews.co.kr/news/articleView.html?idxno=146039",
+      "issuer": "의학신문"
+    },
+    {
+      "targetDate": "2022.08.31",
+      "type": "언론",
+      "text": "국립암센터 최일주 교수, 위암 예방 위한 헬리코박터 제균 치료 효과 입증",
+      "url": "http://www.docdocdoc.co.kr/news/articleView.html?idxno=2025490",
+      "issuer": "청년의사"
+    },
+    {
+      "targetDate": "2022.08.31",
+      "type": "언론",
+      "text": "국립암센터 최일주 교수, 위암 예방 위한 헬리코박터 제균 치료 효과 입증",
+      "url": "http://www.rapportian.com/news/articleView.html?idxno=151834",
+      "issuer": "라포르시안"
+    },
+    {
+      "targetDate": "2022.08.31",
+      "type": "언론",
+      "text": "국립암센터 최일주 교수, 위암 예방 위한 헬리코박터 제균 치료 효과 입증",
+      "url": "http://www.doctorstimes.com/news/articleView.html?idxno=219634",
+      "issuer": "의사신문"
+    },
+    {
+      "targetDate": "2022.08.31",
+      "type": "언론",
+      "text": "국립암센터 최일주 교수, 위암 예방 위한 헬리코박터 제균 치료 효과 입증",
+      "url": "http://www.medigatenews.com/news/articleView.html?idxno=359353",
+      "issuer": "메디게이트뉴스"
+    },
+    {
+      "targetDate": "2022.08.31",
+      "type": "언론",
+      "text": "국립암센터 최일주 교수, 위암 예방 위한 헬리코박터 제균 치료 효과 입증",
+      "url": "http://www.healthumer.com/news/articleView.html?idxno=6663",
+      "issuer": "헬코미디어"
+    }
+  ],
+  "학술": [
+    {
+      "date": "2011-12 ~ 현재",
+      "content": "Clinical Endoscopy Deputy Editor"
+    },
+    {
+      "date": "2011-06 ~ 2013-04",
+      "content": "대한위암학회 학술위원"
+    },
+    {
+      "date": "2010-12 ~ 2013-11",
+      "content": "대한내과학회 간행위원"
+    },
+    {
+      "date": "2007-05 ~ 현재",
+      "content": "대한위암학회 편집위원"
+    }
+  ]
+}

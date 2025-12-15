@@ -29,7 +29,6 @@ module.exports = {
     console.log(error)
     result = DBData
     return { error: error, data: result };
-
   },
 
   setCrawlingDoctorLink: async (rid, hid, deptName, doctorName, url,hName,originalDetailUrl) => {

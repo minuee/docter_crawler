@@ -1,0 +1,88 @@
+{
+  "doctorId": 14721,
+  "rid_long": "ADFBADE717B6AABDD3A0EE4C3F4383317A6B9CE4D49A75092A7A99BF88A0D24D5139DE4702C5EEE4BFF575062AC488D0668CB95C37D0108BFCF889EDD91C675796D9AC1A5E4BEA5D3502D7741D8D5544B816B4554E4643D989942286705604E21ECF047653FC641AA88D5D0FE8597A31B3DECA92C296E1046C7FB132D8F4D56E490B3742EDF74418976B3CB0646C62DD376C8594E1927C16F2670D1D176D3D32F09AE861D2E210575759B476A44A8928",
+  "hospital_cid": 114,
+  "bedoc_id": "A0675",
+  "bedoc_hospitalsite": "http://dongtan.hallym.or.kr/",
+  "bedoc_doctorname": "김용복",
+  "bedoc_deptname": "이비인후과",
+  "bedoc_hospitalname": "동탄성심병원",
+  "hospital_name": "동수원병원",
+  "aiga_hid": "H11KR-31000035",
+  "hospital_site": "https://www.dswhosp.co.kr/medical/medical19.php?ptype=view&docid=48",
+  "site_type": "single",
+  "hospital_addr": "경기도 수원시 팔달구 중부대로 165, (우만동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.dswhosp.co.kr/medical/medical19.php?ptype=view&docid=48&doctorName=%EA%B9%80%EC%9A%A9%EB%B3%B5&depthName=%EC%9D%B4%EB%B9%84%EC%9D%B8%ED%9B%84%EA%B3%BC",
+  "isSearchType": "html_ocr",
+  "error": null,
+  "specialty": "비과질환, 알레르기, 수면무호흡, 안면마비, 안면외상 및 성형",
+  "학력": [
+    {
+      "date": null,
+      "content": "경희대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "경희대학교 대학원 의학 석사"
+    },
+    {
+      "date": null,
+      "content": "경희대학교 대학원 의학 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "경희의료원 인턴"
+    },
+    {
+      "date": null,
+      "content": "경희의료원 레지던트"
+    },
+    {
+      "date": null,
+      "content": "전) 한림대학교 한강성심병원 이비인후과 과장"
+    },
+    {
+      "date": null,
+      "content": "전) 한림대학교 동탄성심병원 이비인후과 교수"
+    },
+    {
+      "date": null,
+      "content": "현) 동수원병원 이비인후과 과장"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "미국버지니아대학 연구원"
+    },
+    {
+      "date": null,
+      "content": "대한이비인후과학회 논문심사위원"
+    },
+    {
+      "date": null,
+      "content": "미국이비인후과학회 회원"
+    },
+    {
+      "date": null,
+      "content": "대한비과학회 이사"
+    },
+    {
+      "date": null,
+      "content": "대한이비인후과학회 이사"
+    }
+  ],
+  "논문": [
+    "1) Hong SM, Kim BG, Lee BC, Park SK, Hong SK, Lee HJ, Kim HJ, Lee JH, Kim CW, Park IS, Kim YB. Analysis of psychological distress after management of dizziness in old patients: multicenter study. Eur Arch Otorhinolaryngol 2012",
+    "2) Heo CY, Kim BG, Kim YB, Park IS. A Second Branchial Cleft Cyst of Palatine Tonsil. J Clinical Otolaryngol 2010",
+    "3) Lee JS, Kim BG, Park IS, Kim YB, Jang TW, Oh SY. Comparison of Pure-Tone thresholds and Click Auditory Brain stem Evoked Response thresholds in Noise-Induced Hearing Loss. Korean J Audiol 2010",
+    "4) Kim TH, Kim BG, Heo CY, Lee JS, Park IS, Kim YB, Jang TW, Ahn SK. Effect of Elderly Organized Vestibular Rehabilitation for Presbystasis. Res Vestibul Sci 2010",
+    "5) Choi DJ, Kim BG, Park IS, Kim YB, Kim TH, Heo CY. Three cases of inner ear damage after electrical burns. Burns 2010"
+  ],
+  "isAttend": true
+}

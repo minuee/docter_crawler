@@ -1,0 +1,156 @@
+{
+  "doctorId": 15104,
+  "rid_long": "57F8082B04DCC7889B3281384F1654BE0AEA136E8B955EEF4D52795CD9D87E86F97736FD3A75D47694C20A13E01A3381106B802999311D65D4B313DD10E693D372E3A7264CA2CD0E59B6BBECA9F210658BECA1A52FB4204DA0968FE2F0430FFAA7AA9A2FD09C3F1ACB3EBF80F8E7BB1707F9C692E54FC9497E3A6F9F286D1EB2FAFB1564AC84957CFAD32A083025EFC5",
+  "hospital_cid": 601,
+  "bedoc_id": "A5868",
+  "bedoc_hospitalsite": "http://kangnam.hallym.or.kr",
+  "bedoc_doctorname": "최동규",
+  "bedoc_deptname": "안과",
+  "bedoc_hospitalname": "강남성심병원",
+  "hospital_name": "강남성심병원",
+  "aiga_hid": "H11KR-11000040",
+  "hospital_site": "https://kangnam.hallym.or.kr/ptm207.asp?Doctor_Id=298",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 영등포구 신길로 1, (대림동, 강남성심병원)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://kangnam.hallym.or.kr/ptm207.asp?Doctor_Id=298&doctorName=%EC%B5%9C%EB%8F%99%EA%B7%9C&depthName=%EC%95%88%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "학력": [
+    {
+      "date": "1981.03 ~ 1987.02",
+      "content": "서울대학교 의학 졸업"
+    },
+    {
+      "date": "1991.03 ~ 1993.02",
+      "content": "서울대학교 대학원 의학석사 졸업"
+    },
+    {
+      "date": "1993.03 ~ 1997.02",
+      "content": "서울대학교 대학원 의학박사 졸업"
+    },
+    {
+      "date": "1999 ~ 2000",
+      "content": "미국 UCLA, Jules Stein Eye Institute 연수"
+    }
+  ],
+  "경력": [
+    {
+      "date": "~ 1987",
+      "content": "서울대학교병원 인턴 수료"
+    },
+    {
+      "date": "~ 1988",
+      "content": "서울대학교병원 안과 전공의 수료"
+    },
+    {
+      "date": "~ 1992",
+      "content": "한림대학교 의과대학 전임강사"
+    },
+    {
+      "date": "~ 1997",
+      "content": "한림대학교 의과대학 조교수"
+    },
+    {
+      "date": "~ 2002",
+      "content": "한림대학교 의과대학 부교수"
+    },
+    {
+      "date": null,
+      "content": "한림대학교 의과대학 교수"
+    },
+    {
+      "date": "2003 ~ 2015.02",
+      "content": "한림대학교강남성심병원 안과 과장"
+    },
+    {
+      "date": null,
+      "content": "한림대학교강남성심병원 안과 교수"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한안과학회"
+    },
+    {
+      "date": null,
+      "content": "대한사시소아안과학회"
+    }
+  ],
+  "언론": [
+    {
+      "targetDate": "2023-08-21",
+      "type": "기사",
+      "text": "[인터뷰] 최동규 교수 '소아 사시, 부모의 세심한 관찰과 적시 치료가 필요'",
+      "url": "https://www.yakup.com/news/index.html?mode=view&cat=13&nid=284789",
+      "issuer": "약업신문"
+    }
+  ],
+  "논문": [
+    "1. 경뇌막 경동맥해면류 1예. 대한안과학회지. 29(5): 975-980, 1988.",
+    "2. 최근 4년간의 후방인공수정체 삽입술 임상 평가. 대한안과학회지. 30(4): 521-526, 1989.",
+    "3. 백내장 낭외적출 및 후방수정체 삽입후 Healon과 Metrol이 각막 및 안압에 미치는 영향. 대한안과학회지. 30(4): 527-534, 1989.",
+    "4. 한국인의 포도막염의 임상분석. 대한안과학회지. 30(4): 543-552, 1989.",
+    "5. Urbach-Wiethe 병의 안소견. 대한안과학회지. 30(4): 641-648, 1989.",
+    "6. Clinical analysis of Uveitis. Korean Journal of Ophthalmology. 3(1): 33-37, 1989.",
+    "7. 비증식성 당뇨병성 망막증에서의 calcium dobesilate(Doxium)의 임상효과. 대한안과학회지. 31(8): 1056-1061, 1990.",
+    "8. Medial Transposition of the lateral rectus muscle in experimentally induced medial rectus paralysis. . Korean Journal of Ophthalmology. 5:9-14, 1991.",
+    "9. 실헌적 내직근 마비안에서 외직근전이술을 이용한 안구편위교정. 한안지 32(2): 1104-1109, 1991",
+    "10. Dong-Gyu Choi, Bong Leen Chang: Electron microscopic study on overacting Inferior Oblique Muscles. Korean Journal of Ophthalmology. 6(2): 69-75, 1992",
+    "11. 최동규, 장봉린: 하사근 기능항진시 하사근의 전자현미경적 소견. 한안지 34(4): 337-344, 1993.",
+    "12. 당뇨병의 눈의 합병증. 임상약학. 15(1):37-40, 1995.",
+    "13. 동양안충의 인체감염 2예. 인간과학. 213:55-59.",
+    "14. 안구돌출을 유발한 사골동 골종 1예. 대한안과학회지. 36(5):868-873., 1995.",
+    "15. 수평사시 수술후 굴절상태 및 각막난시의 변화. 대한안과학지.36(7): 1221-1227. 1995.",
+    "16. 약시안에서 Levodopa의 치료효과. 대한안과학회지. 37(8):1354-1359, 1996.",
+    "17. 미세침흡인생검법으로 진단된 망막모세포종 2 예. 대한안과학회지. 37(12):2153-2159. 1996.",
+    "18. 간헐외사시 수술후 발생한 속발주기내사시. 대한안과학회지. 38(2):286-289, 1997.",
+    "19. 유색가토에서 인도시아닌그린 홍채혈관조영술을 이용한 전안부 허혈에 관한 연구. 대한안과학회지. 38(5):796-804, 1997.",
+    "20. 서울형 인공각막; 내측공막 고정방식을 이용한 새로운 인공각막의 개발. 대한안과학회지. 38(8):1361-1375, 1997.",
+    "21. 간헐외사시 교정술의 수술성적 및 이에 영향을 미치는 인자. 한안지, 39(6): 1255 - 1263, 1998.",
+    "22. Horner증후군을 동반한 Ross 증후군 1예. 한안지, 39(6): 1201 - 1205, 1998.",
+    "23. 인도시아닌그린 홍채혈관조영술을 이용한 사시수술후 전안부 순환상태에 관한 연구. 대한안과학회지. 39(12):3069- 3077, 1998.",
+    "24. 가토에서 스테로이드 방출 Polyurethane film의 지방유착증후군 방지효과 대한안과학회지. 40(1):219-227, 1999.",
+    "25. 부등시성 및 사시성 약시에서 기능적 자기공명영상을 이용한 일차 시피질 반응의 비교. 대한안과학회지. 40:3450~3459,1999.",
+    "26. 생체적합성을 향상시킨 서울형인공각막과 기존인공각막의 동물실험 결과 비교. 대한안과학회 , 대한안과학회지. 40(12): 3302 ~ 3293, 1999.",
+    "27. 소아 피질시각 장애인에서 안과검사와 PET검사의 임상적 유용성. 대한안과학회지 43(12): 2494 ~9, 2002.",
+    "28. 간헐외사시에서 수술 후 재발된 환자의 임상분석. 대한안과학회지 43(11):2220 ~2006, 2002.",
+    "29. 조도가 입체시에 미치는 영향. 대한안과학회지 43(10) : 1963 ~ 1967, 2002.",
+    "30. 수정체 탈구를 동반한 망막모세포종 1예. 대한안과학회지 43(6):1091-1094, 2002.",
+    "31. 간헐외사시에서 수술 후 재발된 환자의 임상분석. 대한안과학회지 43(11):2220-2226, 2002.",
+    "32. 조도가 입체시에 미치는 영향. 대한안과학회지 43(10):1963-1967, 2002.",
+    "33. 이상 두위시 안구편위도와 감각기능의 변화. 대한안과학회지 44(10), 2312-7, 2003.",
+    "34. 대한미국 19세 남자의 근시유병율 : 유병율 과 교육수준 및 도시화의 관계. 대한안과학회지 45(1): 2082 ~ 2086, 2004.",
+    "35. 영유아에서 텔러시력검사의 임상적 유용성. 대한안과학회지 46(2): 330 ~335, 2005.",
+    "36. 재발된 외사시에서 한 눈 외직근 후전 및 내직근 절제술과 양눈 내직근 절제술의 비교. 대한안과학회지 47(1): 148 ~153, 2006.",
+    "37. 간헐외사시 수술 후 장기간 정위를 유지한 환자의 임상양상. 대한안과학회지 47(12): 1999 ~ 2004, 2006.",
+    "38. 재발된 간헐외사시로 재수술한 환자의 임상분석. 대한안과학회지48(2):321 ~ 327, 2007.",
+    "1. Medial rectus resection(s) with adjustable suture for intermittent exotropia of the convergence insufficiency type. J AAPOS 5:13-7, 2001.",
+    "2. Vertical strabismus in monofixation syndrome. J AAPOS 5:5-8, 2001.",
+    "3. Effect of ADCON-L on adjustable strabismus surgery in rabbits. Br J Ophthalmol. 85:80-4, 2001.",
+    "4. Binocularity and spatial frequency dependence of calcarine activation in two types of amblyopia. Neuroscience Research 40:147-153, 2001.",
+    "5. Comparison between anisometropic and strabismic amblyopia using functional magnetic resonance imaging. Br J Ophthalmol 85:1052-6, 2001.",
+    "6. Investigation of visual cortex in children with cortical visual impariment: positron emission tomography. Neurophthalmology 25:103-108, 2001.",
+    "7. Characteristics of glucose metabolism in the visual cortex of amblyopes using positron emission tomography and statistical parametric mapping. Journal of Pediatric Ophthalmology and Strabismus 39:11-19, 2002.",
+    "8. Characteristics of glucose metabolism in the visual cortex of amblyopes using positron-emission tomography and statistical parametric mapping. J Pediatr Ophthalmol Strabismus. 39:11-9, 2002."
+  ],
+  "저서": [
+    {
+      "date": "2001",
+      "content": "증례로 본 사시학(내외학술)"
+    },
+    {
+      "date": "2004",
+      "content": "최신사시학, 초판(내외학술) "
+    },
+    {
+      "date": "2008",
+      "content": "최신사시학, 2판(내외학술) "
+    }
+  ],
+  "specialty": "사시, 약시, 소아안과클리닉, 신경안과클리닉",
+  "profileUrl": "https://kangnam.hallym.or.kr/CHPFile/treatment/B_20210812_12102119_b_2.png",
+  "isAttend": true
+}

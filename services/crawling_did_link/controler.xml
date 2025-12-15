@@ -35,10 +35,8 @@
             doctor_basic a LEFT JOIN doctor_career b ON a.rid = b.rid
             LEFT JOIN hospital h ON a.hid = h.hid
         WHERE 
-            a.doctorname LIKE CONCAT(#{search_doctorname}, '%') and a.rid_long not in ( #{pass_rid_long} ) and a.data_version_id in ( 1,2 )
-            and a.rid not in (
-                SELECT rid FROM doctor_basic_logs 
-            )
+            a.doctorname LIKE CONCAT(#{search_doctorname}, '%') and a.rid_long not in ( #{pass_rid_long} ) and a.data_version_id in ( 1,2 ) and a.is_active in ( 0, '0')
+            and a.rid not in ( SELECT rid FROM doctor_basic_logs )
         ORDER BY a.deptname , a.doctorname
     </select>
 
@@ -118,6 +116,13 @@
 
     <update id="update_old_doctor_is_active">
         UPDATE doctor
+        SET is_active = 0,
+            updateAt = NOW()
+        WHERE rid_long = #{search_rid_long}
+    </update>
+
+    <update id="update_old_doctor_basic_is_active">
+        UPDATE doctor_basic
         SET is_active = 0,
             updateAt = NOW()
         WHERE rid_long = #{search_rid_long}

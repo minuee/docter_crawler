@@ -1,0 +1,256 @@
+{
+  "doctorId": 14786,
+  "rid_long": "DB465A81B877E8E28FE34B5A98BF0E776EA744B61DEA1FE336A90CB501AA76399FAC55CC4BD919893751AF0F49CDD59D6EAC05464C9329029026D7C6DF8989DB4E05F442BD6BDDC3AF4CA7336209E056F49DFA227CEA719D7461809564702F6DA3E2B21F25BB581BDC5BDC929077F8B6CDEF2934622FF301894676C0F4F429C3A7C3CFB23C662CD481AD8A84E4751BC7A389B6266689DBB9A86113C811E485D9",
+  "hospital_cid": 212,
+  "bedoc_id": "A5083",
+  "bedoc_hospitalsite": "http://www.ncc.re.kr",
+  "bedoc_doctorname": "박상재",
+  "bedoc_deptname": "외과",
+  "bedoc_hospitalname": "국립암센터",
+  "hospital_name": "국립암센터",
+  "aiga_hid": "H11KR-31000013",
+  "hospital_site": "https://ncc.re.kr/ncc_about03_param.ncc?searchKey=&searchValue=&dept=SG",
+  "site_type": "list",
+  "hospital_addr": "경기도 고양시 일산동구 일산로 323, (마두동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://ncc.re.kr/ncc_about03_param.ncc?searchKey=&searchValue=&dept=SG&doctorName=%EB%B0%95%EC%83%81%EC%9E%AC&depthName=%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "https://ncc.re.kr/images/no-image.gif",
+  "specialty": "간·췌담관암의 수술적 치료",
+  "학력": [
+    {
+      "date": "1984-03 ~ 1990-02",
+      "content": "서울대학교 의과대학 의학과 대졸(의대)"
+    },
+    {
+      "date": "1994-03 ~ 2000-02",
+      "content": "서울대학교 대학원 의학과 대학원졸(석사)"
+    },
+    {
+      "date": "2000-03 ~ 2003-08",
+      "content": "서울대학교 대학원 의학과 대학원졸(박사)"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1990-03 ~ 1991-02",
+      "content": "서울대학교병원 인턴"
+    },
+    {
+      "date": "1991-03 ~ 1995-02",
+      "content": "서울대학교병원 레지던트"
+    },
+    {
+      "date": "1998-05 ~ 1999-12",
+      "content": "서울대학교병원 전임의"
+    },
+    {
+      "date": "2000-01 ~ 2000-04",
+      "content": "서울대학교병원 전임의"
+    },
+    {
+      "date": "2000-05 ~ 2000-09",
+      "content": "서울대학교 임상의학연구소 연구원"
+    },
+    {
+      "date": "2000-10 ~ 2019-01",
+      "content": "국립암센터 간암센터 전문의"
+    },
+    {
+      "date": "2001-05 ~ 2010-08",
+      "content": "국립암센터 간담췌암연구과 "
+    },
+    {
+      "date": "2006-10 ~ 2007-09",
+      "content": "UCSF Medical Center 미국연수"
+    },
+    {
+      "date": "2010-08 ~ 2017-02",
+      "content": "국립암센터 간담췌암연구과 과장"
+    },
+    {
+      "date": "2010-08 ~ 2014-09",
+      "content": "국립암센터 간암센터 센터장"
+    },
+    {
+      "date": "2014-03 ~ 2017-02",
+      "content": "국립암센터 간담췌암연구과 책임연구원"
+    },
+    {
+      "date": "2014-10 ~ 2017-02",
+      "content": "국립암센터 이행성임상제1연구부 부장"
+    },
+    {
+      "date": "2015-03 ~ 2017-11",
+      "content": "국립암센터 외과 과장"
+    },
+    {
+      "date": "2017-01 ~ 2017-11",
+      "content": "국립암센터 생물의약품생산실 실장"
+    },
+    {
+      "date": "2017-03 ~ 2017-11",
+      "content": "국립암센터 암발생전이연구과 책임연구원"
+    },
+    {
+      "date": "2017-12 ~ 2021-01",
+      "content": "국립암센터 연구소 연구소장"
+    },
+    {
+      "date": "2019-02 ~ 현재",
+      "content": "국립암센터 간담도췌장암센터 수석연구원"
+    },
+    {
+      "date": "2019-02 ~ 2023-03",
+      "content": "국립암센터 외과 전문의"
+    },
+    {
+      "date": "2019-02 ~ 2021-08",
+      "content": "국립암센터 정밀의학연구부 수석연구원"
+    },
+    {
+      "date": "2021-09 ~ 현재",
+      "content": "국립암센터 종양외과학연구과 수석연구원"
+    },
+    {
+      "date": "2023-03 ~ 현재",
+      "content": "국립암센터 외과 임상교수"
+    }
+  ],
+  "논문": [
+    "Diagnostic Biomarker Candidates Proposed Using Targeted Lipid Metabolomics Analysis of the Plasma of Patients with PDAC: CANCERS. 17(18):2988~ (4.4)",
+    "Incidence, mortality, and survival of gallbladder, extrahepatic bile duct, and pancreatic cancers in Korea: a population-based study from 1999 to 2022: Annals of Hepato-Biliary-Pancreatic Surgery. :~ ()",
+    "Optimal Value of Mutant KRAS Circulating Tumor DNA for Predicting Prognosis and Monitoring in Patients with Pancreatic Adenocarcinoma: A Prospective Multicenter Cohort Study: CLINICAL CHEMISTRY. :~ (6.3)",
+    "Conditional Relative Survival of Gallbladder Cancer: A Population-Based Study in a High-Incidence Asian Country from 1999 to 2021: ANNALS OF SURGICAL ONCOLOGY. :~ (3.5)",
+    "Mutant KRAS and GATA6 Stratify Survival in Patients Treated with Chemotherapy for Pancreatic Adenocarcinoma: A Prospective Cohort Study: CANCERS. 17(5):896~ (4.4)",
+    "The immune sensitivity caused by DUSP11, an RNA 5'-end maturation phosphatase, is adjusted by a human non-coding RNA, nc886: CELLULAR AND MOLECULAR LIFE SCIENCES. 82:77~ (6.2)",
+    "Epidemiology and survival analysis according to the histologic subtype of pancreatic cancer: a population-based cohort study: ANNALS OF SURGICAL TREATMENT AND RESEARCH. 108(1):20~30 (1.6)",
+    "Increased diagnosis of hepato-biliary-pancreatic cancer after cholecystectomy: a population-based study: SCIENTIFIC REPORTS. 15:411~ (3.9)",
+    "The Impact of the Dietary Inflammatory Index, Fasting Blood Glucose, and Smoking Status on the Incidence and Survival of Pancreatic Cancer: A Retrospective Case-Control Study and a Prospective Study: NUTRIENTS. 16(22):3941~ (4.8)",
+    "Application of plasma circulating KRAS mutations as a predictive biomarker for targeted treatment of pancreatic cancer: CANCER SCIENCE. 115(4):1283~1295 (4.5)",
+    "New Function Annotation of PROSER2 in Pancreatic Ductal Adenocarcinoma: JOURNAL OF PROTEOME RESEARCH. 23(3):905~915 (3.8)",
+    "Exocrine pancreatic cancer as a second primary malignancy: A population-based study: Annals of Hepato-Biliary-Pancreatic Surgery. :~ ()",
+    "Conditional Relative Survival of Exocrine Pancreatic Cancer: A Population-Based Study: ANNALS OF SURGICAL ONCOLOGY. 31(2):1178~1189 (3.7)",
+    "Efficacy of ferric carboxymaltose in iron deficiency anemia patients scheduled for pancreaticoduodenectomy: ANNALS OF SURGICAL TREATMENT AND RESEARCH. 105(2):82~90 (1.4)",
+    "15-Year Experience of Distal Pancreatectomy with Celiac Axis Resection (DP-CAR) for Pancreatic Cancer-A Korean Nationwide Investigation: CANCERS. 15(15):3850~ (5.2)",
+    "Exploring Connections between Oral Microbiota, Short-Chain Fatty Acids, and Specific Cancer Types: A Study of Oral Cancer, Head and Neck Cancer, Pancreatic Cancer, and Gastric Cancer: CANCERS. 15(11):2898~ (5.2)",
+    "Prevalence and Risk Factors of Germline Pathogenic Variants in Pancreatic Ductal Adenocarcinoma: CANCER RESEARCH AND TREATMENT. 55(4):1303~1312 (4.6)",
+    "Refining classification of cholangiocarcinoma subtypes via proteogenomic integration reveals new therapeutic prospects: GASTROENTEROLOGY. 164(7):1293~1309 (29.4)",
+    "Validation of quantitative prognostic prediction using ADV score for resection of hepatocellular carcinoma: A Korea-Japan collaborative study with 9200 patients: JOURNAL OF HEPATO-BILIARY-PANCREATIC SCIENCES. 30(8):993~1005 (3)",
+    "Features of T1 pancreatic cancer and validation of the eighth edition AJCC staging system definition using a Korean-Japanese joint cohort and the SEER database: JOURNAL OF HEPATO-BILIARY-PANCREATIC SCIENCES. 30(9):1129~1140 (3)",
+    "Synergistic effects of concurrent photodynamic therapy with indocyanine green and chemotherapy in hepatocellular carcinoma cell lines and mouse models: JOURNAL OF PHOTOCHEMISTRY AND PHOTOBIOLOGY B-BIOLOGY. 239:112642~ (6.814)",
+    "Postoperative Poor Oral Intake After Distal Pancreatectomy: PANCREAS. 51(10):1337~1344 (3.243)",
+    "Capecitabine and Temozolomide for Metastatic Intermediate to High-Grade Pancreatic Neuroendocrine Neoplasm: A Single Center Experience: KOREAN JOURNAL OF INTERNAL MEDICINE. 37(6):1216~1222 (3.165)",
+    "Incidence, mortality and survival of gallbladder, extrahepatic bile duct, and pancreatic cancer using Korea central cancer registry database: 1999-2019: Annals of hepato-biliary-pancreatic surgery. 26(3):220~228 (0)",
+    "Do jejunal veins matter during pancreaticoduodenectomy?: Annals of Hepato-Biliary-Pancreatic Surgery. 26(3):229~234 (0)",
+    "Proposal of nomograms to predict clinical outcomes in patients with ampulla of Vater cancer based on the Korea-Japan collaborative study: JOURNAL OF HEPATO-BILIARY-PANCREATIC SCIENCES. Online:Published (3.149)",
+    "Effect of preoperative nutritional support in malnourished patients with pancreatobiliary cancer: a quasi?experimental study: BMC Nutrition. 8(1):61~ (0)",
+    "Trend Analysis and Prediction of Hepatobiliary Pancreatic Cancer Incidence and Mortality in Korea: JOURNAL OF KOREAN MEDICAL SCIENCE. 37(28):e216~ (5.354)",
+    "Distinct prognosis of biliary tract cancer according to tumor location, stage, and treatment: a population?based study: SCIENTIFIC REPORTS. 12(1):10206~ (4.997)",
+    "Effect of perioperative fluid volume restriction on the incidence of complications following pancreaticoduodenectomy: ANZ JOURNAL OF SURGERY. Online:Published (2.025)",
+    "Fate of Surgical Patients with Small Nonfunctioning Pancreatic Neuroendocrine Tumors: An International Study Using Multi-Institutional Registries: CANCERS. 14(4):1038~ (6.575)",
+    "Randomized controlled study comparing the analgesic effects of intravenous patient-controlled analgesia and patient-controlled epidural analgesia after open major surgery for pancreatobiliary cancer: HPB. 24(8):1238~1244 (3.842)",
+    "Prevalence of psychological symptoms in patients undergoing pancreatoduodenectomy and results of a distress management system: a clinic-based study: CANCER RESEARCH AND TREATMENT. Online:Published (5.036)",
+    "Establishment of Patient-derived Preclinical Models for Invasive Papillary Cholangiocarcinoma: ANTICANCER RESEARCH. 42(1):599~608 (2.48)",
+    "Genomic Instability of Circulating Tumor DNA as a Prognostic Marker for Pancreatic Cancer Survival: A Prospective Cohort Study: CANCERS. 13(21):5466~ (6.639)",
+    "Clinical Characteristics of Resected Acinar Cell Carcinoma of the Pancreas: A Korean Multi-Institutional Study: CANCERS. 13(20):5095~ (6.639)",
+    "RRM1 Expression as a Prognostic Biomarker for Unresectable or Recurrent Biliary Tract Cancer Treated with Gemcitabine plus Cisplatin: JOURNAL OF CLINICAL MEDICINE. 10(20):4652~ (4.242)",
+    "Associations of Serum Tumor Biomarkers with Integrated Genomic and Clinical Characteristics of Hepatocellular Carcinoma: LIVER CANCER. 10(6):593~605 (11.74)",
+    "Prognostic impact of tumor vascularity on CT in resectable intrahepatic cholangiocarcinoma.: HPB. Online:Published (3.647)",
+    "Characteristics of TP53 and CTNNB1 mutation according to the serum tumor markers in hepatocellular carcinoma: Annals of hepato-biliary-pancreatic surgery. 25 Suppl 1:S38~ (0)",
+    "Gastroepiploic arteriovenous shunt as a salvage treatment for hepatic artery occlusion after living donor liver transplantation: HEPATOBILIARY SURGERY AND NUTRITION. 10(3):421~423 (7.293)",
+    "First course of treatment and prognosis of exocrine pancreatic cancer in Korea from 2006 to 2017: CANCER RESEARCH AND TREATMENT. Online:Published (4.679)",
+    "Survival Analysis after Living Donor Liver Transplantation for Hepatocellular Carcinoma: A Single Center Cohort Study: BIOLOGY-BASEL. 10(5):446~ (5.079)",
+    "Development and External Validation of Survival Prediction Model for Pancreatic Cancer Using Two Nationwide Database: Surveillance, Epidemiology and End Results (SEER) and Korea Tumor Registry System-Biliary Pancreas (KOTUS-BP): GUT AND LIVER. Online:Published (4.519)",
+    "MiR-30a and miR-200c differentiate cholangiocarcinomas from gastrointestinal cancer liver metastases: PLOS ONE. 16(4):e0250083~ (3.24)",
+    "Impact of changes in the topographic classification of Klatskin tumor on incidence of intra-and extrahepatic bile duct cancer: A population-based national cancer registry study: JOURNAL OF HEPATO-BILIARY-PANCREATIC SCIENCES. Online:Published (7.027)",
+    "Should Lymph Nodes Be Retrieved in Patients with Intrahepatic Cholangiocarcinoma? A Collaborative Korea?Japan Study: CANCERS. 13(3):445~ (6.639)",
+    "Overall survival of pancreatic ductal adenocarcinoma is doubled by Aldh7a1 deletion in the KPC mouse: THERANOSTICS. 11(7):3472~3488 (11.556)",
+    "Efficacy and feasibility of proton beam radiotherapy using the simultaneous integrated boost technique for locally advanced pancreatic cancer: SCIENTIFIC REPORTS. 10(1):21712~ (3.998)",
+    "Sirolimus Prolongs Survival after Living Donor Liver Transplantation for Hepatocellular Carcinoma Beyond Milan Criteria: A Prospective, Randomised, Open-Label, Multicentre Phase 2 Trial: JOURNAL OF CLINICAL MEDICINE. 9(10):3264~ (3.303)",
+    "Does adjuvant treatment improve prognosis after curative resection of ampulla of Vater carcinoma? A multicenter retrospective study: JOURNAL OF HEPATO-BILIARY-PANCREATIC SCIENCES. 27(10):721~730 (4.16)",
+    "Propensity score-matched analysis of internal stent vs external stent for pancreatojejunostomy during pancreaticoduodenectomy: Japanese-Korean cooperative project: PANCREATOLOGY. 20(5):984~991 (3.629)",
+    "Near-infrared phototherapy for patient-derived orthotopic xenograft model of hepatocellular carcinoma in combination with indocyanine green: JOURNAL OF PHOTOCHEMISTRY AND PHOTOBIOLOGY B-BIOLOGY. 209:111938~ (4.383)",
+    "Clinicopathological characteristics of intraductal papillary neoplasm of the bile duct: a Japan-Korea collaborative study.: JOURNAL OF HEPATO-BILIARY-PANCREATIC SCIENCES. Online:Published (4.16)",
+    "Hepatic artery thrombosis following living donor liver transplantation: A 14-year experience at a single center: JOURNAL OF HEPATO-BILIARY-PANCREATIC SCIENCES. Online:Published (4.16)",
+    "Role of tumour location and surgical extent on prognosis in T2 gallbladder cancer: an international multicentre study: BRITISH JOURNAL OF SURGERY. Online:Published (5.676)",
+    "Learning curve for pancreatoduodenectomy: can it be generalized?: ANZ JOURNAL OF SURGERY. Online:Published (1.355)",
+    "Surgery for elderly patients with resectable pancreatic cancer, a comparison with non-surgical treatments: a retrospective study outcomes of resectable pancreatic cancer: BMC CANCER. 19(1):1090~1090 (2.933)",
+    "Very early recurrence following pancreaticoduodenectomy in patients with ampullary cancer: MEDICINE. 44:17711~17711 (1.87)",
+    "Impact of ABO-incompatibility on hepatic artery thrombosis in living donor liver transplantation: annals of translational medicine. 7(22):625~625 (3.689)",
+    "Development of Patient-Derived Preclinical Platform for Metastatic Pancreatic Cancer: PDOX and a Subsequent Organoid Model System Using Percutaneous Biopsy Samples: Frontiers in oncology. 9:875~ (4.137)",
+    "Effects of Pancreatic Enzyme Replacement Therapy on Body Weight and Nutritional Assessments After Pancreatoduodenectomy in a Randomized Trial: CLINICAL GASTROENTEROLOGY AND HEPATOLOGY. 19:30990~30995 (7.958)",
+    "Benefit of Adjuvant Chemoradiotherapy in Resected Gallbladder Carcinoma: SCIENTIFIC REPORTS. 9(1):11770~11770 (4.011)",
+    "Predicting lymph node metastasis in pancreatobiliary cancer with magnetic resonance imaging: A prospective analysis: EUROPEAN JOURNAL OF RADIOLOGY. 116:1~7 (2.948)",
+    "Repeat hepatectomy for recurred colorectal liver metastasis: is it justified?: ANNALS OF SURGICAL TREATMENT AND RESEARCH. 97(1):7~14 (1.181)",
+    "Comprehensive Cancer Panel Sequencing Defines Genetic Diversity and Changes in the Mutational Characteristics of Pancreatic Cancer Patients Receiving Neoadjuvant Treatment: GUT AND LIVER. 13(6):683~689 (2.968)",
+    "Effects of Sarcopenia on Prognosis After Resection of Gallbladder Cancer: Journal of Gastrointestinal Surgery. Online:Published (2.686)",
+    "Validation of the American Joint Committee on Cancer 8th edition staging system for the pancreatic ductal adenocarcinoma: European Journal of Surgical Oncology. Online:Published (3.379)",
+    "ABO-incompatible living donor liver transplantation without plasma exchange on condition of urgency: Two case reports: ARTIFICIAL ORGANS. 43(6):607~608 (2.379)",
+    "Clinical validation of scoring systems of postoperative pancreatic fistula after pancreatoduodenectomy: applicability to Eastern cohorts?: HEPATOBILIARY SURGERY AND NUTRITION. 8(3):211~218 (3.911)",
+    "Validation of the 8th AJCC Cancer Staging System for Pancreas Neuroendocrine Tumors Using Korean Nationwide Surgery Database: BREAST CANCER RESEARCH AND TREATMENT. Online:Published (3.471)",
+    "Nutritional Status of Patients with Cancer: A Prospective Cohort Study of 1,588 Hospitalized Patients: NUTRITION AND CANCER. 70(8):1228~1236 (2.029)",
+    "Cytopathological results of initial endoscopic ultrasound-guided fine needle aspiration for primary mass and prognosis in pancreatic cancer patients: Cytopathology. 30(2):173~178 (1.376)",
+    "Effect of Early Management on Pain and Depression in Patients with Pancreatobiliary Cancer: A Randomized Clinical Trial: CANCERS. 11(1):E79~E79 (6.162)",
+    "Outcomes of liver resection in patients with colorectal liver metastases by laparoscopic or open surgery: Ann hepatobiliary pancreat surgery. : ()",
+    "Impact of ABO-incompatibility on hepatocellular carcinoma recurrence after living donor liver transplantation: EUROPEAN JOURNAL OF SURGICAL ONCOLOGY. 45(2):180~186 (3.688)",
+    "Somatic Mutations from Whole Exome Sequencing Analysis of the Patients with Biliary Tract Cancer: GENOMICS & INFORMATICS. 16(4):e35~e35 (0)",
+    "Living-donor Liver Retransplantation Using the Vessels of the Previous Allograft by Means of Intragraft Dissection: Transplantation Preoceedings. 50(1):3562~3563 (0.806)",
+    "Arterial blood gas test to decide whether to reconstruct single or both the arteries in living donor liver transplantation: HEPATOBILIARY SURGERY AND NUTRITION. 7(6):1~1 (3.451)",
+    "Safety and Efficacy of Once-Daily Prolonged-Release Tacrolimus in Living Donor Liver Transplantation: An Open-Label, Prospective, Single-Arm, Phase 4 Study: Annals of transplantaion. 23:713~720 (1.054)",
+    "Effectiveness and feasibility of concurrent chemoradiotherapy using simultaneous integrated boostintensity modulated radiotherapy with and without induction chemotherapy for locally advanced pancreatic cancer: Radiation Oncology Journal. 36(3):200~209 (0)",
+    "Individualized metabolic profiling stratifies pancreatic and biliary tract cancer: a useful tool for innovative screening programs and predictive strategies in healthcare: EPMA Journal. 9(3):287~297 (3.9)",
+    "Oncological Benefits of Neoadjuvant Chemoradiation With Gemcitabine Versus Upfront Surgery in Patients With Borderline Resectable Pancreatic Cancer: A Prospective, Randomized, Open-label, Multicenter Phase 2/3 Trial.: ANNALS OF SURGERY. 268(2):215~222 (9.203)",
+    "Effectiveness and Safety of Simultaneous Integrated Boost-Proton Beam Therapy for Localized Pancreatic Cancer: Technology in cancer research & treatment. 17:1~9 (1.646)",
+    "Long-term prognostic impact of osteopontin and Dickkopf-related protein 1 in patients with hepatocellular carcinoma after hepatectomy: Pathology, research and practice. 214(6):814~820 (1.466)",
+    "Two cases of bronchobiliary fistula: Case report.: Annals of hepato-biliary-pancreatic surgery. 22(2):169~172 (0)",
+    "Favorable glycemic response after pancreatoduodenectomy in both patients with pancreatic cancer and patients with non-pancreatic cancer: Medicine. 97(18):e0590~e0590 (2.028)",
+    "Prognostic significance of 18F-FDG PET/CT in patients with colorectal cancer liver metastases after hepatectomy: European journal of surgical oncology. 44(5):670~676 (3.688)",
+    "Is hepatopancreatoduodenectomy an acceptable operation for biliary cancer?: The American surgeon. 84(5):703~711 (0.607)",
+    "Pretransplant locoregional therapy for hepatocellular carcinoma: encouraging but insufficient.: Hepatobiliary surgery and nutrition. 7(2):136~137 (3.451)",
+    "A comparison of desensitization methods: Rituximab with/without plasmapheresis in ABO-incompatible living donor liver transplantation: Hepatobiliary & pancreatic diseases international. 17(2):119~125 (1.5)",
+    "Prognostic implications of multiplex detection of KRAS mutations in cell-free DNA from patients with pancreatic ductal adenocarcinoma: Clinical chemistry. 64(4):726~734 (8.636)",
+    "A prospective randomized study comparing radiofrequency ablation and hepatic resection for hepatocellular carcinoma.: ANNALS OF SURGICAL TREATMENT AND RESEARCH. 94(2):74~82 (1.233)",
+    "Perioperative transfusion in pancreatoduodenectomy The double-edged sword of pancreatic surgeons: Medicine. 96(49):e9019~e9019 (1.804)",
+    "Proximal Resection Margins: More Prognostic than Distal Resection Margins in Patients Undergoing Hilar Cholangiocarcinoma Resection: Cancer research and treatment. 50(4):1106~1113 (3.772)",
+    "A simplified protocol using rituximab and immunoglobulin for ABO-incompatible low-titre living donor liver transplantation: Liver international. 38(5):932~939 (4.116)",
+    "Risk Prediction of Post-Hepatectomy Liver Failure in Patients with Perihilar Cholangiocarcinoma: Journal of gastroenterology and hepatology. 33(4):958~965 (3.452)",
+    "Impact of Preserved Collateral Veins on Small-for-size Grafts in Living Donor Liver Transplantation: Hepatology research. 48(4):295~302 (2.602)",
+    "Small-for-size grafts increase recurrence of hepatocellular carcinoma in liver transplantation beyond Milan criteria: Liver transplantation. 24(1):35~43 (3.91)",
+    "Reduced levels of N’-methyl-2-pyridone-5-carboxamide and lysophosphatidylcholine 16:0 in the serum of patients with intrahepatic cholangiocarcinoma, and the correlation with recurrence-free survival: Oncotarget. 8(68):112598~112609 (5.168)",
+    "DCK expression, a potential predictive biomarker in the adjuvant gemcitabine chemotherapy for biliary tract cancer after surgical resection: results from a phase II study: oncotarget. 8(46):81394~81404 (5.168)",
+    "Induction Chemotherapy with Gemcitabine and Cisplatin Followed by Simultaneous Integrated Boost-Intensity Modulated Radiotherapy with Concurrent Gemcitabine for Locally Advanced Unresectable Pancreatic Cancer: Results from a Feasibility Study: Cancer Research and Treatment. 49(4):1022~1032 (3.772)",
+    "Right lobe living donors ages 55 years old and older in liver transplantation: Liver Transplantation. 23 (10):1305~1311 (3.91)",
+    "Outcomes after liver transplantation in accordance with ABO compatibility: A systematic review and meta-analysis: World journal of gastroenterology. 23(35):6516~6533 (3.365)",
+    "Long-term outcomes and recurrence patterns of standard versus extended pancreatectomy for pancreatic head cancer: a multicenter prospective randomized controlled study: Journal of Hepato-Biliary-Pancreatic Sciences. 24(7):426~433 (2.71)",
+    "Survival analysis after liver resection for hepatocellular carcinoma: A consecutive cohort of 1002 patients: Journal of gastroenterology and hepatology. 32(5):1055~1063 (3.452)",
+    "Ligation of Left Renal Vein as a Salvage Procedure for Splenorenal Shunt After Living Donor Liver Transplantation: A Case Report: Transplantataion  Proceedings. 41:4243~4245 (1.055)",
+    "Learning curve for living-donor liver transplantation in a fledgling cancer center: Transplant International. 22(12):1164-71:1164~1171 (3.115)",
+    "Upper midline incision for living donor right hepatectomy: Liver Transplantation. 15(2):193~198 (4.085)",
+    "The clinical significance of hepatic parenchymal metastasis in patients with primary epithelial ovarian cancer.: Gynecologic Oncology. 112(1):28~34 (2.614)",
+    "Laparoscopic-assisted combined colon and liver resection for primary colorectal cancer with synchronous liver metastases: initial experience: World Journal of Surgery. 32:2701~2706 (1.778)",
+    "Survival analysis of 904 patients with hepatocellular carcinoma in a hepatitis B virus-endemic area: Journal of Gastroenterology and Hepatology. 23(3):467~473 (1.785)",
+    "Five-year survival analysis of a cohort of hepatocellular carcinoma patients who treated at the National Cancer Center, Korea: Korean J Hepatol. 13(4):530~42 (0)",
+    "Accuracy of clinical criteria for the diagnosis of hepatocellular carcinoma without biopsy in a Hepatitis B virus-endemic area: Journal of Cancer Research and Clinical Oncology. 133:937~943 (2.366)",
+    "Minimal anhepatic technique for living donor liver transplantation using right liver graft: Liver Transplantation. 13:1611~1613 (4.629)",
+    "Various liver resections using hanging maneuver by three glisson's pedicles and three hepatic veins: Annals of Surgery. 245:201~205 (7.678)",
+    "Dose-volumetric parameters predicting radiation-induced hepatic toxicity in unresectable hepatocellular carcinoma patients treated with three-dimensional conformal radiotherapy: International Journal of Radiation Oncology Biology Physics. 67:225~231 (4.556)",
+    "A case of hepatectomy for liver metastasis after pancreatoduodenectomy for carcinoma of ampulla of Vater: The Korean Journal of Gastroenterology. 48:434~437 ()",
+    "The adverse effect of indirectly diagnosed portal hypertension in the complicaions and prognosis after hepatic resection of hepatosellular carcinoma: 대한간학회지. 12:553~561 ()",
+    "Diagnostic accuracy of 18F-FDG positron emission tomography for evaluation of hepatocellular carcinoma: 대한간학회지. 12:546~552 ()",
+    "Three-Dimensional conformal radiotherapy of unresectable hepatocellular carcinoma patients for whom transcatheter arterial chemoembolization was ineffective or unsuitable: American Journal of Clinical Oncology. 29:568~575 (1.615)",
+    "Geometric Shifting of Porta Hepatis during posthepatectomy radiotherapy for biliary tract cancer: international journal of radiation oncology biology physics. 66:212~216 (4.556)",
+    "Isolated caudate lobectomy using the hanging maneuver: Surgery. 139:847~850 (2.566)",
+    "A Case of Osteoclast-Like Giant Cell Tumor of the Pancreas: Korean Journal of Gastroenterology. 45:441~445 ()",
+    "The clinical report of 1,078 cases of hepatocellular carcinomas:National Cancer center experience: Korean Journal of Hepatology. 10:255~297 ()",
+    "CpG methylation of the Erα and Erβ genes in breast cancer: INT J Mol MED. 14:289~293 (1.94)",
+    "A case of primary leiomyosarcoma of the inferior vena cava treated by surgical resection and reconstruction with synthetic graft replacement: 대한소화기학회지. 42:249~254 ()",
+    "A case of primary leiomyosarcoma of the inferior vena cava treated by surgical resection and reconstruction with synthetic graft replacement: 대한소화기학회지. 42:249~254 ()",
+    "Plasma levels of D-dimer anad soluble fibrin polymer in patients with hepatocellular carcinoma: a possible predictor of tumor thrombosis: Thromb Res. 109:125~129 (1.446)",
+    "Hepatic Hemagioma : Atypical Appearances on CT, MR Imaging and Sonography: Am J Roentgenology. 180:135~141 (2.424)"
+  ]
+}

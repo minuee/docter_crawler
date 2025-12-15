@@ -1,0 +1,163 @@
+{
+  "doctorId": 15017,
+  "rid_long": "70EDF7D4E8D1DC1982EA00A23B5F74023089D9D59C9EB4F5A624D9AA5209081C5E50589DA8E43F7F6D1E04ECC71136DEDCADC6F874539F33221DA7250F2D5EA79337DEBD2A7E71028E0304149B6B9993B3D614F26A29CB3A9FD4C9847F04E70E5507F0FB9CFC7A85952D1DCD3D8AD624E889652AC1D42ADA02F9B0EA18F20F1F8626F0BF926E57079412D614C9E6422827D9647B8DACC8DEEA5370CDE9E165C57D3B102FDB4BAA89C4BC7BD02ECB3C6F",
+  "hospital_cid": 490,
+  "bedoc_id": "A5607",
+  "bedoc_hospitalsite": "http://www.schmc.ac.kr/seoul/kor/index.do",
+  "bedoc_doctorname": "이효표",
+  "bedoc_deptname": "산부인과",
+  "bedoc_hospitalname": "순천향대서울병원",
+  "hospital_name": "순천향대서울병원",
+  "aiga_hid": "H11KR-11000026",
+  "hospital_site": "https://www.schmc.ac.kr/seoul/doctr/home.do?key=1605&doctrNo=665",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 용산구 대사관로 59, (한남동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.schmc.ac.kr/seoul/doctr/home.do?key=1605&doctrNo=665&doctorName=%EC%9D%B4%ED%9A%A8%ED%91%9C&depthName=%EC%82%B0%EB%B6%80%EC%9D%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": "Could not scrape papers: locator.click: Timeout 30000ms exceeded.",
+  "isAttend": true,
+  "profileUrl": "https://www.schmc.ac.kr/attach/DATA/doctr/coco_1577.png",
+  "specialty": "부인암, 복강경수술, 부인종양, 로봇수술, 자궁근종, 난소종양 수술",
+  "학력": [
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 의학사"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 대학원 의학석사"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 대학원 의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "미국하버드대학교 연수"
+    },
+    {
+      "date": null,
+      "content": "미국 텍사스 엠디앤더슨병원 연수"
+    },
+    {
+      "date": null,
+      "content": "서울대학교병원 레지던트 수료"
+    },
+    {
+      "date": null,
+      "content": "서울대학교병원 산부인과 전임강사"
+    },
+    {
+      "date": null,
+      "content": "서울대학교병원 산부인과 조교수"
+    },
+    {
+      "date": null,
+      "content": "미국 University of Southern California 파견 연구교수"
+    },
+    {
+      "date": null,
+      "content": "서울대학교병원 산부인과 부교수"
+    },
+    {
+      "date": null,
+      "content": "서울대학교병원 산부인과 교수"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 산부인과학교실 주임교수 및 과장"
+    },
+    {
+      "date": null,
+      "content": "건국대학교병원 산부인과 임상 자문교수"
+    },
+    {
+      "date": null,
+      "content": "국제콜포스코피자궁경부병리학회 집행위원"
+    },
+    {
+      "date": null,
+      "content": "대한산부인과학회 학술위원장"
+    },
+    {
+      "date": null,
+      "content": "대한산부인과초음파학회 회장"
+    },
+    {
+      "date": null,
+      "content": "대한의학레이저학회 이사장"
+    },
+    {
+      "date": null,
+      "content": "한국부인암재단 이사장"
+    },
+    {
+      "date": null,
+      "content": "대한비뇨부인과학회 회장"
+    },
+    {
+      "date": null,
+      "content": "대한 암학회 회장"
+    },
+    {
+      "date": null,
+      "content": "대한산부인과내시경학회 회장"
+    },
+    {
+      "date": null,
+      "content": "제56대 대한산부인과학회 회장"
+    },
+    {
+      "date": null,
+      "content": "대한부인종양콜포스코피학회 명예회장"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "국제콜포스코피자궁경부병리학회 집행위원"
+    },
+    {
+      "date": null,
+      "content": "대한산부인과학회 학술위원장"
+    },
+    {
+      "date": null,
+      "content": "대한산부인과초음파학회 회장"
+    },
+    {
+      "date": null,
+      "content": "대한의학레이저학회 이사장"
+    },
+    {
+      "date": null,
+      "content": "한국부인암재단 이사장"
+    },
+    {
+      "date": null,
+      "content": "대한비뇨부인과학회 회장"
+    },
+    {
+      "date": null,
+      "content": "대한 암학회 회장"
+    },
+    {
+      "date": null,
+      "content": "대한산부인과내시경학회 회장"
+    },
+    {
+      "date": null,
+      "content": "제56대 대한산부인과학회 회장"
+    },
+    {
+      "date": null,
+      "content": "대한부인종양콜포스코피학회 명예회장"
+    }
+  ],
+  "논문": []
+}

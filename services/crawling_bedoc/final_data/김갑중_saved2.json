@@ -1,0 +1,195 @@
+{
+  "doctorId": 14663,
+  "rid_long": "2E83DCB541C70258811908AB757576B234CF204049766DB7F07BD576C68B3FA6F1CB46A448EA3FC2F51F450E5ACB3B4F9F550409C59DB73C396F0FE4B25AAD45F53A5D909B1FDCD461655A0897258D54F8F28C7BF2B75B5FCCCA71BFFA815079EA9AABFAD650E10EB7DF59547426CFDA3A94156BE5C85D20BF15B2FC70438CD50A29AC66E19023403450E59E13C9FEAC773F1482A03873A9011354BB28D8C05F8F2B4A6929271F90C5FE98F3C1A63422",
+  "hospital_cid": 39,
+  "bedoc_id": "A0699",
+  "bedoc_hospitalsite": "http://www.emc.ac.kr/default.asp",
+  "bedoc_doctorname": "김갑중",
+  "bedoc_deptname": "정형외과",
+  "bedoc_hospitalname": "을지대병원",
+  "hospital_name": "을지병원",
+  "doctorName": "김갑중",
+  "department": "정형외과",
+  "aiga_hid": "H11KR-11000009",
+  "hospital_site": "https://www.emc.ac.kr/clinic/clinic_doc_view01_01.jsp?dept=ABFAAA&doct=20060013",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 노원구 한글비석로 68, 을지병원 (하계동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.emc.ac.kr/clinic/clinic_doc_view01_01.jsp?dept=ABFAAA&doct=20060013&doctorName=%EA%B9%80%EA%B0%91%EC%A4%91&depthName=%EC%A0%95%ED%98%95%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "isAttend": true,
+  "언론": [
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "[월드컵 특집] 축구하다 발목 염좌, 방치땐 관절염까지 간다",
+      "url": "http://news.heraldcorp.com/view.php?ud=20180621000155",
+      "issuer": "헤럴드경제"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "[칼럼] 스승이 된 제자의 사부곡(師父曲)",
+      "url": "http://www.cctoday.co.kr/?mod=news&act=articleView&idxno=1065883",
+      "issuer": "충청투데이"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "[칼럼] 의사와 환자의 인연",
+      "url": "http://www.cctoday.co.kr/?mod=news&act=articleView&idxno=1061064",
+      "issuer": "충청투데이"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "일방통행이 아닌 양방향통행",
+      "url": "http://www.cctoday.co.kr/?mod=news&act=articleView&idxno=1053819",
+      "issuer": "충청투데이"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "삐끗한 내 발목 십리도 못가 ‘발목염좌’",
+      "url": "http://www.ggilbo.com/news/articleView.html?idxno=361185",
+      "issuer": "금강일보"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "[칼럼] 연구자부터 오픈하자",
+      "url": "http://www.cctoday.co.kr/?mod=news&act=articleView&idxno=1046872",
+      "issuer": "충청투데이"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "삐끗한 발목, 평생의 발목",
+      "url": "http://www.joongdo.co.kr/jsp/article/article_view.jsp?pq=201702200653",
+      "issuer": "중도일보"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "발목 접질림 조기치료 안하면 만성 진행한다",
+      "url": "http://www.medifonews.com/news/article.html?no=126412",
+      "issuer": "메디포뉴스"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "삐끗한 내 발목 십리도 못가 ‘발목염좌’",
+      "url": "http://www.daejeontoday.com/news/articleView.html?idxno=443857",
+      "issuer": "대전투데이"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "[칼럼] 청출어람 청어람(靑出於藍 靑於藍)",
+      "url": "http://www.cctoday.co.kr/?mod=news&act=articleView&idxno=1039349",
+      "issuer": "충청투데이"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "[칼럼] 발(足)의 위대함",
+      "url": "http://www.cctoday.co.kr/?mod=news&act=articleView&idxno=1033424",
+      "issuer": "충청투데이"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "키 높이 아이템, 발과 허리 건강에 악영향",
+      "url": "http://www.fnnews.com/view?ra=Sent0901m_View&corp=fnnews&arcid=201302220100196750011321&cDateYear=2013&cDateMonth=02&cDateDay=22",
+      "issuer": "파이낸셜뉴스"
+    }
+  ],
+  "논문": [
+    "Screw-Home Movement of the Tibiofemoral Joint during Normal Gait: Three-Dimensional Analysis.  Clinics in Orthopedic Surgery. 7(3):303-309, 2015.",
+    "Surgical Treatment of Pathological Fractures Occurring at the Proximal Femur.  Yonsei Med J. 56(2):460-465, 2015.",
+    "Treatment of Tumours and Tumour-like Lesions in the Foot and Ankle - A single Institution Analysis. International Journal of Bio-Science and Bio-Technology. 6(1):165-174,  2014.",
+    "Cemented Versus Cementless Fixation of a Tibial Component in LCS Mobile-Bearing Total Knee Arthroplasty Performed by a Single Surgeon. The Journal of Arthroplasty. 29(12):2397-2401, 2014.",
+    "A comparison between orthogonal and parallel plating methods for distal humerus fractures: a prospective randomized trial. Eur J Orthop Surg Traumatol. 24(7):1123-31, 2014.",
+    "Plate osteosynthesis versus intramedullary nailing for both forearm bones fractures. Eur J Orthop Surg Traumatol. 24(5):769-776, 2014",
+    "Modified Hemihamate Arthroplasty Technique for Treatment of Acute Proximal Interphalangeal Joint Fracture-Dislocations. Ann Plast Surg. 72(4):411-416, 2014.",
+    "Predictors of Mortality in Patients with Hip Fractures for Persons Aging More Than 65 Years Old.  International Journal of Bio-Science and Bio-Technology. 5(2):27-34, 2013.",
+    "Ceramic-on-Ceramic Total Hip Arthroplasty: Minimum of Six-Year Follow-up Study. Clinics in Orthopedic Surgery. 5(3):174-179, 2013.",
+    "Modified retrograde percutaneous intramedullary multiple Kirschner wire fixation for treatment of unstable displace metacarpal neck and shaft fractures. Eur J Orthop Surg Traumatol. 23(5): 535-543, 2013.",
+    "Volar Long Locking Compression Plate Fixation for Distal Radius Fractures with Metaphyseal and Diaphyseal Extension. Eur J of Orthop Surgery Traumatol. 23(4): 407-15, 2013.",
+    "Metatarsophalangeal arthroscopic treatment for early stage IV of Freiberg’s disease: a case report. Eur J Orthop Surg Traumatol. 22(1):233-237, 2012.",
+    "An anatomical measurement of medial femoral torsion. J Pediatr Orthop B. 21(6): 552-7, 2012.",
+    "Distal ulna hook plate fixation for unstable distal ulna fracture associated with distal radius fracture. Orthopedics. 35(9):e1358-64, 2012.",
+    "Implant failure of long proximal femoral nail antirotation in patient with subtrochanteric pathologic fracture. Eur J Orthop Surg Traumatol. 22(7):609-612, 2012.",
+    "Closed femoral intramedullary nailing in the lateral decubitus position with the aid of intraoperative skeletal traction. Eur J Orthop Surg Traumatol. 22(6):481-485, 2012.",
+    "Treatment for hand enchondroma with curettage and calcium sulfate pellet (OsteoSet®) grafting. Eur J Orthop Surg Traumatol. 22(4):295-299. 2012.",
+    "Coronoid plate fixation of type II and III coronoid process fractures: outcome and prognostic factors. Eur J Orthop Surg Traumatol. 22(3): 213-219, 2012.",
+    "Comparison of Bone Regeneration Effects of Calcium Sulfate Containing DBM in Rabbit Radius Defect Model. J of the Musculoskeletal Transplantation Society. 12(1): 32-45, 2012.",
+    "Anterior Pelvic Plating and Sacroiliac Joint Fixation in Unstable Pelvic Ring Injuries. Yonsei Med J. 53(2):422-426, 2012.",
+    "Medial Unicompartmental Knee Arthroplasty in Patients with Spontaneous Osteonecrosis of the Knee. Clinics in Orthopedic Surgery. 3(4):279-84, 2011.",
+    "Two continuous femoral nerve block strategies after TKA. Knee Surg Sports Traumatol Arthroscopy. 19(11):1901-8, 2011",
+    "Mid-Term Results of Oxford Medial Unicompartmental Knee Arthroplasty. Clinics in Orthopedic Surgery. 3(3):178-183, 2011",
+    "Surgical Treatment of Femoral Unstable Intertrochanteric Fractures in Elderly Patients -Comparative Study between Compressive Hip Screws and Additional Trochanteric Stabilizing Plates-. J of Kor Fracture Society. 24(4):295-300, 2011."
+  ],
+  "학력": [
+    {
+      "date": null,
+      "content": "충남대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "충남대학교 대학원 의학석사"
+    },
+    {
+      "date": null,
+      "content": "을지대학교 대학원 의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "대전을지대학교병원 인턴"
+    },
+    {
+      "date": null,
+      "content": "대전을지대학교병원 정형외과 전공의"
+    },
+    {
+      "date": null,
+      "content": "서울대학교병원 정형외과 전임의 (골, 연부조직 종양학)"
+    },
+    {
+      "date": null,
+      "content": "2011~2012 미국 University of California, Irvine 연수"
+    },
+    {
+      "date": null,
+      "content": ""
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한정형외과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한골관절종양학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한골연부조직이식학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대학족부족관절학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한골절학회 정회원"
+    }
+  ],
+  "profileUrl": "https://www.emc.ac.kr/upload/doctor/20060013_02.JPG",
+  "specialty": "골연부조직종양, 족부,족부질환 및 관절염, 스포츠손상, 당뇨병성족부질환, 족부외상"
+}

@@ -1,0 +1,58 @@
+{
+  "doctorId": 14719,
+  "rid_long": "D1692DC5FAF2C2EFA5E1E7818A5C376E65A0AB4D241DF791BC5ED9B5097A221A9BE4E3F71C520643D9B44B53F37C2042E9078CBA64A39DA2E0C4CFE823E09C954BF7C6E89B53CDE5E247AC497CC9DA74B17074B9460F13B7971CAD0BDF2E0BEA41845747FE51EC11FC488D8BE86BDDE40D4B51E1925B78A098ADE476D1DE8716F084FB8BF4FAF12DC2C65E878AE7BC36042C9445D3E5AB661409A797708379E0164127D7BCAE64E74E964F22CAB6340C",
+  "hospital_cid": 112,
+  "bedoc_id": "A0248",
+  "bedoc_hospitalsite": "https://www.seoulsnh.or.kr/",
+  "bedoc_doctorname": "김영후",
+  "bedoc_deptname": "정형외과",
+  "bedoc_hospitalname": "서남병원",
+  "hospital_name": "서울특별시 서남병원",
+  "aiga_hid": "H11KR-11000020",
+  "hospital_site": "https://www.seoulsnh.or.kr/dept/popup_doc.asp?d_code=101&m_code=57",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 양천구 신정이펜1로 20, (신정동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.seoulsnh.or.kr/dept/popup_doc.asp?d_code=101&m_code=57&doctorName=%EA%B9%80%EC%98%81%ED%9B%84&depthName=%EC%A0%95%ED%98%95%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "specialty": "인공관절시술",
+  "학력": [
+    {
+      "content": "연세대학교 의예과 및 의과대학 졸업"
+    },
+    {
+      "content": "하버드대학 부속 메사츄세츠 종합병원 인공 고관절 및 슬관절 전치환술 Fellow"
+    }
+  ],
+  "경력": [
+    {
+      "content": "토론토 대학 부속 토론토웨스턴 병원 및 소아병원(Hospital for Sick Children) 정형외과 레지던트"
+    },
+    {
+      "content": "시카고 대학병원 정형외과 레지던트"
+    },
+    {
+      "content": "미국 남가주대학 (USC) 의과대학 정형외과 교수"
+    },
+    {
+      "content": "미국 정형외과 전문의 취득"
+    },
+    {
+      "content": "연세 의대 세브란스병원 정형외과 교수"
+    },
+    {
+      "content": "텍사스 Tech 대학 의과대학 정형외과 교수"
+    },
+    {
+      "content": "이화여자대학교 의과대학 교수 및 인공관절센터 소장"
+    },
+    {
+      "content": "서울특별시 서남병원 인공관절센터장"
+    }
+  ],
+  "학술": []
+}

@@ -1,0 +1,92 @@
+{
+  "doctorId": 15001,
+  "rid_long": "59897A83141DD996512F1DB6D8C79C504399433AD7CAD0BF43DAF27C159BE727030509126B574F63E0FCF87D58A0B63CA5ECFEFB8D585D98EF8C926B7622FA66C1B39B3B3CB888474A391DD5C4C21FF69F006BAA13E7281A436E99A7FB49F779BB0BAC4C8C82F76480C60DB20844670564C0436D8BABFBBE03F38E16E04E1EE55BC0E6DCC429156B96878D840EF7BAA76C37E04843EE0A6941BA10C964C9433865BB62FF1B2C704A85BD1C483561C6B4CAE40330F3D0C2544BE57ABC561BEBD5F3AD5F5ACF6CD98D16CC48A8CFB3691A",
+  "hospital_cid": 468,
+  "bedoc_id": "A5736",
+  "bedoc_hospitalsite": "http://www.cmcdj.or.kr/",
+  "bedoc_doctorname": "이진석",
+  "bedoc_deptname": "신경외과",
+  "bedoc_hospitalname": "대전성모병원",
+  "hospital_name": "대전성모병원",
+  "aiga_hid": "H11KR-25000007",
+  "hospital_site": "https://www.cmcdj.or.kr/servlet/MainSvl?_tc=F001001001A02&cd2=001&cd3=001&cd4=001&cd5=A02&idx=980&deptidx=113",
+  "site_type": "single",
+  "hospital_addr": "대전광역시 중구 대흥로 64, (대흥동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.cmcdj.or.kr/servlet/MainSvl?_tc=F001001001A02&cd2=001&cd3=001&cd4=001&cd5=A02&idx=980&deptidx=113&doctorName=%EC%9D%B4%EC%A7%84%EC%84%9D&depthName=%EC%8B%A0%EA%B2%BD%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "specialty": "척추질환, 디스크, 두부외상, 뇌혈관질환, 요통",
+  "profileUrl": null,
+  "isAttend": true,
+  "학력": [
+    {
+      "date": null,
+      "content": "충남대학교 의과학 박사"
+    },
+    {
+      "date": null,
+      "content": "가톨릭대학교 의과학 석사"
+    },
+    {
+      "date": null,
+      "content": "가톨릭대학교 의과대학 학사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "가톨릭대학교 대전성모병원 임상교수 / 신경외과 과장"
+    },
+    {
+      "date": null,
+      "content": "대한신경외과학회 정회원(현)"
+    },
+    {
+      "date": null,
+      "content": "대한신경손상학회 정회원(현)"
+    },
+    {
+      "date": null,
+      "content": "대한척추신경외과학회 정회원(현)"
+    },
+    {
+      "date": null,
+      "content": "대한척추변형연구학회 정회원(현)"
+    },
+    {
+      "date": null,
+      "content": "대한소아신경외과학회 정회원(현)"
+    },
+    {
+      "date": null,
+      "content": "근로복지공단 대전지역 산재자문위원(현)"
+    },
+    {
+      "date": null,
+      "content": "미국 워싱턴대학교 메디컬센터 연수(2010~2011)"
+    }
+  ],
+  "논문": [
+    "2001 수술중 시행한 척수강 조영술의 유용성. 대한신경외과학회지",
+    "2004 Efficacy of preparation chemotherapy in a choroid plexus carcinoma.대한신경외과학회지",
+    "2004 골다공증성 척추 압박골절 및 방출성 골절에 대한 Polymethymethacrylate를 이용한 경피적 척수체 성형술의 효과.대한신경외과학회지"
+  ],
+  "저서": [
+    {
+      "date": "2003",
+      "content": "신경손상학: 척추손상의 생체역학과 척수손상의 분류"
+    }
+  ],
+  "언론": [
+    {
+      "content": "이진석 대전성모병원 교수, 산재근로자 권익 기여 노동부장관 표창",
+      "url": "https://www.daejonilbo.com/news/articleView.html?idxno=2200332"
+    },
+    {
+      "content": "고장난 척추를 춤추게 만드는 ‘장인의 손길’",
+      "url": "http://www.cctoday.co.kr/?mod=news&act=articleView&idxno=755697"
+    }
+  ]
+}

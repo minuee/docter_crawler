@@ -1,0 +1,227 @@
+{
+  "doctorId": 14693,
+  "rid_long": "A9C22EEE97E46F6234F058DF0503E5EA323503DF5F4750D5ABFEA403AD2C76B56CE2E09026FD8908D117507BED591D59AE0DFC46426BD3716A175F4331BE869BB066404D84E4FF2556BF4B50F0726772E46E3BD9CD010E8217835476935D2AD8CFB142F306F6A074F3CF1A6019C4A26D2CF941F4844C7200241FD23BF3E58013113766857C1F2CFF218A5BA5DE9A8186",
+  "hospital_cid": 79,
+  "bedoc_id": "A0356",
+  "bedoc_hospitalsite": "http://www.khnmc.or.kr",
+  "bedoc_doctorname": "김상범",
+  "bedoc_deptname": "신경과",
+  "bedoc_hospitalname": "강동경희대병원",
+  "hospital_name": "강동경희대학교의대병원",
+  "aiga_hid": "H11KR-11000004",
+  "hospital_site": "https://med.khnmc.or.kr/kr/treatment/doctor/6/profile.do",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 강동구 동남로 892, (상일동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://med.khnmc.or.kr/kr/treatment/doctor/6/profile.do?doctorName=%EA%B9%80%EC%83%81%EB%B2%94&depthName=%EC%8B%A0%EA%B2%BD%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "specialty": "신경근육질환, 손발저림, 유전신경계질환, 근무력증, 다발성경화증, 신경병통증, 두통, 어지럼증, 뇌졸중, 치매",
+  "학력": [
+    {
+      "date": "2009",
+      "content": "경희대학교 의과대학 박사"
+    },
+    {
+      "date": "2002",
+      "content": "경희대학교 의과대학 석사"
+    },
+    {
+      "date": "1997",
+      "content": "경희대학교 의과대학 학사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "2024~ 현재",
+      "content": "강동경희대학교병원 협진진료처 뇌신경센터 센터장"
+    },
+    {
+      "date": "2021~ 현재",
+      "content": "강동경희대학교병원 신경과 교수"
+    },
+    {
+      "date": "2019~ 2024",
+      "content": "강동경희대학교병원 신경과 과장"
+    },
+    {
+      "date": "2016~ 2021",
+      "content": "강동경희대학교병원 신경과 부교수"
+    },
+    {
+      "date": "2016~ 2017",
+      "content": "미국 웨이크 포레스트 대학교 신경초음파연구실 방문교수"
+    }
+  ],
+  "학술": [
+    {
+      "date": "2025~ 현재",
+      "content": "사회과학과의학교육연구회 정책이사"
+    },
+    {
+      "date": "2025~ 현재",
+      "content": "통계청 제8기 한국표준건강분류(KCF) 자문위원"
+    },
+    {
+      "date": "2025~ 현재",
+      "content": "통계청 제9기 한국표준질병사인분류(KCD) 자문위원"
+    },
+    {
+      "date": "2024~ 현재",
+      "content": "대한신경과학회 보험이사"
+    },
+    {
+      "date": "2025~ 현재",
+      "content": "대한신경근육질환학회 부회장"
+    }
+  ],
+  "수상": [
+    {
+      "date": "2020",
+      "content": "대한신경과학회 우수발표상 (지도교수) 대한신경초음파학회 우수포스터상 (지도교수)"
+    },
+    {
+      "date": "2019",
+      "content": "대한신경초음파학회 최우수구연상 (지도교수)"
+    },
+    {
+      "date": "2018",
+      "content": "대한임상신경생리학회 우수포스터발표상 (지도교수)"
+    },
+    {
+      "date": "2009",
+      "content": "경희대학교 동서신의학병원 개원 3주년 기념식 우수논문상"
+    },
+    {
+      "date": "2008",
+      "content": "대한신경과학회 제27차 통합 학술대회 우수발표상"
+    }
+  ],
+  "논문": [
+    "Compound Heterozygous Mutations of SACS in a Korean Cohort Study of Charcot-Marie-Tooth Disease Concurrent Cerebellar Ataxia and Spasticity (International Journal of Molecular Sciences. 2024;25(12):1-15)",
+    "Editorial: Application of ultrasound on peripheral neuromuscular disorders: From anatomy to clinic (Frontiers in Neurology. 2023;14(1):1-2)",
+    "중추신경계 탈수초질환에서 안와경유초음파: 시신경염 및 중추신경계 탈수초질환에서 임상적 유용성에 대한 문헌고찰 (Journal of Multiple Sclerosis and Neuroimmunology. 2023;14(2):80-86)",
+    "INF2 mutations in patients with a broad phenotypic spectrum of Charcot-Marie-Tooth disease and focal segmental glomerulosclerosis (JOURNAL OF THE PERIPHERAL NERVOUS SYSTEM. 2023;28(1):108-118)",
+    "신경근육질환 (대한의학, 2023)",
+    "Osmotic demyelination syndrome caused by rapid correction of hyperammonemia and continuous hyperbilirubinemia: a case report and review of the literature (Encephalitis. 2023;3(4):119-124)",
+    "Identification and clinical characterization of Charcot-Marie-Tooth disease type 1C patients with LITAF p.G112S mutation (Genes and Genomics. 2022;44(8):1007-1016)",
+    "신경근육초음파 (범문에듀케이션, 2022)",
+    "Peripheral Myelin Protein 22 Gene Mutations in Charcot-Marie-Tooth Disease Type 1E Patients (GENES. 2022;13(7):0-0)",
+    "MPZ-, GDAP1-, and NEFL-Related Charcot-Marie-Tooth Disease with Diverse Clinical and Electrophysiological Phenotypes (대한근전도 전기진단의학회지. 2022;24(3):62-69)",
+    "Phenotypic heterogeneity in patients with NEFL-related Charcot-Marie-Tooth disease (MOLECULAR GENETICS & GENOMIC MEDICINE. 2022;10(2):1-16)",
+    "Myelin Oligodendrocyte Glycoprotein-Immunoglobulin G in the CSF: Clinical Implication of Testing and Association With Disability (Neurology(R) neuroimmunology & neuroinflammation. 2022;9(1):1-13)",
+    "Variants of aminoacyl-tRNA synthetase genes in Charcot-Marie-Tooth disease: A Korean cohort study (Journal of the Peripheral Nervous System. 2022;27(1):38-49)",
+    "Clinical and neuroimaging features in charcot-marie-tooth patients with gdap1 mutations (Journal of Clinical Neurology (Korea). 2021;17(1):52-62)",
+    "Genetic and clinical spectrums in Korean Charcot-Marie-Tooth disease patients with myelin protein zero mutations (MOLECULAR GENETICS & GENOMIC MEDICINE. 2021;0(0):0-0)",
+    "통증 치료에 있어서 신경과 의사의 역할 ? 2020년 시행한 대한신경과학회의 설문조사를 기반으로 (대한신경과학회지. 2021;39(3):165-171)",
+    "Clinical and neuroimaging features in charcot?marie?tooth patients with gnb4 mutations (Life. 2021;11(6):1-11)",
+    "척수 수술에서 수술 중 신경계 감시 (Journal of Intraoperative Neurophysiology. 2021;3(2):67-74)",
+    "Bone health in neuromyelitis optica: Bone mineral density and fractures (MULTIPLE SCLEROSIS AND RELATED DISORDERS. 2020;42(102080):1-8)",
+    "당원 축적병 9D (GSD9D) 환자의 신규 PHKA1 돌연변이 (생명과학회지. 2020;30(8):672-679)",
+    "우리말 신경학용어 (대한신경과학회지. 2020;38(3):175-182)",
+    "Serum level of IL-1β in patients with inflammatory demyelinating disease: Marked upregulation in the early acute phase of MOG antibody associated disease (MOGAD) (Journal of Neuroimmunology. 2020;348(577361):1-8)",
+    "Editorial: Use of Ultrasound in Diagnosis and Treatment of Peripheral Nerve Entrapment Syndrome (FRONTIERS IN NEUROLOGY. 2020;10(0):0-0)",
+    "Short hairpin RNA treatment improves gait in a mouse model of Charcot-Marie-Tooth disease type 1A (Molecular Medicine Reports. 2020;22(6):4947-4955)",
+    "다발신경병 진단에서 신경초음파검사 (대한근전도 전기진단의학회지. 2019;21(1):1-6)",
+    "Relationship between adverse events and antiplatelet drug resistance in neurovascular intervention: A meta-analysis (Journal of NeuroInterventional Surgery. 2018;10(10):942-948)",
+    "Clinical Manifestations of Isolated Chronic Middle Cerebral Artery Occlusion in Relation to Angiographic Features (WORLD NEUROSURGERY. 2017;108(0):303-309)",
+    "신경성기립저혈압의 치료 (Research in Vestibular Science. 2017;16(3):73-79)",
+    "SUBCORACOID BURSITIS PRESENTING WITH BRACHIAL PLEXOPATHY INVOLVING THE POSTERIOR CORD (MUSCLE  NERVE. 2017;55(3):13-14)",
+    "ADSSL1 mutation relevant to autosomal recessive adolescent onset distal myopathy (ANNALS OF NEUROLOGY. 2016;79(2):231-243)",
+    "불면증상이 동반된 폐쇄성 수면무호흡 환자의 정서적, 성격적 특성: 미네소타 다면적 인성검사 분석 (수면. 2016;12(2):59-63)",
+    "Recessive optic atrophy, sensorimotor neuropathy and cataract associated with novel compound heterozygous mutations in OPA1 (MOLECULAR MEDICINE REPORTS. 2016;14(1):33-40)",
+    "A novel homozygous MPV17 mutation in two families with axonal sensorimotor polyneuropathy (BMC NEUROLOGY. 2015;15(1):179-0)",
+    "Recurrent abducens nerve palsy due to basilar venous plexus engorgement (NEUROLOGICAL SCIENCES. 2015;36(10):1913-1915)",
+    "대칭 및 비대칭 근위축을 함께 보인얼굴어깨위팔근육디스트로피 환자 (대한근전도 전기진단의학회지. 2015;17(1):50-54)",
+    "Ultrasonography-guided transplantation facilitates perineural delivery of stem cells (ANIMAL CELLS AND SYSTEMS. 2015;19(4):269-273)",
+    "말초신경질환의 초음파 소견 (대한내과학회지. 2015;89(6):644-653)",
+    "Influence of iodinated magnetic resonance contrast media and isotope 99mTc on changes of computed tomography number (JOURNAL OF MAGNETICS. 2015;20(3):302-307)",
+    "발처짐 증상으로 발현된 총비골신경의 슈반세포종 (대한임상신경생리학회. 2014;16(2):74-76)",
+    "목묶음술 후 재 성장하여 압박시신경병증으로 발현한내경동맥 동맥류 (대한임상신경생리학회. 2014;16(2):89-91)",
+    "Safety of acupuncture treatments for patients taking warfarin or antiplatelet medications: Retrospective chart review study (EUROPEAN JOURNAL OF INTEGRATIVE MEDICINE. 2014;6(4):492-496)",
+    "Mutations in the PLEKHG5 gene is relevant with autosomal recessive intermediate Charcot-Marie-Tooth disease (ORPHANET JOURNAL OF RARE DISEASES. 2013;8(0):0-0)",
+    "Rare variants in methionyl- and tyrosyl-tRNA synthetase genes in late-onset autosomal dominant Charcot-Marie-Tooth neuropathy. (CLINICAL GENETICS. 2013;0(0):1-3)",
+    "척추동맥박리에 의한 경추 신경뿌리병증 (대한통증자율신경학회지. 2013;2(1):52-54)",
+    "Comparison between Clinical Disabilities and  Electrophysiological Values in Charcot-Marie-Tooth  1A Patients with PMP22 Duplication (JOURNAL OF CLINICAL NEUROLOGY. 2012;8(2):139-145)",
+    "Acute Cerebral Infarction Related to Stenosis of Accessory Middle Cerebral Artery (대한뇌졸중학회지. 2012;14(1):43-45)",
+    "이분정중신경을 보인 손목굴증후군 1예 (대한통증자율신경학회지. 2012;1(1):41-43)",
+    "Two recessive intermediate Charcot-Marie-Tooth patients with GDAP1 mutations (JOURNAL OF THE PERIPHERAL NERVOUS SYSTEM. 2011;16(2):143-146)",
+    "A Complex Phenotype of Peripheral Neuropathy, Myopathy, Hoarseness, and Hearing Loss is Linked to an Autosomal Dominant Mutation in MYH14 (HUMAN MUTATION. 2011;32(6):669-677)",
+    "Wide phenotypic variations in CMT 1A neuropathy with rare copy number variations on 17p12 (ANIMAL CELLS AND SYSTEMS. 2011;15(4):301-309)",
+    "MPZ mutation in an early-onset Charcot-Marie-Tooth disease type 1B family by genome-wide linkage analysis (INTERNATIONAL JOURNAL OF MOLECULAR MEDICINE. 2011;28(3):389-396)",
+    "뒷머리뼈우묵 거미막낭종 환자에서 발생한 단독 혀밑신경병증 (경희의학. 2010;26(1):33-36)",
+    "Acute Ischemic Stroke in a Patient with a Native Valvular Strand. (Case reports in neurology. 2010;25(2(2)):91-95)",
+    "Association between Pulse Wave Velocity and Nerve Conduction Study in Diabetic Patients (EUROPEAN NEUROLOGY. 2010;64(4):219-223)",
+    "Myotonic dystrophy type i combined with X-linked dominant Charcot-Marie-Tooth neuropathy (Neurogenetics. 2010;11(4):425-433)",
+    "Recurrent ischemic stroke in a patient with idiopathic thrombocytopenic purpura (JOURNAL OF THROMBOSIS AND THROMBOLYSIS. 2010;30(2):229-232)",
+    "뇌졸중 환자의 임상적 평가: 신경학적 뇌졸중 척도의 소개 (Neurointervention. 2009;4(0):74-86)",
+    "수영과 관련되어 발생한 두통 1예 (Korean Journal of Headache. 2009;10(1):100-102)",
+    "Metastatic Breast Cancer of the Medulla Oblongata Mimicking Acute Ischemic Stroke (Korean Journal of Stroke. 2009;11(3):158-158)"
+  ],
+  "저서": [
+    {
+      "date": "2021.12",
+      "content": "신경초음파",
+      "issuer": null
+    },
+    {
+      "date": "2020.03",
+      "content": "의료 초음파의 기초 및 원리",
+      "issuer": null
+    },
+    {
+      "date": "2019.09",
+      "content": "알수록 재미있는 신경학",
+      "issuer": null
+    },
+    {
+      "date": "2017.11",
+      "content": "신경학 3판",
+      "issuer": null
+    },
+    {
+      "date": "2012.02",
+      "content": "유발전위: 원리와 임상응용",
+      "issuer": null
+    }
+  ],
+  "언론": [
+    {
+      "targetDate": "2025-09-01",
+      "type": null,
+      "text": "[뇌잘알TV] 말초신경병에 이런 증상들이 나타나요",
+      "url": "#",
+      "issuer": null
+    },
+    {
+      "targetDate": "2022-12-22",
+      "type": null,
+      "text": "[대한의학회 E-뉴스레터] 제한된 응급 의료상황에서 의료진의 대처 : 법적인 문제",
+      "url": "#",
+      "issuer": null
+    },
+    {
+      "targetDate": "2021-07-20",
+      "type": null,
+      "text": "[스포츠경향] 손발 감각 무뎌지고 계속 아프면, 말초신경병 의심",
+      "url": "#",
+      "issuer": null
+    },
+    {
+      "targetDate": "2020-06-29",
+      "type": null,
+      "text": "[이데일리] 손발 감각 무뎌지고 아프면 '말초신경병' 의심을",
+      "url": "#",
+      "issuer": null
+    },
+    {
+      "targetDate": "2020-06-23",
+      "type": null,
+      "text": "[한국일보] 손발 감각 무뎌지고 계속 아프다면...혈액순환장애 아닌 말초신경병?",
+      "url": "#",
+      "issuer": null
+    }
+  ],
+  "isAttend": true
+}

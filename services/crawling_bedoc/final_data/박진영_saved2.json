@@ -1,0 +1,306 @@
+{
+  "doctorId": 14809,
+  "rid_long": "F23C99279FF8C0495BD4035311B16C659E4291C2DAD027B0FEDE253CE7C02D8882BFD9D932AF9A1F54F50B53DC7701653C48D3A1422E2AB72E75A8CFC204E466EB6BA01D05AACC0C5C472A298312D9A3BCF37316DC76E7E8DBB35D0FF9B731AC7AC1A8E9FA558BB515C7A21F853A0066F9AB827A0A904A735B9E810659746C44E0E253EA7EB9D582FB8CB005062F5DA3016B40E595F3CB3B652FD4B35FBA6620",
+  "hospital_cid": 240,
+  "bedoc_id": "A1138",
+  "bedoc_hospitalsite": "http://www.neon.or.kr/",
+  "bedoc_doctorname": "박진영",
+  "bedoc_deptname": "정형외과",
+  "bedoc_hospitalname": "박진영네온정형외과의원",
+  "hospital_name": "네온정형외과",
+  "aiga_hid": "H31KR-11001377",
+  "hospital_site": "http://www.neon.or.kr/bbs/board.php?bo_table=board0103",
+  "site_type": "list",
+  "hospital_addr": "서울특별시 강남구 선릉로131길 8, 노벨빌딩 (논현동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "http://www.neon.or.kr/bbs/board.php?bo_table=board0103&doctorName=%EB%B0%95%EC%A7%84%EC%98%81&depthName=%EC%A0%95%ED%98%95%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "http://www.neon.or.kr/img/board0103.jpg",
+  "specialty": "정형외과,어깨, 팔꿈치, 스포츠의학",
+  "학력": [
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 의과대학원 박사취득"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "서울대학교 정형외과 전공의 수료"
+    },
+    {
+      "date": null,
+      "content": "단국대학교 의과대학 부교수"
+    },
+    {
+      "date": null,
+      "content": "건국대학교 의학전문대학원 교수"
+    },
+    {
+      "date": null,
+      "content": "건국대학교병원,정형외과과장,어깨팔꿈치센터장"
+    },
+    {
+      "date": null,
+      "content": "(현)박진영 네온 정형외과 원장"
+    },
+    {
+      "date": null,
+      "content": "미국 뉴욕 컬럼비아 대학원 병원 어깨,팔꿈치,스포츠센터 임상강사"
+    },
+    {
+      "date": null,
+      "content": "미국 메이어 클리닉,정형외과 연수"
+    },
+    {
+      "date": null,
+      "content": "대한견-주관절학회 선정:미국,일본,유럽 traveling fellow 수상"
+    },
+    {
+      "date": null,
+      "content": "제마스포츠의학상,대한선수트레이너협회 Best MD상 수상"
+    },
+    {
+      "date": null,
+      "content": "동아일보 ‘메디칼 프론티어; 관절질환 및 스포츠외상 베스트 의사’ 선정"
+    },
+    {
+      "date": null,
+      "content": "동아일보 ‘신베스트닥터의 건강학: 관절수술분야 명의들’ 선정"
+    },
+    {
+      "date": null,
+      "content": "네이버 케스트 ‘한국의 명의 100인’ 선정"
+    },
+    {
+      "date": null,
+      "content": "EBS ‘명의’ 200인 선정"
+    },
+    {
+      "date": null,
+      "content": "2008년 베이징 올림픽, 대한민국 선수단 팀닥터"
+    },
+    {
+      "date": null,
+      "content": "MBC ESPN 날려라 홈런왕 팀닥터 (역임)"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한올림픽위원회(Korean Olympic Committee) 의무위원"
+    },
+    {
+      "date": null,
+      "content": "대한야구협회(Korea Baseball Organization) 실행위원"
+    },
+    {
+      "date": null,
+      "content": "제 4차 아시아 견관절학회 조직위원회 학술위원장 (역임)"
+    },
+    {
+      "date": null,
+      "content": "제 13차 세계 견-주관절학회 조직위원회, 조직위원장"
+    },
+    {
+      "date": null,
+      "content": "대한견-주관절학회, 회장 (역임)"
+    },
+    {
+      "date": null,
+      "content": "대한스포츠학회, 대한정형외과초음파학회, 상근부회장"
+    },
+    {
+      "date": null,
+      "content": "미국 견-주관절학회, 국제회원"
+    }
+  ],
+  "국내논문": [
+    "주관절 내측측부인대 재재건술 (J Korean Orthop Assoc, 2023 Volume 58 Page 115-123)",
+    "코킹 초기단계에서 팔의 과외전 자세가 야구 투수에게 정말 위험한가? (The Korean Journal of Sports Medicine, 2019 Volume 37 Number 4 Page 130-133)",
+    "상완골 근위부 골절의 치료 실패 후 견관절 치환술 (The Journal of the Korean Orthopaedic Association, 2019 Volume 54 Number 2 Page 110-119)",
+    "Docking 술식을 이용한 야구선수의 내측측부인대 재건술에서 상완골 터널 시작위치에 따른 임상결과 비교 (대한스포츠의학회지 제34권 제2호 2016)",
+    "견관절 불안정성 환자를 대상으로 한 부하 방사선 사진의 임상적 유용성에 대한 평가 (Year 2016, Volume 51, Number 4, page 327-337)",
+    "주관절의 외반 신전 과부하 증후군 야구선수에서 시행한 관절경하 주두 골극절제술 (대한스포츠의학회지 2013; 31(2):45-50)",
+    "삼각근 파열로 오인된 관혈적 회전근개 봉합술 후 발생한 피하조직의 위축-증례 보고- (정형통증의학회지, 3-1, 2014)",
+    "견관절 전방 불안정증에서 관절경적 방카트르 봉합술 시 흡수성 매듭 봉합 나사못과 흡수성 비 매듭 봉합 나사못을 이용한 임상적 치료결과 비교 (대한관절경학회지, 제17권 제1호, 50~56 2013)",
+    "견관절 불안정성 및 관절와 순 손상의 수술적 치료 (임상통증학회지, Vol 11, No. 1, 2012 20-25)",
+    "회전근 개 파열 봉합술에서의 최신지견 (대한관절경학회지, 16권 1호 2012, 98~103)",
+    "골성 Bankart 병변 (대한관절경학회지, 15권 1호, 50-54, 2011)",
+    "양궁선수의 오구충돌 증후군의 치료후 발생한 회전근 간격이 손상에 대한 치료 (대한견-주관절학회지, 13권 2호, 280-285, 2010)",
+    "오구견봉인대만을 이용한 술식과 견봉골편을 포함한 오구견봉인대를 이용한 변형 Weaver and Dunn 술식에서의 만성 견봉쇄골관절 손상 치료결과 추시 (대한견-주관절학회지, 13권 2호, 209~216, 2010)",
+    "자기공명영상술로 진단된 겨드랑신경 단독손상 (대한근전도.전기진단의학회지 11(2):136~140, 2009)",
+    "비매듭 금속봉합 나사못을 이용한 관절경적 방카트 복원술: 임상적 및 방사선학적 결과의 비교 (대한정형외과스포츠의학회지, 제7권 2호, 2008, 135-141)",
+    "스포츠와 연관된 과사용 증후근: 주관절 (대한정형외과스포츠의학회지, 제7권 2호 2008, 67-74)",
+    "회전근 개 질환 환자의 방문 형태와 진단 일치도 (대한정형외과학회지, 2008. 43-2, 187-192)",
+    "주관절 질환의 관절경적 치료 (대한관절경학회지, 2007, 11-2, 82-84)",
+    "견관절 외상성 불안정성 관절와 병변 (대한견주관절학회지, 2007, 10권 1호, 23-26)",
+    "야구선수의 연령별 관절운동범위 변화 연구 (대한스포츠의학회지, 2007, 25-1, 45-52)",
+    "근위 상완골 삼분 골절에 시행한 긴장대 봉합과 고정 봉합을 동반한 관혈적 골수강내 금속정 고정술 (대한골절학회지, 2007, 20-1, 45-52)",
+    "실패한 견관절 불안전증의 봉합술에 대한 재수술 (대한관절경학회지, 2006, 10권 2호, 135-140)",
+    "골연골 병변, 주관절 (대한견-주관절학회지, 2006, 9권 2호, 149-154)",
+    "Y형 금속판을 이용한 상완골 과간 골절의 치료 (대한골절학회지, 2006, 19권 4호, 443-448)",
+    "Revision of Failed Shoulder instability Repair (대한관절경학회지, 2006, 10권 1호, 17-22)",
+    "회전근개 파열의 일열 봉합술 및 이열 봉합술 (대한견-주관절학회지, 2006, 9권 1호, 89-95)",
+    "상완 삼두근-보존 후방 도달법에 의한 원위 상완골 관절 내 골절의 치료 (대한골절학회지, 2006, 19권1호, 51-55)",
+    "박리성 골연골염, 주관절 (대한견-주관절학회지, 2005, 8권2호, 63-67)",
+    "근막 동통 증후군과 동반된 견관절 충돌 증후군 (대한정형외과학회지, 2005, 40권7호, 851-6)",
+    "구상돌기 골절과 요골두 골절이 동반되 주관절 탈구의 치료 (대한골절학회지, 2005, 18권4호, 437-442)",
+    "장력대 강선 고정을 이용한 제 II형 원위부 쇄골 골절의 치료 (대한골절학회지, 2005, 18권 4호, 421-425)",
+    "골다공증 (대한의사협회지, 2005, 48권 9호, 847-856)",
+    "회전근 개 질환의 자연경과 (대한정형외과 스포츠 의학회지, 2004, 3권2호, 93-97)",
+    "회전근 간 병변: 불안전증과 강직 (대한견-주관절학회지, 2005, 8권 1호, 1-4)",
+    "회전근 개 부전층 파열: 변연절제술과 봉합술 (대한관절경학회지, 2005, 9권1호, 1-6)",
+    "스노우보드 손상 (대한정형외과 스포츠의학회지, 2004, 3권1호, 22-24)",
+    "견관절 충돌 증후군 환자에서 강직 여부에 따른 치료 결과 (대한관절경학회지 8권 1호, 54-51, 2004)",
+    "견봉하 관절경 수술 후 진통작용: Bupivacaine, Bupivacaine과 Morphine, Bupivacaine과 Fentanyl의 점액낭내 지속 주입에 대한 전향적 이중 맹검 연구 (대한 마취과 학회지, 46권 3호, 2004, 323-8)",
+    "투구 손상의 보존적 치료 (대한정형외과 스포츠 의학회지, 2권 2호, 2003, 127-135)",
+    "상완골 근위부 골절의 수술적 요법 (대한정형외과 스포츠 의학회지, 2권 2호, 2003, 168-175)",
+    "상완골 근위부 골절에 시행한 긴장대 봉합을 동반한 관혈적 골수강내 고정술 (대한견-주관절학회지, 6권 2호, 2003, 149-160)",
+    "신경성 통증 및 비암성 통증에 대한 약물요법 (대한견-주관절학회지, 6권 2호, 2003, 91-98)",
+    "골다공증에 의한 압박 골절의 경피적 척추성형술의 부작용 (대한골절학회지, 16권 4호 2003, 534-539)",
+    "Arthroscopic rotator cuff repair (대한견-주관절학회지, 제6권 1호, 2003, 72-79)",
+    "상완골 간부 골절에 대한 선행성 교합 골수강내 금속정 고정술 후 견관절 기능 (대한 견-주관절학회지, 제6권 1호, 2003, 27-36)",
+    "관절경적 Bankart 복원술 (대한관절경학회지, 7권 1호, 2003, 36-41)",
+    "골다공성 척추체 압박 골절에서의 경피적 척추성형술 (대한방사선의학회지, 48권, 5호, 2003, 433-439)",
+    "Elbow Arthroscopy (대한관절경학회지 6권 2호, 2003, 90-96)",
+    "견관절 충돌 증후군에서 견봉하 점액낭 내 steroid 주사의 유용성 (단국의대 학술지 3권 1호, 2002, 85-90)",
+    "폐경기 골다공증 여성에서의 티볼론, 합성 칼시토닌, 칼슘제재 주기적 병용 투여에 따른 치료 효과 (대한 골대사 학회지 9권 2호, 2002, 171-176)",
+    "관절경적 회전근개 봉합술: 1-4년 추시 결과 (대한견주관절학회지, 5권 2호, 2002, 55-62)",
+    "Conditioning and Training Technique in Athletic Shoulder (대한견주관절학회지, 5권 1호, 2002, 15-22)",
+    "천안 농촌 지역에 거주하는 40세 이상 성인의 견관절통의 유병률 (대한정형외과학회지 제 37권 3호, 2002, 374-378)",
+    "불안정성 족근관절 골절의 수술적 치료 결과에 영향을 미치는 임상적 예후 인자에 대한 분석 (대한 족부외과학회지 제 5권 2호, 2001, 112-119)",
+    "요골 원위부 골절의 치료: 도수 정복후 석고 붕대 고정술, 경피적 핀고정술과 경피적 핀고정술 및 외고정술의 결과 비교 (대한수부외과학회지 제 7권 1호 2002, 15-22)",
+    "견관절 불안성의 견갑하근 및 관절 낭 수평 분할을 이용한 하방 관절낭 이동술 (대한정형외과 스포츠 의학회지 제 1권 1호 2002: 102-107)",
+    "견봉쇄골 관절 탈구에서 변형된 Phemister 수술 (대한골절학회지, 14권 3호, 456-462, 2001)",
+    "견봉하 관절경 수술후 진통작용: 모르핀과 국소마취제 혼합제와 위약의 점액낭 내 지속 주입에 대한 전향적 이중 맹검 연구 (대한 견주관절 학회지, 3권 2호, 102-108, 2000)",
+    "점액낭형과 관절내형 회전근 개 부분 파열에 대한 술 후 결과 비교 (대한정형외과학회지, 36권 1호, 45-49, 2001)",
+    "In vivo에서 전방 십자 인대의 변형률 측정 (대한정형외과학회지, 35권 5호,735-741, 2000)",
+    "상완골 불안정성 외과적 경부 이분 골절의 경피적 핀 삽입 고정술 (대한견주관절학회지, 3권 1호, 26-32, 2000)",
+    "이중 에너지 방사선 흡수법을 이용한 미숙아와 만삭아에서 요추와 손목의 골밀도 차이 (대한 방사선 의학회지, 43권, 371-375, 2000)",
+    "회전근개 병변에서 골 단일광자방출전산화 단층촬영과 단순 방사선 사진의 비교 (단국대학교 논문집, 35권, 285-291, 2000)",
+    "척추 수술시 자가 혈액 수혈기를 이용한 자가수혈의 효과 (단국대학교 논문집, 35, 275-283, 2000)",
+    "회전근 개 병변에서 골 단일 광자 방출 전산화 단층 촬영의 활용 (대한정형외과연구학회지, 3권 1호, 50-56, 2000)",
+    "회전근 개 병변에서 견봉면 방사선 사진의 동적 충돌 검사로서의 가능성 (대한정형외과학회지, 35권 3호, 427-430, 2000)",
+    "견관절 충돌 증후군에서 관절경적 견봉하 감압술 후 연속 일년 추시 (대한정형외과학회지, 35권 2호, 351-5, 2000)",
+    "Muller C형 대퇴골 과간골절: 수술 접근법에 따른 비교 분석 (대한골절학회지, 13권 1호, 64-73, 2000)",
+    "Buford 복합체 -1례 보고- (대한견-주관절학회지, 2권 1호, 84-87, 1999)",
+    "근-골격계 동통증 환자에서 1일 1회 용법의 Ketoprofen 플라스타(케토톱 엘)의 효과 및 안전성에 관한 연구 (중앙의학, 63권 9호, 569-573, 1998)",
+    "원위 요골부 불안정 골절의 유형 및 술식에 따른 결과의 비교 (대한골절학회지, 11권 2호, 435-441, 1998)",
+    "회전근개 전층 파열에 대한 관절경적 견봉하 감압술 및 관혈적 봉합술 (대한정형외과학회지, 33권 5호, 1248-1253, 1998)",
+    "견봉쇄골 관절 분리에 대한 Phemister 및 Bosworth 술식의 비교 (대한골절학회지, 11권 1호, 8-15, 1998)",
+    "견관절 관절경 수술에서의 삼각근내 조직압 및 한냉요법의 효과 (대한정형외과학회지 32권 7호, 1609-1615, 1997)",
+    "Bone mineral densities in Ballerinas, Korean Traditional Dancers and Athletes (J. of Korean Orthopaedic Asso., Vol.32-6, 1458-1463, 1997)",
+    "미숙아와 만삭아에 있어서 단순 흉부 촬영상 상완골 근위부 골화 중심의 출현의 차이 (대한방사선의학회지, 37권, 535-539, 1997)",
+    "정상체중성인과 과체중성인의 거골-제1중족골 및 종골하면-제1중족골하면 관절간 각도 차이에 대한 연구 (단국대학교 논문집, 제 31집, 의과대학편 665-672, 1997)",
+    "척추관 협착증의 수술적 치료 (단국대학교 논문집, 제 31집, 의과대학편 625-641, 1997)",
+    "견관절 충돌 증후군에서 관절경적 견봉하 감압술 후 자기 공명 영상의 술후 추시 (대한스포츠의학회지, 15권 2호, 207-214, 1997)",
+    "견관절 충돌 증후군 환자에서 나이에 따른 견관절 운동 범위의 변화 및 충돌 징후의 발현 빈도 (대한정형외과학회지, 32-2, 384-390, 1997)",
+    "흉요추부 골절의 수술적 치료 (단국대학교 논문집, 30권 673-682, 1997년)",
+    "관절경적 외측 슬개지대 유리술의 술후 예후에 영향을 미치는 인자에 대한 전향적 연구 (대한 슬관절 학회지 8권 1호, 1996년)",
+    "견관절 충돌 증후군에서 견봉경사도 및 견봉하 간격 (대한정형외과학회지, 31-4, 872-878, 1996)",
+    "관절외 활액막 골연골종:1예보고 (대한방사선의학회지 34권 5호 663-555, 1996년)",
+    "척추 골다공증에서의 골절 위험 한계치 (대한 골대사학회지 2권 2호 127-132. 1995년)",
+    "척추협착증의 임상증세와 방사선 및 전기진단학적 소견의 비교 연구 (대한재활의학회지, 19권 4호 1995년)",
+    "전위성 요골경부골절의 경피적 정복술 (단국의대 학술지, 제 1권 1호, 1995년)",
+    "성인에서 발생한 대퇴골 원위부 골단판 위치에서의 골절 (단국의대 학술지, 제 1권 1호, 1995년)",
+    "견관절 질환에서의 견봉하 간격 (단국의대 학술지, 제 1권 1호, 1995년)",
+    "쇄골하 동맥 손상 및 혈흉, 상지동맥 색전증을 동반한 쇄골 골절 (색전용해술을 이용한 치료) (대한골절학회지 8권 4호 1995년)",
+    "전슬관절 동통환자의 등속성 근력 평가에 관한 연구 (단국대학교 논문집, 29권, 1995년)",
+    "한국 성인 남성의 골밀도에 관한 연구 (단국대학교 논문집, 29권, 1995년)",
+    "압박 금속판을 이용한 슬관절 유합술 (최신의학 38권 2월호 1995년)",
+    "특발성 흉추 측만증의 CD기기술에서 척추경 나사의 사용 (대한정형외과학회지 29권2호 1994년)",
+    "골연골종의 임상적 고찰 (대한정형외과학회지 29권 2호 1994년)",
+    "색소성 융모결절성 활액막염의 임상적 고찰 (대한정형외과학회지 28권 6호 1993)",
+    "경직성 뇌성마비 환자에서 근위슬근 유리술 (대한정형외과학회지 28권 5호 1993)",
+    "경직성 뇌성마비 환자의 전완부 회내전 및 수근관절 굴곡 구축의 수술적 치료 (대한정형외과학회지 28권 1호 1993)",
+    "골외성 유잉육종 (대한정형외과학회지 28권 1호 1993)",
+    "컴퓨터 단층 촬영의 3차원적 재합성을 이용한 완관절의 운동역학적 특성에 관한 연구 (대한정형외과학회지 28권 1호 1993)",
+    "정복 불가능한 슬관절의 후측방 탈구 (대한슬관절학회지 4권 2호 1992)",
+    "외상성 슬관절 강직의 수술적 치료 (대한정형외과학회지 27권 4호 1992)"
+  ],
+  "국제논문": [
+    "Returning to golf after rotator cuff repair (JSES international 2023;7(3):399-405)",
+    "Does anchor insertion angle or placement of the suture anchor affect glenoid rim fracture occurrence after arthroscopic Bankart repair? (J Shoulder Elbow Surg 2020;29(4):e124-e129)",
+    "Valgus stress ultrasound for medial ulnar collateral ligament injuries in athletes: is ultrasound alone enough for diagnosis? (J Shoulder Elbow Surg 2020;29:578–586)",
+    "Does a Partial Rotator Cuff Tear Affect Pitching Ability? (Orthop J Sports Med 2019;7(11))",
+    "Blind suprascapular and axillary nerve block for post operative pain in arthroscopic rotator cuff surgery (Knee Surg Sports Traumatol Arthrosc 2016;24(12):3877-3883)",
+    "Comparison of Clinical and Radiographic Outcomes of Vertical Simple Stitch Versus Modified Mason-Allen Stitch in Arthroscopic Bankart Repairs (Am J Sports Med 2019;47(2):398-407)",
+    "Return to play after arthroscopic treatment for shoulder instability in elite and professional baseball players (J Shoulder Elbow Surg 2018)",
+    "Does Anchor Placement on the Glenoid Affect Functional Outcome After Arthroscopic Bankart Repair? (Am J Sports Med 2018;46(10))",
+    "Valgus extension overload syndrome (Arthrosc Orthop Sports Med 2018;5(1):1-10)",
+    "Clinical Outcomes and Recurrence Rates After Arthroscopic Stabilization Procedures in Young Patients With a Glenoid Bone Erosion: A Comparative Study Between Glenoid Erosion More and Less Than 20% (Arthroscopy. 2018;34(8):2287-2293)",
+    "The effect of humeral tunnel locations on radiographic tunnel changes in baseball players following medial ulnar collateral ligament reconstruction: comparison of anatomic and nonanatomic locations (J Shoulder Elbow Surg. 2018;27:1037-1043)",
+    "Prevalence and clinical outcomes of heterotopic ossification after ulnar collateral ligament reconstruction (J Shoulder Elbow Surg. 2018;27:427-434)",
+    "Effect of recombinant human growth hormone on rotator cuff healing after arthroscopic repair: preliminary result of a multicenter, prospective, randomized, open-label blinded end point clinical exploratory trial (J Shoulder Elbow Surg. 2018;27:777-785)",
+    "Serial Magnetic Resonance Imaging to Determine the Progression of Neglected Recalcitrant Rotator Cuff Tears: A Retrospective Multicenter Study (Clinics in Shoulder and Elbow Vol. 20, No. 3, September, 2017)",
+    "Stress fracture of Ulnamidshaft in baseball hitters. A case report of three patients (Nov Tech Arthritis Bone Res Vol 2(1) October 2017)",
+    "Radiolucent rings around bioabsorbable anchors after rotator cuff repair are not associated with clinical outcomes (Arch Orthop Trauma Surg 05 Aug 2017)",
+    "Return to Play of Elite Overhead Athletes with Superior Labral Anterior Posterior Tears only after Rehabilitation (Clinics in Shoulder and Elbow Vol. 20, No. 2, June, 2017)",
+    "Stress ultrasound in baseball players with ulnar collateral ligament injuries: additional value for predicting rehabilitation outcome (J Shoulder Elbow Surg (2017) 26, 815–823)",
+    "Valgus extension overload syndrome in adolescent baseball players: clinical characteristics and surgical outcomes (J Shoulder Elbow Surg (2016) 25, 2048–2056)",
+    "Bridge Tenodesis: A Secure Fixation Technique for Biceps Long Head Tendinopathy During Arthroscopic Rotator Cuff Repair Using a Suture-Bridge Technique (Arthroscopy Vol 5, No 5 (October), 2016: pp e1077-e1081)",
+    "Is a Suction Drain Necessary in Arthroscopic Rotator Cuff Repair? (Clinics in Shoulder and Elbow Vol. 19, No. 3, September, 2016)",
+    "Stress radiography for clinical evaluation of anterior shoulder instability. (J Shoulder Elbow Surg. 2016 Jun 6)",
+    "New light upon your shoulder--ICSES 2016 (J Shoulder Elbow Surg. 2016 Apr;25(4):519-20)",
+    "Bennett lesions in baseball players detected by magnetic resonance imaging: assessment of association factors. (J Shoulder Elbow Surg. 2016 May;25(5):730-8)",
+    "Blind suprascapular and axillary nerve block for post-operative pain in arthroscopic rotator cuff surgery. (Knee Surg Sports Traumatol Arthrosc. 2016 Jan 5)",
+    "Combined Subscapularis Tears in Massive Posterosuperior Rotator Cuff Tears: Do They Affect Postoperative Shoulder Function and Rotator Cuff Integrity? (Am J Sports Med. 2016 Jan;44(1):183-90)",
+    "Factors affecting capsular volume changes and association with outcomes after Bankart repair and capsular shift. (Am J Sports Med. 2015 Feb;43(2):428-38)",
+    "Glenoid rim fracture through anchor points after arthroscopic Bankart repair for shoulder instability. (Int Orthop. 2015 Feb;39(2):241-8)",
+    "Combining orthopedic special tests to improve diagnosis of shoulder pathology. (Phys Ther Sport. 2015 May;16(2):87-92)",
+    "Does well maintained graft provide consistent return to play after medial ulnar collateral ligament reconstruction of the elbow joint in elite baseball players? (Clin Orthop Surg. 2014 Jun;6(2):190-5)",
+    "Effect of capsular release in the treatment of shoulder stiffness concomitant with rotator cuff repair: diabetes as a predisposing factor associated with treatment outcome. (Am J Sports Med. 2014 Apr;42(4):840-50)",
+    "Revisit to scapular dyskinesis: three-dimensional wing computed tomography in prone position. (J Shoulder Elbow Surg. 2014 Jun;23(6):821-8)",
+    "Clinical comparison between double-row and transosseous-equivalent repairs for medium to large size rotator cuff tears. (Arch Orthop Trauma Surg. 2013 Dec;133(12):1727-34)",
+    "Arthroscopic Repair of Large U-Shaped Rotator Cuff Tears Without Margin Convergence Versus Repair of Crescent- or L-Shaped Tears. (Am J Sports Med. 2013 Oct 10)",
+    "Case report: Thoracic outlet syndrome in an elite archer in full-draw position. (Clin Orthop Relat Res. 2013 Sep.;471(9): 3056-3060)",
+    "Clinical and radiological outcomes of type 2 superior labral anterior posterior repairs in elite overhead athletes. (Am J Sports Med. 2013 Jun;41(6):1372-9)",
+    "Clinical and Ultrasonographic Outcomes of Arthroscopic Suture Bridge Repair for Massive Rotator Cuff Tear. (Arthroscopy. 2013 Feb;29(2):280-289)",
+    "How to assess scapular dyskinesis precisely: 3-dimensional wing computer tomography-a new diagnostic modality. (J Shoulder ElbowSurg. 2013 Aug;22(8):1084-91)",
+    "Multidirectional instability of the shoulder: rotator interval dimension and capsular laxity evaluation using MR arthrography. (Skeletal Radiol. 2013; 42:231-238)",
+    "Change in labrum height after arthroscopic Bankart repair: correlation with preoperative tissue quality and clinical outcome. (J Shoulder Elbow Surg. 2012 Dec;21(12):1712-20)",
+    "Is Arthroscopic Coracoplasty Necessary in Subcoracoid Impingement Syndrome? (Arthroscopy 2012 Dec;28(12):1766-75)",
+    "Is shoulder pain for three months or longer correlated with depression, anxiety, and sleep disturbance? (J Shoulder Elbow Surg 2013 Feb.;22(2): 222~8)",
+    "Interleukin-22 promotes osteoclastogenesis in rheumatoid arthritis through induction of RANKL in human synovial fibroblasts. (ARTHRITIS & RHEUMATISM, Vol. 64, No. 4, April 2012, pp 1015–23)",
+    "Does hyaluronate injection work in shoulder disease in early stage? A multicenter, randomized, single blind and open comparative clinical study. (J Shoulder Elbow Surg. 2012 Jun;21(6):722-7)",
+    "Follow-up Computed Tomography Arthrographic Evaluation of Bony Bankart Lesions After Arthroscopic Repair. (Arthroscopy. 2012 Vol 28. No 4 (April), 465-473)",
+    "The importance of inferomedial support in the hot air balloon technique for treatment of 3-part proximal humeral fractures. (J Shoulder Elbow Surg. 2012 Sep;21(9):1152-9)",
+    "MR imaging of ulnar collateral ligament injury in baseball players: value for predicting rehabilitation outcome. (European J Radiolo, e422-e426, 2011)",
+    "Prospective evaluation of the effectiveness of a home-based program of isometric strengthening exercises: 12-month follow-up (Clin Orthop Surg, Vol 2-3, 173-8, 2010)",
+    "Suture-bridge subscapularis tendon repair technique using low anterior portals. (Knee Surge Sports Traumatol Arthrosc, 2011 Feb;19(2):303-6)",
+    "Blind subacromial injection from the anterolateral approach: The ballooning sign (Journal of Shoulder and Elbow Surgery, 19-7, pp.1070-1075)",
+    "Does an arthroscopic suture bridge technique maintain repair integrity?: a serial evaluation by ultrasonography. (Clin Orthop Relat Res. 2010 Jun;468: 1578-1587)",
+    "Estimating Medical Expenditure Associated with Osteoporotic Hip Fracture in Elderly Korean Women Based on the National Health Insurance Claims Database 2002-2004 (Value in Health, 2009; 12(supplement 3):593-6)",
+    "The Diagnosis and Prognosis of Impingement Syndrome in the Shoulder with Using Quantitative SPECT Assessment: A Prospective Study of 73 Patients and 24 Volunteers (Clinics in Orthopedic Surgery, 2009, Dec;1(4): 194-200)",
+    "The effect of physical characteristics and field position on the shoulder and elbow injuries of 490 baseball players: confirmation of diagnosis by magnetic resonance imaging. (Clin J Sport Med. 2009 Jul;19(4):271-6)",
+    "The development and validation of an appraisal method for rotator cuff disorders: the Korean Shoulder Scoring System. (J Shoulder Elbow Surg. 2009 Sep-Oct;18(5):689-96)",
+    "Perianchor radiolucency after knotless anchor repair for shoulder instability: Correlation with clinical results of 69 cases (Am J Sports Med. 2009 Feb;37(2):360-70)",
+    "Rupture of Latissimus Dorsi Muscle in a Tennis Player (ORTHOPEDICS 2008; 31:1043)",
+    "Calcific tendinitis at the radial insertion of the biceps brachii: A case report. (J Shoulder Elbow Surg. 2008 July; 17-6, e19-e21)",
+    "Antegrade humeral nailing through the rotator cuff interval: a new entry portal. (J Orthop Trauma. 2008 Jul;22(6):419-25)",
+    "Comparison of the clinical outcomes of single- and double-row repairs in rotator cuff tears. (Am J Sports Med. 2008 Jul;36(7):1310-6)",
+    "Comparision of surgical outcome in impingement syndrome with and without stiff shoulder (Indian Journal of Orthopaedics, 2008, 42-2, 182-187)",
+    "The strength of the rotator cuff before and after subacromial injection of lidocaine (J Shoulder Elbow Surgery, 2008; 17:8S~11S)",
+    "Radial nerve palsy after arthroscopic anterior capsular release for degenerative elbow contracture (J Arthroscopic and related surgery 2007; 23-12:1360-3)",
+    "The effectiveness of digital infrared thermographic imaging in patients with shoulder impingement syndrome (Journal of Shoulder and Elbow Surg 2007; 16:548-554)",
+    "Open intramedullary nailing with tension-band and locking sutures for proximal humeral fracture: Hot air balloon technique (Journal of Shoulder and Elbow Surgery, 2006, 15-5, 594-601)",
+    "Arthroscopic Management of Septic Arthritis of the Shoulder Joint (J. Bone Joint Surg.-Am. vol. 88, 1802-1806)",
+    "Cervical spine involvement in longstanding ankylosing spondylitis (Clinical and Experimental Rheumatology, 2005, 23: 331-336)",
+    "Susceptibility of inbred mouse strains to infection with three species of Metagonimus prevalent in the Republic of Korea (J Parasitol,2005, 91(1), 12-16)",
+    "Change in bone mineral density of proximal humerus in Koreans: Suture anchor in rotator cuff repair. (Orthopedics,2004, 27-8, 857-8)",
+    "A serial comparison of arthroscopic repairs for partial and full thickness rotator cuff tear (Arthroscopy, 20-7, 705-711, 2004)",
+    "Comparison of Surgical Outcome between Bursal and Articular Partial Thickness Rotator Cuff Tears (Orthopaedics, Vol 26, No 4, 2003, 387-390)",
+    "The efficacy of continuous intrabursal infusion with morphine and bupivacaine for postoperative analgesia after subacromial arthroscopy (Regional Anesthesia & Pain Medicine, Vol 27-2, 2002: 145-149)",
+    "Portal-extension approach for the repair of small and medium rotator cuff tears. (Am J Sports Med, 28-3, 312-316, 2000)",
+    "Hemiarthroplasty for glenohumeral arthritis with massive rotator cuff tears (Orthopedic Clinics of North America, 1998; 29-3, 447-489)"
+  ]
+}

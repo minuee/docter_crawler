@@ -1,0 +1,74 @@
+{
+  "doctorId": 14761,
+  "rid_long": "FE59F43BC3A73510A578546C75ACEE94E8A709A5D956A63E6FB6CBBA9B44DB4D53CFE698EB9EA088866F36ADF7AC09CDA386159C6FF9941A34AE1EE5991D7FBADEBFF8C08FDAA6DF357DABF1A254F0074D9F0FAB5FA5F672EE84658644A8DC0648186E19F739905CD9B0D1835205BC85",
+  "hospital_cid": 175,
+  "bedoc_id": "A5179",
+  "bedoc_hospitalsite": "http://www.hanmaeumh.co.kr/index.php",
+  "bedoc_doctorname": "남영수",
+  "bedoc_deptname": "외과",
+  "bedoc_hospitalname": "한마음외과의원",
+  "hospital_name": "한마음외과의원",
+  "aiga_hid": "H31KR-11009920",
+  "hospital_site": "https://www.hanmaeumh.com/team-2",
+  "site_type": "list",
+  "hospital_addr": "서울특별시 금천구 독산로 87, 유명빌딩 (시흥동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.hanmaeumh.com/team-2?doctorName=%EB%82%A8%EC%98%81%EC%88%98&depthName=%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "specialty": "외과",
+  "학력": [
+    {
+      "content": "전문의/ 의학박사"
+    },
+    {
+      "content": "한양대학교 외과학 의학박사"
+    },
+    {
+      "content": "한양대학교 일반외과학 의학 석사"
+    },
+    {
+      "content": "한양대학교 의학과의학사"
+    }
+  ],
+  "경력": [
+    {
+      "content": "전 한양대학교 의과대학 교수"
+    },
+    {
+      "content": "대장암, 유방암, 갑상선암 수술전문"
+    },
+    {
+      "content": "대한의과학회"
+    },
+    {
+      "content": "대한내시경수술학회"
+    },
+    {
+      "content": "대장항문병학회"
+    },
+    {
+      "content": "유방암연구회 미국 대장항문병학회 (ASCRS)"
+    },
+    {
+      "content": "미국대장항문병학회"
+    }
+  ],
+  "학술": [
+    {
+      "content": "Colorectal Surgery of Cleveland Clinic Florida (미국/ 연수)"
+    },
+    {
+      "content": "대한 암학회 정회원"
+    },
+    {
+      "content": "대장항문학회 정회원"
+    },
+    {
+      "content": "유방암학회 창립멤버"
+    }
+  ]
+}

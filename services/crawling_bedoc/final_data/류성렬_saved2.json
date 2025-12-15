@@ -1,0 +1,86 @@
+{
+  "doctorId": 14768,
+  "rid_long": "3A156348444DD1ABAC72E69982F4575048DC4BD1F6EBE526029829169F64F4D2E83E2939234F3458E8CD0BDA1D3D1D61ABB35AAC431CFBA9BDB33DE1D1031CC30C64D9B4C9CA1E20D97129133FF88019427BEFDED0CD6FF0BFE28CEB83B61A1A969856842E35B3C7829D3D7F3F9A9792D1E57A9A214B948E150E8306D8F996B8C26242CC2D84E07D76DEA4A8385C302ABEAD066BB386E416480108FB2E7AA29E164127D7BCAE64E74E964F22CAB6340C",
+  "hospital_cid": 187,
+  "bedoc_id": "A0784",
+  "bedoc_hospitalsite": "http://www.onhospital.org",
+  "bedoc_doctorname": "류성렬",
+  "bedoc_deptname": "방사선종양학과",
+  "bedoc_hospitalname": "온종합병원",
+  "hospital_name": "온병원",
+  "aiga_hid": "H11KR-21000012",
+  "hospital_site": "https://onhospital.org/board_RWSx29/573",
+  "site_type": "single",
+  "hospital_addr": "부산광역시 부산진구 가야대로 719, ,767,721,본관 지하3~11층 전부,12층 일부,13~14층 전부,15층 일부,신관 1층, 9층 일부 (당감동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://onhospital.org/board_RWSx29/573?doctorName=%EB%A5%98%EC%84%B1%EB%A0%AC&depthName=%EB%B0%A9%EC%82%AC%EC%84%A0%EC%A2%85%EC%96%91%ED%95%99%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": "Could not find medical staff link.",
+  "profileUrl": "https://onhospital.org/files/attach/images/2022/05/24/79ba81b3f5f45faca29afcad57e4e682.jpg",
+  "specialty": "방사선종양학,핵의학,PET-CT",
+  "학력": [
+    {
+      "date": null,
+      "content": "부산대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 대학원 의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "서울대학교 전공의, 방사선과"
+    },
+    {
+      "date": null,
+      "content": "이화여자대학교 교수, 방사선과"
+    },
+    {
+      "date": null,
+      "content": "한국원자력의학원 방사선종양학과 부장"
+    },
+    {
+      "date": null,
+      "content": "사이버나이프센터 원장"
+    },
+    {
+      "date": null,
+      "content": "건양대 의대 방사선종양학과 석좌교수"
+    },
+    {
+      "date": null,
+      "content": "하버드의대, 하이델베르그의대 연수"
+    },
+    {
+      "date": null,
+      "content": "대한방사선종양학회 등 학회장 다수 역임"
+    },
+    {
+      "date": null,
+      "content": "서울의대, 중앙의대, 서울시립대 등 외래 및 겸임교수"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한방사선종양학회 회장"
+    },
+    {
+      "date": null,
+      "content": "대한암학회 부회장"
+    },
+    {
+      "date": null,
+      "content": "대한방사선생명과학회 창설 및 회장"
+    },
+    {
+      "date": null,
+      "content": "대한방사선수술학회 회장"
+    }
+  ],
+  "isAttend": false
+}

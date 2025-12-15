@@ -1,0 +1,106 @@
+{
+  "doctorId": 14710,
+  "rid_long": "960E08AC184F2922180044E3EACE08AFA219FD5388F35EC7689A222017B9ABF546635792737D630CDDDE65F10831519BE62922F1895A0FEA6772A3D8E4400206F3607BA77F8BAACE6FEED6E854AEED42D77B45311FBDA7EB15FFBC974225E594512740F713FA78A3FF9345472A78F807C95C8B480461EC90DCE5909433F8CB08F6AF9D4B346F1505AE515FFC9AC69CB3FFD7FD5F8DD8F3B72714E97A532DA26F2ABB27A5FA8922144C19532A65D163910A93512A5A0C5EE7EE07624EB95E37741BEDEEC9521AA29E04C4F85A8A70CEF3164127D7BCAE64E74E964F22CAB6340C",
+  "hospital_cid": 102,
+  "bedoc_id": "A5193",
+  "bedoc_hospitalsite": "http://noon.co.kr",
+  "bedoc_doctorname": "김시열",
+  "bedoc_deptname": "안과",
+  "bedoc_hospitalname": "대구누네안과병원",
+  "hospital_name": "누네안과병원",
+  "aiga_hid": "H21KR-11000040",
+  "hospital_site": "https://www.noon.co.kr/about/doctor_view/1/9?sch_key=&sch_branch_code_key=2&sch_center_code_no=&sch_text=%EA%B9%80%EC%8B%9C%EC%97%B4",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 강남구 테헤란로 408, 대치빌딩 지상9층~지상17층 (대치동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.noon.co.kr/about/doctor_view/1/9?sch_key=&sch_branch_code_key=2&sch_center_code_no=&sch_text=%EA%B9%80%EC%8B%9C%EC%97%B4&doctorName=%EA%B9%80%EC%8B%9C%EC%97%B4&depthName=%EC%95%88%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "specialty": "망막, 포도막, 백내장",
+  "profileUrl": "https://www.noon.co.kr/upload/doctor/20220123205125.png",
+  "학력": [
+    {
+      "date": null,
+      "content": "경북대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "일본 교토대학 망막연수"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "경북대학교 의과대학 명예교수"
+    },
+    {
+      "date": null,
+      "content": "대한민국 의학한림원 회원"
+    },
+    {
+      "date": null,
+      "content": "대한안과학회 평의원"
+    },
+    {
+      "date": null,
+      "content": "한국망막학회 회원"
+    },
+    {
+      "date": null,
+      "content": "일본안과학회 회원"
+    },
+    {
+      "date": null,
+      "content": "미국안과학회 회원"
+    },
+    {
+      "date": null,
+      "content": "유럽망막학회 회원"
+    },
+    {
+      "date": null,
+      "content": "한국망막학회 회장"
+    },
+    {
+      "date": null,
+      "content": "대한안과학회 15대 이사장"
+    },
+    {
+      "date": null,
+      "content": "한국 임상시각전기생리학회 회장"
+    },
+    {
+      "date": null,
+      "content": "경북대학교병원 안과 과장 및 주임교수"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한민국 의학한림원 회원"
+    },
+    {
+      "date": null,
+      "content": "대한안과학회 평의원"
+    },
+    {
+      "date": null,
+      "content": "한국망막학회 회원"
+    },
+    {
+      "date": null,
+      "content": "일본안과학회 회원"
+    },
+    {
+      "date": null,
+      "content": "미국안과학회 회원"
+    },
+    {
+      "date": null,
+      "content": "유럽망막학회 회원"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "doctorId": 14959,
+  "rid_long": "0BF1F2FA6988200AEA67B8257CF09A70FCC9C20848C15CDEF1543256172B627E7E280802111D0B6D9A97874280F32D7901E44FE84614AC182D4681FE469D5A1AEC1D613998A3113FAF317906987DEB11D00BA7165CB56E2C55AB3D571E9E17752E422EE4840874B382236241C0A89188479B94036CEC109E8A3D9B336F9EE46E548E33F72D24D203A6052B0296D38FDF7AC1794E4EFF513CE215C3D573AD5B06D48A4359A61B109ED33D9AC09AD64F98",
+  "hospital_cid": 418,
+  "bedoc_id": "A5415",
+  "bedoc_hospitalsite": "http://www.eulji.or.kr/default.asp",
+  "bedoc_doctorname": "이소영",
+  "bedoc_deptname": "신장내과",
+  "bedoc_hospitalname": "을지병원",
+  "hospital_name": "을지병원",
+  "aiga_hid": "H11KR-11000009",
+  "hospital_site": "https://www.eulji.or.kr/clinic/clinic_doc_view01_01.jsp?dept=ABBFAA&doct=203106",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 노원구 한글비석로 68, 을지병원 (하계동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.eulji.or.kr/clinic/clinic_doc_view01_01.jsp?dept=ABBFAA&doct=203106&doctorName=%EC%9D%B4%EC%86%8C%EC%98%81&depthName=%EC%8B%A0%EC%9E%A5%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "언론": [
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "노원을지대학교병원 내과 의료진, 대한내과학회 우수논문상 수상",
+      "url": "https://health.chosun.com/site/data/html_dir/2024/07/23/2024072302021.html",
+      "issuer": "헬스조선"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "노원을지대병원 내과 의료진, 대한내과학회 우수논문상 수상",
+      "url": "https://sports.chosun.com/life/2024-07-23/202407230100171650024351",
+      "issuer": "스포츠조선"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "노원을지대병원 내과 교수진, 대한내과학회 우수논문상 수상",
+      "url": "http://www.bosa.co.kr/news/articleView.html?idxno=2227541",
+      "issuer": "의학신문"
+    },
+    {
+      "targetDate": null,
+      "type": "신문",
+      "text": "노원을지대병원 내과 교수진, 대한내과학회 우수논문상 수상",
+      "url": "http://www.bokuennews.com/news/article.html?no=247100",
+      "issuer": "보건뉴스"
+    },
+    {
+      "targetDate": null,
+      "type": "방송",
+      "text": "[591회 과일트럭 아저씨의 눈물 편] 신장투석 관련 주치의 인터뷰",
+      "url": "https://www.ebs.co.kr/tv/show?courseId=BP0PHPN0000000029&stepId=01BP0PHPN0000000029&lectId=60159057",
+      "issuer": "EBS 나눔0700"
+    }
+  ],
+  "논문": [
+    "1. Soluble CD25 is increased in patients with sepsis-induced acute kidney injury Nephrology Volume 19, Issue 6, pages 318–324, June 2014 Eunjung Cho1, Ji Hyun Lee2, Hye Jin Lim2, Se Won Oh2, Sang Kyung Jo1, Won Yong Cho1, Houng-Kyu Kim1 and So Young Lee2,*",
+    "2. Subcutaneous sarcoidosis presenting as a suprapubic mass, acute kidney injury, and hypercalcemia  Korean J Intern Med. 2014;29(4):535-538.  Jeong Min Kim1, Yoon Kyeong Song1, Seon Jin Park1, Young-Hwan Hwang1, Su Ah Sung1, So Young Lee1, Jong Eun Joo2, and Se Won Oh3",
+    "3. First Case of Continuous Ambulatory Peritoneal Dialysis-Related Peritonitis Caused by Cryptococcus arboriformis  Ann Lab Med 2014 Jul; 34(04) 328-331  Hyungjun Im, M.D.1, Jeong Don Chae, M.D.2, Minseok Yoo, M.D.3, So-Young Lee, M.D.4, Eun Ju Song, M.D.4, Su-Ah Sung, M.D.4, Young Hwan Hwang, M.D.4, Jeong Hwan Shin, M.D.5, and Young-Uk Cho, M.D.6",
+    "4. Efficacy of Hemocontrol Biofeedback System in Intradialytic Hypotension-Prone Hemodialysis Patients  J Korean Med Sci. 2014 Jun;29(6):805-810.  Hyo-Wook Gil,1 Kitae Bang,2 So Young Lee,3 Byoung Geun Han,4 Jin Kuk Kim,5 Young Ok Kim,6 Ho Cheol Song,7 Young Joo Kwon,8 and Yong-Soo Kim9",
+    "5. Successful Pregnancy in a Patient with Autosomal Dominant Polycystic Kidney Disease on Long-Term Hemodialysis  J Korean Med Sci. 2014 Feb;29(2):301-304. English. Ji Hye Jung,1 Min Jeong Kim,1 Hye Jin Lim,1 Su-Ah Sung,1 So-Young Lee,1 Dae Woon Kim,2 Kyu Beck Lee,3 and Young-Hwan Hwang1",
+    "6. Distinct pathophysiologic mechanisms of septic acute kidney injury: Role of immune suppression and renal tubular cell apoptosis in murine model of septic acute kidney injury. Crit Care Med. 2012 Nov;40(11):2997-3006 Lee So-Young*, Lee Yong-Su, Choi Hye-Min, Ko Yoon-Sook, Lee Hee-Young, Jo Sang-Kyung, Cho Won-Yong, Kim Hyoung-Kyu",
+    "7. MMP-9 gene deletion mitigates microvascular loss in a model of ischemic acute kidney injury. Am J Physiol Renal Physiol. 2011 Jul;301(1):F101-9. Epub 2011 Mar 30 Lee SY*, Hörbelt M, Mang HE, Knipe NL, Bacallao RL, Sado Y, Sutton TA",
+    "8. Sphingosine-1-phosphate reduces hepatic ischaemia/reperfusion-induced acute kidney injury through attenuation of endothelial injury in mice. Lee SY*, Kim DH, Sung SA, Kim MG, Cho WY, Kim HK, Jo SK Nephrology (Carlton). 2011 Feb;16(2):163-73.",
+    "9. CD4+ CD25+ regulatory T cells partially mediate the beneficial effects of FTY720, a sphingosine-1-phosphate analogue, during ischaemia/reperfusion-induced acute kidney injury Kim MG, Lee SY*, Ko YS, Lee HY, Jo SK, Cho WY, Kim HK Nephrol Dial Transplant. 2011 Jan;26(1):111-24. Epub 2010 Aug 11.",
+    "10. The p53 inhibitor pifithrin-α can stimulate fibrosis in a rat model of ischemic acute kidney injury Am J Physiol Renal Physiol January 15, 2012 302:(2) F284-F291;  Dagher PC, Mai EM, Hato T, Lee SY*, Anderson MD, Karozos SC, Mang HE, Knipe NL, Plotkin Z, Sutton TA."
+  ],
+  "학력": [
+    {
+      "date": null,
+      "content": "고려대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "고려대학교 의과대학원 석사학위 취득"
+    },
+    {
+      "date": null,
+      "content": "고려대학교 의과대학원 박사학위 취득"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "고려대학교 내과 전공의"
+    },
+    {
+      "date": null,
+      "content": "고려대학교 신장 내과 전임의"
+    },
+    {
+      "date": null,
+      "content": "을지병원 신장 내과 조교수"
+    },
+    {
+      "date": null,
+      "content": "미국 인디애나주립대학교 신장내과 장기연수"
+    },
+    {
+      "date": null,
+      "content": "현) 을지병원 신장 내과 과장, 부교수"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한내과학회 정회원대한신장학회 정회원"
+    }
+  ],
+  "profileUrl": "https://www.eulji.or.kr/upload/doctor/203106_02.jpg",
+  "specialty": "만성신질환, 당뇨병성신증, 사구체질환"
+}

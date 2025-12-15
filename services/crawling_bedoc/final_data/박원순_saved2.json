@@ -1,0 +1,112 @@
+{
+  "doctorId": 14799,
+  "rid_long": "1B0F9484EAFEB5DB0F2AEB9DE295028B79C3026487E2400D12AC5E396B3A02F270C5E469EEAC1ECB355436725C628218264B2674C9BFCF6C55D6AA0958D44AB68EACDC6B1156A80D4666F99540EBEB88A1E532B6AB19A19D4BE674CE0E7E88ED12D572AF5B6CFC0CFECCBDDB94BCFFB9B2AA989C8D0173EB37E3FAD92F1C757E0881A02B1FDB7B2BDD1CAE8A443DBA2EB465EB9A0C39FB696449D25C6DB1CE429FF650AC83EB0D483A47A752D17BE950D9F827ECC0F379003D7A98D37F8D7A4C",
+  "hospital_cid": 227,
+  "bedoc_id": "A5870",
+  "bedoc_hospitalsite": "http://gangnam.chamc.co.kr",
+  "bedoc_doctorname": "박원순",
+  "bedoc_deptname": "소아청소년과",
+  "bedoc_hospitalname": "강남차병원",
+  "hospital_name": "강남차병원",
+  "aiga_hid": "H11KR-11000037",
+  "hospital_site": "https://gangnam.chamc.co.kr/treatment/pediatrics/reservation.cha#none",
+  "site_type": "list",
+  "hospital_addr": "서울특별시 강남구 논현로 566, 강남차병원(역삼동650-9, 606-4, 605외2필지(지하7층~지하1층, 지상2층~7층)) (역삼동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://gangnam.chamc.co.kr/treatment/pediatrics/reservation.cha#none?doctorName=%EB%B0%95%EC%9B%90%EC%88%9C&depthName=%EC%86%8C%EC%95%84%EC%B2%AD%EC%86%8C%EB%85%84%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": "Cheerio parser could not extract education or experience.",
+  "profileUrl": "https://wmanager.chamc.co.kr/file/doctor/220901_%EB%B0%95%EC%9B%90%EC%88%9C_1.png",
+  "수상": [
+    {
+      "date": null,
+      "content": "대한소아과학회 석천학술상"
+    },
+    {
+      "date": null,
+      "content": "유한의학상"
+    },
+    {
+      "date": null,
+      "content": "진암학술상"
+    },
+    {
+      "date": null,
+      "content": "남양학술상"
+    },
+    {
+      "date": null,
+      "content": "바이엘 임상의학상"
+    }
+  ],
+  "논문": [],
+  "specialty": "신생아학, 미숙아및신생아질환, 성장과 발달, 육아상담",
+  "학력": [
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "서울대학교대학원 의학과 석사 (신생아학)"
+    },
+    {
+      "date": null,
+      "content": "서울대학교대학원 의학과 박사 (신생아학)"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "서울대학교병원 소아과 전공의"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 어린이병원 소아과 전임의 (신생아학)"
+    },
+    {
+      "date": null,
+      "content": "강남차병원 소아과장 (신생아)"
+    },
+    {
+      "date": null,
+      "content": "미국남가주대학교 신생아학 연구전임의"
+    },
+    {
+      "date": null,
+      "content": "삼성서울병원 소아과 전문의 (신생아학)"
+    },
+    {
+      "date": null,
+      "content": "성균관의대 소아청소년과학교실 부교수"
+    },
+    {
+      "date": null,
+      "content": "성균관의대 소아청소년과학교실 교수"
+    },
+    {
+      "date": null,
+      "content": "성균관의대 소아청소년과학교실 주임교수"
+    },
+    {
+      "date": null,
+      "content": "現강남차병원 소아청소년과 임상교수 (신생아학)"
+    },
+    {
+      "date": null,
+      "content": "한국 신생아네트워크 (KNN) 실행위원장"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한주산의학회 부회장"
+    },
+    {
+      "date": null,
+      "content": "대한주산의학회 회장"
+    }
+  ]
+}

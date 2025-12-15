@@ -1,0 +1,100 @@
+{
+  "doctorId": 15152,
+  "rid_long": "BA759926F3E215AF1395BE26B586E2A0776B43DBDDEB934FE19E825E23F735C6B462A41F4041D17284F315F8D4C22D96E4B22ABA4DACE361CA4E32D5DD2DCE9F14EDD0E608E8BFCE7A7AD5D0B2DC322857F385912524FE52AB82EFB0A8B0E221C11D77C9AED0A91D9F48D6F8DBD1528D49066164AB077EDB13E89798E2960A26CD894207B5A91DE29DBB2982E41EA6BEC405CB3D63DF1B1E90A6067451DBB879B17074B9460F13B7971CAD0BDF2E0BEA3B642263A30A21B33AD6FDD52C6BE7F5F7EAE6698782B54DDD4E0E2139C265041786DAD3EAA7D8572C3EB49517892074AF117D19CDA1C70842EBA3C1506A3AF11C9825744B70440700004A174EAFAC60",
+  "hospital_cid": 137,
+  "bedoc_id": "A1108",
+  "bedoc_hospitalsite": "http://www.cnuh.com/",
+  "bedoc_doctorname": "김진우",
+  "bedoc_deptname": "내분비대사내과",
+  "bedoc_hospitalname": "전남대병원",
+  "hospital_name": "차움의원",
+  "aiga_hid": "H31KR-11000017",
+  "hospital_site": "https://www.chaum.net/centerInfo/doctorSearch.aspx?menuCode=A_A04&searchComboOne=0&searchComboTwo=ALL&searchnm=%ea%b9%80%ec%a7%84%ec%9a%b0&mains=A",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 강남구 도산대로 442(청담동 4-1)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.chaum.net/centerInfo/doctorSearch.aspx?menuCode=A_A04&searchComboOne=0&searchComboTwo=ALL&searchnm=%ea%b9%80%ec%a7%84%ec%9a%b0&mains=A&doctorName=%EA%B9%80%EC%A7%84%EC%9A%B0&depthName=%EB%82%B4%EB%B6%84%EB%B9%84%EB%8C%80%EC%82%AC%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "profileUrl": "https://www.chaum.net/upload/doctor/20191125111145_1.png",
+  "specialty": "내분비 대사질환, 당뇨병, 갑상선질환 ,대사증후군, 골다공증",
+  "학력": [
+    {
+      "date": "1986",
+      "content": "경희대학교 대학원 의학과 박사"
+    },
+    {
+      "date": "1975",
+      "content": "경희대학교 의과대학 의학과 학사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "2019~현재",
+      "content": "차움 내분비내과 진료"
+    },
+    {
+      "date": "2012~현재",
+      "content": "차 의과학대학교 강남차병원 내과 교수"
+    },
+    {
+      "date": "2005~2009",
+      "content": "경희대학교 의학전문대학원장 겸 의과대학장"
+    },
+    {
+      "date": "2004~2006",
+      "content": "경희대학교 내분비연구소장"
+    },
+    {
+      "date": "2001~2004",
+      "content": "경희대학교 동서의학대학원장"
+    },
+    {
+      "date": "2000~2004",
+      "content": "경희대학교 동서의학연구소장"
+    },
+    {
+      "date": "1989~1990",
+      "content": "캐나다 캘거리의과대학 당뇨병연구소 연구원"
+    },
+    {
+      "date": "1980~2012",
+      "content": "경희대학교 의과대학-강사,조교수,부교수,교수"
+    }
+  ],
+  "학술": [
+    {
+      "date": "2011~2011",
+      "content": "대한당뇨병학회장"
+    },
+    {
+      "date": "2002~2002",
+      "content": "대한당뇨병학회 부회장"
+    }
+  ],
+  "수상": [
+    {
+      "date": null,
+      "content": "The Ko Hwang Medical Award (Kyung-Hee University)"
+    },
+    {
+      "date": null,
+      "content": "Brain Korea 21 Research Fund ( Ministry of Science and Technology, Korea)"
+    },
+    {
+      "date": null,
+      "content": "Korea Research Foundation Fund ( Ministry of Science and Technology, Korea)"
+    }
+  ],
+  "논문": [
+    "S.Y. Park, J. Kim, H.Y. Chung : Denosumab induced hypocalcemia in a patient with hyperthyroidism: a case report. Osteoporosis Int. 33(1) : 305-308, 2022",
+    "Park C, Kim E, Sohn S, Yang I, Koh G, Oh S, Woo J, Kim S, Kim J, Kim Y, Oh K, Park S, Park S: Acute hyperglycemia and activation of the beta-adrenergic system do not exhibit synergistic inhibitory actions on thyrotropin-releasing hormone (TRH)-induced thyroid stimulating hormone (TSH) secretion. Endocr J 52(1):69-74, 2005",
+    "G,KOh Chon S, KS Suh, Oh SJ, Kim SW, Kim JW, Kim YS, Woo JT: Elevated cAMP level attenuates 2-deoxy-D-ribose induced oxidative damage in pancreatic beta cell. Arch Biochem Biophys 438(1): 70-79, 2005",
+    "Lee SH, Ihm CG, Sohn SD, Lee TW, Kim MJ, Koh G, Oh SJ, WOO JT, Kim SW, Kim JW, Kim YS, Lee BC, Kim SD, Cho BS, Lee HJ, Chung JH: Polymorphysms in Interleukin-1 beta and Interleukin-1 Receptor Antagonist Genes Are Associated with Kidney Failure in Korean Patients with Type 2 Diabetes mellitus. Am J Nephrol 24:410-414, 2004",
+    "Park C, Yang I, Woo J, Kim S, Kim J, Kim Y, Park S: Somatostatin (SRIF) receptor subtype 2 and 5 gene expression growth hormone-secreting pituitary adenomas: The relationship with endogeneous SRIF activity and response to octreotide. Endocrine Journal 51:227-236, 2004",
+    "Park C, Yang I. Woo J, Kim S, Kim J, Kim Y, Park S: Acute hyperglycemia and activation of the beta-adrenergic system exhibit synergistic inhibitory actions on growth hormone (GH) releasing hormone-induced GH release. Eur J Endocrinol. Jun;148(6):635-40, 2003",
+    "Yang I, Park S, Woo J, Kim S, Kim J, Kim Y, Choi Y: Growth hormone response to the hypothalamic somatostatinergic activity in acromegalic patients. J Clin Endocrinol Metab. Aug;82(8):2492-6, 1997",
+    "Yang I, Park S, Ryu M, Woo J, Kim S, Kim J, Kim Y, Choi Y: Characteristics of gsp-positive growth hormone-secreting pituitary tumors in Korean acromegalic patients. Eur J Endocrinol. Jun;134(6):720-6, 1996"
+  ]
+}

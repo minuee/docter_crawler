@@ -1,0 +1,78 @@
+{
+  "doctorId": 14742,
+  "rid_long": "DB01904099074C2AA475020E17D8C49D0AEA136E8B955EEF4D52795CD9D87E86F97736FD3A75D47694C20A13E01A33819A3B998621DB26168F68C85D3B5AD3E1F58A2EDD86D14315220C2A496F3E9D56A73BBE2C2A528E3F6ED236686D01261C6699EF8F6003051574A2E33CE172E8CC07F9C692E54FC9497E3A6F9F286D1EB2FAFB1564AC84957CFAD32A083025EFC5",
+  "hospital_cid": 148,
+  "bedoc_id": "A5196",
+  "bedoc_hospitalsite": "http://kangnam.hallym.or.kr",
+  "bedoc_doctorname": "김하경",
+  "bedoc_deptname": "안과",
+  "bedoc_hospitalname": "강남성심병원",
+  "hospital_name": "한림대학교강남성심병원",
+  "aiga_hid": "H11KR-11000040",
+  "hospital_site": "https://kangnam.hallym.or.kr/ptm207.asp?Doctor_Id=297",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 영등포구 신길로 1, (대림동, 강남성심병원)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://kangnam.hallym.or.kr/ptm207.asp?Doctor_Id=297&doctorName=%EA%B9%80%ED%95%98%EA%B2%BD&depthName=%EC%95%88%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "학력": [
+    {
+      "date": "1970.03 ~ 1976.02",
+      "content": "서울대학교 의과대학 졸업"
+    },
+    {
+      "date": "1981.03 ~ 1983.02",
+      "content": "중앙대학교 제1캠퍼스 대학원 의학석사 졸업"
+    },
+    {
+      "date": "1983.03 ~ 1986.02",
+      "content": "중앙대학교 제1캠퍼스 대학원 의학박사 졸업"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1979 ~ 1980",
+      "content": "서울대병원 인턴 수료"
+    },
+    {
+      "date": "~ 1983",
+      "content": "중앙대의료원 안과 전공의 수료"
+    },
+    {
+      "date": "1983 ~ 1984",
+      "content": "서울대병원 안과 전임의"
+    },
+    {
+      "date": "~ 1985",
+      "content": "중앙대의료원 안과 전임의"
+    },
+    {
+      "date": null,
+      "content": "한림대학교 의과대학 객원교수"
+    },
+    {
+      "date": "2000 ~ 2002",
+      "content": "한림대학교강남성심병원 진료부원장"
+    },
+    {
+      "date": null,
+      "content": "한림대학교강남성심병원 안과 객원교수"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한안과학회"
+    },
+    {
+      "date": null,
+      "content": "대한망막학회장 역임"
+    }
+  ],
+  "specialty": "유리체망막, 고난이 백내장",
+  "profileUrl": "https://kangnam.hallym.or.kr/CHPFile/treatment/B_20210929_12102119_a_1.png",
+  "isAttend": true
+}

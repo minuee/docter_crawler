@@ -1,0 +1,222 @@
+{
+  "doctorId": 14689,
+  "rid_long": "18368ABFBBDC9EF4A37EA7B363A91527DF875BE82B1C4823C002F75CAA3715FAA7EECA5AD5148C6210518178374D7A022824B0B235CD4E89550A9B7BA1E6D353E611342C55DB4B1F1B01DCDB5559603B34349995A335F76E04D71AE7ECE1250C20DE9FE306D7E7F042373F7CF1404AF6A7D07FF7BF0FBD58460CA26F270859068626F0BF926E57079412D614C9E6422827D9647B8DACC8DEEA5370CDE9E165C57D3B102FDB4BAA89C4BC7BD02ECB3C6F",
+  "hospital_cid": 72,
+  "bedoc_id": "A8261",
+  "bedoc_hospitalsite": "http://www.kcch.re.kr",
+  "bedoc_doctorname": "김문홍",
+  "bedoc_deptname": "산부인과",
+  "bedoc_hospitalname": "원자력병원",
+  "hospital_name": "원자력병원",
+  "aiga_hid": "H11KR-21000003",
+  "hospital_site": "https://www.kcch.re.kr/doctor/profViewPop.do?deptNo=56&profNo=39",
+  "site_type": "single",
+  "hospital_addr": "부산광역시 기장군 장안읍 좌동길 40, (장안읍)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.kcch.re.kr/doctor/profViewPop.do?deptNo=56&profNo=39&doctorName=%EA%B9%80%EB%AC%B8%ED%99%8D&depthName=%EC%82%B0%EB%B6%80%EC%9D%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "학력": [
+    {
+      "date": "201108",
+      "content": "서울대학교 의과대학원 의학박사"
+    },
+    {
+      "date": "199903~200102",
+      "content": "서울대학교 의과대학원 의학석사"
+    },
+    {
+      "date": "198703~199302",
+      "content": "서울대학교 의과 대학 졸업"
+    }
+  ],
+  "경력": [
+    {
+      "date": "200712~200812",
+      "content": "Experimental Division of Department of Radiation Oncology, UCLA 연수"
+    },
+    {
+      "date": "200203",
+      "content": "원자력병원 산부인과 과장"
+    },
+    {
+      "date": "200003~200202",
+      "content": "서울대학교병원 산부인과 부인종양 전임의"
+    },
+    {
+      "date": "199403~200002",
+      "content": "서울대학교병원 수련의, 산부인과 전공의"
+    }
+  ],
+  "논문": [
+    "Evaluation of efficacy and fertility after nonradical surgical therapy (extra fascial hysterectomy or cone biopsy, with pelvic lymphadenectomy) for stage IA1, IA2, and IB1 cervical cancer (GOG-0278). (Gynecol Oncol, 2025년)",
+    "Evaluation of physical function and quality of life before and after nonradical surgical therapy for stage IA1 and IA2-IB1 cervical cancer (GOG-0278). (Gynecol Oncol, 2025년)",
+    "Prediction of final pathology depending on preoperative myometrial invasion and grade assessment in low-risk endometrial cancer patients: A Korean Gynecologic Oncology Group ancillary study (PLoS One, 2024년)",
+    "Therapy-related myeloid neoplasms in Korean patients with ovarian or primary peritoneal cancer treated with poly(ADP-ribose) polymerase inhibitors. (Epub, 2024년)",
+    "Self-obtained vaginal samples for HPV DNA testing to detect HPV-related cervical disease (Int J Gynaecol Obstet, 2021년)",
+    "Prognostic Model for Survival and Recurrence in Patients with Early-Stage CervicalCancer: A KoreanGynecologic Oncology Group Study (KGOG 1028). (Cancer Res Treat, 2020년)",
+    "The Prognostic Model of Pre-Treatment Complete Blood Count (CBC) for Recurrence in Early Cervical Cancer (J Clin Med, 2020년)",
+    "An extremely rare elderly case of proximal epithelioid sarcoma of the vulva: case report with a review of literatures (Obstet Gynecol, 2020년)",
+    "Real-World Experience of Pembrolizumab Monotherapy in Patients with Recurrent or Persistent Cervical Cancer: A Korean Multi-Center Retrospective Study (KGOG1041) (Cancers, 2020년)",
+    "The Prognostic Model of Pre-Treatment Complete Blood Count (CBC) for Recurrence in Early Cervical Cancer (J Clin Med, 2020년)",
+    "Comparison of laparoscopic and abdominal radical hysterectomy in early stage cervical cancer patients without adjuvant eatment:Ancillary analysis of a Korean Gynecologic Oncology Group Study (KGOG 1028). (Gynecol Oncol, 2019년)",
+    "Anti-cancer and radiosensitizing effect of cyclin-dependent kinases inhibitors, SNS-032 and AT7519, in cervical cancer (International Journal of Oncology, 2018년)",
+    "Preoperative assessment of lymph node metastasis in endometrial cancer: A Korean Gynecologic Oncology Group study (Cancer, 2017년)",
+    "Prognostic Importance of the site of Recurrence in Paients with metastatic Recurrent Cervical Cancer (International Journal of Radiation Oncology*Biology*Physic, 2017년)",
+    "Suppressor of cytokine signaling (SOCS) genes are silenced by DNA hypermethylation and histone deacetylation and regulates response to radiotherapy in cervical cancer cells (PLoS ONE, 2015년)",
+    "Intermediate-risk grouping of cervical cancer patients treated with radical hysterectomy: a Korean Gynecologic Oncology Group study (British Journal of Cancer, 2014년)",
+    "Salvage Stereotactic Body Radiotherapy for Locally Recurrent Uterine Cervix Cancer at the Pelvic Sidewall: Feasibility and Complication (Asia-Pacific Journal of Clinical Oncology, 2014년)",
+    "Clinicopathologic factors for central recurrence in patients with locally advanced bulky cervical cancer (Eur J Obstet Gynecol Reprod Biol, 2014년)",
+    "Overexpression of SOCS-1 may inhibit invasion and metastasis of cervical cancer (AACR, 2014년)",
+    "Randomized clinical trial of weekly vs. triweekly cisplatin-based chemotherapy concurrent with radiotherapy in the treatment of locally advanced cervical cancer (Int J Radiat Oncol Biol Phys, 2011년)",
+    "Is Adjuvant Chemoradiotherapy Overtreatment in Cervical Cancer Patients with Intermediate Risk Factors? (Int J Radiat Oncol, 2010년)",
+    "The type of metastasis is a prognostic factor in disseminated cervical cancer (J Gynecol Oncol, 2010년)",
+    "Nomogram Prediction of Overall Survival After Curative Irradiation for Uterine Cervical Cancer (Int J Radiat Oncol, 2010년)",
+    "Detection of Recurrence by 18F-FDG PET in Patients with Endometrial Cancer Showing No Evidence of Disease (Journal of Korean medical science, 2010년)",
+    "Image-guided Stereotactic Body Radiation Therapy in Patients with Isolated Para-aortic Lymph Node Metastases from Uterine Cervical and Corpus Cancer (Int J Radiat Oncol, 2009년)",
+    "Modalities for evaluation of tumor size in cervical cancer (J Gynecol Oncol, 2008년)",
+    "SOCS3 regulates p21 expression and cell cycle arrest in response to DNA damage (Cell Signal, 2008년)",
+    "Validation of a nomogram for predicting outcome of vulvar cancer patients, primarily treated by surgery, in Korean population: multicenter retrospective study through Korean Gynecologic Oncology Group (KGOG-1010) (J Gynecol Oncol, 2008년)",
+    "Polymorphism in the nuclear factor kappa-B binding promoter region of cyclooxygenase-2 is associated with an increased risk of bladder cancer (Cancer Lett, 2005년)",
+    "Elevation of cyclooxygenase-2 is related to lymph node metastasis in adenocarcinoma of uterine cervix (Cancer Lett, 2005년)",
+    "[18F]FDG PET as a substitute for second-look laparotomy in patients with advanced ovarian carcinoma (Eur J Nucl Med Mol Imaging, 2004년)",
+    "Expression of Cyclooxygenase-1 and -2 associated with expression of VEGF in primary cervical cancer and at metastatic lymph nodes (Gynecol Oncol, 2003년)",
+    "Detection of Early Recurrence with 18F-FDG PET in Patients with Cervical Cancer (JNM, 2003년)",
+    "Interleukin-10 promoter polymorphisms and cervical cancer risk in Korean women (Cancer Lett, 2002년)",
+    "Polymorphisms in Codon 31 of p21 and Cervical Cancer Susceptibility in Korean Women (Cancer Lett, 2001년)"
+  ],
+  "저서": [],
+  "학술": [
+    {
+      "date": "202310",
+      "content": "ESMO 2023 학술대회에 참석하여 포스터 연제 발표"
+    },
+    {
+      "date": "202008",
+      "content": "대한부인종양연구회 '20 the 30th KGOG symposium and workshop 초청연자"
+    },
+    {
+      "date": "202005",
+      "content": "서울특별시의사회 2020년 5년연속 최우수회원"
+    },
+    {
+      "date": "201910",
+      "content": "그리스 ESGO 2019 학회 참석 및 논문 발표"
+    },
+    {
+      "date": "201903",
+      "content": "미국 부인종양학회(SGO) 학회 초록 발표 및 참석"
+    },
+    {
+      "date": "201811",
+      "content": "아일랜드 EORTC-NCI-AACR symposium 참석"
+    },
+    {
+      "date": "201404",
+      "content": "AACR 연제 발표 및 참석"
+    },
+    {
+      "date": "201310",
+      "content": "The 18th ESGO International Meeting"
+    },
+    {
+      "date": "201306",
+      "content": "대한암학회 춘계학술대회"
+    },
+    {
+      "date": "201306",
+      "content": "대한산부인과학회 연수강좌"
+    },
+    {
+      "date": "201207",
+      "content": "GOG semi-annual meeting 참석"
+    },
+    {
+      "date": "2007",
+      "content": "Member of KGOG"
+    },
+    {
+      "date": "200207",
+      "content": "Member of IGCS"
+    },
+    {
+      "date": "200207",
+      "content": "Member of Korean Society of Medical Biochemistry and Molecular Biology"
+    },
+    {
+      "date": "200207",
+      "content": "대한암학회 정회원"
+    },
+    {
+      "date": "199603",
+      "content": "대한부인종양-콜포스코피학회 정회원"
+    },
+    {
+      "date": "199603",
+      "content": "대한산부인과학회 정회원"
+    }
+  ],
+  "언론": [
+    {
+      "targetDate": null,
+      "type": "블로그",
+      "text": "젊어지는 자궁경부암, 백신접종과 정기검진으로 예방 - 산부인과 김문홍 과장",
+      "url": "javascript: openUrl('https://blog.naver.com/PostView.naver?blogId=kirams1963&logNo=223430583509&categoryNo=6&parentCategoryNo=6&viewDate=&currentPage=1&postListTopCurrentPage=&from=thumbnailList')",
+      "issuer": "블로그"
+    },
+    {
+      "targetDate": null,
+      "type": "블로그",
+      "text": "생리불순 부르는 다낭성난소증후군, 살 빼면 좋아져요! - 원자력병원 산부인과 김문홍 과장",
+      "url": "javascript: openUrl('https://blog.naver.com/PostView.naver?blogId=kirams1963&logNo=222669484326&categoryNo=6&parentCategoryNo=6&viewDate=&currentPage=3&postListTopCurrentPage=&from=thumbnailList')",
+      "issuer": "블로그"
+    },
+    {
+      "targetDate": null,
+      "type": "블로그",
+      "text": "난소암, 폐경 여성을 노린다 – 원자력병원 산부인과 김문홍 과장",
+      "url": "javascript: openUrl('https://blog.naver.com/PostView.naver?blogId=kirams1963&logNo=222280767610&categoryNo=6&parentCategoryNo=6&viewDate=&currentPage=5&postListTopCurrentPage=&from=thumbnailList')",
+      "issuer": "블로그"
+    },
+    {
+      "targetDate": null,
+      "type": "국민일보",
+      "text": "젊은층 발병 늘어나는 자궁경부암 [진료실 문답]",
+      "url": "javascript: openUrl('https://www.kukinews.com/newsView/kuk202405170102')",
+      "issuer": "국민일보"
+    },
+    {
+      "targetDate": null,
+      "type": "블로그",
+      "text": "젊어지는 자궁경부암, 백신접종과 정기검진으로 예",
+      "url": "javascript: openUrl('https://blog.naver.com/kirams1963/223430583509')",
+      "issuer": "블로그"
+    },
+    {
+      "targetDate": null,
+      "type": "쿠키뉴스",
+      "text": "자궁경부암 검진, 집에서도 가능해져",
+      "url": "javascript: openUrl('www.kukinews.com/newsView/kuk202101200030')",
+      "issuer": "쿠키뉴스"
+    },
+    {
+      "targetDate": null,
+      "type": "유튜브",
+      "text": "암은 원자력병원입니다.-자궁내막암-산부인과 김문홍 과장",
+      "url": "javascript: openUrl('https://www.youtube.com/embed/W0oOiwoLxDU')",
+      "issuer": "유튜브"
+    },
+    {
+      "targetDate": null,
+      "type": "국민일보",
+      "text": "[진료실에서] 폐경 후 난소에 혹이 생겼다면... - 산부인과 김문홍 과장",
+      "url": "javascript: openUrl('news.kmib.co.kr/article/view.asp?arcid=0924082171&code=14130000&cp=nv')",
+      "issuer": "국민일보"
+    }
+  ],
+  "specialty": "폐경기 클리닉,폐경기 클리닉,항암화학요법,진행성 및 재발암,질식자궁절제술 및 회음성형술,질탈출증,난소종양,재발성 및 전이성 부인암,자궁육종,자궁체부암,자궁탈출증,자궁근종,융모상피암,외음암,난소암,자궁경부암",
+  "profileUrl": "https://www.kcch.re.kr/_upload/profImg/63b1059a-9514-446c-afbf-a8a9b9544985",
+  "isAttend": true
+}

@@ -1,0 +1,104 @@
+{
+  "doctorId": 15122,
+  "rid_long": "86C7B7557F2B6540A2C7A5501D715938C7A531296AF209D505158776CF4C0A7471A7B68C22BE1DE575712FAC14B66D44DE5DBAE336C11FBCCF05D22392C41C77EAAF91B6B43F748DBC713D462757B66B89CC3E5B362B2CE39236BF7CDC32090D38C6FD63215D4D2D7A8C363482C227F28B6D6688EC4CFC8BB8E7A37F4DF7BA2F5495F8BDD5A365D906597C08AC82FB53F92753DABFE3BB27349C428D07EB6FF5DD30352FAE4CCD296B4593198E8602A21784357ABC916365A8F427DDDCB9C1CAE25A208B0A8E4A43CB7159E373BB71BA7D3B102FDB4BAA89C4BC7BD02ECB3C6F",
+  "hospital_cid": 620,
+  "bedoc_id": "A6036",
+  "bedoc_hospitalsite": "http://www.brmh.org",
+  "bedoc_doctorname": "최지은",
+  "bedoc_deptname": "소아청소년과",
+  "bedoc_hospitalname": "서울보라매병원",
+  "hospital_name": "서울보라매병원",
+  "aiga_hid": "H11KR-11000019",
+  "hospital_site": "https://www.brmh.org/custom/popup/layer_doctor_view.do?dt_no=367&medi_code=001014000|001014000",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 동작구 보라매로5길 20, (신대방동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.brmh.org/custom/popup/layer_doctor_view.do?dt_no=367&medi_code=001014000|001014000&doctorName=%EC%B5%9C%EC%A7%80%EC%9D%80&depthName=%EC%86%8C%EC%95%84%EC%B2%AD%EC%86%8C%EB%85%84%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "http://www.brmh.org/upload/TB_MEDITEAM/d9fae37e3c5442e1bef8364b62e881bc.png",
+  "specialty": "소아신경과 : 발달지연, 두통, 뇌전증, 뇌기형 운동발달지연, ADHD",
+  "학력": [
+    {
+      "date": "2004.03 ~ 2008.02",
+      "content": "서울대학교 의과대학 의학사"
+    },
+    {
+      "date": "2010.03 ~ 2012.02",
+      "content": "서울대학교 대학원 의학과 소아과학전공 석사"
+    },
+    {
+      "date": "2012.03 ~ 2015.02",
+      "content": "서울대학교 대학원 의학과 소아과학전공 박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "2008.03 ~ 2009.02",
+      "content": "서울대학교병원 인턴"
+    },
+    {
+      "date": "2009.03 ~ 2013.02",
+      "content": "서울대학교병원 소아청소년과 전공의"
+    },
+    {
+      "date": "2013.03 ~ 2015.02",
+      "content": "서울대학교 어린이병원 소아신경 전임의"
+    },
+    {
+      "date": "2015.03 ~ 2017.02",
+      "content": "서울대학교병원 소아청소년과 진료교수"
+    },
+    {
+      "date": "2017.03 ~ 현재",
+      "content": "서울대학교 의과대학 소아과학교실 기금조교수, 서울특별시보라매병원 소아청소년과 진료교수"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "미국소아신경학회 회원"
+    },
+    {
+      "date": null,
+      "content": "유럽 소아신경학회 회원"
+    },
+    {
+      "date": null,
+      "content": "국제 소아신경학회 회원"
+    },
+    {
+      "date": null,
+      "content": "대한소아신경학회 간행위원장"
+    },
+    {
+      "date": null,
+      "content": "대한소아신경학회지 편집위원"
+    }
+  ],
+  "수상": [
+    {
+      "date": null,
+      "content": "2019.05 대한소아신경학회 공로상"
+    },
+    {
+      "date": null,
+      "content": "2020.10 대한소아신경학회 Annals of Child Neurolgy 최우수 논문상"
+    }
+  ],
+  "논문": [
+    "SYNGAP1-related developmental and epileptic encephalopathy: Genotypic and phenotypic characteristics and longitudinal insights. (Am J Med Genet A, 2024-08)",
+    "Clinical Presentation and Prognosis of SARS-CoV-2 Infection in Infants Aged ≤90 Days: Insights for Management During Outbreaks. (Pediatr Infect Vaccine, 2023-08)",
+    "Distinct Clinical and Laboratory Features of COVID-19 in Children During the Pre-Delta, Delta and Omicron Wave. (Pediatr Infect Dis J, 2023-05)",
+    "Broad spectrum of phenotype and genotype in Korean α-dystroglycan related muscular dystrophy presenting to a tertiary pediatric neuromuscular center. (Neuromuscul Disord, 2023-05)",
+    "Increased type III interferons and NK cell functions in SARS-CoV-2-infected children. (Signal Transduct Target Ther, 2023-02)",
+    "USP13 regulates HMGB1 stability and secretion through its deubiquitinase activity (Molecular medicine, 2022-12)",
+    "The Korean undiagnosed diseases program phase I: expansion of the nationwide network and the development of long-term infrastructure (Orphanet journal of rare diseases, 2022-10)",
+    "Variations of Resting-State EEG-Based Functional Networks in Brain Maturation From Early Childhood to Adolescence (Journal of clinical neurology, 2022-09)",
+    "Clinico-radiological characteristics of anti-myelin oligodendrocyte glycoprotein antibody-associated autoimmune encephalitis in children (Developmental medicine and child neurology, 2022-08)",
+    "Genetic diagnosis of infantile-onset epilepsy in the clinic: Application of whole-exome sequencing following epilepsy gene panel testing (Clinical genetics, 2021-03)"
+  ]
+}

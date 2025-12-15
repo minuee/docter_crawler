@@ -1,0 +1,74 @@
+{
+  "doctorId": 14726,
+  "rid_long": "F7DE1DEC334FD8E971FA7CABC43869E54C88D5D66237B959F362568FD8434258041529914CDF349F53C9BCB97BD0EC40862EA7335CEAC41A09CFF3C0837CF8C9611095CE09905DCC5269232447AA32FB74B5D811C42F3350C7E87EB192462317E6D30AE74D788EBF4D7E9CD0EA37DCBB855E164166E2DC3223204419C872E8DB5B9F1BFCDE1EB0CEC1A8ADFD9D1EBB9598C4B4CC7815DFA4CBE959447FACECA4F7C203C558F5EB9DE0FBDBCB4FA02958",
+  "hospital_cid": 124,
+  "bedoc_id": "A8536",
+  "bedoc_hospitalsite": "",
+  "bedoc_doctorname": "김재홍",
+  "bedoc_deptname": "내분비내과",
+  "bedoc_hospitalname": "해동내과",
+  "hospital_name": "해동내과의원",
+  "aiga_hid": "H31KR-23001985",
+  "hospital_site": "http://www.hd-clinic.co.kr/Module/CMS/CMS.asp?Srno=42565",
+  "site_type": "list",
+  "hospital_addr": "대구광역시 중구 중앙대로 434-18, 1,2층 (포정동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "http://www.hd-clinic.co.kr/Module/CMS/CMS.asp?Srno=42565&doctorName=%EA%B9%80%EC%9E%AC%ED%99%8D&depthName=%EB%82%B4%EB%B6%84%EB%B9%84%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_ocr",
+  "specialty": "갑상선, 내분비, 심장 순환기",
+  "profileUrl": null,
+  "isAttend": true,
+  "학력": [
+    {
+      "content": "영남대학교 의과대학 졸업"
+    },
+    {
+      "content": "하버드 의학대학원 연수"
+    }
+  ],
+  "경력": [
+    {
+      "content": "내분비내과"
+    },
+    {
+      "content": "전 울산병원 내분비내과 과장 역임"
+    },
+    {
+      "content": "대한 노인병 학회 인정의"
+    },
+    {
+      "content": "영남대학교 외래교수"
+    }
+  ],
+  "학술": [
+    {
+      "content": "미국 임상 내분비 학회 정회원"
+    },
+    {
+      "content": "하버드 Postgraduate Association 정회원"
+    },
+    {
+      "content": "미국 당뇨병 학회 정회원"
+    },
+    {
+      "content": "아시아 오세아니아 갑상선학회 정회원"
+    },
+    {
+      "content": "대한 당뇨병 학회 정회원"
+    },
+    {
+      "content": "대한 내분비 학회 정회원"
+    },
+    {
+      "content": "대한 갑상선 학회 정회원"
+    },
+    {
+      "content": "대한 비만 학회 정회원"
+    },
+    {
+      "content": "대한 위 대장 내시경 학회 회원"
+    }
+  ]
+}

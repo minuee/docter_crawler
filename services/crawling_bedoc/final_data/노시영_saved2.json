@@ -1,0 +1,101 @@
+{
+  "doctorId": 14764,
+  "rid_long": "69C80B2D875085385928C764CB746DFF075FDCC0C149FCF0E57DB5984A43886012F63802A07B4DC5962B4F9FFD12616D2669CB225A50CDE47F884F7C523663C24273BCB2C6C612F41C43FEAA84C1E05004446E509771C40286121F4FE74291AC604D1C5D8AB32C8DEFAA21281A16B7C1A3762D10A3AA7DADEBCD1E6D45F4A5DD0B039A9F887E1ACBB706D8160CD2873EA1367002B3323B4777E996E21DBEA86BF7C203C558F5EB9DE0FBDBCB4FA02958",
+  "hospital_cid": 180,
+  "bedoc_id": "A0979",
+  "bedoc_hospitalsite": "http://www.ksungae.co.kr/Index.asp",
+  "bedoc_doctorname": "노시영",
+  "bedoc_deptname": "성형외과",
+  "bedoc_hospitalname": "광명성애병원",
+  "hospital_name": "광명성애병원",
+  "aiga_hid": "H11KR-31000011",
+  "hospital_site": "https://h.ksungae.co.kr/deptclinic/doctorIntro.do?doctorID=DT2575",
+  "site_type": "single",
+  "hospital_addr": "경기도 광명시 디지털로 36, 광명성애병원 (철산동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://h.ksungae.co.kr/deptclinic/doctorIntro.do?doctorID=DT2575&doctorName=%EB%85%B8%EC%8B%9C%EC%98%81&depthName=%EC%84%B1%ED%98%95%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "profileUrl": "https://h.ksungae.co.kr/upload/doctor/DT2575.jpg",
+  "specialty": "수지접합 및 수부재건클리닉",
+  "학력": [
+    {
+      "date": null,
+      "content": "중앙대학교 의과대학 졸업"
+    },
+    {
+      "date": null,
+      "content": "중앙대학교 의과대햑 석사"
+    },
+    {
+      "date": null,
+      "content": "중앙대학교 의과대학 박사"
+    },
+    {
+      "date": null,
+      "content": "한림대학교 부속 강동성심병원 인턴 수료"
+    },
+    {
+      "date": null,
+      "content": "광명성애병원 전공의 수료"
+    },
+    {
+      "date": "2006~2007",
+      "content": "미국 Kleinert hand center 연수"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "성형외과 전문의"
+    },
+    {
+      "date": null,
+      "content": "중앙대학교 의과대학"
+    },
+    {
+      "date": null,
+      "content": "한림대학교 부속 강동성심병원 수련"
+    },
+    {
+      "date": null,
+      "content": "광명성애병원 성형외과 전공의 수료"
+    },
+    {
+      "date": null,
+      "content": "미국 UCLA 의과대학 연수"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한성형외과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한미세수술학회 전 학술위원장"
+    },
+    {
+      "date": null,
+      "content": "대한수부외과학회 전 총무/정보통신 이사"
+    },
+    {
+      "date": null,
+      "content": "대한미용성형학회 윤리이사"
+    },
+    {
+      "date": null,
+      "content": "대한창상학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한말초신경외과학회 회장"
+    },
+    {
+      "date": null,
+      "content": "대한말초신경수술학회 회장"
+    }
+  ],
+  "isAttend": true
+}

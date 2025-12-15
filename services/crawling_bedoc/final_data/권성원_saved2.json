@@ -1,0 +1,85 @@
+{
+  "doctorId": 14655,
+  "rid_long": "945BB74CA75FD7E82B2409FC651CCFF879C3026487E2400D12AC5E396B3A02F270C5E469EEAC1ECB355436725C6282184F735C4E740EDFF5C20863FC6B217BC8C7B941F461E231F21E6FF6E31E1B34EF25E9B34007C2F9F86C3964DE8915273673661F47C65BA046BBFA2FD1A6E973D222CD9026ED40BA4256503B7635DFD8D1FA5BA175400C594B9F8400099F8201C2FE097D5651AABC41CAA438DE24658CDE19047FDA29AB4D607EB6EF402BBFD25BB89A654D845C176C60B7D991C680DC0A",
+  "hospital_cid": 30,
+  "bedoc_id": "A1182",
+  "bedoc_hospitalsite": "http://gangnam.chamc.co.kr",
+  "bedoc_doctorname": "권성원",
+  "bedoc_deptname": "비뇨의학과",
+  "bedoc_hospitalname": "강남차병원",
+  "hospital_name": "강남차병원",
+  "doctorName": "권성원",
+  "department": "비뇨의학과",
+  "aiga_hid": "H11KR-11000037",
+  "hospital_site": "https://gangnam.chamc.co.kr/treatment/list/urology/reservation.cha?ctCode=35#none",
+  "site_type": "list",
+  "hospital_addr": "서울특별시 강남구 논현로 566, 강남차병원(역삼동650-9, 606-4, 605외2필지(지하7층~지하1층, 지상2층~7층)) (역삼동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://gangnam.chamc.co.kr/treatment/list/urology/reservation.cha?ctCode=35#none&doctorName=%EA%B6%8C%EC%84%B1%EC%9B%90&depthName=%EB%B9%84%EB%87%A8%EC%9D%98%ED%95%99%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": "Cheerio parser could not extract education or experience.",
+  "profileUrl": "https://wmanager.chamc.co.kr/file/doctor/1_%EA%B6%8C%EC%84%B1%EC%9B%90_1.png",
+  "논문": [],
+  "수상": [
+    "제3회 국제영상비뇨기과학회 올림푸스상 1991",
+    "제3회 메디슨 의공학상, 대한의용생체공학회, 1996.11",
+    "동아의료문학상, 동아제약&의협신문, 1997.4",
+    "보건의 날 국민훈장 동백장 수장, 2005.4",
+    "비뇨기과학, 고려의학, 1991",
+    "영상의학 비디오 CD(전4장), 1996.6",
+    "신장 및 비뇨기과 초음파 의학, 태평기획, 1997.3"
+  ],
+  "specialty": "비뇨기종양, 배뇨장애, 전립선질환, 전립선비대증, 전립선암, 요로결석",
+  "학력": [
+    {
+      "date": null,
+      "content": "비뇨기과 전문의, 의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "現",
+      "content": "강남차병원 비뇨기과 진료"
+    },
+    {
+      "date": "1973~76",
+      "content": "연세대학교 의과대학교 교수"
+    },
+    {
+      "date": "1976~02",
+      "content": "이대부속 동대문병원 비뇨기과 과장"
+    },
+    {
+      "date": "1979.4~11",
+      "content": "일본대학 니혼대 의학부 연구교수"
+    },
+    {
+      "date": "1985.7~12",
+      "content": "스웨덴 Barcellona의대 연구교수"
+    }
+  ],
+  "학술": [
+    {
+      "date": "1996~98",
+      "content": "대한비뇨기과학회 이사장"
+    },
+    {
+      "date": "1999~01",
+      "content": "대한의학레이저 의학회 회장"
+    },
+    {
+      "date": null,
+      "content": "대한비뇨기과학회"
+    },
+    {
+      "date": null,
+      "content": "대한의학레이저 의학회"
+    },
+    {
+      "date": "2001~현재",
+      "content": "한국전립선관리협회 회장"
+    }
+  ]
+}

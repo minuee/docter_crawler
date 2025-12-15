@@ -1,0 +1,129 @@
+{
+  "doctorId": 14743,
+  "rid_long": "2A822E6D442B52200BA2A0D734BBBE631A9FD9B8B9F0A00033215840A58BF13BAEE48A0989A25EFD8DEDA5F80A42528EB429F528ADFABD97CEF28E2108AAB77038DFE16EF6A3124979EFC40682DABFBDB4D1E750A31BE1718335259002576482A0630E85CE29132F560B229A02CFFE6625140A7A1C14EAB85C7A5296BB4CB16D5D821FC92DBEEE1E46004819E17D940516D52102B5615D459DAE47F6016F73425FB236AE12E7C16D5A358DE6C62FA96259A871F9E9CCBAA590C446B8701F19B272571732FFDD9894BDE41969393629C1D9F827ECC0F379003D7A98D37F8D7A4C",
+  "hospital_cid": 149,
+  "bedoc_id": "A1206",
+  "bedoc_hospitalsite": "http://www.dkmc.or.kr",
+  "bedoc_doctorname": "김하영",
+  "bedoc_deptname": "비뇨의학과",
+  "bedoc_hospitalname": "동강병원",
+  "hospital_name": "동강병원",
+  "aiga_hid": "H11KR-26000004",
+  "hospital_site": "https://www.dkmc.or.kr/medical/popup_doctorInfo.php?r_docname=%EA%B9%80%ED%95%98%EC%98%81&r_groupcode=01040500",
+  "site_type": "single",
+  "hospital_addr": "울산광역시 중구 태화로 239, (태화동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.dkmc.or.kr/medical/popup_doctorInfo.php?r_docname=%EA%B9%80%ED%95%98%EC%98%81&r_groupcode=01040500&doctorName=%EA%B9%80%ED%95%98%EC%98%81&depthName=%EB%B9%84%EB%87%A8%EC%9D%98%ED%95%99%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "학력": [
+    {
+      "date": null,
+      "content": "서울대학교 의과대학 졸업(1976)"
+    },
+    {
+      "date": null,
+      "content": "서울대학교 대학원 의학석사(1986)"
+    },
+    {
+      "date": null,
+      "content": "고려대학교 대학원 의학박사(1989)"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "서울대학교병원 인턴(1977)"
+    },
+    {
+      "date": null,
+      "content": "서울대학교병원 레지던트(1981)"
+    },
+    {
+      "date": null,
+      "content": "미국 미시간 대학 비뇨기과 연구원"
+    },
+    {
+      "date": null,
+      "content": "한림대학교 한강성심병원 조교수(1985. 3~ 1992. 2)"
+    },
+    {
+      "date": null,
+      "content": "한림대학교 강동성심병원 교수(1992. 3~ 2016. 2)"
+    },
+    {
+      "date": null,
+      "content": "대한손보협회 자문교수"
+    }
+  ],
+  "논문": [
+    "Sexual Behavior of the Elderly in Urban Areas/공동저자/2012",
+    "Influence of Donor's Renal Function on the Outcome of Living Kidney Transplantation: 10-Year Follow-up/공동저자/2011",
+    "Spontaneous Recovery of Cavernous Nerve Crush Injury/공동저자/2011",
+    "Effect of Desmopressin with Andichollnergics in Female Patients with Overactive Bladder/교신저자/2011",
+    "Efficacy and safety of Tamsulosin for the Treatment of Non-neurogenic Voiding Dysfunction in Females: A 8-Week Prosprective Study/공동저자/2010",
+    "복압성요실금환자에서 Tensio-free Vaginal Tape수술의 성공 및 삶의 질에 영향을 미치는 인자에 대한 연구/공동저자/2007",
+    "Evaluation and treatment of lower urinary tract symptoms/BPH:6th",
+    "recommendation of international scientific committee를 중심으로/제1저자/2006",
+    "전립선비대증 환자에서의 야간빈뇨/공동저자/2002",
+    "뇌졸중 환자에서 요실금 발생의 위험요인에 관한 연구/공동저자/2004",
+    "여성 복압성요실금 환자에서 1시간 패트검사와 복압성요누출압과의 비교/The comparision of 1 hour pad test and abdominal leak poin pressure in the patient with stress urinary incontinenc/공동저자/2006"
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한배뇨장애 및 요실금학회 회장.(1994-1995)"
+    },
+    {
+      "date": null,
+      "content": "대한비뇨기과학회 학술위원(1996-1997)"
+    },
+    {
+      "date": null,
+      "content": "대한비뇨기과학회 이사(2003-2007)"
+    },
+    {
+      "date": null,
+      "content": "대한척수손상학회 회장(2010-2011)"
+    },
+    {
+      "date": null,
+      "content": "미국비뇨기과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "세계 요실금학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한 배뇨장애 및 요실금학회 이사"
+    }
+  ],
+  "저서": [
+    {
+      "date": null,
+      "content": "신경인성 배뇨이상의 진단 및 치료(역서). 효문사. 1991",
+      "issuer": null
+    },
+    {
+      "date": null,
+      "content": "임상 요류역학. 효문사. 1997",
+      "issuer": null
+    },
+    {
+      "date": null,
+      "content": "비뇨기과학. 최신의학사. 2001",
+      "issuer": null
+    },
+    {
+      "date": null,
+      "content": "배뇨장애 및 요실금. 일조각. 2003",
+      "issuer": null
+    }
+  ],
+  "profileUrl": "http://www.dkmc.or.kr/upload/A01/userFile/thumb_20160304_IMG_57c647a77e1fd.jpg",
+  "specialty": "요로결석, 요실금 , 전립선",
+  "isAttend": true
+}

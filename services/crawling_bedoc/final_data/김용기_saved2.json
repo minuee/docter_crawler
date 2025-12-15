@@ -1,0 +1,81 @@
+{
+  "doctorId": 14720,
+  "rid_long": "E58650608C94ECC55D45D4B2735E3A953449442B0D3370ACA39954FDE24F28B6777A2F381EB3249C0E747A4910C162EC44292B677F1A10F6186255553091ED1F70B0842CA1B5D529988F47A2AC54A40CEB8E651384DE64AAA4038CDE5CE7E725C229DF107F1AB16A0842B1C84563F52A6312004EDD65BA7BD36EAD9214B4D482A93F604B61CFF51C25B4684914059323AD63CE56F2524D8AD3CFB03E7199A437041F2941FEEEA7368AFFFB903F433AA4BA78ABE3D51D6B9B6E755F84E16593567D3B102FDB4BAA89C4BC7BD02ECB3C6F",
+  "hospital_cid": 113,
+  "bedoc_id": "A0743",
+  "bedoc_hospitalsite": "http://www.endocrine-clinic.com",
+  "bedoc_doctorname": "김용기",
+  "bedoc_deptname": "내분비내과",
+  "bedoc_hospitalname": "김용기내과의원",
+  "hospital_name": "김용기내과의원",
+  "aiga_hid": "H31KR-21000284",
+  "hospital_site": "https://www.endocrine-clinic.com/content/content.asp?FolderName=sub01&filename=sub01_04",
+  "site_type": "list",
+  "hospital_addr": "부산광역시 서구 보수대로 7, 2,3,4층 (충무동1가)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.endocrine-clinic.com/content/content.asp?FolderName=sub01&filename=sub01_04&doctorName=%EA%B9%80%EC%9A%A9%EA%B8%B0&depthName=%EB%82%B4%EB%B6%84%EB%B9%84%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_ocr",
+  "error": null,
+  "specialty": "내분비대사, 핵의학",
+  "학력": [
+    {
+      "content": "부산대학교 의과대학, 대학원 졸업"
+    },
+    {
+      "content": "부산대학교 의과대학 박사 학위 취득"
+    }
+  ],
+  "경력": [
+    {
+      "content": "부산대학교병원 인턴"
+    },
+    {
+      "content": "부산대학교병원 내과전공의 수료, 내과전문의 취득"
+    },
+    {
+      "content": "내분비대사내과 전문의, 핵의학 전문의 취득"
+    },
+    {
+      "date": "1982 ~ 2010",
+      "content": "부산대학교 의과대학 내과학 교수"
+    },
+    {
+      "content": "부산대학교 의과대학 내과 주임교수 및 내분비대사내과 과장"
+    },
+    {
+      "content": "홍콩대학교 의과대학 교환교수"
+    },
+    {
+      "content": "미국 토머스제퍼슨 의과대학 교환교수"
+    },
+    {
+      "content": "부산대학교 의과대학 학장"
+    },
+    {
+      "content": "현 김용기내과의원 원장"
+    }
+  ],
+  "학술": [
+    {
+      "content": "대한내분비학회 평생회원, 회장 역임"
+    },
+    {
+      "content": "대한당뇨병학회 평생회원, 회장 역임"
+    },
+    {
+      "content": "세계당뇨병학회 서태평양지구 학회조직위원장 역임"
+    },
+    {
+      "content": "대한지질동맥경화학회 평생회원, 부회장 역임"
+    },
+    {
+      "content": "대한갑상선학회 평생회원, 2010년 추계학술대회장"
+    },
+    {
+      "content": "대한골다공증학회 평생회원"
+    }
+  ],
+  "isAttend": true
+}

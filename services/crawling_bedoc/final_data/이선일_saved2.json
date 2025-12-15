@@ -1,0 +1,103 @@
+{
+  "doctorId": 14955,
+  "rid_long": "475F968725C07D6B32021D5215AB2509CAF0D6457426017F5BC4A1DC7970E5F6D80CB0F6C95B2ED394C7B931D01B4A9FFF0C8F20CAA2D475B139496D7CE7F17E3BDA1B96E42F3CD9F57AB1D97EC6559AC1CDABFB6849DA3724B73DFEBEE326E1FB94438EE2D5470242ACEEECCA55B008BDA12CA78F2A8498FCBA9383ECEFB9AD6EB6063BD9188BE221627E200D7C6FF4A1367002B3323B4777E996E21DBEA86BF7C203C558F5EB9DE0FBDBCB4FA02958",
+  "hospital_cid": 414,
+  "bedoc_id": "A0412",
+  "bedoc_hospitalsite": "http://www.paik.ac.kr/haeundae/",
+  "bedoc_doctorname": "이선일",
+  "bedoc_deptname": "신경외과",
+  "bedoc_hospitalname": "해운대백병원",
+  "hospital_name": "센텀종합병원",
+  "aiga_hid": "H11KR-21000011",
+  "hospital_site": "https://centumhospital.com/main/doctor/view.do?md_idx=14&mp_idx=2",
+  "site_type": "single",
+  "hospital_addr": "부산광역시 수영구 수영로679번길 8, (광안동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://centumhospital.com/main/doctor/view.do?md_idx=14&mp_idx=2&doctorName=%EC%9D%B4%EC%84%A0%EC%9D%BC&depthName=%EC%8B%A0%EA%B2%BD%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "specialty": "뇌혈관질환(뇌동맥류, 뇌출혈, 뇌경색), 뇌종양, 두부외상",
+  "profileUrl": "https://centumhospital.com/data/doctor/527700_2.png",
+  "학력": [
+    {
+      "date": null,
+      "content": "부산대학교 의학박사"
+    },
+    {
+      "date": null,
+      "content": "부산대학교 의과대학졸업"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "인제대학교 신경외과 주임교수 및 해운대백병원 신경외과 과장"
+    },
+    {
+      "date": null,
+      "content": "인제대학교 해운대백병원 기획실장"
+    },
+    {
+      "date": null,
+      "content": "인제대학교 부산백병원 신경외과 과장"
+    },
+    {
+      "date": null,
+      "content": "인제대학교 부산백병원 신경외과 과장"
+    },
+    {
+      "date": null,
+      "content": "인제대학교 대학원 부원장"
+    },
+    {
+      "date": null,
+      "content": "인제대학교 의과대학 신경외과 교수"
+    },
+    {
+      "date": null,
+      "content": "미국 캘리포니아 주립대학(샌프란시스코) 뇌종양연구소 객원연구원"
+    },
+    {
+      "date": null,
+      "content": "인제대학교 의과대학 전임강사"
+    },
+    {
+      "date": null,
+      "content": "인제대학교 부산백병원 신경외과 전공의"
+    },
+    {
+      "date": null,
+      "content": "인제대학교 부산백병원 인턴"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "University of Zurich (Prof. Yonegawa) 단기연수"
+    },
+    {
+      "date": null,
+      "content": "대만 타이페이 베테란스 종합병원 암센터 연수"
+    },
+    {
+      "date": null,
+      "content": "스웨덴 스톡홀름, 캐로린스카 병원 감마나이프 방사선수술 연수"
+    },
+    {
+      "date": null,
+      "content": "오스트리아 그라츠, 칼 프란센스 대학병원 연수"
+    }
+  ],
+  "언론": [
+    {
+      "targetDate": null,
+      "type": "기사",
+      "text": "[MBN] 머릿속 혈관이 아지랑이처럼…방치하면 뇌졸중 부르는 '모야모야병'",
+      "url": "https://www.mbn.co.kr/news/life/5061218",
+      "issuer": null
+    }
+  ]
+}

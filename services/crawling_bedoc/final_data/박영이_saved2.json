@@ -1,0 +1,118 @@
+{
+  "doctorId": 14794,
+  "rid_long": "09112DC6095C196A7F3E517706AA370C63CA75B473F98C85BB272B172D3F941D932125E0B69027FE8B33701AF2013889B642F81DF0F5AE22C5E37A2CF211A1AAF463C10E0891E4CC9C19B50031CA9BDEE30EBF9E4B5CAE38559971B27A28473F694ACB523AAC20971411DF3924F0FA8D389B20C0DE0DCE8589F3068E76F935FD68E11B2AED0FCDAED82AE417C94AC850B07EA4F85997699D2E9F52E1D7D95AA7E255B3621180F621C1510510B9C68877FD99B584B62122BF9888AB9EC79E014B",
+  "hospital_cid": 222,
+  "bedoc_id": "A5521",
+  "bedoc_hospitalsite": "http://www.ncc.re.kr",
+  "bedoc_doctorname": "박영이",
+  "bedoc_deptname": "혈액종양내과",
+  "bedoc_hospitalname": "국립암센터",
+  "hospital_name": "국립암센터",
+  "aiga_hid": "H11KR-31000013",
+  "hospital_site": "https://www.ncc.re.kr/ncc_about03_param.ncc?searchKey=&searchValue=&dept=IM",
+  "site_type": "popup",
+  "hospital_addr": "경기도 고양시 일산동구 일산로 323, (마두동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.ncc.re.kr/ncc_about03_param.ncc?searchKey=&searchValue=&dept=IM&doctorName=%EB%B0%95%EC%98%81%EC%9D%B4&depthName=%ED%98%88%EC%95%A1%EC%A2%85%EC%96%91%EB%82%B4%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "isAttend": true,
+  "profileUrl": "https://www.ncc.re.kr/images/no-image.gif",
+  "specialty": "진행성 위암환자의 항암화학요법",
+  "학력": [
+    {
+      "date": "1980-03 ~ 1986-02",
+      "content": "서울대학교 의과대학 의학과 대졸(의대)"
+    },
+    {
+      "date": "1990-03 ~ 1992-02",
+      "content": "서울대학교 의과대학 대학원 의학과 대학원졸(석사)"
+    },
+    {
+      "date": "1993-03 ~ 1998-02",
+      "content": "서울대학교 의과대학 대학원 의학과 대학원졸(박사)"
+    }
+  ],
+  "경력": [
+    {
+      "date": "1986-03 ~ 1987-02",
+      "content": "서울대학교병원 인턴"
+    },
+    {
+      "date": "1987-01 ~ 1990-04",
+      "content": "군의관 육군중위제대"
+    },
+    {
+      "date": "1990-05 ~ 1994-02",
+      "content": "서울대학교병원 전공의"
+    },
+    {
+      "date": "1994-03 ~ 1995-02",
+      "content": "서울대학교병원 전임의"
+    },
+    {
+      "date": "1995-03 ~ 1999-03",
+      "content": "한림대학교 의과대학 전임강사,조교수"
+    },
+    {
+      "date": "2001-04 ~ 2006-02",
+      "content": "한림대학교 의과대학 부교수"
+    },
+    {
+      "date": "2002-04 ~ 2006-10",
+      "content": "한림대학교 의과대학 주임교수"
+    },
+    {
+      "date": "2006-03 ~ 2006-10",
+      "content": "한림대학교 의과대학 정교수"
+    },
+    {
+      "date": "2006-10 ~ 현재",
+      "content": "국립암센터 위암센터 의사직"
+    },
+    {
+      "date": "2019-02 ~ 현재",
+      "content": "국립암센터 임상시험센터 의사직"
+    },
+    {
+      "date": "2019-02 ~ 2023-03",
+      "content": "국립암센터 혈액종양내과분과 의사직"
+    },
+    {
+      "date": "2023-03 ~ 현재",
+      "content": "국립암센터 혈액종양내과분과 의사직(임상교수)"
+    }
+  ],
+  "논문": [
+    "Determinants of clinical outcomes of gastric cancer patients treated with neoadjuvant chemotherapy: a sub-analysis of the PRODIGY study: GASTRIC CANCER. 25(6):1039~1049 (7.701)",
+    "A Comprehensive and Comparative Review of Global Gastric Cancer Treatment Guidelines: JOURNAL OF GASTRIC CANCER. 22(1):3~23 (3.197)",
+    "Multicenter phase III trial of S-1 and cisplatin versus S-1 and  oxaliplatin combination chemotherapy for first-line treatment of advanced  gastric cancer (SOPP trial): GASTRIC CANCER. Online:Published (7.088)",
+    "Comparison of the performance of risk scoring systems for tumor bleeding in patients with inoperable gastric cancer: ENDOSCOPY. Online:Published (7.341)",
+    "Survival Benefit of Perioperative Chemotherapy in Patients with Locally Advanced Gastric Cancer: a Propensity Score Matched Analysis: Journal of gastric cancer. 18(1):69~81 (1.4)",
+    "Nomograms predicting survival of patients with unresectable or metastatic gastric cancer who receive combination cytotoxic chemotherapy as first-line treatment: Gastric Cancer. 21(3):453~463 (5.454)",
+    "A randomized phase II study of S-1 versus capecitabine as first-line chemotherapy in elderly metastatic gastric cancer patients with or without poor performance status: clinical and pharmacogenetic results: Pharmacogenetics and Genomics. 28(1):23~30 (2.184)",
+    "A randomised phase II study of continuous versus stop-and-go S-1 plus oxaliplatin following disease stabilisation in first-line chemotherapy in patients with metastatic gastric cancer: European Journal of Cancer. 83:32~42 (6.029)",
+    "Effect of a Proton Pump Inhibitor on Tumor Bleeding Prevention in Unresectable Gastric Cancer Patients: a Double-Blind, Randomized, Placebo-Controlled Trial: Journal of Gastric Cancer. 17(2):120~131 (0)",
+    "A phase II study of perioperative S-1 combined with weekly docetaxel in patients with locally advanced gastric carcinoma: clinical outcomes and clinicopathological and pharmacogenetic predictors for survival.: Gastric Cancer. 19(2):586~596 (3.719)",
+    "Comparison of two different S-1 plus cisplatin dosing schedules as first-line chemotherapy for metastatic and/or recurrent gastric cancer:a multicenter, randomized phase III trial (SOS): Annals of Oncology. 26(10):2097~2101 (7.04)",
+    "Postgastrectomy pharmacokinetic changes of S-1 in patients with localized advanced gastric cancer.: The Journal of Clinical Pharmacology. 55(8):926~935 (2.475)",
+    "Lipid MALDI MS profiles of gastric cancer: The Open Proteomics Journal. 7:1~4 (0)",
+    "Prognostic Impact of Microscopic Tumor Involved Resection Margin in Advanced Gastric Cancer Patients after Gastric Resection: World Journal of Surgery. 38(2):439~446 (2.348)",
+    "Outcomes of second self-expandable metallic stent insertion for malignant gastric outlet obstruction: Surgical Endoscopy. 28(1):281~288 (3.313)",
+    "Phase I clinical and pharmacokinetic/pharmacogenetic study of a triplet regimen of S-1/irinotecan/oxaliplatin in patients with metastatic colorectal or gastric cancer.: Cancer Chemotherapy and Pharmacology. 72(5):953~964 (2.795)",
+    "Outcome of endoscopic therapy for cancer bleeding in patients with unresectable gastric cancer.: Journal of Gastroenterology and Hepatology. 28(9):1489~1495 (3.325)",
+    "Effect of chemotherapy on the outcome of self-expandable metallic stents in gastric cancer patients with malignant outlet obstruction.: Endoscopy. 44(9):807~812 (5.21)",
+    "Self-expandable metallic stent placement for malignant obstruction in patients with locally recurrent gastric cancer: Surgical Endoscoy. 25:1505~1513 (3.436)",
+    "CYP2A6 and ERCC1 polymorphisms correlate with efficacy of S-1 plus cisplatin in metastatic gastric cancer patients.: British Journal of Cancer.. 104(7):1126~1134 (4.831)",
+    "Clinical characteristics and treatment outcomes of gastric cancer patients with isolated para-aortic lymph node involvement: Cancer Chemotherapy and Pharmacology. 24(10):2575~2580 (2.759)",
+    "Helicobacter pylori Seropositivity is Associated with Gastric Cancer Regardless of Tumor Subtype in Korea: Gut and Liver. 4:466~474 (0.167)",
+    "Clinical Outcomes and Prognostic Factors of Metastatic Gastric Carcinoma Patients Who Experience Gastrointestinal Perforation During Palliative Chemotherapy: Annals of surgical oncology. 17(12):3163~3172 (4.13)",
+    "Clinical Outcomes and Prognostic Factors of Metastatic Gastric Carcinoma Patients Who Experience Gastrointestinal Perforation During Palliative Chemotherapy: Annals of Surgical Oncology. 17(12):3163~3172 (4.13)",
+    "Covered versus uncovered self-expandable metallic stents for palliation of malignant pyloric obstruction in gastric cancer patients: a randomized, prospective study: Gastrointestinal Endoscopy. 72(1):25~32 (6.713)",
+    "Predictive factors for the efficacy of cetuximab plus chemotherapy as salvage therapy in metastatic gastric cancer patients: Cancer Chemotherapy and Pharmacology. 65(3):579~587 (2.654)",
+    "Association of CYP2A6 polymorphisms with S-1 plus docetaxel therapy outcomes in metastatic gastric cancer: Pharmacogenomics. 10(7):1147~55 (3.551)",
+    "Tumor lysis syndrome after capecitabine plus cisplatin treatment in advanced gastric cancer: Journal of Clinical Oncology. 26:1006~1008 (15.484)"
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "doctorId": 14935,
+  "rid_long": "FC9C8632B0C8B7529D115912D0FD792024B5243572AD53A9CB8A487AAD8C7D6B7DF4D5C759F388B7E9A767566AFAFA9946F2B8242D990DA28FA9D6B16987092E04BF1657C209C51EB9EA8EE39D0F5C56B3D614F26A29CB3A9FD4C9847F04E70E9C6010EE801EE0972D14392F70A1D5AD31024CFDBC0492E78F62CED652AB21755994BB3A52A54FAB951F134EF5B969E410A3B6522C96659A86CD6A52C3CBD43D7D3B102FDB4BAA89C4BC7BD02ECB3C6F",
+  "hospital_cid": 391,
+  "bedoc_id": "A0823",
+  "bedoc_hospitalsite": "https://www.saeumhospital.kr/",
+  "bedoc_doctorname": "이두연",
+  "bedoc_deptname": "정형외과",
+  "bedoc_hospitalname": "새움병원",
+  "hospital_name": "새움병원",
+  "aiga_hid": "H21KR-11000089",
+  "hospital_site": "http://www.saeumhospital.kr/introduction/staff_detail.php?num=21",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 금천구 시흥대로139길 8, 새움병원 (독산동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "http://www.saeumhospital.kr/introduction/staff_detail.php?num=21&doctorName=%EC%9D%B4%EB%91%90%EC%97%B0&depthName=%EC%A0%95%ED%98%95%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_web_fetch",
+  "error": null,
+  "specialty": "관절클리닉, 족부클리닉, 발목인대질환, 무지외반증",
+  "학력": [
+    {
+      "date": null,
+      "content": "한양대학교병원 전문의 및 전임의 수료"
+    }
+  ],
+  "경력": [
+    {
+      "date": null,
+      "content": "현 새움병원 족부클리닉 원장"
+    },
+    {
+      "date": null,
+      "content": "전 선수촌 병원 원장"
+    },
+    {
+      "date": null,
+      "content": "전 메디인병원 족부센터 과장"
+    },
+    {
+      "date": null,
+      "content": "전 혜민병원 족부센터 과장"
+    },
+    {
+      "date": null,
+      "content": "발 변형/기형 희귀질환 치료 임상경험 풍부 (무지외반증, 발목관절염, 스포츠 손상 등)"
+    }
+  ],
+  "학술": [
+    {
+      "date": null,
+      "content": "대한족부족관절학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "현 대한족부족관절학회 보험위원"
+    },
+    {
+      "date": null,
+      "content": "대한정형외과학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한슬관절학회 정회원"
+    },
+    {
+      "date": null,
+      "content": "대한골절학회 정회원"
+    }
+  ],
+  "isAttend": true
+}

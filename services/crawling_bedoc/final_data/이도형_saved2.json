@@ -1,0 +1,139 @@
+{
+  "doctorId": 14930,
+  "rid_long": "4F214EB0AD28E9F852B7544B2106DEC5431C065A5766AB6130138C8E933E4EEA4EB4E6F2BF1DAACDCA54B250E55C49FB3857E92509915950A8C1D995A0E995004B733B5E88B22D8075F0B3C68D22BA83B9579755976A68CD3EB3ADD0E31A4D3774608A7ECDA834D929EFF087629D5E7754E54E4568B51843FA13BC7FE102CCF9C56E71045D4350679D952902CF17FCAF",
+  "hospital_cid": 386,
+  "bedoc_id": "A0019",
+  "bedoc_hospitalsite": "http://www.paik.ac.kr/ilsan/",
+  "bedoc_doctorname": "이도형",
+  "bedoc_deptname": "안과",
+  "bedoc_hospitalname": "일산백병원",
+  "hospital_name": "일산백병원",
+  "aiga_hid": "H11KR-31000056",
+  "hospital_site": "https://www.paik.ac.kr/ilsan/user/doctor/view.do?doctorId=691",
+  "site_type": "single",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.paik.ac.kr/ilsan/user/doctor/view.do?doctorId=691&doctorName=%EC%9D%B4%EB%8F%84%ED%98%95&depthName=%EC%95%88%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "specialty": "각막, 백내장, 굴절교정수술, 익상편",
+  "학력": [
+    {
+      "content": "중앙대학교 의과대학"
+    },
+    {
+      "content": "중앙대학교 대학원 의학석사"
+    },
+    {
+      "content": "중앙대학교 대학원 의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "content": "안과 전문의 / 의학박사"
+    },
+    {
+      "content": "일본 동경치과대학, 교토부립대학 연수"
+    },
+    {
+      "content": "현) 인제대학교 일산백병원 안과 교수"
+    }
+  ],
+  "isAttend": true,
+  "학술": [
+    {
+      "content": "- 대한안과학회"
+    },
+    {
+      "content": "- 한국 백내장 굴절수술 연구회"
+    },
+    {
+      "content": "- 외안부 연구회"
+    },
+    {
+      "content": "- 한국 콘택트렌즈 연구회 정회원"
+    },
+    {
+      "content": "- 미국 백내장 굴절 수술 학회 (ASCRS)"
+    },
+    {
+      "content": "- 유럽 백내장 굴절 수술 학회 (ESCRS)"
+    },
+    {
+      "content": "- 미국 시과학 연구회 (ARVO) 정회원"
+    }
+  ],
+  "논문": [
+    "-  백내장 굴절 수술의 세계적인 권위지인 Journal of Cataract and Refractive Surgery에 부정난시에서 각막 지형도와 연계된 엑시머 레이저 수술의 임상 효과",
+    "라식 수술 후 안압 측정을 보정하는 Orbscan II의 유용성",
+    "라식 수술 후 각막 후면 돌출에 관한 연구",
+    "- 발표 : 미국, 유럽, 일본, 중국, 홍콩, 싱가포르 등 국제 굴절교정수술 학회"
+  ],
+  "저서": [],
+  "언론": [
+    {
+      "targetDate": "2025-09-16",
+      "type": "기사",
+      "text": "[무엇이든물어보세요] 한국인 수술 1위 백내장",
+      "url": "https://vod.kbs.co.kr/index.html?source=episode&sname=vod&stype=vod&program_code=T2000-0038&program_id=PS-2025170222-01-000&broadcast_complete_yn=N&local_station_code=00&section_code=05&section_sub_code=03",
+      "issuer": "KBS 1TV"
+    },
+    {
+      "targetDate": "2025-08-22",
+      "type": "기사",
+      "text": "[무엇이든물어보세요] 안과 명의가 전하는 눈 건강법",
+      "url": "https://vod.kbs.co.kr/index.html?source=episode&sname=vod&stype=vod&program_code=T2000-0038&program_id=PS-2025152306-01-000&broadcast_complete_yn=N&local_station_code=00&section_code=05&section_sub_code=03",
+      "issuer": "KBS 1TV"
+    },
+    {
+      "targetDate": "2025-06-23",
+      "type": "기사",
+      "text": "KBS 무엇이든 물어보세요 [닥터의 경고] 삶을 위협하는 질환, 방치하면 실명된다!",
+      "url": "https://vod.kbs.co.kr/index.html?source=episode&sname=vod&stype=vod&program_code=T2000-0038&program_id=PS-2025113549-01-000&broadcast_complete_yn=&local_station_code=00&section_code=05",
+      "issuer": "KBS"
+    },
+    {
+      "targetDate": "2025-05-23",
+      "type": "기사",
+      "text": "따끔거리고 뻑뻑한 눈, 오래 방치하면 시력 나빠져",
+      "url": "https://www.100ssd.co.kr/news/articleView.html?idxno=121803",
+      "issuer": "백세시대"
+    },
+    {
+      "targetDate": "2025-05-23",
+      "type": "기사",
+      "text": "“눈 꼭 감았다 뜨기, 안구건조증 완화”",
+      "url": "https://www.100ssd.co.kr/news/articleView.html?idxno=121792",
+      "issuer": "백세시대"
+    },
+    {
+      "targetDate": "2025-04-23",
+      "type": "기사",
+      "text": "딱 3초만 '이걸' 보세요. 수술없이 눈이 확 맑아지는 운동법",
+      "url": "https://youtu.be/_Z81cn7AUVs?feature=shared",
+      "issuer": "지식인사이드"
+    },
+    {
+      "targetDate": "2025-04-21",
+      "type": "기사",
+      "text": "KBS 무엇이든 물어보세요 [닥터의 경고, 눈 건강]",
+      "url": "https://vod.kbs.co.kr/index.html?source=episode&sname=vod&stype=vod&program_code=T2000-0038&program_id=PS-2025072707-01-000&broadcast_complete_yn=N&local_station_code=00&section_code=05&section_sub_code=03",
+      "issuer": "KBS"
+    },
+    {
+      "targetDate": "2025-04-17",
+      "type": "기사",
+      "text": "놀라운 효과를 맛볼거예요 눈알 속 기름때 빼는 극강의 청소법",
+      "url": "https://youtu.be/kfHbYw8ooFo?feature=shared",
+      "issuer": "지식인사이드"
+    },
+    {
+      "targetDate": "2025-02-17",
+      "type": "기사",
+      "text": "눈 뻑뻑한 안구건조증… 방치 땐 각막 손상, 시력 저하",
+      "url": "https://www.100ssd.co.kr/news/articleView.html?idxno=118351",
+      "issuer": "백세시대"
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "doctorId": 14995,
+  "rid_long": "F4DA5B203AC3FC7AFF0EF497D19B1F216B26C317A88B8F279D02F32CA527521ED1812D7744F9FAC4C4D834432CC6E21F82A9807B4C02975671007EAF9D662399C1CDABFB6849DA3724B73DFEBEE326E182AA884E18D5FC876D0297A8F8E8190DB9760E73EC81C04788208431500927C055D05EEBC72B5051A7BA4FAFF8E7735AA1367002B3323B4777E996E21DBEA86BF7C203C558F5EB9DE0FBDBCB4FA02958",
+  "hospital_cid": 461,
+  "bedoc_id": "A8503",
+  "bedoc_hospitalsite": "http://www.cmcep.or.kr/",
+  "bedoc_doctorname": "이준석",
+  "bedoc_deptname": "정형외과",
+  "bedoc_hospitalname": "은평성모병원",
+  "hospital_name": "가톨릭대학교 은평성모병원",
+  "aiga_hid": "H11KR-11000002",
+  "hospital_site": "https://www.cmcep.or.kr/page/doctor/1282/D0000001",
+  "site_type": "single",
+  "hospital_addr": "서울특별시 은평구 통일로 1021, (진관동)",
+  "isExist": true,
+  "isFinalComplete": true,
+  "isSaveToDatabase": true,
+  "saveDoctorDetailUrl": "https://www.cmcep.or.kr/page/doctor/1282/D0000001?doctorName=%EC%9D%B4%EC%A4%80%EC%84%9D&depthName=%EC%A0%95%ED%98%95%EC%99%B8%EA%B3%BC",
+  "isSearchType": "html_playwright",
+  "error": null,
+  "doctorSiteUrl": "https://www.cmcep.or.kr/page/doctor/1282/D0000001",
+  "isAttend": true,
+  "profileUrl": "https://www.cmcep.or.kr/api/attach/view/doctor/D0000001/profile/1",
+  "specialty": "척추전분야(질환, 골절, 종양, 측만변형)최소침습수술, 척추 주사치료",
+  "학력": [
+    {
+      "date": "1993~1999",
+      "content": "가톨릭대학교 의과대학 학사"
+    },
+    {
+      "date": "2004~2006",
+      "content": "가톨릭대학교 대학원 의학석사"
+    },
+    {
+      "date": "2007~2013",
+      "content": "가톨릭대학교 대학원 의학박사"
+    }
+  ],
+  "경력": [
+    {
+      "date": "2025~현재",
+      "content": "은평성모병원 교수협의회장"
+    },
+    {
+      "date": "2022~현재",
+      "content": "은평성모병원 정형외과 부교수"
+    },
+    {
+      "date": "2019~2021",
+      "content": "은평성모병원 정형외과 조교수"
+    },
+    {
+      "date": "2017~2018",
+      "content": "근로복지공단 산업재해심사 상시자문의"
+    }
+  ],
+  "수상": [
+    {
+      "date": "2021",
+      "content": "국제골다공증학회 논문구연 장려상"
+    },
+    {
+      "date": "2016",
+      "content": "대한정형외과학회 학술상(기초)"
+    },
+    {
+      "date": "2009",
+      "content": "대한정형외과학회 학술상"
+    },
+    {
+      "date": "2009",
+      "content": "대한척추외과학회 기초부문 최우수논문상"
+    }
+  ],
+  "학술": [
+    {
+      "date": "현재",
+      "content": "대한정형외과학회 정회원"
+    },
+    {
+      "date": "현재",
+      "content": "대한척추외과학회 정회원"
+    },
+    {
+      "date": "현재",
+      "content": "대한척추종양학회 정회원"
+    },
+    {
+      "date": "2021~현재",
+      "content": "대한척추외과학회 보험위원회 위원"
+    }
+  ],
+  "논문": [
+    "Sagittal Realignment Following Decompression for Lumbar Spinal Stenosis in Elderly Patients: A Comprehensive EOS Imaging Analysis (Diagnostics, 2024년 11월, 교신저자)",
+    "Ankle and toe weakness caused by calcified ligamentum flavum cyst: A case report (WORLD JOURNAL OF CLINICAL CASES, 2023년 12월, 교신저자)",
+    "Application of Escherichia coli-Derived Recombinant Human Bone Morphogenic Protein-2 to Unstable Spinal Fractures (BIOENGINEERING (BASEL), 2023년 10월, 공동저자)",
+    "Risk Factors for the Occurrence and Severity of Vertebral Fractures in Inflammatory Bowel Disease Patients: A Nationwide Population-Based Cohort Study (JOURNAL OF KOREAN MEDICAL SCIENCE, 2023년 07월, 교신저자)",
+    "Recanalization of external iliac artery occlusion in a patient with spinal stenosis using medications: a case report (JOURNAL OF INTERNATIONAL MEDICAL RESEARCH, 2023년 04월, 교신저자)"
+  ],
+  "저서": [
+    {
+      "date": null,
+      "content": "척추외과학 (대한척추외과학회, 최신의학사 공동)",
+      "issuer": null
+    },
+    {
+      "date": null,
+      "content": "척추외과학 (최신의학사 공동)",
+      "issuer": null
+    }
+  ],
+  "언론": [
+    {
+      "targetDate": "2025.04.23",
+      "type": "뉴스",
+      "text": "EBS 명의 '원인 불명 하지방사통, 혹시 당신도?' (2025.4.18)",
+      "url": "https://youtu.be/r44ThMdMMPI?si=PdheYsdK7QD7qTf8"
+    },
+    {
+      "targetDate": "2023.03.27",
+      "type": "뉴스",
+      "text": "KBS 무엇이든 물어보세요 (내 건강의 뒷 모습 등 뒤에 답이 있다)",
+      "url": "https://vod.kbs.co.kr/index.html?source=episode&sname=vod&stype=vod&program_code=T2000-0038&program_id=PS-2023050603-01-000&broadcast_complete_yn=N&local_station_code=00&section_code=05&section_sub_code=03"
+    },
+    {
+      "targetDate": "2021.04.26",
+      "type": "뉴스",
+      "text": "KBS  무엇이든 물어보세요 (등 통증이 말하는 건강 신호)",
+      "url": "http://vod.kbs.co.kr/index.html?source=episode&sname=vod&stype=vod&program_code=T2000-0038&program_id=PS-2021053549-01-000&broadcast_complete_yn=N&local_station_code=00&section_code=05&section_sub_code=03"
+    },
+    {
+      "targetDate": "2019.07.02",
+      "type": "뉴스",
+      "text": "EBS 메디컬다큐 ‘7요일'- 두발로 서고 싶다. 다섯번째 디스크수술 편 (2017.5.18)",
+      "url": "https://youtu.be/4pZotNDhEXc?t=367"
+    },
+    {
+      "targetDate": "2019.07.02",
+      "type": "뉴스",
+      "text": "EBS 메디컬다큐 ‘7요일’- 41세에 찾아온 중풍? 사지마비의 위험. 경추척수증 편 (2017.9.13)",
+      "url": "https://youtu.be/oR84R5dJI_g?t=413"
+    },
+    {
+      "targetDate": "2018.01.31",
+      "type": "뉴스",
+      "text": "[메디컬투데이]양 어깨의 차이가 심하다면?…척추측만증 의심해 봐야(2017.04,10)",
+      "url": "http://www.mdtoday.co.kr/mdtoday/index.html?no=283010"
+    },
+    {
+      "targetDate": "2018.01.31",
+      "type": "뉴스",
+      "text": "[이데일리]이준석 여의도성모병원 교수, 대한정형외과학회 학술상 수상(2016.12.05)",
+      "url": "http://v.media.daum.net/v/20161205102106179"
+    },
+    {
+      "targetDate": "2018.01.31",
+      "type": "뉴스",
+      "text": "[의협신문] 수술 기다리는 환자 손 잡아주세요(2016.01.12)",
+      "url": "http://www.doctorsnews.co.kr/news/articleView.html?idxno=108071"
+    },
+    {
+      "targetDate": "2018.01.31",
+      "type": "뉴스",
+      "text": "[KBS 아침뉴스타임]‘수술 전 공포’ 의료진 태도가 관건(2016.01.12)",
+      "url": "http://news.kbs.co.kr/news/view.do?ncd=3213864"
+    }
+  ]
+}
