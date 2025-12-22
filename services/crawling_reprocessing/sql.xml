@@ -81,9 +81,7 @@
         FROM 
             doctor_basic db
         WHERE
-            1=1 AND doctor_id in (
-                4208,4228,4231,14618,14623,14625
-            )
+            1=1 AND data_version_id in ( 3, '3' )
         ORDER BY db.createAt
     </select>
 

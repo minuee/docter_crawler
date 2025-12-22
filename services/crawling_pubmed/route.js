@@ -62,7 +62,7 @@ router.post('/pubmed', async (req, res, next) => {
   if ( ret.success === false ) {
       return res.send(ret);
   }
-  const hid = req.query.hid;
+ 
   let totalCount = 0
   let processCount = 0
   const data = [];
@@ -72,8 +72,8 @@ router.post('/pubmed', async (req, res, next) => {
     mybatisMapper.createMapper([`${global.appRoot}/services/crawling_pubmed/sql.xml`]);
 
     const param = {
-      version_id : DATA_VERSION_ID,
-      hid : req.body.hid
+      version_id : 3,//임시작업중  DATA_VERSION_ID,
+      hid : null// 임시작업중 req.body.hid
     }; 
     const format = { language: "sql", indent: "  " };
     const query = mybatisMapper.getStatement(

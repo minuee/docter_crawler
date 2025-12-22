@@ -1270,12 +1270,13 @@ router.get('/parsing-final-step3', async function(req, res) {
 
     const allDoctorFiles = fs.readdirSync(targetDir)
       .filter(file => file.endsWith('_saved2.json') && !file.endsWith('_saved3.json') ); // _saved2.json 파일을 대상으로 함
-    const filesToProcess = allDoctorFiles.slice(0, 1); // 한 번에 10개 파일만 선택
+    const filesToProcess = allDoctorFiles.slice(0, 5); // 한 번에 10개 파일만 선택
 
     console.log(`[PARSING-FINAL-STEP3] Found ${allDoctorFiles.length} total files. Will process a batch of ${filesToProcess.length}.`);
     let step = null;
     let successCount = 0;
     let failCount = 0;
+    let doctorName = null;
     for (const fileName of filesToProcess) {
       const filePath = path.join(targetDir, fileName);
       try {
@@ -1296,8 +1297,11 @@ router.get('/parsing-final-step3', async function(req, res) {
         // 2. 논문 목록 추출
         const paperList = doctorData['논문'] || [];
         const format = { language: "sql", indent: "  " };
-        
+        doctorName = doctorData.doctorName || doctorData.bedoc_doctorname
         // 3. 각 논문을 순회하며 DB에 저장
+        let paperCount = 0;
+        const totalPaperCount = paperList.length;
+        console.log(`${totalPaperCount}개의 논문발견`);
         for (const paper of paperList) {
           if (!paper || typeof paper !== 'string') continue; // 유효하지 않은 논문 데이터는 건너뜁니다.
 
@@ -1308,11 +1312,12 @@ router.get('/parsing-final-step3', async function(req, res) {
           step = 'select_doctor_paper';
           const selectParam = { 
             search_rid_long: doctorData.rid_long, 
-            search_title: search_title 
+            search_title: search_title,
+            search_data_version_id : 3
           };
           const selectQuery = mybatisMapper.getStatement("controler", "select_doctor_paper", selectParam, format);
           
-          console.log(` -> [Step 3.1: SELECT paper] rid: ${doctorData.rid_long}, title: ${search_title.substring(0, 30)}...`);
+          //console.log(` -> [Step 3.1: SELECT paper] rid: ${doctorData.rid_long}, title: ${search_title.substring(0, 30)}...`);
           const { DBError: selectDBError, RS: selectRS } = await daoMysql.spCall(selectQuery);
           const selectRet = await functions.myBatisResult(selectDBError, selectRS);
 
@@ -1328,24 +1333,25 @@ router.get('/parsing-final-step3', async function(req, res) {
               search_data_version_id : 3,
               search_rid_long: doctorData.rid_long,
               search_doctor_id: doctorData.doctorId,
-              search_doctorName: doctorData.doctorName,
+              search_doctorName: doctorName,
               search_title: search_title
             };
             const insertQuery = mybatisMapper.getStatement("controler", "insert_new_doctor_paper", insertParam, format);
             
-            console.log(`    -> [Step 3.2: INSERT paper] Inserting...`);
             const { DBError: insertDBError, RS: insertRS } = await daoMysql.spCall(insertQuery);
             const insertRet = await functions.myBatisResult(insertDBError, insertRS);
 
             if (insertRet.success) {
               successCount++;
-              console.log(`       - Successfully inserted new paper.`);
+              console.log(`${paperCount+1}/${totalPaperCount} 논문 - Successfully inserted new paper.`);
             } else {
               failCount++;
               errors.push(`Failed to insert paper for ${fileName}: ${search_title}`);
-              console.log(`       - Failed to insert new paper.`); 
+              console.log(` ${paperCount+1}/${totalPaperCount} 논문 - Failed to insert new paper.`); 
             }
+            paperCount++;
           }
+          await CS.wait(200); 
         }
         // 4. 성공적으로 처리되면 파일명 변경
         processed_count++;
@@ -1358,12 +1364,13 @@ router.get('/parsing-final-step3', async function(req, res) {
         console.error(`[PARSING-FINAL-STEP2] CRITICAL ERROR processing ${errorMessage}`);
         errors.push(errorMessage);
       }
+      await CS.wait(500); 
     }
-
+    console.log(`${doctorName}의사 Batch complete. Processed ${processed_count} doctor records. successCount: ${successCount} failCount: ${failCount} Errors: ${errors.length}`)
     return res.send({
       code: 200,
       success: true,
-      message: `Batch complete. Processed ${processed_count} doctor records. Errors: ${errors.length}`,
+      message: `${doctorName}의사 Batch complete. Processed ${processed_count} doctor records. successCount: ${successCount} failCount: ${failCount} Errors: ${errors.length}`,
       errors: errors
     });
   } catch (error) {

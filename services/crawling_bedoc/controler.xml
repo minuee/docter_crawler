@@ -227,7 +227,7 @@
         FROM
             doctor_paper as a
         WHERE
-            a.rid_long = #{search_rid_long} and a.title = #{search_title}
+            a.rid_long = #{search_rid_long} and a.title = #{search_title} and a.data_version_id = #{search_data_version_id}
         LIMIT 1
     </select>
 

@@ -1148,7 +1148,7 @@ router.post('/pubmed_authors_remove', async (req, res, next) => {
     mybatisMapper.createMapper([`${global.appRoot}/services/crawling_reprocessing/sql.xml`]);
     const param = {
       search_version_id,
-      search_hid
+      search_hid : null
     }; 
     const format = { language: "sql", indent: "  " };
     const query = mybatisMapper.getStatement(
@@ -1312,7 +1312,7 @@ router.post('/pubmed_find_firstauthor', async (req, res, next) => {
     mybatisMapper.createMapper([`${global.appRoot}/services/crawling_reprocessing/sql.xml`]);
     const param = {
       search_version_id,
-      search_hid
+      search_hid : null
     }; 
     const format = { language: "sql", indent: "  " };
     const query = mybatisMapper.getStatement(
